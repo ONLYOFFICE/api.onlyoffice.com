@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # Personal access tokens
 
-Follow these steps to generate a PAT and use it to authorize your DocSpace account:
+Follow these steps to generate a PAT and use it to authorize your ONLYOFFICE Apps account:
 
 1. Send a POST request containing the `userName` and `password` parameters to the [api/2.0/authentication](../../../../docspace/api-backend/usage-api/authentication/authenticate-me.md) address:
 

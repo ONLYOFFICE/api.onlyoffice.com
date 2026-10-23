@@ -1,6 +1,6 @@
 ---
 description: Send reminders to room members with low activity based on audit events.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,12 +8,12 @@ import TabItem from '@theme/TabItem';
 
 # Reminding inactive members
 
-This example shows how to use DocSpace audit events to identify room members who are not participating.
+This example shows how to use ONLYOFFICE Apps audit events to identify room members who are not participating.
 It loads audit events for the last N days, counts events per user for selected rooms, and sends a reminder to members whose activity is below a defined threshold. Optionally, it sends a short summary report to a room owner/manager.
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>
@@ -50,13 +50,13 @@ It loads audit events for the last N days, counts events per user for selected r
 
       if (!res.ok) {
         const t = await res.text();
-        console.log(`DocSpace request failed. Status: ${res.status}, Message: ${t}`);
+        console.log(`ONLYOFFICE Apps request failed. Status: ${res.status}, Message: ${t}`);
         return null;
       }
 
       return res.json();
     } catch (err: any) {
-      console.log(`DocSpace request error: ${err?.message || err}`);
+      console.log(`ONLYOFFICE Apps request error: ${err?.message || err}`);
       return null;
     }
   }
@@ -152,7 +152,7 @@ It loads audit events for the last N days, counts events per user for selected r
 
     console.log('--- USER REMINDER ---');
     console.log(`To: ${to}`);
-    console.log('Subject: Infrequent activity in DocSpace room');
+    console.log('Subject: Infrequent activity in ONLYOFFICE Apps room');
     console.log(
       `Body:\nHello ${member.displayName || 'there'},\n` +
       `We noticed that you had no activity in room ID ${roomId} during the last ${periodDays} days.\n` +
@@ -261,13 +261,13 @@ It loads audit events for the last N days, counts events per user for selected r
       )
 
       if not (200 <= response.status_code < 300):
-        print(f"DocSpace request failed. Status: {response.status_code}, Message: {response.text}")
+        print(f"ONLYOFFICE Apps request failed. Status: {response.status_code}, Message: {response.text}")
         return None
 
       return response.json()
 
     except Exception as e:
-      print(f"DocSpace request error: {e}")
+      print(f"ONLYOFFICE Apps request error: {e}")
       return None
 
   # Step 1: Get room members (placeholder)
@@ -366,7 +366,7 @@ It loads audit events for the last N days, counts events per user for selected r
 
     print("--- USER REMINDER ---")
     print(f"To: {to}")
-    print("Subject: Infrequent activity in DocSpace room")
+    print("Subject: Infrequent activity in ONLYOFFICE Apps room")
     print(
       "Body:\n"
       f"Hello {member.get('displayName') or 'there'},\n"
@@ -437,7 +437,7 @@ It loads audit events for the last N days, counts events per user for selected r
 ## Step 1: Get room members
 
 The script loads room members for each monitored room.
-In this example, `fetch_room_members()` is a placeholder returning static data. In a real integration, replace it with a real DocSpace endpoint for room members or sharing entries.
+In this example, `fetch_room_members()` is a placeholder returning static data. In a real integration, replace it with a real ONLYOFFICE Apps endpoint for room members or sharing entries.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -602,7 +602,7 @@ The script sends:
 
     console.log('--- USER REMINDER ---');
     console.log(`To: ${to}`);
-    console.log('Subject: Infrequent activity in DocSpace room');
+    console.log('Subject: Infrequent activity in ONLYOFFICE Apps room');
     console.log(
       `Body:\nHello ${member.displayName || 'there'},\n` +
       `We noticed that you had no activity in room ID ${roomId} during the last ${periodDays} days.\n` +
@@ -620,7 +620,7 @@ The script sends:
 
     print("--- USER REMINDER ---")
     print(f"To: {to}")
-    print("Subject: Infrequent activity in DocSpace room")
+    print("Subject: Infrequent activity in ONLYOFFICE Apps room")
     print(
       "Body:\n"
       f"Hello {member.get('displayName') or 'there'},\n"

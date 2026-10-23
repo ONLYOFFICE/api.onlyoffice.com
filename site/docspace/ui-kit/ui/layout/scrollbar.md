@@ -122,28 +122,28 @@ export function MemberList({ names }: { names: string[] }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `autoFocus`? | `boolean` | Set focus on scroll content element after first render |
-| `autoHide`? | `boolean` | Whether the tracks fade out again three seconds after the last scroll or pointer move. Default: `true`. |
-| `children`? | `ReactNode` | The content to scroll. |
-| `className`? | `string` | Applied to the outermost element. |
-| `contentRef`? | `RefObject<HTMLDivElement \| null>` | Ref to access the DOM element of Scroll content element |
-| `createContext`? | `boolean` | Publishes the scrollbar on a React context for the components inside it. |
-| `fixedSize`? | `boolean` | Fix scrollbar size. Default: `false`. |
-| `id`? | `string` | Applied to the outermost element. |
-| `noScrollX`? | `boolean` | Stops the content scrolling horizontally. |
-| `noScrollY`? | `boolean` | Stops the content scrolling vertically. |
-| `onScroll`? | `UIEventHandler<HTMLDivElement>` | Called as the content scrolls, with the native event. |
-| `paddingAfterLastItem`? | `string` | Add padding bottom to scroll-body |
-| `paddingInlineEnd`? | `string` | Add custom padding-inline-end to scroll-body. |
-| `ref`? | `Ref<ScrollbarType \| null>` | Ref to access the DOM element or React component instance |
-| `rtl`? | `boolean` | Which side the vertical track is on. It follows the interface direction unless set. |
-| `scrollBodyClassName`? | `string` | This class will be placed on scroller body element |
-| `scrollClass`? | `string` | This class will be placed on scroller element |
-| `style`? | `CSSProperties` | Applied to the outermost element. |
-| `tabIndex`? | `null \| number` | Position of the scrolling element in the tab order. The default of -1 keeps it off the tab order, so the region cannot be scrolled with the arrow keys; `null` removes the attribute entirely. Default: `-1`. |
-| `translateContentSizesToHolder`? | `boolean` | Both at once. |
-| `translateContentSizeXToHolder`? | `boolean` | The same on the horizontal axis. |
-| `translateContentSizeYToHolder`? | `boolean` | Gives the outer element the content's own height, so the scrollbar grows with its content instead of filling its parent. |
+| `autoFocus` | `boolean` | Set focus on scroll content element after first render |
+| `autoHide` | `boolean` | Whether the tracks fade out again three seconds after the last scroll or pointer move. Default: `true`. |
+| `children` | `ReactNode` | The content to scroll. |
+| `className` | `string` | Applied to the outermost element. |
+| `contentRef` | `RefObject<HTMLDivElement \| null>` | Ref to access the DOM element of Scroll content element |
+| `createContext` | `boolean` | Publishes the scrollbar on a React context for the components inside it. |
+| `fixedSize` | `boolean` | Fix scrollbar size. Default: `false`. |
+| `id` | `string` | Applied to the outermost element. |
+| `noScrollX` | `boolean` | Stops the content scrolling horizontally. |
+| `noScrollY` | `boolean` | Stops the content scrolling vertically. |
+| `onScroll` | `UIEventHandler<HTMLDivElement>` | Called as the content scrolls, with the native event. |
+| `paddingAfterLastItem` | `string` | Add padding bottom to scroll-body |
+| `paddingInlineEnd` | `string` | Add custom padding-inline-end to scroll-body. |
+| `ref` | `Ref<ScrollbarType \| null>` | Ref to access the DOM element or React component instance |
+| `rtl` | `boolean` | Which side the vertical track is on. It follows the interface direction unless set. |
+| `scrollBodyClassName` | `string` | This class will be placed on scroller body element |
+| `scrollClass` | `string` | This class will be placed on scroller element |
+| `style` | `CSSProperties` | Applied to the outermost element. |
+| `tabIndex` | `null \| number` | Position of the scrolling element in the tab order. The default of -1 keeps it off the tab order, so the region cannot be scrolled with the arrow keys; `null` removes the attribute entirely. Default: `-1`. |
+| `translateContentSizesToHolder` | `boolean` | Both at once. |
+| `translateContentSizeXToHolder` | `boolean` | The same on the horizontal axis. |
+| `translateContentSizeYToHolder` | `boolean` | Gives the outer element the content's own height, so the scrollbar grows with its content instead of filling its parent. |
 
 </APITable>
 

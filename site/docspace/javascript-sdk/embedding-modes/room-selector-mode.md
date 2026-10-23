@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Room selector mode
 
-Room selector mode integrates a room picker interface inside your application. It presents users with a list of DocSpace rooms and returns the selected room's data via a callback function. If you are looking to embed a fully functional DocSpace interface, check out the [Manager mode](./manager-mode.md) and [Frame mode](./frame-mode.md).
+Room selector mode integrates a room picker interface inside your application. It presents users with a list of ONLYOFFICE Apps rooms and returns the selected room's data via a callback function. If you are looking to embed a fully functional ONLYOFFICE Apps interface, check out the [Manager mode](./manager-mode.md) and [Frame mode](./frame-mode.md).
 
 ## Initialization
 
@@ -25,7 +25,7 @@ For setup instructions (connecting the script, CSP configuration, npm package), 
 
 ## Use cases
 
-### Linking a task or record to a DocSpace room
+### Linking a task or record to an ONLYOFFICE Apps room
 
 Let users pick a room from a dialog and associate it with an item in your application. See also: [Room selector](../samples/advanced-samples/task-room-selector.md).
 
@@ -36,7 +36,8 @@ const selector = DocSpace.SDK.initRoomSelector({
   showSelectorHeader: true,
   showSelectorCancel: true,
   events: {
-    onSelectCallback: function (room) {
+    onSelectCallback: function (rooms) {
+      const room = rooms[0];
       console.log("Selected room:", room.label, room.id);
       linkRoomToTask(currentTaskId, room.id);
       selector.destroyFrame();
@@ -50,13 +51,13 @@ const selector = DocSpace.SDK.initRoomSelector({
 
 ### Filtering by room type
 
-Show only collaboration rooms by passing `roomType` to narrow the selection:
+Show only collaboration rooms by passing `roomType` — a room type value as a string, not its name — to narrow the selection. See [RoomType](../usage-sdk/enumerations/RoomType.md) for the full type-to-number mapping:
 
 ```javascript
 const docSpace = DocSpace.SDK.initRoomSelector({
   frameId: "ds-selector",
   src: "https://your-docspace.com",
-  roomType: "collaboration",
+  roomType: "2", // Collaboration room
   withSearch: true,
 });
 ```
@@ -74,8 +75,8 @@ const selector = DocSpace.SDK.initRoomSelector({
   src: "https://your-docspace.com",
   showSelectorCancel: true,
   events: {
-    onSelectCallback: function (room) {
-      handleRoomSelected(room);
+    onSelectCallback: function (rooms) {
+      handleRoomSelected(rooms[0]);
       dialog.close();
       selector.destroyFrame();
     },

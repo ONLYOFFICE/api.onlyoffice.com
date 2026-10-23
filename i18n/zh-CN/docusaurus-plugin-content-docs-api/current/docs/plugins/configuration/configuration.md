@@ -278,9 +278,9 @@ sidebar_position: -5
 
 加密模式。可用值：
 
-- `0` - 无（加密被禁用）；
-- `1` - 简单；
-- `2` - 高级。
+- `0`：无（加密被禁用）；
+- `1`：简单；
+- `2`：高级。
 
 **示例**：`"1"`
 
@@ -314,10 +314,10 @@ sidebar_position: -5
 
 插件可用的编辑器：
 
-- `word` - 文本文档编辑器，
-- `cell` - 电子表格编辑器，
-- `slide` - 演示文稿编辑器，
-- `pdf` - PDF 编辑器。
+- `word`：文本文档编辑器，
+- `cell`：电子表格编辑器，
+- `slide`：演示文稿编辑器，
+- `pdf`：PDF 编辑器。
 
 **示例**：
 
@@ -403,13 +403,13 @@ sidebar_position: -5
 
 编辑器中选定并发送给插件的数据类型：
 
-- `text` - 文本数据，
-- `html` - HTML 格式代码，
-- `ole` - OLE 对象数据，
-- `desktop` - 桌面编辑器数据，
-- `desktop-external` - 桌面应用主页面数据（系统消息），
-- `none` - 编辑器不会向插件发送任何数据，
-- `sign` - 钥匙串插件的签名。
+- `text`：文本数据，
+- `html`：HTML 格式代码，
+- `ole`：OLE 对象数据，
+- `desktop`：桌面编辑器数据，
+- `desktop-external`：桌面应用主页面数据（系统消息），
+- `none`：编辑器不会向插件发送任何数据，
+- `sign`：钥匙串插件的签名。
 
 **示例**：
 
@@ -607,13 +607,13 @@ sidebar_position: -5
 
 **ONLYOFFICE 插件市场**中的插件分类：
 
-- `all` - 全部，
-- `recommended` - 推荐，
-- `devTools` - 开发者工具，
-- `work` - 工作，
-- `entertainment` - 娱乐，
-- `communication` - 通讯，
-- `specAbilities` - 特殊功能。
+- `all`：全部，
+- `recommended`：推荐，
+- `devTools`：开发者工具，
+- `work`：工作，
+- `entertainment`：娱乐，
+- `communication`：通讯，
+- `specAbilities`：特殊功能。
 
 **示例**：`["specAbilities", "work"]`
 
@@ -678,12 +678,12 @@ sidebar_position: -5
 
 插件[类型](./types.md)。可用值：
 
-- `system` - 不显示在编辑器界面中，随服务器（或桌面编辑器启动）后台启动。无法禁用。
-- `background` - 启动后持续运行，其状态（启用/禁用）在会话间保持。
-- `window` - 启动时作为独立窗口运行。
-- `panel` - 在左侧面板打开。
-- `panelRight` - 在右侧面板打开。
-- `unvisible` - 启动时不可见，但之后可以创建窗口。
+- `system`：不显示在编辑器界面中，随服务器（或桌面编辑器启动）后台启动。无法禁用。
+- `background`：启动后持续运行，其状态（启用/禁用）在会话间保持。
+- `window`：启动时作为独立窗口运行。
+- `panel`：在左侧面板打开。
+- `panelRight`：在右侧面板打开。
+- `unvisible`：启动时不可见，但之后可以创建窗口。
 
 **示例**：`"background"`
 

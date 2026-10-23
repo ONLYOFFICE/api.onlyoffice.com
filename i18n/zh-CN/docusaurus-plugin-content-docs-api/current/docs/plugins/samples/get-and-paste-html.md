@@ -4,7 +4,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 获取文档内容的 HTML 代码，对其进行修改后再粘贴回文档中。
 
-**插件类型：** 可视化，非系统插件。
+**插件类型：** 可视化、非系统插件。
 
 **支持的编辑器：** 文档、表格、演示文稿编辑器。
 
@@ -37,8 +37,8 @@ GitHub 仓库：[html](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 4. 第三方服务：
 
-   - [CodeMirror](https://codemirror.net/) - 用 JavaScript 实现的强大网页文本编辑器。许可证：[MIT License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/html/licenses/codemirror.license)。
-   - [prettier.js](https://github.com/prettier/prettier) - 一个有主见的代码格式化工具。许可证：[MIT License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/html/licenses/prettier.license)。
+   - [CodeMirror](https://codemirror.net/)：用 JavaScript 实现的强大网页文本编辑器。许可证：[MIT License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/html/licenses/codemirror.license)。
+   - [prettier.js](https://github.com/prettier/prettier)：一个有主见的代码格式化工具。许可证：[MIT License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/html/licenses/prettier.license)。
 
 ## 配置
 

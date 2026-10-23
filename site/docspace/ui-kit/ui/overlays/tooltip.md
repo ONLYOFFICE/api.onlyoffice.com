@@ -82,7 +82,7 @@ For content written once in the markup rather than on each anchor: hover the lin
 
 For anchors that cannot carry a `data-tooltip-id`: hover either link to see the tooltip below it; both are found by their class (`anchorSelect`). The selector is matched across the whole page.
 
-<ThemedImage alt="Anchored By Selector" width={126} sources={{ light: require('./tooltip--anchored-by-selector-light.png').default, dark: require('./tooltip--anchored-by-selector-dark.png').default }} />
+<ThemedImage alt="Anchored By Selector" width={106} sources={{ light: require('./tooltip--anchored-by-selector-light.png').default, dark: require('./tooltip--anchored-by-selector-dark.png').default }} />
 
 ### Clickable Content
 
@@ -140,33 +140,33 @@ export function StorageHint() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `afterHide`? | `() => void` | Called after the tooltip has been hidden. |
-| `afterShow`? | `() => void` | Called after the tooltip has been shown. |
-| `anchorSelect`? | `string` | CSS selector for the anchors, as an alternative to `data-tooltip-id`. It is matched against the whole document, not a subtree. |
-| `children`? | `ChildrenType` | Fixed content, used for every anchor that has no `data-tooltip-content` of its own. `getContent` wins over it. |
-| `className`? | `string` | Applied to the wrapper around the tooltip, not to the tooltip itself. |
-| `clickable`? | `boolean` | Keeps the tooltip open while the pointer is over it, so links inside it can be reached. |
-| `color`? | `string` | Background colour, written as `--tooltip-bg-color` on the wrapper by an effect. It is only ever set: clearing the prop leaves the last colour in place. |
-| `dataTestId`? | `string` | Value of `data-testid` on the wrapper. Default: `"tooltip"`. |
-| `delayShow`? | `number` | Delay before the tooltip appears, in milliseconds. |
-| `fallbackAxisSideDirection`? | `TFallbackAxisSideDirection` | Whether to allow fallback to the perpendicular axis of the preferred placement |
-| `float`? | `boolean` | Follows the pointer instead of sitting at a fixed side of the anchor. |
-| `getContent`? | `({ content, activeAnchor, }: TGetTooltipContent) => React.ReactNode \| string` | Sets a callback function that generates the tip content dynamically |
-| `id`? | `string` | Identifier the anchors point at with `data-tooltip-id`. Without it the tooltip has nothing to attach to, unless `anchorSelect` names the anchors instead. |
-| `imperativeModeOnly`? | `boolean` | Stops the tooltip reacting to anchors at all, leaving `ref.current.open()` and `close()` as the only way to show it. |
-| `isOpen`? | `boolean` | Forces the tooltip open or closed. Passing it makes the tooltip controlled — the hover and click handlers no longer open or close it on their own. |
-| `maxWidth`? | `string` | Maximum width as a CSS length. The default is 320px. |
-| `noArrow`? | `boolean` | Whether the arrow pointing at the anchor is hidden. Default: `true`. |
-| `noUserSelect`? | `boolean` | Stops the tooltip's text being selected. |
-| `offset`? | `number` | Distance between the anchor and the tooltip, in pixels. Default: `4`. |
-| `opacity`? | `Property.Opacity` | Opacity of the tooltip. The library's own default is 0.9. Default: `1`. |
-| `openOnClick`? | `boolean` | Opens on click instead of on hover, and closes on the next click. It replaces the hover behaviour rather than adding to it. |
-| `place`? | `PlacesType` | Preferred side of the anchor. It is only a preference: the tooltip flips and shifts to stay in the viewport. Default: `"top"`. |
-| `ref`? | `RefObject<TooltipRefProps \| null>` | Imperative handle with `open()` and `close()`, from react-tooltip. |
-| `setIsOpen`? | `(value: boolean) => void` | Called when the tooltip wants to open or close itself. Pair it with `isOpen` to keep a controlled tooltip in sync with hover and click. |
-| `style`? | `CSSProperties` | Applied to that same wrapper. Use `tooltipStyle` for the tooltip. |
-| `tooltipStyle`? | `CSSProperties` | Applied to the tooltip itself, unlike `style`. |
-| `zIndex`? | `number` | Stacking order of the wrapper. Setting it also makes the wrapper `position: relative`. |
+| `afterHide` | `() => void` | Called after the tooltip has been hidden. |
+| `afterShow` | `() => void` | Called after the tooltip has been shown. |
+| `anchorSelect` | `string` | CSS selector for the anchors, as an alternative to `data-tooltip-id`. It is matched against the whole document, not a subtree. |
+| `children` | `ChildrenType` | Fixed content, used for every anchor that has no `data-tooltip-content` of its own. `getContent` wins over it. |
+| `className` | `string` | Applied to the wrapper around the tooltip, not to the tooltip itself. |
+| `clickable` | `boolean` | Keeps the tooltip open while the pointer is over it, so links inside it can be reached. |
+| `color` | `string` | Background colour, written as `--tooltip-bg-color` on the wrapper by an effect. It is only ever set: clearing the prop leaves the last colour in place. |
+| `dataTestId` | `string` | Value of `data-testid` on the wrapper. Default: `"tooltip"`. |
+| `delayShow` | `number` | Delay before the tooltip appears, in milliseconds. |
+| `fallbackAxisSideDirection` | `TFallbackAxisSideDirection` | Whether to allow fallback to the perpendicular axis of the preferred placement |
+| `float` | `boolean` | Follows the pointer instead of sitting at a fixed side of the anchor. |
+| `getContent` | `({ content, activeAnchor, }: TGetTooltipContent) => React.ReactNode \| string` | Sets a callback function that generates the tip content dynamically |
+| `id` | `string` | Identifier the anchors point at with `data-tooltip-id`. Without it the tooltip has nothing to attach to, unless `anchorSelect` names the anchors instead. |
+| `imperativeModeOnly` | `boolean` | Stops the tooltip reacting to anchors at all, leaving `ref.current.open()` and `close()` as the only way to show it. |
+| `isOpen` | `boolean` | Forces the tooltip open or closed. Passing it makes the tooltip controlled — the hover and click handlers no longer open or close it on their own. |
+| `maxWidth` | `string` | Maximum width as a CSS length. The default is 320px. |
+| `noArrow` | `boolean` | Whether the arrow pointing at the anchor is hidden. Default: `true`. |
+| `noUserSelect` | `boolean` | Stops the tooltip's text being selected. |
+| `offset` | `number` | Distance between the anchor and the tooltip, in pixels. Default: `4`. |
+| `opacity` | `Property.Opacity` | Opacity of the tooltip. The library's own default is 0.9. Default: `1`. |
+| `openOnClick` | `boolean` | Opens on click instead of on hover, and closes on the next click. It replaces the hover behaviour rather than adding to it. |
+| `place` | `PlacesType` | Preferred side of the anchor. It is only a preference: the tooltip flips and shifts to stay in the viewport. Default: `"top"`. |
+| `ref` | `RefObject<TooltipRefProps \| null>` | Imperative handle with `open()` and `close()`, from react-tooltip. |
+| `setIsOpen` | `(value: boolean) => void` | Called when the tooltip wants to open or close itself. Pair it with `isOpen` to keep a controlled tooltip in sync with hover and click. |
+| `style` | `CSSProperties` | Applied to that same wrapper. Use `tooltipStyle` for the tooltip. |
+| `tooltipStyle` | `CSSProperties` | Applied to the tooltip itself, unlike `style`. |
+| `zIndex` | `number` | Stacking order of the wrapper. Setting it also makes the wrapper `position: relative`. |
 
 </APITable>
 

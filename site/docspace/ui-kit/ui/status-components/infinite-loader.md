@@ -115,24 +115,24 @@ export function NameList({
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children` | `ReactNode[]` | The items. It must be an array, one entry per row or tile. |
-| `filesLength` | `number` | How many items are loaded so far. |
-| `hasMoreFiles` | `boolean` | Whether there is another page to ask for. |
-| `itemCount` | `number` | How many items there are in total, loaded or not. |
-| `itemSize` | `number` | Height of one row, or of one tile, in pixels. It is the same for all of them. |
-| `loadMoreItems` | `(params: IndexRange) => Promise<void>` | Called with the range to load when the user scrolls near the end. |
-| `viewAs` | `TViewAs` | Which layout to render: `tile` lays the children out in a grid, anything else in a list. It also picks the skeleton shown while a page loads — `table` and `row` have one, the rest show nothing. |
-| `className`? | `string` | Applied to the list element. |
-| `columnInfoPanelStorageName`? | `string` | The info-panel variant of that key. |
-| `columnStorageName`? | `string` | `localStorage` key of the table's column widths, for the table skeleton. |
-| `countTilesInRow`? | `number` | How many tiles fit on a row, in the `tile` layout. |
-| `currentFolderId`? | `number \| string` | Identifier of the folder being shown, which resets the grid when it changes. |
-| `infoPanelVisible`? | `boolean` | Narrows the layout for an open info panel. |
-| `isLoading`? | `boolean` | Renders nothing at all while it is true. |
-| `isOneTile`? | `boolean` | Lays a single tile out on its own row. |
-| `onScroll`? | `() => void` | Called as the list scrolls. |
-| `showSkeleton`? | `boolean` | Ignored by the list; the loader sets it itself after a long jump. |
-| `smallPreview`? | `boolean` | Renders the tiles in their small form. |
+| `children` | `ReactNode[]` | **Required.** The items. It must be an array, one entry per row or tile. |
+| `filesLength` | `number` | **Required.** How many items are loaded so far. |
+| `hasMoreFiles` | `boolean` | **Required.** Whether there is another page to ask for. |
+| `itemCount` | `number` | **Required.** How many items there are in total, loaded or not. |
+| `itemSize` | `number` | **Required.** Height of one row, or of one tile, in pixels. It is the same for all of them. |
+| `loadMoreItems` | `(params: IndexRange) => Promise<void>` | **Required.** Called with the range to load when the user scrolls near the end. |
+| `viewAs` | `TViewAs` | **Required.** Which layout to render: `tile` lays the children out in a grid, anything else in a list. It also picks the skeleton shown while a page loads — `table` and `row` have one, the rest show nothing. |
+| `className` | `string` | Applied to the list element. |
+| `columnInfoPanelStorageName` | `string` | The info-panel variant of that key. |
+| `columnStorageName` | `string` | `localStorage` key of the table's column widths, for the table skeleton. |
+| `countTilesInRow` | `number` | How many tiles fit on a row, in the `tile` layout. |
+| `currentFolderId` | `number \| string` | Identifier of the folder being shown, which resets the grid when it changes. |
+| `infoPanelVisible` | `boolean` | Narrows the layout for an open info panel. |
+| `isLoading` | `boolean` | Renders nothing at all while it is true. |
+| `isOneTile` | `boolean` | Lays a single tile out on its own row. |
+| `onScroll` | `() => void` | Called as the list scrolls. |
+| `showSkeleton` | `boolean` | Ignored by the list; the loader sets it itself after a long jump. |
+| `smallPreview` | `boolean` | Renders the tiles in their small form. |
 
 </APITable>
 

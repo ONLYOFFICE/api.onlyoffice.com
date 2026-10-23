@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/IInput.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IInput.ts
 ---
 
 # IInput
@@ -80,32 +80,32 @@ import APITable from '@site/src/components/APITable/APITable';
 | ------ | ------ | ------ |
 | `value` | `string` | Defines the input value. |
 | `onChange` | (`value`: `string`) => `void` \| [`IMessage`](../utils.md#imessage) | Sets a function which is triggered whenever the input value is changed. It is required when the input is not read-only. The changed input value is passed to the function, which passes it back in the "value" parameter. |
-| `name?` | `string` | Defines the input HTML "name" property. |
-| `placeholder?` | `string` | Defines the input placeholder text. |
-| `maxLength?` | `string` | Defines the default maximum length of the input value. |
-| `size?` | [`InputSize`](#inputsize) | Defines the input size. |
-| `isAutoFocused?` | `boolean` | Specifies whether to focus the input field when initially rendered. |
-| `isReadOnly?` | `boolean` | Specifies whether the input field displays the read-only content. |
-| `hasError?` | `boolean` | Specifies whether to indicate that there is an error in the input field. |
-| `hasWarning?` | `boolean` | Specifies whether to indicate that there is a warning in the input field. |
-| `scale?` | `boolean` | Specifies if the input field is scaled or not. |
-| `autoComplete?` | [`InputAutocomplete`](#inputautocomplete) | Defines the input HTML "autocomplete" property. |
-| `tabIndex?` | `number` | Defines the input HTML "tabindex" property. |
-| `mask?` | \[\] | Defines the input text mask. |
-| `isDisabled?` | `boolean` | Specifies that the field cannot be used (e.g the user is not authorized, or the changes are not saved). |
-| `type?` | [`InputType`](#inputtype) | The input field type. |
-| `keepCharPositions?` | `boolean` | Specifies whether the characters are allowed to be added or deleted without changing the positions of the existing characters. |
-| `onBlur?` | (`value`: `string`) => `void` \| [`IMessage`](../utils.md#imessage) | Sets a function which is triggered whenever the input field is blurred. |
-| `onFocus?` | (`value`: `string`) => `void` \| [`IMessage`](../utils.md#imessage) | Sets a function which is triggered whenever the input field is focused. |
-| `children?` | `Node` \| `Node`[] | Defines the input field components. |
-| `iconSize?` | `number` | Defines the input icon size. |
-| `iconName?` | `string` | Defines the path to the input icon. |
-| `isIconFill?` | `boolean` | Specifies if the icon fill is needed or not. |
-| `iconColor?` | `string` | Defines the input icon color. |
-| `hoverColor?` | `string` | Defines the icon color on hover action. |
-| `iconButtonClassName?` | `string` | Defines the class name of the icon button. |
-| `onIconClick?` | () => `void` | Sets a function which is triggered whenever the input icon is clicked. |
-| `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
+| `name` | `string` | Defines the input HTML "name" property. |
+| `placeholder` | `string` | Defines the input placeholder text. |
+| `maxLength` | `string` | Defines the default maximum length of the input value. |
+| `size` | [`InputSize`](#inputsize) | Defines the input size. |
+| `isAutoFocused` | `boolean` | Specifies whether to focus the input field when initially rendered. |
+| `isReadOnly` | `boolean` | Specifies whether the input field displays the read-only content. |
+| `hasError` | `boolean` | Specifies whether to indicate that there is an error in the input field. |
+| `hasWarning` | `boolean` | Specifies whether to indicate that there is a warning in the input field. |
+| `scale` | `boolean` | Specifies if the input field is scaled or not. |
+| `autoComplete` | [`InputAutocomplete`](#inputautocomplete) | Defines the input HTML "autocomplete" property. |
+| `tabIndex` | `number` | Defines the input HTML "tabindex" property. |
+| `mask` | \[\] | Defines the input text mask. |
+| `isDisabled` | `boolean` | Specifies that the field cannot be used (e.g the user is not authorized, or the changes are not saved). |
+| `type` | [`InputType`](#inputtype) | The input field type. |
+| `keepCharPositions` | `boolean` | Specifies whether the characters are allowed to be added or deleted without changing the positions of the existing characters. |
+| `onBlur` | (`value`: `string`) => `void` \| [`IMessage`](../utils.md#imessage) | Sets a function which is triggered whenever the input field is blurred. |
+| `onFocus` | (`value`: `string`) => `void` \| [`IMessage`](../utils.md#imessage) | Sets a function which is triggered whenever the input field is focused. |
+| `children` | `Node` \| `Node`[] | Defines the input field components. |
+| `iconSize` | `number` | Defines the input icon size. |
+| `iconName` | `string` | Defines the path to the input icon. |
+| `isIconFill` | `boolean` | Specifies if the icon fill is needed or not. |
+| `iconColor` | `string` | Defines the input icon color. |
+| `hoverColor` | `string` | Defines the icon color on hover action. |
+| `iconButtonClassName` | `string` | Defines the class name of the icon button. |
+| `onIconClick` | () => `void` | Sets a function which is triggered whenever the input icon is clicked. |
+| `className` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
 </APITable>
 

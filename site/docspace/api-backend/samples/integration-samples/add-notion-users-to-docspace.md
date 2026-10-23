@@ -1,17 +1,17 @@
 ---
-description: Retrieve Notion users and add them to DocSpace.
-tags: ["DocSpace", "REST API", "Integration"]
+description: Retrieve Notion users and add them to ONLYOFFICE Apps.
+tags: ["Apps", "REST API", "Integration"]
 ---
 
-# Add Notion users to DocSpace
+# Add Notion users to ONLYOFFICE Apps
 
-This script automates the process of retrieving Notion users and adding them to the DocSpace. It ensures that all Notion team members are onboarded into DocSpace.
+This script automates the process of retrieving Notion users and adding them to ONLYOFFICE Apps. It ensures that all Notion team members are onboarded into ONLYOFFICE Apps.
 
 ## How it works
 
 - Retrieve Notion users - Fetches a list of users with their names and emails.
-- Check DocSpace users - For each Notion user, verifies if they already exist in DocSpace by email.
-- Create missing DocSpace users - If a Notion user is missing in DocSpace, creates their account with a default password.
+- Check ONLYOFFICE Apps users - For each Notion user, verifies if they already exist in ONLYOFFICE Apps by email.
+- Create missing ONLYOFFICE Apps users - If a Notion user is missing in ONLYOFFICE Apps, creates their account with a default password.
 
 <details>
   <summary>Full example</summary>
@@ -27,11 +27,11 @@ NOTION_HEADERS = {
     "Content-Type": "application/json"
 }
 
-# DocSpace API credentials
+# ONLYOFFICE Apps API credentials
 ONLYOFFICE_API_HOST = "your-docspace.onlyoffice.com"
 ONLYOFFICE_API_KEY = "your_onlyoffice_api_key"
 
-# Headers for the DocSpace authentication
+# Headers for the ONLYOFFICE Apps authentication
 ONLYOFFICE_HEADERS = {
     "Accept": "application/json",
     "Authorization": f"Bearer {ONLYOFFICE_API_KEY}",
@@ -48,13 +48,13 @@ def get_notion_users():
         print("Failed to fetch Notion users:", response.text)
         return []
 
-# Step 2: Check if user exists in DocSpace by email
+# Step 2: Check if user exists in ONLYOFFICE Apps by email
 def check_docspace_user(email):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/people/email?email={email}"
     response = requests.get(url, headers=ONLYOFFICE_HEADERS)
     return response.status_code == 200
 
-# Step 3: Add missing users to DocSpace
+# Step 3: Add missing users to ONLYOFFICE Apps
 def add_docspace_user(first_name, last_name, email):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/people"
     data = {
@@ -65,7 +65,7 @@ def add_docspace_user(first_name, last_name, email):
     }
     response = requests.post(url, json=data, headers=ONLYOFFICE_HEADERS)
     if response.status_code == 200:
-        print(f"User {email} added to DocSpace!")
+        print(f"User {email} added to ONLYOFFICE Apps!")
     else:
         print(f"Failed to add {email}: {response.text}")
 
@@ -90,8 +90,8 @@ if __name__ == "__main__":
 
 ## Before you start
 
-1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
+1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual ONLYOFFICE Apps portal host and API key. Ensure you have the necessary permissions to perform user operations.
+2. Before you can make requests to the API, you need to create an ONLYOFFICE Apps API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
 3. Create a new [Notion integration](https://www.notion.so/profile/integrations) to obtain an API token and replace `your-notion-token` with it. After submitting, you'll see an `Internal Integration Token`. Verify that the `Read content` and `Read user information` capabilities are checked.
 
 ## Step 1: Retrieve Notion users
@@ -117,12 +117,12 @@ if __name__ == "__main__":
             email = user.get("person", {}).get("email")
 ```
 
-## Step 2: Check if a user exists in DocSpace
+## Step 2: Check if a user exists in ONLYOFFICE Apps
 
-Use a [`GET /api/2.0/people/email?email={email}`](/docspace/api-backend/usage-api/people/profiles/get-profile-by-email) request to check if the user exists in DocSpace.
+Use a [`GET /api/2.0/people/email?email={email}`](/docspace/api-backend/usage-api/people/profiles/get-profile-by-email) request to check if the user exists in ONLYOFFICE Apps.
 
 ``` py
-# Step 2: Check if user exists in DocSpace by email
+# Step 2: Check if user exists in ONLYOFFICE Apps by email
 def check_docspace_user(email):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/people/email?email={email}"
     response = requests.get(url, headers=ONLYOFFICE_HEADERS)
@@ -138,16 +138,16 @@ if __name__ == "__main__":
 
             if email:
                 if not check_docspace_user(email):
-                    # if user is missing in DocSpace
+                    # if user is missing in ONLYOFFICE Apps
                     pass
 ```
 
-## Step 3: Add missing users to DocSpace
+## Step 3: Add missing users to ONLYOFFICE Apps
 
-Use a [`POST /api/2.0/people`](/docspace/api-backend/usage-api/people/profiles/add-member) request to add missing users to DocSpace using Notion data.
+Use a [`POST /api/2.0/people`](/docspace/api-backend/usage-api/people/profiles/add-member) request to add missing users to ONLYOFFICE Apps using Notion data.
 
 ``` py
-# Step 3: Add missing users to DocSpace
+# Step 3: Add missing users to ONLYOFFICE Apps
 def add_docspace_user(first_name, last_name, email):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/people"
     data = {
@@ -158,7 +158,7 @@ def add_docspace_user(first_name, last_name, email):
     }
     response = requests.post(url, json=data, headers=ONLYOFFICE_HEADERS)
     if response.status_code == 200:
-        print(f"User {email} added to DocSpace!")
+        print(f"User {email} added to ONLYOFFICE Apps!")
     else:
         print(f"Failed to add {email}: {response.text}")
 

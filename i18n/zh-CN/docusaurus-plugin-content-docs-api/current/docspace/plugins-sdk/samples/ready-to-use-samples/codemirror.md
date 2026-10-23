@@ -1,0 +1,108 @@
+---
+description: 使用 CodeMirror 插件查看和编辑代码文件。
+tags: ["Apps", "Plugins", "Ready-to-use"]
+---
+
+# CodeMirror
+
+用于查看和编辑多种编程代码格式文件的工具。
+
+![CodeMirror](/assets/images/docspace/codemirror.png#gh-light-mode-only)![CodeMirror](/assets/images/docspace/codemirror.dark.png#gh-dark-mode-only)
+
+## 安装
+
+默认在 ONLYOFFICE Apps SaaS 解决方案中可用。
+
+您可以按照[此处](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins)的说明启用它。
+
+## 配置
+
+要开始使用该插件，您无需更改默认设置。
+
+如需调整插件设置，请前往**设置 → 集成 → 插件**，然后点击 **codemirror** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。设置分为两个分组：
+
+**常规**
+
+- **高亮显示空白字符**：将空格显示为点，将制表符显示为箭头。
+- **高亮显示末尾空白字符**：高亮显示行末的空白字符。
+
+**HTML**
+
+- **自动关闭标签**：在 HTML 类文件中输入 `>` 或 `/` 时自动插入关闭标签。
+
+您还可以在此查看插件元数据，例如作者、版本、状态、主页和描述。
+
+## 使用
+
+### 创建新文件
+
+要创建新的代码文件：
+
+1. 打开**文档**部分或某个可用房间。
+2. 点击**操作 → 更多**。也可以点击页面标题旁的 **+** 按钮打开同一菜单。
+
+    ![创建文件](/assets/images/docspace/codemirror-create-file.png#gh-light-mode-only)![创建文件](/assets/images/docspace/codemirror-create-file.dark.png#gh-dark-mode-only)
+3. 在出现的菜单中选择**文本文件**选项。
+4. 在弹出窗口中输入带有相应扩展名的文件名（例如 `style.css`、`script.js`、`app.py`），然后点击**创建**。
+5. CodeMirror 代码编辑器会在新的弹出窗口中打开，您可以在其中编辑文件内容。
+
+    ![编辑器](/assets/images/docspace/codemirror-editor.png#gh-light-mode-only)![编辑器](/assets/images/docspace/codemirror-editor.dark.png#gh-dark-mode-only)
+6. 点击**保存**以保存更改，或点击**取消**放弃更改。要关闭编辑器，请点击弹出窗口右上角的 **X** 图标。
+
+新创建的文件将显示在文件列表中。
+
+### 编辑文件
+
+您可以使用 CodeMirror 插件打开之前创建或下载的文件：
+
+- 点击带有 CodeMirror 图标的文件名，或
+- 右键打开上下文菜单，然后选择**使用 Codemirror 编辑文件**。
+
+### 键盘快捷键
+
+在桌面设备上，编辑器包含一个键盘快捷键侧边面板。点击编辑器区域右上角的快捷键插件图标（标准信息图标，圆圈内带 **i**）即可打开或关闭该面板。面板会列出适用于您操作系统（Windows 或 macOS）的可用快捷键。移动设备上不提供此面板。
+
+![快捷键](/assets/images/docspace/codemirror-keyboard-shortcuts.png#gh-light-mode-only)![快捷键](/assets/images/docspace/codemirror-keyboard-shortcuts.dark.png#gh-dark-mode-only)
+
+### 支持的语言
+
+该插件支持以下语言和文件格式的语法高亮：
+
+| 语言 | 文件扩展名 |
+|----------|-----------------|
+| C/C++ | `.cpp`, `.cc`, `.h`, `.hpp` |
+| CSS | `.css` |
+| Go | `.go` |
+| HTML | `.html`, `.htm` |
+| Java | `.java`, `.class` |
+| JavaScript/TypeScript | `.js`, `.jsx`, `.ts`, `.tsx` |
+| JSON | `.json` |
+| Liquid | `.liquid` |
+| PHP | `.php` |
+| Python | `.py` |
+| Rust | `.rs` |
+| SCSS/Sass | `.sass`, `.scss` |
+| SQL | `.sql`, `.mysql`, `.pgsql`, `.postgresql`, `.sqlite`, `.db`, `.mssql`, `.cql`, `.plsql`, `.mariadb` |
+| WAST | `.wast`, `.wat` |
+| YAML | `.yaml`, `.yml` |
+
+## 插件结构
+
+GitHub 仓库：[codemirror](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/codemirror)。
+
+所有必需文件在[此处](/docspace/plugins-sdk/usage-sdk/plugin-structure.md)说明。
+
+### 接口
+
+使用以下插件接口：
+
+- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 ONLYOFFICE Apps。
+- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。必需，因为我们实现了代码编辑器服务（[CodeMirror](https://codemirror.net/)）。
+- [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md) 和 [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts)。用于添加插件配置设置块。用户可以从**设置 → 集成 → 插件**访问该块以调整插件参数。
+- [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于实现**使用 Codemirror 编辑文件**上下文菜单操作。
+- [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md) 和 [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md)。用于在**操作 → 更多**菜单中添加**文本文件**选项以创建新的代码文件。
+- [IFilePlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IFilePlugin.md) 和 [IFileItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md)。用于注册支持的文件类型并在 CodeMirror 编辑器中打开它们。
+
+## 支持
+
+如需请求功能或报告与此插件相关的错误，请使用 [GitHub](https://github.com/ONLYOFFICE/docspace-plugins/issues) 上的 issues 部分。

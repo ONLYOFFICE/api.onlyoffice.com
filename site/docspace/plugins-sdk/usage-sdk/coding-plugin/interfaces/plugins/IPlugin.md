@@ -1,22 +1,27 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IPlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IPlugin.ts
 ---
 
 # IPlugin
 
-The default plugin.
-This interface must be implemented in each plugin because without the plugin status it will not be built in.
+The default plugin, implemented by every plugin class together with the
+interfaces of the scopes it declares, such as
+[`IContextMenuPlugin`](IContextMenuPlugin.md).
+
+Each time the portal loads the plugin it calls `setLanguage`,
+[`setAPI`](IApiPlugin.md#setapi) for the `API` scope and `onLoadCallback`,
+then reads `getStatus`: `active` registers the plugin's items and CSS.
+For the `Settings` scope it then passes the stored settings to
+[`setAdminPluginSettingsValue`](ISettingsPlugin.md#setadminpluginsettingsvalue)
+and reads `getStatus` again. Switching the plugin back on repeats this on
+the same instance; switching the interface language loads the plugin
+afresh. A plugin that fails to load, or throws on the way, is reported to
+the administrator in the plugin settings with the error's message.
 
 ## Example
 
-Every plugin class implements `IPlugin` (usually together with one or more
-type-specific interfaces such as `IContextMenuPlugin`). DocSpace runs
-`onLoadCallback` when the plugin is uploaded to the portal and reads the
-plugin status via `getStatus` as a switch: `active` publishes the plugin's
-items, `hide` takes them back. The optional `language` field and its
-`setLanguage`/`getLanguage` methods record the portal language: `setLanguage`
-is called once while the plugin loads, and `getLanguage` is what the portal reads to
-pick the plugin name and description from the manifest.
+An unexpected initialization error is left to throw, so the administrator
+sees its message; `PluginStatus.hide` is kept for a plugin not configured yet
 
 ```typescript
 import { type IPlugin, PluginStatus, PluginLocale } from "@onlyoffice/docspace-plugin-sdk";
@@ -26,12 +31,7 @@ class Plugin implements IPlugin {
   language: PluginLocale = PluginLocale.EN_US;
 
   onLoadCallback = async (): Promise<void> => {
-    try {
-      await initializeAnalyzer();
-    } catch (error) {
-      // Hide the plugin if it cannot be initialized
-      this.status = PluginStatus.hide;
-    }
+    await initializeAnalyzer();
   };
 
   updateStatus = (status: PluginStatus): void => {
@@ -42,7 +42,7 @@ class Plugin implements IPlugin {
     return this.status;
   };
 
-  // Called by the portal once while the plugin is loading
+  // Called by the portal right before every onLoadCallback
   setLanguage = (language: PluginLocale): void => {
     this.language = language;
   };
@@ -66,10 +66,7 @@ class Plugin implements IPlugin {
 updateStatus(status: PluginStatus): void;
 ```
 
-Update the plugin status. The portal does not watch the field: a status
-changed outside one of the moments listed on `getStatus` reaches the
-interface only through the
-[`Actions.updateStatus`](../../enums/Actions.md#updatestatus) action.
+Update the plugin status.
 
 #### Parameters
 
@@ -81,24 +78,32 @@ interface only through the
 
 `void`
 
+#### Remarks
+
+The portal does not watch the field: return
+[`Actions.updateStatus`](../../enums/Actions.md#updatestatus) to apply a
+status changed outside the moments listed on `getStatus`.
+
 ### getStatus()
 
 ```ts
 getStatus(): PluginStatus;
 ```
 
-The method is called on the portal side to read the current plugin status:
-after `onLoadCallback`, after the stored settings reach a plugin that
-implements [`ISettingsPlugin`](ISettingsPlugin.md), after
-[`save`](../../react/settings.md#save) in the React settings client, and
-on every [`Actions.updateStatus`](../../enums/Actions.md#updatestatus).
-`active` registers the items of every scope the plugin declares and loads
-its CSS, `hide` unregisters them and unloads the CSS again; a plugin the
-portal administrator has disabled stays hidden whatever the status says.
+The method is called on the portal side to read the plugin status:
+`active` registers the items and CSS, `hide` takes them back.
 
 #### Returns
 
 [`PluginStatus`](../../enums/Plugins.md#pluginstatus)
+
+#### Remarks
+
+Read after `onLoadCallback`, after the stored settings reach
+[`setAdminPluginSettingsValue`](ISettingsPlugin.md#setadminpluginsettingsvalue),
+after [`save`](../../react/settings.md#save) in the React settings client
+and on every [`Actions.updateStatus`](../../enums/Actions.md#updatestatus).
+The administrator's switch overrides it.
 
 ### setOnLoadCallback()
 
@@ -127,9 +132,9 @@ import APITable from '@site/src/components/APITable/APITable';
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `status` | [`PluginStatus`](../../enums/Plugins.md#pluginstatus) | The plugin status: [`active`](../../enums/Plugins.md#active) while the plugin's items belong in the interface, [`hide`](../../enums/Plugins.md#hide) while they do not. |
-| `language?` | [`PluginLocale`](../../enums/Plugins.md#pluginlocale) | The plugin language |
-| `setLanguage?` | (`language`: [`PluginLocale`](../../enums/Plugins.md#pluginlocale)) => `void` | The method is called on the portal side once per plugin instance, right before `onLoadCallback`. It is not a change notification: switching the interface language reloads the plugin. |
-| `getLanguage?` | () => [`PluginLocale`](../../enums/Plugins.md#pluginlocale) | The method is called on the portal side to get the plugin language. |
-| `onLoadCallback` | () => `Promise`\<`void`\> | Callback which will be executed when uploading the plugin to the portal |
+| `language` | [`PluginLocale`](../../enums/Plugins.md#pluginlocale) | The plugin language |
+| `setLanguage` | (`language`: [`PluginLocale`](../../enums/Plugins.md#pluginlocale)) => `void` | The method is called on the portal side with the portal language, right before every `onLoadCallback`. **Remarks:** It is not a change notification: switching the interface language loads the plugin afresh. |
+| `getLanguage` | () => [`PluginLocale`](../../enums/Plugins.md#pluginlocale) | The method is called on the portal side to get the plugin language, under which the plugin list shows the manifest's `nameLocale` and `descriptionLocale` — the interface language when it is not implemented. |
+| `onLoadCallback` | () => `Promise`\<`void`\> | Callback the portal awaits each time it loads the plugin, before reading the status and registering the items. **Remarks:** A throw stops the plugin from registering anything and is reported to the administrator in the plugin settings. |
 
 </APITable>

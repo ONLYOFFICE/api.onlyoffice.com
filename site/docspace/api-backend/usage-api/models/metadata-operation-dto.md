@@ -7,3 +7,4 @@ The cascade metadata assignment operation status.
 | **progress** | **Double** (double) | The operation progress percentage. | [optional] [example: `100`] |
 | **isCompleted** | **Boolean** | Specifies if the operation is completed. | [optional] [example: `true`] |
 | **error** | **String** | The operation error message. | [optional] [example: `Folder not found.`] [nullable] |
+| **templateIds** | **List** (int32) | The IDs of the metadata templates the operation propagates to the subtree. Empty when there is no operation to report, so the answer describes nothing in progress. | [optional] [example: `[3]`] [nullable] |

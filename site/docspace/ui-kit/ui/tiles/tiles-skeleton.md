@@ -19,25 +19,25 @@ Placeholder in the shape of a tile listing, shown while the tiles themselves are
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `title`? | `stringundefined` | Accessible name given to every shape; empty by default, which leaves them unnamed. Default: `""`. |
-| `className`? | `stringundefined` | Class added to every tile placeholder, and in place of the heading bars' own. |
-| `x`? | `stringundefined` | Ignored: the grid places its shapes itself. |
-| `y`? | `stringundefined` | Ignored: the grid places its shapes itself. |
-| `width`? | `stringundefined` | Resizes the two heading bars only. |
-| `height`? | `stringundefined` | Resizes the two heading bars only. |
-| `borderRadius`? | `stringundefined` | Corner radius of every shape; the tiles fall back to 12px and the heading bars to 3px. |
-| `backgroundColor`? | `stringundefined` | Colour of the shapes at rest, drawn at backgroundOpacity; black in every theme. Default: `#000`. |
-| `foregroundColor`? | `stringundefined` | Colour of the band that sweeps across the shapes, drawn at foregroundOpacity. Default: `#000`. |
-| `backgroundOpacity`? | `numberundefined` | Opacity of backgroundColor, from 0 to 1. Default: `0.1`. |
-| `foregroundOpacity`? | `numberundefined` | Opacity of foregroundColor, from 0 to 1. Default: `0.15`. |
-| `speed`? | `numberundefined` | Duration of one sweep of the band, in seconds. Default: `2`. |
-| `animate`? | `booleanundefined` | Stops the band on the two heading bars only; the tile placeholders keep sweeping. Default: `true`. |
-| `style`? | `CSSPropertiesundefined` | Inline style of every tile placeholder and heading bar. |
-| `uniqueKey`? | `stringundefined` | Ignored: every shape takes an id of its own. |
-| `foldersCount`? | `numberundefined` | How many folder placeholders to draw; with none, the bar above them goes too. Default: `2`. |
-| `filesCount`? | `numberundefined` | How many file placeholders to draw; with none, the bar above them goes too. Default: `8`. |
-| `withTitle`? | `booleanundefined` | Whether a bar stands for the heading above the files. Default: `true`. |
-| `isRooms`? | `booleanundefined` | Meant to widen the columns for room tiles; it currently changes nothing. Default: `false`. |
+| `title` | `stringundefined` | Accessible name given to every shape; empty by default, which leaves them unnamed. Default: `""`. |
+| `className` | `stringundefined` | Class added to every tile placeholder, and in place of the heading bars' own. |
+| `x` | `stringundefined` | Ignored: the grid places its shapes itself. |
+| `y` | `stringundefined` | Ignored: the grid places its shapes itself. |
+| `width` | `stringundefined` | Resizes the two heading bars only. |
+| `height` | `stringundefined` | Resizes the two heading bars only. |
+| `borderRadius` | `stringundefined` | Corner radius of every shape; the tiles fall back to 12px and the heading bars to 3px. |
+| `backgroundColor` | `stringundefined` | Colour of the shapes at rest, drawn at backgroundOpacity; black in every theme. Default: `#000`. |
+| `foregroundColor` | `stringundefined` | Colour of the band that sweeps across the shapes, drawn at foregroundOpacity. Default: `#000`. |
+| `backgroundOpacity` | `numberundefined` | Opacity of backgroundColor, from 0 to 1. Default: `0.1`. |
+| `foregroundOpacity` | `numberundefined` | Opacity of foregroundColor, from 0 to 1. Default: `0.15`. |
+| `speed` | `numberundefined` | Duration of one sweep of the band, in seconds. Default: `2`. |
+| `animate` | `booleanundefined` | Stops the band on the two heading bars only; the tile placeholders keep sweeping. Default: `true`. |
+| `style` | `CSSPropertiesundefined` | Inline style of every tile placeholder and heading bar. |
+| `uniqueKey` | `stringundefined` | Ignored: every shape takes an id of its own. |
+| `foldersCount` | `numberundefined` | How many folder placeholders to draw; with none, the bar above them goes too. Default: `2`. |
+| `filesCount` | `numberundefined` | How many file placeholders to draw; with none, the bar above them goes too. Default: `8`. |
+| `withTitle` | `booleanundefined` | Whether a bar stands for the heading above the files. Default: `true`. |
+| `isRooms` | `booleanundefined` | Meant to widen the columns for room tiles; it currently changes nothing. Default: `false`. |
 
 </APITable>
 

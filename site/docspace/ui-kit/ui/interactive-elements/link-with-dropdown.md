@@ -123,35 +123,35 @@ export function SortLink({ onSort }: { onSort: (by: string) => void }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `bottomSpace`? | `number` | (`withDynamicScrollbar` only) Space to leave below the menu, in pixels. |
-| `children`? | `ReactNode` | Text of the link. |
-| `className`? | `string` | Applied to the outermost element, and to the link inside it. Default: `""`. |
-| `color`? | `string` | CSS colour of the text. |
-| `data`? | `ContextMenuModel[]` | Entries of the menu. Each is a `DropDownItem`'s props; `key` is required, and `onClick` is called with the event. |
-| `directionX`? | `TDirectionX` | Which side of the link the menu is aligned to. Passed straight to `DropDown`, which defaults to `"right"`. |
-| `directionY`? | `TDirectionY` | Whether the menu opens above or below the link. Passed straight to `DropDown`, which defaults to `"bottom"`. |
-| `dropDownClassName`? | `string` | Applied to the menu. |
-| `dropdownType`? | `TDropdownType` | Whether the dashed underline is always drawn or appears on hover. Default: `"alwaysDashed"`. |
-| `fixedDirection`? | `boolean` | Whether the menu keeps `directionX` and `directionY` even when it does not fit there. Default: `false`. |
-| `fontSize`? | `string` | Font size of the text, as a CSS length. Default: `"13px"`. |
-| `fontWeight`? | `number` | Font weight of the text. |
-| `hasScroll`? | `boolean` | Whether the menu is wrapped in a scrollbar of its own. It only takes effect on a phone. Default: `false`. |
-| `id`? | `string` | Applied to the outermost element. |
-| `isAside`? | `boolean` | Passed to the menu's backdrop, which then keeps an aside panel above itself. |
-| `isBold`? | `boolean` | Whether the text is bold. Default: `false`. |
-| `isDefaultMode`? | `boolean` | Whether the menu is rendered in a portal on `document.body`. Turn it off to render it in place. Default: `true`. |
-| `isDisabled`? | `boolean` | Whether the link is inert: it greys out and clicking no longer opens the menu. Default: `false`. |
-| `isHovered`? | `boolean` | Ignored. Nothing reads this prop; the hover state comes from CSS. |
-| `isOpen`? | `boolean` | Whether the menu starts open. The component then keeps that state itself; changing this prop re-syncs it. Default: `false`. |
-| `isSemitransparent`? | `boolean` | Whether the link is drawn at half opacity, the portal's "pending" look. Default: `false`. |
-| `isTextOverflow`? | `boolean` | Whether the text is truncated with an ellipsis at 200px instead of wrapping. Default: `false`. |
-| `manualWidth`? | `string` | Exact width of the menu, as a CSS length. Without it the menu is as wide as its widest entry. |
-| `style`? | `CSSProperties` | Applied to the outermost element as inline style. |
-| `title`? | `string` | `title` attribute of the text — the browser's own tooltip for a truncated label. |
-| `topSpace`? | `number` | (`withDynamicScrollbar` only) Space to leave above the menu, in pixels. |
-| `withDynamicScrollbar`? | `boolean` | Whether the menu measures the room around the link on every open and scrolls inside what is left. |
-| `withExpander`? | `boolean` | Whether a chevron is drawn after the text, which turns over while the menu is open. Default: `false`. |
-| `withoutBackground`? | `boolean` | Passed to the menu's backdrop: makes it transparent. |
+| `bottomSpace` | `number` | (`withDynamicScrollbar` only) Space to leave below the menu, in pixels. |
+| `children` | `ReactNode` | Text of the link. |
+| `className` | `string` | Applied to the outermost element, and to the link inside it. Default: `""`. |
+| `color` | `string` | CSS colour of the text. |
+| `data` | `ContextMenuModel[]` | Entries of the menu. Each is a `DropDownItem`'s props; `key` is required, and `onClick` is called with the event. |
+| `directionX` | `TDirectionX` | Which side of the link the menu is aligned to. Passed straight to `DropDown`, which defaults to `"right"`. |
+| `directionY` | `TDirectionY` | Whether the menu opens above or below the link. Passed straight to `DropDown`, which defaults to `"bottom"`. |
+| `dropDownClassName` | `string` | Applied to the menu. |
+| `dropdownType` | `TDropdownType` | Whether the dashed underline is always drawn or appears on hover. Default: `"alwaysDashed"`. |
+| `fixedDirection` | `boolean` | Whether the menu keeps `directionX` and `directionY` even when it does not fit there. Default: `false`. |
+| `fontSize` | `string` | Font size of the text, as a CSS length. Default: `"13px"`. |
+| `fontWeight` | `number` | Font weight of the text. |
+| `hasScroll` | `boolean` | Whether the menu is wrapped in a scrollbar of its own. It only takes effect on a phone. Default: `false`. |
+| `id` | `string` | Applied to the outermost element. |
+| `isAside` | `boolean` | Passed to the menu's backdrop, which then keeps an aside panel above itself. |
+| `isBold` | `boolean` | Whether the text is bold. Default: `false`. |
+| `isDefaultMode` | `boolean` | Whether the menu is rendered in a portal on `document.body`. Turn it off to render it in place. Default: `true`. |
+| `isDisabled` | `boolean` | Whether the link is inert: it greys out and clicking no longer opens the menu. Default: `false`. |
+| `isHovered` | `boolean` | Ignored. Nothing reads this prop; the hover state comes from CSS. |
+| `isOpen` | `boolean` | Whether the menu starts open. The component then keeps that state itself; changing this prop re-syncs it. Default: `false`. |
+| `isSemitransparent` | `boolean` | Whether the link is drawn at half opacity, the portal's "pending" look. Default: `false`. |
+| `isTextOverflow` | `boolean` | Whether the text is truncated with an ellipsis at 200px instead of wrapping. Default: `false`. |
+| `manualWidth` | `string` | Exact width of the menu, as a CSS length. Without it the menu is as wide as its widest entry. |
+| `style` | `CSSProperties` | Applied to the outermost element as inline style. |
+| `title` | `string` | `title` attribute of the text — the browser's own tooltip for a truncated label. |
+| `topSpace` | `number` | (`withDynamicScrollbar` only) Space to leave above the menu, in pixels. |
+| `withDynamicScrollbar` | `boolean` | Whether the menu measures the room around the link on every open and scrolls inside what is left. |
+| `withExpander` | `boolean` | Whether a chevron is drawn after the text, which turns over while the menu is open. Default: `false`. |
+| `withoutBackground` | `boolean` | Passed to the menu's backdrop: makes it transparent. |
 
 </APITable>
 

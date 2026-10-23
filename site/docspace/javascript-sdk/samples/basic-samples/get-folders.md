@@ -1,18 +1,18 @@
 ---
 description: Retrieve a list of folders from a room using the JS SDK.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Get folders
 
-This example demonstrates how to retrieve a list of folders from a shared DocSpace room using the Embed SDK.
+This example demonstrates how to retrieve a list of folders from a shared ONLYOFFICE Apps room using the Embed SDK.
 
 Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/get-folders.html)
 
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of ONLYOFFICE Apps.
 
 <details>
   <summary>Full example</summary>
@@ -68,6 +68,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 
     const config = {
       frameId: "ds-frame",
+      src: "{PORTAL_SRC}",
       width: "100%",
       height: "700px",
       rootPath: `/rooms/shared/${roomId}`, // Initial path in the room
@@ -75,7 +76,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       events: { onAppReady },
     };
 
-    // Initialize DocSpace SDK
+    // Initialize ONLYOFFICE Apps SDK
     const docSpace = DocSpace.SDK.initManager(config);
   </script>
 </html>
@@ -85,7 +86,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 
 ## Step 1. Set HTML structure
 
-Create an HTML page with an embedded DocSpace iframe and a button to trigger folder retrieval.
+Create an HTML page with an embedded ONLYOFFICE Apps iframe and a button to trigger folder retrieval.
 
 ``` html
 <!-- Step 1: HTML Setup -->
@@ -127,12 +128,12 @@ Create an HTML page with an embedded DocSpace iframe and a button to trigger fol
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following ONLYOFFICE Apps folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE Apps installed.
 :::
 
 ## Step 2. Embed SDK logic
 
-Use the [getFolders()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#getfolders) method to retrieve the list of folders from the current DocSpace view.
+Use the [getFolders()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#getfolders) method to retrieve the list of folders from the current ONLYOFFICE Apps view.
 
 ``` ts
 const roomId = "71234"; // Replace with your actual public room ID
@@ -145,6 +146,7 @@ function onAppReady() {
 
 const config = {
   frameId: "ds-frame",
+  src: "{PORTAL_SRC}",
   width: "100%",
   height: "700px",
   rootPath: `/rooms/shared/${roomId}`, // Load the shared room path

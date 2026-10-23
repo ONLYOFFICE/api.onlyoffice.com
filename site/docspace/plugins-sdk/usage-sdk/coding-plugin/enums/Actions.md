@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/enums/Actions.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Actions.ts
 ---
 
 # Actions
@@ -65,9 +65,7 @@ updateStatus: "update-status";
 ```
 
 Makes the portal re-read the plugin status through
-[`getStatus`](../interfaces/plugins/IPlugin.md#getstatus) and apply
-it: `active` registers the items of every scope the plugin declares and
-loads its CSS, `hide` unregisters them and unloads the CSS again.
+[`getStatus`](../interfaces/plugins/IPlugin.md#getstatus) and apply it.
 
 #### Example
 
@@ -275,6 +273,7 @@ It does not work if the [`createDialogProps`](../interfaces/components/ICreateDi
 const message: IMessage = {
   actions: [Actions.updateCreateDialogModal],
   createDialogProps: {
+    ...newDiagramDialog,
     title: "some title value",
   },
 };
@@ -501,7 +500,8 @@ navigate: "navigate";
 ```
 
 Calls a function to navigate to the specified path.
-All actions listed after navigate will be called after the navigation is complete.
+The portal starts the navigation and goes straight on to the actions listed
+after it, without waiting for the new page.
 It does not work if the [`navigatePath`](../interfaces/utils.md#imessage) parameter is not passed to the message.
 
 #### Example
@@ -545,7 +545,7 @@ The viewer configuration is passed in the [`mediaViewerProps`](../interfaces/com
 ```typescript
 const message: IMessage = {
   actions: [Actions.showMediaViewer],
-  mediaViewerProps: { ...mediaViewerProps },
+  mediaViewerProps: { ...mediaViewerProps, fileId: file.id },
 }
 ```
 
@@ -556,14 +556,15 @@ updateMediaViewer: "update-media-viewer";
 ```
 
 Calls a function to update the plugin media viewer.
-The new configuration is passed in the [`mediaViewerProps`](../interfaces/components/IMediaViewer.md) parameter.
+The new configuration is passed in the [`mediaViewerProps`](../interfaces/components/IMediaViewer.md) parameter
+and replaces the current one, so pass all fields again. A different `fileId` opens that file.
 
 #### Example
 
 ```typescript
 const message: IMessage = {
   actions: [Actions.updateMediaViewer],
-  mediaViewerProps: { ...mediaViewerProps },
+  mediaViewerProps: { ...mediaViewerProps, fileId: nextId },
 }
 ```
 

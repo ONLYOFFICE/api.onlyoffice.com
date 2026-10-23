@@ -6,7 +6,7 @@
 
 Get folder metadata
 
-Returns the metadata of a folder or a room: the templates assigned to it, directly or inherited from a cascading folder above it, each with its fields, and the custom text fields set on it. The caller needs read access to the folder: a member of the portal, or an anonymous caller through an external link that grants access to the folder or to a folder above it, with the link key in the `Request-Token` header or in the `share` query parameter. The call is read-only. A field carries its value inside it; a field the folder holds no value for comes without a `value`. The custom fields are name and value pairs and are not part of any template. A folder without metadata is answered with empty lists, not with an error. Whether a template cascades from this folder to its content is not reported here. A request with neither a session nor a link key is answered with 401; a folder the caller cannot read with 403, a folder that does not exist with 404.
+Returns the metadata of a folder or a room: the templates assigned to it, directly or inherited from a cascading folder above it, each with its fields, and the custom text fields set on it. The caller needs read access to the folder: a member of the portal, or an anonymous caller through an external link to the folder or to a folder above it, with the link key in the `Request-Token` header or in the `share` query parameter. The call is read-only. A field carries its value inside it; a field without a value on the folder comes without `value`. Each template reports whether this folder cascades it to its content in `cascade`, with the rule of that cascade in `conflictResolveType`, absent while it does not; an inherited template reports false unless this folder cascades it on its own. The custom fields are name and value pairs outside any template. A folder without metadata is answered with empty lists. The cascade is changed with `PUT api/2.0/files/metadata/folder/{folderId}/templates/{templateId}`. A request with neither a session nor a link key is answered with 401; a folder the caller cannot read with 403, a folder that does not exist with 404.
 
 ## Parameters
 
@@ -18,10 +18,10 @@ Returns the metadata of a folder or a room: the templates assigned to it, direct
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | Folder metadata | [**EntryMetadataWrapper**](../../models/entry-metadata-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The templates assigned to the folder with their fields, values and cascade state, and the custom fields of the folder | [**EntryMetadataWrapper**](../../models/entry-metadata-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **401** | The caller has neither a session nor an external link key | - | - |
 | **403** | You don't have enough permission to perform the operation | - | - |
-| **404** | Folder not found | - | - |
+| **404** | No folder or room with this identifier exists | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

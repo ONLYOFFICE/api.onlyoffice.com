@@ -4,12 +4,12 @@ sidebar_position: -14
 
 # 内联编辑器
 
-以下步骤解释了如何在同一个 `.html` 页面上嵌入多个ONLYOFFICE 文档编辑器。
+以下步骤解释了如何在同一个 `.html` 页面上嵌入多个 ONLYOFFICE 文档编辑器。
 
 <img alt="Inline editors" src="/assets/images/editor/inlineEditors.png" width="720px" />
 
 :::note
-从5.5版本开始支持同时使用多个编辑器。
+从 5.5 版本开始支持同时使用多个编辑器。
 :::
 
 1. 创建一个空的 `.html` 文件。
@@ -22,16 +22,16 @@ sidebar_position: -14
    <div id="placeholder3"></div>
    ```
 
-3. 在页面中引入ONLYOFFICE 文档的 JavaScript API 脚本：
+3. 在页面中引入 ONLYOFFICE 文档的 JavaScript API 脚本：
 
    ``` html
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   其中 `documentserver` 是安装了ONLYOFFICE 文档的服务器名称。`api.js` 脚本由**文档编辑服务**提供，它会加载**文档编辑器**并将其连接到该服务。
+   其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器名称。`api.js` 脚本由**文档编辑服务**提供，它会加载**文档编辑器**并将其连接到该服务。
 
    :::tip
-   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的ONLYOFFICE 文档云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。您可以在云控制台的**实例**部分找到它们。
+   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 文档云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。您可以在云控制台的**实例**部分找到它们。
    :::
 
 4. 添加脚本，使用要打开的文档配置为相应的 `<div>` 元素初始化每个**文档编辑器**：
@@ -77,7 +77,7 @@ sidebar_position: -14
    将 `example.com` 替换为提供文档文件的主机地址，即您的**文档存储服务**。
 
    :::warning
-   当文档服务器启用了 JWT 验证（默认配置）时，每个 `config` 必须使用匹配的 [`token`](./security.md) 进行签名。上述令牌与这些确切的配置匹配，但使用的是临时密钥 — 它们不会在您的服务器上通过验证，且在配置更改时必须重新生成。请使用您的文档服务器的 JWT 密钥进行签名。
+   当文档服务器启用了 JWT 验证（默认配置）时，每个 `config` 必须使用匹配的 [`token`](./security.md) 进行签名。上述令牌与这些确切的配置匹配，但使用的是临时密钥——它们不会在您的服务器上通过验证，且在配置更改时必须重新生成。请使用您的文档服务器的 JWT 密钥进行签名。
    :::
 
 5. 要结束编辑，请调用 [destroyEditor](../../usage-api/methods.md#destroyeditor) 方法来关闭所需的编辑器：

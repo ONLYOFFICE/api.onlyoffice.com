@@ -48,7 +48,7 @@ const HomepageFeatures: FC<HomepageFeaturesProps.Props> = ({
                  <div
                     className={clsx(
                       styles.featuresGridWrapper,
-                      group.heading === "DocSpace" && styles.docspaceGrid,
+                      group.heading === "Apps" && styles.docspaceGrid,
                       group.heading === "Docs" && styles.docsGrid
                     )}
                   >

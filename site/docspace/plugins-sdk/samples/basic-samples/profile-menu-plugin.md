@@ -1,15 +1,15 @@
 ---
 description: Add a custom item to the user profile menu.
-tags: ["DocSpace", "Plugins", "Basic"]
+tags: ["Apps", "Plugins", "Basic"]
 ---
 
 # Profile menu plugin
 
-This guide walks you through creating a plugin for DocSpace that adds a custom item to the user profile dropdown menu and performs an action when clicked.
+This guide walks you through creating a plugin for ONLYOFFICE Apps that adds a custom item to the user profile dropdown menu and performs an action when clicked.
 
 ## Before you start
 
-Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
+Make sure you have an ONLYOFFICE Apps server running, and install ONLYOFFICE Apps Plugins SDK globally:
 
 ``` sh
 npm i -g @onlyoffice/docspace-plugin-sdk
@@ -115,16 +115,16 @@ npm run build
 
 This compiles `src/index.ts` to `dist/plugin.js`.
 
-## Step 6: Upload to DocSpace
+## Step 6: Upload to ONLYOFFICE Apps
 
 1. Log in as an administrator.
 2. Navigate to: **Settings → Integration → Plugins**.
-3. Click **Upload**, and select the generated `dist/plugin.zip`.
+3. Click **Upload plugin**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
 ## Step 7: Test the plugin
 
-1. Go to the bottom-left corner of the DocSpace interface.
+1. Go to the bottom-left corner of the ONLYOFFICE Apps interface.
 2. Click ![More icon](/assets/images/docspace/more-icon.png) next to your profile (avatar).
 3. A dropdown menu will appear.
 4. Look for your custom menu item titled **Profile menu item**.

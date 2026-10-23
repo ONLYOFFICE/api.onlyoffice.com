@@ -1,6 +1,6 @@
 ---
 description: Rename uploaded files automatically to enforce safe naming rules.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,33 +8,33 @@ import TabItem from '@theme/TabItem';
 
 # Sanitizing filenames
 
-This example shows how to enforce consistent and safe file naming rules in ONLYOFFICE DocSpace by automatically renaming files right after upload.
+This example shows how to enforce consistent and safe file naming rules in ONLYOFFICE Apps by automatically renaming files right after upload.
 
-When DocSpace sends a webhook to your backend, the handler:
+When ONLYOFFICE Apps sends a webhook to your backend, the handler:
 
 - reads `event.trigger` and `payload`,
 - accepts only upload triggers (`file.uploaded`, `file.created`),
 - extracts `payload.id` (fileId) and `payload.title`,
 - generates a normalized title,
-- renames the file via the DocSpace API.
+- renames the file via the ONLYOFFICE Apps API.
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 3. Expose your webhook endpoint over HTTPS in production (terminate TLS in your app or behind a reverse proxy/load balancer, and reject non-HTTPS requests). For local testing, use a secure tunnel that provides an HTTPS URL.
 
 ## Webhook configuration
 
-This example relies on DocSpace webhooks. To register and manage webhooks on your portal, see [Webhooks](/docspace/api-backend/get-started/how-it-works/webhooks.md) and the Help Center instructions: https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx.
+This example relies on ONLYOFFICE Apps webhooks. To register and manage webhooks on your portal, see [Webhooks](/docspace/api-backend/get-started/how-it-works/webhooks.md) and the Help Center instructions: https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx.
 
 - Register a webhook and enable the triggers used in this example.
 - Set the payload URL to your backend endpoint.
-- Generate/set a secret key and store it on the backend as `WEBHOOK_SECRET`. DocSpace sends the signature in the `x-docspace-signature-256` header so you can validate the request against the raw body.
+- Generate/set a secret key and store it on the backend as `WEBHOOK_SECRET`. ONLYOFFICE Apps sends the signature in the `x-docspace-signature-256` header so you can validate the request against the raw body.
 
 ## Timeouts and retries
 
-DocSpace retries failed webhook deliveries. According to the webhook docs:
+ONLYOFFICE Apps retries failed webhook deliveries. According to the webhook docs:
 
 - Up to 5 attempts are made, with exponential backoff (`2^attempt` seconds).
 - Any successful status (any 2xx) stops retries.
@@ -83,7 +83,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
     return crypto.timingSafeEqual(Buffer.from(received), Buffer.from(expected));
   }
 
-  // DocSpace request helper
+  // ONLYOFFICE Apps request helper
   async function docspaceRequest(path: string, method: string = "GET", body: any = null) {
     const url = `${API_HOST}${path}`;
 
@@ -290,7 +290,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
     expected = hmac.new(secret_key.encode("utf-8"), raw_body, hashlib.sha256).hexdigest().lower()
     return hmac.compare_digest(received, expected)
 
-  # DocSpace request helper
+  # ONLYOFFICE Apps request helper
   def docspace_request(path, method= "GET", json_body = None):
     url = f"{API_HOST}{path}"
 
@@ -443,7 +443,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
 ## Step 1: Read the webhook event and file data
 
-The handler receives a DocSpace webhook with:
+The handler receives an ONLYOFFICE Apps webhook with:
 
 - `event.trigger` — event name (for example `file.uploaded`)
 - `payload` — file object with `id` and usually `title`
@@ -532,7 +532,7 @@ The script normalizes the title:
   </TabItem>
 </Tabs>
 
-## Step 3: Rename the file in DocSpace
+## Step 3: Rename the file in ONLYOFFICE Apps
 
 If the sanitized name differs from the original title, the script renames the file using PUT [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/files/files/update-file) with body `{ "title": "<newTitle>" }`
 

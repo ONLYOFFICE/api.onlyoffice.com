@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/items/IArticleButtonItem.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IArticleButtonItem.ts
 ---
 
 # IArticleButtonItem
@@ -22,7 +22,7 @@ Article button item with a React component
 
 ```tsx
 import { usePluginActions } from "@onlyoffice/docspace-plugin-sdk/react";
-import { IArticleButtonItem, ToastType, UsersType } from "@onlyoffice/docspace-plugin-sdk";
+import { IArticleButtonItem, ToastType, UserRole } from "@onlyoffice/docspace-plugin-sdk";
 
 function NotificationsButton() {
   const { showToast } = usePluginActions();
@@ -44,7 +44,7 @@ function NotificationsButton() {
 const notificationItem: IArticleButtonItem = {
   key: "notifications-item",
   component: NotificationsButton,
-  usersTypes: [UsersType.owner, UsersType.docSpaceAdmin]
+  usersTypes: [UserRole.owner, UserRole.fullAdmin]
 };
 ```
 
@@ -56,7 +56,7 @@ fetch inside `useEffect` and render a placeholder until the data arrives.
 ```tsx
 import { useEffect, useState } from "react";
 import { usePluginAPI, usePluginActions } from "@onlyoffice/docspace-plugin-sdk/react";
-import { IArticleButtonItem, Devices, UsersType } from "@onlyoffice/docspace-plugin-sdk";
+import { IArticleButtonItem, Devices, UserRole } from "@onlyoffice/docspace-plugin-sdk";
 
 function PendingInvitesButton() {
   const api = usePluginAPI();
@@ -86,7 +86,7 @@ function PendingInvitesButton() {
 const invitesItem: IArticleButtonItem = {
   key: "pending-invites-item",
   component: PendingInvitesButton,
-  usersTypes: [UsersType.owner, UsersType.docSpaceAdmin],
+  usersTypes: [UserRole.owner, UserRole.fullAdmin],
   devices: [Devices.desktop, Devices.tablet]
 };
 ```
@@ -100,10 +100,10 @@ import APITable from '@site/src/components/APITable/APITable';
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `key` | `string` | The unique item identifier used by the service to recognize the item |
-| ~~`body?`~~ | [`IBox`](../components/IBox.md) | The body of the article button item rendered via the IBox component tree. This is the main content that will be displayed. Use either `body` or `component`, not both. **Deprecated:** Use `component` instead — accepts a React component and supports hooks from `@onlyoffice/docspace-plugin-sdk/react`. |
-| `component?` | `ComponentType` | A React component rendered as the article button item. The slot has no click handler of its own. Use either `component` or `body`, not both. The component can use `usePluginActions`, `usePluginAPI` and other hooks from `@onlyoffice/docspace-plugin-sdk/react`. |
-| ~~`onLoad?`~~ | () => `Promise`\<\{ `body`: [`IBox`](../components/IBox.md); \}\> | A function that is executed after the article button item is loaded. It returns a new body. If this functionality is not needed, the old body value is returned. **Deprecated:** Use a React component via `component` with `useEffect` for data loading instead. |
-| `usersTypes?` | [`UsersType`](../../enums/UsersType.md)[] | The types of users who will see the current button item in the article. Currently the following user types are available: owner, docSpaceAdmin, roomAdmin, collaborator, user. If this parameter is not specified, then the item will be displayed for all user types. |
-| `devices?` | [`Devices`](../../enums/Devices.md)[] | The types of devices where the current button item will be displayed. At the moment the following device types are available: mobile, tablet, desktop. If this parameter is not specified, then the item will be displayed on all device types. |
+| `body` | [`IBox`](../components/IBox.md) | The body of the article button item rendered via the IBox component tree. This is the main content that will be displayed. Use either `body` or `component`, not both. **Deprecated:** Use `component` instead — accepts a React component and supports hooks from `@onlyoffice/docspace-plugin-sdk/react`. |
+| `component` | `ComponentType` | A React component rendered as the article button item. The slot has no click handler of its own. Use either `component` or `body`, not both. The component can use `usePluginActions`, `usePluginAPI` and other hooks from `@onlyoffice/docspace-plugin-sdk/react`. |
+| `onLoad` | () => `Promise`\<\{ `body?`: [`IBox`](../components/IBox.md); \}\> | A function that is executed after the article button item is loaded. It returns a new body. If this functionality is not needed, the old body value is returned. **Deprecated:** Use a React component via `component` with `useEffect` for data loading instead. |
+| `usersTypes` | ([`UserRole`](../../enums/UserRole.md) \| [`UsersType`](../../enums/UsersType.md))[] | The types of users who will see the current button item in the article. Currently the following user types are available: owner, fullAdmin, roomAdmin, user, guest. If this parameter is not specified, then the item will be displayed for all user types. |
+| `devices` | [`Devices`](../../enums/Devices.md)[] | The types of devices where the current button item will be displayed. At the moment the following device types are available: mobile, tablet, desktop. If this parameter is not specified, then the item will be displayed on all device types. |
 
 </APITable>

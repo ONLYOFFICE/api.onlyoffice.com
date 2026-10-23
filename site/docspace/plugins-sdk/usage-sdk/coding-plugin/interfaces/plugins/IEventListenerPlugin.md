@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IEventListenerPlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IEventListenerPlugin.ts
 ---
 
 # IEventListenerPlugin
@@ -9,7 +9,7 @@ The plugin that is given the access to the portal events.
 ## Example
 
 The plugin class implements `IEventListenerPlugin` and registers a listener for
-the room creation event in the constructor. DocSpace calls `getEventListenerItems`
+the room creation event in the constructor. ONLYOFFICE Apps calls `getEventListenerItems`
 to subscribe the handlers to the portal events.
 
 ```typescript

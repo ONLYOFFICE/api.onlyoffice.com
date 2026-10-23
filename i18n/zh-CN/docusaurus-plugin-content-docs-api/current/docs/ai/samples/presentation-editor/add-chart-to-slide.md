@@ -12,8 +12,8 @@ import Video from '@site/src/components/Video/Video';
 
 ## 提示词
 
-- 在当前幻灯片上添加一个展示销售数据 [[100, 120, 140], [90, 110, 130]] 的柱状图，系列名称为"Product A"、"Product B"，类别为"Q1"、"Q2"、"Q3"
-- 在第 2 张幻灯片上添加一个展示数据 [[30, 25, 20, 15, 10]] 的饼图，系列名称为"Market Share"，类别为"Company A"、"Company B"、"Company C"、"Company D"、"Others"
+- 在当前幻灯片上添加一个展示销售数据 [[100, 120, 140], [90, 110, 130]] 的柱状图，系列名称为“Product A”、“Product B”，类别为“Q1”、“Q2”、“Q3”
+- 在第 2 张幻灯片上添加一个展示数据 [[30, 25, 20, 15, 10]] 的饼图，系列名称为“Market Share”，类别为“Company A”、“Company B”、“Company C”、“Company D”、“Others”
 - 生成展示 2024 年月度营收从 5 万美元稳步增长至 12 万美元的图表数据
 
 ## 函数注册 {#function-registration}

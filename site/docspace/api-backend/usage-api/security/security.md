@@ -1,9 +1,9 @@
-# ONLYOFFICE DocSpace Security API
+# ONLYOFFICE Apps Security API
 
 The browsable version of this reference, with a request builder and code samples, is published at
 [https://api.onlyoffice.com/docspace/api-backend/usage-api/](https://api.onlyoffice.com/docspace/api-backend/usage-api/).
 
-All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is the address of your DocSpace instance.
+All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is the address of your Apps instance.
 
 ## Access to DevTools
 

@@ -16,7 +16,7 @@ ONLYOFFICE 桌面编辑器支持命令行标志，用于控制应用程序的启
 <Tabs>
   <TabItem value="windows" label="Windows">
 
-**通过快捷方式**：右键单击应用程序快捷方式 → **属性** → **快捷方式** 选项卡 → 在 **目标** 字段末尾添加标志 → **应用**。
+**通过快捷方式**：右键单击应用程序快捷方式 → **属性** → **快捷方式**选项卡 → 在**目标**字段末尾添加标志 → **应用**。
 
 **通过终端**：按下 **Win+R**，键入 `cmd`，然后运行：
 
@@ -50,7 +50,7 @@ ONLYOFFICE 桌面编辑器支持命令行标志，用于控制应用程序的启
 | 标志 | 平台 | 描述 |
 | ---- | ---- | ---- |
 | `--ascdesktop-support-debug-info` | 全平台 | 以调试模式启动，启用浏览器开发者控制台访问。分步说明请参阅[调试](./debugging.md)。 |
-| `--ascdesktop-support-debug-info-keep=VALUE` | 全平台 | 跨启动持久保存调试模式状态。`VALUE`：`1` — 启用，`0` — 禁用，`default` — 重置。 |
+| `--ascdesktop-support-debug-info-keep=VALUE` | 全平台 | 跨启动持久保存调试模式状态。`VALUE` 为 `1` 时启用，为 `0` 时禁用，为 `default` 时重置。 |
 | `--system-title-bar` | Linux | 使用系统窗口框架，而不使用自定义标题栏。 |
 | `--custom-title-bar` | Linux | 使用 ONLYOFFICE 标题栏；覆盖 `--system-title-bar`。 |
 | `--review=path` | Windows、Linux | 以修订模式打开 DOCX 文件且无法禁用修订；XLSX 和 PPTX 以只读模式打开。路径含空格时请用双引号括起。 |

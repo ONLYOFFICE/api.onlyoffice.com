@@ -104,12 +104,12 @@ export function ServerMark() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `title` | `string` | Name of the server. Only its first character is drawn, and only while there is no image; it is not an accessible name. |
-| `className`? | `string` | Added before the component's own classes, on the outer element. |
-| `dataTestId`? | `string` | Value of `data-testid` on the outer element. Default: `"mcp-icon"`. |
-| `imgNode`? | `ReactNode` | Image as a node, used instead of `imgSrc` when both are set. It gets no load-failure fallback. |
-| `imgSrc`? | `string` | Image to draw instead of the letter. A failure to load falls back to the letter on its own. |
-| `size`? | `MCPIconSize` | One of the four square sizes: 16, 24, 32 or 48px, each with its own font size and corner radius. Default: `MCPIconSize.Large`. |
+| `title` | `string` | **Required.** Name of the server. Only its first character is drawn, and only while there is no image; it is not an accessible name. |
+| `className` | `string` | Added before the component's own classes, on the outer element. |
+| `dataTestId` | `string` | Value of `data-testid` on the outer element. Default: `"mcp-icon"`. |
+| `imgNode` | `ReactNode` | Image as a node, used instead of `imgSrc` when both are set. It gets no load-failure fallback. |
+| `imgSrc` | `string` | Image to draw instead of the letter. A failure to load falls back to the letter on its own. |
+| `size` | `MCPIconSize` | One of the four square sizes: 16, 24, 32 or 48px, each with its own font size and corner radius. Default: `MCPIconSize.Large`. |
 
 </APITable>
 

@@ -21,3 +21,4 @@ Possible values:
 - `TfaAuth` - Tfa auth
 - `Wizard` - Wizard
 - `GuestShareLink` - Guest share link
+- `PortalUnblock` - Portal unblock

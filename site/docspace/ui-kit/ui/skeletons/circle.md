@@ -114,20 +114,20 @@ export function AvatarPlaceholder() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `animate`? | `boolean` | Whether the band sweeps at all. Turn it off for a static placeholder. Default: `true`. |
-| `backgroundColor`? | `string` | Colour of the skeleton at rest. Fixed black, not a theme colour. Default: `"#000"`. |
-| `backgroundOpacity`? | `number` | Opacity of `backgroundColor`. Default: `0.1`. |
-| `className`? | `string` | Applied to the `<svg>` element. |
-| `foregroundColor`? | `string` | Colour of the band that sweeps across the skeleton. Default: `"#000"`. |
-| `foregroundOpacity`? | `number` | Opacity of `foregroundColor`. Default: `0.15`. |
-| `height`? | `string` | Height of the `<svg>` element. The circle's own size comes from `radius`. Default: `"100%"`. |
-| `radius`? | `string` | Radius of the circle, in user units. Default: `"12"`. |
-| `speed`? | `number` | Duration of one sweep, in seconds. Default: `2`. |
-| `style`? | `React.CSSProperties` | Applied to the `<svg>` element. |
-| `title`? | `string` | Accessible name of the skeleton, rendered as the SVG's `<title>`. It is empty by default, which leaves the `role="img"` element unnamed. Default: `""`. |
-| `width`? | `string` | Width of the `<svg>` element. The circle's own size comes from `radius`. Default: `"100%"`. |
-| `x`? | `string` | Centre of the circle on the horizontal axis, in user units — the SVG's `cx`. It is not an offset: a value below `radius` cuts the circle off at the left edge, which the defaults do. Default: `"3"`. |
-| `y`? | `string` | Centre of the circle on the vertical axis, in user units — the SVG's `cy`. Default: `"12"`. |
+| `animate` | `boolean` | Whether the band sweeps at all. Turn it off for a static placeholder. Default: `true`. |
+| `backgroundColor` | `string` | Colour of the skeleton at rest. Fixed black, not a theme colour. Default: `"#000"`. |
+| `backgroundOpacity` | `number` | Opacity of `backgroundColor`. Default: `0.1`. |
+| `className` | `string` | Applied to the `<svg>` element. |
+| `foregroundColor` | `string` | Colour of the band that sweeps across the skeleton. Default: `"#000"`. |
+| `foregroundOpacity` | `number` | Opacity of `foregroundColor`. Default: `0.15`. |
+| `height` | `string` | Height of the `<svg>` element. The circle's own size comes from `radius`. Default: `"100%"`. |
+| `radius` | `string` | Radius of the circle, in user units. Default: `"12"`. |
+| `speed` | `number` | Duration of one sweep, in seconds. Default: `2`. |
+| `style` | `React.CSSProperties` | Applied to the `<svg>` element. |
+| `title` | `string` | Accessible name of the skeleton, rendered as the SVG's `<title>`. It is empty by default, which leaves the `role="img"` element unnamed. Default: `""`. |
+| `width` | `string` | Width of the `<svg>` element. The circle's own size comes from `radius`. Default: `"100%"`. |
+| `x` | `string` | Centre of the circle on the horizontal axis, in user units — the SVG's `cx`. It is not an offset: a value below `radius` cuts the circle off at the left edge, which the defaults do. Default: `"3"`. |
+| `y` | `string` | Centre of the circle on the vertical axis, in user units — the SVG's `cy`. Default: `"12"`. |
 
 </APITable>
 

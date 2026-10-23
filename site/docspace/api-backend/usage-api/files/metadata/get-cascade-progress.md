@@ -6,7 +6,7 @@
 
 Get cascade progress
 
-Reports the cascade pass of a folder started by `PUT api/2.0/files/metadata/folder/{folderId}/templates`: the running one, otherwise the most recent one. The caller needs read access to the folder, the call is read-only. `progress` is the share of the subtree processed, `isCompleted` tells the pass is over and `error` carries the reason of a failed one; a completed pass without an error has written every template and value it was asked for. A folder that never cascaded, or whose passes were already dropped, is answered with a completed operation without an identifier rather than with an error. A folder that does not exist is answered with 404.
+Reports the cascade pass of a folder started by `PUT api/2.0/files/metadata/folder/{folderId}/templates` or by `PUT api/2.0/files/metadata/folder/{folderId}/templates/{templateId}`: the running one, otherwise the most recent one. The caller needs read access to the folder, the call is read-only. `templateIds` names the templates the pass propagates, so a client can show the progress next to the right template; `progress` is the share of the subtree processed, `isCompleted` tells the pass is over and `error` carries the reason of a failed one; a completed pass without an error has written every template and value it was asked for. A folder that never cascaded, or whose passes were already dropped, is answered with a completed operation without an identifier and with empty `templateIds` rather than with an error. A folder that does not exist is answered with 404.
 
 ## Parameters
 
@@ -19,7 +19,7 @@ Reports the cascade pass of a folder started by `PUT api/2.0/files/metadata/fold
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Cascade operation status; a completed operation without an ID when the folder has no cascade to report | [**MetadataOperationWrapper**](../../models/metadata-operation-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **404** | Folder not found | - | - |
+| **404** | No folder or room with this identifier exists | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

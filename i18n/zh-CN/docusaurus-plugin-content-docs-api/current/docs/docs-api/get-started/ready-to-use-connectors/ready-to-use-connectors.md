@@ -6,4 +6,4 @@ ONLYOFFICE 文档可以使用插件集成到一些现有的文档管理系统中
 
 <DocCardList />
 
-如果您还有其他问题，请通过[integration@onlyoffice.com](mailto:integration@onlyoffice.com)与我们联系。
+如果您还有其他问题，请通过 [integration@onlyoffice.com](mailto:integration@onlyoffice.com) 与我们联系。

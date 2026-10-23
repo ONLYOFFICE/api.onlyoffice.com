@@ -115,13 +115,13 @@ export function DeliveryDetails() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `columns` | `ColumnarInfoBarColumn[]` | The label and value pairs, in order. An empty array renders the bar with nothing inside it. |
-| `closeLabel`? | `string` | Accessible name of the close button (its `aria-label`). Defaults to the English `"Close"`; pass a translated string. Ignored without `onAction`. Default: `"Close"`. |
-| `headerText`? | `string` | Bold caption above the columns, rendered as an `<h3>` and omitted entirely when empty. |
-| `onAction`? | `() => void` | Called when the close button is clicked. The button exists only while this is set, and the bar does not hide itself — take it out of the tree yourself. |
-| `onLoad`? | `() => void` | Called once after mount, and never again: the effect that calls it has an empty dependency list, so a new function on a later render is ignored. |
-| `style`? | `React.CSSProperties` | Inline style of the bar. There is no `className` prop, so this is also where the `--cib-*` custom properties go. |
-| `variant`? | `"default" \| "neutral" \| "page"` | Which of the three looks to render: the warning bar with an accent edge, the bordered `neutral` card that slides open, or the padded `page` block whose columns are a two-column grid. Default: `"default"`. |
+| `columns` | `ColumnarInfoBarColumn[]` | **Required.** The label and value pairs, in order. An empty array renders the bar with nothing inside it. |
+| `closeLabel` | `string` | Accessible name of the close button (its `aria-label`). Defaults to the English `"Close"`; pass a translated string. Ignored without `onAction`. Default: `"Close"`. |
+| `headerText` | `string` | Bold caption above the columns, rendered as an `<h3>` and omitted entirely when empty. |
+| `onAction` | `() => void` | Called when the close button is clicked. The button exists only while this is set, and the bar does not hide itself — take it out of the tree yourself. |
+| `onLoad` | `() => void` | Called once after mount, and never again: the effect that calls it has an empty dependency list, so a new function on a later render is ignored. |
+| `style` | `React.CSSProperties` | Inline style of the bar. There is no `className` prop, so this is also where the `--cib-*` custom properties go. |
+| `variant` | `"default" \| "neutral" \| "page"` | Which of the three looks to render: the warning bar with an accent edge, the bordered `neutral` card that slides open, or the padded `page` block whose columns are a two-column grid. Default: `"default"`. |
 
 </APITable>
 

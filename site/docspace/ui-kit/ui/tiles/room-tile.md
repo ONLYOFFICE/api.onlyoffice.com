@@ -143,27 +143,27 @@ export function SimpleRoomTile() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `columnCount` | `number` | How many columns the tag row is laid out in. Required. |
-| `contextOptions` | `ContextMenuModel[]` | The menu's entries. Required — but see `item`. |
-| `getRoomTypeName` | `(type: string, t: TFunction \| ((key: string, interpolation?: Record<string, string \| number>) => string)) => string` | Turns a room type into the label of the tag shown when the room has no tags of its own. It is handed the kit's own translation function. Required. |
-| `item` | `RoomItem` | The room this tile stands for. Its `tags`, `providerType` and `isAIAgent` decide what the bottom row shows, and its `contextOptions` key decides whether the three-dot button appears. |
-| `selectOption` | `(option: SelectOption) => void` | Called when the generated third-party or room-type tag is clicked, with which of the two it was. Required. |
-| `selectTag` | `(tag: TagClickEvent) => void` | Called with a clicked tag, but only one that carries both a label and a room type — a plain string tag never reaches it, and neither does any tag on an AI agent that has none of its own. |
-| `badges`? | `ReactNode` | Badges drawn beside the content, in the upper half. |
-| `checked`? | `boolean` | Whether the tile is selected. |
-| `children`? | `ReactNode` | The tile's content. Only the first element is rendered, above the tags. |
-| `customBottomContent`? | `(isHovered: boolean, tags: Array<TagType \| string>) => React.ReactNode` | Replaces the whole tag row. It is called on every render with the hover state and the tags the component worked out. |
-| `dataTestId`? | `string` | Value of `data-testid` on the outer element. Default: `"tile"`. |
-| `element`? | `ReactNode` | The room logo beside the checkbox. Without it neither the logo nor the checkbox is rendered at all. |
-| `getContextModel`? | `() => ContextMenuModel[]` | Builds the menu shown on right-click. Without it the right-click menu never opens. |
-| `indeterminate`? | `boolean` | Draws the checkbox in its indeterminate state. |
-| `inProgress`? | `boolean` | Replaces the logo and the checkbox with the kit's track loader. |
-| `isActive`? | `boolean` | Whether the tile is the one being acted on, which keeps its hover background. |
-| `isBlockingOperation`? | `boolean` | Turns the pointer off while an operation is running over the tile: hover, clicks and right-clicks stop reaching it. It does not change how the tile looks. |
-| `isEdit`? | `boolean` | Renaming state: it removes the logo and the checkbox. |
-| `onSelect`? | `(checked: boolean, item: RoomItem) => void` | Called with the new checked state and the `item` when the checkbox changes, or when the logo is tapped on a screen narrower than 600px. |
-| `showHotkeyBorder`? | `boolean` | Draws the accent outline that marks the tile the keyboard is on. |
-| `thumbnailClick`? | `(e: React.MouseEvent) => void` | Called with the event on a click anywhere on the tile except the checkbox, the tags, the badges, an open dialog, the three-dot button and the menu. It is the tile's open handler, not a thumbnail's. |
+| `columnCount` | `number` | **Required.** How many columns the tag row is laid out in. Required. |
+| `contextOptions` | `ContextMenuModel[]` | **Required.** The menu's entries. Required — but see `item`. |
+| `getRoomTypeName` | `(type: string, t: TFunction \| ((key: string, interpolation?: Record<string, string \| number>) => string)) => string` | **Required.** Turns a room type into the label of the tag shown when the room has no tags of its own. It is handed the kit's own translation function. Required. |
+| `item` | `RoomItem` | **Required.** The room this tile stands for. Its `tags`, `providerType` and `isAIAgent` decide what the bottom row shows, and its `contextOptions` key decides whether the three-dot button appears. |
+| `selectOption` | `(option: SelectOption) => void` | **Required.** Called when the generated third-party or room-type tag is clicked, with which of the two it was. Required. |
+| `selectTag` | `(tag: TagClickEvent) => void` | **Required.** Called with a clicked tag, but only one that carries both a label and a room type — a plain string tag never reaches it, and neither does any tag on an AI agent that has none of its own. |
+| `badges` | `ReactNode` | Badges drawn beside the content, in the upper half. |
+| `checked` | `boolean` | Whether the tile is selected. |
+| `children` | `ReactNode` | The tile's content. Only the first element is rendered, above the tags. |
+| `customBottomContent` | `(isHovered: boolean, tags: Array<TagType \| string>) => React.ReactNode` | Replaces the whole tag row. It is called on every render with the hover state and the tags the component worked out. |
+| `dataTestId` | `string` | Value of `data-testid` on the outer element. Default: `"tile"`. |
+| `element` | `ReactNode` | The room logo beside the checkbox. Without it neither the logo nor the checkbox is rendered at all. |
+| `getContextModel` | `() => ContextMenuModel[]` | Builds the menu shown on right-click. Without it the right-click menu never opens. |
+| `indeterminate` | `boolean` | Draws the checkbox in its indeterminate state. |
+| `inProgress` | `boolean` | Replaces the logo and the checkbox with the kit's track loader. |
+| `isActive` | `boolean` | Whether the tile is the one being acted on, which keeps its hover background. |
+| `isBlockingOperation` | `boolean` | Turns the pointer off while an operation is running over the tile: hover, clicks and right-clicks stop reaching it. It does not change how the tile looks. |
+| `isEdit` | `boolean` | Renaming state: it removes the logo and the checkbox. |
+| `onSelect` | `(checked: boolean, item: RoomItem) => void` | Called with the new checked state and the `item` when the checkbox changes, or when the logo is tapped on a screen narrower than 600px. |
+| `showHotkeyBorder` | `boolean` | Draws the accent outline that marks the tile the keyboard is on. |
+| `thumbnailClick` | `(e: React.MouseEvent) => void` | Called with the event on a click anywhere on the tile except the checkbox, the tags, the badges, an open dialog, the three-dot button and the menu. It is the tile's open handler, not a thumbnail's. |
 
 </APITable>
 

@@ -117,29 +117,29 @@ export function QuotaHelp() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `afterHide`? | `() => void` | Called after the tooltip has been hidden. Not called for a string tooltip. |
-| `afterShow`? | `() => void` | Called after the tooltip has been shown. Not called for a string tooltip. |
-| `children`? | `ReactNode` | Anchor to use instead of the info icon. The whole element becomes the thing the tooltip opens from. |
-| `dataTestId`? | `string` | Value of `data-testid` on the wrapper. Default: `"help-button"`. |
-| `dataTip`? | `string` | Sets the data-tip attribute for the component. |
-| `getContent`? | `(params: TGetTooltipContent) => React.ReactNode` | Builds the tooltip's content. Returning a string routes the text through the shared tooltip; returning a node makes the component render one of its own. |
-| `iconNode`? | `ReactNode` | Icon to draw instead of the kit's info glyph. |
-| `id`? | `string` | Id of the anchor element, which the tooltip is matched against by a CSS selector. Without it a fresh id is generated on **every** render, so pass one for a button that re-renders. |
-| `isOpen`? | `boolean` | Forces the tooltip open or closed. Only for a tooltip rendered by this component. |
-| `noUserSelect`? | `boolean` | Stops the tooltip's text being selected. |
-| `offset`? | `number` | Distance between the anchor and the tooltip, in pixels. |
-| `offsetBottom`? | `number` | Ignored. Nothing reads this prop. |
-| `offsetLeft`? | `number` | Ignored. Nothing reads this prop. |
-| `offsetRight`? | `number` | Ignored. Nothing reads this prop. |
-| `offsetTop`? | `number` | Ignored. Nothing reads this prop. |
-| `openOnClick`? | `boolean` | Whether the tooltip opens on click rather than on hover. Default: `true`. |
-| `place`? | `TTooltipPlace` | Side of the anchor the tooltip prefers. Default: `"top"`. |
-| `style`? | `CSSProperties` | Applied to the wrapper around the anchor. |
-| `tooltipContent`? | `ReactNode` | Content of the tooltip. A string is shown by the shared tooltip, which needs `RootTooltip` mounted; any other node makes the component render its own `Tooltip` instead. |
-| `tooltipId`? | `string` | Ignored. Nothing reads this prop. |
-| `tooltipMaxWidth`? | `string` | Maximum width of the tooltip as a CSS length. |
-| `tooltipProps`? | `TooltipProps` | Ignored. Nothing reads this prop. |
-| `tooltipStyle`? | `CSSProperties` | Applied to the tooltip itself. |
+| `afterHide` | `() => void` | Called after the tooltip has been hidden. Not called for a string tooltip. |
+| `afterShow` | `() => void` | Called after the tooltip has been shown. Not called for a string tooltip. |
+| `children` | `ReactNode` | Anchor to use instead of the info icon. The whole element becomes the thing the tooltip opens from. |
+| `dataTestId` | `string` | Value of `data-testid` on the wrapper. Default: `"help-button"`. |
+| `dataTip` | `string` | Sets the data-tip attribute for the component. |
+| `getContent` | `(params: TGetTooltipContent) => React.ReactNode` | Builds the tooltip's content. Returning a string routes the text through the shared tooltip; returning a node makes the component render one of its own. |
+| `iconNode` | `ReactNode` | Icon to draw instead of the kit's info glyph. |
+| `id` | `string` | Id of the anchor element, which the tooltip is matched against by a CSS selector. Without it a fresh id is generated on **every** render, so pass one for a button that re-renders. |
+| `isOpen` | `boolean` | Forces the tooltip open or closed. Only for a tooltip rendered by this component. |
+| `noUserSelect` | `boolean` | Stops the tooltip's text being selected. |
+| `offset` | `number` | Distance between the anchor and the tooltip, in pixels. |
+| `offsetBottom` | `number` | Ignored. Nothing reads this prop. |
+| `offsetLeft` | `number` | Ignored. Nothing reads this prop. |
+| `offsetRight` | `number` | Ignored. Nothing reads this prop. |
+| `offsetTop` | `number` | Ignored. Nothing reads this prop. |
+| `openOnClick` | `boolean` | Whether the tooltip opens on click rather than on hover. Default: `true`. |
+| `place` | `TTooltipPlace` | Side of the anchor the tooltip prefers. Default: `"top"`. |
+| `style` | `CSSProperties` | Applied to the wrapper around the anchor. |
+| `tooltipContent` | `ReactNode` | Content of the tooltip. A string is shown by the shared tooltip, which needs `RootTooltip` mounted; any other node makes the component render its own `Tooltip` instead. |
+| `tooltipId` | `string` | Ignored. Nothing reads this prop. |
+| `tooltipMaxWidth` | `string` | Maximum width of the tooltip as a CSS length. |
+| `tooltipProps` | `TooltipProps` | Ignored. Nothing reads this prop. |
+| `tooltipStyle` | `CSSProperties` | Applied to the tooltip itself. |
 
 </APITable>
 
@@ -151,26 +151,26 @@ Declared by [`components/icon-button`](./icon-button.md) and accepted here too.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `className`? | `string` | Sets component class |
-| `clickColor`? | `"accent" \| (string & {})` | Colour while the button is held down; same forms as `color`. |
-| `color`? | `"accent" \| (string & {})` | Any CSS colour, the literal `"accent"` for the theme accent, or the name of a custom property starting with `--`, which is wrapped in `var()`. |
-| `hoverColor`? | `"accent" \| (string & {})` | Colour while the pointer is over the button; same forms as `color`. |
-| `iconClickName`? | `string` | URL of the icon swapped in while the button is held down. |
-| `iconHoverName`? | `string` | URL of the icon swapped in while the pointer is over the button, on a device that has a pointer. |
-| `iconName`? | `string` | **A URL, not an asset name.** It is handed to `react-svg` as `src`, which fetches it at runtime and inlines the response, so it has to resolve from the browser — an imported `?url`, or a path under your public directory. Ignored when `iconNode` is set. |
-| `isClickable`? | `boolean` | Shows the pointer cursor without an `onClick`, for a button whose click is handled by an ancestor. Default: `false`. |
-| `isDisabled`? | `boolean` | Greys the icon and stops every handler, including the hover and click icon swaps. It sets `aria-disabled`, not the `disabled` property — there is no button element to carry one. Default: `false`. |
-| `isFill`? | `boolean` | Colours the icon by filling its shapes. Turn it off for an outline icon and use `isStroke` instead. Default: `true`. |
-| `isStroke`? | `boolean` | Colours the icon by stroking its paths, which wins over `isFill`. Default: `false`. |
-| `onClick`? | `(e: React.MouseEvent<HTMLDivElement>) => void` | Sets a button callback function triggered when the button is clicked |
-| `onKeyDown`? | `(e: React.KeyboardEvent<HTMLDivElement>) => void` | Called on a key press. The element is a `<div>` with no button role, so Enter and Space do nothing unless this handler implements them. |
-| `onMouseDown`? | `(e: React.MouseEvent<HTMLDivElement>) => void` | Sets a button callback function triggered when the cursor moves down |
-| `onMouseEnter`? | `(e: React.MouseEvent) => void` | Sets a button callback function triggered when the cursor enters the area |
-| `onMouseLeave`? | `(e: React.MouseEvent) => void` | Sets a button callback function triggered when the cursor leaves the icon |
-| `onMouseUp`? | `(e: React.MouseEvent<HTMLDivElement>) => void` | Called when a mouse button is released over the icon — but only for the middle and right buttons, which is a defect in the component rather than a design. Use `onClick` for the left button. |
-| `size`? | `IconSize \| InputSize \| number` | Size of the button on both axes. A number is pixels; the `InputSize` members all resolve to 15px; any other string is used as a CSS length. Default: `20`. |
-| `tabIndex`? | `number` | Applied to the element, which is a `<div>`: without this the button is not reachable by keyboard at all. |
-| `title`? | `string` | Tooltip text. Consumed by the tooltip container this component renders, so it never reaches the DOM as a `title` attribute. |
+| `className` | `string` | Sets component class |
+| `clickColor` | `"accent" \| (string & {})` | Colour while the button is held down; same forms as `color`. |
+| `color` | `"accent" \| (string & {})` | Any CSS colour, the literal `"accent"` for the theme accent, or the name of a custom property starting with `--`, which is wrapped in `var()`. |
+| `hoverColor` | `"accent" \| (string & {})` | Colour while the pointer is over the button; same forms as `color`. |
+| `iconClickName` | `string` | URL of the icon swapped in while the button is held down. |
+| `iconHoverName` | `string` | URL of the icon swapped in while the pointer is over the button, on a device that has a pointer. |
+| `iconName` | `string` | **A URL, not an asset name.** It is handed to `react-svg` as `src`, which fetches it at runtime and inlines the response, so it has to resolve from the browser — an imported `?url`, or a path under your public directory. Ignored when `iconNode` is set. |
+| `isClickable` | `boolean` | Shows the pointer cursor without an `onClick`, for a button whose click is handled by an ancestor. Default: `false`. |
+| `isDisabled` | `boolean` | Greys the icon and stops every handler, including the hover and click icon swaps. It sets `aria-disabled`, not the `disabled` property — there is no button element to carry one. Default: `false`. |
+| `isFill` | `boolean` | Colours the icon by filling its shapes. Turn it off for an outline icon and use `isStroke` instead. Default: `true`. |
+| `isStroke` | `boolean` | Colours the icon by stroking its paths, which wins over `isFill`. Default: `false`. |
+| `onClick` | `(e: React.MouseEvent<HTMLDivElement>) => void` | Sets a button callback function triggered when the button is clicked |
+| `onKeyDown` | `(e: React.KeyboardEvent<HTMLDivElement>) => void` | Called on a key press. The element is a `<div>` with no button role, so Enter and Space do nothing unless this handler implements them. |
+| `onMouseDown` | `(e: React.MouseEvent<HTMLDivElement>) => void` | Sets a button callback function triggered when the cursor moves down |
+| `onMouseEnter` | `(e: React.MouseEvent) => void` | Sets a button callback function triggered when the cursor enters the area |
+| `onMouseLeave` | `(e: React.MouseEvent) => void` | Sets a button callback function triggered when the cursor leaves the icon |
+| `onMouseUp` | `(e: React.MouseEvent<HTMLDivElement>) => void` | Called when a mouse button is released over the icon — but only for the middle and right buttons, which is a defect in the component rather than a design. Use `onClick` for the left button. |
+| `size` | `IconSize \| InputSize \| number` | Size of the button on both axes. A number is pixels; the `InputSize` members all resolve to 15px; any other string is used as a CSS length. Default: `20`. |
+| `tabIndex` | `number` | Applied to the element, which is a `<div>`: without this the button is not reachable by keyboard at all. |
+| `title` | `string` | Tooltip text. Consumed by the tooltip container this component renders, so it never reaches the DOM as a `title` attribute. |
 
 </APITable>
 

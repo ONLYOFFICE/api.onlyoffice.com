@@ -140,47 +140,47 @@ export function ActionsMenu({ onRename }: { onRename: () => void }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `appendTo`? | `HTMLElement` | Element the portal renders into, instead of `document.body`. |
-| `backDrop`? | `JSX.Element \| null` | The backdrop element itself. It is built from `withBackdrop`; passing your own replaces it. |
-| `bottomSpace`? | `number` | (`withDynamicScrollbar` only) Space to leave below the menu, in pixels. |
-| `children`? | `ReactNode` | Items of the menu, normally `DropDownItem`s. With `maxHeight` set they are virtualised, so each child's height is read from its `height` prop rather than measured. |
-| `className`? | `string` | Applied to the dropdown element. |
-| `clickOutsideAction`? | `(e: Event, open: boolean) => void` | Called when a click lands outside the dropdown, and by the backdrop. The second argument is the state being asked for — the negation of `open`, not the current value. |
-| `columnCount`? | `number` | Ignored. Nothing reads this prop. |
-| `dataTestId`? | `string` | Value of `data-testid` on the dropdown. Default: `"dropdown"`. |
-| `directionX`? | `TDirectionX` | Sets the opening direction relative to the parent. Default: `"right"`. |
-| `directionY`? | `TDirectionY` | Sets the opening direction relative to the parent. Default: `"bottom"`. |
-| `disableOnClickOutside`? | `boolean` | Ignored. Nothing reads this prop. |
-| `disableScrollbarPadding`? | `boolean` | Disables scrollbar inline padding to allow hover styles to extend to edge |
-| `enableKeyboardEvents`? | `boolean` | Whether the arrow keys move through the items and Enter clicks one. It is read only when `maxHeight` is set, and while it is on every key press in the document has its default action prevented. Default: `true`. |
-| `enableOnClickOutside`? | `() => void` | Called once each time the dropdown opens. |
-| `eventTypes`? | `string \| string[]` | DOM event names listened for on `window` to detect a click outside. Nothing is listened for when it is absent; the backdrop is the usual mechanism. |
-| `fixedDirection`? | `boolean` | Keeps `directionX` and `directionY` exactly as given instead of flipping them to fit the viewport. Default: `false`. |
-| `forceCloseClickOutside`? | `boolean` | Stops the outside-click listeners being registered at all. |
-| `forwardedRef`? | `RefObject<HTMLElement \| null>` | Ref of the element the menu belongs to. In the default portal mode it is what the menu is measured and positioned against; without it the menu falls back to the corner of the viewport. |
-| `id`? | `string` | Ignored. Nothing reads this prop and no `id` reaches the DOM. |
-| `isAside`? | `boolean` | Passed to the backdrop, which then keeps an aside panel above itself. |
-| `isDefaultMode`? | `boolean` | Whether the menu is rendered in a portal on `document.body`, positioned by measuring `forwardedRef`. Turn it off to render it in place, absolutely positioned inside the nearest positioned ancestor. Default: `true`. |
-| `isMobileView`? | `boolean` | Pins the menu to the bottom edge of the screen, full width, in portrait. |
-| `isNoFixedHeightOptions`? | `boolean` | Renders the children in a plain scrollbar instead of the virtualised list, for items whose height is not the 32px the list assumes. |
-| `manualWidth`? | `string` | Required for specifying the exact width of the component; for example; 100% |
-| `manualX`? | `string` | (Non portal only) Required for specifying the exact distance from the parent component |
-| `manualY`? | `string` | (Non portal only) Required for specifying the exact distance from the parent component |
-| `maxHeight`? | `number` | Height of the list in pixels. It is also the switch that turns on virtualisation, the scrollbar and the arrow keys: without it every child is rendered as given and none of the three happens. |
-| `offsetX`? | `number` | (Portal only) Specifies the horizontal offset. Default: `0`. |
-| `open`? | `boolean` | Whether the menu is shown. The element stays in the DOM either way — it is `display: none` until this is true. |
-| `shouldShowBackdrop`? | `boolean` | Passed to the backdrop: makes it render even when it would stay invisible. Default: `false`. |
-| `showDisabledItems`? | `boolean` | Keeps children whose `disabled` prop is true in the list. They are dropped by default, together with a separator that ends up first or last. Default: `false`. |
-| `style`? | `CSSProperties` | Merged into the dropdown element's inline style. |
-| `topSpace`? | `number` | (`withDynamicScrollbar` only) Space to leave above the menu, in pixels. |
-| `useFlexibleHeight`? | `boolean` | Use flexible maxHeight instead of fixed height for scrollbar (allows shrinking when fewer items) |
-| `usePortalBackdrop`? | `boolean` | Moves the backdrop inside the portal, above the page at z-index 400 rather than below the menu at 199. Default: `false`. |
-| `withBackdrop`? | `boolean` | Whether a `Backdrop` is rendered behind the menu to catch the next click. Default: `true`. |
-| `withBackground`? | `boolean` | Passed to the backdrop: gives it the dimming background. |
-| `withBlur`? | `boolean` | Ignored. Nothing reads this prop. |
-| `withDynamicScrollbar`? | `boolean` | Measures the room around the anchor on every open and caps the menu at what is left, scrolling the rest. It replaces the virtualised list with a plain scrollbar. |
-| `withoutBackground`? | `boolean` | Passed to the backdrop: makes it transparent. |
-| `zIndex`? | `number` | Stacking order of the menu, written as `--z-index`. The default is 400. |
+| `appendTo` | `HTMLElement` | Element the portal renders into, instead of `document.body`. |
+| `backDrop` | `JSX.Element \| null` | The backdrop element itself. It is built from `withBackdrop`; passing your own replaces it. |
+| `bottomSpace` | `number` | (`withDynamicScrollbar` only) Space to leave below the menu, in pixels. |
+| `children` | `ReactNode` | Items of the menu, normally `DropDownItem`s. With `maxHeight` set they are virtualised, so each child's height is read from its `height` prop rather than measured. |
+| `className` | `string` | Applied to the dropdown element. |
+| `clickOutsideAction` | `(e: Event, open: boolean) => void` | Called when a click lands outside the dropdown, and by the backdrop. The second argument is the state being asked for — the negation of `open`, not the current value. |
+| `columnCount` | `number` | Ignored. Nothing reads this prop. |
+| `dataTestId` | `string` | Value of `data-testid` on the dropdown. Default: `"dropdown"`. |
+| `directionX` | `TDirectionX` | Sets the opening direction relative to the parent. Default: `"right"`. |
+| `directionY` | `TDirectionY` | Sets the opening direction relative to the parent. Default: `"bottom"`. |
+| `disableOnClickOutside` | `boolean` | Ignored. Nothing reads this prop. |
+| `disableScrollbarPadding` | `boolean` | Disables scrollbar inline padding to allow hover styles to extend to edge |
+| `enableKeyboardEvents` | `boolean` | Whether the arrow keys move through the items and Enter clicks one. It is read only when `maxHeight` is set, and while it is on every key press in the document has its default action prevented. Default: `true`. |
+| `enableOnClickOutside` | `() => void` | Called once each time the dropdown opens. |
+| `eventTypes` | `string \| string[]` | DOM event names listened for on `window` to detect a click outside. Nothing is listened for when it is absent; the backdrop is the usual mechanism. |
+| `fixedDirection` | `boolean` | Keeps `directionX` and `directionY` exactly as given instead of flipping them to fit the viewport. Default: `false`. |
+| `forceCloseClickOutside` | `boolean` | Stops the outside-click listeners being registered at all. |
+| `forwardedRef` | `RefObject<HTMLElement \| null>` | Ref of the element the menu belongs to. In the default portal mode it is what the menu is measured and positioned against; without it the menu falls back to the corner of the viewport. |
+| `id` | `string` | Ignored. Nothing reads this prop and no `id` reaches the DOM. |
+| `isAside` | `boolean` | Passed to the backdrop, which then keeps an aside panel above itself. |
+| `isDefaultMode` | `boolean` | Whether the menu is rendered in a portal on `document.body`, positioned by measuring `forwardedRef`. Turn it off to render it in place, absolutely positioned inside the nearest positioned ancestor. Default: `true`. |
+| `isMobileView` | `boolean` | Pins the menu to the bottom edge of the screen, full width, in portrait. |
+| `isNoFixedHeightOptions` | `boolean` | Renders the children in a plain scrollbar instead of the virtualised list, for items whose height is not the 32px the list assumes. |
+| `manualWidth` | `string` | Required for specifying the exact width of the component; for example; 100% |
+| `manualX` | `string` | (Non portal only) Required for specifying the exact distance from the parent component |
+| `manualY` | `string` | (Non portal only) Required for specifying the exact distance from the parent component |
+| `maxHeight` | `number` | Height of the list in pixels. It is also the switch that turns on virtualisation, the scrollbar and the arrow keys: without it every child is rendered as given and none of the three happens. |
+| `offsetX` | `number` | (Portal only) Specifies the horizontal offset. Default: `0`. |
+| `open` | `boolean` | Whether the menu is shown. The element stays in the DOM either way — it is `display: none` until this is true. |
+| `shouldShowBackdrop` | `boolean` | Passed to the backdrop: makes it render even when it would stay invisible. Default: `false`. |
+| `showDisabledItems` | `boolean` | Keeps children whose `disabled` prop is true in the list. They are dropped by default, together with a separator that ends up first or last. Default: `false`. |
+| `style` | `CSSProperties` | Merged into the dropdown element's inline style. |
+| `topSpace` | `number` | (`withDynamicScrollbar` only) Space to leave above the menu, in pixels. |
+| `useFlexibleHeight` | `boolean` | Use flexible maxHeight instead of fixed height for scrollbar (allows shrinking when fewer items) |
+| `usePortalBackdrop` | `boolean` | Moves the backdrop inside the portal, above the page at z-index 400 rather than below the menu at 199. Default: `false`. |
+| `withBackdrop` | `boolean` | Whether a `Backdrop` is rendered behind the menu to catch the next click. Default: `true`. |
+| `withBackground` | `boolean` | Passed to the backdrop: gives it the dimming background. |
+| `withBlur` | `boolean` | Ignored. Nothing reads this prop. |
+| `withDynamicScrollbar` | `boolean` | Measures the room around the anchor on every open and caps the menu at what is left, scrolling the rest. It replaces the virtualised list with a plain scrollbar. |
+| `withoutBackground` | `boolean` | Passed to the backdrop: makes it transparent. |
+| `zIndex` | `number` | Stacking order of the menu, written as `--z-index`. The default is 400. |
 
 </APITable>
 

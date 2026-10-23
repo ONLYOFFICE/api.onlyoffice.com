@@ -88,9 +88,9 @@ export function SavePanel() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children` | `ReactNode` | The tree that is dimmed and made unclickable. Nothing is added around it beyond the wrapper's own flex column. |
-| `isLoading` | `boolean` | Whether the content is busy. It fades the wrapper and sets `pointer-events: none`; it renders no spinner of its own and does not stop the keyboard. |
-| `testId`? | `string` | Replaces the wrapper's `data-testid`. |
+| `children` | `ReactNode` | **Required.** The tree that is dimmed and made unclickable. Nothing is added around it beyond the wrapper's own flex column. |
+| `isLoading` | `boolean` | **Required.** Whether the content is busy. It fades the wrapper and sets `pointer-events: none`; it renders no spinner of its own and does not stop the keyboard. |
+| `testId` | `string` | Replaces the wrapper's `data-testid`. |
 
 </APITable>
 

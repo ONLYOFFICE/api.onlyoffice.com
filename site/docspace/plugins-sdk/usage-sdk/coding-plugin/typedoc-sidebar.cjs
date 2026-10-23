@@ -342,6 +342,11 @@ const typedocSidebar = {
         },
         {
           "type": "doc",
+          "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/enums/UserRole",
+          "label": "UserRole"
+        },
+        {
+          "type": "doc",
           "id": "docspace/plugins-sdk/usage-sdk/coding-plugin/enums/UsersType",
           "label": "UsersType"
         },

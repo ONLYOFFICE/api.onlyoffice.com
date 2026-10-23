@@ -9,7 +9,7 @@ import { SearchPdfExternalToolbar } from '@site/src/components/BrowserWindow';
 
 # 在 PDF 中搜索
 
-使用自动化 API 在 PDF 文档中搜索文本，并通过外部界面高亮显示所有匹配项 — 输入搜索词、设置选项，即可实时查看高亮显示的结果。
+使用自动化 API 在 PDF 文档中搜索文本，并通过外部界面高亮显示所有匹配项——输入搜索词、设置选项，即可实时查看高亮显示的结果。
 
 :::info
 文档以 PDF 格式打开。您的代码调用 `connector.callCommand()` 来执行 Document Builder API 方法，在每个页面上搜索文本并创建高亮注释。结果显示在外部面板中。
@@ -90,5 +90,5 @@ import { SearchPdfExternalToolbar } from '@site/src/components/BrowserWindow';
 :::note
 请注意，该连接器仅适用于 **ONLYOFFICE 文档开发者版本**。
 
-该连接器是一项需额外付费的高级功能。请参阅 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api) 了解价格详情，或联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
+该连接器是一项需额外付费的高级功能。请参阅 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)了解价格详情，或联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
 :::

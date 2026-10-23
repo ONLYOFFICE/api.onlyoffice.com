@@ -7,7 +7,7 @@ sidebar_position: 4
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-The DocSpace MCP server can be obtained in several ways depending on your environment and requirements.
+The ONLYOFFICE Apps MCP server can be obtained in several ways depending on your environment and requirements.
 
 ## Choosing a distribution method
 
@@ -42,31 +42,31 @@ This method is ideal for developers who want to customize or contribute to the p
 1. Clone the repository from the ONLYOFFICE Git server:
 
 ```sh
-   git clone git@git.onlyoffice.com:ONLYOFFICE/docspace-mcp.git
+git clone git@git.onlyoffice.com:ONLYOFFICE/docspace-mcp.git
 ```
 
    Alternatively, clone from the GitHub mirror:
 
 ```sh
-   git clone git@github.com:ONLYOFFICE/docspace-mcp.git
+git clone git@github.com:ONLYOFFICE/docspace-mcp.git
 ```
 
 2. Navigate to the project directory:
 
 ```sh
-   cd docspace-mcp
+cd docspace-mcp
 ```
 
 3. Build the Docker image:
 
 ```sh
-   docker build --tag onlyoffice/docspace-mcp .
+docker build --tag onlyoffice/docspace-mcp .
 ```
 
 4. Run the Docker container:
 
 ```sh
-   docker run --interactive --rm onlyoffice/docspace-mcp
+docker run --interactive --rm onlyoffice/docspace-mcp
 ```
 
 </TabItem>
@@ -75,31 +75,31 @@ This method is ideal for developers who want to customize or contribute to the p
 1. Clone the repository from the ONLYOFFICE Git server:
 
 ```sh
-   git clone git@git.onlyoffice.com:ONLYOFFICE/docspace-mcp.git
+git clone git@git.onlyoffice.com:ONLYOFFICE/docspace-mcp.git
 ```
 
    Alternatively, clone from the GitHub mirror:
 
 ```sh
-   git clone git@github.com:ONLYOFFICE/docspace-mcp.git
+git clone git@github.com:ONLYOFFICE/docspace-mcp.git
 ```
 
 2. Navigate to the project directory:
 
 ```sh
-   cd docspace-mcp
+cd docspace-mcp
 ```
 
 3. Build the Node.js application:
 
 ```sh
-   pnpm build-app
+pnpm build-app
 ```
 
 4. Run the Node.js application:
 
 ```sh
-   ./bin/onlyoffice-docspace-mcp
+node bin/onlyoffice-docspace-mcp.js
 ```
 
 </TabItem>
@@ -108,25 +108,25 @@ This method is ideal for developers who want to customize or contribute to the p
 1. Clone the repository from the ONLYOFFICE Git server:
 
 ```sh
-   git clone git@git.onlyoffice.com:ONLYOFFICE/docspace-mcp.git
+git clone git@git.onlyoffice.com:ONLYOFFICE/docspace-mcp.git
 ```
 
    Alternatively, clone from the GitHub mirror:
 
 ```sh
-   git clone git@github.com:ONLYOFFICE/docspace-mcp.git
+git clone git@github.com:ONLYOFFICE/docspace-mcp.git
 ```
 
 2. Navigate to the project directory:
 
 ```sh
-   cd docspace-mcp
+cd docspace-mcp
 ```
 
 3. Build the MCP bundle:
 
 ```sh
-   pnpm build-mcpb
+pnpm build-mcpb
 ```
 
 4. Use the built `.mcpb` file from the root of the project directory in an
@@ -141,7 +141,7 @@ This method is ideal for developers who want a consistent, isolated runtime envi
 
 - Ensure you have [Docker](https://www.docker.com/) installed on your system.
 
-1. Pull the latest [DocSpace MCP server image](https://hub.docker.com/r/onlyoffice/docspace-mcp) from Docker Hub:
+1. Pull the latest [ONLYOFFICE Apps MCP server image](https://hub.docker.com/r/onlyoffice/docspace-mcp) from Docker Hub:
 
    ```sh
    docker pull onlyoffice/docspace-mcp
@@ -168,13 +168,13 @@ This method works best for non-technical users or users who prefer a graphical i
 
 1. Enable the Docker MCP Toolkit by following the [Enable Docker MCP Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/#enable-docker-mcp-toolkit) guide.
 
-2. Install the DocSpace MCP server through the Docker Desktop interface using the [Install an MCP Server](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/#install-an-mcp-server) guide, or by using the Docker CLI:
+2. Install the ONLYOFFICE Apps MCP server through the Docker Desktop interface using the [Install an MCP Server](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/#install-an-mcp-server) guide, or by using the Docker CLI:
 
    ```sh
    docker mcp server enable onlyoffice-docspace
    ```
 
-3. Connect the DocSpace MCP server to an MCP client through the Docker Desktop interface using the [Install an MCP Client](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/#install-an-mcp-client) guide, or by using the Docker CLI:
+3. Connect the ONLYOFFICE Apps MCP server to an MCP client through the Docker Desktop interface using the [Install an MCP Client](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/#install-an-mcp-client) guide, or by using the Docker CLI:
 
    ```sh
    docker mcp client connect --global <client>
@@ -186,7 +186,7 @@ This method also requires minimal setup and is ideal for developers who want the
 
 - [Node.js](https://nodejs.org/) version 18 or higher
 
-1. Run the latest version of the DocSpace MCP server:
+1. Run the latest version of the ONLYOFFICE Apps MCP server:
 
    ```sh
    npx --yes @onlyoffice/docspace-mcp
@@ -212,9 +212,9 @@ The `ps aux` command lists all running processes, including those not attached t
 
 **For Windows**:
 
-    ```powershell
-    Get-Process | Where-Object { $_.Name -like "*onlyoffice*" }
-    ```
+   ```powershell
+   Get-Process | Where-Object { $_.Name -like "*onlyoffice*" }
+   ```
 
 `Get-Process` retrieves all running processes and then uses the `Where-Object` command to filter for processes with `onlyoffice`.
 
@@ -229,17 +229,16 @@ This method is ideal for teams who want to have access without pulling from a re
 
 Use this format if your MCP client supports `.mcpb` bundle files natively (e.g., Claude Desktop Extensions).
 
-1. Download the latest release:
+1. Download the `onlyoffice-docspace-mcp-<version>.mcpb` file from the **Assets** section of the [latest GitHub release](https://github.com/ONLYOFFICE/docspace-mcp/releases/latest).
+
+   Alternatively, download it in the terminal:
 
    ```sh
-   VERSION=3.2.0 curl --location --output docspace-mcp.mcpb https://github.com/ONLYOFFICE/docspace-mcp/releases/download/v$VERSION/onlyoffice-docspace-mcp-$VERSION.mcpb
+   VERSION=3.2.0
+   curl --location --output docspace-mcp.mcpb https://github.com/ONLYOFFICE/docspace-mcp/releases/download/v$VERSION/onlyoffice-docspace-mcp-$VERSION.mcpb
    ```
 
-   To download a specific version:
-
-   ```sh
-   VERSION=<version> curl --location --output docspace-mcp.mcpb https://github.com/ONLYOFFICE/docspace-mcp/releases/download/v$VERSION/onlyoffice-docspace-mcp-$VERSION.mcpb
-   ```
+   To download a specific version, replace `3.2.0` with the required version number.
 
 2. Use the downloaded `.mcpb` file in an application that supports MCP bundles.
 
@@ -247,17 +246,16 @@ Use this format if your MCP client supports `.mcpb` bundle files natively (e.g.,
 
 Use this format if you prefer to run the server as a standard Node.js process.
 
-1. Download the latest release:
+1. Download the `onlyoffice-docspace-mcp-<version>.tgz` file from the **Assets** section of the [latest GitHub release](https://github.com/ONLYOFFICE/docspace-mcp/releases/latest).
+
+   Alternatively, download it in the terminal:
 
    ```sh
-   VERSION=3.2.0 curl --location --output docspace-mcp.tgz https://github.com/ONLYOFFICE/docspace-mcp/releases/download/v$VERSION/onlyoffice-docspace-mcp-$VERSION.tgz
+   VERSION=3.2.0
+   curl --location --output docspace-mcp.tgz https://github.com/ONLYOFFICE/docspace-mcp/releases/download/v$VERSION/onlyoffice-docspace-mcp-$VERSION.tgz
    ```
 
-   To download a specific version:
-
-   ```sh
-   VERSION=<version> curl --location --output docspace-mcp.tgz https://github.com/ONLYOFFICE/docspace-mcp/releases/download/v$VERSION/onlyoffice-docspace-mcp-$VERSION.tgz
-   ```
+   To download a specific version, replace `3.2.0` with the required version number.
 
 2. Extract the downloaded archive:
 
@@ -268,16 +266,15 @@ Use this format if you prefer to run the server as a standard Node.js process.
 3. Navigate to the extracted directory:
 
    ```sh
-   cd docspace-mcp
+   cd package
    ```
 
 4. Run the Node.js application:
 
    ```sh
-   ./bin/onlyoffice-docspace-mcp
+   node bin/onlyoffice-docspace-mcp.js
    ```
 
 ## After getting the server
 
 - Learn how to [connect the MCP server to MCP clients](../getting-started/clients.md)
-

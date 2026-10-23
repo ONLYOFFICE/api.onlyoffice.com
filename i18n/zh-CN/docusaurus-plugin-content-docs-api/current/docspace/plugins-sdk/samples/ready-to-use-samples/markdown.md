@@ -1,0 +1,64 @@
+---
+description: 在 ONLYOFFICE Apps 中查看、编辑和创建 Markdown 文件。
+tags: ["Apps", "Plugins", "Ready-to-use"]
+---
+
+# Markdown
+
+用于查看、编辑和创建 `.md` 文件的工具。
+
+![Markdown](/assets/images/docspace/markdown.png#gh-light-mode-only)![Markdown](/assets/images/docspace/markdown.dark.png#gh-dark-mode-only)
+
+## 安装
+
+默认在 ONLYOFFICE Apps SaaS 解决方案中可用。
+
+您可以按照[此处](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins)的说明启用它。
+
+## 配置
+
+要开始使用该插件，您无需更改默认设置。
+
+如需查看插件元数据（例如作者、版本、状态、主页和描述），请前往**设置 → 集成 → 插件**，然后点击 **markdown** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
+
+## 使用
+
+### 创建新的 .md 文件
+
+要创建新的 `.md` 文件：
+
+1. 打开**文档**部分或某个可用房间。
+2. 点击**操作 → 更多**。
+3. 从出现的菜单中选择 **Markdown** 插件。
+4. 在弹出窗口中更改文件名，然后点击**创建**。新的 `.md` 文件会显示在文件列表中。
+
+要打开已创建的 `.md` 文件，请点击文件名，或通过文件上下文菜单操作：**右键点击 → 编辑 Markdown（预览 Markdown）**。文件将在同一标签页中打开。要返回文件列表，请点击**保存并关闭**或 ![关闭图标](/assets/images/docspace/cross.png#gh-light-mode-only)![关闭图标](/assets/images/docspace/cross.dark.png#gh-dark-mode-only)。如果文件由具有查看权限的用户打开，则仅提供 ![关闭图标](/assets/images/docspace/cross.png#gh-light-mode-only)![关闭图标](/assets/images/docspace/cross.dark.png#gh-dark-mode-only)。该用户所做的任何更改都不会被保存。
+
+### 编辑 .md 文件
+
+要编辑 `.md` 文件，您需要在 **Markdown** 部分添加标记文本。输入的文本将显示在右侧的**预览**部分。
+
+要展开 **Markdown** / **预览**部分，请使用**调整大小**按钮。
+
+以查看模式打开文件时，无法展开**预览**部分，因为它会立即以展开形式打开。
+
+## 插件结构
+
+GitHub 仓库：[markdown](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/markdown)。
+
+所有必需文件在[此处](/docspace/plugins-sdk/usage-sdk/plugin-structure.md)说明。
+
+### 接口
+
+使用以下插件接口：
+
+- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 ONLYOFFICE Apps。
+- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。用于向 ONLYOFFICE Apps 门户 API 发送请求（例如创建和保存文件）。该插件还使用 [markdown-it](https://markdown-it.github.io/markdown-it/) 作为客户端 Markdown 渲染库。
+- [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md) 和 [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts)。用于添加插件配置设置块。用户可以从**设置 → 集成 → 插件**访问该块以调整插件参数。
+- [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于实现上下文菜单操作。
+- [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md) 和 [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md)。用于实现主按钮操作。在 **Markdown** 插件中，我们使用**文档**部分或所选房间中的**操作 → 更多**菜单元素来创建 `.md` 文件。
+- [IFilePlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IFilePlugin.md) 和 [IFileItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md)。用于与指定的文件类型交互。在本例中为 `.md` 文件。
+
+## 支持
+
+如需请求功能或报告与此插件相关的错误，请使用 [GitHub](https://github.com/ONLYOFFICE/docspace-plugins/issues) 上的 issues 部分。

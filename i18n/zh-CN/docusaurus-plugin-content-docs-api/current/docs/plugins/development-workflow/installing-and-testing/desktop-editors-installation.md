@@ -38,7 +38,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 2. 打开**插件**选项卡中的**插件管理器**。
 
-3. 转到**我的插件**标签页，点击**手动安装插件**按钮。
+3. 点击左侧面板底部的**手动安装插件**。
 
 4. 选择你创建的压缩包并点击**打开**。
 
@@ -83,11 +83,11 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 **步骤 3.** 将所有插件文件放入此文件夹中：
 
-![插件文件夹](/assets/images/plugins/plugins_folder.png)
+![插件文件夹](/assets/images/desktop/plugins_folder.png#gh-light-mode-only)![插件文件夹](/assets/images/desktop/plugins_folder.dark.png#gh-dark-mode-only)
 
 **步骤 4.** 启动 [ONLYOFFICE 桌面编辑器](../../../desktop-editors/get-started/overview.md)。如果一切设置正确，插件将出现在**插件**选项卡中：
 
-![扩展评论](/assets/images/plugins/extended_comments.png)
+![扩展评论](/assets/images/desktop/extended_comments.png#gh-light-mode-only)![扩展评论](/assets/images/desktop/extended_comments.dark.png#gh-dark-mode-only)
 
 ## 从 ONLYOFFICE 桌面编辑器中移除插件
 
@@ -95,7 +95,8 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 1. 打开**插件**选项卡。
 2. 进入**插件管理器**。
-3. 点击对应插件下的**移除**按钮。
+3. 打开左侧面板中的**已安装**部分。
+4. 点击对应插件下的**移除**按钮。
 
 :::note
 默认插件和通过插件文件夹添加的插件无法通过此方法移除。

@@ -134,27 +134,27 @@ export function RoomLink({ id, name }: { id: string; name: string }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `ariaLabel`? | `string` | Value of `aria-label`. When it is absent and `children` is a string, that string is used, so the visible text is the accessible name; a node child gets no `aria-label`, and the anchor is named by its content. |
-| `color`? | `string` | Any CSS colour, or the literal `"accent"`, which resolves to the theme's `--accent-main`. |
-| `dataTestId`? | `string` | Value of `data-testid` on the anchor. Default: `"link"`. |
-| `enableUserSelect`? | `boolean` | Whether the label can be selected with the mouse. Default: `true`. |
-| `href`? | `string` | Used as HTML `href` property |
-| `id`? | `string` | Accepts id |
-| `isBold`? | `boolean` | Renders the label at weight 600. Default: `false`. |
-| `isHovered`? | `boolean` | Paints the link as if the pointer were over it, for a row that highlights its link on hover of the whole row. Default: `false`. |
-| `isSemitransparent`? | `boolean` | Halves the opacity, the kit's convention for a pending or inactive entity. Default: `false`. |
-| `isTextOverflow`? | `boolean` | Constrains the link to the width of its container (`display: inline-block; max-width: 100%`). It does **not** add the ellipsis by itself — that comes from `truncate`, inherited from `Text`. Set both to clip a long label. Default: `false`. |
-| `label`? | `string` | Ignored. The component reads its text from `children`; this prop is spread onto the anchor as an unknown attribute and does nothing. |
-| `noHover`? | `boolean` | Removes the underline the link grows on hover. Default: `false`. |
-| `onClick`? | `((e: React.MouseEvent<Element>) => void) & ((e: React.MouseEvent<Element>) => void)` | Sets a callback function that is triggered when the link is clicked. Only for 'action' type of link |
-| `onKeyDown`? | `(e: React.KeyboardEvent<Element>) => void` | Sets a callback function that is triggered on a key press. An action link carries no href, so it is not activated by Enter on its own - a link that has to work from the keyboard handles the key here and takes a tabIndex. |
-| `rel`? | `string` | Used as HTML `rel` property |
-| `role`? | `AriaRole` | ARIA role. An anchor with no href has no implicit role at all, so an action link is invisible to assistive technology until it is named one - "button", since it acts rather than navigates. |
-| `tabIndex`? | `number` | Used as HTML `tabindex` property |
-| `target`? | `LinkTarget` | Sets the target attribute |
-| `textDecoration`? | `"line-through" \| "none" \| "overline" \| "underline dashed" \| "underline dotted" \| "underline"` | Sets the text decoration style |
-| `title`? | `string` | Tooltip text. Consumed by the `withTooltip` wrapper the folder exports, so it becomes the tooltip's content and never reaches the DOM as a `title` attribute. |
-| `type`? | `LinkType` | `page` for navigation, `action` for a link that runs code. An action link carries no `href`, which has consequences for the keyboard — see `role` and `onKeyDown`. Default: `LinkType.page`. |
+| `ariaLabel` | `string` | Value of `aria-label`. When it is absent and `children` is a string, that string is used, so the visible text is the accessible name; a node child gets no `aria-label`, and the anchor is named by its content. |
+| `color` | `string` | Any CSS colour, or the literal `"accent"`, which resolves to the theme's `--accent-main`. |
+| `dataTestId` | `string` | Value of `data-testid` on the anchor. Default: `"link"`. |
+| `enableUserSelect` | `boolean` | Whether the label can be selected with the mouse. Default: `true`. |
+| `href` | `string` | Used as HTML `href` property |
+| `id` | `string` | Accepts id |
+| `isBold` | `boolean` | Renders the label at weight 600. Default: `false`. |
+| `isHovered` | `boolean` | Paints the link as if the pointer were over it, for a row that highlights its link on hover of the whole row. Default: `false`. |
+| `isSemitransparent` | `boolean` | Halves the opacity, the kit's convention for a pending or inactive entity. Default: `false`. |
+| `isTextOverflow` | `boolean` | Constrains the link to the width of its container (`display: inline-block; max-width: 100%`). It does **not** add the ellipsis by itself — that comes from `truncate`, inherited from `Text`. Set both to clip a long label. Default: `false`. |
+| `label` | `string` | Ignored. The component reads its text from `children`; this prop is spread onto the anchor as an unknown attribute and does nothing. |
+| `noHover` | `boolean` | Removes the underline the link grows on hover. Default: `false`. |
+| `onClick` | `((e: React.MouseEvent<Element>) => void) & ((e: React.MouseEvent<Element>) => void)` | Sets a callback function that is triggered when the link is clicked. Only for 'action' type of link |
+| `onKeyDown` | `(e: React.KeyboardEvent<Element>) => void` | Sets a callback function that is triggered on a key press. An action link carries no href, so it is not activated by Enter on its own - a link that has to work from the keyboard handles the key here and takes a tabIndex. |
+| `rel` | `string` | Used as HTML `rel` property |
+| `role` | `AriaRole` | ARIA role. An anchor with no href has no implicit role at all, so an action link is invisible to assistive technology until it is named one - "button", since it acts rather than navigates. |
+| `tabIndex` | `number` | Used as HTML `tabindex` property |
+| `target` | `LinkTarget` | Sets the target attribute |
+| `textDecoration` | `"line-through" \| "none" \| "overline" \| "underline dashed" \| "underline dotted" \| "underline"` | Sets the text decoration style |
+| `title` | `string` | Tooltip text. Consumed by the `withTooltip` wrapper the folder exports, so it becomes the tooltip's content and never reaches the DOM as a `title` attribute. |
+| `type` | `LinkType` | `page` for navigation, `action` for a link that runs code. An action link carries no `href`, which has consequences for the keyboard — see `role` and `onKeyDown`. Default: `LinkType.page`. |
 
 </APITable>
 
@@ -166,30 +166,30 @@ Declared by [`components/text`](../data-display/text.md) and accepted here too.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `aria-hidden`? | `Booleanish` | Hides the element from assistive technology, passed unchanged, for decoration that repeats what is already read. |
-| `aria-label`? | `string` | Accessible name, passed unchanged, for text whose content is not what should be announced. |
-| `aria-live`? | `"assertive" \| "off" \| "polite"` | Live-region politeness, passed unchanged, for a line whose content changes and should be read out. |
-| `as`? | `ElementType<any, keyof JSX.IntrinsicElements>` | Element to render, replacing the component's own default — `p` for `Text` itself. Wins over `tag` when both are set. |
-| `backgroundColor`? | `string` | Background colour, as an inline style. Any CSS colour. |
-| `children`? | `ReactNode` | Text to render. |
-| `className`? | `string` | Added after the component's own classes. |
-| `containerMinWidth`? | `string` | Not read here — it reaches the DOM as an unknown attribute. It is read off this element by `RowContent`, which uses it as the minimum width of a side slot. |
-| `containerWidth`? | `string` | Not read here — it reaches the DOM as an unknown attribute. It is read off this element by `RowContent` and `TileContent`, which use it as the width of the slot they put the child in. |
-| `dir`? | `"auto" \| "ltr" \| "rtl"` | Writing direction. `"ltr"` and `"rtl"` set the `dir` attribute; `"auto"` instead wraps the children in a span that takes the pointer events off them. |
-| `display`? | `string` | Ignored. Nothing reads this prop, and it reaches the DOM as an unknown attribute. Use `isInline` or `style`. |
-| `fontSize`? | `string` | Font size, as an inline style. Unset, `Text` is 13px through `--text-size`. |
-| `fontWeight`? | `number \| string` | Font weight, as an inline style. Ignored while `isBold` is set. Unset, `Text` is 400 through `--text-weight`. |
-| `htmlFor`? | `string` | Passed to the element unchanged, for `as="label"`. |
-| `isInline`? | `boolean` | Renders the text inline instead of as a block — `inline-block` in `Text`, `inline` in `Heading`. |
-| `isItalic`? | `boolean` | Renders the text in italics. |
-| `lineHeight`? | `string` | Line height, as an inline style. |
-| `noSelect`? | `boolean` | Stops the text being selected, on every browser the kit supports. |
-| `ref`? | `RefObject<HTMLDivElement \| null>` | Attached to the rendered element, whatever `as` made it. Typed for a div whatever that element actually is. |
-| `style`? | `CSSProperties` | Inline style of the element. `Text` merges it over the style props above, so a `fontSize` here wins over the `fontSize` prop. |
-| `tag`? | `string` | Element to render, used only while `as` is unset. It is a tag name, not an id. |
-| `textAlign`? | `"center" \| "justify" \| "left" \| "right"` | Text alignment, as an inline style. |
-| `truncate`? | `boolean` | Holds the text on one line and ends it with an ellipsis. It needs a parent of bounded width; on its own the element grows instead. |
-| `view`? | `string` | Only `"tile"` is recognised, and only together with `dir="auto"`: it clamps the text to two lines. |
+| `aria-hidden` | `Booleanish` | Hides the element from assistive technology, passed unchanged, for decoration that repeats what is already read. |
+| `aria-label` | `string` | Accessible name, passed unchanged, for text whose content is not what should be announced. |
+| `aria-live` | `"assertive" \| "off" \| "polite"` | Live-region politeness, passed unchanged, for a line whose content changes and should be read out. |
+| `as` | `ElementType<any, keyof JSX.IntrinsicElements>` | Element to render, replacing the component's own default — `p` for `Text` itself. Wins over `tag` when both are set. |
+| `backgroundColor` | `string` | Background colour, as an inline style. Any CSS colour. |
+| `children` | `ReactNode` | Text to render. |
+| `className` | `string` | Added after the component's own classes. |
+| `containerMinWidth` | `string` | Not read here — it reaches the DOM as an unknown attribute. It is read off this element by `RowContent`, which uses it as the minimum width of a side slot. |
+| `containerWidth` | `string` | Not read here — it reaches the DOM as an unknown attribute. It is read off this element by `RowContent` and `TileContent`, which use it as the width of the slot they put the child in. |
+| `dir` | `"auto" \| "ltr" \| "rtl"` | Writing direction. `"ltr"` and `"rtl"` set the `dir` attribute; `"auto"` instead wraps the children in a span that takes the pointer events off them. |
+| `display` | `string` | Ignored. Nothing reads this prop, and it reaches the DOM as an unknown attribute. Use `isInline` or `style`. |
+| `fontSize` | `string` | Font size, as an inline style. Unset, `Text` is 13px through `--text-size`. |
+| `fontWeight` | `number \| string` | Font weight, as an inline style. Ignored while `isBold` is set. Unset, `Text` is 400 through `--text-weight`. |
+| `htmlFor` | `string` | Passed to the element unchanged, for `as="label"`. |
+| `isInline` | `boolean` | Renders the text inline instead of as a block — `inline-block` in `Text`, `inline` in `Heading`. |
+| `isItalic` | `boolean` | Renders the text in italics. |
+| `lineHeight` | `string` | Line height, as an inline style. |
+| `noSelect` | `boolean` | Stops the text being selected, on every browser the kit supports. |
+| `ref` | `RefObject<HTMLDivElement \| null>` | Attached to the rendered element, whatever `as` made it. Typed for a div whatever that element actually is. |
+| `style` | `CSSProperties` | Inline style of the element. `Text` merges it over the style props above, so a `fontSize` here wins over the `fontSize` prop. |
+| `tag` | `string` | Element to render, used only while `as` is unset. It is a tag name, not an id. |
+| `textAlign` | `"center" \| "justify" \| "left" \| "right"` | Text alignment, as an inline style. |
+| `truncate` | `boolean` | Holds the text on one line and ends it with an ellipsis. It needs a parent of bounded width; on its own the element grows instead. |
+| `view` | `string` | Only `"tile"` is recognised, and only together with `dir="auto"`: it clamps the text to two lines. |
 
 </APITable>
 
@@ -201,10 +201,10 @@ The `index` module exports a wrapped component, so these are accepted on top of 
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `onMouseEnter`? | `MouseEventHandler` | Called in addition to the handler that opens the tooltip, after it. |
-| `onMouseLeave`? | `MouseEventHandler` | Called in addition to the handler that closes the tooltip, after it. |
-| `onMouseMove`? | `MouseEventHandler` | Passed through only while the element has no tooltip. Once one is active the wrapper's own handler replaces it and this is dropped. |
-| `tooltipContent`? | `ReactNode` | Tooltip content, used instead of `title` when both are set. Only a string produces a tooltip: the wrapper needs text for the anchor, so any other node leaves the element with no tooltip at all. |
+| `onMouseEnter` | `MouseEventHandler` | Called in addition to the handler that opens the tooltip, after it. |
+| `onMouseLeave` | `MouseEventHandler` | Called in addition to the handler that closes the tooltip, after it. |
+| `onMouseMove` | `MouseEventHandler` | Passed through only while the element has no tooltip. Once one is active the wrapper's own handler replaces it and this is dropped. |
+| `tooltipContent` | `ReactNode` | Tooltip content, used instead of `title` when both are set. Only a string produces a tooltip: the wrapper needs text for the anchor, so any other node leaves the element with no tooltip at all. |
 
 </APITable>
 

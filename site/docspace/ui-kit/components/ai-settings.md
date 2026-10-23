@@ -34,7 +34,7 @@ import { AiModels } from "@onlyoffice/apps-ui-kit/ai-agent/settings";
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `locale`? | `string` | Language of the settings pages; also sets their direction. Default: `en`. |
+| `locale` | `string` | Language of the settings pages; also sets their direction. Default: `en`. |
 
 </APITable>
 

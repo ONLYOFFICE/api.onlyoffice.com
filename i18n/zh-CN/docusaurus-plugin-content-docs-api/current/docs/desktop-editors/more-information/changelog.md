@@ -27,7 +27,7 @@ ONLYOFFICE 桌面编辑器 API 的变更列表。
 
 ## 版本 7.1
 
-- 添加了 *--ascdesktop-support-debug-info-keep* 标志用于 [运行](../usage-api/debugging.md#--ascdesktop-support-debug-info-keep) 应用程序。
+- 添加了 *--ascdesktop-support-debug-info-keep* 标志用于[运行](../usage-api/debugging.md#--ascdesktop-support-debug-info-keep)应用程序。
 
 ## 版本 7.0
 
@@ -35,7 +35,7 @@ ONLYOFFICE 桌面编辑器 API 的变更列表。
 
 ## 版本 6.4
 
-- 增加了在带有集成参数的 [配置](../usage-api/adding-a-dms-provider/adding-a-dms-provider.md) 中为每种 UI 主题类型使用图标的可能性。
+- 增加了在带有集成参数的[配置](../usage-api/adding-a-dms-provider/adding-a-dms-provider.md)中为每种 UI 主题类型使用图标的可能性。
 
 ## 版本 6.3
 
@@ -44,9 +44,9 @@ ONLYOFFICE 桌面编辑器 API 的变更列表。
 
 ## 版本 6.2
 
-- 添加了带有 DMS 集成参数的 [配置](../usage-api/adding-a-dms-provider/adding-a-dms-provider.md)。
+- 添加了带有 DMS 集成参数的[配置](../usage-api/adding-a-dms-provider/adding-a-dms-provider.md)。
 - 添加了 [execCommand](../usage-api/adding-a-dms-provider/execcommand.md) 方法。
-- 添加了用于 [文档打开](../usage-api/adding-a-dms-provider/opening-documents.md) 的命令。
+- 添加了用于[文档打开](../usage-api/adding-a-dms-provider/opening-documents.md)的命令。
 
 ## 版本 6.1
 
@@ -54,4 +54,4 @@ ONLYOFFICE 桌面编辑器 API 的变更列表。
 
 ## 版本 5.6
 
-- 添加了 [加密](../usage-api/adding-a-dms-provider/encryption/encryption.md) 功能。
+- 添加了[加密](../usage-api/adding-a-dms-provider/encryption/encryption.md)功能。

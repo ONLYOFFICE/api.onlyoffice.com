@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/IToast.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IToast.ts
 ---
 
 # IToast
@@ -68,8 +68,8 @@ import APITable from '@site/src/components/APITable/APITable';
 | ------ | ------ | ------ |
 | `type` | [`ToastType`](#toasttype) | Defines the toast type, which determines the toast color and icon |
 | `title` | `string` | Defines the toast title |
-| `withCross?` | `boolean` | Specifies whether the "Close" button will be displayed in the toast to close it (true). Otherwise, the toast will disappear after clicking on any toast area (false). |
-| `timeout?` | `number` | Defines the time (in milliseconds) for showing the toast. Setting the value to 0 allows the toast to be displayed continuously until clicking on it. |
+| `withCross` | `boolean` | Specifies whether the "Close" button will be displayed in the toast to close it (true). Otherwise, the toast will disappear after clicking on any toast area (false). |
+| `timeout` | `number` | Defines the time (in milliseconds) for showing the toast. Setting the value to 0 allows the toast to be displayed continuously until clicking on it. |
 
 </APITable>
 

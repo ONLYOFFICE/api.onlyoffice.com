@@ -123,10 +123,10 @@ export function SignIn({
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children` | `React.ReactNode` | The form. Every child is centred horizontally by the wrapper's own flex column. |
-| `className`? | `string` | Applied to the card. |
-| `id`? | `string` | Applied to the card. |
-| `style`? | `React.CSSProperties` | Applied to the card. |
+| `children` | `React.ReactNode` | **Required.** The form. Every child is centred horizontally by the wrapper's own flex column. |
+| `className` | `string` | Applied to the card. |
+| `id` | `string` | Applied to the card. |
+| `style` | `React.CSSProperties` | Applied to the card. |
 
 </APITable>
 

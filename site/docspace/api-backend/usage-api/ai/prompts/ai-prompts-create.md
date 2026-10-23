@@ -6,7 +6,7 @@
 
 Save a prompt
 
-Saves a new prompt in the caller's own prompt library and returns it. The name has to be non-empty and unique inside its folder, and `folderId` has to name an existing folder - omit it to save the prompt at the root. Prompts are per-user: another user's library is never visible here, and no permission beyond having AI enabled is needed. The answer carries the stored prompt including the ID to use with the update, move and delete operations.
+Saves a new prompt in the caller's own prompt library and returns it. `name` and `text` have to be strings and `folderId`, when sent, a string or null, or the call answers 400 before the library is touched. The name has to be non-empty and unique inside its folder, and `folderId` has to name an existing folder - omit it to save the prompt at the root. A refusal keeps the `{ success: false, error }` body but answers 400 for an empty value, 404 for an unknown folder and 409 for a name already in use. Prompts are per-user: another user's library is never visible here, and no permission beyond having AI enabled is needed. The answer carries the stored prompt including the ID to use with the update, move and delete operations.
 
 ## Parameters
 
@@ -19,8 +19,11 @@ Saves a new prompt in the caller's own prompt library and returns it. The name h
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Whether the prompt was saved, with it in `prompt`. | [**AiPromptMutationResult**](../../models/ai-prompt-mutation-result.md) | - |
+| **400** | `name` or `text` is missing, empty or not a string, or `folderId` is neither a string nor null. | [**AiPromptMutationResult**](../../models/ai-prompt-mutation-result.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **404** | `folderId` names no folder of the caller's. | [**AiPromptMutationResult**](../../models/ai-prompt-mutation-result.md) | - |
+| **409** | A prompt of that name already sits in the folder. | [**AiPromptMutationResult**](../../models/ai-prompt-mutation-result.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

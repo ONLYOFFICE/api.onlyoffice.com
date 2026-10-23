@@ -24,15 +24,15 @@ AI 助手具有以下特点：
 
 要安装 AI 助手，请按照以下步骤操作：
 
-1. 转到**插件**选项卡并打开**插件管理器**。找到**AI 插件**，如果尚未安装则点击**安装**，如果已安装则点击**更新**。
+1. 转到**插件**选项卡并打开**插件管理器**。找到 **AI 插件**，如果尚未安装则点击**安装**，如果已安装则点击**更新**。
 
    ![AI 插件](/assets/images/plugins/install-ai-plugin.png#gh-light-mode-only)![AI 插件](/assets/images/plugins/install-ai-plugin.dark.png#gh-dark-mode-only)
 
-2. 点击**后台插件**按钮，激活**AI**开关。
+2. 点击**后台插件**按钮，激活 **AI** 开关。
 
     ![激活 AI](/assets/images/plugins/activate-ai.png#gh-light-mode-only)![激活 AI](/assets/images/plugins/activate-ai.dark.png#gh-dark-mode-only)
 
-3. 在 ONLYOFFICE 编辑器的顶部工具栏中找到新的**AI**选项卡。
+3. 在 ONLYOFFICE 编辑器的顶部工具栏中找到新的 **AI 工具**选项卡。
 4. 点击**设置**打开配置窗口。
 5. 选择**编辑 AI 模型**，然后点击![Plus icon](/assets/images/plugins/plus.svg#gh-light-mode-only)![Plus icon](/assets/images/plugins/plus.dark.svg#gh-dark-mode-only)。
 6. 从列表中选择一个 AI 提供商，或通过输入 API 密钥添加新的 AI 模型。
@@ -63,22 +63,22 @@ AI 助手现已安装完毕，可以开始使用了。
 
 ## 如何创建 AI 助手 {#create-ai-assistant}
 
-"创建 AI 助手"功能让您可以将任何重复性文本任务转变为专用工具栏按钮。只需定义一次提示词，即可在文档中重复使用。
+“创建 AI 助手”功能让您可以将任何重复性文本任务转变为专用工具栏按钮。只需定义一次提示词，即可在文档中重复使用。
 
 要创建新的助手：
 
-1. 打开 **AI** 选项卡，点击**创建 AI 助手**。
+1. 打开 **AI 工具**选项卡，点击**创建 AI 助手**。
 
 2. 填写以下字段：
-   - **名称** - 助手的简短名称，在工具栏上显示为按钮标签。
-   - **提示词** - 点击按钮时发送给 AI 的指令。
-   - **操作** - 助手对文档执行的操作类型（提示、替换或替换 + 提示）。
+   - **名称**：助手的简短名称，在工具栏上显示为按钮标签。
+   - **提示词**：点击按钮时发送给 AI 的指令。
+   - **操作**：助手对文档执行的操作类型（提示、替换或替换 + 提示）。
 
 3. 点击**创建**。
 
    ![创建 AI 助手](/assets/images/plugins/create-ai-assistant.png#gh-light-mode-only)![创建 AI 助手](/assets/images/plugins/create-ai-assistant.dark.png#gh-dark-mode-only)
 
-助手将作为新按钮显示在 **AI** 选项卡中，可在文档中使用。
+助手将作为新按钮显示在 **AI 工具**选项卡中，可在文档中使用。
 
 :::note
 如果助手无法执行请求的操作（例如，当提示词与文本编辑无关时），将显示警告并停止操作。

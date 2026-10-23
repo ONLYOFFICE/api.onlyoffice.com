@@ -4,9 +4,9 @@ sidebar_position: -1
 
 # TypeScript
 
-The ONLYOFFICE DocSpace SDK for TypeScript is a library that provides tools for integrating and managing DocSpace features within your applications.
+The ONLYOFFICE Apps SDK for TypeScript is a library that provides tools for integrating and managing ONLYOFFICE Apps features within your applications.
 
-It simplifies interaction with the DocSpace API by offering ready-to-use methods and models.
+It simplifies interaction with the ONLYOFFICE Apps API by offering ready-to-use methods and models.
 
 **[ONLYOFFICE TypeScript Library on GitHub](https://github.com/ONLYOFFICE/docspace-api-sdk-typescript)**
 

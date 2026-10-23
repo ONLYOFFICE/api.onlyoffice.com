@@ -1,6 +1,6 @@
 ---
 description: Monitor login activity and detect logins from disallowed IP addresses.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,11 +8,11 @@ import TabItem from '@theme/TabItem';
 
 # Monitoring logins and IP allowlist
 
-This example demonstrates how to monitor login activity in ONLYOFFICE DocSpace and detect logins that violate an IP allowlist policy.
+This example demonstrates how to monitor login activity in ONLYOFFICE Apps and detect logins that violate an IP allowlist policy.
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>

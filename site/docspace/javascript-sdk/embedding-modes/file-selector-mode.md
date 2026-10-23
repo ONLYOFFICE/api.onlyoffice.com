@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # File selector mode
 
-File selector mode integrates a file picker interface inside your application. It allows users to view, browse and select from a list of DocSpace files. The selected file's data is returned via a callback function.
+File selector mode integrates a file picker interface inside your application. It allows users to view, browse and select from a list of ONLYOFFICE Apps files. The selected file's data is returned via a callback function.
 
 File selector is similar to [Room selector mode](./room-selector-mode.md) in terms of functionality.
 
@@ -27,7 +27,7 @@ For setup instructions (connecting the script, CSP configuration, npm package), 
 
 ## Use cases
 
-### Attaching a DocSpace file to a form
+### Attaching an ONLYOFFICE Apps file to a form
 
 Let users browse and pick a file, then use the returned data to attach it to a record in your application. See also: [File manager with task attachments](../samples/advanced-samples/file-manager-task-attachments.md).
 
@@ -42,8 +42,8 @@ const selector = DocSpace.SDK.initFileSelector({
   acceptButtonLabel: "Attach file",
   events: {
     onSelectCallback: function (file) {
-      console.log("File selected:", file.label, file.id);
-      attachFileToRecord(file.id, file.label);
+      console.log("File selected:", file.title, file.id);
+      attachFileToRecord(file.id, file.title);
       selector.destroyFrame();
     },
     onCloseCallback: function () {
@@ -66,9 +66,9 @@ const docSpace = DocSpace.SDK.initFileSelector({
 });
 ```
 
-### Filtering by file type
+### Restricting to rooms or personal folders
 
-Use `selectorType` to limit the selector to files owned by the current user, or restrict to rooms only:
+`selectorType` restricts which content the selector lists — `"roomsOnly"` shows only rooms, `"userFolderOnly"` only the user's personal folders; the default, `"all"`, shows both:
 
 ```javascript
 const docSpace = DocSpace.SDK.initFileSelector({
@@ -78,7 +78,7 @@ const docSpace = DocSpace.SDK.initFileSelector({
   withSearch: true,
   events: {
     onSelectCallback: function (file) {
-      console.log("Selected:", file.label);
+      console.log("Selected:", file.title);
     },
   },
 });

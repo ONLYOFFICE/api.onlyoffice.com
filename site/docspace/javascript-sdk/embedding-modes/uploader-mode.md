@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # Uploader mode
 
-Uploader mode embeds a file upload interface inside your application. It targets a specific DocSpace folder by ID and lets users upload files directly into it, with optional controls over accepted file types and multi-file selection.
+Uploader mode embeds a file upload interface inside your application. It targets a specific ONLYOFFICE Apps folder by ID and lets users upload files directly into it, with optional controls over accepted file types and multi-file selection.
 
 ## Initialization
 
@@ -53,8 +53,8 @@ const docSpace = DocSpace.SDK.initUploader({
     onUploadProgress: function (progress) {
       console.log("Progress:", progress);
     },
-    onUploadSuccess: function (file) {
-      console.log("Uploaded:", file.title);
+    onUploadSuccess: function (files) {
+      console.log("Uploaded:", files[0].response.file.title);
     },
     onUploadError: function (error) {
       console.error("Upload failed:", error);

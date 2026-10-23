@@ -4,7 +4,7 @@ sidebar_position: -3
 
 # Building plugin
 
-To build a plugin, you need to have *npm* (included with Node.js) installed. After that, follow the instructions below:
+To build a plugin, you need to have *npm* (included with Node.js) installed. The plugin template builds with Vite 8, which requires Node.js `^20.19.0 || >=22.12.0`. After that, follow the instructions below:
 
 1. Open the terminal and go to the plugin root folder:
 
@@ -24,10 +24,10 @@ To build a plugin, you need to have *npm* (included with Node.js) installed. Aft
    npm run build
    ```
 
-This command generates the obfuscated code from the entire project and bundles it into the *plugin.js* file using the *webpack* npm package.
+   This command bundles the entire project into a `plugin.js` ES module using the `vite` npm package and then packs it with `npx build-docspace-plugin`.
 
 :::note
 The maximum size of the plugin archive and each file within it must not exceed 5 MB.
 :::
 
-The *dist* folder will be created in the plugin root folder and the plugin archive will be placed in it. This archive is the completed plugin that can be uploaded to the DocSpace portal.
+The *dist* folder will be created in the plugin root folder and the plugin archive will be placed in it. This archive is the completed plugin that can be uploaded to the ONLYOFFICE Apps portal.

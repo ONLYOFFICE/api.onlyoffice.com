@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/IComboBox.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IComboBox.ts
 ---
 
 # IComboBox
@@ -74,21 +74,21 @@ import APITable from '@site/src/components/APITable/APITable';
 | ------ | ------ | ------ |
 | `options` | [`IComboBoxItem`](#icomboboxitem)[] | Defines the combo box options |
 | `selectedOption` | [`IComboBoxItem`](#icomboboxitem) | Defines the combo box selected option |
-| `onSelect?` | (`item`: [`IComboBoxItem`](#icomboboxitem)) => `void` \| [`IMessage`](../utils.md#imessage) | Sets a function which is triggered whenever the combo box is selected |
-| `scaled?` | `boolean` | Specifies that the combo box is scaled by its parent |
-| `directionX?` | `"left"` \| `"right"` | Defines the position of the combo box in the X direction |
-| `directionY?` | `"both"` \| `"top"` \| `"bottom"` | Defines the position of the combo box in the Y direction |
-| `displayType?` | `"default"` \| `"toggle"` | Defines the combo box display type |
-| `modernView?` | `boolean` | Specifies whether to display the combo box in the modern view |
-| `isDisabled?` | `boolean` | Specifies if the combo box is disabled or not |
-| `showDisabledItems?` | `boolean` | Whether to show disabled combo box options |
-| `opened?` | `boolean` | Specifies whether to open the combo box |
-| `scaledOptions?` | `boolean` | Specifies whether the combo box options are scaled by the combo box button |
-| `onToggle?` | () => `void` \| [`IMessage`](../utils.md#imessage) | Sets a function which is triggered whenever the combo box is clicked when "displayType == toggle" |
-| `noBorder?` | `boolean` | Specifies whether to display the combo box without borders |
-| `withBackdrop?` | `boolean` | Specifies whether the combo box contains a backdrop |
-| `dropDownMaxHeight?` | `number` | Defines the maximum height of the dropdown list |
-| `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
+| `onSelect` | (`item`: [`IComboBoxItem`](#icomboboxitem)) => `void` \| [`IMessage`](../utils.md#imessage) | Sets a function which is triggered whenever the combo box is selected |
+| `scaled` | `boolean` | Specifies that the combo box is scaled by its parent |
+| `directionX` | `"left"` \| `"right"` | Defines the position of the combo box in the X direction |
+| `directionY` | `"both"` \| `"top"` \| `"bottom"` | Defines the position of the combo box in the Y direction |
+| `displayType` | `"default"` \| `"toggle"` | Defines the combo box display type |
+| `modernView` | `boolean` | Specifies whether to display the combo box in the modern view |
+| `isDisabled` | `boolean` | Specifies if the combo box is disabled or not |
+| `showDisabledItems` | `boolean` | Whether to show disabled combo box options |
+| `opened` | `boolean` | Specifies whether to open the combo box |
+| `scaledOptions` | `boolean` | Specifies whether the combo box options are scaled by the combo box button |
+| `onToggle` | () => `void` \| [`IMessage`](../utils.md#imessage) | Sets a function which is triggered whenever the combo box is clicked when "displayType == toggle" |
+| `noBorder` | `boolean` | Specifies whether to display the combo box without borders |
+| `withBackdrop` | `boolean` | Specifies whether the combo box contains a backdrop |
+| `dropDownMaxHeight` | `number` | Defines the maximum height of the dropdown list |
+| `className` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
 </APITable>
 
@@ -119,7 +119,7 @@ const languageOption: IComboBoxItem = {
 | ------ | ------ | ------ |
 | `key` | `string` | Unique identifier for the option |
 | `label` | `string` | Display text for the option |
-| `icon?` | `string` | The option display icon. The icon image must be uploaded to the assets folder. Only the image name with the extension must be specified in this field. |
-| `disabled?` | `boolean` | Specifies if the combo box option is disabled or not |
+| `icon` | `string` | The option display icon. The icon image must be uploaded to the assets folder. Only the image name with the extension must be specified in this field. |
+| `disabled` | `boolean` | Specifies if the combo box option is disabled or not |
 
 </APITable>

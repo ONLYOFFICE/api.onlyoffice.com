@@ -1,6 +1,6 @@
 ---
 description: Disable an employee account and archive their workspace on offboarding.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 # Offboarding employee
 
-This example shows a practical offboarding flow in ONLYOFFICE DocSpace:
+This example shows a practical offboarding flow in ONLYOFFICE Apps:
 
 - disable the employee account,
 - reassign their content to an archive owner,
@@ -18,7 +18,7 @@ This example shows a practical offboarding flow in ONLYOFFICE DocSpace:
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>
@@ -455,7 +455,7 @@ This example shows a practical offboarding flow in ONLYOFFICE DocSpace:
 
 ## Step 1: Disable the employee account
 
-The script disables the employee account to prevent further access to DocSpace.
+The script disables the employee account to prevent further access to ONLYOFFICE Apps.
 
 
 This is done using PUT [/api/2.0/people/:userId](/docspace/api-backend/usage-api/people/profiles/update-member) with body `{ "disabled": true }`.

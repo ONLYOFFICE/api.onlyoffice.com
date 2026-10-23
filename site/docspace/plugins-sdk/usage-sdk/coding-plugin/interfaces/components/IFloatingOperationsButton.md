@@ -1,12 +1,12 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/IFloatingOperationsButton.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IFloatingOperationsButton.ts
 ---
 
 # IFloatingOperationsButton
 
 Configuration for the floating operations button.
 Used to display progress of long-running operations (upload, conversion, backup, etc.)
-The button appears as a floating action button in the bottom-right corner of DocSpace.
+The button appears as a floating action button in the bottom-right corner of ONLYOFFICE Apps.
 
 To display the button, return an [`IMessage`](../utils.md#imessage) with
 [`Actions.addFloatingOperationsButton`](../../enums/Actions.md#addfloatingoperationsbutton) in `actions`
@@ -165,13 +165,13 @@ import APITable from '@site/src/components/APITable/APITable';
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `id` | `string` | Unique identifier for floating operations. Used to track and update operations from the same plugin. When Actions.addFloatingOperationsButton is called again with the same identifier, the existing operations are preserved rather than replaced. Use Actions.updateFloatingOperationsButton to update the state. |
-| `operations?` | [`IFloatingOperation`](#ifloatingoperation)[] | Array of operations to display in the floating button. Each operation shows as a row with icon, label, and progress indicator. Operations from multiple plugins are aggregated and displayed together. |
-| `operationsCompleted?` | `boolean` | Flag indicating all operations are completed. When true, the button shows a green checkmark and "completed" status. User can then dismiss the button or review completed operations. |
-| `operationsAlert?` | `boolean` | Flag indicating at least one operation has an error. When true, the button shows a red warning indicator. |
-| `showCancelButton?` | `boolean` | Controls the visibility of the cancel button. Cancel button is displayed only if the floating button contains only one operation from the plugin and this flag is set to true. |
-| `cancelOperation?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | Callback executed when user clicks the cancel button in the floating button. |
-| `onCancelOperationFromList?` | (`operationId`: `string`) => [`TReturnMessage`](../utils.md#treturnmessage) | Callback executed when user closes a specific operation from the operations list. Receives the operation ID. Typically returns Actions.updateFloatingOperationsButton with the updated operations list. |
-| `onLoad?` | (`dispatchMessage`: (`message`: [`IMessage`](../utils.md#imessage)) => `void`) => [`TReturnMessage`](../utils.md#treturnmessage) | Lifecycle callback executed once when floating operations button with given id is displayed for the first time. Receives a dispatchMessage function to send updates back to DocSpace. Use this to initialize progress tracking or update. |
+| `operations` | [`IFloatingOperation`](#ifloatingoperation)[] | Array of operations to display in the floating button. Each operation shows as a row with icon, label, and progress indicator. Operations from multiple plugins are aggregated and displayed together. |
+| `operationsCompleted` | `boolean` | Flag indicating all operations are completed. When true, the button shows a green checkmark and "completed" status. User can then dismiss the button or review completed operations. |
+| `operationsAlert` | `boolean` | Flag indicating at least one operation has an error. When true, the button shows a red warning indicator. |
+| `showCancelButton` | `boolean` | Controls the visibility of the cancel button. Cancel button is displayed only if the floating button contains only one operation from the plugin and this flag is set to true. |
+| `cancelOperation` | () => [`TReturnMessage`](../utils.md#treturnmessage) | Callback executed when user clicks the cancel button in the floating button. |
+| `onCancelOperationFromList` | (`operationId`: `string`) => [`TReturnMessage`](../utils.md#treturnmessage) | Callback executed when user closes a specific operation from the operations list. Receives the operation ID. Typically returns Actions.updateFloatingOperationsButton with the updated operations list. |
+| `onLoad` | (`dispatchMessage`: (`message`: [`IMessage`](../utils.md#imessage)) => `void`) => [`TReturnMessage`](../utils.md#treturnmessage) | Lifecycle callback executed when the entry with given id is shown, and again if it was cleared and added anew. Send later updates through `dispatchMessage`. |
 
 </APITable>
 
@@ -305,7 +305,7 @@ Each operation displays as a row with icon, label, and progress indicator.
 | `operation` | [`FloatingOperationType`](#floatingoperationtype) | Type of operation - determines the default icon and visual representation. Use predefined types (Upload, Convert, etc.). |
 | `alert` | `boolean` | Error flag - if true, the operation is displayed with a warning/error state. Shows a red icon and allows the user to see what went wrong. |
 | `completed` | `boolean` | Completion flag - if true, the operation is marked as completed. Shows checkmark icon and allows user to dismiss the operation. |
-| `percent?` | `number` | Progress percentage of the operation (0-100). If undefined, displays an infinite loader animation instead of percentage. |
-| `icon?` | `string` | Custom icon for the operation (overrides default operation icon). The icon image must be uploaded to the assets folder. Only the image name with the extension must be specified in this field, for example, "upload.svg" or "custom-icon.png". |
+| `percent` | `number` | Progress percentage of the operation (0-100). If undefined, displays an infinite loader animation instead of percentage. |
+| `icon` | `string` | Custom icon for the operation (overrides default operation icon). The icon image must be uploaded to the assets folder. Only the image name with the extension must be specified in this field, for example, "upload.svg" or "custom-icon.png". |
 
 </APITable>

@@ -19,7 +19,7 @@ Assigns one or more metadata templates to a file, so its fields can be filled wi
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | OK | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The templates are assigned to the file, the ones it already carried are skipped; the response carries no content | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request body cannot be read or has no `templateIds` | - | - |
 | **403** | The caller cannot edit the file | - | - |
 | **404** | The file or one of the templates does not exist | - | - |

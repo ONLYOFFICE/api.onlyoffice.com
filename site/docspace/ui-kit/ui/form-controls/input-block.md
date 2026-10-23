@@ -128,23 +128,23 @@ export function RoomName() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children`? | `React.ReactNode` | Rendered before the input, inside the same bordered group — a currency sign, a country code, a fixed prefix. |
-| `className`? | `string` | Applied to the group. |
-| `dataTestId`? | `string` | `data-testid` of the group. Default: `"input-block"`. |
-| `forwardedRef`? | `React.Ref<HTMLInputElement>` | Ref to the `<input>` element itself. |
-| `hoverColor`? | `string` | Colour of that icon on hover. |
-| `iconButtonClassName`? | `string` | Applied to the box around the icon. Default: `""`. |
-| `iconColor`? | `string` | Colour of that icon. |
-| `iconName`? | `string` | URL of the icon at the end of the field. Default: `""`. |
-| `iconNode`? | `React.ReactNode` | The icon as an element, instead of `iconName`. |
-| `iconSize`? | `number` | Size of that icon in pixels. It falls back to `size`. |
-| `id`? | `string` | Applied to the `<input>`, not to the group around it. |
-| `isIconFill`? | `boolean` | Whether the icon's paths are recoloured to `iconColor`. Leave it off for a multi-coloured icon. Default: `false`. |
-| `noIcon`? | `boolean` | Whether the icon box is left out entirely. Without it an empty box is still rendered and still takes its padding. Default: `false`. |
-| `onIconClick`? | `(e: React.MouseEvent) => void` | Called when the icon is clicked. Without it the icon is rendered in the disabled style and does not respond — it is what makes the icon a button. |
-| `style`? | `React.CSSProperties` | Applied to the group. |
-| `tabIndex`? | `number` | Used as HTML `tabindex` property of the `<input>`. Unlike `TextInput`'s, this one defaults to `-1`, so the field is out of the tab order until you pass `0` — and so is every component built on it that passes its own `tabIndex` through, `SearchInput` and `PasswordInput` among them. Default: `-1`. |
-| `testId`? | `string` | `data-testid` of the inner `<input>`, passed through to `TextInput`. |
+| `children` | `React.ReactNode` | Rendered before the input, inside the same bordered group — a currency sign, a country code, a fixed prefix. |
+| `className` | `string` | Applied to the group. |
+| `dataTestId` | `string` | `data-testid` of the group. Default: `"input-block"`. |
+| `forwardedRef` | `React.Ref<HTMLInputElement>` | Ref to the `<input>` element itself. |
+| `hoverColor` | `string` | Colour of that icon on hover. |
+| `iconButtonClassName` | `string` | Applied to the box around the icon. Default: `""`. |
+| `iconColor` | `string` | Colour of that icon. |
+| `iconName` | `string` | URL of the icon at the end of the field. Default: `""`. |
+| `iconNode` | `React.ReactNode` | The icon as an element, instead of `iconName`. |
+| `iconSize` | `number` | Size of that icon in pixels. It falls back to `size`. |
+| `id` | `string` | Applied to the `<input>`, not to the group around it. |
+| `isIconFill` | `boolean` | Whether the icon's paths are recoloured to `iconColor`. Leave it off for a multi-coloured icon. Default: `false`. |
+| `noIcon` | `boolean` | Whether the icon box is left out entirely. Without it an empty box is still rendered and still takes its padding. Default: `false`. |
+| `onIconClick` | `(e: React.MouseEvent) => void` | Called when the icon is clicked. Without it the icon is rendered in the disabled style and does not respond — it is what makes the icon a button. |
+| `style` | `React.CSSProperties` | Applied to the group. |
+| `tabIndex` | `number` | Used as HTML `tabindex` property of the `<input>`. Unlike `TextInput`'s, this one defaults to `-1`, so the field is out of the tab order until you pass `0` — and so is every component built on it that passes its own `tabIndex` through, `SearchInput` and `PasswordInput` among them. Default: `-1`. |
+| `testId` | `string` | `data-testid` of the inner `<input>`, passed through to `TextInput`. |
 
 </APITable>
 
@@ -156,34 +156,34 @@ Declared by [`components/text-input`](./text-input.md) and accepted here too.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `type` | `InputType` | Supported type of the input fields |
-| `value` | `string` | Value of the input |
-| `autoComplete`? | `string` | Used as HTML `autocomplete` property. Default: `"off"`. |
-| `dir`? | `string` | Text direction. Default: `"auto"`. |
-| `fontWeight`? | `number \| string` | Sets the font weight |
-| `guide`? | `boolean` | When guide is true, Text Mask always shows both placeholder characters and non-placeholder mask characters |
-| `hasError`? | `boolean` | Indicates the input field has an error |
-| `hasWarning`? | `boolean` | Indicates the input field has a warning |
-| `inputMode`? | `"decimal" \| "email" \| "none" \| "numeric" \| "search" \| "tel" \| "text" \| "url"` | Input mode for virtual keyboard |
-| `isAutoFocussed`? | `boolean` | Focus the input field on initial render |
-| `isBold`? | `boolean` | Sets font weight value to 600 |
-| `isDisabled`? | `boolean` | Indicates that the field cannot be used |
-| `isReadOnly`? | `boolean` | Indicates that the field is displaying read-only content |
-| `keepCharPositions`? | `boolean` | Allows to add or delete characters without changing the positions of the existing characters |
-| `mask`? | `((value: string) => Mask) \| Mask` | Input text mask |
-| `maxLength`? | `number` | Maximum number of characters the field accepts; further typing is silently dropped. Default: `255`. |
-| `name`? | `string` | Used as HTML `name` property |
-| `onBlur`? | `(e: React.FocusEvent<HTMLInputElement>) => void` | Called when field is blurred |
-| `onChange`? | `(e: React.ChangeEvent<HTMLInputElement>) => void` | Called with the new value. Required when input is not read only |
-| `onClick`? | `(e: React.MouseEvent<HTMLInputElement>) => void` | Called when clicked |
-| `onContextMenu`? | `(e: React.MouseEvent<HTMLInputElement>) => void` | Called when context menu is triggered |
-| `onFocus`? | `(e: React.FocusEvent<HTMLInputElement>) => void` | Called when field is focused |
-| `onKeyDown`? | `(e: React.KeyboardEvent<HTMLInputElement>) => void` | Called when a key is pressed |
-| `placeholder`? | `string` | Placeholder text for the input. The default is a single space, not an empty string, so `:placeholder-shown` matches even when no placeholder was asked for. Default: `" "`. |
-| `scale`? | `boolean` | Indicates the input field has scale |
-| `size`? | `InputSize` | Supported size of the input fields |
-| `spellCheck`? | `boolean` | Used as HTML `spellcheck` property |
-| `withBorder`? | `boolean` | Indicates that component contains border |
+| `type` | `InputType` | **Required.** Supported type of the input fields |
+| `value` | `string` | **Required.** Value of the input |
+| `autoComplete` | `string` | Used as HTML `autocomplete` property. Default: `"off"`. |
+| `dir` | `string` | Text direction. Default: `"auto"`. |
+| `fontWeight` | `number \| string` | Sets the font weight |
+| `guide` | `boolean` | When guide is true, Text Mask always shows both placeholder characters and non-placeholder mask characters |
+| `hasError` | `boolean` | Indicates the input field has an error |
+| `hasWarning` | `boolean` | Indicates the input field has a warning |
+| `inputMode` | `"decimal" \| "email" \| "none" \| "numeric" \| "search" \| "tel" \| "text" \| "url"` | Input mode for virtual keyboard |
+| `isAutoFocussed` | `boolean` | Focus the input field on initial render |
+| `isBold` | `boolean` | Sets font weight value to 600 |
+| `isDisabled` | `boolean` | Indicates that the field cannot be used |
+| `isReadOnly` | `boolean` | Indicates that the field is displaying read-only content |
+| `keepCharPositions` | `boolean` | Allows to add or delete characters without changing the positions of the existing characters |
+| `mask` | `((value: string) => Mask) \| Mask` | Input text mask |
+| `maxLength` | `number` | Maximum number of characters the field accepts; further typing is silently dropped. Default: `255`. |
+| `name` | `string` | Used as HTML `name` property |
+| `onBlur` | `(e: React.FocusEvent<HTMLInputElement>) => void` | Called when field is blurred |
+| `onChange` | `(e: React.ChangeEvent<HTMLInputElement>) => void` | Called with the new value. Required when input is not read only |
+| `onClick` | `(e: React.MouseEvent<HTMLInputElement>) => void` | Called when clicked |
+| `onContextMenu` | `(e: React.MouseEvent<HTMLInputElement>) => void` | Called when context menu is triggered |
+| `onFocus` | `(e: React.FocusEvent<HTMLInputElement>) => void` | Called when field is focused |
+| `onKeyDown` | `(e: React.KeyboardEvent<HTMLInputElement>) => void` | Called when a key is pressed |
+| `placeholder` | `string` | Placeholder text for the input. The default is a single space, not an empty string, so `:placeholder-shown` matches even when no placeholder was asked for. Default: `" "`. |
+| `scale` | `boolean` | Indicates the input field has scale |
+| `size` | `InputSize` | Supported size of the input fields |
+| `spellCheck` | `boolean` | Used as HTML `spellcheck` property |
+| `withBorder` | `boolean` | Indicates that component contains border |
 
 </APITable>
 

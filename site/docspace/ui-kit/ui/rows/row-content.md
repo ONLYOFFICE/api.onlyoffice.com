@@ -98,15 +98,15 @@ export function FileName({ name }: { name: string }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children` | `ReactElement<{ containerWidth?: string; children?: React.ReactElement; }, string \| JSXElementConstructor<any>>[]` | The row's parts, addressed by position: the first is the title, the second the icons beside it, and everything after that is a side element that is **not displayed** — only its text is, joined into the one line under the title. It has to be an array. |
-| `className`? | `string` | Applied to the row's content element. |
-| `convertSideInfo`? | `boolean` | Whether the last side element is flattened into the joined line like the others. Turn it off to render it as the element it is. Default: `true`. |
-| `disableSideInfo`? | `boolean` | Drops the line of joined side text under the title. Default: `false`. |
-| `id`? | `string` | Applied to the row's content element. |
-| `onClick`? | `() => void` | Called on a click anywhere in the content. |
-| `sectionWidth`? | `number` | Read as a flag, not as a width: any non-zero value switches the content to its section layout. |
-| `sideColor`? | `string` | Any CSS colour for the line of side text. |
-| `style`? | `CSSProperties` | Applied to the content element, and again to the title's wrapper. |
+| `children` | `ReactElement<{ containerWidth?: string; children?: React.ReactElement; }, string \| JSXElementConstructor<any>>[]` | **Required.** The row's parts, addressed by position: the first is the title, the second the icons beside it, and everything after that is a side element that is **not displayed** — only its text is, joined into the one line under the title. It has to be an array. |
+| `className` | `string` | Applied to the row's content element. |
+| `convertSideInfo` | `boolean` | Whether the last side element is flattened into the joined line like the others. Turn it off to render it as the element it is. Default: `true`. |
+| `disableSideInfo` | `boolean` | Drops the line of joined side text under the title. Default: `false`. |
+| `id` | `string` | Applied to the row's content element. |
+| `onClick` | `() => void` | Called on a click anywhere in the content. |
+| `sectionWidth` | `number` | Read as a flag, not as a width: any non-zero value switches the content to its section layout. |
+| `sideColor` | `string` | Any CSS colour for the line of side text. |
+| `style` | `CSSProperties` | Applied to the content element, and again to the title's wrapper. |
 
 </APITable>
 

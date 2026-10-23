@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/IImage.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IImage.ts
 ---
 
 # IImage
@@ -54,11 +54,11 @@ import APITable from '@site/src/components/APITable/APITable';
 | ------ | ------ | ------ |
 | `src` | `string` | Defines the full path to the image |
 | `alt` | `string` | Defines the image alt attribute |
-| `width?` | `string` | Defines the image width |
-| `height?` | `string` | Defines the image height |
-| `name?` | `string` | Defines the image name |
-| `id?` | `string` | Defines the image ID |
-| `style?` | \{ \[`key`: `string`\]: `string`; \} | Defines the image style |
-| `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
+| `width` | `string` | Defines the image width |
+| `height` | `string` | Defines the image height |
+| `name` | `string` | Defines the image name |
+| `id` | `string` | Defines the image ID |
+| `style` | \{ \[`key`: `string`\]: `string`; \} | Defines the image style |
+| `className` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
 </APITable>

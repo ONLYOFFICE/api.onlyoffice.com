@@ -1,11 +1,11 @@
 ---
 description: Build an admin settings interface with form controls.
-tags: ["DocSpace", "Plugins", "Advanced"]
+tags: ["Apps", "Plugins", "Advanced"]
 ---
 
 # Settings plugin UI
 
-This plugin adds a settings interface for administrators in DocSpace. It includes:
+This plugin adds a settings interface for administrators in ONLYOFFICE Apps. It includes:
 
 - a toggle for offline mode;
 - a dropdown to select language;
@@ -361,7 +361,7 @@ export default plugin;
 
 ## Before you start
 
-Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
+Make sure you have an ONLYOFFICE Apps server running, and install ONLYOFFICE Apps Plugins SDK globally:
 
 ```bash
 npm i -g @onlyoffice/docspace-plugin-sdk
@@ -468,7 +468,7 @@ const plugin = new Settingsplugin();
 
 // Add the plugin items and components below the plugin initialization line
 
-// Register plugin globally for DocSpace to find
+// Register plugin globally for ONLYOFFICE Apps to find
 declare global {
   interface Window {
     Plugins: any;
@@ -630,11 +630,11 @@ npm run build
 
 This compiles `src/index.ts` to `dist/plugin.js`.
 
-## Step 6: Upload to DocSpace
+## Step 6: Upload to ONLYOFFICE Apps
 
 1. Log in as an administrator.
 2. Navigate to: **Settings → Integration → Plugins**.
-3. Click **Upload**, and select the generated `dist/plugin.zip`.
+3. Click **Upload plugin**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
 ## Step 7: Test the plugin

@@ -9,7 +9,7 @@ import Video from '@site/src/components/Video/Video';
 
 当用户按下按钮时，插入 *Hello world!* 这句话。
 
-**插件类型：** 非可视化，非系统插件。
+**插件类型：** 非可视化、非系统插件。
 
 **支持的编辑器：** 文档。
 
@@ -17,7 +17,7 @@ import Video from '@site/src/components/Video/Video';
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld) 下载此插件，并按照 [桌面](../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../development-workflow/installing-and-testing/docs-on-premises-installation.md) 或[云端](../development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明进行安装。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld) 下载此插件，并按照[桌面](../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端](../development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明进行安装。
 
 ## 使用
 

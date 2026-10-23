@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IInfoPanelPlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IInfoPanelPlugin.ts
 ---
 
 # IInfoPanelPlugin
@@ -9,7 +9,7 @@ The plugin that is embedded as a separate tab in the file info panel.
 ## Example
 
 The plugin class implements `IInfoPanelPlugin` and registers a "Document Info" tab
-in the constructor. DocSpace calls `getInfoPanelItems` to embed the tabs into the
+in the constructor. ONLYOFFICE Apps calls `getInfoPanelItems` to embed the tabs into the
 file info panel; the tab UI is described by the item's `body` box.
 
 ```typescript

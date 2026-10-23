@@ -1,21 +1,21 @@
 ---
 description: Create a project room with folder structure and team access.
-tags: ["DocSpace", "MCP Server", "AI"]
+tags: ["Apps", "MCP Server", "AI"]
 ---
 
 # Create room with team access
 
-This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to create a ready-to-use project workspace: a room, a predefined folder structure, and team access permissions.
+This example demonstrates how to use the ONLYOFFICE Apps MCP Server from an MCP-compatible client to create a ready-to-use project workspace: a room, a predefined folder structure, and team access permissions.
 
 ## Before you start
 
-Please make sure your MCP client is configured to use the DocSpace MCP Server so it can access your DocSpace portal and perform actions on your behalf.
-You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
+Please make sure your MCP client is configured to use the ONLYOFFICE Apps MCP Server so it can access your ONLYOFFICE Apps workspace and perform actions on your behalf.
+You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the ONLYOFFICE Apps MCP Server to your client configuration and provide the required credentials.
 
-If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
+If you are not sure which server option to use, start from the [ONLYOFFICE Apps MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
 
-- use the public [Remote Server](../getting-started/installation.md#access-via-the-remote-docspace-mcp-server) if your client supports remote MCP servers;
-- run the [Local Server](../getting-started/installation.md#access-via-a-local-docspace-mcp-server) if your client requires a locally hosted MCP server.
+- use the public [Remote Server](../getting-started/installation.md#access-via-the-remote-onlyoffice-apps-mcp-server) if your client supports remote MCP servers;
+- run the [Local Server](../getting-started/installation.md#access-via-a-local-onlyoffice-apps-mcp-server) if your client requires a locally hosted MCP server.
 
 ## Workflow steps
 
@@ -38,7 +38,7 @@ In your MCP client, send a request that includes at least the room name.
 
 What you should expect:
 
-- A new room is created in DocSpace.
+- A new room is created in ONLYOFFICE Apps.
 - The client confirms the room name and returns basic room information (the exact output depends on the client UI).
 
 If you want to specify the room type, include it in the request.
@@ -82,11 +82,11 @@ What you should expect in the response:
 - Room name (and room type, if specified)
 - Folder list
 - Invited users and assigned roles
-- (Optional) a link to open the room in DocSpace
+- (Optional) a link to open the room in ONLYOFFICE Apps
 
 ## Result
 
-- A new project room is created in DocSpace.
+- A new project room is created in ONLYOFFICE Apps.
 - The folder structure is ready.
 - Team members have the correct access permissions.
 - The workspace is ready for collaboration.

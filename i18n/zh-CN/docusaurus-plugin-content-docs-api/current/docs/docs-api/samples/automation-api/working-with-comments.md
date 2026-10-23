@@ -7,7 +7,7 @@ import { CommentsExternalToolbar } from '@site/src/components/BrowserWindow';
 
 # 处理评论
 
-使用自动化 API 从外部 UI 管理文档评论 — 添加、删除、回复和导航，无需直接操作编辑器。
+使用自动化 API 从外部 UI 管理文档评论——添加、删除、回复和导航，无需直接操作编辑器。
 
 :::info
 文档打开时包含现有评论。您的代码调用 `connector.executeMethod()` 和 `connector.attachEvent()` 来与评论交互。编辑器会实时更新。
@@ -30,7 +30,7 @@ import { CommentsExternalToolbar } from '@site/src/components/BrowserWindow';
     };
     ```
 
-2. 当用户单击自定义界面中的 **添加评论** 按钮时，将执行 [AddComment](/docs/plugins/interacting-with-editors/document-api/Methods/AddComment.md) 方法向文档添加新评论。调用此方法后，会触发 [onAddComment](/docs/plugins/interacting-with-editors/document-api/Events/onAddComment.md) 事件，将新评论添加到包含所有文档评论的数组中：
+2. 当用户单击自定义界面中的**添加评论**按钮时，将执行 [AddComment](/docs/plugins/interacting-with-editors/document-api/Methods/AddComment.md) 方法向文档添加新评论。调用此方法后，会触发 [onAddComment](/docs/plugins/interacting-with-editors/document-api/Events/onAddComment.md) 事件，将新评论添加到包含所有文档评论的数组中：
 
     ``` ts
     const onDocumentReady = () => {
@@ -55,7 +55,7 @@ import { CommentsExternalToolbar } from '@site/src/components/BrowserWindow';
     });
     ```
 
-3. 当用户单击自定义界面中的 **删除** 按钮时，将执行 [RemoveComments](/docs/plugins/interacting-with-editors/document-api/Methods/RemoveComments.md) 方法从文档中删除评论。调用此方法后，将触发 [onRemoveComment](/docs/plugins/interacting-with-editors/document-api/Events/onRemoveComment.md) 事件，以从包含所有文档评论的数组中删除评论：
+3. 当用户单击自定义界面中的**删除**按钮时，将执行 [RemoveComments](/docs/plugins/interacting-with-editors/document-api/Methods/RemoveComments.md) 方法从文档中删除评论。调用此方法后，将触发 [onRemoveComment](/docs/plugins/interacting-with-editors/document-api/Events/onRemoveComment.md) 事件，以从包含所有文档评论的数组中删除评论：
 
     ``` ts
     const onDocumentReady = () => {
@@ -72,13 +72,13 @@ import { CommentsExternalToolbar } from '@site/src/components/BrowserWindow';
     });
     ```
 
-4. 当用户单击自定义界面中的 **上一个/下一个** 按钮时，将执行 [MoveToComment](/docs/plugins/interacting-with-editors/document-api/Methods/MoveToComment.md) 方法在文档中的评论之间导航：
+4. 当用户单击自定义界面中的**上一个/下一个**按钮时，将执行 [MoveToComment](/docs/plugins/interacting-with-editors/document-api/Methods/MoveToComment.md) 方法在文档中的评论之间导航：
 
     ``` ts
     connector.executeMethod("MoveToComment", [comments[indexComment]["Id"]]);
     ```
 
-5. 当用户单击自定义界面中的 **添加回复** 按钮时，将执行 [ChangeComment](/docs/plugins/interacting-with-editors/document-api/Methods/ChangeComment.md) 方法，通过更改 *CommentData* 对象向现有评论添加回复。调用此方法后，会触发 [onChangeCommentData](/docs/plugins/interacting-with-editors/document-api/Events/onChangeCommentData.md) 事件，将新的评论回复添加到包含所有文档评论的数组中：
+5. 当用户单击自定义界面中的**添加回复**按钮时，将执行 [ChangeComment](/docs/plugins/interacting-with-editors/document-api/Methods/ChangeComment.md) 方法，通过更改 *CommentData* 对象向现有评论添加回复。调用此方法后，会触发 [onChangeCommentData](/docs/plugins/interacting-with-editors/document-api/Events/onChangeCommentData.md) 事件，将新的评论回复添加到包含所有文档评论的数组中：
 
     ``` ts
     const onDocumentReady = () => {
@@ -112,5 +112,5 @@ import { CommentsExternalToolbar } from '@site/src/components/BrowserWindow';
 :::note
 请注意，该连接器仅适用于 **ONLYOFFICE 文档开发者版本**。
 
-该连接器是一项需额外付费的高级功能。请参阅 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api) 了解价格详情，或联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
+该连接器是一项需额外付费的高级功能。请参阅 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)了解价格详情，或联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
 :::

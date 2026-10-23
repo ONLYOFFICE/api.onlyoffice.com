@@ -8,7 +8,7 @@ import Video from '@site/src/components/Video/Video';
 
 # 冻结窗格
 
-取消冻结窗格，将视口导航到目标单元格 (A10)，然后在不同单元格 (D10) 处重新冻结窗格。
+取消冻结窗格，将视口导航到目标单元格（A10），然后在不同单元格 (D10) 处重新冻结窗格。
 
 ```ts
 (function () {

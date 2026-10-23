@@ -12,13 +12,13 @@ sidebar_position: -12
 
 使用某些文档管理系统（如 Nextcloud、ownCloud、SharePoint 等）并希望了解如何将 ONLYOFFICE 文档连接到这些系统的用户，可以访问[即用型连接器](../../get-started/ready-to-use-connectors/nextcloud-integration.md)部分。该部分详细介绍了与 ONLYOFFICE 文档配合使用的主要插件。
 
-每个API方法的详细描述可在更大的**文档**模块中找到。所有方法都在相应的部分中描述，它们的列表在[高级参数](../../usage-api/advanced-parameters.md)部分中可以找到。
+每个 API 方法的详细描述可在更大的**文档**模块中找到。所有方法都在相应的部分中描述，它们的列表在[高级参数](../../usage-api/advanced-parameters.md)部分中可以找到。
 
-## 如何查看ONLYOFFICE 文档的当前版本号？ {#how-to-find-out-the-current-version-number-of-onlyoffice-docs}
+## 如何查看 ONLYOFFICE 文档的当前版本号？ {#how-to-find-out-the-current-version-number-of-onlyoffice-docs}
 
-当前的ONLYOFFICE 文档版本号可在文档编辑器、演示文稿编辑器或电子表格编辑器的**关于**页面上找到，位于徽标和编辑器名称的正下方。
+当前的 ONLYOFFICE 文档版本号可在文档编辑器、演示文稿编辑器或电子表格编辑器的**关于**页面上找到，位于徽标和编辑器名称的正下方。
 
-您可以使用 API 向 **文档命令服务**发送 POST 请求。将 `c` 参数的值设为 [version](../../additional-api/command-service/version.md)，在请求正文中作为 JSON 对象发送：
+您可以使用 API 向**文档命令服务**发送 POST 请求。将 `c` 参数的值设为 [version](../../additional-api/command-service/version.md)，在请求正文中作为 JSON 对象发送：
 
   ``` json
   {
@@ -63,4 +63,4 @@ ONLYOFFICE 文档使用 [Node.js 配置模块](https://www.npmjs.com/package/con
 - [强制保存](../../get-started/how-it-works/saving-file.md#force-saving)
 - [请求正文中的令牌](../../additional-api/signature/request/token-in-body.md)
 - [启用 WOPI](../../using-wopi/overview.md#enabling-wopi)
-- [IP过滤器](../../using-wopi/overview.md#ip-filter)
+- [IP 过滤器](../../using-wopi/overview.md#ip-filter)

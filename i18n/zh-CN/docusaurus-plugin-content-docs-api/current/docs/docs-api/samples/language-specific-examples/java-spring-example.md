@@ -19,7 +19,7 @@ Java Spring 集成示例是一个 Spring Boot 应用程序，它可以列出文�
 - **Apache Maven**：请参阅[官方网站](https://maven.apache.org/download.cgi)。
 - **Git**：请参阅[官方网站](https://git-scm.com/downloads)。
 
-## 步骤1. 下载示例
+## 步骤 1. 下载示例
 
 克隆[示例仓库](https://github.com/ONLYOFFICE/document-server-integration/tree/main/web/documentserver-example/java-spring)，进入 Java Spring 示例目录，并获取其子模块：
 
@@ -29,7 +29,7 @@ cd document-server-integration/web/documentserver-example/java-spring
 git submodule update --init --depth 1 .
 ```
 
-## 步骤2. 配置连接
+## 步骤 2. 配置连接
 
 打开 `src/main/resources/application.properties` 文件并编辑以下键：
 
@@ -47,7 +47,7 @@ docservice.security.key=
 
 如果您想尝试配置编辑器，请修改 `src/main/java/com/onlyoffice/integration/sdk/service/ConfigServiceImpl.java` 文件中 `createConfig` 方法的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
-## 步骤3. 构建并运行示例
+## 步骤 3. 构建并运行示例
 
 ```sh
 mvn spring-boot:run
@@ -57,7 +57,7 @@ mvn spring-boot:run
 
 ## 使用 Docker 运行
 
-如果您已安装带有 Docker Compose 的 [Docker](https://docs.docker.com/get-started/get-docker/)，也可以在容器中构建并运行示例，无需安装 Java 或 Maven。此配置不会启动 ONLYOFFICE 文档，因此请先完成步骤2。在示例目录中运行：
+如果您已安装带有 Docker Compose 的 [Docker](https://docs.docker.com/get-started/get-docker/)，也可以在容器中构建并运行示例，无需安装 Java 或 Maven。此配置不会启动 ONLYOFFICE 文档，因此请先完成步骤 2。在示例目录中运行：
 
 ```sh
 docker compose up --build

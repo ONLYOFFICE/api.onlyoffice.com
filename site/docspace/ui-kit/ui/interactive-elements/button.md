@@ -173,33 +173,33 @@ export function SaveRow() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `accent`? | `boolean` | Sets the button accent (tinted accent background with accent border/text) |
-| `aria-busy`? | `"false" \| "true"` | ARIA busy state |
-| `aria-disabled`? | `"false" \| "true"` | ARIA disabled state |
-| `aria-label`? | `string` | ARIA label for accessibility |
-| `children`? | `ReactNode` | Rendered in place of `label` when `label` is empty or unset. A non-empty `label` wins and the children are dropped. |
-| `className`? | `string` | Custom CSS class |
-| `filled`? | `boolean` | Renders on a neutral grey surface with no border, for toolbar-style actions. |
-| `filledStroke`? | `boolean` | Used together with `filled`: strokes the icon's path instead of filling it, for outline-style icons. |
-| `icon`? | `ReactNode` | Icon node element |
-| `id`? | `string` | HTML id attribute |
-| `isClicked`? | `boolean` | Sets the button to show a clicked state |
-| `isDisabled`? | `boolean` | Sets the button to show a disabled state |
-| `isHovered`? | `boolean` | Sets the button to show a hovered state |
-| `isLoading`? | `boolean` | Sets a button to show a loader icon |
-| `label`? | `string` | Button text |
-| `minWidth`? | `string` | Sets the minimal button width |
-| `onClick`? | `(e: React.MouseEvent<HTMLElement>) => void` | Sets the action initiated upon clicking the button |
-| `primary`? | `boolean` | Sets the button primary |
-| `ref`? | `Ref<HTMLElement>` | Ref to access the DOM element or React component instance |
-| `scale`? | `boolean` | Scales the width of the button to 100% |
-| `size`? | `ButtonSize` | Height of the button: `extraSmall` 24px, `small` 32px, `normal` 40px, `medium` 44px. Each is a `--button-height-*` custom property the consumer can override. Default: `ButtonSize.normal`. |
-| `style`? | `CSSProperties` | Custom CSS styles |
-| `tabIndex`? | `number` | Button tab index |
-| `testId`? | `string` | HTML data-testid attribute. Default: `"button"`. |
-| `title`? | `string` | Tooltip text. Consumed by the `withTooltip` wrapper the folder exports, so it becomes the tooltip's content and never reaches the DOM as a `title` attribute. |
-| `tooltipText`? | `string` | Tooltip text |
-| `type`? | `"button" \| "reset" \| "submit"` | HTML button type attribute |
+| `accent` | `boolean` | Sets the button accent (tinted accent background with accent border/text) |
+| `aria-busy` | `"false" \| "true"` | ARIA busy state |
+| `aria-disabled` | `"false" \| "true"` | ARIA disabled state |
+| `aria-label` | `string` | ARIA label for accessibility |
+| `children` | `ReactNode` | Rendered in place of `label` when `label` is empty or unset. A non-empty `label` wins and the children are dropped. |
+| `className` | `string` | Custom CSS class |
+| `filled` | `boolean` | Renders on a neutral grey surface with no border, for toolbar-style actions. |
+| `filledStroke` | `boolean` | Used together with `filled`: strokes the icon's path instead of filling it, for outline-style icons. |
+| `icon` | `ReactNode` | Icon node element |
+| `id` | `string` | HTML id attribute |
+| `isClicked` | `boolean` | Sets the button to show a clicked state |
+| `isDisabled` | `boolean` | Sets the button to show a disabled state |
+| `isHovered` | `boolean` | Sets the button to show a hovered state |
+| `isLoading` | `boolean` | Sets a button to show a loader icon |
+| `label` | `string` | Button text |
+| `minWidth` | `string` | Sets the minimal button width |
+| `onClick` | `(e: React.MouseEvent<HTMLElement>) => void` | Sets the action initiated upon clicking the button |
+| `primary` | `boolean` | Sets the button primary |
+| `ref` | `Ref<HTMLElement>` | Ref to access the DOM element or React component instance |
+| `scale` | `boolean` | Scales the width of the button to 100% |
+| `size` | `ButtonSize` | Height of the button: `extraSmall` 24px, `small` 32px, `normal` 40px, `medium` 44px. Each is a `--button-height-*` custom property the consumer can override. Default: `ButtonSize.normal`. |
+| `style` | `CSSProperties` | Custom CSS styles |
+| `tabIndex` | `number` | Button tab index |
+| `testId` | `string` | HTML data-testid attribute. Default: `"button"`. |
+| `title` | `string` | Tooltip text. Consumed by the `withTooltip` wrapper the folder exports, so it becomes the tooltip's content and never reaches the DOM as a `title` attribute. |
+| `tooltipText` | `string` | Tooltip text |
+| `type` | `"button" \| "reset" \| "submit"` | HTML button type attribute |
 
 </APITable>
 
@@ -211,10 +211,10 @@ The `index` module exports a wrapped component, so these are accepted on top of 
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `onMouseEnter`? | `MouseEventHandler` | Called in addition to the handler that opens the tooltip, after it. |
-| `onMouseLeave`? | `MouseEventHandler` | Called in addition to the handler that closes the tooltip, after it. |
-| `onMouseMove`? | `MouseEventHandler` | Passed through only while the element has no tooltip. Once one is active the wrapper's own handler replaces it and this is dropped. |
-| `tooltipContent`? | `ReactNode` | Tooltip content, used instead of `title` when both are set. Only a string produces a tooltip: the wrapper needs text for the anchor, so any other node leaves the element with no tooltip at all. |
+| `onMouseEnter` | `MouseEventHandler` | Called in addition to the handler that opens the tooltip, after it. |
+| `onMouseLeave` | `MouseEventHandler` | Called in addition to the handler that closes the tooltip, after it. |
+| `onMouseMove` | `MouseEventHandler` | Passed through only while the element has no tooltip. Once one is active the wrapper's own handler replaces it and this is dropped. |
+| `tooltipContent` | `ReactNode` | Tooltip content, used instead of `title` when both are set. Only a string produces a tooltip: the wrapper needs text for the anchor, so any other node leaves the element with no tooltip at all. |
 
 </APITable>
 

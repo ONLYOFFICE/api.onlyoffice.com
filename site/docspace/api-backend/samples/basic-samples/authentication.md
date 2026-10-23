@@ -1,6 +1,6 @@
 ---
 description: Authenticate a user and verify the received token via the API.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,13 +8,13 @@ import TabItem from '@theme/TabItem';
 
 # Authenticate a user
 
-This example demonstrates how to authenticate a user in ONLYOFFICE DocSpace using the API and check the authentication with a token received.
+This example demonstrates how to authenticate a user in ONLYOFFICE Apps using the API and check the authentication with a token received.
 
 Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/nodejs/samples/authentication.js)/[Python](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/python/samples/authentication.py)
 
 ## Before you start
 
-Replace `https://yourportal.onlyoffice.com` with your actual DocSpace portal URL, replace `USER_CREDENTIALS` with your credentials.
+Replace `https://yourportal.onlyoffice.com` with your actual ONLYOFFICE Apps portal URL, replace `USER_CREDENTIALS` with your credentials.
 
 <details>
   <summary>Full example</summary>

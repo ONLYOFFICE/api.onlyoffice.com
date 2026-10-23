@@ -5,9 +5,9 @@ sidebar_label: "C#"
 
 # C#
 
-The ONLYOFFICE DocSpace SDK for C# is a library that provides tools for integrating and managing DocSpace features within your applications.
+The ONLYOFFICE Apps SDK for C# is a library that provides tools for integrating and managing ONLYOFFICE Apps features within your applications.
 
-It simplifies interaction with the DocSpace API by offering ready-to-use methods and models.
+It simplifies interaction with the ONLYOFFICE Apps API by offering ready-to-use methods and models.
 
 **[ONLYOFFICE C# (.NET) Library on GitHub](https://github.com/ONLYOFFICE/docspace-api-sdk-csharp)**
 

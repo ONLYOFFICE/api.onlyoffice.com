@@ -4,7 +4,7 @@ sidebar_position: -4
 
 # Uploading large files
 
-In this article, you will learn how to upload large files to DocSpace using our API Backend.
+In this article, you will learn how to upload large files to ONLYOFFICE Apps using our API Backend.
 
 ## Step 1. Creating a file upload session
 

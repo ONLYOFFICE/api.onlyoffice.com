@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/items/IEventListenerItem.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IEventListenerItem.ts
 ---
 
 # IEventListenerItem
@@ -37,7 +37,7 @@ const roomCategorizer: IEventListenerItem = {
       };
     }
   },
-  usersTypes: [UsersType.docSpaceAdmin, UsersType.roomAdmin],
+  usersTypes: [UserRole.fullAdmin, UserRole.roomAdmin],
   devices: [Devices.desktop]
 }
 ```
@@ -60,10 +60,10 @@ const fileRenameTracker: IEventListenerItem = {
     }
   },
   usersTypes: [
-    UsersType.owner,
-    UsersType.docSpaceAdmin,
-    UsersType.roomAdmin,
-    UsersType.collaborator
+    UserRole.owner,
+    UserRole.fullAdmin,
+    UserRole.roomAdmin,
+    UserRole.user
   ]
 }
 ```
@@ -98,7 +98,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | `key` | `string` | The unique item identifier used by the service to recognize the item |
 | `eventType` | [`Events`](../../enums/Events.md) | The event type which will be executed. Presently the following events are available: CREATE, RENAME, ROOM_CREATE, ROOM_EDIT, CHANGE_COLUMN, CHANGE_USER_TYPE, CREATE_PLUGIN_FILE. |
 | `eventHandler` | () => `void` \| `Promise`\<`void`\> \| [`IMessage`](../utils.md#imessage) \| `Promise`\<[`IMessage`](../utils.md#imessage)\> | A function that will be executed when the event is triggered. This function can be asynchronous. **Remarks:** The returned message goes through the same dispatcher as any other class-side callback, so every action is honoured. Prefer item updates and toasts: the event fires over a dialog the portal has just opened. |
-| `usersTypes?` | [`UsersType`](../../enums/UsersType.md)[] | The types of users who have the access to the current item. Currently the following user types are available: owner, docSpaceAdmin, roomAdmin, collaborator, user. If this parameter is not specified, then the current item will be available for all user types. |
-| `devices?` | [`Devices`](../../enums/Devices.md)[] | The types of devices where the current item will be available. At the moment the following device types are available: mobile, tablet, desktop. If this parameter is not specified, then the current item will be available in any device types. |
+| `usersTypes` | ([`UserRole`](../../enums/UserRole.md) \| [`UsersType`](../../enums/UsersType.md))[] | The types of users who have the access to the current item. Currently the following user types are available: owner, fullAdmin, roomAdmin, user, guest. If this parameter is not specified, then the current item will be available for all user types. |
+| `devices` | [`Devices`](../../enums/Devices.md)[] | The types of devices where the current item will be available. At the moment the following device types are available: mobile, tablet, desktop. If this parameter is not specified, then the current item will be available in any device types. |
 
 </APITable>

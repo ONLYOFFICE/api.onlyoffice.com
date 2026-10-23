@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IProfileMenuPlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IProfileMenuPlugin.ts
 ---
 
 # IProfileMenuPlugin
@@ -10,7 +10,7 @@ This interface must be implemented in each plugin that adds items to the profile
 ## Example
 
 The plugin class implements `IProfileMenuPlugin` and registers a "User Settings"
-entry in the constructor. DocSpace calls `getProfileMenuItems` to embed the items
+entry in the constructor. ONLYOFFICE Apps calls `getProfileMenuItems` to embed the items
 into the user profile dropdown.
 
 ```typescript

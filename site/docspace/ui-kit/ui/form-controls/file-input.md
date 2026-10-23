@@ -135,29 +135,29 @@ export function AttachmentField() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `size` | `InputSize` | Height of the field, which also picks the icon and button sizes: base and middle take a 15px icon, large a 16px one. Default: `InputSize.base`. |
-| `accept`? | `string[]` | Extensions and MIME types the dialog offers and a drop accepts, such as `[".pdf", "image/*"]`. The default `[""]` matches only files with no MIME type, so pass it whenever the field is used. Default: `[""]`. |
-| `aria-description`? | `string` | Accessible description of the control. |
-| `aria-label`? | `string` | Accessible name of the control. There is none without it. |
-| `buttonLabel`? | `string` | Renders a button with this label in place of the icon. |
-| `className`? | `string` | Applied to the outermost element. |
-| `data-test-id`? | `string` | `data-testid` of the outermost element. Default: `"file-input"`. |
-| `fromStorage`? | `boolean` | Turns the control into a button that picks from somewhere else: the hidden file input is not rendered, `path` is displayed, and clicks go to `onClick`. Default: `false`. |
-| `hasError`? | `boolean` | Whether the field is drawn in its error colours. Default: `false`. |
-| `hasWarning`? | `boolean` | Whether the field is drawn in its warning colours. Default: `false`. |
-| `id`? | `string` | Applied to the hidden `<input type="file">`, not to the wrapper. |
-| `idButton`? | `string` | Applied to the outermost element. |
-| `isDisabled`? | `boolean` | Whether the field is greyed and a click no longer opens the file dialog. A drop is still accepted, and Enter or Space still opens the dialog. Default: `false`. |
-| `isDocumentIcon`? | `boolean` | Whether the icon is a document rather than a folder. Default: `false`. |
-| `isLoading`? | `boolean` | Whether a spinner replaces the icon. It also disables the field, and it is ignored when `buttonLabel` is set, since the button has no loading form. Default: `false`. |
-| `isMultiple`? | `boolean` | Whether several files may be chosen at once. Default: `true`. |
-| `name`? | `string` | Ignored. Nothing reads this prop. |
-| `onClick`? | `(e: React.MouseEvent) => void` | Called when the field or the icon is clicked — but only while `fromStorage` is set. Without it the click opens the file dialog and this never fires. |
-| `onInput`? | `(file: File \| File[]) => void` | Called with the chosen files: a single `File` when one was picked, an array when several were. Check for an array before reading `.name`. |
-| `path`? | `string` | Text shown in the field instead of the chosen file names, with `fromStorage`. |
-| `placeholder`? | `string` | Placeholder of the read-only field, shown until a file is chosen. |
-| `scale`? | `boolean` | Whether the field stretches to fill its container. Default: `false`. |
-| `style`? | `React.CSSProperties` | Applied to the outermost element. |
+| `size` | `InputSize` | **Required.** Height of the field, which also picks the icon and button sizes: base and middle take a 15px icon, large a 16px one. Default: `InputSize.base`. |
+| `accept` | `string[]` | Extensions and MIME types the dialog offers and a drop accepts, such as `[".pdf", "image/*"]`. The default `[""]` matches only files with no MIME type, so pass it whenever the field is used. Default: `[""]`. |
+| `aria-description` | `string` | Accessible description of the control. |
+| `aria-label` | `string` | Accessible name of the control. There is none without it. |
+| `buttonLabel` | `string` | Renders a button with this label in place of the icon. |
+| `className` | `string` | Applied to the outermost element. |
+| `data-test-id` | `string` | `data-testid` of the outermost element. Default: `"file-input"`. |
+| `fromStorage` | `boolean` | Turns the control into a button that picks from somewhere else: the hidden file input is not rendered, `path` is displayed, and clicks go to `onClick`. Default: `false`. |
+| `hasError` | `boolean` | Whether the field is drawn in its error colours. Default: `false`. |
+| `hasWarning` | `boolean` | Whether the field is drawn in its warning colours. Default: `false`. |
+| `id` | `string` | Applied to the hidden `<input type="file">`, not to the wrapper. |
+| `idButton` | `string` | Applied to the outermost element. |
+| `isDisabled` | `boolean` | Whether the field is greyed and a click no longer opens the file dialog. A drop is still accepted, and Enter or Space still opens the dialog. Default: `false`. |
+| `isDocumentIcon` | `boolean` | Whether the icon is a document rather than a folder. Default: `false`. |
+| `isLoading` | `boolean` | Whether a spinner replaces the icon. It also disables the field, and it is ignored when `buttonLabel` is set, since the button has no loading form. Default: `false`. |
+| `isMultiple` | `boolean` | Whether several files may be chosen at once. Default: `true`. |
+| `name` | `string` | Ignored. Nothing reads this prop. |
+| `onClick` | `(e: React.MouseEvent) => void` | Called when the field or the icon is clicked — but only while `fromStorage` is set. Without it the click opens the file dialog and this never fires. |
+| `onInput` | `(file: File \| File[]) => void` | Called with the chosen files: a single `File` when one was picked, an array when several were. Check for an array before reading `.name`. |
+| `path` | `string` | Text shown in the field instead of the chosen file names, with `fromStorage`. |
+| `placeholder` | `string` | Placeholder of the read-only field, shown until a file is chosen. |
+| `scale` | `boolean` | Whether the field stretches to fill its container. Default: `false`. |
+| `style` | `React.CSSProperties` | Applied to the outermost element. |
 
 </APITable>
 

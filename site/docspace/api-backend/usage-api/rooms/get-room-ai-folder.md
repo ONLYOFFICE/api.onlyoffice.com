@@ -6,7 +6,7 @@
 
 Get the .ai folder of a room
 
-Returns one page of the contents of the .ai folder that lies in the root of a room, in the same shape as `GET api/2.0/files/{folderId}` returns for any other folder. The rooms that hold such a folder are listed with `GET api/2.0/files/rooms?withAiFolder=true`. Any member who can read the room may call it; somebody who cannot is refused, and a room that does not exist or holds no .ai folder is answered as not found.
+Returns one page of the contents of the .ai folder that lies in the root of a room, in the same shape as `GET api/2.0/files/{folderId}` returns for any other folder. The rooms that hold such a folder are listed with `GET api/2.0/files/rooms?withAiFolder=true`. Any member who can read the room may call it; somebody who cannot is refused, and a room that does not exist is answered as not found. A room that holds no .ai folder is answered with an empty page: no files and folders, a zero `total`, no `current` folder and empty `pathParts`.
 
 ## Parameters
 
@@ -24,10 +24,10 @@ Returns one page of the contents of the .ai folder that lies in the root of a ro
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | One page of the .ai folder contents, with the folder itself and the chain of its parents | [**FolderContentWrapper**](../models/folder-content-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | One page of the .ai folder contents, with the folder itself and the chain of its parents, or an empty page without `current` when the room holds no .ai folder | [**FolderContentWrapper**](../models/folder-content-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | A parameter has the wrong type, the `count` is outside its allowed range, or the `startIndex` is negative | - | - |
 | **403** | The caller may not read this room | - | - |
-| **404** | The room does not exist or holds no .ai folder | - | - |
+| **404** | The room does not exist | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |

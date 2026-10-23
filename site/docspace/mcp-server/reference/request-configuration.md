@@ -4,7 +4,7 @@ sidebar_position: 9
 title: Request configuration
 ---
 
-Configure the DocSpace MCP server behavior at the request level using query parameters and custom headers.
+Configure the ONLYOFFICE Apps MCP server behavior at the request level using query parameters and custom headers.
 
 :::note
 The request configuration parameters are only available for HTTP-like transports.
@@ -69,7 +69,7 @@ The following options are used to configure the behavior for API requests.
 
 #### base_url
 
-Base URL of the DocSpace instance for API requests. Must use HTTP or HTTPS with no search parameters or hash fragments. Mutually exclusive with `X-Mcp-Base-Url`.
+Base URL of the ONLYOFFICE Apps instance for API requests. Must use HTTP or HTTPS with no search parameters or hash fragments. Mutually exclusive with `X-Mcp-Base-Url`.
 
 | | |
 |---|---|
@@ -145,7 +145,7 @@ The following options are used to configure the behavior for API requests.
 
 #### X-Mcp-Base-Url
 
-Base URL of the DocSpace instance for API requests. Must use HTTP or HTTPS with no search parameters or hash fragments. Required if any authentication header is set. Mutually exclusive with `base_url`.
+Base URL of the ONLYOFFICE Apps instance for API requests. Must use HTTP or HTTPS with no search parameters or hash fragments. Required if any authentication header is set. Mutually exclusive with `base_url`.
 
 | | |
 |---|---|

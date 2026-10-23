@@ -127,32 +127,32 @@ export function SimpleFolderTile() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `contextOptions` | `ContextMenuModel[]` | The menu's entries. Required — but see `item`. |
-| `item` | `FolderItem` | The folder this tile stands for. Its `contextOptions` key — present or absent — is what decides whether the three-dot button appears. |
-| `badges`? | `ReactNode` | Badges for the folder. In the tall layout they sit over the thumbnail; in the short one they follow the content. |
-| `checked`? | `boolean` | Whether the tile is selected. |
-| `children`? | `ReactNode` | The tile's content. Only the first element is rendered; the rest are dropped. |
-| `contextMenuHeader`? | `ReactNode` | Ignored. The header is built from the first child's `item`; nothing reads this prop. |
-| `dataTestId`? | `string` | Value of `data-testid` on the outer element. Default: `"tile"`. |
-| `dragging`? | `boolean` | Ignored. `isDragging` is the one that is read. |
-| `element`? | `ReactNode` | The icon beside the checkbox. Without it neither the icon nor the checkbox is rendered at all. |
-| `forwardRef`? | `RefObject<HTMLDivElement \| null>` | Attached to the outer element, and clicked by the component itself on a right-click before the menu is mounted. |
-| `getContextModel`? | `() => ContextMenuModel[]` | Builds the menu shown on right-click. Without it the right-click menu never opens. |
-| `hideContextMenu`? | `() => void` | Called when the menu closes. |
-| `indeterminate`? | `boolean` | Draws the checkbox in its indeterminate state. |
-| `inProgress`? | `boolean` | Replaces the icon and the checkbox with the kit's track loader. |
-| `isActive`? | `boolean` | Whether the tile is the one being acted on, which keeps its hover state. |
-| `isBigFolder`? | `boolean` | Switches to the tall layout — a picture on top and the row below it — instead of the single row. |
-| `isDragging`? | `boolean` | Marks the tile as being dragged: hovering it no longer tints it, underlines the name or swaps the icon for the checkbox. It does not dim the tile. |
-| `isEdit`? | `boolean` | Renaming state: it removes the icon and the checkbox. |
-| `onSelect`? | `(checked: boolean, item: FolderItem) => void` | Called with the new checked state and the `item` — from the checkbox, from a plain click on the tile, and from a tap on the icon below 600px. |
-| `setSelection`? | `(items: FolderItem[]) => void` | Called with an empty array before a plain click selects the tile, unless the click landed on an image, an input or an SVG shape. |
-| `showHotkeyBorder`? | `boolean` | Draws the accent outline that marks the tile the keyboard is on. |
-| `temporaryIcon`? | `ReactElement<unknown, string \| JSXElementConstructor<any>> \| string` | The folder's picture, drawn only in the tall layout: a URL is fetched as an SVG, an element is rendered as given. |
-| `thumbnailClick`? | `(e: React.MouseEvent) => void` | Ignored. Nothing reads it, and the component forwards no unknown props, so it never reaches the DOM either. |
-| `tileContextClick`? | `(isRightClick?: boolean) => void` | Called before the menu opens, with `true` when the trigger was a right-click. |
-| `withCtrlSelect`? | `(item: FolderItem) => void` | Called with the `item` on a Ctrl- or Cmd-click, instead of selecting. |
-| `withShiftSelect`? | `(item: FolderItem) => void` | Called with the `item` on a Shift-click, instead of selecting. |
+| `contextOptions` | `ContextMenuModel[]` | **Required.** The menu's entries. Required — but see `item`. |
+| `item` | `FolderItem` | **Required.** The folder this tile stands for. Its `contextOptions` key — present or absent — is what decides whether the three-dot button appears. |
+| `badges` | `ReactNode` | Badges for the folder. In the tall layout they sit over the thumbnail; in the short one they follow the content. |
+| `checked` | `boolean` | Whether the tile is selected. |
+| `children` | `ReactNode` | The tile's content. Only the first element is rendered; the rest are dropped. |
+| `contextMenuHeader` | `ReactNode` | Ignored. The header is built from the first child's `item`; nothing reads this prop. |
+| `dataTestId` | `string` | Value of `data-testid` on the outer element. Default: `"tile"`. |
+| `dragging` | `boolean` | Ignored. `isDragging` is the one that is read. |
+| `element` | `ReactNode` | The icon beside the checkbox. Without it neither the icon nor the checkbox is rendered at all. |
+| `forwardRef` | `RefObject<HTMLDivElement \| null>` | Attached to the outer element, and clicked by the component itself on a right-click before the menu is mounted. |
+| `getContextModel` | `() => ContextMenuModel[]` | Builds the menu shown on right-click. Without it the right-click menu never opens. |
+| `hideContextMenu` | `() => void` | Called when the menu closes. |
+| `indeterminate` | `boolean` | Draws the checkbox in its indeterminate state. |
+| `inProgress` | `boolean` | Replaces the icon and the checkbox with the kit's track loader. |
+| `isActive` | `boolean` | Whether the tile is the one being acted on, which keeps its hover state. |
+| `isBigFolder` | `boolean` | Switches to the tall layout — a picture on top and the row below it — instead of the single row. |
+| `isDragging` | `boolean` | Marks the tile as being dragged: hovering it no longer tints it, underlines the name or swaps the icon for the checkbox. It does not dim the tile. |
+| `isEdit` | `boolean` | Renaming state: it removes the icon and the checkbox. |
+| `onSelect` | `(checked: boolean, item: FolderItem) => void` | Called with the new checked state and the `item` — from the checkbox, from a plain click on the tile, and from a tap on the icon below 600px. |
+| `setSelection` | `(items: FolderItem[]) => void` | Called with an empty array before a plain click selects the tile, unless the click landed on an image, an input or an SVG shape. |
+| `showHotkeyBorder` | `boolean` | Draws the accent outline that marks the tile the keyboard is on. |
+| `temporaryIcon` | `ReactElement<unknown, string \| JSXElementConstructor<any>> \| string` | The folder's picture, drawn only in the tall layout: a URL is fetched as an SVG, an element is rendered as given. |
+| `thumbnailClick` | `(e: React.MouseEvent) => void` | Ignored. Nothing reads it, and the component forwards no unknown props, so it never reaches the DOM either. |
+| `tileContextClick` | `(isRightClick?: boolean) => void` | Called before the menu opens, with `true` when the trigger was a right-click. |
+| `withCtrlSelect` | `(item: FolderItem) => void` | Called with the `item` on a Ctrl- or Cmd-click, instead of selecting. |
+| `withShiftSelect` | `(item: FolderItem) => void` | Called with the `item` on a Shift-click, instead of selecting. |
 
 </APITable>
 

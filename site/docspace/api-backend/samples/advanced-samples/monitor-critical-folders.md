@@ -1,6 +1,6 @@
 ---
 description: Notify the department owner when files in a critical folder change.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,25 +8,25 @@ import TabItem from '@theme/TabItem';
 
 # Monitoring critical folders
 
-This example shows how to monitor a critical folder (for example, **Compliance**) in ONLYOFFICE DocSpace and notify the department owner whenever a file in that folder is changed.
+This example shows how to monitor a critical folder (for example, **Compliance**) in ONLYOFFICE Apps and notify the department owner whenever a file in that folder is changed.
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 3. Expose your webhook endpoint over HTTPS in production (terminate TLS in your app or behind a reverse proxy/load balancer, and reject non-HTTPS requests). For local testing, use a secure tunnel that provides an HTTPS URL.
 
 ## Webhook configuration
 
-This example relies on DocSpace webhooks. To register and manage webhooks on your portal, see [Webhooks](/docspace/api-backend/get-started/how-it-works/webhooks.md) and the Help Center instructions: https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx.
+This example relies on ONLYOFFICE Apps webhooks. To register and manage webhooks on your portal, see [Webhooks](/docspace/api-backend/get-started/how-it-works/webhooks.md) and the Help Center instructions: https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx.
 
 - Register a webhook and enable the triggers used in this example.
 - Set the payload URL to your backend endpoint.
-- Generate/set a secret key and store it on the backend as `WEBHOOK_SECRET`. DocSpace sends the signature in the `x-docspace-signature-256` header so you can validate the request against the raw body.
+- Generate/set a secret key and store it on the backend as `WEBHOOK_SECRET`. ONLYOFFICE Apps sends the signature in the `x-docspace-signature-256` header so you can validate the request against the raw body.
 
 ## Timeouts and retries
 
-DocSpace retries failed webhook deliveries. According to the webhook docs:
+ONLYOFFICE Apps retries failed webhook deliveries. According to the webhook docs:
 
 - Up to 5 attempts are made, with exponential backoff (`2^attempt` seconds).
 - Any successful status (any 2xx) stops retries.
@@ -43,7 +43,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
   import http from "http";
   import crypto from "crypto";
 
-  // DocSpace configuration
+  // ONLYOFFICE Apps configuration
   const API_HOST = process.env.DOCSPACE_API_HOST; // Set DOCSPACE_API_HOST in env (recommended). For quick tests you can temporarily paste your portal URL here.
   const API_KEY = process.env.DOCSPACE_API_KEY; // Set DOCSPACE_API_KEY in env (recommended). For quick tests you can temporarily paste token here.
 
@@ -88,13 +88,13 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
         body: jsonBody ? JSON.stringify(jsonBody) : undefined,
       });
     } catch (e: any) {
-      console.error(`[ERROR] DocSpace request error: ${e?.message || e}`);
+      console.error(`[ERROR] ONLYOFFICE Apps request error: ${e?.message || e}`);
       return null;
     }
 
     if (!res.ok) {
       const text = await res.text().catch(() => "");
-      console.error(`[ERROR] DocSpace request failed: ${method} ${url}`);
+      console.error(`[ERROR] ONLYOFFICE Apps request failed: ${method} ${url}`);
       console.error(`[ERROR] Status: ${res.status}, Message: ${text}`);
       return null;
     }
@@ -245,7 +245,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
   const PORT = 3000;
 
   const server = http.createServer((req, res) => {
-    // DocSpace may send HEAD requests to validate the webhook URL
+    // ONLYOFFICE Apps may send HEAD requests to validate the webhook URL
     if (req.method === "HEAD" && req.url === "/docspace/webhook") {
       res.statusCode = 200;
       res.end();
@@ -342,11 +342,11 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
     try:
       r = requests.request(method.upper(), url, headers=HEADERS, json=json_body, timeout=30)
     except Exception as e:
-      print(f"[ERROR] DocSpace request error: {e}")
+      print(f"[ERROR] ONLYOFFICE Apps request error: {e}")
       return None
 
     if not (200 <= r.status_code < 300):
-      print(f"[ERROR] DocSpace request failed: {method} {url}")
+      print(f"[ERROR] ONLYOFFICE Apps request failed: {method} {url}")
       print(f"[ERROR] Status: {r.status_code}, Message: {r.text}")
       return None
 
@@ -479,7 +479,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
   @app.route("/docspace/webhook", methods=["POST", "HEAD"])
   def docspace_webhook():
-    # DocSpace may send HEAD requests to validate the webhook URL
+    # ONLYOFFICE Apps may send HEAD requests to validate the webhook URL
     if request.method == "HEAD":
       return "", 200
 
@@ -516,17 +516,17 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
 ## Step 1: Receive and verify the webhook request
 
-When a file is changed, DocSpace sends a notification to your webhook URL.
+When a file is changed, ONLYOFFICE Apps sends a notification to your webhook URL.
 
 At this step, the backend:
 
-- accepts the incoming request from DocSpace,
+- accepts the incoming request from ONLYOFFICE Apps,
 - checks that the request is authentic using the secret key configured in webhook settings,
 - reads the event data only after successful validation.
 
 If the request cannot be validated, the server responds with 401 and stops processing it.
 
-DocSpace may also send HEAD requests to check that the webhook URL is reachable, so the endpoint should return 200 OK for such requests.
+ONLYOFFICE Apps may also send HEAD requests to check that the webhook URL is reachable, so the endpoint should return 200 OK for such requests.
 
 
 <Tabs>

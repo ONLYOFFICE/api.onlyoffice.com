@@ -121,31 +121,31 @@ export function NewPassword() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `clipActionResource`? | `string` | Ignored. It feeds a copy button that is not rendered. |
-| `clipCopiedResource`? | `string` | Ignored. It feeds a copy button that is not rendered. Default: `"Copied"`. |
-| `emailInputName`? | `string` | Ignored. It only sets an internal flag for a copy button that is not rendered. |
-| `generatePasswordTitle`? | `string` | Title of the password generation button |
-| `generatorSpecial`? | `string` | Characters the generator may pick symbols from. Default: `"!@#$%^&*"`. |
-| `inputName`? | `string` | `name` of the field, and the fallback for the tooltip's anchor id when no `id` is given — so two fields on one page need distinct ids. Default: `"passwordInput"`. |
-| `inputType`? | `InputType.password \| InputType.text` | Whether the field starts revealed. The eye toggles it from then on, and `isDisabled` forces it back to hidden. Default: `InputType.password`. |
-| `inputValue`? | `string` | Value the field starts with. The component owns the value from then on: changing this later is ignored unless it becomes an empty string, or `isSimulateType` is set. |
-| `inputWidth`? | `string` | Width of the field's wrapper, as a CSS length. |
-| `isDisableTooltip`? | `boolean` | Allows to hide Tooltip. Default: `false`. |
-| `isFullWidth`? | `boolean` | Whether the wrapper is a full-width block rather than shrinking to the field. Default: `false`. |
-| `isSimulateType`? | `boolean` | Renders the value as repeated `simulateSymbol` characters in a **text** field, keeping the real value in state. It needs the input's `id` to be `conversion-password`, which is where it reads the caret from. Default: `false`. |
-| `onChange`? | `(e: React.ChangeEvent<HTMLInputElement>, value?: string) => void` | Called on every change with the DOM event and the value after sanitising. Read the second argument: under `isSimulateType` the event carries the masking characters, not the password. |
-| `onValidateInput`? | `(progressScore: boolean, passwordValidation: TPasswordValidation) => void` | Called after every change with whether every rule passes, and with each rule's own result. It never fires in `simpleView`, which skips checking. |
-| `passwordSettings`? | `TPasswordSettings` | The rules the generator and the checker use. Left out, only a minimum length of 8 is required — digits, capitals and symbols are all off. Default: `DEFAULT_PASSWROD_SETTINGS`. |
-| `ref`? | `React.RefObject<PasswordInputHandle \| null>` | Handle for generating a password and reading the current value. |
-| `sanitizeValue`? | `(value: string) => string` | Runs on every change before the value is stored — stripping spaces, say. |
-| `simpleView`? | `boolean` | Strips the component down to the field and the reveal eye: no strength tooltip, no generate link, and no validation at all. Default: `false`. |
-| `simulateSymbol`? | `string` | The character drawn for each real one under `isSimulateType`. Default: `"•"`. |
-| `tooltipAllowedCharacters`? | `string` | Title for allowed characters tooltip |
-| `tooltipPasswordCapital`? | `string` | Prompt for capital letters requirement |
-| `tooltipPasswordDigits`? | `string` | Prompt for digits requirement |
-| `tooltipPasswordLength`? | `string` | Prompt for minimum length requirement |
-| `tooltipPasswordSpecial`? | `string` | Prompt for special characters requirement |
-| `tooltipPasswordTitle`? | `string` | Title for password requirements tooltip |
+| `clipActionResource` | `string` | Ignored. It feeds a copy button that is not rendered. |
+| `clipCopiedResource` | `string` | Ignored. It feeds a copy button that is not rendered. Default: `"Copied"`. |
+| `emailInputName` | `string` | Ignored. It only sets an internal flag for a copy button that is not rendered. |
+| `generatePasswordTitle` | `string` | Title of the password generation button |
+| `generatorSpecial` | `string` | Characters the generator may pick symbols from. Default: `"!@#$%^&*"`. |
+| `inputName` | `string` | `name` of the field, and the fallback for the tooltip's anchor id when no `id` is given — so two fields on one page need distinct ids. Default: `"passwordInput"`. |
+| `inputType` | `InputType.password \| InputType.text` | Whether the field starts revealed. The eye toggles it from then on, and `isDisabled` forces it back to hidden. Default: `InputType.password`. |
+| `inputValue` | `string` | Value the field starts with. The component owns the value from then on: changing this later is ignored unless it becomes an empty string, or `isSimulateType` is set. |
+| `inputWidth` | `string` | Width of the field's wrapper, as a CSS length. |
+| `isDisableTooltip` | `boolean` | Allows to hide Tooltip. Default: `false`. |
+| `isFullWidth` | `boolean` | Whether the wrapper is a full-width block rather than shrinking to the field. Default: `false`. |
+| `isSimulateType` | `boolean` | Renders the value as repeated `simulateSymbol` characters in a **text** field, keeping the real value in state. It needs the input's `id` to be `conversion-password`, which is where it reads the caret from. Default: `false`. |
+| `onChange` | `(e: React.ChangeEvent<HTMLInputElement>, value?: string) => void` | Called on every change with the DOM event and the value after sanitising. Read the second argument: under `isSimulateType` the event carries the masking characters, not the password. |
+| `onValidateInput` | `(progressScore: boolean, passwordValidation: TPasswordValidation) => void` | Called after every change with whether every rule passes, and with each rule's own result. It never fires in `simpleView`, which skips checking. |
+| `passwordSettings` | `TPasswordSettings` | The rules the generator and the checker use. Left out, only a minimum length of 8 is required — digits, capitals and symbols are all off. Default: `DEFAULT_PASSWROD_SETTINGS`. |
+| `ref` | `React.RefObject<PasswordInputHandle \| null>` | Handle for generating a password and reading the current value. |
+| `sanitizeValue` | `(value: string) => string` | Runs on every change before the value is stored — stripping spaces, say. |
+| `simpleView` | `boolean` | Strips the component down to the field and the reveal eye: no strength tooltip, no generate link, and no validation at all. Default: `false`. |
+| `simulateSymbol` | `string` | The character drawn for each real one under `isSimulateType`. Default: `"•"`. |
+| `tooltipAllowedCharacters` | `string` | Title for allowed characters tooltip |
+| `tooltipPasswordCapital` | `string` | Prompt for capital letters requirement |
+| `tooltipPasswordDigits` | `string` | Prompt for digits requirement |
+| `tooltipPasswordLength` | `string` | Prompt for minimum length requirement |
+| `tooltipPasswordSpecial` | `string` | Prompt for special characters requirement |
+| `tooltipPasswordTitle` | `string` | Title for password requirements tooltip |
 
 </APITable>
 
@@ -157,20 +157,20 @@ Declared by [`components/input-block`](./input-block.md) and accepted here too.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `className`? | `string` | Applied to the group. |
-| `dataTestId`? | `string` | `data-testid` of the group. Default: `"input-block"`. |
-| `forwardedRef`? | `React.Ref<HTMLInputElement>` | Ref to the `<input>` element itself. |
-| `hoverColor`? | `string` | Colour of that icon on hover. |
-| `iconColor`? | `string` | Colour of that icon. |
-| `iconNode`? | `React.ReactNode` | The icon as an element, instead of `iconName`. |
-| `iconSize`? | `number` | Size of that icon in pixels. It falls back to `size`. |
-| `id`? | `string` | Applied to the `<input>`, not to the group around it. |
-| `isIconFill`? | `boolean` | Whether the icon's paths are recoloured to `iconColor`. Leave it off for a multi-coloured icon. Default: `false`. |
-| `noIcon`? | `boolean` | Whether the icon box is left out entirely. Without it an empty box is still rendered and still takes its padding. Default: `false`. |
-| `onIconClick`? | `(e: React.MouseEvent) => void` | Called when the icon is clicked. Without it the icon is rendered in the disabled style and does not respond — it is what makes the icon a button. |
-| `style`? | `React.CSSProperties` | Applied to the group. |
-| `tabIndex`? | `number` | Used as HTML `tabindex` property of the `<input>`. Unlike `TextInput`'s, this one defaults to `-1`, so the field is out of the tab order until you pass `0` — and so is every component built on it that passes its own `tabIndex` through, `SearchInput` and `PasswordInput` among them. Default: `-1`. |
-| `testId`? | `string` | `data-testid` of the inner `<input>`, passed through to `TextInput`. |
+| `className` | `string` | Applied to the group. |
+| `dataTestId` | `string` | `data-testid` of the group. Default: `"input-block"`. |
+| `forwardedRef` | `React.Ref<HTMLInputElement>` | Ref to the `<input>` element itself. |
+| `hoverColor` | `string` | Colour of that icon on hover. |
+| `iconColor` | `string` | Colour of that icon. |
+| `iconNode` | `React.ReactNode` | The icon as an element, instead of `iconName`. |
+| `iconSize` | `number` | Size of that icon in pixels. It falls back to `size`. |
+| `id` | `string` | Applied to the `<input>`, not to the group around it. |
+| `isIconFill` | `boolean` | Whether the icon's paths are recoloured to `iconColor`. Leave it off for a multi-coloured icon. Default: `false`. |
+| `noIcon` | `boolean` | Whether the icon box is left out entirely. Without it an empty box is still rendered and still takes its padding. Default: `false`. |
+| `onIconClick` | `(e: React.MouseEvent) => void` | Called when the icon is clicked. Without it the icon is rendered in the disabled style and does not respond — it is what makes the icon a button. |
+| `style` | `React.CSSProperties` | Applied to the group. |
+| `tabIndex` | `number` | Used as HTML `tabindex` property of the `<input>`. Unlike `TextInput`'s, this one defaults to `-1`, so the field is out of the tab order until you pass `0` — and so is every component built on it that passes its own `tabIndex` through, `SearchInput` and `PasswordInput` among them. Default: `-1`. |
+| `testId` | `string` | `data-testid` of the inner `<input>`, passed through to `TextInput`. |
 
 </APITable>
 
@@ -182,30 +182,30 @@ Declared by [`components/text-input`](./text-input.md) and accepted here too.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `autoComplete`? | `string` | Used as HTML `autocomplete` property. Default: `"off"`. |
-| `dir`? | `string` | Text direction. Default: `"auto"`. |
-| `fontWeight`? | `number \| string` | Sets the font weight |
-| `guide`? | `boolean` | When guide is true, Text Mask always shows both placeholder characters and non-placeholder mask characters |
-| `hasError`? | `boolean` | Indicates the input field has an error |
-| `hasWarning`? | `boolean` | Indicates the input field has a warning |
-| `inputMode`? | `"decimal" \| "email" \| "none" \| "numeric" \| "search" \| "tel" \| "text" \| "url"` | Input mode for virtual keyboard |
-| `isAutoFocussed`? | `boolean` | Focus the input field on initial render |
-| `isBold`? | `boolean` | Sets font weight value to 600 |
-| `isDisabled`? | `boolean` | Indicates that the field cannot be used |
-| `isReadOnly`? | `boolean` | Indicates that the field is displaying read-only content |
-| `keepCharPositions`? | `boolean` | Allows to add or delete characters without changing the positions of the existing characters |
-| `mask`? | `((value: string) => Mask) \| Mask` | Input text mask |
-| `maxLength`? | `number` | Maximum number of characters the field accepts; further typing is silently dropped. Default: `255`. |
-| `onBlur`? | `(e: React.FocusEvent<HTMLInputElement>) => void` | Called when field is blurred |
-| `onClick`? | `(e: React.MouseEvent<HTMLInputElement>) => void` | Called when clicked |
-| `onContextMenu`? | `(e: React.MouseEvent<HTMLInputElement>) => void` | Called when context menu is triggered |
-| `onFocus`? | `(e: React.FocusEvent<HTMLInputElement>) => void` | Called when field is focused |
-| `onKeyDown`? | `(e: React.KeyboardEvent<HTMLInputElement>) => void` | Called when a key is pressed |
-| `placeholder`? | `string` | Placeholder text for the input. The default is a single space, not an empty string, so `:placeholder-shown` matches even when no placeholder was asked for. Default: `" "`. |
-| `scale`? | `boolean` | Indicates the input field has scale |
-| `size`? | `InputSize` | Supported size of the input fields |
-| `spellCheck`? | `boolean` | Used as HTML `spellcheck` property |
-| `withBorder`? | `boolean` | Indicates that component contains border |
+| `autoComplete` | `string` | Used as HTML `autocomplete` property. Default: `"off"`. |
+| `dir` | `string` | Text direction. Default: `"auto"`. |
+| `fontWeight` | `number \| string` | Sets the font weight |
+| `guide` | `boolean` | When guide is true, Text Mask always shows both placeholder characters and non-placeholder mask characters |
+| `hasError` | `boolean` | Indicates the input field has an error |
+| `hasWarning` | `boolean` | Indicates the input field has a warning |
+| `inputMode` | `"decimal" \| "email" \| "none" \| "numeric" \| "search" \| "tel" \| "text" \| "url"` | Input mode for virtual keyboard |
+| `isAutoFocussed` | `boolean` | Focus the input field on initial render |
+| `isBold` | `boolean` | Sets font weight value to 600 |
+| `isDisabled` | `boolean` | Indicates that the field cannot be used |
+| `isReadOnly` | `boolean` | Indicates that the field is displaying read-only content |
+| `keepCharPositions` | `boolean` | Allows to add or delete characters without changing the positions of the existing characters |
+| `mask` | `((value: string) => Mask) \| Mask` | Input text mask |
+| `maxLength` | `number` | Maximum number of characters the field accepts; further typing is silently dropped. Default: `255`. |
+| `onBlur` | `(e: React.FocusEvent<HTMLInputElement>) => void` | Called when field is blurred |
+| `onClick` | `(e: React.MouseEvent<HTMLInputElement>) => void` | Called when clicked |
+| `onContextMenu` | `(e: React.MouseEvent<HTMLInputElement>) => void` | Called when context menu is triggered |
+| `onFocus` | `(e: React.FocusEvent<HTMLInputElement>) => void` | Called when field is focused |
+| `onKeyDown` | `(e: React.KeyboardEvent<HTMLInputElement>) => void` | Called when a key is pressed |
+| `placeholder` | `string` | Placeholder text for the input. The default is a single space, not an empty string, so `:placeholder-shown` matches even when no placeholder was asked for. Default: `" "`. |
+| `scale` | `boolean` | Indicates the input field has scale |
+| `size` | `InputSize` | Supported size of the input fields |
+| `spellCheck` | `boolean` | Used as HTML `spellcheck` property |
+| `withBorder` | `boolean` | Indicates that component contains border |
 
 </APITable>
 

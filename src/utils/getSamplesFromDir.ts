@@ -26,7 +26,7 @@ function toItems(data: typeof docsSamplesData, category: string, defaultTags?: S
       'PDF': 'pink',
       'Macros': 'blue',
       'Plugins': 'blue',
-      'DocSpace': 'blue',
+      'Apps': 'blue',
       'Basic': 'green',
       'Advanced': 'purple',
       'Ready-to-use': 'pink',

@@ -1,18 +1,18 @@
 ---
-description: Log in to a DocSpace account using email and password hash.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+description: Log in to an ONLYOFFICE Apps account using email and password hash.
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 import Video from '@site/src/components/Video/Video';
 
 # Authorization
 
-This examples logs in to the DocSpace account using the specified email and password hash.
+This examples logs in to the ONLYOFFICE Apps account using the specified email and password hash.
 
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of ONLYOFFICE Apps.
 
 Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/authorization.html)
 
@@ -24,7 +24,7 @@ Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docsp
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>DocSpace Embed SDK</title>
+    <title>ONLYOFFICE Apps Embed SDK</title>
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
   </head>
   <body>
@@ -67,14 +67,14 @@ Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docsp
 
 ### 1. Set HTML structure
 
-Create an HTML file. Add two text fields and a button. The HTML file must include a *div* tag where we specify the DocSpace connection parameters:
+Create an HTML file. Add two text fields and a button. The HTML file must include a *div* tag where we specify the ONLYOFFICE Apps connection parameters:
 
 ``` html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>DocSpace Embed SDK</title>
+    <title>ONLYOFFICE Apps Embed SDK</title>
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
   </head>
   <body>
@@ -89,7 +89,7 @@ Create an HTML file. Add two text fields and a button. The HTML file must includ
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following ONLYOFFICE Apps folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE Apps installed.
 :::
 
 ### 2. Initialize the System mode

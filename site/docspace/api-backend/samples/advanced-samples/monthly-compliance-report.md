@@ -1,6 +1,6 @@
 ---
 description: Generate a monthly compliance report from audit events and upload it.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,11 +8,11 @@ import TabItem from '@theme/TabItem';
 
 # Monthly compliance report
 
-This example demonstrates how to generate a monthly compliance report in ONLYOFFICE DocSpace using the API. It retrieves audit events for a selected period, optionally filters events to focus on important documents, builds a human-readable TXT report, and uploads the report to a dedicated folder (for example, a “Compliance” room folder).
+This example demonstrates how to generate a monthly compliance report in ONLYOFFICE Apps using the API. It retrieves audit events for a selected period, optionally filters events to focus on important documents, builds a human-readable TXT report, and uploads the report to a dedicated folder (for example, a “Compliance” room folder).
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>
@@ -141,7 +141,7 @@ This example demonstrates how to generate a monthly compliance report in ONLYOFF
       const auditData = await getAuditEventsByFilter(fromDate, toDate);
       if (!auditData) return;
 
-      // In DocSpace audit API the events are usually under "response"
+      // In ONLYOFFICE Apps audit API the events are usually under "response"
       let events = (auditData.response ?? auditData) as any[];
       if (!Array.isArray(events)) events = [];
 
@@ -299,7 +299,7 @@ This example demonstrates how to generate a monthly compliance report in ONLYOFF
     if not audit_data:
       return
 
-    # In DocSpace audit API the events are usually under "response"
+    # In ONLYOFFICE Apps audit API the events are usually under "response"
     events = audit_data.get("response") or audit_data
     if not isinstance(events, list):
       events = []

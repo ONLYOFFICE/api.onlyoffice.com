@@ -1,10 +1,10 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/tools/constants/sections.mjs
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/tools/constants/sections.mjs
 ---
 
 # Settings
 
-Interfaces for configuring plugin settings displayed in the DocSpace admin and user settings panels.
+Interfaces for configuring plugin settings displayed in the ONLYOFFICE Apps admin and user settings panels.
 
 Implement `ISettingsPlugin` and use `ISettings` to describe each configurable field.
 

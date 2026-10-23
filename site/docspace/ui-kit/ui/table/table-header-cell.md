@@ -13,7 +13,7 @@ TableHeaderCell is the title of one column in a TableHeader, with its sort arrow
 
 The Table README describes it in full.
 
-<ThemedImage alt="TableHeaderCell" width={69} sources={{ light: require('./table-header-cell--primary-light.png').default, dark: require('./table-header-cell--primary-dark.png').default }} />
+<ThemedImage alt="TableHeaderCell" width={53} sources={{ light: require('./table-header-cell--primary-light.png').default, dark: require('./table-header-cell--primary-dark.png').default }} />
 
 ## Props
 
@@ -21,16 +21,16 @@ The Table README describes it in full.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `column` | `TTableColumn` | The column to render: its title, its sort field and callbacks, and the flags that shape the cell. |
-| `index` | `number` | Position of the column, which becomes the cell's id column_&lt;index>. |
-| `onMouseDown` | `(event: MouseEvent<Element, MouseEvent>) => void` | Called when the resize handle is pressed. |
-| `resizable`? | `booleanundefined` | Draws the resize handle at the end of the cell. |
-| `sorted` | `boolean` | Direction of the sort; turning it off turns the arrow over. |
-| `sortBy` | `string` | Field the table is sorted by; the column with the same sortBy keeps its arrow visible. |
-| `defaultSize`? | `numberundefined` | Width in pixels the column returns to when the widths are reset. |
-| `sortingVisible` | `boolean` | Shows the sort arrow and lets clicks on the title and the arrow sort the table. |
-| `tagRef`? | `ForwardedRef<HTMLDivElement> \| ((node: HTMLDivElement) => void) \| undefined` | Ref attached to the cell when the column asks for it with withTagRef. |
-| `testId`? | `stringundefined` | Value of the cell's data-testid attribute. Default: `table-header-cell`. |
+| `column` | `TTableColumn` | **Required.** The column to render: its title, its sort field and callbacks, and the flags that shape the cell. |
+| `index` | `number` | **Required.** Position of the column, which becomes the cell's id column_&lt;index>. |
+| `onMouseDown` | `(event: MouseEvent<Element, MouseEvent>) => void` | **Required.** Called when the resize handle is pressed. |
+| `resizable` | `booleanundefined` | Draws the resize handle at the end of the cell. |
+| `sorted` | `boolean` | **Required.** Direction of the sort; turning it off turns the arrow over. |
+| `sortBy` | `string` | **Required.** Field the table is sorted by; the column with the same sortBy keeps its arrow visible. |
+| `defaultSize` | `numberundefined` | Width in pixels the column returns to when the widths are reset. |
+| `sortingVisible` | `boolean` | **Required.** Shows the sort arrow and lets clicks on the title and the arrow sort the table. |
+| `tagRef` | `ForwardedRef<HTMLDivElement> \| ((node: HTMLDivElement) => void) \| undefined` | Ref attached to the cell when the column asks for it with withTagRef. |
+| `testId` | `stringundefined` | Value of the cell's data-testid attribute. Default: `table-header-cell`. |
 
 </APITable>
 
@@ -40,7 +40,7 @@ The Table README describes it in full.
 
 The title of a column the table is not sorted by; hover it to see the arrow that sorts by this column, and change any other prop live in the Controls panel below.
 
-<ThemedImage alt="Default" width={69} sources={{ light: require('./table-header-cell--default-light.png').default, dark: require('./table-header-cell--default-dark.png').default }} />
+<ThemedImage alt="Default" width={53} sources={{ light: require('./table-header-cell--default-light.png').default, dark: require('./table-header-cell--default-dark.png').default }} />
 
 ### Resizable
 

@@ -13,7 +13,7 @@ ONLYOFFICE Document Builder 可安装在多种平台上，用于生成、编辑�
 
 ONLYOFFICE Document Builder 的免费版本会在所有生成的文档上添加水印。要去除此限制并使用全部功能，需要商业许可证。
 
-Document Builder 包含在 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api) 中。如需购买详情，请通过 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 与我们联系。
+Document Builder 包含在 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)中。如需购买详情，请通过 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 与我们联系。
 
 :::
 
@@ -173,7 +173,7 @@ cd document-builder-samples
             python configure/configure.py --vs --test cpp/creating_basic_form --test cpp/creating_advanced_form
             ```
 
-        2. 在 Visual Studio 中打开 `.sln` 文件。它会提示您将 Windows SDK 和 VS 工具集重新定向到您安装的版本 - 点击“确定”。
+        2. 在 Visual Studio 中打开 `.sln` 文件。它会提示您将 Windows SDK 和 VS 工具集重新定向到您安装的版本——点击“确定”。
 
         3. 解决方案已准备好进行构建和运行。文档将在项目文件目录中创建。
 

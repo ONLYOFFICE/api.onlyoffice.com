@@ -6,8 +6,8 @@ sidebar_position: -5
 
 ONLYOFFICE 文档支持 PDF 表单——带有可填写字段（如文本输入框、复选框和下拉列表）的 PDF 文件。PDF 表单有两种使用模式：
 
-- **编辑** — 设计表单模板：添加、删除和配置表单字段。需要将 [`permissions.edit`](../../usage-api/config/document/permissions.md#edit) 设置为 `true`。
-- **填写** — 在已完成的表单中输入数据。需要将 [`permissions.fillForms`](../../usage-api/config/document/permissions.md#fillforms) 设置为 `true`，并将 [`permissions.edit`](../../usage-api/config/document/permissions.md#edit) 设置为 `false`。
+- **编辑**：设计表单模板：添加、删除和配置表单字段。需要将 [`permissions.edit`](../../usage-api/config/document/permissions.md#edit) 设置为 `true`。
+- **填写**：在已完成的表单中输入数据。需要将 [`permissions.fillForms`](../../usage-api/config/document/permissions.md#fillforms) 设置为 `true`，并将 [`permissions.edit`](../../usage-api/config/document/permissions.md#edit) 设置为 `false`。
 
 :::note
 PDF 表单从 7.0 版本起可用。从 8.0 版本开始，OFORM 格式已被弃用——仅使用 PDF 格式进行填写。从 8.1 版本开始，DOCXF 格式已被弃用——仅使用 PDF 格式创建和编辑表单。
@@ -74,7 +74,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 编辑完成后，点击**开始填写**按钮切换到填写模式。
 
-![嵌入pdf表单进行编辑](/assets/images/editor/embed-pdf-for-editing.png#gh-light-mode-only)![嵌入pdf表单进行编辑](/assets/images/editor/embed-pdf-for-editing.dark.png#gh-dark-mode-only)
+![嵌入 PDF 表单进行编辑](/assets/images/editor/embed-pdf-for-editing.png#gh-light-mode-only)![嵌入 PDF 表单进行编辑](/assets/images/editor/embed-pdf-for-editing.dark.png#gh-dark-mode-only)
 
 ## 填写表单
 
@@ -131,4 +131,4 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 填写完所有必填字段后，点击**完成并提交**按钮提交数据。
 
-![嵌入pdf表格](/assets/images/editor/embed-pdf.png#gh-light-mode-only)![嵌入pdf表格](/assets/images/editor/embed-pdf.dark.png#gh-dark-mode-only)
+![嵌入 PDF 表单](/assets/images/editor/embed-pdf.png#gh-light-mode-only)![嵌入 PDF 表单](/assets/images/editor/embed-pdf.dark.png#gh-dark-mode-only)

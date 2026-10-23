@@ -1,16 +1,16 @@
 ---
-description: Create a DocSpace room using a Trello board name.
-tags: ["DocSpace", "REST API", "Integration"]
+description: Create an ONLYOFFICE Apps room using a Trello board name.
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 # Trello board to room
 
-This integration retrieves the name of a Trello board and creates a new room in ONLYOFFICE DocSpace with the same title. It's helpful for mirroring Trello project structures into your document collaboration environment.
+This integration retrieves the name of a Trello board and creates a new room in ONLYOFFICE Apps with the same title. It's helpful for mirroring Trello project structures into your document collaboration environment.
 
 ## How it works
 
 - Fetch Trello board name - Get the board title using Trello's API.
-- Create DocSpace room - Create a private collaboration room with the board name as the title.
+- Create ONLYOFFICE Apps room - Create a private collaboration room with the board name as the title.
 
 <details>
   <summary>Full example</summary>
@@ -18,7 +18,7 @@ This integration retrieves the name of a Trello board and creates a new room in 
 ```py
 import requests
 
-# ONLYOFFICE DocSpace configuration
+# ONLYOFFICE Apps configuration
 ONLYOFFICE_API_HOST = "your-docspace.onlyoffice.com"
 ONLYOFFICE_API_KEY = "your_onlyoffice_api_key"
 
@@ -44,7 +44,7 @@ def get_trello_board_name(board_id):
         print(f"Trello board fetch error: {response.status_code}")
         return None
 
-# Step 2: Create a DocSpace room with board name
+# Step 2: Create an ONLYOFFICE Apps room with board name
 def create_docspace_room(room_title):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/files/rooms"
     payload = {
@@ -57,7 +57,7 @@ def create_docspace_room(room_title):
         print(f"Room created: {room_title}")
         return response.json()
     else:
-        print(f"DocSpace room creation error: {response.status_code}, {response.text}")
+        print(f"ONLYOFFICE Apps room creation error: {response.status_code}, {response.text}")
         return None
 
 # Run integration
@@ -71,14 +71,14 @@ if __name__ == "__main__":
 
 ## Before you start
 
-1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
+1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual ONLYOFFICE Apps portal host and API key. Ensure you have the necessary permissions to perform user operations.
+2. Before you can make requests to the API, you need to create an ONLYOFFICE Apps API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
 3. Create a [Trello Developer App](https://developer.atlassian.com/cloud/trello/power-ups/rest-api-client/) to obtain an API key and token. Grant read access to cards and attachments by authorizing with `read` scope.
 4. Replace `your_trello_api_key`, `your_trello_token`, and `your_board_id` with your actual Trello API key, token, and board ID.
 
 ## Step 1: Retrieve a Trello board name
 
-Use a Trello API [`GET /boards/{board_id}`](https://developer.atlassian.com/cloud/trello/rest/api-group-boards/#api-boards-id-get) request to get the board's title by its ID. This name will be used as the room title in DocSpace.
+Use a Trello API [`GET /boards/{board_id}`](https://developer.atlassian.com/cloud/trello/rest/api-group-boards/#api-boards-id-get) request to get the board's title by its ID. This name will be used as the room title in ONLYOFFICE Apps.
 
 ```py
 # Step 1: Get Trello board name
@@ -93,13 +93,13 @@ def get_trello_board_name(board_id):
         return None
 ```
 
-## Step 2: Create a DocSpace room
+## Step 2: Create an ONLYOFFICE Apps room
 
-Use [`POST /api/2.0/files/rooms`](/docspace/api-backend/usage-api/rooms/create-room) to create a private collaboration room in DocSpace.
+Use [`POST /api/2.0/files/rooms`](/docspace/api-backend/usage-api/rooms/create-room) to create a private collaboration room in ONLYOFFICE Apps.
 Retrieve metadata about the file attachments (name, ID, download URL) for further processing.
 
 ``` py
-# Step 2: Create a DocSpace room with board name
+# Step 2: Create an ONLYOFFICE Apps room with board name
 def create_docspace_room(room_title):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/files/rooms"
     payload = {
@@ -112,7 +112,7 @@ def create_docspace_room(room_title):
         print(f"Room created: {room_title}")
         return response.json()
     else:
-        print(f"DocSpace room creation error: {response.status_code}, {response.text}")
+        print(f"ONLYOFFICE Apps room creation error: {response.status_code}, {response.text}")
         return None
 
 # Run integration

@@ -81,11 +81,11 @@ export function App() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children` | `React.ReactNode` | The tree the theme applies to. |
-| `colorTheme`? | `CustomColorThemesSettingsDto` | The portal's accent palette. Outside the portal there is none — leave it out. |
-| `initialTheme`? | `ThemeKeys` | Theme to use; a new value is applied in place, without a remount. Left out, the system's own preference is followed. |
-| `locale`? | `string` | Language tag deciding the writing direction and the font family. |
-| `systemTheme`? | `ThemeKeys` | Theme to treat as the system's, instead of reading `prefers-color-scheme`. |
+| `children` | `React.ReactNode` | **Required.** The tree the theme applies to. |
+| `colorTheme` | `CustomColorThemesSettingsDto` | The portal's accent palette. Outside the portal there is none — leave it out. |
+| `initialTheme` | `ThemeKeys` | Theme to use; a new value is applied in place, without a remount. Left out, the system's own preference is followed. |
+| `locale` | `string` | Language tag deciding the writing direction and the font family. |
+| `systemTheme` | `ThemeKeys` | Theme to treat as the system's, instead of reading `prefers-color-scheme`. |
 
 </APITable>
 

@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Editor mode
 
-Editor mode embeds a fully functional document editor inside your application. It opens a file by ID and gives the users all document editor capabilities like real-time co-authoring, comments, and track changes, depending on the user's DocSpace permissions.
+Editor mode embeds a fully functional document editor inside your application. It opens a file by ID and gives the users all document editor capabilities like real-time co-authoring, comments, and track changes, depending on the user's ONLYOFFICE Apps permissions.
 
 If you want to limit your users to viewing only, use the [Viewer mode](./viewer-mode.md) instead.
 
@@ -30,7 +30,7 @@ For setup instructions (connecting the script, CSP configuration, npm package), 
 
 ### Customizing the editor interface
 
-Use `editorCustomization` to match the editor to your application's branding and hide features your users don't need. See also: [Customize editors](../samples/advanced-samples/customize-editors.md).
+Use `editorCustomization` to adjust the editor's look and hide features your users don't need — for example, strip back editor chrome to leave more room for the document itself. See also: [Customize editors](../samples/advanced-samples/customize-editors.md).
 
 ```javascript
 const docSpace = DocSpace.SDK.initEditor({
@@ -38,12 +38,9 @@ const docSpace = DocSpace.SDK.initEditor({
   src: "https://your-docspace.com",
   id: "your-file-id",
   editorCustomization: {
-    customer: {
-      name: "Your Company",
-      logo: "https://your-company.com/logo.png",
-    },
     compactHeader: true,
     toolbarNoTabs: true,
+    hideRulers: true,
     help: false,
   },
 });
@@ -78,7 +75,7 @@ const docSpace = DocSpace.SDK.initEditor({
   events: {
     onAppReady: function () {
       const frame = DocSpace.SDK.frames["ds-frame"];
-      frame.executeInEditor(function (editor, data) {
+      frame.executeInEditor(function (editor, asc, data) {
         editor.insertText("Hello, " + data.username);
       }, { username: "Alice" });
     },

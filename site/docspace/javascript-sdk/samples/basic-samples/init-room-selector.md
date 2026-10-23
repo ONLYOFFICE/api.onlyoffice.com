@@ -1,6 +1,6 @@
 ---
 description: Embed the room selection interface using the JS SDK.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Initialize room selector
@@ -12,7 +12,7 @@ Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docsp
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of ONLYOFFICE Apps.
 
 <details>
   <summary>Full example</summary>
@@ -25,7 +25,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
     <meta charset="UTF-8" />
     <title>Init Room Selector</title>
 
-    <!-- Replace with your actual DocSpace portal URL -->
+    <!-- Replace with your actual ONLYOFFICE Apps portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
   </head>
 
@@ -49,6 +49,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 
     const config = {
       frameId: "ds-frame",         // ID of the iframe container
+      src: "{PORTAL_SRC}",
       width: "100%",               // Full width
       height: "700px",             // Custom height
       events: {
@@ -67,7 +68,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
 
 ## Step 1. Set HTML structure
 
-Create a basic HTML page with an iframe to host the DocSpace SDK interface.
+Create a basic HTML page with an iframe to host the ONLYOFFICE Apps SDK interface.
 
 ``` html
 <!-- Step 1: HTML Structure -->
@@ -77,7 +78,7 @@ Create a basic HTML page with an iframe to host the DocSpace SDK interface.
     <meta charset="UTF-8" />
     <title>Init Room Selector</title>
 
-    <!-- Replace with your actual DocSpace portal URL -->
+    <!-- Replace with your actual ONLYOFFICE Apps portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
   </head>
 
@@ -89,7 +90,7 @@ Create a basic HTML page with an iframe to host the DocSpace SDK interface.
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following ONLYOFFICE Apps folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.2.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE Apps installed.
 :::
 
 ## Step 2. Embed SDK logic
@@ -109,6 +110,7 @@ function onSelectCallback(event) {
 
 const config = {
   frameId: "ds-frame",         // ID of the iframe container
+  src: "{PORTAL_SRC}",
   width: "100%",               // Full width
   height: "700px",             // Custom height
   events: {

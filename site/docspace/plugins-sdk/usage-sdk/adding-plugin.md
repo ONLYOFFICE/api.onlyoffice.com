@@ -4,7 +4,7 @@ sidebar_position: -1
 
 # Adding plugin
 
-You can upload your own plugins to your server or to the DocSpace SaaS solution. System plugins created by our developers are available by default in both the server and SaaS versions of ONLYOFFICE DocSpace.
+You can upload your own plugins to your server or to the ONLYOFFICE Apps SaaS solution. System plugins created by our developers are available by default in both the server and SaaS versions of ONLYOFFICE Apps.
 
 ## Enabling system plugins
 
@@ -12,13 +12,13 @@ By default, system plugins are turned off. But you can enable them by following 
 
 1. In the lower left corner, click ![More icon](/assets/images/docspace/more-icon.png#gh-light-mode-only)![More icon](/assets/images/docspace/more-icon.dark.png#gh-dark-mode-only) and open the **Settings** page.
 
-   ![DocSpace Settings](/assets/images/docspace/docspace-settings.png#gh-light-mode-only)![DocSpace Settings](/assets/images/docspace/docspace-settings.dark.png#gh-dark-mode-only)
+   ![ONLYOFFICE Apps Settings](/assets/images/docspace/docspace-settings.png#gh-light-mode-only)![ONLYOFFICE Apps Settings](/assets/images/docspace/docspace-settings.dark.png#gh-dark-mode-only)
 
 2. Go to the **Integration** section.
 
 3. Open the **Plugins** tab.
 
-   ![DocSpace plugins](/assets/images/docspace/docspace-plugins.png#gh-light-mode-only)![DocSpace plugins](/assets/images/docspace/docspace-plugins.dark.png#gh-dark-mode-only)
+   ![ONLYOFFICE Apps plugins](/assets/images/docspace/docspace-plugins.png#gh-light-mode-only)![ONLYOFFICE Apps plugins](/assets/images/docspace/docspace-plugins.dark.png#gh-dark-mode-only)
 
 4. Enable a plugin with a switcher.
 
@@ -44,11 +44,11 @@ Now the plugin is available for use.
 
 ## Uploading plugins
 
-To upload your own plugins to the DocSpace portal:
+To upload your own plugins to the ONLYOFFICE Apps portal:
 
 1. In the lower left corner, click ![More icon](/assets/images/docspace/more-icon.png#gh-light-mode-only)![More icon](/assets/images/docspace/more-icon.dark.png#gh-dark-mode-only) and open the **Settings** page.
 
-   ![DocSpace Settings](/assets/images/docspace/docspace-settings.png#gh-light-mode-only)![DocSpace Settings](/assets/images/docspace/docspace-settings.dark.png#gh-dark-mode-only)
+   ![ONLYOFFICE Apps Settings](/assets/images/docspace/docspace-settings.png#gh-light-mode-only)![ONLYOFFICE Apps Settings](/assets/images/docspace/docspace-settings.dark.png#gh-dark-mode-only)
 
 2. Go to the **Integration** section.
 
@@ -61,7 +61,7 @@ To upload your own plugins to the DocSpace portal:
 5. Choose the plugin archive and click **Open**.
 
    :::note
-   The maximum size of the plugin archive and each file within it must not exceed 5 MB. The number of plugin icons must not exceed 10.
+   The maximum size of the plugin archive and each file within it must not exceed 5 MB. The number of plugin icons must not exceed 10 if the archive does not contain *plugin.css*, or 9 if it does.
    :::
 
    ![Plugin archive](/assets/images/docspace/plugin-archive.png#gh-light-mode-only)![Plugin archive](/assets/images/docspace/plugin-archive.dark.png#gh-dark-mode-only)

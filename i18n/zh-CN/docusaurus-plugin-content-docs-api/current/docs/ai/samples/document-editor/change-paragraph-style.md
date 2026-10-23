@@ -12,7 +12,7 @@ import Video from '@site/src/components/Video/Video';
 
 ## 提示词
 
-- 将第 2 段的样式更改为"标题 1"
+- 将第 2 段的样式更改为“标题 1”
 
 ## 函数注册 {#function-registration}
 

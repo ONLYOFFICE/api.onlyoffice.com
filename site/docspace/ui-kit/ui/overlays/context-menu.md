@@ -83,7 +83,7 @@ Every kind of item the model supports, in one menu. From top to bottom:
 
 `getContextModel` replaces a static `model`: the getter runs each time the menu opens, so the first item shows the time of that open and the favorite item reads the state changed by its own click. Leading and trailing separators in the result are trimmed.
 
-<ThemedImage alt="Dynamic Model" width={337} sources={{ light: require('./context-menu--dynamic-model-light.png').default, dark: require('./context-menu--dynamic-model-dark.png').default }} />
+<ThemedImage alt="Dynamic Model" width={330} sources={{ light: require('./context-menu--dynamic-model-light.png').default, dark: require('./context-menu--dynamic-model-dark.png').default }} />
 
 ### Attached To Document
 
@@ -166,37 +166,37 @@ export function FileCard({
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `model` | `ContextMenuModel[]` | The items. It is read only while the menu opens, and `getContextModel` replaces it entirely when that is given. |
-| `appendTo`? | `HTMLElement` | Element the menu is rendered into, instead of `document.body`. |
-| `autoZIndex`? | `boolean` | Ignored. Nothing reads this prop. Default: `true`. |
-| `badgeIconColor`? | `string` | Colour of that badge. |
-| `badgeUrl`? | `string` | URL of the badge image in the header. |
-| `baseZIndex`? | `number` | Stacking order of the backdrop. |
-| `className`? | `string` | Applied to the menu element. |
-| `containerRef`? | `RefObject<HTMLDivElement \| null>` | Element to position the menu against instead of the pointer. With it the menu opens at that element's top-left corner rather than where the user clicked. |
-| `dataTestId`? | `string` | Value of `data-testid` on the menu. |
-| `fillIcon`? | `boolean` | Recolours the items' icons to the text colour. Default: `true`. |
-| `getContextModel`? | `TGetContextMenuModel` | Builds the items each time the menu opens, replacing `model`. This is the one to use for a menu whose entries depend on the current selection. |
-| `global`? | `boolean` | Ignored. Nothing reads this prop. |
-| `header`? | `HeaderType` | Title, icon and badge of the bar above the items, on the mobile sheet. |
-| `headerOnlyMobile`? | `boolean` | Renders the header only in the mobile sheet form. Default: `false`. |
-| `id`? | `string` | Applied to the menu element. |
-| `ignoreChangeView`? | `boolean` | Forces that mobile sheet form, and with it the backdrop, at any width. |
-| `isArchive`? | `boolean` | Renders that header in its archived form. |
-| `isRoom`? | `boolean` | Renders the header in its room form, with a logo and a cover. |
-| `leftOffset`? | `number` | Shifts the menu left by this many pixels, when positioned against a container. |
-| `maxHeight`? | `number` | Maximum height for the context menu content area |
-| `maxHeightLowerSubmenu`? | `number` | Height cap of a second-level submenu, in pixels. |
-| `onHide`? | `(e?: React.MouseEvent \| MouseEvent \| Event \| React.ChangeEvent<HTMLInputElement>) => void` | Specifies a callback function that is invoked when a popup menu is hidden |
-| `onShow`? | `(e: React.MouseEvent \| MouseEvent \| Event \| React.ChangeEvent<HTMLInputElement>) => void` | Specifies a callback function that is invoked when a popup menu is shown |
-| `ref`? | `RefObject<ContextMenuRefType \| null>` | Handle the menu is opened through: `show(event)`, `hide(event)` and `toggle(event)`. There is no visibility prop — this is the only way. |
-| `rightOffset`? | `number` | Shifts it further left again; both offsets are subtracted. |
-| `scaled`? | `boolean` | Matches the menu's width to that container's. |
-| `showDisabledItems`? | `boolean` | Keeps disabled items in the menu instead of dropping them. |
-| `style`? | `CSSProperties` | Applied to the menu element. |
-| `withBackdrop`? | `boolean` | Whether a backdrop is rendered behind the menu. It is only visible when the menu is in its mobile sheet form, so on a desktop it shows nothing. |
-| `withHotkeys`? | `boolean` | Whether the arrow keys, Enter and Escape work while the menu is open. This is the one menu in the kit that can be used from the keyboard. Default: `true`. |
-| `withoutBackHeaderButton`? | `boolean` | Removes the back arrow from a submenu's header on the mobile sheet. |
+| `model` | `ContextMenuModel[]` | **Required.** The items. It is read only while the menu opens, and `getContextModel` replaces it entirely when that is given. |
+| `appendTo` | `HTMLElement` | Element the menu is rendered into, instead of `document.body`. |
+| `autoZIndex` | `boolean` | Ignored. Nothing reads this prop. Default: `true`. |
+| `badgeIconColor` | `string` | Colour of that badge. |
+| `badgeUrl` | `string` | URL of the badge image in the header. |
+| `baseZIndex` | `number` | Stacking order of the backdrop. |
+| `className` | `string` | Applied to the menu element. |
+| `containerRef` | `RefObject<HTMLDivElement \| null>` | Element to position the menu against instead of the pointer. With it the menu opens at that element's top-left corner rather than where the user clicked. |
+| `dataTestId` | `string` | Value of `data-testid` on the menu. |
+| `fillIcon` | `boolean` | Recolours the items' icons to the text colour. Default: `true`. |
+| `getContextModel` | `TGetContextMenuModel` | Builds the items each time the menu opens, replacing `model`. This is the one to use for a menu whose entries depend on the current selection. |
+| `global` | `boolean` | Ignored. Nothing reads this prop. |
+| `header` | `HeaderType` | Title, icon and badge of the bar above the items, on the mobile sheet. |
+| `headerOnlyMobile` | `boolean` | Renders the header only in the mobile sheet form. Default: `false`. |
+| `id` | `string` | Applied to the menu element. |
+| `ignoreChangeView` | `boolean` | Forces that mobile sheet form, and with it the backdrop, at any width. |
+| `isArchive` | `boolean` | Renders that header in its archived form. |
+| `isRoom` | `boolean` | Renders the header in its room form, with a logo and a cover. |
+| `leftOffset` | `number` | Shifts the menu left by this many pixels, when positioned against a container. |
+| `maxHeight` | `number` | Maximum height for the context menu content area |
+| `maxHeightLowerSubmenu` | `number` | Height cap of a second-level submenu, in pixels. |
+| `onHide` | `(e?: React.MouseEvent \| MouseEvent \| Event \| React.ChangeEvent<HTMLInputElement>) => void` | Specifies a callback function that is invoked when a popup menu is hidden |
+| `onShow` | `(e: React.MouseEvent \| MouseEvent \| Event \| React.ChangeEvent<HTMLInputElement>) => void` | Specifies a callback function that is invoked when a popup menu is shown |
+| `ref` | `RefObject<ContextMenuRefType \| null>` | Handle the menu is opened through: `show(event)`, `hide(event)` and `toggle(event)`. There is no visibility prop — this is the only way. |
+| `rightOffset` | `number` | Shifts it further left again; both offsets are subtracted. |
+| `scaled` | `boolean` | Matches the menu's width to that container's. |
+| `showDisabledItems` | `boolean` | Keeps disabled items in the menu instead of dropping them. |
+| `style` | `CSSProperties` | Applied to the menu element. |
+| `withBackdrop` | `boolean` | Whether a backdrop is rendered behind the menu. It is only visible when the menu is in its mobile sheet form, so on a desktop it shows nothing. |
+| `withHotkeys` | `boolean` | Whether the arrow keys, Enter and Escape work while the menu is open. This is the one menu in the kit that can be used from the keyboard. Default: `true`. |
+| `withoutBackHeaderButton` | `boolean` | Removes the back arrow from a submenu's header on the mobile sheet. |
 
 </APITable>
 
@@ -209,37 +209,37 @@ export function FileCard({
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `key` | `number \| string` | Identifier of the item, used as its React key. |
-| `label` | `ReactNode` | What the item reads. A string also becomes its hover tooltip. |
-| `action`? | `string` | Arbitrary name handed back to `onClick` as its `action`. |
-| `badgeLabel`? | `string` | Text of the paid badge. |
-| `checked`? | `boolean` | Whether that toggle is on. |
-| `className`? | `string` | Applied to the item element. |
-| `dataTestId`? | `string` | Value of `data-testid` on the item. |
-| `description`? | `ReactNode` | Secondary line rendered under the item label and always visible - what choosing this item means. The item grows to fit it. |
-| `disableColor`? | `string` | Colour of the item's text while it is disabled. |
-| `disabled`? | `boolean` | Greys the item out and stops its `onClick`. |
-| `disabledStylesType`? | `"default" \| "toggle"` | Which disabled styling to use — the toggle variant keeps the label readable. |
-| `getTooltipContent`? | `() => React.ReactNode` | Builds the tooltip's content. |
-| `icon`? | `string` | URL of the item's icon, fetched at runtime. `iconNode` is the alternative. |
-| `iconNode`? | `ReactNode` | The icon as JSX, rendered inline instead of fetching `icon`. |
-| `id`? | `string` | Applied to the item element. |
-| `isHeader`? | `boolean` | Renders the item as a heading rather than a choice. |
-| `isLoader`? | `boolean` | Renders a skeleton in place of the item. |
-| `isOutsideLink`? | `boolean` | Marks a `url` as leaving the application, which draws the external-link icon. |
-| `isPaidBadge`? | `boolean` | Renders that badge. |
-| `isSeparator`? | `undefined` | Absent on a normal item; it is what tells the two shapes apart. |
-| `items`? | `ContextMenuModel[]` | Items of a submenu, which an arrow then opens to the side. |
-| `onClick`? | `ContextMenuTypeOnClick` | Called when the item is chosen, with the event and the item itself. |
-| `onLoad`? | `() => Promise<ContextMenuModel[]>` | Loads the submenu's items when the item is opened. |
-| `preventNewTab`? | `boolean` | Stops a `url` opening in a new tab. |
-| `style`? | `CSSProperties` | Applied to the item element. |
-| `target`? | `string` | `target` of the link, for an item with a `url`. |
-| `template`? | `unknown` | Ignored by this component. |
-| `tooltipTarget`? | `"item" \| "toggle"` | Which part of the item the tooltip is anchored to. |
-| `url`? | `string` | Makes the item a link to this address rather than a button. |
-| `withMCPIcon`? | `boolean` | Draws the MCP icon after the label. |
-| `withToggle`? | `boolean` | Renders a toggle at the end of the item instead of an action. |
+| `key` | `number \| string` | **Required.** Identifier of the item, used as its React key. |
+| `label` | `ReactNode` | **Required.** What the item reads. A string also becomes its hover tooltip. |
+| `action` | `string` | Arbitrary name handed back to `onClick` as its `action`. |
+| `badgeLabel` | `string` | Text of the paid badge. |
+| `checked` | `boolean` | Whether that toggle is on. |
+| `className` | `string` | Applied to the item element. |
+| `dataTestId` | `string` | Value of `data-testid` on the item. |
+| `description` | `ReactNode` | Secondary line rendered under the item label and always visible - what choosing this item means. The item grows to fit it. |
+| `disableColor` | `string` | Colour of the item's text while it is disabled. |
+| `disabled` | `boolean` | Greys the item out and stops its `onClick`. |
+| `disabledStylesType` | `"default" \| "toggle"` | Which disabled styling to use — the toggle variant keeps the label readable. |
+| `getTooltipContent` | `() => React.ReactNode` | Builds the tooltip's content. |
+| `icon` | `string` | URL of the item's icon, fetched at runtime. `iconNode` is the alternative. |
+| `iconNode` | `ReactNode` | The icon as JSX, rendered inline instead of fetching `icon`. |
+| `id` | `string` | Applied to the item element. |
+| `isHeader` | `boolean` | Renders the item as a heading rather than a choice. |
+| `isLoader` | `boolean` | Renders a skeleton in place of the item. |
+| `isOutsideLink` | `boolean` | Marks a `url` as leaving the application, which draws the external-link icon. |
+| `isPaidBadge` | `boolean` | Renders that badge. |
+| `isSeparator` | `undefined` | Absent on a normal item; it is what tells the two shapes apart. |
+| `items` | `ContextMenuModel[]` | Items of a submenu, which an arrow then opens to the side. |
+| `onClick` | `ContextMenuTypeOnClick` | Called when the item is chosen, with the event and the item itself. |
+| `onLoad` | `() => Promise<ContextMenuModel[]>` | Loads the submenu's items when the item is opened. |
+| `preventNewTab` | `boolean` | Stops a `url` opening in a new tab. |
+| `style` | `CSSProperties` | Applied to the item element. |
+| `target` | `string` | `target` of the link, for an item with a `url`. |
+| `template` | `unknown` | Ignored by this component. |
+| `tooltipTarget` | `"item" \| "toggle"` | Which part of the item the tooltip is anchored to. |
+| `url` | `string` | Makes the item a link to this address rather than a button. |
+| `withMCPIcon` | `boolean` | Draws the MCP icon after the label. |
+| `withToggle` | `boolean` | Renders a toggle at the end of the item instead of an action. |
 
 </APITable>
 

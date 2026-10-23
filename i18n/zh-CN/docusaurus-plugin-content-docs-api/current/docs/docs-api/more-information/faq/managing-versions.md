@@ -8,7 +8,7 @@ sidebar_position: -4
 
 可以使用 [onRequestHistory](../../usage-api/config/events.md#onrequesthistory) 函数显示文档历史记录（使用 `events.onRequestHistory` 事件）。若未启用相关功能，ONLYOFFICE 文档界面将不会显示**版本历史**菜单选项（位于**协作**标签页的**版本历史**按钮）。
 
-一旦在配置文件中调用此函数（连同 [refreshHistory](../../usage-api/methods.md#refreshhistory) 方法），就会显示菜单选项和按钮，并且程序将显示现有文档版本。文档版本历史中显示的数据可以从**文档编辑服务**[回调](../../usage-api/callback-handler.md#status-2-3) 中获取。
+一旦在配置文件中调用此函数（连同 [refreshHistory](../../usage-api/methods.md#refreshhistory) 方法），就会显示菜单选项和按钮，并且程序将显示现有文档版本。文档版本历史中显示的数据可以从**文档编辑服务**[回调](../../usage-api/callback-handler.md#status-2-3)中获取。
 
 所以文档版本历史显示的实现应该是这样的：
 
@@ -79,7 +79,7 @@ const data = {
    - `history.created` 是文档指定版本编译的时间（对应收到 `status` 为 `2` 的时间）；
    - `history.version` 是指定版本的编号，将显示在文档编辑器界面的版本历史记录部分。
 
-4. 使用指定的所有上述参数打开文档。切换到**文件** > **版本历史** 菜单选项（或 **协作** > **版本历史**），将显示版本数据。
+4. 使用指定的所有上述参数打开文档。切换到**文件** > **版本历史**菜单选项（或**协作** > **版本历史**），将显示版本数据。
 
 :::note
 `history.changes` 对象在版本中显示为较小的更改（修订）。

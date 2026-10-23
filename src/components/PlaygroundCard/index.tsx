@@ -62,11 +62,11 @@ const CONFIG_PLAYGROUNDS = [
 ];
 
 const DOCSPACE_PLAYGROUNDS = [
-  { type: 'manager', name: 'Manager', description: 'Explore the document manager to work with rooms, folders, and documents within DocSpace.' },
-  { type: 'editor', name: 'Editor', description: 'Open and edit documents directly in the embedded DocSpace editor.' },
+  { type: 'manager', name: 'Manager', description: 'Explore the document manager to work with rooms, folders, and documents within ONLYOFFICE Apps.' },
+  { type: 'editor', name: 'Editor', description: 'Open and edit documents directly in the embedded ONLYOFFICE Apps editor.' },
   { type: 'viewer', name: 'Viewer', description: 'View documents in a read-only embedded viewer.' },
-  { type: 'room-selector', name: 'Room selector', description: 'Embed a room selector to let users pick a DocSpace room.' },
-  { type: 'file-selector', name: 'File selector', description: 'Embed a file selector to let users pick files from DocSpace.' },
+  { type: 'room-selector', name: 'Room selector', description: 'Embed a room selector to let users pick an ONLYOFFICE Apps room.' },
+  { type: 'file-selector', name: 'File selector', description: 'Embed a file selector to let users pick files from ONLYOFFICE Apps.' },
   { type: 'system', name: 'System', description: 'Use the system mode to call SDK methods without a visible frame.' },
 ];
 

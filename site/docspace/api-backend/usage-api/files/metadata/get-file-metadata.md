@@ -6,7 +6,7 @@
 
 Get file metadata
 
-Returns the metadata of a file: the templates assigned to it, directly or inherited from a cascading folder above it, each with its fields, and the custom text fields set on the file. The caller needs read access to the file: a member of the portal, or an anonymous caller through an external link that grants access to the file or to a folder above it, with the link key in the `Request-Token` header or in the `share` query parameter. The call is read-only. A field carries its value inside it; a field the file holds no value for comes without a `value`. The custom fields are name and value pairs and are not part of any template. A file without metadata is answered with empty lists, not with an error. The same shape is returned by `PUT api/2.0/files/metadata/file/{fileId}/values` after a write. A request with neither a session nor a link key is answered with 401; a file the caller cannot read with 403, a file that does not exist with 404.
+Returns the metadata of a file: the templates assigned to it, directly or inherited from a cascading folder above it, each with its fields, and the custom text fields set on the file. The caller needs read access to the file: a member of the portal, or an anonymous caller through an external link that grants access to the file or to a folder above it, with the link key in the `Request-Token` header or in the `share` query parameter. The call is read-only. A field carries its value inside it; a field the file holds no value for comes without a `value`. A file never cascades, so every template reports `cascade` false and no `conflictResolveType`; whether it was inherited from a folder above is not told apart from a direct assignment. The custom fields are name and value pairs and are not part of any template. A file without metadata is answered with empty lists, not with an error. The same shape is returned by `PUT api/2.0/files/metadata/file/{fileId}/values` after a write. A request with neither a session nor a link key is answered with 401; a file the caller cannot read with 403, a file that does not exist with 404.
 
 ## Parameters
 
@@ -18,10 +18,10 @@ Returns the metadata of a file: the templates assigned to it, directly or inheri
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | File metadata | [**EntryMetadataWrapper**](../../models/entry-metadata-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The templates assigned to the file with their fields and values, and the custom fields of the file | [**EntryMetadataWrapper**](../../models/entry-metadata-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **401** | The caller has neither a session nor an external link key | - | - |
 | **403** | You don't have enough permission to perform the operation | - | - |
-| **404** | File not found | - | - |
+| **404** | No file with this identifier exists | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

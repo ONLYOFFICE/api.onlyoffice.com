@@ -19,7 +19,7 @@ Replaces a stored AI provider profile and returns it, re-checking name uniquenes
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Whether the profile was updated, with the stored profile in `profile`. | [**AiProfileMutationResult**](../../models/ai-profile-mutation-result.md) | - |
-| **400** | The provider URL is missing, malformed, or points at a private network address. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **400** | The provider URL is missing, malformed, or points at a private network address, or the key holds characters that cannot travel in an HTTP header - that one answers with the profile result shape, `success: false` and an `error` naming the `key` field. | [**aiProfilesCreate_400_response**](../../models/ai-profiles-create-400-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **403** | AI profiles are read-only on this portal because they are managed by the AI gateway. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |

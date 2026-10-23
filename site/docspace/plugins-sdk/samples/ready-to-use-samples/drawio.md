@@ -1,6 +1,6 @@
 ---
 description: Create diagrams and flowcharts with the Draw.io plugin.
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # Draw.io
@@ -11,7 +11,7 @@ A tool for creating diagrams, flowcharts, intelligence maps, business layouts, e
 
 ## Installation
 
-Available by default in the DocSpace Saas solution.
+Available by default in the ONLYOFFICE Apps SaaS solution.
 
 You can enable it following the instructions [here](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins).
 
@@ -19,7 +19,7 @@ You can enable it following the instructions [here](/docspace/plugins-sdk/usage-
 
 To start working with the plugin, you don't need to change the default settings.
 
-In case you want to adjust the plugin settings, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **Draw.io** plugin. You can change the following plugin parameters:
+In case you want to adjust the plugin settings, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **draw.io** plugin. You can change the following plugin parameters:
 
 - **Languages** - choose the necessary language from the list. The **Auto** option corresponds to the portal language.
 - **Offline mode** - when this setting is active, all remote operations and features are disabled for security reasons.
@@ -38,7 +38,7 @@ To create a new `.drawio` diagram:
 3. Select the **Draw.io** plugin from the appeared menu.
 4. Change the file name in a pop-up window and click **Create**. A new `.drawio` file appears in the file list.
 
-To open the created diagram, click the file name or do it via the file context menu: **right-click → Edit diagram**. The file will open in the same tab. To get back to the file list, click **Save & Exit** or **Exit**. If a diagram is opened by a user with the view rights, only the **Exit** button is available. Any changes made by this user will not be saved.
+To open the created diagram, click the file name or do it via the file context menu: **right-click → Open diagram**. The file will open in the same tab. To get back to the file list, click **Save & Exit** or **Exit**. If a diagram is opened by a user with the view rights, only the **Exit** button is available. Any changes made by this user will not be saved.
 
 ### Editing an exported diagram
 
@@ -54,11 +54,11 @@ All the required files are described [here](/docspace/plugins-sdk/usage-sdk/plug
 
 The following plugin interfaces are used:
 
-- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md). Required for each plugin. It contains the plugin [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status) (PluginStatus) variable, used to embed the plugin into the DocSpace.
+- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md). Required for each plugin. It contains the plugin [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status) (PluginStatus) variable, used to embed the plugin into ONLYOFFICE Apps.
 - [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md). Required as we implement a third-party service ([Draw.io](https://www.drawio.com/)).
 - [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md) and [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts). Used to add settings block for plugin's configuration. The users will access this block from **Settings → Integration → Plugins** to adjust the plugin's parameters.
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) and [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md). Used to implement a context menu action.
-- [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md) and [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md). Used to implement the main button action. In the **Draw.io** plugin, we use the **Action button → More** menu elements in the **Documents** section or in the selected room to create `.drawio` diagrams.
+- [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md) and [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md). Used to implement the main button action. In the **Draw.io** plugin, we use the **Actions → More** menu elements in the **Documents** section or in the selected room to create `.drawio` diagrams.
 - [IFilePlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IFilePlugin.md) and [IFileItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md). Used to interact with the specified file types. In this case, with the `.drawio` files.
 
 ## Support

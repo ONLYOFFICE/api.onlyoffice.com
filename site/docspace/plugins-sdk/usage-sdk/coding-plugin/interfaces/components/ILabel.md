@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/ILabel.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ILabel.ts
 ---
 
 # ILabel
@@ -46,12 +46,12 @@ import APITable from '@site/src/components/APITable/APITable';
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `text` | `string` | Defines the element text |
-| `isRequired?` | `boolean` | Specifies whether the field to which the label is attached is required |
-| `error?` | `boolean` | Specifies whether the field to which the label is attached is incorrect |
-| `title?` | `string` | Defines the label title |
-| `truncate?` | `boolean` | Specifies whether the word wrapping is disabled |
-| `htmlFor?` | `string` | Defines the field ID to which the label is attached |
-| `display?` | `string` | Specifies whether the "display" property is set |
-| `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
+| `isRequired` | `boolean` | Specifies whether the field to which the label is attached is required |
+| `error` | `boolean` | Specifies whether the field to which the label is attached is incorrect |
+| `title` | `string` | Defines the label title |
+| `truncate` | `boolean` | Specifies whether the word wrapping is disabled |
+| `htmlFor` | `string` | Defines the field ID to which the label is attached |
+| `display` | `string` | Specifies whether the "display" property is set |
+| `className` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
 </APITable>

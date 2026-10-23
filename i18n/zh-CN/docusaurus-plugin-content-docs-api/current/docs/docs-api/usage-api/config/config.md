@@ -12,11 +12,11 @@ config base 部分定义了初始化文档编辑器的顶级参数。
 
 要打开的文档类型：
 
-- `word` - 文本文档（*.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fb2, .fodt, .hml, .htm, .html, .hwp, .hwpx, .md, .mht, .mhtml, .odt, .ott, .pages, .rtf, .stw, .sxw, .txt, .wps, .wpt, .xml*）；
-- `cell` - 电子表格（*.csv, .et, .ett, .fods, .numbers, .ods, .ots, .sxc, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml*）；
-- `slide` - 演示文稿（*.dps, .dpt, .fodp, .key, .odg, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .sxi*）；
-- `pdf` - 可移植文档格式（*.djvu, .ofd, .oxps, .pdf, .xps*）；
-- `diagram` - 图表文档（*.vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx*）。
+- `word`：文本文档（*.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fb2, .fodt, .hml, .htm, .html, .hwp, .hwpx, .md, .mht, .mhtml, .odt, .ott, .pages, .rtf, .stw, .sxw, .txt, .wps, .wpt, .xml*）；
+- `cell`：电子表格（*.csv, .et, .ett, .fods, .numbers, .ods, .ots, .sxc, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml*）；
+- `slide`：演示文稿（*.dps, .dpt, .fodp, .key, .odg, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .sxi*）；
+- `pdf`：可移植文档格式（*.djvu, .ofd, .oxps, .pdf, .xps*）；
+- `diagram`：图表文档（*.vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx*）。
 
 :::info
 如果省略，文档类型将根据 [`document.fileType`](document/document.md#filetype) 值自动推断。如果同时省略 `documentType` 和 `document.fileType`，将会出现错误。
@@ -58,9 +58,9 @@ config base 部分定义了初始化文档编辑器的顶级参数。
 
 用于访问文档的平台类型：
 
-- `desktop` - 为从台式机或笔记本电脑访问文档而优化；
-- `mobile` - 为从平板电脑或智能手机访问文档而优化；
-- `embedded` - 为易于嵌入网页而特别设计。
+- `desktop`：为从台式机或笔记本电脑访问文档而优化；
+- `mobile`：为从平板电脑或智能手机访问文档而优化；
+- `embedded`：为易于嵌入网页而特别设计。
 
 **示例**：`"mobile"`
 

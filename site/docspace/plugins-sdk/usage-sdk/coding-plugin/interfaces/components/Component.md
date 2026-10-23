@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/Component.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts
 ---
 
 # Component
@@ -135,7 +135,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | ------ | ------ | ------ |
 | `component` | [`box`](../../enums/Components.md#box) | Defines the "box" component type |
 | `props` | [`IBox`](IBox.md) | Defines the box component properties |
-| `contextName?` | `string` | Defines the box component context name that updates the component via React context |
+| `contextName` | `string` | Defines the box component context name that updates the component via React context |
 
 </APITable>
 
@@ -181,7 +181,7 @@ const buttonGroup: Component = {
 | ------ | ------ | ------ |
 | `component` | [`button`](../../enums/Components.md#button) | Defines the "button" component type |
 | `props` | [`IButton`](IButton.md) | Defines the button component properties |
-| `contextName?` | `string` | Defines the button component context name that updates the component via React context |
+| `contextName` | `string` | Defines the button component context name that updates the component via React context |
 
 </APITable>
 
@@ -239,7 +239,7 @@ const checkboxGroup: Component = {
 | ------ | ------ | ------ |
 | `component` | [`checkbox`](../../enums/Components.md#checkbox) | Defines the "checkbox" component type |
 | `props` | [`ICheckbox`](ICheckbox.md) | Defines the checkbox component properties |
-| `contextName?` | `string` | Defines the checkbox component context name that updates the component via React context |
+| `contextName` | `string` | Defines the checkbox component context name that updates the component via React context |
 
 </APITable>
 
@@ -292,7 +292,7 @@ const comboBoxGroup: Component = {
 | ------ | ------ | ------ |
 | `component` | [`comboBox`](../../enums/Components.md#combobox) | Defines the "comboBox" component type |
 | `props` | [`IComboBox`](IComboBox.md) | Defines the combo box component properties |
-| `contextName?` | `string` | Defines the combo box component context name that updates the component via React context |
+| `contextName` | `string` | Defines the combo box component context name that updates the component via React context |
 
 </APITable>
 
@@ -344,7 +344,7 @@ const iframeGroup: Component = {
 | ------ | ------ | ------ |
 | `component` | [`iFrame`](../../enums/Components.md#iframe) | Defines the "iFrame" component type |
 | `props` | [`IFrame`](IFrame.md) | Defines the iFrame component properties |
-| `contextName?` | `string` | Defines the iFrame component context name that updates the component via React context |
+| `contextName` | `string` | Defines the iFrame component context name that updates the component via React context |
 
 </APITable>
 
@@ -396,7 +396,7 @@ const imageGroup: Component = {
 | ------ | ------ | ------ |
 | `component` | [`img`](../../enums/Components.md#img) | Defines the "img" component type |
 | `props` | [`IImage`](IImage.md) | Defines the image component properties |
-| `contextName?` | `string` | Defines the image component context name that updates the component via React context |
+| `contextName` | `string` | Defines the image component context name that updates the component via React context |
 
 </APITable>
 
@@ -449,7 +449,7 @@ const inputGroup: Component = {
 | ------ | ------ | ------ |
 | `component` | [`input`](../../enums/Components.md#input) | Defines the "input" component type |
 | `props` | [`IInput`](IInput.md) | Defines the input component properties |
-| `contextName?` | `string` | Defines the input component context name that updates the component via React context |
+| `contextName` | `string` | Defines the input component context name that updates the component via React context |
 
 </APITable>
 
@@ -497,7 +497,7 @@ const labelGroup: Component = {
 | ------ | ------ | ------ |
 | `component` | [`label`](../../enums/Components.md#label) | Defines the "label" component type |
 | `props` | [`ILabel`](ILabel.md) | Defines the label component properties |
-| `contextName?` | `string` | Defines the label component context name that updates the component via React context |
+| `contextName` | `string` | Defines the label component context name that updates the component via React context |
 
 </APITable>
 
@@ -541,7 +541,7 @@ const skeletonGroup: Component = {
 | ------ | ------ | ------ |
 | `component` | [`skeleton`](../../enums/Components.md#skeleton) | Defines the "skeleton" component type |
 | `props` | [`ISkeleton`](ISkeleton.md) | Defines the skeleton component properties |
-| `contextName?` | `string` | Defines the skeleton component context name that updates the component via React context |
+| `contextName` | `string` | Defines the skeleton component context name that updates the component via React context |
 
 </APITable>
 
@@ -565,7 +565,7 @@ Defines the text component.
 import { IText, Components, Component } from "@onlyoffice/docspace-plugin-sdk";
 
 const text: IText = {
-  text: "Welcome to DocSpace Plugin",
+  text: "Welcome to ONLYOFFICE Apps Plugin",
   fontSize: "18px",
   fontWeight: 500,
   lineHeight: "24px",
@@ -573,7 +573,7 @@ const text: IText = {
   isBold: false,
   textAlign: "left",
   truncate: true,
-  title: "Welcome to DocSpace Plugin"
+  title: "Welcome to ONLYOFFICE Apps Plugin"
 };
 
 const textGroup: Component = {
@@ -591,7 +591,7 @@ const textGroup: Component = {
 | ------ | ------ | ------ |
 | `component` | [`text`](../../enums/Components.md#text) | Defines the "text" component type |
 | `props` | [`IText`](IText.md) | Defines the text component properties |
-| `contextName?` | `string` | Defines the text component context name that updates the component via React context |
+| `contextName` | `string` | Defines the text component context name that updates the component via React context |
 
 </APITable>
 
@@ -641,7 +641,7 @@ const textAreaGroup: Component = {
 | ------ | ------ | ------ |
 | `component` | [`textArea`](../../enums/Components.md#textarea) | Defines the "textArea" component type |
 | `props` | [`ITextArea`](ITextArea.md) | Defines the textarea component properties |
-| `contextName?` | `string` | Defines the textarea component context name that updates the component via React context |
+| `contextName` | `string` | Defines the textarea component context name that updates the component via React context |
 
 </APITable>
 
@@ -690,7 +690,7 @@ const toggleButtonGroup: Component = {
 | ------ | ------ | ------ |
 | `component` | [`toggleButton`](../../enums/Components.md#togglebutton) | Defines the "toggleButton" component type |
 | `props` | [`IToggleButton`](IToggleButton.md) | Defines the toggle button component properties |
-| `contextName?` | `string` | Defines the toggle button component context name that updates the component via React context |
+| `contextName` | `string` | Defines the toggle button component context name that updates the component via React context |
 
 </APITable>
 
@@ -740,7 +740,7 @@ const iconButtonGroup: Component = {
 | ------ | ------ | ------ |
 | `component` | [`iconButton`](../../enums/Components.md#iconbutton) | Defines the "iconButton" component type |
 | `props` | [`IIconButton`](IIconButton.md) | Defines the icon button component properties |
-| `contextName?` | `string` | Defines the icon button component context name that updates the component via React context |
+| `contextName` | `string` | Defines the icon button component context name that updates the component via React context |
 
 </APITable>
 
@@ -788,6 +788,6 @@ const linkGroup: Component = {
 | ------ | ------ | ------ |
 | `component` | [`link`](../../enums/Components.md#link) | Defines the "link" component type |
 | `props` | [`ILink`](ILink.md) | Defines the link component properties |
-| `contextName?` | `string` | Defines the link component context name that updates the component via React context |
+| `contextName` | `string` | Defines the link component context name that updates the component via React context |
 
 </APITable>

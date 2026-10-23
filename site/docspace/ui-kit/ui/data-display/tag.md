@@ -114,30 +114,30 @@ export function RoomTag({ onFilter }: { onFilter: (label: string) => void }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `tag` | `string` | Identifier of the tag. It is handed to `onDelete`, and it is the text shown when `label` is left out. |
-| `className`? | `string` | Applied to the outermost element. |
-| `dataTestId`? | `string` | `data-testid` of the outermost element. |
-| `icon`? | `FC<SVGProps<SVGSVGElement>> \| string` | Glyph before the label: an SVG URL, or a component rendered as a 12px icon. |
-| `iconClassName`? | `string` | Applied to that glyph. |
-| `id`? | `string` | Applied to the outermost element. |
-| `isDefault`? | `boolean` | Ignored. Nothing reads this prop on a single tag; it is `TagType.isDefault` that `Tags` acts on. |
-| `isDeleted`? | `boolean` | Whether the tag counts as removed: `onClick` stops firing and the border greys out. |
-| `isDisabled`? | `boolean` | Whether the tag is inert. Pointer events are dropped in CSS as well, so hover does nothing either. |
-| `isLast`? | `boolean` | Whether the trailing margin is dropped, for the last tag in a row. |
-| `isNewTag`? | `boolean` | Whether the tag is drawn in its "new" colours. It is also what makes the delete cross appear. Default: `false`. |
-| `label`? | `string` | Text of the tag. It is also the `title` attribute and the accessible name. |
-| `labelSuffix`? | `string` | Extra text after the label, inside the same line. |
-| `labelSuffixColor`? | `string` | CSS colour of that suffix. |
-| `onClick`? | `(tag: TagClickEvent) => void` | Called on a click anywhere in the tag, with `{ label, roomType, providerType }` — not with the DOM event. |
-| `onDelete`? | `(tag?: string) => void` | Called with `tag` when the cross is clicked. The cross is only rendered when `isNewTag` is set as well. |
-| `onMouseEnter`? | `() => void` | Called when the pointer enters the tag. |
-| `onMouseLeave`? | `() => void` | Called when the pointer leaves the tag. |
-| `providerType`? | `number` | Passed straight back through `onClick`. The component itself does nothing with it. |
-| `ref`? | `RefObject<HTMLDivElement \| null>` | Ref to the outermost element. |
-| `roomType`? | `number` | Passed straight back through `onClick`. The component itself does nothing with it. |
-| `style`? | `CSSProperties` | Merged into the outermost element's inline style, before `tagMaxWidth` is applied. |
-| `tagMaxWidth`? | `string` | `max-width` of the tag, as a CSS length — `Tags` passes a percentage of its own width. |
-| `withLabel`? | `boolean` | Whether the label is rendered. Turn it off for a tag that is only its icon. Default: `true`. |
+| `tag` | `string` | **Required.** Identifier of the tag. It is handed to `onDelete`, and it is the text shown when `label` is left out. |
+| `className` | `string` | Applied to the outermost element. |
+| `dataTestId` | `string` | `data-testid` of the outermost element. |
+| `icon` | `FC<SVGProps<SVGSVGElement>> \| string` | Glyph before the label: an SVG URL, or a component rendered as a 12px icon. |
+| `iconClassName` | `string` | Applied to that glyph. |
+| `id` | `string` | Applied to the outermost element. |
+| `isDefault` | `boolean` | Ignored. Nothing reads this prop on a single tag; it is `TagType.isDefault` that `Tags` acts on. |
+| `isDeleted` | `boolean` | Whether the tag counts as removed: `onClick` stops firing and the border greys out. |
+| `isDisabled` | `boolean` | Whether the tag is inert. Pointer events are dropped in CSS as well, so hover does nothing either. |
+| `isLast` | `boolean` | Whether the trailing margin is dropped, for the last tag in a row. |
+| `isNewTag` | `boolean` | Whether the tag is drawn in its "new" colours. It is also what makes the delete cross appear. Default: `false`. |
+| `label` | `string` | Text of the tag. It is also the `title` attribute and the accessible name. |
+| `labelSuffix` | `string` | Extra text after the label, inside the same line. |
+| `labelSuffixColor` | `string` | CSS colour of that suffix. |
+| `onClick` | `(tag: TagClickEvent) => void` | Called on a click anywhere in the tag, with `{ label, roomType, providerType }` — not with the DOM event. |
+| `onDelete` | `(tag?: string) => void` | Called with `tag` when the cross is clicked. The cross is only rendered when `isNewTag` is set as well. |
+| `onMouseEnter` | `() => void` | Called when the pointer enters the tag. |
+| `onMouseLeave` | `() => void` | Called when the pointer leaves the tag. |
+| `providerType` | `number` | Passed straight back through `onClick`. The component itself does nothing with it. |
+| `ref` | `RefObject<HTMLDivElement \| null>` | Ref to the outermost element. |
+| `roomType` | `number` | Passed straight back through `onClick`. The component itself does nothing with it. |
+| `style` | `CSSProperties` | Merged into the outermost element's inline style, before `tagMaxWidth` is applied. |
+| `tagMaxWidth` | `string` | `max-width` of the tag, as a CSS length — `Tags` passes a percentage of its own width. |
+| `withLabel` | `boolean` | Whether the label is rendered. Turn it off for a tag that is only its icon. Default: `true`. |
 
 </APITable>
 
@@ -148,20 +148,20 @@ export function RoomTag({ onFilter }: { onFilter: (label: string) => void }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `label` | `string` | Text of the tag. `Tags` also uses it as the React key. |
-| `advancedOptions`? | `string[]` | Labels listed in the overflow drop-down. `Tags` fills this in for the overflow tag itself. |
-| `icon`? | `FC<SVGProps<SVGSVGElement>> \| string` | Glyph before the label: an SVG URL, or a component. |
-| `isDefault`? | `boolean` | Marks the tag as the room's default one. It only takes part in the width arithmetic. |
-| `isDisabled`? | `boolean` | Whether the tag is inert. |
-| `isOptionTag`? | `boolean` | Marks the tag as the overflow or create trigger. `Tags` sets this itself. |
-| `isThirdParty`? | `boolean` | Marks the tag as a third-party provider: it is given a fixed 44px width and its label is hidden. |
-| `key`? | `string` | React key for the tag. `Tags` falls back to the label when it is absent. |
-| `labelSuffix`? | `string` | Extra text after the label. |
-| `labelSuffixColor`? | `string` | CSS colour of that suffix. |
-| `maxWidth`? | `string` | `max-width` of the tag. `Tags` overwrites whatever is passed here with its own calculation. |
-| `onClick`? | `() => void` | Ignored by `Tags`, which wires every tag to `onSelectTag` instead. |
-| `providerType`? | `number` | Passed back through `onSelectTag`. |
-| `roomType`? | `number` | Passed back through `onSelectTag`. |
+| `label` | `string` | **Required.** Text of the tag. `Tags` also uses it as the React key. |
+| `advancedOptions` | `string[]` | Labels listed in the overflow drop-down. `Tags` fills this in for the overflow tag itself. |
+| `icon` | `FC<SVGProps<SVGSVGElement>> \| string` | Glyph before the label: an SVG URL, or a component. |
+| `isDefault` | `boolean` | Marks the tag as the room's default one. It only takes part in the width arithmetic. |
+| `isDisabled` | `boolean` | Whether the tag is inert. |
+| `isOptionTag` | `boolean` | Marks the tag as the overflow or create trigger. `Tags` sets this itself. |
+| `isThirdParty` | `boolean` | Marks the tag as a third-party provider: it is given a fixed 44px width and its label is hidden. |
+| `key` | `string` | React key for the tag. `Tags` falls back to the label when it is absent. |
+| `labelSuffix` | `string` | Extra text after the label. |
+| `labelSuffixColor` | `string` | CSS colour of that suffix. |
+| `maxWidth` | `string` | `max-width` of the tag. `Tags` overwrites whatever is passed here with its own calculation. |
+| `onClick` | `() => void` | Ignored by `Tags`, which wires every tag to `onSelectTag` instead. |
+| `providerType` | `number` | Passed back through `onSelectTag`. |
+| `roomType` | `number` | Passed back through `onSelectTag`. |
 
 </APITable>
 

@@ -84,7 +84,7 @@ Keeps several operations behind one button: it shows three dots and the tooltip 
 - **Uploading files**, **Copying documents** — secondary operations, each with a spinner (`operations`)
 - **Moving folder** — an operation with its own panel, with a progress ring and a cancel cross; click the row to open its panel (`panelOperations`, `showPanel`)
 
-<ThemedImage alt="Multiple Operations" width={73} sources={{ light: require('./operations-progress-button--multiple-operations-light.png').default, dark: require('./operations-progress-button--multiple-operations-dark.png').default }} />
+<ThemedImage alt="Multiple Operations" width={71} sources={{ light: require('./operations-progress-button--multiple-operations-light.png').default, dark: require('./operations-progress-button--multiple-operations-dark.png').default }} />
 
 ### Stopped Operation
 
@@ -114,7 +114,7 @@ In a right-to-left layout the button sits in the bottom-left corner instead of t
 
 Every overridable variable set on one wrapper -- the variables are listed under CSS variables on this page. The button shows the three `--floating-*` variables; click it to open the list, which shows the rest: **Moving files** is finished and failed, **Moving to trash** was aborted. Hover **Moving files**' clear icon for `--ops-progress-icon-hover`.
 
-<ThemedImage alt="Css Customization" width={71} sources={{ light: require('./operations-progress-button--css-customization-light.png').default, dark: require('./operations-progress-button--css-customization-dark.png').default }} />
+<ThemedImage alt="Css Customization" width={73} sources={{ light: require('./operations-progress-button--css-customization-light.png').default, dark: require('./operations-progress-button--css-customization-dark.png').default }} />
 
 ## Minimal example
 
@@ -152,26 +152,26 @@ export function UploadBadge({
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `cancelSecondaryOperationById`? | `(operation: string, operationId: string) => void` | Called with the operation and the id of its first item, from a row's own cancel. |
-| `cancelUpload`? | `(t: (key: string, interpolation?: Record<string, string \| number> \| undefined) => string \| undefined) => void` | Called with the translation function when the cancel cross is clicked. |
-| `clearDropPreviewLocation`? | `() => void` | Called when the drag preview button is done with, to forget the drop target. |
-| `clearOperationsData`? | `(operationId?: string \| null, operation?: string \| null, operationItem?: Operation) => void` | Called once the hide animation ends, to drop the secondary operations. |
-| `clearPanelOperationsData`? | `(operation?: string \| null) => void` | Called once the hide animation ends, to drop the panel operations. |
-| `dropTargetFolderName`? | `null \| string` | Name of the folder under the pointer, shown by the drag preview button. |
-| `isDragging`? | `boolean` | Whether a drag is in progress, which raises the drag preview button. |
-| `isInfoPanelVisible`? | `boolean` | Whether the info panel is open, which moves the button 424px in from the trailing edge. |
-| `mainButtonVisible`? | `boolean` | Whether the mobile main button is on screen, which lifts this one clear of it. |
-| `needErrorChecking`? | `boolean` | Whether a completed run may still hold errors, which stops the button from auto-hiding. |
-| `onCancelOperation`? | `(callback: () => void) => void` | Ignored. Nothing reads this prop; the cross calls `cancelUpload`. |
-| `onOpenPanel`? | `() => void` | Ignored. Nothing reads this prop; the panel is opened through `Operation.showPanel`. |
-| `operations`? | `Operation[]` | Secondary operations: copy, move, delete and the rest. Listed without a ring. Default: `[]`. |
-| `operationsAlert`? | `boolean` | Whether any operation failed: the badge becomes a warning triangle. |
-| `operationsCanceled`? | `boolean` | Whether an upload was cancelled. Treated as stopped. |
-| `operationsCompleted`? | `boolean` | Whether everything is finished: the button plays its hide animation and then clears. Default: `false`. |
-| `operationsStopped`? | `boolean` | Whether an operation was aborted. Treated as stopped, which wins over alert and completed. Default: `false`. |
-| `panelOperations`? | `Operation[]` | Operations that own a panel — the upload. Their progress is the one the ring shows. Default: `[]`. |
-| `percent`? | `number` | Ignored. Nothing reads this prop; the ring reads the first operation's `percent`. |
-| `showCancelButton`? | `boolean` | Whether the cancel cross is offered. Only while there is exactly one operation. |
+| `cancelSecondaryOperationById` | `(operation: string, operationId: string) => void` | Called with the operation and the id of its first item, from a row's own cancel. |
+| `cancelUpload` | `(t: (key: string, interpolation?: Record<string, string \| number> \| undefined) => string \| undefined) => void` | Called with the translation function when the cancel cross is clicked. |
+| `clearDropPreviewLocation` | `() => void` | Called when the drag preview button is done with, to forget the drop target. |
+| `clearOperationsData` | `(operationId?: string \| null, operation?: string \| null, operationItem?: Operation) => void` | Called once the hide animation ends, to drop the secondary operations. |
+| `clearPanelOperationsData` | `(operation?: string \| null) => void` | Called once the hide animation ends, to drop the panel operations. |
+| `dropTargetFolderName` | `null \| string` | Name of the folder under the pointer, shown by the drag preview button. |
+| `isDragging` | `boolean` | Whether a drag is in progress, which raises the drag preview button. |
+| `isInfoPanelVisible` | `boolean` | Whether the info panel is open, which moves the button 424px in from the trailing edge. |
+| `mainButtonVisible` | `boolean` | Whether the mobile main button is on screen, which lifts this one clear of it. |
+| `needErrorChecking` | `boolean` | Whether a completed run may still hold errors, which stops the button from auto-hiding. |
+| `onCancelOperation` | `(callback: () => void) => void` | Ignored. Nothing reads this prop; the cross calls `cancelUpload`. |
+| `onOpenPanel` | `() => void` | Ignored. Nothing reads this prop; the panel is opened through `Operation.showPanel`. |
+| `operations` | `Operation[]` | Secondary operations: copy, move, delete and the rest. Listed without a ring. Default: `[]`. |
+| `operationsAlert` | `boolean` | Whether any operation failed: the badge becomes a warning triangle. |
+| `operationsCanceled` | `boolean` | Whether an upload was cancelled. Treated as stopped. |
+| `operationsCompleted` | `boolean` | Whether everything is finished: the button plays its hide animation and then clears. Default: `false`. |
+| `operationsStopped` | `boolean` | Whether an operation was aborted. Treated as stopped, which wins over alert and completed. Default: `false`. |
+| `panelOperations` | `Operation[]` | Operations that own a panel — the upload. Their progress is the one the ring shows. Default: `[]`. |
+| `percent` | `number` | Ignored. Nothing reads this prop; the ring reads the first operation's `percent`. |
+| `showCancelButton` | `boolean` | Whether the cancel cross is offered. Only while there is exactly one operation. |
 
 </APITable>
 

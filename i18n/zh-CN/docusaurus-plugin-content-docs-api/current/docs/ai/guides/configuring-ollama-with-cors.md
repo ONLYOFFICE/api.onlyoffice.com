@@ -61,7 +61,7 @@ ollama serve
 
 Ollama 在 macOS 上作为独立应用程序运行。有几种设置环境变量的方法：
 
-**方法一：使用 launchctl (推荐)**
+**方法一：使用 launchctl（推荐）**
 
 ```bash
 launchctl setenv OLLAMA_ORIGINS "http://*,https://*,onlyoffice://*"
@@ -82,14 +82,14 @@ export OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*
   </TabItem>
   <TabItem value="windows" label="Windows">
 
-**PowerShell (仅当前会话)：**
+**PowerShell（仅当前会话）：**
 
 ```powershell
 $env:OLLAMA_ORIGINS = "http://*,https://*,onlyoffice://*"
 ollama serve
 ```
 
-**PowerShell (永久设置，需要新会话)：**
+**PowerShell（永久设置，需要新会话）：**
 
 ```powershell
 setx OLLAMA_ORIGINS "http://*,https://*,onlyoffice://*"
@@ -113,9 +113,9 @@ docker run -d \
 
 ### 值说明
 
-- `http://*` - 允许来自任何 HTTP 域的请求
-- `https://*` - 允许来自任何 HTTPS 域的请求
-- `onlyoffice://*` - 允许来自 ONLYOFFICE 桌面编辑器的请求，其中插件运行在 `onlyoffice://` 协议上（AI 插件的来源为 `onlyoffice://plugin`）
+- `http://*`：允许来自任何 HTTP 域的请求
+- `https://*`：允许来自任何 HTTPS 域的请求
+- `onlyoffice://*`：允许来自 ONLYOFFICE 桌面编辑器的请求，其中插件运行在 `onlyoffice://` 协议上（AI 插件的来源为 `onlyoffice://plugin`）
 
 ### 验证 CORS 配置
 
@@ -226,7 +226,7 @@ docker run -d \
 </Tabs>
 
 :::warning
-此配置会将 API 暴露给整个网络。必须采取额外的安全措施 (反向代理、身份验证)。
+此配置会将 API 暴露给整个网络。必须采取额外的安全措施（反向代理、身份验证）。
 :::
 
 ### 配置允许的 SSL 来源
@@ -272,7 +272,7 @@ OLLAMA_HOST=0.0.0.0:11434 ollama serve
 ### 要求
 
 - 已安装 Nginx
-- 有效的 SSL 证书 (Let's Encrypt 或其他 CA)
+- 有效的 SSL 证书（Let's Encrypt 或其他 CA）
 - 运行在 11434 端口的 Ollama 实例
 
 ### 基本 Nginx 配置 {#basic-nginx-configuration}
@@ -422,9 +422,9 @@ sudo systemctl reload nginx
 
 ### 环境变量已设置但 CORS 不起作用
 
-**症状：**您设置了 `OLLAMA_ORIGINS`，但请求仍然因 CORS 错误而失败。
+**症状：** 您设置了 `OLLAMA_ORIGINS`，但请求仍然因 CORS 错误而失败。
 
-**解决方案：**设置环境变量后必须重新启动 Ollama 服务。
+**解决方案：** 设置环境变量后必须重新启动 Ollama 服务。
 
 <Tabs>
   <TabItem value="linux-systemd" label="Linux (systemd)">
@@ -461,16 +461,16 @@ docker restart <container_name>
 
 ### CORS 在 curl 中有效但在浏览器中无效
 
-**症状：**`curl` 请求成功，但浏览器请求失败。
+**症状：** `curl` 请求成功，但浏览器请求失败。
 
 **可能的原因：**
 1. 浏览器发送的 `Origin` 头与允许的来源不匹配
 2. 浏览器正在缓存之前失败的 CORS 响应
 
 **解决方案：**
-1. 检查浏览器开发者工具 (网络选项卡) 以查看正在发送的确切 `Origin`
+1. 检查浏览器开发者工具（网络选项卡）以查看正在发送的确切 `Origin`
 2. 清除浏览器缓存或在隐身模式下测试
-3. 确保您的 `OLLAMA_ORIGINS` 包含确切的来源 (协议 + 域 + 端口)
+3. 确保您的 `OLLAMA_ORIGINS` 包含确切的来源（协议 + 域 + 端口）
 
 ### 如何检查当前环境变量
 
@@ -524,10 +524,10 @@ docker inspect <container_name> | grep -A 10 "Env"
 
 ### 端口 11434 上的连接被拒绝
 
-**症状：**无法从另一台计算机连接到 Ollama。
+**症状：** 无法从另一台计算机连接到 Ollama。
 
 **解决方案：**
-1. 确保设置了 `OLLAMA_HOST=0.0.0.0` (不仅仅是 localhost)
+1. 确保设置了 `OLLAMA_HOST=0.0.0.0`（不仅仅是 localhost）
 2. 检查防火墙规则：
    ```bash
    sudo ufw allow 11434/tcp
@@ -539,20 +539,20 @@ docker inspect <container_name> | grep -A 10 "Env"
 
 ### Nginx 返回 502 Bad Gateway
 
-**症状：**Nginx 已配置但返回 502 错误。
+**症状：** Nginx 已配置但返回 502 错误。
 
 **解决方案：**
 1. 验证 Ollama 是否正在运行：`systemctl status ollama`
 2. 检查 Ollama 是否可在本地访问：`curl http://localhost:11434/api/tags`
 3. 检查 Nginx 错误日志：`tail -f /var/log/nginx/error.log`
-4. 确保 SELinux 没有阻止连接 (在 RHEL/CentOS 上)：
+4. 确保 SELinux 没有阻止连接（在 RHEL/CentOS 上）：
    ```bash
    sudo setsebool -P httpd_can_network_connect 1
    ```
 
 ### 流式响应不起作用
 
-**症状：**响应一次性到达而不是流式传输。
+**症状：** 响应一次性到达而不是流式传输。
 
 **解决方案：**
 1. 在 Nginx location 块中添加 `proxy_buffering off;`

@@ -8,7 +8,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # Adding a DMS provider
 
-ONLYOFFICE Desktop Editors allows users to access the documents from the cloud and collaborate on them with their teammates. In this case, an Internet connection is required. Currently, users can connect the application to ONLYOFFICE DocSpace (SaaS or on-premises), Nextcloud, ownCloud, Moodle, Liferay, kDrive, or Seafile, but you can extend this list adding your own DMS.
+ONLYOFFICE Desktop Editors allows users to access the documents from the cloud and collaborate on them with their teammates. In this case, an Internet connection is required. Currently, users can connect the application to ONLYOFFICE Apps (SaaS or on-premises), Nextcloud, ownCloud, Moodle, Liferay, kDrive, or Seafile, but you can extend this list adding your own DMS.
 
 Follow the steps below to add your own document management system (DMS) to the connection list:
 
@@ -45,7 +45,7 @@ Create a *config.json* file to specify the integration parameters.
 | Parameter             | Type                   | Example                                                                                                     | Description                                                                                                                                                                       |
 |-----------------------|------------------------|-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | provider              | string                 | `"onlyoffice"`                                                                                              | The provider id used to refer to the desktop app in the JavaScript commands.                                                                                              |
-| name                  | string                 | `"ONLYOFFICE"`                                                                                              | The name displayed in the provider choice section when adding a cloud.                                                                                                    |
+| name                  | string                 | `"ONLYOFFICE"`                                                                                              | The name displayed in the **Available clouds** list.                                                                                                                      |
 | check                 | object                 | `{ "url": "status", "headers": { "X-CUSTOM-HEADER": true } }`                                               | Parameters for checking portal availability. A `GET` request is sent, after which `HTTP_STATUS_CODE = 200` is expected. The response must be returned in the JSON format. |
 | check.url             | string                 | `"status"`                                                                                                  | The URL used in the request.                                                                                                                                                      |
 | check.headers         | object                 | `{ "OCS-APIREQUEST": true }`                                                                                | The headers added to the ajax request.                                                                                                                                            |
@@ -54,8 +54,8 @@ Create a *config.json* file to specify the integration parameters.
 | editorPage            | string                 | `"/apps/onlyoffice/"` or `"regex:\/lib\/(?:[\w-]{32,})\/file\/"`                                            | The relative URL that indicates that the type of the opening file is a document. You can use regular expressions for this parameter.                                      |
 | startPage             | string                 | `"/"`                                                                                                       | The relative URL added to the entered IP or domain when creating a new connection.                                                                                        |
 | icons                 | object                 | `{ "themeLight": { "connectionsList": "./assets/listicon.svg", "buttonLogo": "./assets/buttonlogo.svg" } }` | The icons for portals. You can add icons for each UI theme type (light and dark) by specifying the `themeLight` and `themeDark` objects with the corresponding icons.     |
-| icons.connectionsList | string                 | `"./assets/listicon.svg"`                                                                                   | The path to the icon for the connection list.                                                                                                                                     |
-| icons.buttonLogo      | string                 | `"./assets/buttonlogo.svg"`                                                                                 | The path to the icon for the provider button on the connection page when the portal list is empty. This parameter is used for versions below 9.0.                                 |
+| icons.connectionsList | string                 | `"./assets/listicon.svg"`                                                                                   | The path to the icon displayed in the **Connected clouds** and **Available clouds** lists.                                                                                        |
+| icons.buttonLogo      | string                 | `"./assets/buttonlogo.svg"`                                                                                 | The path to the provider logo displayed in the **Connect to** window. In versions below 9.0, it is displayed on the provider button on the connection page when the portal list is empty. |
 
 </APITable>
 
@@ -92,20 +92,20 @@ Create a *config.json* file to specify the integration parameters.
 
 Create icons for the application page and put to the folder specified in the *config.json* file:
 
-1. The light and dark icons for the connection list. The required icon size is 36x36:
+1. The light and dark icons for the **Connected clouds** and **Available clouds** lists. The required icon size is 36x36:
 
    ![Connection list](/assets/images/desktop/connection-list.png#gh-light-mode-only)![Connection list](/assets/images/desktop/connection-list.dark.png#gh-dark-mode-only)
 
-2. The light and dark icons for the provider button on the connection page when the **Connected clouds** list is empty. The required icon size is 148x38. These icons are used in versions below 9.0:
+2. The light and dark provider logos for the **Connect to** window. The required icon size is 148x38. In versions below 9.0, these icons are displayed on the provider button on the connection page when the **Connected clouds** list is empty:
 
    ![Provider button](/assets/images/desktop/provider-button.png#gh-light-mode-only)![Provider button](/assets/images/desktop/provider-button.dark.png#gh-dark-mode-only)
 
 Supported image formats are *.png*, *.jpeg*, *.svg*. We recommend using a *.svg* file for correct display on HiDPI monitors with a 200% scale in the system.
 
-You can also add icons for each UI theme type (light and dark). In this case, create four icons (two for each theme) and add all of the to the *config.json* file.
+You can also add icons for each UI theme type (light and dark). In this case, create four icons (two for each theme) and add all of them to the *config.json* file.
 
 ## Step 4
 
 1. Launch ONLYOFFICE Desktop Editors or restart it if needed.
-2. Click ![Plus icon](/assets/images/desktop/plus.svg#gh-light-mode-only)![Plus icon](/assets/images/desktop/plus.dark.svg#gh-dark-mode-only) next to **Clouds**.
-3. In the **Connect to cloud office** window, open the list of available clouds to check if the connection works correctly.
+2. Click **Clouds** in the left sidebar.
+3. Find your provider in the **Available clouds** list and click **Connect** to check if the connection works correctly.

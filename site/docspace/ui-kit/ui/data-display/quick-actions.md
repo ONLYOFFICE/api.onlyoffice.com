@@ -156,14 +156,14 @@ export function StartHere({ onCreate }: { onCreate: (kind: string) => void }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `items` | `QuickActionItem[]` | The tiles, in the order they are drawn. An empty array renders nothing at all. |
-| `className`? | `string` | Applied to the banner, after the component's own class. |
-| `closeLabel`? | `string` | Tooltip and accessible name for the close control. |
-| `dataTestId`? | `string` | `data-testid` of the banner. The track and the controls carry ids of their own. |
-| `isLoading`? | `boolean` | Whether skeleton tiles are drawn instead of the real ones. Default: `false`. |
-| `nextLabel`? | `string` | Accessible name of the arrow that scrolls on. Required, and localized by you, unless `isLoading` is pinned to `true`. |
-| `onClose`? | `() => void` | Hides the whole banner. When omitted no close control is rendered, so a consumer that has nowhere to persist the choice keeps a carousel without an affordance that would appear to do nothing on the next load. |
-| `prevLabel`? | `string` | Accessible name of the arrow that scrolls back. Required, and localized by you, unless `isLoading` is pinned to `true`. |
+| `items` | `QuickActionItem[]` | **Required.** The tiles, in the order they are drawn. An empty array renders nothing at all. |
+| `className` | `string` | Applied to the banner, after the component's own class. |
+| `closeLabel` | `string` | Tooltip and accessible name for the close control. |
+| `dataTestId` | `string` | `data-testid` of the banner. The track and the controls carry ids of their own. |
+| `isLoading` | `boolean` | Whether skeleton tiles are drawn instead of the real ones. Default: `false`. |
+| `nextLabel` | `string` | Accessible name of the arrow that scrolls on. Required, and localized by you, unless `isLoading` is pinned to `true`. |
+| `onClose` | `() => void` | Hides the whole banner. When omitted no close control is rendered, so a consumer that has nowhere to persist the choice keeps a carousel without an affordance that would appear to do nothing on the next load. |
+| `prevLabel` | `string` | Accessible name of the arrow that scrolls back. Required, and localized by you, unless `isLoading` is pinned to `true`. |
 
 </APITable>
 

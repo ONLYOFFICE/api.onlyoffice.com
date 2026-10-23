@@ -1,6 +1,6 @@
 ---
 description: Set a "Need Review" comment on a file automatically when it is updated.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,34 +8,34 @@ import TabItem from '@theme/TabItem';
 
 # Review comment on update
 
-This example demonstrates how to automatically set a file comment to Need Review whenever a file is updated in ONLYOFFICE DocSpace.
+This example demonstrates how to automatically set a file comment to Need Review whenever a file is updated in ONLYOFFICE Apps.
 
-When DocSpace sends a webhook to your backend, the receiver:
+When ONLYOFFICE Apps sends a webhook to your backend, the receiver:
 - verifies the webhook signature (optional but recommended),
 - reads the event trigger (`event.trigger`) and file data (`payload`),
 - accepts only update triggers (for example, `file.updated`),
 - extracts `fileId` from `payload.id`,
 - loads the file info to get a version value,
-- sets the file comment to `Need Review` using the DocSpace API.
+- sets the file comment to `Need Review` using the ONLYOFFICE Apps API.
 
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 3. Expose your webhook endpoint over HTTPS in production (terminate TLS in your app or behind a reverse proxy/load balancer, and reject non-HTTPS requests). For local testing, use a secure tunnel that provides an HTTPS URL.
 
 ## Webhook configuration
 
-This example relies on DocSpace webhooks. To register and manage webhooks on your portal, see [Webhooks](/docspace/api-backend/get-started/how-it-works/webhooks.md) and the Help Center instructions: https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx.
+This example relies on ONLYOFFICE Apps webhooks. To register and manage webhooks on your portal, see [Webhooks](/docspace/api-backend/get-started/how-it-works/webhooks.md) and the Help Center instructions: https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx.
 
 - Register a webhook and enable the triggers used in this example.
 - Set the payload URL to your backend endpoint.
-- Generate/set a secret key and store it on the backend as `WEBHOOK_SECRET`. DocSpace sends the signature in the `x-docspace-signature-256` header so you can validate the request against the raw body.
+- Generate/set a secret key and store it on the backend as `WEBHOOK_SECRET`. ONLYOFFICE Apps sends the signature in the `x-docspace-signature-256` header so you can validate the request against the raw body.
 
 ## Timeouts and retries
 
-DocSpace retries failed webhook deliveries. According to the webhook docs:
+ONLYOFFICE Apps retries failed webhook deliveries. According to the webhook docs:
 
 - Up to 5 attempts are made, with exponential backoff (`2^attempt` seconds).
 - Any successful status (any 2xx) stops retries.
@@ -61,7 +61,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
   // Comment text to enforce on every update
   const NEED_REVIEW_TEXT = "Need Review";
 
-  // Put here the exact trigger names you enabled in DocSpace Webhooks
+  // Put here the exact trigger names you enabled in ONLYOFFICE Apps Webhooks
   const ALLOWED_TRIGGERS = new Set([
     "file.updated",
     // "file.versionCreated",
@@ -85,14 +85,14 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
       if (!res.ok) {
         const text = await res.text().catch(() => "");
-        console.error(`[ERROR] DocSpace request failed: ${method} ${url}`);
+        console.error(`[ERROR] ONLYOFFICE Apps request failed: ${method} ${url}`);
         console.error(`[ERROR] Status: ${res.status}, Message: ${text}`);
         return null;
       }
 
       return await res.json();
     } catch (err) {
-      console.error(`[ERROR] DocSpace request error: ${err?.message || err}`);
+      console.error(`[ERROR] ONLYOFFICE Apps request error: ${err?.message || err}`);
       return null;
     }
   }
@@ -257,7 +257,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
   # Comment text to enforce on every update
   NEED_REVIEW_TEXT = "Need Review"
 
-  # Put here the exact trigger names you enabled in DocSpace Webhooks
+  # Put here the exact trigger names you enabled in ONLYOFFICE Apps Webhooks
   ALLOWED_TRIGGERS = {
     "file.updated",
     # "file.versionCreated",
@@ -402,7 +402,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
   if __name__ == "__main__":
     port = int(os.environ.get("PORT", 3000))
-    print(f"DocSpace webhook listener: http://localhost:{port}/docspace/review-comment")
+    print(f"ONLYOFFICE Apps webhook listener: http://localhost:{port}/docspace/review-comment")
     app.run(host="0.0.0.0", port=port)
   ```
 
@@ -412,13 +412,13 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
 ## Step 1: Receive the webhook request
 
-When a webhook trigger fires, DocSpace sends an HTTP POST request to your endpoint
+When a webhook trigger fires, ONLYOFFICE Apps sends an HTTP POST request to your endpoint
 (for example, `/docspace/review-comment`).
 
 At this step, the backend:
 
 - receives the webhook request and reads its JSON body,
-- optionally verifies that the request really comes from DocSpace using the secret key configured for the webhook.
+- optionally verifies that the request really comes from ONLYOFFICE Apps using the secret key configured for the webhook.
 
 If signature validation is enabled and the check fails, the endpoint returns 401 and stops processing the request.
 

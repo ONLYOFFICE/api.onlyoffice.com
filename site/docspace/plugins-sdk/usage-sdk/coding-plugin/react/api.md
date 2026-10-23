@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/react/api.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/react/api.ts
 ---
 
 # Api
@@ -106,8 +106,8 @@ Send a GET request to the portal API.
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `path` | `string` | API path relative to the base URL, e.g. `"/files/@my"`. |
-| `params?` | `Record`\<`string`, `unknown`\> | Query string parameters. Merged with `options.params`, which loses on a conflict. |
-| `options?` | [`PluginApiOptions`](#pluginapioptions) | Headers and abort signal. |
+| `params` | `Record`\<`string`, `unknown`\> | Query string parameters. Merged with `options.params`, which loses on a conflict. |
+| `options` | [`PluginApiOptions`](#pluginapioptions) | Headers and abort signal. |
 
 ##### Returns
 
@@ -141,8 +141,8 @@ Send a POST request to the portal API.
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `path` | `string` | API path relative to the base URL. |
-| `data?` | `unknown` | Request body (JSON-serialisable). |
-| `options?` | [`PluginApiOptions`](#pluginapioptions) | Query parameters, headers and abort signal. |
+| `data` | `unknown` | Request body (JSON-serialisable). |
+| `options` | [`PluginApiOptions`](#pluginapioptions) | Query parameters, headers and abort signal. |
 
 ##### Returns
 
@@ -176,8 +176,8 @@ Send a PUT request to the portal API.
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `path` | `string` | API path relative to the base URL. |
-| `data?` | `unknown` | Request body (JSON-serialisable). |
-| `options?` | [`PluginApiOptions`](#pluginapioptions) | Query parameters, headers and abort signal. |
+| `data` | `unknown` | Request body (JSON-serialisable). |
+| `options` | [`PluginApiOptions`](#pluginapioptions) | Query parameters, headers and abort signal. |
 
 ##### Returns
 
@@ -205,8 +205,8 @@ Send a PATCH request to the portal API.
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `path` | `string` | API path relative to the base URL. |
-| `data?` | `unknown` | Request body (JSON-serialisable). |
-| `options?` | [`PluginApiOptions`](#pluginapioptions) | Query parameters, headers and abort signal. |
+| `data` | `unknown` | Request body (JSON-serialisable). |
+| `options` | [`PluginApiOptions`](#pluginapioptions) | Query parameters, headers and abort signal. |
 
 ##### Returns
 
@@ -234,8 +234,8 @@ Send a DELETE request to the portal API.
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `path` | `string` | API path relative to the base URL. |
-| `data?` | `unknown` | Request body (JSON-serialisable). Endpoints such as `DELETE /files/file/{id}` declare a required body, so it is sent for `DELETE` as it is for `PUT`. |
-| `options?` | [`PluginApiOptions`](#pluginapioptions) | Query parameters, headers and abort signal. |
+| `data` | `unknown` | Request body (JSON-serialisable). Endpoints such as `DELETE /files/file/{id}` declare a required body, so it is sent for `DELETE` as it is for `PUT`. |
+| `options` | [`PluginApiOptions`](#pluginapioptions) | Query parameters, headers and abort signal. |
 
 ##### Returns
 
@@ -269,9 +269,9 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `params?` | `Record`\<`string`, `unknown`\> | Query string parameters. `undefined` and `null` values are dropped rather than sent as empty strings. |
-| `headers?` | `Record`\<`string`, `string`\> | Extra request headers. Authentication headers are added by DocSpace and cannot be overridden here. |
-| `signal?` | `AbortSignal` | Cancels the request when the signal is aborted, e.g. from the cleanup function of the `useEffect` that started it. An aborted request rejects with a [`PluginApiError`](#pluginapierror) whose `code` is `"ABORTED"`. |
+| `params` | `Record`\<`string`, `unknown`\> | Query string parameters. `undefined` and `null` values are dropped rather than sent as empty strings. |
+| `headers` | `Record`\<`string`, `string`\> | Extra request headers. Authentication headers are added by ONLYOFFICE Apps and cannot be overridden here. |
+| `signal` | `AbortSignal` | Cancels the request when the signal is aborted, e.g. from the cleanup function of the `useEffect` that started it. An aborted request rejects with a [`PluginApiError`](#pluginapierror) whose `code` is `"ABORTED"`. |
 
 </APITable>
 
@@ -293,12 +293,12 @@ for.
 
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
-| `params?` | `Record`\<`string`, `unknown`\> | Query string parameters. `undefined` and `null` values are dropped rather than sent as empty strings. | [`PluginApiOptions`](#pluginapioptions).[`params`](#Extendedby-params?) |
-| `headers?` | `Record`\<`string`, `string`\> | Extra request headers. Authentication headers are added by DocSpace and cannot be overridden here. | [`PluginApiOptions`](#pluginapioptions).[`headers`](#Extendedby-headers?) |
-| `signal?` | `AbortSignal` | Cancels the request when the signal is aborted, e.g. from the cleanup function of the `useEffect` that started it. An aborted request rejects with a [`PluginApiError`](#pluginapierror) whose `code` is `"ABORTED"`. | [`PluginApiOptions`](#pluginapioptions).[`signal`](#Extendedby-signal?) |
+| `params` | `Record`\<`string`, `unknown`\> | Query string parameters. `undefined` and `null` values are dropped rather than sent as empty strings. | [`PluginApiOptions`](#pluginapioptions).[`params`](#Extendedby-params) |
+| `headers` | `Record`\<`string`, `string`\> | Extra request headers. Authentication headers are added by ONLYOFFICE Apps and cannot be overridden here. | [`PluginApiOptions`](#pluginapioptions).[`headers`](#Extendedby-headers) |
+| `signal` | `AbortSignal` | Cancels the request when the signal is aborted, e.g. from the cleanup function of the `useEffect` that started it. An aborted request rejects with a [`PluginApiError`](#pluginapierror) whose `code` is `"ABORTED"`. | [`PluginApiOptions`](#pluginapioptions).[`signal`](#Extendedby-signal) |
 | `path` | `string` | API path relative to the portal API base URL, e.g. `"/files/@my"`. | - |
-| `method?` | [`PluginApiMethod`](#pluginapimethod) | Defaults to `"GET"`. | - |
-| `data?` | `unknown` | Request body, JSON-serialisable. Sent with any method that accepts one, `DELETE` included — several portal endpoints require a body on `DELETE`. | - |
+| `method` | [`PluginApiMethod`](#pluginapimethod) | Defaults to `"GET"`. | - |
+| `data` | `unknown` | Request body, JSON-serialisable. Sent with any method that accepts one, `DELETE` included — several portal endpoints require a body on `DELETE`. | - |
 
 </APITable>
 
@@ -340,9 +340,9 @@ try {
 | ------ | ------ | ------ | ------ |
 | `name` | `"PluginApiError"` | - | `Error.name` |
 | `status` | `number` | HTTP status code, or `0` when the request never reached the portal. | - |
-| `code?` | `"ABORTED"` \| `"NETWORK"` \| `"INVALID_PATH"` | Why the request failed when there is no status to go by: `"ABORTED"` when the `signal` fired, `"NETWORK"` when the request never got an answer, `"INVALID_PATH"` when `path` was rejected before anything was sent. | - |
+| `code` | `"ABORTED"` \| `"NETWORK"` \| `"INVALID_PATH"` | Why the request failed when there is no status to go by: `"ABORTED"` when the `signal` fired, `"NETWORK"` when the request never got an answer, `"INVALID_PATH"` when `path` was rejected before anything was sent. | - |
 | `request` | `string` | The method and path that failed, e.g. `"PUT /files/fileops/delete"`. | - |
-| `details?` | `unknown` | The error payload the portal sent, when it sent one. | - |
+| `details` | `unknown` | The error payload the portal sent, when it sent one. | - |
 
 </APITable>
 

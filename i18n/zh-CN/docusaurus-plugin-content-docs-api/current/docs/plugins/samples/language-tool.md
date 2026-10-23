@@ -4,7 +4,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 连接 [LanguageTool（语言工具）](https://languagetool.org/) 助手，这是一个多语言语法与风格检查器，可用于检测文本中的语法、风格和拼写错误。
 
-**插件类型：** 可视化，非系统插件。
+**插件类型：** 可视化、非系统插件。
 
 **支持的编辑器：** 文档、电子表格、演示文稿。
 

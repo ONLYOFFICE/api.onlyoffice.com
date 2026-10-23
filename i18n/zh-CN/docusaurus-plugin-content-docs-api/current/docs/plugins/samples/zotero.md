@@ -4,7 +4,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 连接 Zotero 账户，用于根据所选引用格式指南将参考文献添加到文档中。
 
-**插件类型：** 可视化，非系统插件。
+**插件类型：** 可视化、非系统插件。
 
 **支持编辑器：** 文档。
 
@@ -20,11 +20,11 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 将 ONLYOFFICE 连接到 Zotero 账户
 
-1. 在 **插件** 选项卡找到该插件。  
+1. 在**插件**选项卡找到该插件。  
 2. 登录您的 Zotero 账户。  
 3. 点击插件窗口中的 **Zotero API 设置**链接。如果已登录，将可继续操作；若未登录，将显示错误信息，这时点击屏幕右上角的**登录**。  
 4. 点击**创建新的私钥**。  
-5. 填写**密钥描述**，确保勾选了 **允许库访问** 选项，然后点击**保存密钥**。  
+5. 填写**密钥描述**，确保勾选了**允许库访问**选项，然后点击**保存密钥**。  
 6. 复制新创建的密钥，粘贴到插件界面的 **API 密钥**字段，并保存。
 
 ## 使用

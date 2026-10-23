@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/plugins/IArticleButtonPlugin.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/plugins/IArticleButtonPlugin.ts
 ---
 
 # IArticleButtonPlugin
@@ -10,7 +10,7 @@ Maximum 5 items can be displayed across all plugins.
 
 ## Example
 
-The plugin class implements `IArticleButtonPlugin`. DocSpace calls
+The plugin class implements `IArticleButtonPlugin`. ONLYOFFICE Apps calls
 `getArticleButtonItems` to embed the buttons into the article sidebar.
 
 ```typescript

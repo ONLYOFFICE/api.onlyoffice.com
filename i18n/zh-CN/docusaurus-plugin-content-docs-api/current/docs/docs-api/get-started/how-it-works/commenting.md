@@ -103,9 +103,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   - `"edit": ["Group2", ""]` — 用户可以编辑来自 `Group2` 的用户以及不属于任何群组的用户所添加的评论（例如，在第三方编辑器中添加的评论）。
-   - `"remove": [""]` — 用户可以删除不属于任何群组的用户所添加的评论（例如，在第三方编辑器中添加的评论）。
-   - `"view": ""` — 用户可以查看任何用户添加的评论。
+   - `"edit": ["Group2", ""]`：用户可以编辑来自 `Group2` 的用户以及不属于任何群组的用户所添加的评论（例如，在第三方编辑器中添加的评论）。
+   - `"remove": [""]`：用户可以删除不属于任何群组的用户所添加的评论（例如，在第三方编辑器中添加的评论）。
+   - `"view": ""`：用户可以查看任何用户添加的评论。
 
 ## 电子表格中的线程式评论 {#threaded-comments-in-spreadsheets}
 

@@ -29,7 +29,7 @@ The plugin guid: `{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`.
 
 1. Open the **Plugins** tab and click the **Plugin Manager** icon.
 2. Click the **Background Plugins** button and activate the **AI** switch.
-3. Find a new **AI** tab in the top toolbar of ONLYOFFICE editors.
+3. Find a new **AI Tools** tab in the top toolbar of ONLYOFFICE editors.
 4. Choose one of the buttons:
    - **Settings**: the configuration panel to select your AI provider, enter the API key, and select one of its models;
    - **Chatbot**: start a conversation with the AI to ask questions, rewrite text, brainstorm ideas, and more;
@@ -43,7 +43,7 @@ The plugin guid: `{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`.
 
 To start using the plugin, you need to set up an AI provider:
 
-1. Go to the **AI** tab, click **Settings** to open the configuration window.
+1. Go to the **AI Tools** tab, click **Settings** to open the configuration window.
 2. Select **Edit AI models** and click **Add**.
 3. Choose an AI provider from the list or add new AI models by entering your API keys.
 4. In the row of icons, select what the model is used for: *Text*, *Images*, *Embeddings*, *Audio Processing*, *Content Moderation*, *Realtime Tasks*, *Coding Help*, *Visual Analysis*.

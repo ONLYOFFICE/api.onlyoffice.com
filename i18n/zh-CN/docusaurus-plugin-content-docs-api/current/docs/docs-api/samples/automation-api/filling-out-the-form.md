@@ -7,7 +7,7 @@ import { FormExternalToolbar } from '@site/src/components/BrowserWindow';
 
 # 填写表格
 
-使用自动化 API 从外部 UI 填写表单字段 — 从下拉列表中选择一个人员，编辑器和自定义界面中的所有字段都会自动更新。
+使用自动化 API 从外部 UI 填写表单字段——从下拉列表中选择一个人员，编辑器和自定义界面中的所有字段都会自动更新。
 
 :::info
 文档以可填写的 PDF 表单打开。您的代码调用 `connector.executeMethod()` 来读取和写入表单值。更改在编辑器和外部界面之间实时双向同步。
@@ -76,5 +76,5 @@ import { FormExternalToolbar } from '@site/src/components/BrowserWindow';
 :::note
 请注意，该连接器仅适用于 **ONLYOFFICE 文档开发者版本**。
 
-该连接器是一项需额外付费的高级功能。请参阅 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api) 了解价格详情，或联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
+该连接器是一项需额外付费的高级功能。请参阅 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)了解价格详情，或联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
 :::

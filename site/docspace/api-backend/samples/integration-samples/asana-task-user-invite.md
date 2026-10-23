@@ -1,16 +1,16 @@
 ---
-description: Invite an Asana task assignee to DocSpace.
-tags: ["DocSpace", "REST API", "Integration"]
+description: Invite an Asana task assignee to ONLYOFFICE Apps.
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 # Asana task user invite
 
-This integration automatically retrieves the email of the assignee from an Asana task and invites them to ONLYOFFICE DocSpace. It helps ensure that project contributors are granted access to collaborative workspaces without manual steps.
+This integration automatically retrieves the email of the assignee from an Asana task and invites them to ONLYOFFICE Apps. It helps ensure that project contributors are granted access to collaborative workspaces without manual steps.
 
 ## How it works
 
 - Get assignee email - Fetch the assigned user’s email from a specific Asana task.
-- Send DocSpace invitation - Use the email to invite the user to DocSpace with full workspace access.
+- Send ONLYOFFICE Apps invitation - Use the email to invite the user to ONLYOFFICE Apps with full workspace access.
 
 <details>
   <summary>Full example</summary>
@@ -18,7 +18,7 @@ This integration automatically retrieves the email of the assignee from an Asana
 ```py
 import requests
 
-# ONLYOFFICE DocSpace configuration
+# ONLYOFFICE Apps configuration
 ONLYOFFICE_API_HOST = "your-docspace.onlyoffice.com"
 ONLYOFFICE_API_KEY = "your_docspace_api_key"
 
@@ -44,7 +44,7 @@ def get_asana_assignee_email(task_gid):
         print(f"Asana task fetch error: {response.status_code}")
         return None
 
-# Step 2: Invite user to DocSpace by email
+# Step 2: Invite user to ONLYOFFICE Apps by email
 def invite_user_to_docspace(email):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/people/invite"
     payload = {
@@ -54,10 +54,10 @@ def invite_user_to_docspace(email):
     }
     response = requests.post(url, headers=ONLYOFFICE_HEADERS, json=payload)
     if response.status_code == 200:
-        print(f"User invited to DocSpace: {email}")
+        print(f"User invited to ONLYOFFICE Apps: {email}")
         return True
     else:
-        print(f"DocSpace invitation error: {response.status_code}, {response.text}")
+        print(f"ONLYOFFICE Apps invitation error: {response.status_code}, {response.text}")
         return False
 
 # Run integration
@@ -73,8 +73,8 @@ if __name__ == "__main__":
 
 ## Before you start
 
-1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
+1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual ONLYOFFICE Apps portal host and API key. Ensure you have the necessary permissions to perform user operations.
+2. Before you can make requests to the API, you need to create an ONLYOFFICE Apps API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
 3. Create a [Personal access token](https://developers.asana.com/docs/personal-access-token) in your Asana developer settings. This token will be used to authenticate API requests. Make sure the token has access to the necessary projects and tasks in your Asana workspace.
 4. Replace `your_asana_token` and `your_asana_task_gid` with your actual Asana token and task ID.
 
@@ -96,12 +96,12 @@ def get_asana_assignee_email(task_gid):
         return None
 ```
 
-## Step 2: Send an invitation to DocSpace
+## Step 2: Send an invitation to ONLYOFFICE Apps
 
 Use [`POST /api/2.0/people/invite`](/docspace/api-backend/usage-api/people/profiles/invite-users) to invite the user using their email address.
 
 ``` py
-# Step 2: Invite user to DocSpace by email
+# Step 2: Invite user to ONLYOFFICE Apps by email
 def invite_user_to_docspace(email):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/people/invite"
     payload = {
@@ -111,9 +111,9 @@ def invite_user_to_docspace(email):
     }
     response = requests.post(url, headers=ONLYOFFICE_HEADERS, json=payload)
     if response.status_code == 200:
-        print(f"User invited to DocSpace: {email}")
+        print(f"User invited to ONLYOFFICE Apps: {email}")
         return True
     else:
-        print(f"DocSpace invitation error: {response.status_code}, {response.text}")
+        print(f"ONLYOFFICE Apps invitation error: {response.status_code}, {response.text}")
         return False
 ```

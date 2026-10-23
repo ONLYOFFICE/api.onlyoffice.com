@@ -1,6 +1,6 @@
 ---
 description: Set up folders and permissions automatically when a room is created.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,9 +8,9 @@ import TabItem from '@theme/TabItem';
 
 # Auto-configuring room
 
-This example demonstrates webhook-based room provisioning in ONLYOFFICE DocSpace.
+This example demonstrates webhook-based room provisioning in ONLYOFFICE Apps.
 
-When a room is created, DocSpace sends a webhook to your backend. The backend script:
+When a room is created, ONLYOFFICE Apps sends a webhook to your backend. The backend script:
 - verifies the webhook signature,
 - checks that the event is a room creation event (event.trigger),
 - extracts the new room ID from payload,
@@ -22,21 +22,21 @@ This pattern is useful for standardized workspaces (clients, departments, projec
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 3. Expose your webhook endpoint over HTTPS in production (terminate TLS in your app or behind a reverse proxy/load balancer, and reject non-HTTPS requests). For local testing, use a secure tunnel that provides an HTTPS URL.
 
 ## Webhook configuration
 
-This example relies on DocSpace webhooks. To register and manage webhooks on your portal, see [Webhooks](/docspace/api-backend/get-started/how-it-works/webhooks.md) and the Help Center instructions: https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx.
+This example relies on ONLYOFFICE Apps webhooks. To register and manage webhooks on your portal, see [Webhooks](/docspace/api-backend/get-started/how-it-works/webhooks.md) and the Help Center instructions: https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx.
 
 - Register a webhook and enable the triggers used in this example.
 - Set the payload URL to your backend endpoint.
-- Generate/set a secret key and store it on the backend as `WEBHOOK_SECRET`. DocSpace sends the signature in the `x-docspace-signature-256` header so you can validate the request against the raw body.
+- Generate/set a secret key and store it on the backend as `WEBHOOK_SECRET`. ONLYOFFICE Apps sends the signature in the `x-docspace-signature-256` header so you can validate the request against the raw body.
 
 ## Timeouts and retries
 
-DocSpace retries failed webhook deliveries. According to the webhook docs:
+ONLYOFFICE Apps retries failed webhook deliveries. According to the webhook docs:
 
 - Up to 5 attempts are made, with exponential backoff (`2^attempt` seconds).
 - Any successful status (any 2xx) stops retries.
@@ -517,12 +517,12 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
 ## Step 1: Validate and accept the webhook request
 
-When a new room is created, DocSpace sends a notification to your webhook URL.
+When a new room is created, ONLYOFFICE Apps sends a notification to your webhook URL.
 
 At this step, the script:
 
-- receives the incoming request from DocSpace,
-- checks that the request really comes from DocSpace (using the secret key you configured),
+- receives the incoming request from ONLYOFFICE Apps,
+- checks that the request really comes from ONLYOFFICE Apps (using the secret key you configured),
 - reads the event type from `event.trigger`,
 - ignores events that are not relevant for this scenario.
 
@@ -660,7 +660,7 @@ Each folder is created inside the room container using a folder creation request
 
 ## Step 4: Build sharing rules for users and groups
 
-The script converts your internal roles into DocSpace access codes using `ROLE_TO_ACCESS`, then builds a list of share entries:
+The script converts your internal roles into ONLYOFFICE Apps access codes using `ROLE_TO_ACCESS`, then builds a list of share entries:
 - one entry per user in `USER_RULES`
 - an optional read-only entry for `HR_GROUP_ID`
 

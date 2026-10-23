@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/ISkeleton.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ISkeleton.ts
 ---
 
 # ISkeleton
@@ -50,7 +50,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | ------ | ------ | ------ |
 | `width` | `string` | Defines the skeleton width |
 | `height` | `string` | Defines the skeleton height |
-| `borderRadius?` | `string` | Defines the skeleton border radius |
-| `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
+| `borderRadius` | `string` | Defines the skeleton border radius |
+| `className` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
 </APITable>

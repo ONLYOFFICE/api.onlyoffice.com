@@ -89,6 +89,7 @@ The questions concerning editing documents using ONLYOFFICE Docs are in this sec
 - [What is the 'Callback handler' and why do I need it?](editing.md#what-is-the-callback-handler-and-why-do-i-need-it)
 - [What is the 'document.key' parameter?](editing.md#what-is-the-documentkey-parameter)
 - [How to define the mode that the file should be opened in (viewing or editing)?](editing.md#how-to-define-the-mode-that-the-file-should-be-opened-in-viewing-or-editing)
+- [How to get the form field values from a document that is open in the editor?](editing.md#how-to-get-the-form-field-values-from-a-document-that-is-open-in-the-editor)
 
 [More](editing.md)
 

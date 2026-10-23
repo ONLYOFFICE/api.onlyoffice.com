@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/tools/constants/sections.mjs
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/tools/constants/sections.mjs
 ---
 
 # Enums
@@ -20,9 +20,10 @@ Available enumerations:
 | [`Events`](Events.md) | Defines the supported event types for the plugin system. |
 | [`Files`](Files.md) | Enumerations for file types, supported extensions, and security permissions. |
 | [`Plugins`](Plugins.md) | Enumerations for plugin status and supported locales. |
-| [`Rooms`](Rooms.md) | Enumerations for DocSpace room types and search scopes. |
+| [`Rooms`](Rooms.md) | Enumerations for ONLYOFFICE Apps room types and search scopes. |
 | [`Section`](Section.md) | Defines the portal sections in which an article navigation item can appear. |
 | [`Security`](Security.md) | Defines the supported room/folder security parameters. |
 | [`SelectorType`](Selector.md) | Defines the types of selector components that can be rendered. |
+| [`UserRole`](UserRole.md) | Defines the supported user types, named as the portal names them. |
 | [`UsersType`](UsersType.md) | Defines the supported user types. |
 | [`FilterType`](Utility.md) | Enum for filter type used in file selectors. |

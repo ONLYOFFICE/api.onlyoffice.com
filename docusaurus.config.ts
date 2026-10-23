@@ -49,7 +49,7 @@ const config: Config = {
   // name goes to the llms-txt plugin below, which is where it earns its keep.
   title: 'ONLYOFFICE',
   tagline:
-    'API documentation for ONLYOFFICE Docs and ONLYOFFICE DocSpace: editor integration and configuration, plugins, macros, and the Office JavaScript API.',
+    'API documentation for ONLYOFFICE Docs and ONLYOFFICE Apps: editor integration and configuration, plugins, macros, and the Office JavaScript API.',
   favicon: 'img/favicon.ico',
 
   url: siteUrl,
@@ -296,7 +296,7 @@ const config: Config = {
         },
         {
           type: 'dropdown',
-          label: 'Docspace',
+          label: 'Apps',
           position: 'left',
           to: 'docspace',
           items: [

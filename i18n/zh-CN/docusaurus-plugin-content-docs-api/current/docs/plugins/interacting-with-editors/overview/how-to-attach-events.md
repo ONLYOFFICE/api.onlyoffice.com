@@ -78,10 +78,10 @@ Asc.plugin.detachEditorEvent("onAddComment");
 ## 选项 2：使用 attachEvent 方法 {#option-2-using-the-attachevent-method}
 
 :::danger[已废弃]
-从 8.2 版本开始，请改用 [绑定编辑器事件](#option-1-using-the-attacheditorevent-method) 方法。
+从 8.2 版本开始，请改用[绑定编辑器事件](#option-1-using-the-attacheditorevent-method)方法。
 :::
 
-1. 在 config.json 文件中，添加[事件](../../configuration/configuration.md#variationsevents) 参数，其中包含所有可用事件的数组：
+1. 在 config.json 文件中，添加[事件](../../configuration/configuration.md#variationsevents)参数，其中包含所有可用事件的数组：
 
    ``` json
    {

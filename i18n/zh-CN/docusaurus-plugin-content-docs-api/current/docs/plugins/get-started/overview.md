@@ -5,7 +5,7 @@ description: 使用 HTML、CSS 和 JavaScript 构建 ONLYOFFICE 插件，为文�
 
 # 概述
 
-ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的 Web 应用，运行在文档、电子表格、演示文稿和 PDF 编辑器中。插件可以打开面板或窗口、添加工具栏按钮和上下文菜单项，也可以在后台运行，并通过插件 API 读取和修改文档。插件可在 ONLYOFFICE 文档、ONLYOFFICE 协作空间和 ONLYOFFICE 桌面编辑器中使用。
+ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的 Web 应用，运行在文档、电子表格、演示文稿和 PDF 编辑器中。插件可以打开面板或窗口、添加工具栏按钮和上下文菜单项，也可以在后台运行，并通过插件 API 读取和修改文档。插件可在 ONLYOFFICE 文档、ONLYOFFICE Apps 和 ONLYOFFICE 桌面编辑器中使用。
 
 如果您希望直接开始编写代码，请前往[快速入门指南](quick-start.md)，或在[交互式 Playground](playground.md) 中体验。
 
@@ -64,14 +64,14 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的 Web 应用，运�
 
 ## 资源
 
-- **[API 参考](../interacting-with-editors/overview/overview.md)** - 插件方法、事件以及 `window.Asc.plugin` 对象
-- **[插件配置](../configuration/configuration.md)** - 所有 `config.json` 参数
-- **[交互式 Playground](playground.md)** - 无需安装即可运行插件代码
-- **[插件示例](/samples/?doctype=docs&text=plugin)** - 可供参考的可运行插件
-- **[UI 组件库](https://onlyoffice.github.io/storybook/static/)** - 与编辑器风格一致的控件
-- **[官方插件源代码](https://github.com/ONLYOFFICE/sdkjs-plugins)** - 由 ONLYOFFICE 维护的完整插件
-- **[常见问题](../more-information/faq.md)** - 常见问题解答
-- **[更新日志](../more-information/changelog.md)** - 各方法和事件的引入版本
+- **[API 参考](../interacting-with-editors/overview/overview.md)**：插件方法、事件以及 `window.Asc.plugin` 对象
+- **[插件配置](../configuration/configuration.md)**：所有 `config.json` 参数
+- **[交互式 Playground](playground.md)**：无需安装即可运行插件代码
+- **[插件示例](/samples/?doctype=docs&text=plugin)**：可供参考的可运行插件
+- **[UI 组件库](https://onlyoffice.github.io/storybook/static/)**：与编辑器风格一致的控件
+- **[官方插件源代码](https://github.com/ONLYOFFICE/sdkjs-plugins)**：由 ONLYOFFICE 维护的完整插件
+- **[常见问题](../more-information/faq.md)**：常见问题解答
+- **[更新日志](../more-information/changelog.md)**：各方法和事件的引入版本
 
 ## 下一步 {#next-steps}
 

@@ -12,11 +12,11 @@ import Video from '@site/src/components/Video/Video';
 
 ## 提示词
 
-- 在第 2 张幻灯片上添加一个带有文本"Important Point"的矩形
+- 在第 2 张幻灯片上添加一个带有文本“Important Point”的矩形
 - 在当前幻灯片上添加一个星形
-- 添加一个带有文本"Key Message"的圆角矩形
-- 添加一个带有文本"Decision Point"的菱形
-- 添加一个带有文本"Next Step"的右箭头
+- 添加一个带有文本“Key Message”的圆角矩形
+- 添加一个带有文本“Decision Point”的菱形
+- 添加一个带有文本“Next Step”的右箭头
 
 ## 函数注册 {#function-registration}
 

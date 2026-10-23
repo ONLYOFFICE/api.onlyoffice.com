@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/react/actions.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/react/actions.ts
 ---
 
 # PluginActions
@@ -237,7 +237,7 @@ open and switches to the tab.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `tab?` | `string` | The tab to show: one of the portal's own (`"info_details"`, `"info_members"`, `"info_history"`, `"info_share"`) or the key of an [info panel item](../interfaces/items/IInfoPanelItem.md) this plugin registered. Always pass it: left out, the portal stores an invalid view, opens the panel on its first tab and the user's remembered tab is lost. |
+| `tab` | `string` | The tab to show: one of the portal's own (`"info_details"`, `"info_members"`, `"info_history"`, `"info_share"`) or the key of an [info panel item](../interfaces/items/IInfoPanelItem.md) this plugin registered. Always pass it: left out, the portal stores an invalid view, opens the panel on its first tab and the user's remembered tab is lost. |
 
 #### Returns
 
@@ -406,7 +406,7 @@ updateContextMenuItems(): void;
 Redraw the plugin's context menu items.
 
 Every `update*Items` action below works the same way: mutate the item on the
-plugin instance first, then call this so DocSpace re-reads the collection.
+plugin instance first, then call this so ONLYOFFICE Apps re-reads the collection.
 They exist because item metadata — labels, icons, visibility — lives on the
 plugin class, outside the React tree, where `setState` cannot reach it.
 

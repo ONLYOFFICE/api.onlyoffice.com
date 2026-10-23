@@ -4,7 +4,7 @@ sidebar_position: -6
 
 # 插入外部数据
 
-下图和步骤说明了在ONLYOFFICE 文档中如何通过外部链接将一个电子表格的数据插入到另一个电子表格中。
+下图和步骤说明了在 ONLYOFFICE 文档中如何通过外部链接将一个电子表格的数据插入到另一个电子表格中。
 
 ![插入外部数据](/assets/images/editor/insert-external-data.svg)
 
@@ -37,9 +37,9 @@ sidebar_position: -6
 
 3. 当用户从源电子表格复制数据时，剪贴板会接收到以下内容：
 
-   - 工作表名称和单元格范围——稍后用于刷新复制的数据；
+   - 工作表名称和单元格范围：稍后用于刷新复制的数据；
    - [`document.referenceData`](../../usage-api/config/document/document.md#referencedata)对象——用于验证是否可以通过外部链接向目标电子表格插入数据；
-   - 文件名——用于在编辑器中显示公式。
+   - 文件名：用于在编辑器中显示公式。
 
 4. 创建要插入外部数据的目标电子表格。
 
@@ -55,7 +55,7 @@ sidebar_position: -6
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-6. 如果剪贴板包含步骤3中的源电子表格元数据，并且目标电子表格配置包含`onRequestReferenceData`处理程序，则*粘贴链接*按钮将出现在粘贴对话框中。
+6. 如果剪贴板包含步骤 3 中的源电子表格元数据，并且目标电子表格配置包含`onRequestReferenceData`处理程序，则*粘贴链接*按钮将出现在粘贴对话框中。
 
    ![粘贴链接](/assets/images/editor/paste-link.png#gh-light-mode-only)![粘贴链接](/assets/images/editor/paste-link.dark.png#gh-dark-mode-only)
 
@@ -71,13 +71,13 @@ sidebar_position: -6
    | fileName  | string | new\.xlsx | 从中复制数据的文件名。     |
    | sheetName | string | Sheet1    | 从中复制数据的工作表名称。 |
 
-   数据更新请求将发送到源文件URL。
+   数据更新请求将发送到源文件 URL。
 
    :::note
    您也可以手动输入此格式的公式——外部数据将以相同方式插入。但在这种情况下，`onRequestReferenceData`事件仅使用`path`参数触发。
    :::
 
-8. 当用户点击*数据*选项卡中*外部链接*对话框的*更新值*按钮以刷新源文件数据时，[`onRequestReferenceData`](../../usage-api/config/events.md#onrequestreferencedata)事件将触发。`data`参数包含一个对象，其中包含来自源文件的唯一文件数据、文件路径或名称以及文件URL。
+8. 当用户点击*数据*选项卡中*外部链接*对话框的*更新值*按钮以刷新源文件数据时，[`onRequestReferenceData`](../../usage-api/config/events.md#onrequestreferencedata)事件将触发。`data`参数包含一个对象，其中包含来自源文件的唯一文件数据、文件路径或名称以及文件 URL。
 
    :::note
    要将数据发送到[`setReferenceData`](../../usage-api/methods.md#setreferencedata)方法，请首先通过`referenceData`搜索文件。如果该字段不存在或找不到文件，则回退到`path`或`link`参数。
@@ -118,7 +118,7 @@ sidebar_position: -6
 
 1. 在初始化配置中指定[`onRequestOpen`](../../usage-api/config/events.md#onrequestopen)事件处理程序，以显示*打开源*按钮。当用户点击*打开源*打开外部链接时，此事件将触发。
 
-   `data`参数包含一个对象，其中包含唯一文件数据、文件路径和新浏览器选项卡名称。要在新选项卡中打开引用的外部文件，请使用源URL和`windowName`调用[`window.open`](https://developer.mozilla.org/en-US/docs/Web/API/Window/open)。
+   `data`参数包含一个对象，其中包含唯一文件数据、文件路径和新浏览器选项卡名称。要在新选项卡中打开引用的外部文件，请使用源 URL 和`windowName`调用[`window.open`](https://developer.mozilla.org/en-US/docs/Web/API/Window/open)。
 
    ![打开源](/assets/images/editor/open-source.png#gh-light-mode-only)![打开源](/assets/images/editor/open-source.dark.png#gh-dark-mode-only)
 

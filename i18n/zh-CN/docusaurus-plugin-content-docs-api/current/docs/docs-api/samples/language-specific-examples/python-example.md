@@ -19,7 +19,7 @@ Python 集成示例是一个小型 Django 应用程序，它可以列出文件�
 - **libmagic**：`python-magic` 包需要此库，请参阅其[安装说明](https://github.com/ahupp/python-magic#installation)。
 - **Git**：请参阅[官方网站](https://git-scm.com/downloads)。
 
-## 步骤1. 下载示例
+## 步骤 1. 下载示例
 
 克隆[示例仓库](https://github.com/ONLYOFFICE/document-server-integration/tree/main/web/documentserver-example/python)，进入 Python 示例目录，并获取其子模块：
 
@@ -29,7 +29,7 @@ cd document-server-integration/web/documentserver-example/python
 git submodule update --init --depth 1 .
 ```
 
-## 步骤2. 配置连接
+## 步骤 2. 配置连接
 
 本示例没有配置文件，而是从环境变量中读取设置。因此，请在下一步运行示例所用的终端中设置这些变量：
 
@@ -49,7 +49,7 @@ export EXAMPLE_URL=http://example.com:8000
 
 如果您想尝试配置编辑器，请修改 `src/views/actions.py` 文件中 `edit` 函数里的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
-## 步骤3. 安装依赖项并运行示例
+## 步骤 3. 安装依赖项并运行示例
 
 创建虚拟环境，将依赖项安装到其中，然后启动服务器：
 
@@ -66,13 +66,13 @@ python manage.py runserver 0.0.0.0:8000
 
 ## 使用 Docker 运行
 
-本示例还包含 Docker Compose 文件，可以将示例与其自带的 ONLYOFFICE 文档一起启动，因此您只需要安装带有 Docker Compose 的 [Docker](https://docs.docker.com/get-started/get-docker/)。完成步骤1后，在示例目录中运行：
+本示例还包含 Docker Compose 文件，可以将示例与其自带的 ONLYOFFICE 文档一起启动，因此您只需要安装带有 Docker Compose 的 [Docker](https://docs.docker.com/get-started/get-docker/)。完成步骤 1 后，在示例目录中运行：
 
 ```sh
 docker compose --file compose-base.yml --file compose-prod.yml up --detach --build
 ```
 
-在浏览器中打开 `http://localhost`。如需更改步骤2中的设置，请编辑 `compose-base.yml` 文件中 `example` 服务的 `environment` 部分。如果您在此处更改了 `JWT_SECRET`，请同时更改 `documentserver` 服务的该设置。
+在浏览器中打开 `http://localhost`。如需更改步骤 2 中的设置，请编辑 `compose-base.yml` 文件中 `example` 服务的 `environment` 部分。如果您在此处更改了 `JWT_SECRET`，请同时更改 `documentserver` 服务的该设置。
 
 ## 故障排除
 

@@ -6,7 +6,7 @@
 
 Get the current API key
 
-Returns the API key that authenticated this very request, letting the holder of a key find out what it is allowed to do without knowing its ID. The key is identified by the `Authorization` header of the call itself, so the request has to be sent as `Bearer sk-...`; a session authenticated in any other way has no key to report and this operation is not usable for it. The call is read-only and returns one entry, with the same fields as `GET api/2.0/keys` and without the secret - read `permissions` for the granted scopes, `expiresAt` for the expiry and `isActive` for the state. To look at a key other than the one in use, call `GET api/2.0/keys` instead.
+Returns the API key that authenticated this very request, letting the holder of a key find out what it is allowed to do without knowing its ID. The key is identified by the `Authorization` header of the call itself, so the request has to be sent as `Bearer sk-...`; a session authenticated in any other way, by a cookie or by a user token, has no key to report and is rejected with 400. The call is read-only and returns one entry, with the same fields as `GET api/2.0/keys` and without the secret - read `permissions` for the granted scopes, `expiresAt` for the expiry and `isActive` for the state. To look at a key other than the one in use, call `GET api/2.0/keys` instead.
 
 ## Parameters
 This endpoint does not need any parameter.
@@ -16,10 +16,10 @@ This endpoint does not need any parameter.
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The API key that authenticated this request | [**ApiKeyResponseWrapper**](../models/api-key-response-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The request has no Authorization header, as with a session authenticated by a cookie | - | - |
-| **500** | The Authorization header carries a token that is not an API key of this portal | - | - |
+| **400** | The request is not authenticated by an API key, as with a session authenticated by a cookie or by a user token | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

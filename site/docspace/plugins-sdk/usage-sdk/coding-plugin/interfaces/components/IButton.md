@@ -1,5 +1,5 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/components/IButton.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IButton.ts
 ---
 
 # IButton
@@ -56,13 +56,13 @@ import APITable from '@site/src/components/APITable/APITable';
 | `label` | `string` | Defines the button text |
 | `size` | [`ButtonSize`](#buttonsize) | Defines the button size. The normal size is equal to 36x40 px on the Desktop and Touchscreen devices. Can be: "extraSmall", "small", "normal", "medium". The default value is "extraSmall" |
 | `onClick` | () => `void` \| [`IMessage`](../utils.md#imessage) \| `Promise`\<`void` \| [`IMessage`](../utils.md#imessage)\> | Sets a function which specifies an action initiated upon clicking the button |
-| `primary?` | `boolean` | Specifies if the button is primary or not. If the button is primary, it is colored blue |
-| `scale?` | `boolean` | Specifies if the button width will be scaled to 100% or not |
-| `isLoading?` | `boolean` | Specifies if the button will be displayed as a loader icon or not |
-| `isDisabled?` | `boolean` | Specifies if the button is disabled or not. The disabled button is blurred |
-| `withLoadingAfterClick?` | `boolean` | Specifies whether to set the "isLoading" state to the button after it is clicked until the action is completed |
-| `disableWhileRequestRunning?` | `boolean` | Specifies whether to set the "isDisabled" state for the button when the "withLoadingAfterClick" parameter is set to true, and it is clicked either on the page or in the dialog box |
-| `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
+| `primary` | `boolean` | Specifies if the button is primary or not. If the button is primary, it is colored blue |
+| `scale` | `boolean` | Specifies if the button width will be scaled to 100% or not |
+| `isLoading` | `boolean` | Specifies if the button will be displayed as a loader icon or not |
+| `isDisabled` | `boolean` | Specifies if the button is disabled or not. The disabled button is blurred |
+| `withLoadingAfterClick` | `boolean` | Specifies whether to set the "isLoading" state to the button after it is clicked until the action is completed |
+| `disableWhileRequestRunning` | `boolean` | Specifies whether to set the "isDisabled" state for the button when the "withLoadingAfterClick" parameter is set to true, and it is clicked either on the page or in the dialog box |
+| `className` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
 </APITable>
 

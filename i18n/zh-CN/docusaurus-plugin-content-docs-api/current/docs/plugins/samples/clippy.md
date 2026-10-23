@@ -9,9 +9,9 @@ import Video from '@site/src/components/Video/Video';
 
 在文档编辑器中添加一个回形针助手。
 
-**插件类型：**可视化、非系统插件。  
+**插件类型：** 可视化、非系统插件。  
 
-**支持的编辑器：**文档、表格、演示文稿。
+**支持的编辑器：** 文档、表格、演示文稿。
 
 <Video src="/assets/images/plugins/webm/clippy" />
 
@@ -37,8 +37,8 @@ GitHub 仓库：[clippy](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master
 
 4. 第三方服务：
 
-   - [jQuery](https://jquery.com) - 一款快速简洁的 JavaScript 库，简化了 HTML 文档遍历、事件处理、动画和 Ajax 交互，适用于快速网页开发。许可协议：[MIT License](https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/clippy/licenses/jQuery.license)。
-   - [clippy.js](https://www.smore.com/clippy-js) - 微软智能助手（又名 Clippy 和他的朋友们）的完整 JavaScript 实现，适用于嵌入任何网站。许可协议：[MIT License](https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/clippy/licenses/clippy.license)。
+   - [jQuery](https://jquery.com)：一款快速简洁的 JavaScript 库，简化了 HTML 文档遍历、事件处理、动画和 Ajax 交互，适用于快速网页开发。许可协议：[MIT License](https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/clippy/licenses/jQuery.license)。
+   - [clippy.js](https://www.smore.com/clippy-js)：微软智能助手（又名 Clippy 和他的朋友们）的完整 JavaScript 实现，适用于嵌入任何网站。许可协议：[MIT License](https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/clippy/licenses/clippy.license)。
 
 ## 配置
 

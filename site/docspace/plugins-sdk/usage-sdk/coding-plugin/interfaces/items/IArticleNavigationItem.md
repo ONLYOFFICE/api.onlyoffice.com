@@ -1,11 +1,11 @@
 ---
-custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/release/v4.0.0/src/interfaces/items/IArticleNavigationItem.ts
+custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/items/IArticleNavigationItem.ts
 ---
 
 # IArticleNavigationItem
 
 Describes a navigation item that will be embedded in the article sidebar as a first-class
-navigation entry. When the user clicks the item, DocSpace navigates to a dedicated plugin
+navigation entry. When the user clicks the item, ONLYOFFICE Apps navigates to a dedicated plugin
 section page where the `component` is rendered.
 
 Items are registered by a plugin implementing
@@ -15,9 +15,11 @@ item through `updateArticleNavigationItem`, return an
 [`Actions.updateArticleNavigationItems`](../../enums/Actions.md#updatearticlenavigationitems)
 to apply the change to the sidebar.
 
+![article-navigation-item](/assets/images/docspace/article-navigation-item.png#gh-light-mode-only)![article-navigation-item](/assets/images/docspace/article-navigation-item.dark.png#gh-dark-mode-only)
+
 :::info
 The section page is a full portal page, not a panel. The component is
-rendered inside the DocSpace application tree, so it inherits the portal theme.
+rendered inside the ONLYOFFICE Apps application tree, so it inherits the portal theme.
 See the [`article-navigation` sample](https://github.com/ONLYOFFICE/docspace-plugin-sdk/tree/master/samples/article-navigation)
 for a working build configuration.
 :::
@@ -29,7 +31,7 @@ Navigation item with a React section
 ```tsx
 import { useEffect, useState } from "react";
 import { usePluginAPI } from "@onlyoffice/docspace-plugin-sdk/react";
-import { IArticleNavigationItem, Section, UsersType } from "@onlyoffice/docspace-plugin-sdk";
+import { IArticleNavigationItem, Section, UserRole } from "@onlyoffice/docspace-plugin-sdk";
 
 type Room = { id: number; title: string };
 
@@ -63,14 +65,14 @@ const overviewItem: IArticleNavigationItem = {
   label: "Rooms overview",
   icon: "icon.svg",
   component: RoomsOverview,
-  usersTypes: [UsersType.owner, UsersType.docSpaceAdmin],
+  usersTypes: [UserRole.owner, UserRole.fullAdmin],
   appears: [Section.Files]
 };
 ```
 
 Renaming the item from inside its own section
 
-The component mutates the item through the plugin instance and then asks DocSpace
+The component mutates the item through the plugin instance and then asks ONLYOFFICE Apps
 to redraw the sidebar with `Actions.updateArticleNavigationItems`.
 
 ```tsx
@@ -109,10 +111,10 @@ import APITable from '@site/src/components/APITable/APITable';
 | ------ | ------ | ------ |
 | `key` | `string` | The unique item identifier used to recognize the item. It becomes a part of the plugin section URL, so it must be unique across all the installed plugins: two items sharing the same key override each other. |
 | `label` | `string` | The text label displayed next to the icon when the sidebar is expanded. |
-| `icon` | `string` | The item display icon. The icon image must be uploaded to the "assets" folder. Only the image name with the extension must be specified in this field. The required icon size is 20x20 px. Otherwise, it will be compressed to this size. |
+| `icon` | `string` | The item display icon. The icon image must be uploaded to the "assets" folder. Only the image name with the extension must be specified in this field. The icon must be an SVG file: it is drawn at 16x16 px, and its `path` and `circle` fills take the sidebar icon color of the current theme. |
 | `component` | `ComponentType` | A React component rendered on the plugin section page when this navigation item is active. The component can use `usePluginActions`, `usePluginAPI` and other hooks from `@onlyoffice/docspace-plugin-sdk/react`, and owns its own loading state — fetch in a `useEffect` and render a placeholder until the data arrives. |
-| `usersTypes?` | [`UsersType`](../../enums/UsersType.md)[] | The types of users who will see this navigation item. If omitted, the item is visible to all user types. |
-| `devices?` | [`Devices`](../../enums/Devices.md)[] | The device types on which this navigation item is displayed. If omitted, the item is visible on all device types. |
-| `appears?` | [`Section`](../../enums/Section.md)[] | The sections in which this navigation item is displayed. If omitted, the item is visible in all sections. |
+| `usersTypes` | ([`UserRole`](../../enums/UserRole.md) \| [`UsersType`](../../enums/UsersType.md))[] | The types of users who will see this navigation item. If omitted, the item is visible to all user types. |
+| `devices` | [`Devices`](../../enums/Devices.md)[] | The device types on which this navigation item is displayed. If omitted, the item is visible on all device types. |
+| `appears` | [`Section`](../../enums/Section.md)[] | The sections in which this navigation item is displayed. If omitted, the item is visible in all sections. |
 
 </APITable>

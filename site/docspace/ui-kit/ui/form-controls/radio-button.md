@@ -119,23 +119,23 @@ export function RolePicker() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `autoFocus`? | `boolean` | Whether the input takes focus on mount. |
-| `className`? | `string` | Applied to the label. |
-| `classNameInput`? | `string` | Applied to the visually hidden `<input>`. |
-| `fontSize`? | `string` | Font size of the text beside the button. |
-| `fontWeight`? | `number \| string` | Font weight of that text. |
-| `id`? | `string` | Applied to the label, not to the input. |
-| `isChecked`? | `boolean` | Whether the button is filled in. It seeds the component's own state and is re-applied whenever it changes, so it works as a controlled value. |
-| `isDisabled`? | `boolean` | Whether the input is disabled and the label greyed out. |
-| `label`? | `ReactNode` | What is written beside the button. `value` is used when this is left out. |
-| `name`? | `string` | `name` of the input. Buttons sharing one behave as a single choice. |
-| `onChange`? | `ChangeEventHandler<HTMLInputElement, HTMLInputElement>` | Called on every change of the input. Giving it takes the component's own state handling out of the loop, so `isChecked` becomes the only thing that moves the dot — and `onClick` stops firing. |
-| `onClick`? | `(e: React.ChangeEvent<HTMLInputElement> \| React.MouseEvent<HTMLInputElement>) => void` | Called when the button is clicked — but only while `onChange` is not given. Passing `onChange` replaces the internal handler and this never fires. |
-| `orientation`? | `RadioButtonOrientation` | Which side the gap is put on. It only moves `spacing`; it does not lay anything out on its own. Default: `"vertical"`. |
-| `spacing`? | `string` | Gap to the neighbouring button, as a CSS length: `margin-inline-start` when horizontal, `margin-block-end` when vertical. There is no gap at all without it — the buttons touch. |
-| `style`? | `CSSProperties` | Applied to the label. |
-| `testId`? | `string` | `data-testid` of the label. Default: `"radio-button"`. |
-| `value`? | `number \| readonly string[] \| string` | `value` of the input, and the label when `label` is left out. It is what a group's `onClick` reads back off the event. |
+| `autoFocus` | `boolean` | Whether the input takes focus on mount. |
+| `className` | `string` | Applied to the label. |
+| `classNameInput` | `string` | Applied to the visually hidden `<input>`. |
+| `fontSize` | `string` | Font size of the text beside the button. |
+| `fontWeight` | `number \| string` | Font weight of that text. |
+| `id` | `string` | Applied to the label, not to the input. |
+| `isChecked` | `boolean` | Whether the button is filled in. It seeds the component's own state and is re-applied whenever it changes, so it works as a controlled value. |
+| `isDisabled` | `boolean` | Whether the input is disabled and the label greyed out. |
+| `label` | `ReactNode` | What is written beside the button. `value` is used when this is left out. |
+| `name` | `string` | `name` of the input. Buttons sharing one behave as a single choice. |
+| `onChange` | `ChangeEventHandler<HTMLInputElement, HTMLInputElement>` | Called on every change of the input. Giving it takes the component's own state handling out of the loop, so `isChecked` becomes the only thing that moves the dot — and `onClick` stops firing. |
+| `onClick` | `(e: React.ChangeEvent<HTMLInputElement> \| React.MouseEvent<HTMLInputElement>) => void` | Called when the button is clicked — but only while `onChange` is not given. Passing `onChange` replaces the internal handler and this never fires. |
+| `orientation` | `RadioButtonOrientation` | Which side the gap is put on. It only moves `spacing`; it does not lay anything out on its own. Default: `"vertical"`. |
+| `spacing` | `string` | Gap to the neighbouring button, as a CSS length: `margin-inline-start` when horizontal, `margin-block-end` when vertical. There is no gap at all without it — the buttons touch. |
+| `style` | `CSSProperties` | Applied to the label. |
+| `testId` | `string` | `data-testid` of the label. Default: `"radio-button"`. |
+| `value` | `number \| readonly string[] \| string` | `value` of the input, and the label when `label` is left out. It is what a group's `onClick` reads back off the event. |
 
 </APITable>
 

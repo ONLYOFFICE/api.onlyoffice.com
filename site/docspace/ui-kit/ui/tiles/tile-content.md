@@ -93,11 +93,11 @@ export function FileName({ name }: { name: string }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children` | `ReactElement<{ containerWidth?: string; }, string \| JSXElementConstructor<any>>` | A single element — not a string and not a list. Its `containerWidth` prop, if it has one, becomes the width of the wrapper around it. |
-| `className`? | `string` | Added after the component's own class on the outer element. |
-| `id`? | `string` | Value of `id` on the outer element. |
-| `onClick`? | `() => void` | Called on any click inside the content area. The type declares no parameter, but the handler is attached to the element as it is, so it receives the React mouse event. |
-| `style`? | `CSSProperties` | Inline style of the outer element. |
+| `children` | `ReactElement<{ containerWidth?: string; }, string \| JSXElementConstructor<any>>` | **Required.** A single element — not a string and not a list. Its `containerWidth` prop, if it has one, becomes the width of the wrapper around it. |
+| `className` | `string` | Added after the component's own class on the outer element. |
+| `id` | `string` | Value of `id` on the outer element. |
+| `onClick` | `() => void` | Called on any click inside the content area. The type declares no parameter, but the handler is attached to the element as it is, so it receives the React mouse event. |
+| `style` | `CSSProperties` | Inline style of the outer element. |
 
 </APITable>
 

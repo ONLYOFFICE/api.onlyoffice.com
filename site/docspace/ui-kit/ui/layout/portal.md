@@ -114,9 +114,9 @@ export function FloatingNotice({ text }: { text: string }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `element` | `ReactNode` | What to render in the container. It is a node, not children: the component renders nothing of its own around it. |
-| `appendTo`? | `HTMLElement \| null` | Element to append the content to. It is read on every render, so a value that is null on the first render — a ref — falls back to `document.body`; hold the container in state instead. Default: `null`. |
-| `visible`? | `boolean` | Whether the content is rendered. Turning it off unmounts the content, so anything it held is lost. Default: `true`. |
+| `element` | `ReactNode` | **Required.** What to render in the container. It is a node, not children: the component renders nothing of its own around it. |
+| `appendTo` | `HTMLElement \| null` | Element to append the content to. It is read on every render, so a value that is null on the first render — a ref — falls back to `document.body`; hold the container in state instead. Default: `null`. |
+| `visible` | `boolean` | Whether the content is rendered. Turning it off unmounts the content, so anything it held is lost. Default: `true`. |
 
 </APITable>
 

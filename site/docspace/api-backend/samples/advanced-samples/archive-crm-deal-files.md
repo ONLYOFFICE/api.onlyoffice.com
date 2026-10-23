@@ -1,6 +1,6 @@
 ---
 description: Archive all client documents when a CRM deal is marked as closed.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -12,10 +12,10 @@ This example shows how to automatically archive all documents for a client when 
 
 When your CRM sets the deal status to **Closed**, it calls your backend (webhook handler) with:
 
-- `CLIENT_ROOM_ID` — the client room ID in DocSpace (it is also a folder ID in the Files API),
+- `CLIENT_ROOM_ID` — the client room ID in ONLYOFFICE Apps (it is also a folder ID in the Files API),
 - `ARCHIVE_ROOT_FOLDER_ID` — the ID of the `/Archive` folder (parent for `/Archive/<ClientName>`),
 - `CLIENT_NAME` — client name to use as the archive folder title,
-- optional `GUEST_USER_ID` — a DocSpace guest user ID to delete (to revoke access).
+- optional `GUEST_USER_ID` — an ONLYOFFICE Apps guest user ID to delete (to revoke access).
 
 The script then:
 
@@ -26,7 +26,7 @@ The script then:
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 ## Concurrency and locking
@@ -69,7 +69,7 @@ In production, use a **distributed lock** (for example, Redis/DB) keyed by `CLIE
 
   const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-  // Basic DocSpace request helper
+  // Basic ONLYOFFICE Apps request helper
   async function docspaceRequest(path: string, method: string = "GET", body: any = null) {
     const url = `${API_HOST}${path}`;
 
@@ -82,14 +82,14 @@ In production, use a **distributed lock** (for example, Redis/DB) keyed by `CLIE
 
       if (!res.ok) {
         const text = await res.text();
-        console.log(`DocSpace request failed: ${method} ${url}`);
+        console.log(`ONLYOFFICE Apps request failed: ${method} ${url}`);
         console.log(`Status: ${res.status}, Message: ${text}`);
         return null;
       }
 
       return res.json();
     } catch (err: any) {
-      console.log(`DocSpace request error: ${err?.message || err}`);
+      console.log(`ONLYOFFICE Apps request error: ${err?.message || err}`);
       return null;
     }
   }
@@ -330,18 +330,18 @@ In production, use a **distributed lock** (for example, Redis/DB) keyed by `CLIE
     with _LOCK_GUARD:
       _ROOM_LOCKS.pop(room_id, None)
 
-  # Basic DocSpace request helper
+  # Basic ONLYOFFICE Apps request helper
   def docspace_request(method, path, *, json_body = None):
     url = f"{API_HOST}{path}"
 
     try:
       resp = requests.request(method.upper(), url, headers=HEADERS, json=json_body, timeout=30)
     except Exception as e:
-      print(f"DocSpace request error: {e}")
+      print(f"ONLYOFFICE Apps request error: {e}")
       return None
 
     if not (200 <= resp.status_code < 300):
-      print(f"DocSpace request failed: {method} {url}")
+      print(f"ONLYOFFICE Apps request failed: {method} {url}")
       print(f"Status: {resp.status_code}, Message: {resp.text}")
       return None
 
