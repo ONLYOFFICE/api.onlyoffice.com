@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 为了使示例能够正常工作，请确保满足以下两个条件：
 
-1. 已安装ONLYOFFICE Document Builder。有关更多信息，请访问[安装页面](/docs/document-builder/get-started/installing.md)。
+1. 已安装 ONLYOFFICE Document Builder。有关更多信息，请访问[安装页面](/docs/document-builder/get-started/installing.md)。
 2. 您将要存储下载的示例的目录具有一般编辑权限，以便保存由Document Builder创建的文件。
 
 ##  Hello World示例

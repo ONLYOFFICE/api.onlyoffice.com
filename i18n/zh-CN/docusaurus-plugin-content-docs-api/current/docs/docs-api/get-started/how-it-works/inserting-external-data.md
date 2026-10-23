@@ -4,7 +4,7 @@ sidebar_position: -6
 
 # 插入外部数据
 
-下图和步骤说明了在ONLYOFFICE 文档中如何通过外部链接将一个电子表格的数据插入到另一个电子表格中。
+下图和步骤说明了在 ONLYOFFICE 文档中如何通过外部链接将一个电子表格的数据插入到另一个电子表格中。
 
 ![插入外部数据](/assets/images/editor/insert-external-data.svg)
 

@@ -12,9 +12,9 @@ sidebar_label: iOS
 
 ![iOS 测试样本集成示意图](/assets/images/editor/ios-test-sample.png)
 
-### 打开 ONLYOFFICE 编辑器
+### 打开ONLYOFFICE 编辑器
 
-1. 下载并安装ONLYOFFICE 文档[企业版](https://www.onlyoffice.com/zh/docs-enterprise?from=api)或[开发者版](https://www.onlyoffice.com/zh/developer-edition?from=api)。
+1. 下载并安装 ONLYOFFICE 文档[企业版](https://www.onlyoffice.com/zh/docs-enterprise?from=api)或[开发者版](https://www.onlyoffice.com/zh/developer-edition?from=api)。
 
 2. 从 [GitHub](https://github.com/ONLYOFFICE/editors-webview-ios) 下载 iOS 移动演示示例。
 
@@ -166,11 +166,11 @@ func webView(_ webView: WKWebView,
 
 ## 基于 ONLYOFFICE 文档 API 的集成
 
-此示例展示如何使用 WKWebView 打开 ONLYOFFICE 编辑器，并通过 [API 文档](../../basic-concepts.md)和[配置示例](../../try-docs/try-docs.md)中描述的编辑器配置来实现。
+此示例展示如何使用 WKWebView 打开ONLYOFFICE 编辑器，并通过 [API 文档](../../basic-concepts.md)和[配置示例](../../try-docs/try-docs.md)中描述的编辑器配置来实现。
 
 ![通过 api 的 iOS 集成](/assets/images/editor/ios-api-config.png)
 
-### 打开 ONLYOFFICE 编辑器
+### 打开ONLYOFFICE 编辑器
 
 1. 下载并安装 ONLYOFFICE 文档[企业版](https://www.onlyoffice.com/docs-enterprise?from=api)或[开发者版](https://www.onlyoffice.com/developer-edition?from=api)。
 
@@ -277,7 +277,7 @@ func webView(_ webView: WKWebView,
 
 9. 在 Xcode 工具栏中，选择一个构建方案和一个运行应用程序的设备。然后，选择**产品 -> 运行**，或点击项目工具栏中的**运行**按钮来构建并运行你的代码。
 
-10. 在应用程序的主屏幕上，选择**使用 API 配置**选项，以展示如何使用 API 文档和配置示例中描述的编辑器配置来打开 ONLYOFFICE 移动网页编辑器。
+10. 在应用程序的主屏幕上，选择**使用 API 配置**选项，以展示如何使用 API 文档和配置示例中描述的编辑器配置来打开ONLYOFFICE 移动网页编辑器。
 
 11. 在下一页中，选择一个配置示例，以在 WKWebView 组件中打开生成的 HTML。
 

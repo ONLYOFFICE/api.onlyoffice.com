@@ -12,9 +12,9 @@ sidebar_label: Android
 
 ![通过测试示例的 Android 集成](/assets/images/editor/android-test-sample.png)
 
-### 打开 ONLYOFFICE 编辑器
+### 打开ONLYOFFICE 编辑器
 
-1. 下载并安装ONLYOFFICE 文档[企业版](https://www.onlyoffice.com/zh/docs-enterprise?from=api)或[开发者版](https://www.onlyoffice.com/zh/developer-edition?from=api)。
+1. 下载并安装 ONLYOFFICE 文档[企业版](https://www.onlyoffice.com/zh/docs-enterprise?from=api)或[开发者版](https://www.onlyoffice.com/zh/developer-edition?from=api)。
 
 2. 从 [GitHub](https://github.com/ONLYOFFICE/editors-webview-android) 下载 Android 移动演示示例。
 

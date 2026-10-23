@@ -9,7 +9,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # React
 
-ONLYOFFICE 文档 React [组件](https://github.com/ONLYOFFICE/document-editor-react) 将ONLYOFFICE 文档集成到 [React](https://react.dev/) 项目。该组件支持 React 16.9 及更高版本，包括 React 19。每个版本的更改列表发布在 [Releases](https://github.com/ONLYOFFICE/document-editor-react/releases) 选项卡中。
+ONLYOFFICE 文档 React [组件](https://github.com/ONLYOFFICE/document-editor-react) 将 ONLYOFFICE 文档集成到 [React](https://react.dev/) 项目。该组件支持 React 16.9 及更高版本，包括 React 19。每个版本的更改列表发布在 [Releases](https://github.com/ONLYOFFICE/document-editor-react/releases) 选项卡中。
 
 ## 先决条件
 

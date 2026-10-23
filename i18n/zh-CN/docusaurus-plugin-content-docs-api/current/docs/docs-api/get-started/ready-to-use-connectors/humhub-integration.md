@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # HumHub 集成
 
-这个[模块](https://github.com/ONLYOFFICE/onlyoffice-humhub)允许用户借助ONLYOFFICE 文档在[HumHub](https://www.humhub.com/)中编辑办公文档。
+这个[模块](https://github.com/ONLYOFFICE/onlyoffice-humhub)允许用户借助 ONLYOFFICE 文档在[HumHub](https://www.humhub.com/)中编辑办公文档。
 
 该模块可在官方的[HumHub应用市场](https://marketplace.humhub.com/module/onlyoffice)获取。
 
@@ -18,9 +18,9 @@ sidebar_custom_props:
 
 ## 安装 ONLYOFFICE 文档
 
-您需要一个ONLYOFFICE 文档（文档服务器）实例，该实例必须能从HumHub和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向HumHub发送POST请求。
+您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从HumHub和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向HumHub发送POST请求。
 
-使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动ONLYOFFICE 文档实例的最简单方法。
+使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动 ONLYOFFICE 文档实例的最简单方法。
 
 ## 安装HumHub ONLYOFFICE模块
 
@@ -30,7 +30,7 @@ sidebar_custom_props:
 
 要配置该模块，请进入**管理->模块**。找到ONLYOFFICE模块并点击**配置**。
 
-从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE 文档的访问，保障安全性和数据完整性。在HumHub配置页面指定您自己的JWT**密钥**。在ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在HumHub配置页面指定您自己的JWT**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 工作原理
 
@@ -48,14 +48,14 @@ ONLYOFFICE集成遵循此处记录的API规范：[这里](../basic-concepts.md)�
 
    - **url**：ONLYOFFICE 文档用于下载文档的URL；
    - **callbackUrl**：ONLYOFFICE 文档用于通知文档编辑状态的URL；
-   - **key**：用于指示ONLYOFFICE 文档是否需要重新下载文档的随机MD5哈希值；
+   - **key**：用于指示 ONLYOFFICE 文档是否需要重新下载文档的随机MD5哈希值；
    - **title**：文档标题（名称）；
    - **id**：用户标识；
    - **name**：用户名。
 
 6. HumHub获取该对象，并从*views/open/index.php*模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。
 
-7. 客户端浏览器向ONLYOFFICE 文档的JavaScript库发出请求，并将包含上述属性的DocEditor配置发送给ONLYOFFICE 文档。
+7. 客户端浏览器向 ONLYOFFICE 文档的JavaScript库发出请求，并将包含上述属性的DocEditor配置发送给 ONLYOFFICE 文档。
 
 8. 然后，ONLYOFFICE 文档从HumHub下载文档，用户开始编辑。
 

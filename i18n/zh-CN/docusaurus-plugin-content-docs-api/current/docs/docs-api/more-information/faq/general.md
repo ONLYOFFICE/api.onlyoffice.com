@@ -14,9 +14,9 @@ sidebar_position: -12
 
 每个API方法的详细描述可在更大的**文档**模块中找到。所有方法都在相应的部分中描述，它们的列表在[高级参数](../../usage-api/advanced-parameters.md)部分中可以找到。
 
-## 如何查看ONLYOFFICE 文档的当前版本号？ {#how-to-find-out-the-current-version-number-of-onlyoffice-docs}
+## 如何查看 ONLYOFFICE 文档的当前版本号？ {#how-to-find-out-the-current-version-number-of-onlyoffice-docs}
 
-当前的ONLYOFFICE 文档版本号可在文档编辑器、演示文稿编辑器或电子表格编辑器的**关于**页面上找到，位于徽标和编辑器名称的正下方。
+当前的 ONLYOFFICE 文档版本号可在文档编辑器、演示文稿编辑器或电子表格编辑器的**关于**页面上找到，位于徽标和编辑器名称的正下方。
 
 您可以使用 API 向 **文档命令服务**发送 POST 请求。将 `c` 参数的值设为 [version](../../additional-api/command-service/version.md)，在请求正文中作为 JSON 对象发送：
 
@@ -37,7 +37,7 @@ sidebar_position: -12
 
 有关与**文档命令服务**交互以及使用各种命令执行此操作的更多详细信息，请访问[此页面](../../additional-api/command-service/command-service.md)。
 
-## 我想从 default.json 配置文件中更改一些 ONLYOFFICE 文档参数。我该怎么做才能使我的更改在更新后不会丢失？ {#i-want-to-change-some-onlyoffice-docs-parameters-from-the-defaultjson-configuration-file-how-can-i-do-that-so-that-my-changes-were-not-lost-after-update}
+## 我想从 default.json 配置文件中更改一些ONLYOFFICE 文档参数。我该怎么做才能使我的更改在更新后不会丢失？ {#i-want-to-change-some-onlyoffice-docs-parameters-from-the-defaultjson-configuration-file-how-can-i-do-that-so-that-my-changes-were-not-lost-after-update}
 
 ONLYOFFICE 文档的所有主要设置都存储在 `default.json` 配置文件中，该文件位于 `/etc/onlyoffice/documentserver/` 文件夹（适用于 Linux）或 `%ProgramFiles%\ONLYOFFICE\DocumentServer\config\`（适用于 Windows）中。在同一文件夹中还有特定于平台的 `production.json` 文件，其中存储了与 Linux 或 Windows 相关的设置。
 

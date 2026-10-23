@@ -6,7 +6,7 @@ sidebar_position: -19
 
 **文档编辑器**可以显示文本文档、电子表格、演示文稿和PDF的版本历史记录。版本数据本身由**文档存储服务**存储——每次编辑会话结束后，ONLYOFFICE 文档会返回变更信息，集成商将其与文档一起保存。然后，**文档编辑器**在侧面板中将此历史记录显示为版本列表，用户可以选择任何版本进行预览。
 
-以下图表和步骤解释了在ONLYOFFICE 文档中查看文档历史记录的工作方式。
+以下图表和步骤解释了在 ONLYOFFICE 文档中查看文档历史记录的工作方式。
 
 ![文档历史](/assets/images/editor/viewing-history.svg)
 
@@ -159,7 +159,7 @@ sidebar_position: -19
 
 ## 突出显示更改 {#highlighting-changes}
 
-如果文档版本是使用**文档编辑器**创建的，则在查看历史记录时可以突出显示该版本中的各个更改。要启用此功能，**文档存储服务**必须保存ONLYOFFICE 文档在[保存](./saving-file.md)每次编辑会话时返回的额外数据。
+如果文档版本是使用**文档编辑器**创建的，则在查看历史记录时可以突出显示该版本中的各个更改。要启用此功能，**文档存储服务**必须保存 ONLYOFFICE 文档在[保存](./saving-file.md)每次编辑会话时返回的额外数据。
 
 :::note
 当服务器版本更新时，**文档编辑器**不会使用`changes`数据来突出显示历史记录中的更改。它只会在`changesurl`参数中返回已更改的文档。
@@ -224,7 +224,7 @@ sidebar_position: -19
   ```
 
   :::warning
-  `changesurl`请求是在浏览器中从添加的具有`documentserver`域的iframe中发出的，其中`documentserver`是安装了ONLYOFFICE 文档的服务器名称。为了正常运行，必须允许跨源HTTP请求（CORS）。这可以通过使用`Access-Control-Allow-Origin`标头来实现。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的ONLYOFFICE云，并使用其公共IP地址或公共DNS，这些可以在云控制台的**实例**部分找到。
+  `changesurl`请求是在浏览器中从添加的具有`documentserver`域的iframe中发出的，其中`documentserver`是安装了 ONLYOFFICE 文档的服务器名称。为了正常运行，必须允许跨源HTTP请求（CORS）。这可以通过使用`Access-Control-Allow-Origin`标头来实现。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的ONLYOFFICE云，并使用其公共IP地址或公共DNS，这些可以在云控制台的**实例**部分找到。
   :::
 
   ![变更目录](/assets/images/editor/changesurl.png)

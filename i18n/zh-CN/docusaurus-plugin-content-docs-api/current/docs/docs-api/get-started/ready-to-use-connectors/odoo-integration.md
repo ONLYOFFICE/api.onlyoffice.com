@@ -9,7 +9,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="wkLTlJpmLQg"/>
 
-该[应用程序](https://github.com/ONLYOFFICE/onlyoffice-odoo)允许用户在[Odoo](https://www.odoo.com/)的“文档”模块中，借助ONLYOFFICE 文档进行办公文档的编辑与协作。
+该[应用程序](https://github.com/ONLYOFFICE/onlyoffice-odoo)允许用户在[Odoo](https://www.odoo.com/)的“文档”模块中，借助 ONLYOFFICE 文档进行办公文档的编辑与协作。
 
 ## 功能特性
 
@@ -17,15 +17,15 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 - 仅支持查看的文档格式如下：CSV、DJVU、DOC、DOCXF、DOT、DPS、DPT、EPUB、ET、ETT、FB2、FODP、FODS、FODT、HTM、HTML、HWP、HWPX、KEY、MD、MHT、MHTML、NUMBERS、ODG、ODP、ODS、ODT、OFORM、OTP、OTS、OTT、OXPS、PAGES、POT、PPS、PPT、RTF、STW、SXC、SXI、SXW、TXT、VSDM、VSDX、VSSM、VSSX、VSTM、VSTX、WPS、WPT、XLS、XLT、XML、XPS。
 - 该应用程序会在文档库中为Office文档创建一个新的**在ONLYOFFICE中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回Odoo。
 
-## 安装ONLYOFFICE 文档
+## 安装 ONLYOFFICE 文档
 
-您需要一个ONLYOFFICE 文档（文档服务器）实例，该实例必须能从Odoo和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向Odoo发送POST请求。
+您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从Odoo和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向Odoo发送POST请求。
 
-使用[Docker](https://github.com/onlyoffice/Docker-DocumentServer)是启动ONLYOFFICE 文档实例的最简单方法。
+使用[Docker](https://github.com/onlyoffice/Docker-DocumentServer)是启动 ONLYOFFICE 文档实例的最简单方法。
 
 ## 安装Odoo ONLYOFFICE集成应用程序
 
-要在Odoo中使用ONLYOFFICE 文档，必须执行以下步骤：
+要在Odoo中使用 ONLYOFFICE 文档，必须执行以下步骤：
 
 **方法1**：从管理面板安装
 
@@ -63,7 +63,7 @@ ONLYOFFICE演示模板仅会添加到已安装的Odoo模块中（指ONLYOFFICE�
 
 ## 配置Odoo ONLYOFFICE集成应用程序
 
-要配置该应用程序，进入**设置**。在左侧边栏找到**ONLYOFFICE**并点击。指定已安装的ONLYOFFICE 文档的URL：
+要配置该应用程序，进入**设置**。在左侧边栏找到**ONLYOFFICE**并点击。指定已安装的 ONLYOFFICE 文档的URL：
 
 ```sh
 https://<documentserver>/
@@ -72,7 +72,7 @@ https://<documentserver>/
 其中，**文档服务器地址**是安装了**ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和Odoo服务器访问。Odoo服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 :::warning
-从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE 文档的访问，保障安全性和数据完整性。在Odoo配置页面指定您自己的**密钥**。在ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在Odoo配置页面指定您自己的**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 :::
 
 ## 工作原理
@@ -94,7 +94,7 @@ ONLYOFFICE集成遵循[此处](../basic-concepts.md)记录的API规范。
 :::
 
 :::note
-如果您计划在Odoo中部署可填写表单工作流，请确保您的ONLYOFFICE 文档版本支持PDF表单。有关您环境（社区版、企业版、云版）中支持的最低版本，请查看[ONLYOFFICE发布说明](https://github.com/ONLYOFFICE/DocumentServer/releases)或联系支持团队。
+如果您计划在Odoo中部署可填写表单工作流，请确保您的 ONLYOFFICE 文档版本支持PDF表单。有关您环境（社区版、企业版、云版）中支持的最低版本，请查看[ONLYOFFICE发布说明](https://github.com/ONLYOFFICE/DocumentServer/releases)或联系支持团队。
 :::
 
 在[此处](https://github.com/ONLYOFFICE/onlyoffice-odoo)下载Odoo的ONLYOFFICE应用程序。

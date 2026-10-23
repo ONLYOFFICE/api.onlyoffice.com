@@ -55,7 +55,7 @@ sidebar_position: -3
 
 ## 如何保存创建的文档？ {#how-to-save-the-created-document}
 
-请参阅[保存文件](../../get-started/how-it-works/saving-file.md)部分以了解文件保存在ONLYOFFICE 文档中是如何工作的，以及保存创建的文档需要什么。
+请参阅[保存文件](../../get-started/how-it-works/saving-file.md)部分以了解文件保存在 ONLYOFFICE 文档中是如何工作的，以及保存创建的文档需要什么。
 
 ## 如何将打开的文档保存为另一种文档文件类型？ {#how-to-save-the-opened-document-to-another-document-file-type}
 
