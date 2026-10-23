@@ -25,10 +25,10 @@ import APITable from '@site/src/components/APITable/APITable';
 | ------ | ------ | ------ |
 | `id` | `string` \| `number` | File, folder or room ID: a number, or a string in third-party storage. |
 | `title` | `string` | Display name including extension, e.g. `"Report Q4.docx"`. |
-| `fileExst?` | `string` | File extension with the dot, e.g. `".docx"` — the spelling the portal stores and [`FilesExst`](../enums/Files.md) uses, so it compares directly against that enum. Present only for files. |
-| `isFolder?` | `boolean` | `true` when the selection is a folder (not a room). |
-| `isRoom?` | `boolean` | `true` when the selection is a room. |
-| `roomType?` | `string` | Room type, e.g. `"custom-room"` — a [`RoomsType`](../enums/Rooms.md#roomstype) value, so it compares directly against that enum. Present only for rooms. |
+| `fileExst` | `string` | File extension with the dot, e.g. `".docx"` — the spelling the portal stores and [`FilesExst`](../enums/Files.md) uses, so it compares directly against that enum. Present only for files. |
+| `isFolder` | `boolean` | `true` when the selection is a folder (not a room). |
+| `isRoom` | `boolean` | `true` when the selection is a room. |
+| `roomType` | `string` | Room type, e.g. `"custom-room"` — a [`RoomsType`](../enums/Rooms.md#roomstype) value, so it compares directly against that enum. Present only for rooms. |
 
 </APITable>
 

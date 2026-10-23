@@ -89,21 +89,21 @@ import APITable from '@site/src/components/APITable/APITable';
 | ------ | ------ | ------ |
 | `value` | `string` | Defines the textarea value. |
 | `onChange` | (`value`: `string`) => `void` \| [`IMessage`](../utils.md#imessage) | Sets a function which is triggered whenever the textarea is changed. |
-| `placeholder?` | `string` | Defines the textarea placeholder. |
-| `isDisabled?` | `boolean` | Specifies whether the textarea is disabled. |
-| `isReadOnly?` | `boolean` | Specifies whether the textarea displays the read-only content. |
-| `hasError?` | `boolean` | Specifies whether to indicate that there is an error in the textarea. |
-| `maxLength?` | `number` | Defines the maximum value length in the textarea. |
-| `name?` | `string` | Defines the textarea HTML "name" property. |
-| `tabIndex?` | `number` | Defines the textarea HTML "tabindex" property. |
-| `fontSize?` | `number` | Defines the textarea font size. |
-| `heightTextArea?` | `string` \| `number` | Defines the textarea height. |
-| `isJSONField?` | `boolean` | Specifies whether the textarea is prettified for JSON and the line numeration is added. |
-| `enableCopy?` | `boolean` | Specifies whether the "Copy" icon is displayed in the textarea. |
-| `hasNumeration?` | `boolean` | Specifies whether the numeration is inserted into the textarea. |
-| `isFullHeight?` | `boolean` | Specifies whether the height of the textarea content is calculated depending on the number of lines. |
-| `heightScale?` | `boolean` | Specifies whether the textarea has a height scale. |
-| `copyInfoText?` | `boolean` | Specifies whether the toast / information text will be displayed when copying. |
-| `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
+| `placeholder` | `string` | Defines the textarea placeholder. |
+| `isDisabled` | `boolean` | Specifies whether the textarea is disabled. |
+| `isReadOnly` | `boolean` | Specifies whether the textarea displays the read-only content. |
+| `hasError` | `boolean` | Specifies whether to indicate that there is an error in the textarea. |
+| `maxLength` | `number` | Defines the maximum value length in the textarea. |
+| `name` | `string` | Defines the textarea HTML "name" property. |
+| `tabIndex` | `number` | Defines the textarea HTML "tabindex" property. |
+| `fontSize` | `number` | Defines the textarea font size. |
+| `heightTextArea` | `string` \| `number` | Defines the textarea height. |
+| `isJSONField` | `boolean` | Specifies whether the textarea is prettified for JSON and the line numeration is added. |
+| `enableCopy` | `boolean` | Specifies whether the "Copy" icon is displayed in the textarea. |
+| `hasNumeration` | `boolean` | Specifies whether the numeration is inserted into the textarea. |
+| `isFullHeight` | `boolean` | Specifies whether the height of the textarea content is calculated depending on the number of lines. |
+| `heightScale` | `boolean` | Specifies whether the textarea has a height scale. |
+| `copyInfoText` | `boolean` | Specifies whether the toast / information text will be displayed when copying. |
+| `className` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
 </APITable>

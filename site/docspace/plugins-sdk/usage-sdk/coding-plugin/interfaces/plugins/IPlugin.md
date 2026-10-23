@@ -78,7 +78,7 @@ Update the plugin status.
 
 `void`
 
-#### Remarks:
+#### Remarks
 
 The portal does not watch the field: return
 [`Actions.updateStatus`](../../enums/Actions.md#updatestatus) to apply a
@@ -97,7 +97,7 @@ The method is called on the portal side to read the plugin status:
 
 [`PluginStatus`](../../enums/Plugins.md#pluginstatus)
 
-#### Remarks:
+#### Remarks
 
 Read after `onLoadCallback`, after the stored settings reach
 [`setAdminPluginSettingsValue`](ISettingsPlugin.md#setadminpluginsettingsvalue),
@@ -132,9 +132,9 @@ import APITable from '@site/src/components/APITable/APITable';
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `status` | [`PluginStatus`](../../enums/Plugins.md#pluginstatus) | The plugin status: [`active`](../../enums/Plugins.md#active) while the plugin's items belong in the interface, [`hide`](../../enums/Plugins.md#hide) while they do not. |
-| `language?` | [`PluginLocale`](../../enums/Plugins.md#pluginlocale) | The plugin language |
-| `setLanguage?` | (`language`: [`PluginLocale`](../../enums/Plugins.md#pluginlocale)) => `void` | The method is called on the portal side with the portal language, right before every `onLoadCallback`. **Remarks:** It is not a change notification: switching the interface language loads the plugin afresh. |
-| `getLanguage?` | () => [`PluginLocale`](../../enums/Plugins.md#pluginlocale) | The method is called on the portal side to get the plugin language, under which the plugin list shows the manifest's `nameLocale` and `descriptionLocale` — the interface language when it is not implemented. |
+| `language` | [`PluginLocale`](../../enums/Plugins.md#pluginlocale) | The plugin language |
+| `setLanguage` | (`language`: [`PluginLocale`](../../enums/Plugins.md#pluginlocale)) => `void` | The method is called on the portal side with the portal language, right before every `onLoadCallback`. **Remarks:** It is not a change notification: switching the interface language loads the plugin afresh. |
+| `getLanguage` | () => [`PluginLocale`](../../enums/Plugins.md#pluginlocale) | The method is called on the portal side to get the plugin language, under which the plugin list shows the manifest's `nameLocale` and `descriptionLocale` — the interface language when it is not implemented. |
 | `onLoadCallback` | () => `Promise`\<`void`\> | Callback the portal awaits each time it loads the plugin, before reading the status and registering the items. **Remarks:** A throw stops the plugin from registering anything and is reported to the administrator in the plugin settings. |
 
 </APITable>

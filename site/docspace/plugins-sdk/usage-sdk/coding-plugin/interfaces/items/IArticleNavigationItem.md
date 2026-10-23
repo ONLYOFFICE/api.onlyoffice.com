@@ -113,8 +113,8 @@ import APITable from '@site/src/components/APITable/APITable';
 | `label` | `string` | The text label displayed next to the icon when the sidebar is expanded. |
 | `icon` | `string` | The item display icon. The icon image must be uploaded to the "assets" folder. Only the image name with the extension must be specified in this field. The icon must be an SVG file: it is drawn at 16x16 px, and its `path` and `circle` fills take the sidebar icon color of the current theme. |
 | `component` | `ComponentType` | A React component rendered on the plugin section page when this navigation item is active. The component can use `usePluginActions`, `usePluginAPI` and other hooks from `@onlyoffice/docspace-plugin-sdk/react`, and owns its own loading state — fetch in a `useEffect` and render a placeholder until the data arrives. |
-| `usersTypes?` | ( \| [`UserRole`](../../enums/UserRole.md) \| [`UsersType`](../../enums/UsersType.md))[] | The types of users who will see this navigation item. If omitted, the item is visible to all user types. |
-| `devices?` | [`Devices`](../../enums/Devices.md)[] | The device types on which this navigation item is displayed. If omitted, the item is visible on all device types. |
-| `appears?` | [`Section`](../../enums/Section.md)[] | The sections in which this navigation item is displayed. If omitted, the item is visible in all sections. |
+| `usersTypes` | ([`UserRole`](../../enums/UserRole.md) \| [`UsersType`](../../enums/UsersType.md))[] | The types of users who will see this navigation item. If omitted, the item is visible to all user types. |
+| `devices` | [`Devices`](../../enums/Devices.md)[] | The device types on which this navigation item is displayed. If omitted, the item is visible on all device types. |
+| `appears` | [`Section`](../../enums/Section.md)[] | The sections in which this navigation item is displayed. If omitted, the item is visible in all sections. |
 
 </APITable>
