@@ -28,7 +28,7 @@ ONLYOFFICE Apps MCP 服务器允许桌面编辑器中的 AI 聊天与您的 ONLY
 ## 配置
 
 :::note
-以下步骤适用于 10.0 之前的 ONLYOFFICE 桌面编辑器版本。从 10.0 版本开始，MCP 服务器在 **AI Tools** → **Settings** → **MCP Servers** 中配置。有关最新步骤，请参阅[连接到 ONLYOFFICE 桌面编辑器](/docspace/mcp-server/getting-started/clients#connect-to-onlyoffice-desktop-editors)。
+以下步骤适用于 10.0 之前的 ONLYOFFICE 桌面编辑器版本。从 10.0 版本开始，MCP 服务器在 **AI 工具** → **设置** → **MCP 服务器**中配置。有关最新步骤，请参阅[连接到 ONLYOFFICE 桌面编辑器](/docspace/mcp-server/getting-started/clients#connect-to-onlyoffice-desktop-editors)。
 :::
 
 ### 步骤 1：访问 MCP 配置
