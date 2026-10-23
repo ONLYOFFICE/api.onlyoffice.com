@@ -134,7 +134,13 @@ For plugins created with an SDK 2.x template:
 5. Change the build script in *package.json*:
 
    ```json
-   "build": "vite build && npx build-docspace-plugin"
+   {
+     "scripts": {
+       "build": "vite build && npx build-docspace-plugin",
+       ...
+     },
+     ...
+   }
    ```
 
 6. Update *package.json* and *src/index.ts*:
