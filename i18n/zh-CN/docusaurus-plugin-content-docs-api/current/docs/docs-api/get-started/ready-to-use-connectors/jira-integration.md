@@ -91,11 +91,11 @@ ONLYOFFICE 集成遵循此处记录的 API 规范：[这里](../basic-concepts.m
 
 4. Jira 准备一个包含以下属性的 JSON 对象：
 
-   - **url** - ONLYOFFICE 文档用于下载文档的临时链接；
-   - **callbackUrl** - ONLYOFFICE 文档用于通知文档编辑状态的 URL；
-   - **docserviceApiUrl** - 客户端需要回复给 ONLYOFFICE 文档的 URL（由*files.docservice.url.api*属性提供）；
-   - **key** - 用于指示 ONLYOFFICE 文档是否需要重新下载文档的 UUID；
-   - **title** - 文档标题（名称）。
+   - **url**：ONLYOFFICE 文档用于下载文档的临时链接；
+   - **callbackUrl**：ONLYOFFICE 文档用于通知文档编辑状态的 URL；
+   - **docserviceApiUrl**：客户端需要回复给 ONLYOFFICE 文档的 URL（由*files.docservice.url.api*属性提供）；
+   - **key**：用于指示 ONLYOFFICE 文档是否需要重新下载文档的 UUID；
+   - **title**：文档标题（名称）。
 
 5. Jira 获取该对象，并从freemarker模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。
 

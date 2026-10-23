@@ -44,14 +44,14 @@ GitHub 仓库地址：[highlightcode](https://github.com/ONLYOFFICE/onlyoffice.g
 
 5. 第三方服务：
 
-   - [Highlight.js 库](https://highlightjs.org/) - 用 JavaScript 编写的语法高亮库。许可证：[BSD 3-Clause](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/Highlight.license)。
-   - [Spectrum.js](http://bgrins.github.io/spectrum/) - 基于 jQuery 的颜色选择器插件。许可证：[MIT 许可证](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/spectrum.license)。
-   - [jQuery](https://jquery.com) - 快速且简洁的 JavaScript 库，简化 HTML 文档遍历、事件处理、动画和 Ajax 交互。许可证：[MIT 许可证](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/jQuery.license)。
-   - [Select2](https://select2.org/) - 支持搜索、标签、远程数据集、无限滚动等功能的可定制选择框。许可证：[MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/Select2.license)。
-   - [js-beautify.js](https://github.com/beautify-web/js-beautify) - 代码格式化库（支持 CSS、HTML、JavaScript）。许可证：[MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/js-beautify.license)。
-   - [prettier.js](https://github.com/prettier/prettier) - 有意见的代码格式化工具。许可证：[MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/prettier.license)。
-   - [prettier-plugin-php.js](https://github.com/prettier/plugin-php) - 为 Prettier 增加 PHP 语言支持的插件。许可证：[MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/prettier%40plugin-php.license)。
-   - [xml-formatter.js](https://github.com/chrisbottin/xml-formatter) - 将 XML 转换为易读格式（格式化输出），同时尊重 *xml:space* 属性。许可证：[MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/xml-formatter.license)。
+   - [Highlight.js 库](https://highlightjs.org/)：用 JavaScript 编写的语法高亮库。许可证：[BSD 3-Clause](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/Highlight.license)。
+   - [Spectrum.js](http://bgrins.github.io/spectrum/)：基于 jQuery 的颜色选择器插件。许可证：[MIT 许可证](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/spectrum.license)。
+   - [jQuery](https://jquery.com)：快速且简洁的 JavaScript 库，简化 HTML 文档遍历、事件处理、动画和 Ajax 交互。许可证：[MIT 许可证](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/jQuery.license)。
+   - [Select2](https://select2.org/)：支持搜索、标签、远程数据集、无限滚动等功能的可定制选择框。许可证：[MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/Select2.license)。
+   - [js-beautify.js](https://github.com/beautify-web/js-beautify)：代码格式化库（支持 CSS、HTML、JavaScript）。许可证：[MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/js-beautify.license)。
+   - [prettier.js](https://github.com/prettier/prettier)：有意见的代码格式化工具。许可证：[MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/prettier.license)。
+   - [prettier-plugin-php.js](https://github.com/prettier/plugin-php)：为 Prettier 增加 PHP 语言支持的插件。许可证：[MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/prettier%40plugin-php.license)。
+   - [xml-formatter.js](https://github.com/chrisbottin/xml-formatter)：将 XML 转换为易读格式（格式化输出），同时尊重 *xml:space* 属性。许可证：[MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/xml-formatter.license)。
 
 ## 配置
 

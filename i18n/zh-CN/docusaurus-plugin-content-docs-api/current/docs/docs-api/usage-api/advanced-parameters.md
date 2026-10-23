@@ -6,20 +6,20 @@ sidebar_position: -5
 
 传递给 [`DocsAPI.DocEditor`](./doceditor.md) 构造函数的[配置对象](./config/config.md)包含以下主要部分：
 
-[`config`](./config/config.md) - 根部分，包含文档类型、平台类型和显示尺寸；
+[`config`](./config/config.md)：根部分，包含文档类型、平台类型和显示尺寸；
 
-- [`document`](./config/document/document.md) - 包含文档参数（标题、网址、文件类型等）；
+- [`document`](./config/document/document.md)：包含文档参数（标题、网址、文件类型等）；
 
-  - [`info`](./config/document/info.md) - 包含文档元数据（所有者、文件夹、上传日期、共享设置）；
-  - [`permissions`](./config/document/permissions.md) - 定义文档访问权限（编辑、下载、评论、打印等）；
+  - [`info`](./config/document/info.md)：包含文档元数据（所有者、文件夹、上传日期、共享设置）；
+  - [`permissions`](./config/document/permissions.md)：定义文档访问权限（编辑、下载、评论、打印等）；
 
-- [`editorConfig`](./config/editor/editor.md) - 定义编辑器界面参数：打开模式、语言、回调 URL 等；
+- [`editorConfig`](./config/editor/editor.md)：定义编辑器界面参数：打开模式、语言、回调 URL 等；
 
-  - [`customization`](./config/editor/customization/customization-standard-branding.md) - 允许自定义编辑器界面：品牌、按钮、链接、徽标和其他 UI 元素；
-  - [`embedded`](./config/editor/embedded.md) - 定义嵌入模式控件的行为（当 type 为 embedded 时使用）；
-  - [`plugins`](./config/editor/plugins.md) - 将 [plugins](../../plugins/get-started/overview.md) 连接到 ONLYOFFICE 文档，供所有编辑器用户使用；
+  - [`customization`](./config/editor/customization/customization-standard-branding.md)：允许自定义编辑器界面：品牌、按钮、链接、徽标和其他 UI 元素；
+  - [`embedded`](./config/editor/embedded.md)：定义嵌入模式控件的行为（当 type 为 embedded 时使用）；
+  - [`plugins`](./config/editor/plugins.md)：将 [plugins](../../plugins/get-started/overview.md) 连接到 ONLYOFFICE 文档，供所有编辑器用户使用；
 
-- [`events`](./config/events.md) - 文档操作触发的事件处理程序列表（加载、编辑、保存等）。
+- [`events`](./config/events.md)：文档操作触发的事件处理程序列表（加载、编辑、保存等）。
 
 包含所有可用参数的完整 `config`：
 

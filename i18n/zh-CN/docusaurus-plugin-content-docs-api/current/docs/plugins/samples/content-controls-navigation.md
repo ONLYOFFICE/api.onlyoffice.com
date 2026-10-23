@@ -40,7 +40,7 @@ GitHub 仓库：[example_work_with_content_controls_navigation](https://github.c
 
 3. 第三方服务：
 
-   - [jQuery](https://jquery.com) - 一款简洁快速的 JavaScript 库，用于简化 HTML 文档遍历、事件处理、动画及 Ajax 交互。许可证：[MIT License](https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/example_work_with_content_controls_navigation/licenses/jQuery.license)。
+   - [jQuery](https://jquery.com)：一款简洁快速的 JavaScript 库，用于简化 HTML 文档遍历、事件处理、动画及 Ajax 交互。许可证：[MIT License](https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/example_work_with_content_controls_navigation/licenses/jQuery.license)。
 
 ## 配置
 

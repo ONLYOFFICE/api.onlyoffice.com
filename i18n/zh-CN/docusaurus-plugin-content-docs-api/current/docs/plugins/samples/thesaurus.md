@@ -39,8 +39,8 @@ GitHub 仓库：[thesaurus](https://github.com/ONLYOFFICE/onlyoffice.github.io/t
 
 5. 第三方服务：
 
-   - [jQuery](https://jquery.com) - 一款快速简洁的 JavaScript 库，可简化 HTML 文档遍历、事件处理、动画和 Ajax 交互。许可证：[MIT License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/thesaurus/licenses/jQuery.license)。
-   - [Big Huge Thesaurus](https://words.bighugelabs.com/) - 为应用和网站提供同义词和反义词的开发者友好型 API。许可证：[Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0)。
+   - [jQuery](https://jquery.com)：一款快速简洁的 JavaScript 库，可简化 HTML 文档遍历、事件处理、动画和 Ajax 交互。许可证：[MIT License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/thesaurus/licenses/jQuery.license)。
+   - [Big Huge Thesaurus](https://words.bighugelabs.com/)：为应用和网站提供同义词和反义词的开发者友好型 API。许可证：[Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0)。
 
 ## 配置
 

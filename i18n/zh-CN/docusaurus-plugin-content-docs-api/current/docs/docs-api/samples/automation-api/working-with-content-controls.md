@@ -27,11 +27,11 @@ import { ContentControlsExternalToolbar } from '@site/src/components/BrowserWind
 
 2. 当用户点击类型标签时，将根据类型调用相应的方法：
 
-    - [AddContentControl](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControl.md) — 用于纯文本（块或内联）
-    - [AddContentControlDatePicker](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControlDatePicker.md) — 用于日期选择器
-    - [AddContentControlPicture](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControlPicture.md) — 用于图片
-    - [AddContentControlList](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControlList.md) — 用于组合框或下拉列表
-    - [AddContentControlCheckBox](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControlCheckBox.md) — 用于复选框
+    - [AddContentControl](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControl.md)：用于纯文本（块或内联）
+    - [AddContentControlDatePicker](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControlDatePicker.md)：用于日期选择器
+    - [AddContentControlPicture](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControlPicture.md)：用于图片
+    - [AddContentControlList](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControlList.md)：用于组合框或下拉列表
+    - [AddContentControlCheckBox](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControlCheckBox.md)：用于复选框
 
     ``` ts
     // 示例：添加块内容控件

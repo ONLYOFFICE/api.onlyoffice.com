@@ -20,8 +20,8 @@ sidebar_position: -11
 
 2. 要将用户设为匿名用户，请在编辑器[`config`](../../usage-api/config/config.md)中传递空的[`user.id`](../../usage-api/config/editor/editor.md#user)。[`editorConfig.customization.anonymous`](../../usage-api/config/editor/customization/customization-standard-branding.md#anonymous)参数控制名称提示和访客标签：
 
-   - `request` — 为`true`（默认值）时，**文档编辑器**在首次打开时提示用户输入名称。设置为`false`可禁用该提示。
-   - `label` — 附加到名称后的后缀，用于在协同编辑期间区分访客。默认值为`"Guest"`。
+   - `request`：为`true`（默认值）时，**文档编辑器**在首次打开时提示用户输入名称。设置为`false`可禁用该提示。
+   - `label`：附加到名称后的后缀，用于在协同编辑期间区分访客。默认值为`"Guest"`。
 
    ``` ts
    const config = {

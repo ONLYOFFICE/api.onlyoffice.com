@@ -10,9 +10,9 @@ ONLYOFFICE 9.2.0 引入了用于处理文本注释的 API 扩展——一种可�
 
 ## 新 API 方法
 
-1. [`AnnotateParagraph`](../../plugins/interacting-with-editors/document-api/Methods/AnnotateParagraph.md) - 向指定段落添加注释。
-2. [`SelectAnnotationRange`](../../plugins/interacting-with-editors/document-api/Methods/SelectAnnotationRange.md) - 使用指定注释在文档中选择文本。
-3. [`RemoveAnnotationRange`](../../plugins/interacting-with-editors/document-api/Methods/RemoveAnnotationRange.md) - 从文档中删除特定注释范围。
+1. [`AnnotateParagraph`](../../plugins/interacting-with-editors/document-api/Methods/AnnotateParagraph.md)：向指定段落添加注释。
+2. [`SelectAnnotationRange`](../../plugins/interacting-with-editors/document-api/Methods/SelectAnnotationRange.md)：使用指定注释在文档中选择文本。
+3. [`RemoveAnnotationRange`](../../plugins/interacting-with-editors/document-api/Methods/RemoveAnnotationRange.md)：从文档中删除特定注释范围。
 
 ## 通过插件开发学习新方法
 
@@ -20,15 +20,15 @@ ONLYOFFICE 9.2.0 引入了用于处理文本注释的 API 扩展——一种可�
 
 该插件为文本添加注释，使用户能够创建 AI 助手来分析内容，并高亮显示符合助手提示词中定义的特定条件的段落。共有三种选项：
 
-1. *提示（Hint）* - 显示说明性文字。
-2. *替换（Replace）* - 建议替换文本。
-3. *替换 + 提示（Replace + Hint）* - 建议替换文本，并在下方显示解释（可包含链接）。
+1. *提示（Hint）*：显示说明性文字。
+2. *替换（Replace）*：建议替换文本。
+3. *替换 + 提示（Replace + Hint）*：建议替换文本，并在下方显示解释（可包含链接）。
 
 创建或编辑助手的界面包含三个字段：
 
 1. *名称*
 2. *类型*（提示、替换、替换 + 提示）
-3. *提示词* - 主要字段，用户在此定义条件。为获得精确结果，该字段应尽可能具体。
+3. *提示词*：主要字段，用户在此定义条件。为获得精确结果，该字段应尽可能具体。
 
 还有一个隐藏字段，包含助手的唯一 ID。助手以字符串化对象的形式保存到 `localStorage`：
 
@@ -129,9 +129,9 @@ await Asc.Editor.callMethod("AnnotateParagraph", [{
 
 添加注释后，必须处理用户交互。点击注释应触发弹出窗口，显示原始文本、建议的替换内容和简要说明，以及**接受**和**拒绝**按钮。这通过三个特定事件来管理：
 
-1. [`onBlurAnnotation`](../../plugins/interacting-with-editors/document-api/Events/onBlurAnnotation.md) - 当注释失去焦点时触发。
-2. [`onClickAnnotation`](../../plugins/interacting-with-editors/document-api/Events/onClickAnnotation.md) - 当用户点击注释时触发。
-3. [`onFocusAnnotation`](../../plugins/interacting-with-editors/document-api/Events/onFocusAnnotation.md) - 当注释获得焦点时触发。
+1. [`onBlurAnnotation`](../../plugins/interacting-with-editors/document-api/Events/onBlurAnnotation.md)：当注释失去焦点时触发。
+2. [`onClickAnnotation`](../../plugins/interacting-with-editors/document-api/Events/onClickAnnotation.md)：当用户点击注释时触发。
+3. [`onFocusAnnotation`](../../plugins/interacting-with-editors/document-api/Events/onFocusAnnotation.md)：当注释获得焦点时触发。
 
 三个事件均返回 `{name, paragraphId, ranges}`。本实现使用两个事件：`onClickAnnotation`（显示弹出窗口）和 `onBlurAnnotation`（隐藏弹出窗口）。
 

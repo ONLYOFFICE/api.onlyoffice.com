@@ -650,9 +650,9 @@ customization 部分定义编辑器自定义参数。
 
 启用自动开始时的宏运行模式。可以取以下值：
 
-- `disable` - 不运行宏；
-- `warn` - 警告宏并请求运行它们的权限；
-- `enable` - 自动运行所有宏。
+- `disable`：不运行宏；
+- `warn`：警告宏并请求运行它们的权限；
+- `enable`：自动运行所有宏。
 
 :::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.macrosMode` 参数发送的任何值。
@@ -798,10 +798,10 @@ customization 部分定义编辑器自定义参数。
 
 文档编辑器的审阅显示模式。查看器的默认值是 `original`，编辑器的默认值是 `markup`。此设置适用于任何[模式](../../editor/editor.md#mode)，但仅在选择 `markup` 或 `simple` 时才能进行编辑。如果选择 `original` 或 `final`，编辑器将自动切换到仅查看模式。可以采用以下值：
 
-- `markup` - 显示文档，并突出显示建议的更改；
-- `simple` - 显示文档并突出显示建议的更改，但气球已关闭；
-- `final` - 显示文档并应用了所有建议的更改；
-- `original` - 显示原始文档，没有建议的更改。
+- `markup`：显示文档，并突出显示建议的更改；
+- `simple`：显示文档并突出显示建议的更改，但气球已关闭；
+- `final`：显示文档并应用了所有建议的更改；
+- `original`：显示原始文档，没有建议的更改。
 
 **示例**：`"original"`
 
@@ -938,9 +938,9 @@ PDF 表单编辑模式下*开始填写*按钮的标题。
 
 表单提交后显示的消息。可用的值如下：
 
-- `""` - 不显示消息；
-- `null` / `undefined` - 显示默认消息；
-- `"自定义文本"` - 显示自定义消息。
+- `""`：不显示消息；
+- `null` / `undefined`：显示默认消息；
+- `"自定义文本"`：显示自定义消息。
 
 **示例**：`"Form submitted successfully"`
 
@@ -984,8 +984,8 @@ PDF 表单编辑模式下*开始填写*按钮的标题。
 
  编辑器主题设置。可以通过两种方式设置：
 
-- **theme id** - 用户通过其 id 设置主题参数：`theme-system`、`theme-light`、`theme-classic-light`、`theme-dark`、`theme-contrast-dark`、`theme-gray`、`theme-white`、`theme-night`；
-- **default theme** - 将设置默认的深色或浅色主题值：`default-dark`、`default-light`。默认的浅色主题是 `theme-white`，默认的深色主题是 `theme-night`。
+- **theme id**：用户通过其 id 设置主题参数：`theme-system`、`theme-light`、`theme-classic-light`、`theme-dark`、`theme-contrast-dark`、`theme-gray`、`theme-white`、`theme-night`；
+- **default theme**：将设置默认的深色或浅色主题值：`default-dark`、`default-light`。默认的浅色主题是 `theme-white`，默认的深色主题是 `theme-night`。
 
 打开编辑器时，主题按以下优先级顺序应用：用户在编辑器中最后选择的主题具有最高优先级，其次是配置中的 `uiTheme` 参数，如果两者均未设置，则应用默认主题。
 
@@ -1009,9 +1009,9 @@ PDF 表单编辑模式下*开始填写*按钮的标题。
 
 标尺和对话框中使用的测量单位。可以取以下值：
 
-- `cm` - 厘米；
-- `pt` - 点；
-- `inch` - 英寸。
+- `cm`：厘米；
+- `pt`：点；
+- `inch`：英寸。
 
 :::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.unit` 参数发送的任何值。

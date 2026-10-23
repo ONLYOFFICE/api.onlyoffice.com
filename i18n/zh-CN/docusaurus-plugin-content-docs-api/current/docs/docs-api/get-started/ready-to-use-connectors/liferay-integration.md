@@ -45,10 +45,10 @@ ONLYOFFICE 集成遵循[此处](../basic-concepts.md)记录的 API。
 
 2. Liferay 为 ONLYOFFICE 文档准备一个包含以下属性的 JSON 对象：
 
-   - **url** - ONLYOFFICE 文档用于下载文档的 URL；
-   - **callbackUrl** - ONLYOFFICE 文档用于通知文档编辑状态的 URL；
-   - **key** - 即 *fileVersionId*，用于指示 ONLYOFFICE 文档是否需要重新下载文档；
-   - **title** - 文档标题（名称）。
+   - **url**：ONLYOFFICE 文档用于下载文档的 URL；
+   - **callbackUrl**：ONLYOFFICE 文档用于通知文档编辑状态的 URL；
+   - **key**：即 *fileVersionId*，用于指示 ONLYOFFICE 文档是否需要重新下载文档；
+   - **title**：文档标题（名称）。
 
 3. 客户端浏览器向 ONLYOFFICE 文档的 JavaScript 库发出请求，并将包含上述属性的 DocEditor 配置发送给 ONLYOFFICE 文档。
 

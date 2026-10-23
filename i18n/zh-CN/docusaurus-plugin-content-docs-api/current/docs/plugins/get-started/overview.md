@@ -64,14 +64,14 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的 Web 应用，运�
 
 ## 资源
 
-- **[API 参考](../interacting-with-editors/overview/overview.md)** - 插件方法、事件以及 `window.Asc.plugin` 对象
-- **[插件配置](../configuration/configuration.md)** - 所有 `config.json` 参数
-- **[交互式 Playground](playground.md)** - 无需安装即可运行插件代码
-- **[插件示例](/samples/?doctype=docs&text=plugin)** - 可供参考的可运行插件
-- **[UI 组件库](https://onlyoffice.github.io/storybook/static/)** - 与编辑器风格一致的控件
-- **[官方插件源代码](https://github.com/ONLYOFFICE/sdkjs-plugins)** - 由 ONLYOFFICE 维护的完整插件
-- **[常见问题](../more-information/faq.md)** - 常见问题解答
-- **[更新日志](../more-information/changelog.md)** - 各方法和事件的引入版本
+- **[API 参考](../interacting-with-editors/overview/overview.md)**：插件方法、事件以及 `window.Asc.plugin` 对象
+- **[插件配置](../configuration/configuration.md)**：所有 `config.json` 参数
+- **[交互式 Playground](playground.md)**：无需安装即可运行插件代码
+- **[插件示例](/samples/?doctype=docs&text=plugin)**：可供参考的可运行插件
+- **[UI 组件库](https://onlyoffice.github.io/storybook/static/)**：与编辑器风格一致的控件
+- **[官方插件源代码](https://github.com/ONLYOFFICE/sdkjs-plugins)**：由 ONLYOFFICE 维护的完整插件
+- **[常见问题](../more-information/faq.md)**：常见问题解答
+- **[更新日志](../more-information/changelog.md)**：各方法和事件的引入版本
 
 ## 下一步 {#next-steps}
 

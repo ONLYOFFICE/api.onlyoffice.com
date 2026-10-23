@@ -251,10 +251,10 @@ ONLYOFFICE 集成遵循此处记录的 API 规范：[此处](../basic-concepts.m
 
 5. 应用程序准备一个包含以下属性的 JSON 对象：
 
-   - **url** - ONLYOFFICE 文档用于下载文档的 URL；
-   - **callbackUrl** - ONLYOFFICE 文档用于通知文档编辑状态的 URL；
-   - **documentServerUrl** - 客户端需要响应给 ONLYOFFICE 文档的 URL（可在管理设置页面中设置）；
-   - **key** - 由*UUID+ 修改时间戳*组成，用于指示 ONLYOFFICE 文档是否需要重新下载文档。
+   - **url**：ONLYOFFICE 文档用于下载文档的 URL；
+   - **callbackUrl**：ONLYOFFICE 文档用于通知文档编辑状态的 URL；
+   - **documentServerUrl**：客户端需要响应给 ONLYOFFICE 文档的 URL（可在管理设置页面中设置）；
+   - **key**：由*UUID+ 修改时间戳*组成，用于指示 ONLYOFFICE 文档是否需要重新下载文档。
 
 6. Nextcloud 获取该对象，并从*templates/editor.php*模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。
 

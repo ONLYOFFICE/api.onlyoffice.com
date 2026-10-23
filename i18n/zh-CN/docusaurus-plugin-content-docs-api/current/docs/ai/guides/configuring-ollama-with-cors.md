@@ -113,9 +113,9 @@ docker run -d \
 
 ### 值说明
 
-- `http://*` - 允许来自任何 HTTP 域的请求
-- `https://*` - 允许来自任何 HTTPS 域的请求
-- `onlyoffice://*` - 允许来自 ONLYOFFICE 桌面编辑器的请求，其中插件运行在 `onlyoffice://` 协议上（AI 插件的来源为 `onlyoffice://plugin`）
+- `http://*`：允许来自任何 HTTP 域的请求
+- `https://*`：允许来自任何 HTTPS 域的请求
+- `onlyoffice://*`：允许来自 ONLYOFFICE 桌面编辑器的请求，其中插件运行在 `onlyoffice://` 协议上（AI 插件的来源为 `onlyoffice://plugin`）
 
 ### 验证 CORS 配置
 

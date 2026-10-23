@@ -40,9 +40,9 @@ GitHub 仓库：[translator](https://github.com/ONLYOFFICE/onlyoffice.github.io/
 
 5. 第三方服务：
 
-   - [jQuery](https://jquery.com) - 快速简洁的 JavaScript 库，可简化 HTML 文档遍历、事件处理、动画和 Ajax 交互。许可证：[MIT License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/translator/licenses/jQuery.license)
-   - [Select2](https://select2.org/) - 提供可搜索、支持远程数据集、无限滚动等功能的可自定义选择框。许可证：[MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/translator/licenses/Select2.license)
-   - [Google Translate API](https://cloud.google.com/translate?hl=zh) - 支持多语言互译的 Google 翻译 API。许可证：[MIT License](https://github.com/matheuss/google-translate-api/blob/master/LICENSE)
+   - [jQuery](https://jquery.com)：快速简洁的 JavaScript 库，可简化 HTML 文档遍历、事件处理、动画和 Ajax 交互。许可证：[MIT License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/translator/licenses/jQuery.license)
+   - [Select2](https://select2.org/)：提供可搜索、支持远程数据集、无限滚动等功能的可自定义选择框。许可证：[MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/translator/licenses/Select2.license)
+   - [Google Translate API](https://cloud.google.com/translate?hl=zh)：支持多语言互译的 Google 翻译 API。许可证：[MIT License](https://github.com/matheuss/google-translate-api/blob/master/LICENSE)
 
 ## 配置
 

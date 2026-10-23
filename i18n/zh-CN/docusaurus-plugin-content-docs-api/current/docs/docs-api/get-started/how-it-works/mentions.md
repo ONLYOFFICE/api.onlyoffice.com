@@ -50,9 +50,9 @@ sidebar_position: -17
 
 3. 定义 [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) 事件处理程序，用于向被提及的用户发送通知。当用户提交包含提及的评论时，编辑器会调用此处理程序，传递以下参数：
 
-   - `event.data.message` — 评论文本
-   - `event.data.emails` — 被提及用户的电子邮件地址列表
-   - `event.data.actionLink` — 描述评论在文档中位置的对象
+   - `event.data.message`：评论文本
+   - `event.data.emails`：被提及用户的电子邮件地址列表
+   - `event.data.actionLink`：描述评论在文档中位置的对象
 
    :::note
    只有设置了 `onRequestSendNotify` 事件后，评论字段中的 `+` / `@` 提及按钮才会显示。在 5.4 版本中，`onRequestSendNotify` 只有在设置了 [onRequestUsers](../../usage-api/config/events.md#onrequestusers) 的情况下才能使用。从 5.5 版本开始，两个事件可以独立设置。

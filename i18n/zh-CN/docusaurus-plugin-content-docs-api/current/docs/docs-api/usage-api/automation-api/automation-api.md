@@ -121,5 +121,5 @@ connector.callCommand(() => {
 
 ## API 参考
 
-- [连接器类](./connector-class.md) — 与编辑器交互的方法
-- [连接器窗口](./connector-window.md) — 创建和管理模态窗口的方法
+- [连接器类](./connector-class.md)：与编辑器交互的方法
+- [连接器窗口](./connector-window.md)：创建和管理模态窗口的方法

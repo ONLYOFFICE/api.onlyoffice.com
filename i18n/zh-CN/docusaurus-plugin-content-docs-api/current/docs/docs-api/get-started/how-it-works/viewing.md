@@ -10,8 +10,8 @@ sidebar_position: -8
 
 ONLYOFFICE 文档支持文本文档、电子表格、演示文稿和 PDF 的两种查看模式：
 
-- **实时查看器** — 实时显示正在编辑文档的其他用户所做的更改，包括其光标。这是默认模式。
-- **通用查看器** — 显示文档的静态快照。用户在重新加载页面之前看不到其他用户的编辑。
+- **实时查看器**：实时显示正在编辑文档的其他用户所做的更改，包括其光标。这是默认模式。
+- **通用查看器**：显示文档的静态快照。用户在重新加载页面之前看不到其他用户的编辑。
 
 :::note
 实时查看器从 7.2 版开始可用。实时查看器的服务器连接数与编辑连接数分开计算，并受许可证中 [`connections_view`](../../additional-api/command-service/license.md#license.connections_view) 参数的限制。开源版本的限制为 20。对于较旧的许可证，实时查看器不可用。
@@ -19,7 +19,7 @@ ONLYOFFICE 文档支持文本文档、电子表格、演示文稿和 PDF 的两�
 
 要控制使用哪种查看模式，请配置 [`editorConfig.coEditing`](../../usage-api/config/editor/editor.md#coediting) 参数：
 
-1. `mode: "fast"` 且 `change: true` — 默认打开实时查看器。用户可以通过**文件** > **高级设置...** > **显示其他用户的更改**在实时查看器和通用查看器之间切换，无需重新加载页面。这是默认配置：
+1. `mode: "fast"` 且 `change: true`：默认打开实时查看器。用户可以通过**文件** > **高级设置...** > **显示其他用户的更改**在实时查看器和通用查看器之间切换，无需重新加载页面。这是默认配置：
 
    ``` ts
    const config = {
@@ -37,7 +37,7 @@ ONLYOFFICE 文档支持文本文档、电子表格、演示文稿和 PDF 的两�
 
    ![显示其他用户的更改](/assets/images/editor/show-changes-from-other-users.png#gh-light-mode-only)![显示其他用户的更改](/assets/images/editor/show-changes-from-other-users.dark.png#gh-dark-mode-only)
 
-2. `mode: "fast"` 且 `change: false` — 默认打开实时查看器。用户无法切换到通用查看器：
+2. `mode: "fast"` 且 `change: false`：默认打开实时查看器。用户无法切换到通用查看器：
 
    ``` ts
    const config = {
@@ -53,7 +53,7 @@ ONLYOFFICE 文档支持文本文档、电子表格、演示文稿和 PDF 的两�
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-3. `mode: "strict"` 且 `change: true` — 默认打开通用查看器。用户可以通过**文件** > **高级设置...** > **显示其他用户的更改**切换到实时查看器：
+3. `mode: "strict"` 且 `change: true`：默认打开通用查看器。用户可以通过**文件** > **高级设置...** > **显示其他用户的更改**切换到实时查看器：
 
    ``` ts
    const config = {
@@ -69,7 +69,7 @@ ONLYOFFICE 文档支持文本文档、电子表格、演示文稿和 PDF 的两�
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-4. `mode: "strict"` 且 `change: false` — 默认打开通用查看器。用户无法切换到实时查看器：
+4. `mode: "strict"` 且 `change: false`：默认打开通用查看器。用户无法切换到实时查看器：
 
    ``` ts
    const config = {

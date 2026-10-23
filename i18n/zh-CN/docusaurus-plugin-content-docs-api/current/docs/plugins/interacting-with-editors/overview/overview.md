@@ -6,8 +6,8 @@ sidebar_position: -2
 
 插件和宏可以通过 [Asc.plugin](asc-plugin.md) 对象与编辑器进行交互——其[事件](asc-plugin.md#events)、方法和命令。在此您将了解如何使用它们。
 
-- [Asc.plugin](asc-plugin.md) — 主插件对象：属性、方法和事件
-- [如何绑定事件](how-to-attach-events.md) — 监听编辑器事件
+- [Asc.plugin](asc-plugin.md)：主插件对象：属性、方法和事件
+- [如何绑定事件](how-to-attach-events.md)：监听编辑器事件
 - [如何调用方法](how-to-call-methods.md)
 - [如何调用命令](how-to-call-commands.md)
 

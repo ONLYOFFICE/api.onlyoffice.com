@@ -112,5 +112,5 @@ ONLYOFFICE 利用云存储和用户本地存储之间的文档和加密数据存
 
 - 删除文档管理系统（DMS）数据库中的密钥；
 - 从 *sdkjs-plugins* 目录中删除 *cloud_crypto.xml* 文件。文件夹路径取决于所使用的操作系统：
-  - Linux 系统——*home/\<username>/.local/share/onlyoffice/desktopeditors/sdkjs-plugins/*
-  - Windows 系统——*C:\Users\\\<username>\AppData\Local\ONLYOFFICE\DesktopEditors\data\sdkjs-plugins\\*
+  - Linux 系统：*home/\<username>/.local/share/onlyoffice/desktopeditors/sdkjs-plugins/*
+  - Windows 系统：*C:\Users\\\<username>\AppData\Local\ONLYOFFICE\DesktopEditors\data\sdkjs-plugins\\*
