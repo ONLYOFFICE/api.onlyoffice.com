@@ -681,11 +681,11 @@ docEditor.insertImage({
   ```
 
 :::note
-请注意，对用户头像的请求是未经授权发送的，因为头像 URL 被插入到编辑器框架的 HTML 中。此外，还可能出现 CORS 问题。在这种情况下，请使用base64格式的头像。例如，*"data:image/png;base64,\*\*\*\*\*"*。
+请注意，对用户头像的请求是未经授权发送的，因为头像 URL 被插入到编辑器框架的 HTML 中。此外，还可能出现 CORS 问题。在这种情况下，请使用base64 格式的头像。例如，*"data:image/png;base64,\*\*\*\*\*"*。
 :::
 
 :::note
-请注意，如果您订阅了 `onRequestUsers` 事件并使用 `setUsers` 方法发送头像，则 [user.image](./config/editor/editor.md#user) 初始化配置中的字段不是必需的。如果头像以base64格式发送并且初始化配置使用 JWT 签名，我们特别不建议指定此参数。在这种情况下，令牌就会太长。
+请注意，如果您订阅了 `onRequestUsers` 事件并使用 `setUsers` 方法发送头像，则 [user.image](./config/editor/editor.md#user) 初始化配置中的字段不是必需的。如果头像以base64 格式发送并且初始化配置使用 JWT 签名，我们特别不建议指定此参数。在这种情况下，令牌就会太长。
 :::
 
 ## showMessage

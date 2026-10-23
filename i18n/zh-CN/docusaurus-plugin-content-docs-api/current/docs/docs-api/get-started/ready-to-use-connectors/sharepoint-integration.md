@@ -79,7 +79,7 @@ https://<documentserver>/
 请注意，如果您使用 SharePoint 设置了子网站，为确保功能正常，您需要为每个子网站额外配置 ONLYOFFICE 文档连接。进入每个子网站的设置，在相应字段中输入 ONLYOFFICE 文档地址。
 :::
 
-从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 SharePoint 管理设置中指定您自己的**密钥**。在 ONLYOFFICE 文档[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从 7.2 版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 SharePoint 管理设置中指定您自己的**密钥**。在 ONLYOFFICE 文档[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 如果启用了 JWT 保护，由于 SharePoint 安全策略会阻止外部的 **Authorization** 标头，因此需要指定一个自定义标头名称。该标头也应在 ONLYOFFICE 文档的签名设置中指定。有关签名的更多信息，请参见[这里](../../additional-api/signature/signature.md)。
 
@@ -127,7 +127,7 @@ ONLYOFFICE 集成遵循[此处](../basic-concepts.md)记录的 API 规范。
 
 7. 当所有用户和客户端浏览器完成编辑后，他们关闭编辑窗口。
 
-8. 在[10秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档会向*callbackUrl*发送 POST 请求，告知 SharePoint ONLYOFFICE 解决方案客户端已完成文档编辑并关闭了它。
+8. 在[10 秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档会向*callbackUrl*发送 POST 请求，告知 SharePoint ONLYOFFICE 解决方案客户端已完成文档编辑并关闭了它。
 
 9. SharePoint 下载文档的新版本，替换旧版本。
 

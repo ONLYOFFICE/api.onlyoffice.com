@@ -14,7 +14,7 @@ ONLYOFFICE 文档支持文本文档、电子表格、演示文稿和 PDF 的两�
 - **通用查看器** — 显示文档的静态快照。用户在重新加载页面之前看不到其他用户的编辑。
 
 :::note
-实时查看器从7.2版开始可用。实时查看器的服务器连接数与编辑连接数分开计算，并受许可证中 [`connections_view`](../../additional-api/command-service/license.md#license.connections_view) 参数的限制。开源版本的限制为20。对于较旧的许可证，实时查看器不可用。
+实时查看器从 7.2 版开始可用。实时查看器的服务器连接数与编辑连接数分开计算，并受许可证中 [`connections_view`](../../additional-api/command-service/license.md#license.connections_view) 参数的限制。开源版本的限制为 20。对于较旧的许可证，实时查看器不可用。
 :::
 
 要控制使用哪种查看模式，请配置 [`editorConfig.coEditing`](../../usage-api/config/editor/editor.md#coediting) 参数：

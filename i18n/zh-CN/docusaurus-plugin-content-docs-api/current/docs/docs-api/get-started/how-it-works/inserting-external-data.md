@@ -55,7 +55,7 @@ sidebar_position: -6
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-6. 如果剪贴板包含步骤3中的源电子表格元数据，并且目标电子表格配置包含`onRequestReferenceData`处理程序，则*粘贴链接*按钮将出现在粘贴对话框中。
+6. 如果剪贴板包含步骤 3 中的源电子表格元数据，并且目标电子表格配置包含`onRequestReferenceData`处理程序，则*粘贴链接*按钮将出现在粘贴对话框中。
 
    ![粘贴链接](/assets/images/editor/paste-link.png#gh-light-mode-only)![粘贴链接](/assets/images/editor/paste-link.dark.png#gh-dark-mode-only)
 

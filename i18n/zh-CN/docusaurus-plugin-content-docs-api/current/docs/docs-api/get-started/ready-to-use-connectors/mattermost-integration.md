@@ -60,7 +60,7 @@ ONLYOFFICE 文档和 Mattermost 可以安装在不同的计算机上，也可以
 
   其中，**documentserver** 是安装了 **ONLYOFFICE 文档**的服务器名称，**port** 是其端口号。该地址必须能被用户浏览器和 Mattermost 服务器访问。Mattermost 服务器地址也必须能被 **ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址可以在云控制台的**实例**部分找到。
 
-- **文档服务器 JWT 密钥**：从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在应用配置中指定您自己的密钥。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+- **文档服务器 JWT 密钥**：从 7.2 版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在应用配置中指定您自己的密钥。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 - **JWT 标头**：如果启用了 JWT 保护，由于 Mattermost 安全策略会阻止外部的 **Authorization** 标头，因此需要指定一个自定义标头名称。该标头也应在 ONLYOFFICE 文档的签名设置中指定。有关签名的更多信息，请参见[此处](../../additional-api/signature/signature.md)。
 

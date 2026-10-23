@@ -21,7 +21,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Chamilo 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Chamilo 发送 POST 请求。
 
-ONLYOFFICE 文档和 Chamilo 可以安装在不同的计算机上，也可以安装在同一台机器上。如果您使用同一台机器，需要为文档服务器设置一个自定义端口，因为默认情况下 ONLYOFFICE 文档和 Chamilo 都使用80端口。
+ONLYOFFICE 文档和 Chamilo 可以安装在不同的计算机上，也可以安装在同一台机器上。如果您使用同一台机器，需要为文档服务器设置一个自定义端口，因为默认情况下 ONLYOFFICE 文档和 Chamilo 都使用 80 端口。
 
 使用 [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer) 是启动 ONLYOFFICE 文档实例的最简单方法。
 
@@ -82,7 +82,7 @@ ONLYOFFICE 文档和 Chamilo 可以安装在不同的计算机上，也可以安
 
    其中，**chamilo-1.11.16** 是您当前的 Chamilo 版本。
 
-### 适用于低于1.11.16的 Chamilo 版本
+### 适用于低于 1.11.16 的 Chamilo 版本
 
 1. 进入 Chamilo 的**管理**界面，选择**插件**部分，然后点击**上传插件**按钮。
 2. 从**版本发布**部分上传*onlyoffice.zip*文件。您会看到插件列表。
@@ -99,7 +99,7 @@ https://<documentserver>/
 
 其中，**documentserver** 是安装了 **ONLYOFFICE 文档**的服务器名称。该地址必须能被您的浏览器和 Chamilo 服务器访问。Chamilo 服务器地址也必须能被 **ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/docs-registration?from=api)免费的 ONLYOFFICE 云服务，并使用其公共 IP 地址或公共 DNS，可在云控制台的**实例**部分中找到。
 
-从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Chamilo 的**设置**页面指定您自己的**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从 7.2 版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Chamilo 的**设置**页面指定您自己的**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 工作原理
 
@@ -132,7 +132,7 @@ ONLYOFFICE 集成遵循[此处](../basic-concepts.md)记录的 API 规范。
 
 10. 当所有用户都完成编辑后，他们关闭编辑器窗口。
 
-11. 在[10秒](../how-it-works/saving-file.md#save-delay)不活动后，ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，告知编辑已结束，并发送一个指向新文档版本的链接。
+11. 在[10 秒](../how-it-works/saving-file.md#save-delay)不活动后，ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，告知编辑已结束，并发送一个指向新文档版本的链接。
 
 12. Chamilo 加载文档的新版本并覆盖原文件。
 

@@ -42,7 +42,7 @@ git clone https://github.com/ONLYOFFICE/onlyoffice-wordpress
 通过 WordPress 界面配置插件。进入 **WordPress 管理仪表板**，打开 **ONLYOFFICE** 部分，然后导航到**设置**。请指定以下参数：
 
 - **文档编辑服务地址**。填写已安装的 ONLYOFFICE 文档的 URL。
-- **文档服务器 JWT 密钥**。从7.2版本开始，JWT 默认启用，并且会自动生成密钥，以限制对 ONLYOFFICE 文档的访问，出于安全原因和数据完整性考虑。在 WordPress 管理配置中指定您自己的密钥。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+- **文档服务器 JWT 密钥**。从 7.2 版本开始，JWT 默认启用，并且会自动生成密钥，以限制对 ONLYOFFICE 文档的访问，出于安全原因和数据完整性考虑。在 WordPress 管理配置中指定您自己的密钥。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 使用 WordPress ONLYOFFICE 集成插件
 

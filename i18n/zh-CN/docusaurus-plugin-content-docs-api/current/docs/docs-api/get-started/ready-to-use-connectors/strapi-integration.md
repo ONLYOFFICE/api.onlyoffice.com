@@ -67,7 +67,7 @@ sidebar_custom_props:
 您可以通过 Strapi 的**控制面板->设置->全局设置->ONLYOFFICE** 来配置 ONLYOFFICE 应用。在设置页面，输入：
 
 - **文档服务器地址**。已安装的 ONLYOFFICE 文档的 URL。
-- **文档服务器 JWT 密钥**。从7.2版本起，JWT 默认开启，并自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障系统安全和数据完整。在 Strapi 设置页面指定自己的密钥，在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，设置相同密钥并启用验证。
+- **文档服务器 JWT 密钥**。从 7.2 版本起，JWT 默认开启，并自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障系统安全和数据完整。在 Strapi 设置页面指定自己的密钥，在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，设置相同密钥并启用验证。
 
 ## 使用 Strapi ONLYOFFICE 集成插件
 

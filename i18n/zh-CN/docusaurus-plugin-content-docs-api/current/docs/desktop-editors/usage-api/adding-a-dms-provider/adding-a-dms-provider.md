@@ -12,7 +12,7 @@ ONLYOFFICE 桌面编辑器允许用户从云端访问文档并与团队成员协
 
 按照以下步骤将您自己的文档管理系统（DMS）添加到连接列表中：
 
-## 步骤1
+## 步骤 1
 
 在*providers*目录中使用 DMS 提供商的名称创建一个文件夹（例如*onlyoffice*）。文件夹的路径取决于您使用的操作系统：
 
@@ -34,7 +34,7 @@ ONLYOFFICE 桌面编辑器允许用户从云端访问文档并与团队成员协
   </TabItem>
 </Tabs>
 
-## 步骤2
+## 步骤 2
 
 创建一个*config.json*文件来指定集成参数。
 
@@ -55,7 +55,7 @@ ONLYOFFICE 桌面编辑器允许用户从云端访问文档并与团队成员协
 | startPage             | string                 | `"/"`                                                                                                      | 在创建新连接时添加到输入的 IP 或域名后的相对 URL。                                                                                                                                  |
 | icons                 | object                 | `{ "themeLight": { "connectionsList": "./assets/listicon.svg", "buttonLogo": "./assets/buttonlogo.svg" } }` | 门户的图标。您可以通过指定带有相应图标的`themeLight`和`themeDark`对象，为每种 UI 主题类型（亮色和暗色）添加图标。                                                                     |
 | icons.connectionsList | string                 | `"./assets/listicon.svg"`                                                                                  | 在**已连接的云端**和**可用云端**列表中显示的图标路径。                                                                                                                              |
-| icons.buttonLogo      | string                 | `"./assets/buttonlogo.svg"`                                                                                 | 在**连接到**窗口中显示的提供商徽标路径。在9.0以下版本中，当门户列表为空时，它显示在连接页面上的提供商按钮上。                                                                          |
+| icons.buttonLogo      | string                 | `"./assets/buttonlogo.svg"`                                                                                 | 在**连接到**窗口中显示的提供商徽标路径。在 9.0 以下版本中，当门户列表为空时，它显示在连接页面上的提供商按钮上。                                                                          |
 
 </APITable>
 
@@ -88,23 +88,23 @@ ONLYOFFICE 桌面编辑器允许用户从云端访问文档并与团队成员协
 }
 ```
 
-## 步骤3
+## 步骤 3
 
 创建应用程序页面的图标，并将其放入*config.json*文件中指定的文件夹：
 
-1. **已连接的云端**和**可用云端**列表的亮色和暗色图标。所需图标尺寸为36x36：
+1. **已连接的云端**和**可用云端**列表的亮色和暗色图标。所需图标尺寸为 36x36：
 
    ![连接列表](/assets/images/desktop/connection-list.png#gh-light-mode-only)![连接列表](/assets/images/desktop/connection-list.dark.png#gh-dark-mode-only)
 
-2. **连接到**窗口中提供商的亮色和暗色徽标。所需图标尺寸为148x38。在9.0以下版本中，当**已连接的云端**列表为空时，这些图标显示在连接页面上的提供商按钮上：
+2. **连接到**窗口中提供商的亮色和暗色徽标。所需图标尺寸为 148x38。在 9.0 以下版本中，当**已连接的云端**列表为空时，这些图标显示在连接页面上的提供商按钮上：
 
    ![提供商按钮](/assets/images/desktop/provider-button.png#gh-light-mode-only)![提供商按钮](/assets/images/desktop/provider-button.dark.png#gh-dark-mode-only)
 
-支持的图像格式为 *.png*、*.jpeg*、*.svg*。我们建议使用 *.svg*文件，以便在系统中200%缩放的 HiDPI 显示器上正确显示。
+支持的图像格式为 *.png*、*.jpeg*、*.svg*。我们建议使用 *.svg*文件，以便在系统中 200%缩放的 HiDPI 显示器上正确显示。
 
 您也可以为每种 UI 主题类型（亮色和暗色）添加图标。在这种情况下，创建四个图标（每种主题两个）并将它们全部添加到*config.json*文件中。
 
-## 步骤4
+## 步骤 4
 
 1. 启动 ONLYOFFICE 桌面编辑器，如果需要请重启。
 2. 在左侧边栏中点击**云端**。

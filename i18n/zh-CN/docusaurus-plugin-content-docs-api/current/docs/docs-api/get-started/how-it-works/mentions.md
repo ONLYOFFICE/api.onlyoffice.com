@@ -55,7 +55,7 @@ sidebar_position: -17
    - `event.data.actionLink` — 描述评论在文档中位置的对象
 
    :::note
-   只有设置了 `onRequestSendNotify` 事件后，评论字段中的 `+` / `@` 提及按钮才会显示。在5.4版本中，`onRequestSendNotify` 只有在设置了 [onRequestUsers](../../usage-api/config/events.md#onrequestusers) 的情况下才能使用。从5.5版本开始，两个事件可以独立设置。
+   只有设置了 `onRequestSendNotify` 事件后，评论字段中的 `+` / `@` 提及按钮才会显示。在 5.4 版本中，`onRequestSendNotify` 只有在设置了 [onRequestUsers](../../usage-api/config/events.md#onrequestusers) 的情况下才能使用。从 5.5 版本开始，两个事件可以独立设置。
    :::
 
    ``` ts

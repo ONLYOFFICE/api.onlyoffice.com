@@ -18,7 +18,7 @@ PHP Laravel 集成示例是一个小型 Laravel 应用程序，它可以列出�
 - **Git**：请参阅[官方网站](https://git-scm.com/downloads)。
 - **ONLYOFFICE 文档**：可选，因为 Docker 配置会启动自己的 ONLYOFFICE 文档。如需使用您自己的服务器，请获取[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/docs-registration?from=api)。
 
-## 步骤1. 下载示例
+## 步骤 1. 下载示例
 
 克隆[示例仓库](https://github.com/ONLYOFFICE/document-server-integration/tree/main/web/documentserver-example/php-laravel)，进入 PHP Laravel 示例目录，并获取其子模块：
 
@@ -28,7 +28,7 @@ cd document-server-integration/web/documentserver-example/php-laravel
 git submodule update --init --depth 1 .
 ```
 
-## 步骤2. 配置连接
+## 步骤 2. 配置连接
 
 根据模板创建 `.env` 文件：
 
@@ -51,7 +51,7 @@ DOCUMENT_SERVER_JWT_SECRET=secret
 
 如果您想尝试配置编辑器，请修改 `app/Models/Editor/Editor.php` 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
-## 步骤3. 构建并运行示例
+## 步骤 3. 构建并运行示例
 
 ```sh
 docker compose up -d --build

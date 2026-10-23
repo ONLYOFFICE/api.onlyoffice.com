@@ -40,7 +40,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 安装 Redmine ONLYOFFICE 集成插件
 
-安装该插件需要 Redmine4.2 或更高版本，或者5.0或更高版本。同时要注意，该插件与 Ruby2.7.2 或更高版本，或者3.0.0或更高版本兼容。我们建议使用 Redmine5 搭配 Ruby3。
+安装该插件需要 Redmine4.2 或更高版本，或者 5.0 或更高版本。同时要注意，该插件与 Ruby2.7.2 或更高版本，或者 3.0.0 或更高版本兼容。我们建议使用 Redmine5 搭配 Ruby3。
 
 此外，您可能需要 [zstd](https://github.com/facebook/zstd) 来解压该插件。
 
@@ -92,7 +92,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ### 安全设置
 
-- **密钥**：从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中指定您的密钥，然后在插件的设置页面中指定相同的密钥。留空则会禁用身份验证。
+- **密钥**：从 7.2 版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中指定您的密钥，然后在插件的设置页面中指定相同的密钥。留空则会禁用身份验证。
 - **授权标头。**
 - **禁用证书验证（不安全）。**
 

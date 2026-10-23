@@ -18,5 +18,5 @@ sidebar_position: -8
 桌面应用程序有三种识别方式：
 
 - 在服务器请求地址的参数中添加 *?desktop = true*。
-- 从6.1版本开始，该应用程序会将 *AscDesktopEditor $version$* 行添加到 *navigator.userAgent* 参数中。例如，*AscDesktopEditor 6.1.0*。
+- 从 6.1 版本开始，该应用程序会将 *AscDesktopEditor $version$* 行添加到 *navigator.userAgent* 参数中。例如，*AscDesktopEditor 6.1.0*。
 - 在 JavaScript 代码中，还有一个 *window\.AscDesktopEditor* 对象，其方法可以向应用程序发送命令和信息。

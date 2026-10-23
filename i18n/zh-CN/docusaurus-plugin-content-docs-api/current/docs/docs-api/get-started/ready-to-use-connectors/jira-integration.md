@@ -50,7 +50,7 @@ https://<documentserver>/
 
 有时，您的网络配置可能不允许 Jira 和 ONLYOFFICE 文档之间通过公共地址进行请求。**高级服务器设置**部分允许您设置 Jira 内部请求的 ONLYOFFICE 文档地址，以及 ONLYOFFICE 文档内部请求返回的 Jira 地址。
 
-从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Jira 管理页面指定您自己的**密钥**。在 ONLYOFFICE 官方的[配置文档](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从 7.2 版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Jira 管理页面指定您自己的**密钥**。在 ONLYOFFICE 官方的[配置文档](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 编译 Jira ONLYOFFICE 集成应用程序
 
@@ -105,7 +105,7 @@ ONLYOFFICE 集成遵循此处记录的 API 规范：[这里](../basic-concepts.m
 
 8. 当所有用户和客户端浏览器完成编辑后，他们关闭编辑窗口。
 
-9. 在[10秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，告知 Jira 客户端已完成文档编辑并关闭了窗口。
+9. 在[10 秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，告知 Jira 客户端已完成文档编辑并关闭了窗口。
 
 10. 包含所有更改的文档将作为新附件保存，文件名会添加后缀。
 

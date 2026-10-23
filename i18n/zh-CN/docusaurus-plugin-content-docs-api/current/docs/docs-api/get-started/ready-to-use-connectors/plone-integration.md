@@ -43,7 +43,7 @@ docker run -p 8080:8080 -e ADDONS="onlyoffice.plone" plone/plone-backend:6.0 sta
 
 要配置插件，请前往**站点设置**。向下滚动到**附加组件配置**部分，然后点击 **ONLYOFFICE 配置**按钮。
 
-从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Plone 配置页面指定您自己的**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从 7.2 版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Plone 配置页面指定您自己的**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 开发 Plone ONLYOFFICE 插件
 
@@ -95,7 +95,7 @@ ONLYOFFICE 集成遵循[此处](../basic-concepts.md)记录的 API 规范。
 
 7. 当所有用户和客户端浏览器完成编辑后，他们关闭编辑窗口。
 
-8. 在[10秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，告知 Plone 客户端已完成文档编辑并关闭了它。
+8. 在[10 秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，告知 Plone 客户端已完成文档编辑并关闭了它。
 
 9. Plone 下载文档的新版本，替换旧版本。
 

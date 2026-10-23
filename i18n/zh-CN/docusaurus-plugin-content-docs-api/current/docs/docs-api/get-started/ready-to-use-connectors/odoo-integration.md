@@ -27,14 +27,14 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 要在 Odoo 中使用 ONLYOFFICE 文档，必须执行以下步骤：
 
-**方法1**：从管理面板安装
+**方法 1**：从管理面板安装
 
 1. [登录](https://www.odoo.com/web/login)您现有的 Odoo 账户，或者[注册](https://www.odoo.com/web/signup)一个新账户。
 2. 进入 Odoo 管理面板，点击顶部菜单栏中的**应用**。
 3. 在**应用**目录中搜索 ONLYOFFICE。
 4. 点击**安装**按钮。
 
-**方法2**：手动安装
+**方法 2**：手动安装
 
 1. 访问 [Odoo 应用目录](https://apps.odoo.com/apps)，选择您已安装的 Odoo 版本。
 
@@ -72,7 +72,7 @@ https://<documentserver>/
 其中，**文档服务器地址**是安装了 **ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和 Odoo 服务器访问。Odoo 服务器地址也必须能被 **ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 :::warning
-从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Odoo 配置页面指定您自己的**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从 7.2 版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Odoo 配置页面指定您自己的**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 :::
 
 ## 工作原理

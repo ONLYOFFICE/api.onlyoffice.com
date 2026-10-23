@@ -51,7 +51,7 @@ https://<documentserver>/
 
 其中，**documentserver** 是安装了 **ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和 Confluence 服务器访问。Confluence 服务器地址也必须能被 **ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
-从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Confluence 管理页面上指定您自己的**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从 7.2 版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Confluence 管理页面上指定您自己的**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 编译 Confluence ONLYOFFICE 集成应用程序
 
@@ -104,7 +104,7 @@ ONLYOFFICE 集成遵循此处记录的 API 规范：[这里](../basic-concepts.m
 
 8. 当所有用户和客户端浏览器完成编辑后，他们关闭编辑窗口。
 
-9. 在[10秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，告知 Confluence 客户端已完成文档编辑并关闭了窗口。
+9. 在[10 秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，告知 Confluence 客户端已完成文档编辑并关闭了窗口。
 
 10. Confluence 下载文档的新版本，替换旧版本。
 

@@ -42,7 +42,7 @@ https://<documentserver>/
 
 这里的 **documentserver** 指的是安装了 **ONLYOFFICE 文档**的服务器名称。该地址要确保用户浏览器和 SuiteCRM 服务器均可访问，同时，SuiteCRM 服务器地址也需能被 **ONLYOFFICE 文档**访问，以保证系统正常运行。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些信息可以在云控制台的**实例**部分找到。
 
-从7.2版本开始，JWT 会默认开启，并自动生成一个密钥，用于限制对 ONLYOFFICE 文档的访问，以确保安全性和数据完整性。在 SuiteCRM 的 **ONLYOFFICE 设置**页面中指定您自己的**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从 7.2 版本开始，JWT 会默认开启，并自动生成一个密钥，用于限制对 ONLYOFFICE 文档的访问，以确保安全性和数据完整性。在 SuiteCRM 的 **ONLYOFFICE 设置**页面中指定您自己的**密钥**。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 使用 SuiteCRM ONLYOFFICE 集成插件
 

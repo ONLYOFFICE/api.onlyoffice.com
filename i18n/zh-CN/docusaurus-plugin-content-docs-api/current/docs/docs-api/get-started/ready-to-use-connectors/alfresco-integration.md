@@ -102,7 +102,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 您也可以将*onlyoffice.url*添加到 **alfresco-global.properties** 中。通过设置页面进行的配置将覆盖 **alfresco-global.properties** 中的设置。
 :::
 
-从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Alfresco 配置页面指定您自己的**密钥**，或者通过在 **alfresco-global.properties** 中添加*onlyoffice.security.key*来设置。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从 7.2 版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Alfresco 配置页面指定您自己的**密钥**，或者通过在 **alfresco-global.properties** 中添加*onlyoffice.security.key*来设置。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 编译 ONLYOFFICE Alfresco 模块包
 
@@ -172,7 +172,7 @@ ONLYOFFICE 集成遵循此处记录的 API 规范：[这里](../basic-concepts.m
 
 9. 当所有用户和浏览器完成编辑后，关闭编辑窗口。
 
-10. 在[10秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，告知 Alfresco 客户端已完成文档编辑并关闭了窗口。
+10. 在[10 秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，告知 Alfresco 客户端已完成文档编辑并关闭了窗口。
 
 11. Alfresco 下载文档的新版本，替换旧版本。
 

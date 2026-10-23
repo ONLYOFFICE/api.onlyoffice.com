@@ -24,7 +24,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Nextcloud 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Nextcloud 发送 POST 请求。
 
-ONLYOFFICE 文档和 Nextcloud 可以安装在不同的计算机上，也可以安装在同一台机器上。如果选择后者，您需要为文档服务器设置一个自定义端口，因为默认情况下 ONLYOFFICE 文档和 Nextcloud 都使用80端口。或者您可以在代理服务器后使用 ONLYOFFICE 文档，有关配置方法，请参考[这篇文章](https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx)。
+ONLYOFFICE 文档和 Nextcloud 可以安装在不同的计算机上，也可以安装在同一台机器上。如果选择后者，您需要为文档服务器设置一个自定义端口，因为默认情况下 ONLYOFFICE 文档和 Nextcloud 都使用 80 端口。或者您可以在代理服务器后使用 ONLYOFFICE 文档，有关配置方法，请参考[这篇文章](https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx)。
 
 使用 [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer) 是启动 ONLYOFFICE 文档实例的最简单方法。
 
@@ -61,7 +61,7 @@ Nextcloud 管理员可以从内置应用市场安装集成应用程序。为此�
    npm run build
    ```
 
-4. 安装 Composer 依赖（仅当您在第2步选择了克隆方式时）：
+4. 安装 Composer 依赖（仅当您在第 2 步选择了克隆方式时）：
 
    ``` sh
    composer install
@@ -94,7 +94,7 @@ https://<文档服务器地址>/
 
 ![公共](/assets/images/editor/nextcloud-public.jpg)
 
-从7.2版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Nextcloud 管理配置中指定您自己的密钥。在 ONLYOFFICE 文档[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从 7.2 版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 Nextcloud 管理配置中指定您自己的密钥。在 ONLYOFFICE 文档[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 启用或禁用**在同一标签页中打开文件**设置。
 
@@ -266,7 +266,7 @@ ONLYOFFICE 集成遵循此处记录的 API 规范：[此处](../basic-concepts.m
 
 10. 当所有用户和客户端浏览器完成编辑后，他们关闭编辑窗口。
 
-11. 在[10秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，告知 Nextcloud 客户端已完成文档编辑并关闭了它。
+11. 在[10 秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，告知 Nextcloud 客户端已完成文档编辑并关闭了它。
 
 12. Nextcloud 下载文档的新版本，替换旧版本。
 
@@ -311,7 +311,7 @@ ONLYOFFICE 集成遵循此处记录的 API 规范：[此处](../basic-concepts.m
   ?>
   ```
 
-  要禁用此检查，请输入值0。
+  要禁用此检查，请输入值 0。
 
 - **联合云共享**：如果使用**联合云共享**应用共享文档，连接到不同 ONLYOFFICE 服务器的 Nextcloud 实例之间将无法进行协同编辑。来自同一文档服务器的用户可以在协同编辑模式下编辑文档，但来自两个（或更多）不同文档服务器的用户将无法实时协作处理同一文档。
 

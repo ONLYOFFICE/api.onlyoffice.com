@@ -34,15 +34,15 @@ sidebar_position: -2
 
 有时，用户在打开没有任何更改的二进制文件时可能会感到困惑。发生这种情况是因为所有更改都是在新转换的 OOXML 文件中进行的。这就是为什么在转换开始之前通知用户可能很重要。主机可以通过三种方式执行此操作。
 
-**选项1**。显示通知消息
+**选项 1**。显示通知消息
 
 主机可以在转换开始之前向用户显示一些 UI。**执行**转换操作时，主机将其识别为尝试编辑二进制文档并显示通知消息以通知用户文档将被转换。通过将 [EditModePostMessage](./wopi-rest-api/checkfileinfo.md#EditModePostMessage) 属性设置为 **true** 并处理 [UI\_Edit](./postmessage.md#UI_Edit) PostMessage，这种情况也可以应用于**编辑**按钮。
 
-**选项2**。以不同方式处理转换后的文档
+**选项 2**。以不同方式处理转换后的文档
 
 通过在转换过程中调用 [PutRelativeFile](./wopi-rest-api/putrelativefile.md) 操作时以不同方式处理，主机可以以独特的方式处理转换后的文档。**X-WOPI-FileConversion** 标头告诉主机何时从转换流调用操作，因此主机可以选择如何最好地处理这些请求。
 
-**选项3**。重定向到插页
+**选项 3**。重定向到插页
 
 在线办公导航到主机控制的 [HostEditUrl](./wopi-rest-api/checkfileinfo.md#HostEditUrl) 响应中返回的 [PutRelativeFile](./wopi-rest-api/putrelativefile.md)。因此，主机可以在转换完成后将用户发送到任何 URL。例如，主机可能会将用户重定向到一个插页，通知他们，他们的文档已被转换。
 
