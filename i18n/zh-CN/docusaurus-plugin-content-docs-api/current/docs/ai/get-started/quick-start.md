@@ -96,7 +96,7 @@ func.call = async function (params) {
 将提示发送给 AI 模型，并将其响应作为注释或脚注插入文档。
 
 :::info Asc.scope
-`Asc.scope` 是一个共享对象，用于向 `callCommand` 闭包传递数据。由于 `callCommand` 在独立上下文中运行，局部变量无法直接在其中访问 - `Asc.scope` 起到桥接两个上下文的作用。
+`Asc.scope` 是一个共享对象，用于向 `callCommand` 闭包传递数据。由于 `callCommand` 在独立上下文中运行，局部变量无法直接在其中访问——`Asc.scope` 起到桥接两个上下文的作用。
 :::
 
 以注释形式插入：
