@@ -85,7 +85,7 @@ ONLYOFFICE 集成遵循此处记录的 API 规范：[这里](../basic-concepts.m
 
 1. 用户导航至 Jira 附件并选择**在 ONLYOFFICE 中编辑**操作。
 
-2. Jira 向 **OnlyOfficeEditorServlet** 发出请求(URL 格式为：*/plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id*)。
+2. Jira 向 **OnlyOfficeEditorServlet** 发出请求（URL 格式为：*/plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id*）。
 
 3. Jira 将文档发送到 ONLYOFFICE 文档存储服务，并接收一个临时链接。
 

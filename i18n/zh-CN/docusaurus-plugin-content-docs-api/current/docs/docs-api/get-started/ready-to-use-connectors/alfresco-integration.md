@@ -50,7 +50,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
    您可以在此处下载已编译的包文件，并将它们放置到相应的目录中：[此处](https://github.com/onlyoffice/onlyoffice-alfresco/releases)。
    :::
 
-2. 使用**模块管理工具(MMT)** 安装模块，运行以下命令：
+2. 使用**模块管理工具（MMT）**安装模块，运行以下命令：
 
    <Tabs>
       <TabItem value="alfresco" label="Alfresco">
@@ -150,17 +150,17 @@ ONLYOFFICE 集成遵循此处记录的 API 规范：[这里](../basic-concepts.m
 
 1. 您在 Alfresco Share 中导航到一个文档，并选择**在 ONLYOFFICE 中编辑**菜单选项。
 
-2. Alfresco Share 向存储库端发出请求(URL 格式为：*/parashift/onlyoffice/prepare?nodeRef=\{nodeRef\}*)。
+2. Alfresco Share 向存储库端发出请求（URL 格式为：*/parashift/onlyoffice/prepare?nodeRef=\{nodeRef\}*）。
 
 3. Alfresco 存储库端为 Share 准备一个包含以下属性的 JSON 对象：
 
-   - **url**：ONLYOFFICE 文档用于下载文档的 URL(包含当前用户的*alf\_ticket*);
+   - **url**：ONLYOFFICE 文档用于下载文档的 URL（包含当前用户的 *alf\_ticket*）；
    - **callbackUrl**：ONLYOFFICE 文档用于通知文档编辑状态的 URL；
    - **onlyofficeUrl**：客户端需要回复给 ONLYOFFICE 文档的 URL（由*onlyoffice.url*属性提供）；
    - **key**：用于指示 ONLYOFFICE 文档是否需要重新下载文档的*UUID+ 修改时间戳*；
    - **title**：文档标题（名称）。
 
-4. Alfresco Share 获取该对象，并从freemarker模板构建一个页面，填充所有这些值，以便您的浏览器可以加载编辑器。
+4. Alfresco Share 获取该对象，并从 FreeMarker 模板构建一个页面，填充所有这些值，以便您的浏览器可以加载编辑器。
 
 5. 您的浏览器向 ONLYOFFICE 文档的 JavaScript 库发出请求，并将包含上述属性的 DocEditor 配置发送给 ONLYOFFICE 文档。
 

@@ -18,7 +18,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 - 目前，使用该应用程序可打开并编辑以下文档格式：DOCM、DOCX、DOTM、DOTX、PDF、POTM、POTX、PPSM、PPSX、PPTM、PPTX、XLSB、XLSM、XLSX、XLTM、XLTX。
 - 仅支持查看的文档格式如下：CSV、DJVU、DOC、DOT、DPS、DPT、EPUB、ET、ETT、FB2、FODP、FODS、FODT、HTM、HTML、HWP、HWPX、KEY、MD、MHT、MHTML、NUMBERS、ODG、ODP、ODS、ODT、OTP、OTS、OTT、OXPS、PAGES、POT、PPS、PPT、RTF、STW、SXC、SXI、SXW、TXT、VSDM、VSDX、VSSM、VSSX、VSTM、VSTX、WPS、WPT、XLS、XLT、XML、XPS。
 - 以下格式可转换为 OOXML 格式：DOC、DOCM、DOT、DOTX、EPUB、HTM、HTML、ODP、ODT、POT、POTM、POTX、PPS、PPSM、PPSX、PPT、PPTM、RTF、XLS、XLSM、XLT、XLTM、XLTX。ODT、ODS 和 ODP 也支持即时转换。在管理员设置中启用相应选项后，ODF 格式的文档在点击后会立即在编辑器中转换并打开。
-- 该应用程序会在**新建(+)** 菜单中创建用于创建**文档**、**电子表格**、**演示文稿**的选项。它还会在文档库中为 Office 文档创建一个新的**在 ONLYOFFICE 中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回 ownCloud。连接到同一文档服务器的多个联合 ownCloud 实例之间也支持协同编辑。
+- 该应用程序会在**新建（+）**菜单中创建用于创建**文档**、**电子表格**、**演示文稿**的选项。它还会在文档库中为 Office 文档创建一个新的**在 ONLYOFFICE 中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回 ownCloud。连接到同一文档服务器的多个联合 ownCloud 实例之间也支持协同编辑。
 - 支持以不同的权限类型共享文件，如查看/编辑、评论、审阅、填写表单。还可以限制下载（在所有编辑器中）和修改筛选器（在电子表格中）。也支持通过公共链接进行共享。
 - 支持在 **ownCloud Web** 中处理文档、电子表格和演示文稿。
 
@@ -36,7 +36,7 @@ ownCloud 管理员可以从内置的应用市场安装集成应用程序。为�
 
 如果安装 ownCloud 的服务器没有互联网访问权限，或者由于其他原因需要手动安装，管理员可以按以下步骤手动安装该应用程序。要在 ownCloud 中使用 ONLYOFFICE 文档，必须执行以下步骤：
 
-1. 进入 ownCloud 服务器的*apps/*目录(或者[用于](https://doc.owncloud.org/server/admin_manual/installation/apps_management_installation.html#using-custom-app-directories)连接应用程序的其他目录):
+1. 进入 ownCloud 服务器的*apps/*目录（或者[用于](https://doc.owncloud.org/server/admin_manual/installation/apps_management_installation.html#using-custom-app-directories)连接应用程序的其他目录）:
 
    ``` sh
    cd apps/
@@ -90,7 +90,7 @@ https://<documentserver>/
 
 ## 检查连接
 
-您可以使用以下occ命令检查与 ONLYOFFICE 文档的连接：
+您可以使用以下 `occ` 命令检查与 ONLYOFFICE 文档的连接：
 
 ```sh
 occ onlyoffice:documentserver --check
@@ -125,7 +125,7 @@ occ onlyoffice:documentserver --check
 
 ONLYOFFICE 集成遵循[此处](../basic-concepts.md)记录的 API 规范。
 
-1. 创建新文件时，用户在 ownCloud 中导航到文档文件夹，然后点击**新建(+)** 菜单中的**文档**、**电子表格**或**演示文稿**选项。
+1. 创建新文件时，用户在 ownCloud 中导航到文档文件夹，然后点击**新建（+）**菜单中的**文档**、**电子表格**或**演示文稿**选项。
 
 2. 浏览器调用 */lib/Controller/editorController.php*控制器中的*create*方法。此方法会将*assets*文件夹中的文件副本添加到用户当前所在的文件夹中。
 
@@ -158,7 +158,7 @@ ONLYOFFICE 集成遵循[此处](../basic-concepts.md)记录的 API 规范。
 
 - **连接外部存储**：在某些情况下，使用**外部存储**应用添加存储时，协同编辑会出现问题。如果使用相同的授权密钥进行连接（选择*用户名和密码*或*全局凭证*身份验证类型），则用户可以进行协同编辑。如果使用不同的授权密钥（*登录凭据，保存到数据库*或*用户输入，存储到数据库*身份验证选项），则无法进行协同编辑。当使用*登录凭据，保存到会话*身份验证类型时，文件无法在编辑器中打开。
 
-- **加密文件存储**：ownCloud 提供了加密文件存储的选项。但是，如果启用了*每个用户的加密密钥*加密(ownCloud **默认加密模块**应用默认使用)，ONLYOFFICE 文档将无法打开加密文件进行编辑，也无法在编辑后保存。管理设置页面的 ONLYOFFICE 部分将显示相关通知。不过，如果设置了*主密钥*加密，ONLYOFFICE 应用将按预期工作。启用*主密钥*加密的说明可在 ownCloud 官方文档网站的 [ownCloud](https://doc.owncloud.org/server/admin_manual/configuration/files/encryption/encryption_configuration.html#enabling-master-key-based-encryption-from-the-command-line) 获取。
+- **加密文件存储**：ownCloud 提供了加密文件存储的选项。但是，如果启用了*每个用户的加密密钥*加密（ownCloud **默认加密模块**应用默认使用），ONLYOFFICE 文档将无法打开加密文件进行编辑，也无法在编辑后保存。管理设置页面的 ONLYOFFICE 部分将显示相关通知。不过，如果设置了*主密钥*加密，ONLYOFFICE 应用将按预期工作。启用*主密钥*加密的说明可在 ownCloud 官方文档网站的 [ownCloud](https://doc.owncloud.org/server/admin_manual/configuration/files/encryption/encryption_configuration.html#enabling-master-key-based-encryption-from-the-command-line) 获取。
 
   :::note
   ownCloud 建议仅在没有现有数据的全新安装或尚未启用加密的系统上使用*主加密密钥*，因为在已使用*每个用户的加密密钥*加密的文件上启用*主密钥*加密后，这些文件**可能会永久丢失**。
@@ -167,7 +167,7 @@ ONLYOFFICE 集成遵循[此处](../basic-concepts.md)记录的 API 规范。
 - **证书验证**：如果您正在为您的 ONLYOFFICE 文档使用自签名证书，ownCloud 将不会验证此类证书，并且不允许与 ONLYOFFICE 文档进行连接。这个问题可以通过两种方式解决：
 
   1. 在 ownCloud 的 ONLYOFFICE 管理页面服务器设置部分，勾选**禁用证书验证（不安全）** 复选框。
-  2. 手动更改 ownCloud 配置文件。找到 ownCloud 配置文件(*/owncloud/config/config.php*)并打开它。在其中插入以下部分：
+  2. 手动更改 ownCloud 配置文件。找到 ownCloud 配置文件（*/owncloud/config/config.php*）并打开它。在其中插入以下部分：
 
   ``` php
   <?php
@@ -191,7 +191,7 @@ ONLYOFFICE 集成遵循[此处](../basic-concepts.md)记录的 API 规范。
 
   此选项可帮助您避免因服务器设置不正确而需要更改设置时出现的问题。
 
-  默认情况下，此后台任务每天运行一次。如有必要，您可以更改运行频率。为此，打开 ownCloud 配置文件(*\_/owncloud/config/config.php\_*)。插入以下部分并输入所需的分钟数：
+  默认情况下，此后台任务每天运行一次。如有必要，您可以更改运行频率。为此，打开 ownCloud 配置文件（*\_/owncloud/config/config.php\_*）。插入以下部分并输入所需的分钟数：
 
   ``` php
   <?php
@@ -207,7 +207,7 @@ ONLYOFFICE 集成遵循[此处](../basic-concepts.md)记录的 API 规范。
 
 - **文件转换**：ONLYOFFICE 文档在打开和编辑文件时以 Office Open XML 格式为基础。如果文件格式与 OOXML 不同，为了使 ONLYOFFICE 文档能够正常工作并提高性能，文件仍将转换为相应的 OOXML 格式。之后您可以编辑文件，对基础 OOXML 格式进行任何更改，并将文件保存为该基础 OOXML 格式。
 
-  如果原始 ownCloud 文件格式与基础格式不同，而您仍想将其保存为原始格式，文件将从 OOXML 转换回该格式。由于这些格式在根本上存在差异，一些数据（如图表、表格、自选图形或图像）和格式可能会丢失，这是因为一些格式(*csv*，*txt*等)不支持这些内容，或者对它们的处理方式与 OOXML 标准不同。这就是为什么默认情况下所有非 OOXML 文件仅支持查看，尽管在上下文菜单中有转换文件的选项。如果您了解转换后可能会丢失数据/格式，但仍想打开非 OOXML 文件进行编辑，可以在设置列表中勾选这些文件。默认情况下，*csv*和*txt*文件支持编辑。
+  如果原始 ownCloud 文件格式与基础格式不同，而您仍想将其保存为原始格式，文件将从 OOXML 转换回该格式。由于这些格式在根本上存在差异，一些数据（如图表、表格、自选图形或图像）和格式可能会丢失，这是因为一些格式（*csv*、*txt* 等）不支持这些内容，或者对它们的处理方式与 OOXML 标准不同。这就是为什么默认情况下所有非 OOXML 文件仅支持查看，尽管在上下文菜单中有转换文件的选项。如果您了解转换后可能会丢失数据/格式，但仍想打开非 OOXML 文件进行编辑，可以在设置列表中勾选这些文件。默认情况下，*csv*和*txt*文件支持编辑。
 
 - 当用户访问没有下载权限的文档时，文件打印和使用系统剪贴板的功能不可用。不过，可以通过编辑器工具栏和上下文菜单中的按钮在编辑器内进行复制和粘贴操作。
 

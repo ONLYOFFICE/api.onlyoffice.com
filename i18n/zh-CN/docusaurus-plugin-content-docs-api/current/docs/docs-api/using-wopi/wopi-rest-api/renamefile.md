@@ -29,7 +29,7 @@
 
 | 名称                 | 类型   | 是否必填 | 描述                                                          |
 | -------------------- | ------ | -------- | -------------------------------------------------------------------- |
-| X-WOPI-Override      | string | 必填 | 来自 WOPI 服务器的请求操作 (*RENAME_FILE*)。       |
+| X-WOPI-Override      | string | 必填 | 来自 WOPI 服务器的请求操作（*RENAME_FILE*）。       |
 | X-WOPI-Lock          | string | 非必填的 | 锁 ID 主机必须用它来标识文件上的锁。 |
 | X-WOPI-RequestedName | string | 非必填的 | 文件名，不包括文件扩展名（UTF-7 格式）。 |
 

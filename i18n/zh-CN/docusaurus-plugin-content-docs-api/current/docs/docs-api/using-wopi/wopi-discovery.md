@@ -26,7 +26,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | editnew    | 使用适合文件类型的空白文件模板创建新文档，并在online office中打开此文档进行编辑。                                                                                                             |
 | embedview  | 呈现为嵌入网页而优化的文档的不可编辑视图。此操作从 7.2 版开始可用。                                                                                                      |
 | interactivepreview | 呈现文档的只读交互式预览，例如在 SharePoint 详细信息窗格中。它与 *embedview* 操作使用相同的 URL。此操作从版本 10.0 开始可用。 |
-| convert    | 将[二进制格式](./editing-binary-documents.md) (*doc、ppt、xls*) 的文档转换为现代格式 (*docx、pptx、xlsx*)，以便可以在在线办公中进行编辑。此操作从版本 7.3 开始可用。 |
+| convert    | 将[二进制格式](./editing-binary-documents.md) (*doc、ppt、xls*) 的文档转换为现代格式（*docx、pptx、xlsx*），以便可以在在线办公中进行编辑。此操作从版本 7.3 开始可用。 |
 | formsubmit | 支持在表单填写模式下打开 *pdf* 文件。在这种情况下，即使用户没有使用 *edit* 操作的权限，他们也可能能够对 *pdf* 文件进行更改。此操作从 8.1 版开始可用。       |
 | mobileView | 呈现文档的不可编辑视图，该视图已针对智能手机等移动设备上的查看进行了优化。此操作从版本 7.4 开始可用。                                                                                |
 | mobileEdit | 允许用户在智能手机等移动设备上编辑文档。此操作从版本 7.4 开始可用。                                                                                                                        |
@@ -62,7 +62,7 @@ ui=en-us&amp;thm=1&amp;"/>
 | rs         | en-us                                                            | 指示 WOPI 服务器包含 [\[RFC1766\]](https://datatracker.ietf.org/doc/html/rfc1766.html) 中所述格式的首选数据语言，用于语言可能影响数据计算的情况（在电子表格编辑器中）。             |
 | thm        | 1                                                                | 指示 WOPI 服务器包含一个值来指定使用的主题。当前值为 *"1"* 表示浅色主题，*"2"* 表示深色主题。                                                                    |
 | dchat      | 1                                                                | 指示 WOPI 服务器包含dchat值为 *"1"*，以加载一个不创建或加入聊天会话的文档视图。                                                                                                                       |
-| embed      | true                                                             | 表明操作的输出将嵌入网页 (**true**)。                                                                                                                                                                   |
+| embed      | true                                                             | 表明操作的输出将嵌入网页（**true**）。                                                                                                                                                                   |
 | wopisrc    | https\://\<host\_address>/ wopi/files/(file\_id)                 | 指示 WOPI 服务器包含 [WOPISrc](./key-concepts.md#wopisrc) 值。它告诉 WOPI 客户端在对文件运行 WOPI 操作时回调到哪个 URL。此参数是必需的。                                     |
 | favIconUrl | "/web-apps/apps/ documenteditor/main/ resources/img/favicon.ico" | 表示 WOPI 服务器包括所有在线office应用程序的适当收藏夹的 URL。主机应该使用此 URL 作为其主机页面的收藏夹图标，以便在使用在线office时显示相应的应用程序图标。 |
 

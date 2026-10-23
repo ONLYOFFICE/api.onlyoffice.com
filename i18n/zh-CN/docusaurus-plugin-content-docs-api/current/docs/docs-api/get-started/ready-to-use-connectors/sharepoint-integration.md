@@ -107,7 +107,7 @@ ONLYOFFICE 集成遵循[此处](../basic-concepts.md)记录的 API 规范。
 
 1. 用户在 SharePoint 中导航到一个文档，然后在上下文菜单或功能区中选择**在 ONLYOFFICE 中编辑**操作。
 
-2. SharePoint 向编辑器页面发出请求(URL 格式为： */\_layouts/15/Onlyoffice/editorPage.aspx?SPListItemId=\{ItemId\}\&SPListURLDir=\{ListUrlDir\}\&action=track*)。
+2. SharePoint 向编辑器页面发出请求（URL 格式为： */\_layouts/15/Onlyoffice/editorPage.aspx?SPListItemId=\{ItemId\}\&SPListURLDir=\{ListUrlDir\}\&action=track*）。
 
 3. SharePoint 准备一个包含以下属性的 JSON 对象：
 

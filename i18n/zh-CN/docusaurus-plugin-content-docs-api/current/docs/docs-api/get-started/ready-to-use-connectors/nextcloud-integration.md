@@ -18,7 +18,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 - 目前，使用该应用程序可打开并编辑以下文档格式：DOCM、DOCX、DOTM、DOTX、PDF、POTM、POTX、PPSM、PPSX、PPTM、PPTX、XLSB、XLSM、XLSX、XLTM、XLTX。
 - 仅支持查看的文档格式为：CSV、DJVU、DOC、DOT、DPS、DPT、EPUB、ET、ETT、FB2、FODP、FODS、FODT、HTM、HTML、HWP、HWPX、KEY、MD、MHT、MHTML、NUMBERS、ODG、ODP、ODS、ODT、OTP、OTS、OTT、OXPS、PAGES、POT、PPS、PPT、RTF、STW、SXC、SXI、SXW、TSV、TXT、VSDM、VSDX、VSSM、VSSX、VSTM、VSTX、WPS、WPT、XLS、XLT、XML、XPS。
 - 以下格式可转换为 OOXML 格式：DOC、DOCM、DOT、DOTX、EPUB、HTM、HTML、ODP、ODT、POT、POTM、POTX、PPS、PPSM、PPSX、PPT、PPTM、RTF、XLS、XLSM、XLT、XLTM、XLTX。
-- 该应用程序会在**新建(+)** 菜单中创建用于创建**文档**、**电子表格**、**演示文稿**、**PDF** 的选项。它还会在文档库中为 Office 文档创建一个新的**在 ONLYOFFICE 中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回 Nextcloud。连接到同一文档服务器的多个联合 Nextcloud 实例之间也支持协同编辑。
+- 该应用程序会在**新建（+）**菜单中创建用于创建**文档**、**电子表格**、**演示文稿**、**PDF** 的选项。它还会在文档库中为 Office 文档创建一个新的**在 ONLYOFFICE 中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回 Nextcloud。连接到同一文档服务器的多个联合 Nextcloud 实例之间也支持协同编辑。
 
 ## 安装 ONLYOFFICE 文档
 
@@ -198,7 +198,7 @@ php occ config:app:set files {watermark_setting_key} --value={setting_value}
 | `verify_peer_off`          | 如果为`true`，禁用 SSL 证书验证。默认值：`false`。                                                    |
 | `limit_thumb_size`         | 生成缩略图的最大文件大小（字节）。                                                                  |
 | `disable_download`         | 如果为`true`，禁用文件下载功能。                                                                   |
-| `editors_check_interval`   | 使用cron检查 ONLYOFFICE 文档可用性的时间间隔（秒）。默认值：`86400`。                                     |
+| `editors_check_interval`   | 使用 cron 检查 ONLYOFFICE 文档可用性的时间间隔（秒）。默认值：`86400`。                                     |
 | `permissions_modifyFilter` | 全局应用电子表格筛选（`true`，影响所有用户）或仅本地应用（`false`）。默认值：`true`。                     |
 | `customization_customer`   | 显示在编辑器“关于”部分的客户信息。                                                                   |
 | `customization_logo`       | 编辑器标题栏中显示的徽标。                                                                          |
@@ -220,7 +220,7 @@ php occ config:app:set files {watermark_setting_key} --value={setting_value}
 
 ## 检查连接
 
-您可以使用以下occ命令检查与 ONLYOFFICE 文档的连接：
+您可以使用以下 `occ` 命令检查与 ONLYOFFICE 文档的连接：
 
 ```sh
 occ onlyoffice:documentserver --check
@@ -241,7 +241,7 @@ occ onlyoffice:documentserver --check
 
 ONLYOFFICE 集成遵循此处记录的 API 规范：[此处](../basic-concepts.md)。
 
-1. 创建新文件时，用户在 Nextcloud 中导航到文档文件夹，然后点击**新建(+)** 菜单中的**文档**、**电子表格**或**演示文稿**选项。
+1. 创建新文件时，用户在 Nextcloud 中导航到文档文件夹，然后点击**新建（+）**菜单中的**文档**、**电子表格**或**演示文稿**选项。
 
 2. 浏览器调用*/lib/Controller/editorController.php*控制器中的*create*方法。此方法会将*assets*文件夹中的文件副本添加到用户当前所在的文件夹中。
 
@@ -277,7 +277,7 @@ ONLYOFFICE 集成遵循此处记录的 API 规范：[此处](../basic-concepts.m
 - **证书验证**：如果文档服务器使用自签名证书，Nextcloud 将不会验证此类证书，并且不允许与 ONLYOFFICE 文档进行连接。这个问题可以通过两种方式解决：
 
   1. 在 Nextcloud 的 ONLYOFFICE 管理页面服务器设置部分，勾选**禁用证书验证（不安全）** 复选框。
-  2. 手动更改 Nextcloud 配置文件。找到 Nextcloud 配置文件(*/Nextcloud/config/config.php*)并打开它。在其中插入以下部分：
+  2. 手动更改 Nextcloud 配置文件。找到 Nextcloud 配置文件（*/Nextcloud/config/config.php*）并打开它。在其中插入以下部分：
 
   ``` php
   <?php
@@ -301,7 +301,7 @@ ONLYOFFICE 集成遵循此处记录的 API 规范：[此处](../basic-concepts.m
 
  此选项可帮助您避免因服务器设置不正确而需要更改设置时出现的问题。
 
- 默认情况下，此后台任务每天运行一次（`86400`秒）。如有必要，您可以更改运行频率。为此，打开 Nextcloud 配置文件(*\_/Nextcloud/config/config.php\_*)。插入以下部分并输入所需的秒数。例如，若要每小时检查一次：
+ 默认情况下，此后台任务每天运行一次（`86400`秒）。如有必要，您可以更改运行频率。为此，打开 Nextcloud 配置文件（*\_/Nextcloud/config/config.php\_*）。插入以下部分并输入所需的秒数。例如，若要每小时检查一次：
 
   ``` php
   <?php
@@ -317,7 +317,7 @@ ONLYOFFICE 集成遵循此处记录的 API 规范：[此处](../basic-concepts.m
 
 - **文件转换**：ONLYOFFICE 文档在打开和编辑文件时以 Office Open XML 格式为基础。如果文件格式与 OOXML 不同，为了使 ONLYOFFICE 文档能够正常工作并提高性能，文件仍将转换为相应的 OOXML 格式。之后您可以编辑文件，对基础 OOXML 格式进行任何更改，并将文件保存为该基础 OOXML 格式。
 
-  如果原始 Nextcloud 文件格式与基础格式不同，而您仍想将其保存为原始格式，文件将从 OOXML 转换回该格式。由于这些格式在根本上存在差异，一些数据（如图表、表格、自选图形或图像）和格式可能会丢失，这是因为一些格式(*csv*，*txt*等)不支持这些内容，或者对它们的处理方式与 OOXML 标准不同。这就是为什么默认情况下所有非 OOXML 文件仅支持查看，尽管在上下文菜单中有转换文件的选项。如果您了解转换后可能会丢失数据/格式，但仍想打开非 OOXML 文件进行编辑，可以在设置列表中勾选这些文件。默认情况下，*csv*和*txt*文件支持编辑。
+  如果原始 Nextcloud 文件格式与基础格式不同，而您仍想将其保存为原始格式，文件将从 OOXML 转换回该格式。由于这些格式在根本上存在差异，一些数据（如图表、表格、自选图形或图像）和格式可能会丢失，这是因为一些格式（*csv*、*txt* 等）不支持这些内容，或者对它们的处理方式与 OOXML 标准不同。这就是为什么默认情况下所有非 OOXML 文件仅支持查看，尽管在上下文菜单中有转换文件的选项。如果您了解转换后可能会丢失数据/格式，但仍想打开非 OOXML 文件进行编辑，可以在设置列表中勾选这些文件。默认情况下，*csv*和*txt*文件支持编辑。
 
 - 当用户访问没有下载权限的文档时，文件打印和使用系统剪贴板的功能不可用。不过，可以通过编辑器工具栏和上下文菜单中的按钮在编辑器内进行复制和粘贴操作。
 

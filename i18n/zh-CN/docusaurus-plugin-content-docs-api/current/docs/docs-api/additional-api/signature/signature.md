@@ -9,7 +9,7 @@ ONLYOFFICE 文档[使用](../../get-started/how-it-works/security.md)令牌，�
 此功能从 ONLYOFFICE 文档 4.2 版本开始使用。
 :::
 
-对于验证设置，需要编辑位于配置文件中的 [secret key](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#SecretKey) 和 [token](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#Token) 参数，配置文件可在以下路径找到(或创建)：
+对于验证设置，需要编辑位于配置文件中的 [secret key](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#SecretKey) 和 [token](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#Token) 参数，配置文件可在以下路径找到（或创建）：
 
 <Tabs>
   <TabItem value="linux" label="Linux">

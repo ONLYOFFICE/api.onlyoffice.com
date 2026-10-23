@@ -33,7 +33,7 @@
 
 | 名称                   | 类型    | 是否必填 | 描述                                                                                                                           |
 | ---------------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| X-WOPI-Override        | string  | 必填 | 来自 WOPI 服务器的请求操作 (*PUT_RELATIVE*)。                                                                      |
+| X-WOPI-Override        | string  | 必填 | 来自 WOPI 服务器的请求操作（*PUT_RELATIVE*）。                                                                      |
 | X-WOPI-SuggestedTarget | string  | 必填 | 文件扩展名或完整文件名，包括 UTF-7 编码字符串格式的文件扩展名。                         |
 | X-WOPI-Size            | integer | 非必填的 | 文件的大小（以字节为单位）。                                                                                                        |
 | X-WOPI-FileConversion  | boolean | 非必填的 | 表明请求是在[二进制文档转换](../editing-binary-documents.md)的上下文中进行的。|
