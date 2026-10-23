@@ -63,11 +63,11 @@ import TabItem from '@theme/TabItem';
 }
 ```
 
-## IP filter
+## IP 过滤器 {#ip-filter}
 
 ONLYOFFICE 文档只能与受信任的 WOPI 主机配合使用。这与 WOPI 文档中的 [WOPI 域允许列表](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list)是同一理念。请在 IP 过滤器规则中允许您的 WOPI 主机，并拒绝所有其他主机。
 
-按照以下步骤配置 ONLYOFFICE 文档 [IP filter](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter)：
+按照以下步骤配置 ONLYOFFICE 文档 [IP 过滤器](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter)：
 
 1. 使用任何可用的文本编辑器打开 */etc/onlyoffice/documentserver/local.json* 文件：
 
