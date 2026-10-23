@@ -4,7 +4,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 将选中的文本转换为语音。该插件使用 [guessLanguage](https://richtr.github.io/guessLanguage.js/) 来识别语言，并通过 [Web Speech API](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Speech_API) 的 [SpeechSynthesis](https://developer.mozilla.org/zh-CN/docs/Web/API/SpeechSynthesis) 接口实现朗读。
 
-**插件类型：** 可视化，非系统插件。
+**插件类型：** 可视化、非系统插件。
 
 **支持的编辑器：** 文档。
 

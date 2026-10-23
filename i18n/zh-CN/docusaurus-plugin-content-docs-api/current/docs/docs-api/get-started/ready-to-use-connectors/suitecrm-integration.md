@@ -9,8 +9,8 @@ sidebar_custom_props:
 
 ## 功能特性
 
-- 目前，支持编辑以下格式的文档：DOCX，XLSX，PPTX。
-- 仅支持查看以下格式的文档：PDF，ODT，ODS，ODP，DOC，XLS，PPT，PPS，EPUB，RTF，HTML，HTM，TXT，CSV。
+- 目前，支持编辑以下格式的文档：DOCX、XLSX、PPTX。
+- 仅支持查看以下格式的文档：PDF、ODT、ODS、ODP、DOC、XLS、PPT、PPS、EPUB、RTF、HTML、HTM、TXT、CSV。
 - 借助该插件，用户可以编辑文本文档、电子表格和演示文稿，还能创建并填写数字表单。
 - 该插件会在文档库中为办公文档新增**在ONLYOFFICE中打开**菜单选项。这使得多个用户能够实时协作，并将更改保存回SuiteCRM。
 

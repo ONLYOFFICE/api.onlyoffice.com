@@ -6,7 +6,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 支持的语言列表可见于[此处](https://github.com/typograf/typograf/blob/dev/docs/LOCALES.en-US.md)。
 
-**插件类型：** 可视化，非系统插件。
+**插件类型：** 可视化、非系统插件。
 
 **支持的编辑器：** 文本文档。
 

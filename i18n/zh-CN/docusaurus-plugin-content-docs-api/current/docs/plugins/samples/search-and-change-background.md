@@ -9,7 +9,7 @@ import Video from '@site/src/components/Video/Video';
 
 搜索目标文本并更改其背景颜色。
 
-**插件类型：** 可视化，非系统插件。
+**插件类型：** 可视化、非系统插件。
 
 **支持的编辑器：** 文本文档。
 

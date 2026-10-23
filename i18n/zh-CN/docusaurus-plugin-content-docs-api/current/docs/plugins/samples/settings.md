@@ -9,7 +9,7 @@ import Video from '@site/src/components/Video/Video';
 
 使用水印保护文档。
 
-**插件类型：** 非可视化，系统插件。
+**插件类型：** 非可视化、系统插件。
 
 **支持的编辑器：** 文档、电子表格、演示文稿。
 

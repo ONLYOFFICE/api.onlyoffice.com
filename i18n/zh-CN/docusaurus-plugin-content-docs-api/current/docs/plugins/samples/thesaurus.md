@@ -4,7 +4,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 连接 [Big Huge Thesaurus](https://words.bighugelabs.com/)，用于查找单词的同义词和反义词。
 
-**插件类型：** 可视化，非系统插件。
+**插件类型：** 可视化、非系统插件。
 
 **支持的编辑器：** 文本文档、电子表格、演示文稿。
 

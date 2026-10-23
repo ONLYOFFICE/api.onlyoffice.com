@@ -4,7 +4,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 连接 [Google Translate API](https://cloud.google.com/translate?hl=zh)，用于将选中的文本翻译成其他语言。
 
-**插件类型：** 可视化，非系统插件。
+**插件类型：** 可视化、非系统插件。
 
 **支持的编辑器：** 文本文档、电子表格、演示文稿。
 

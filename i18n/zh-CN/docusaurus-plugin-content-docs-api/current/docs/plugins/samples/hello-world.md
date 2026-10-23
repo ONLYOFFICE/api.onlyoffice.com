@@ -9,7 +9,7 @@ import Video from '@site/src/components/Video/Video';
 
 当用户按下按钮时，插入 *Hello world!* 这句话。
 
-**插件类型：** 非可视化，非系统插件。
+**插件类型：** 非可视化、非系统插件。
 
 **支持的编辑器：** 文档。
 

@@ -4,9 +4,9 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 连接 [youtube iframe_api](https://developers.google.com/youtube/iframe_api_reference)，用于将 YouTube 视频作为 OLE 对象嵌入文档，并通过调整大小、旋转和改变位置来管理它们。
 
-**插件类型：** 可视化，OLE 对象，非系统插件。
+**插件类型：** 可视化、OLE 对象、非系统插件。
 
-**支持编辑器：** 文档，电子表格，演示文稿。
+**支持编辑器：** 文档、电子表格、演示文稿。
 
 <YoutubeVideo videoId="jHuwwVliZ5Q" posterType="hqdefault" />
 

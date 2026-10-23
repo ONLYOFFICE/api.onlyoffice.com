@@ -9,7 +9,7 @@ import Video from '@site/src/components/Video/Video';
 
 向电子表格的单元格中添加评论。
 
-**插件类型：** 可视化，非系统插件。
+**插件类型：** 可视化、非系统插件。
 
 **支持的编辑器：** 电子表格。
 
