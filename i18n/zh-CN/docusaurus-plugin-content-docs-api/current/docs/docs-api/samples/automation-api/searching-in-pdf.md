@@ -9,7 +9,7 @@ import { SearchPdfExternalToolbar } from '@site/src/components/BrowserWindow';
 
 # 在 PDF 中搜索
 
-使用自动化 API 在 PDF 文档中搜索文本，并通过外部界面高亮显示所有匹配项 — 输入搜索词、设置选项，即可实时查看高亮显示的结果。
+使用自动化 API 在 PDF 文档中搜索文本，并通过外部界面高亮显示所有匹配项——输入搜索词、设置选项，即可实时查看高亮显示的结果。
 
 :::info
 文档以 PDF 格式打开。您的代码调用 `connector.callCommand()` 来执行 Document Builder API 方法，在每个页面上搜索文本并创建高亮注释。结果显示在外部面板中。

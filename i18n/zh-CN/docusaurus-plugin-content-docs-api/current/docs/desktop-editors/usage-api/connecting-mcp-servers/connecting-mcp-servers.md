@@ -266,7 +266,7 @@ JSON.parse(AscDesktopEditor.getToolFunctions());
 桌面编辑器支持各种扩展 AI 功能的 MCP 服务器：
 
 - [ONLYOFFICE Apps](./docspace-mcp.md) - 连接到 ONLYOFFICE Apps 进行文档管理
-- 社区 MCP 服务器 - 任何遵循协议规范的 MCP 兼容服务器
+- 社区 MCP 服务器——任何遵循协议规范的 MCP 兼容服务器
 
 ## 故障排除
 

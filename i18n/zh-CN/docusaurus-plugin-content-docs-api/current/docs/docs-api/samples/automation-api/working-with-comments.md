@@ -7,7 +7,7 @@ import { CommentsExternalToolbar } from '@site/src/components/BrowserWindow';
 
 # 处理评论
 
-使用自动化 API 从外部 UI 管理文档评论 — 添加、删除、回复和导航，无需直接操作编辑器。
+使用自动化 API 从外部 UI 管理文档评论——添加、删除、回复和导航，无需直接操作编辑器。
 
 :::info
 文档打开时包含现有评论。您的代码调用 `connector.executeMethod()` 和 `connector.attachEvent()` 来与评论交互。编辑器会实时更新。

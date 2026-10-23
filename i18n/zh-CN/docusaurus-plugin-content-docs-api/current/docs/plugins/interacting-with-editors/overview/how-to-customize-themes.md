@@ -121,6 +121,6 @@ button {
 
 - `type` - 主题类型（例如，"light"、"dark"、"contrast-dark"）
 - `name` - 主题名称（例如，"classic"、"dark"）
-- CSS 变量值 - 所有可用的主题颜色和属性，作为 CSS 自定义属性（例如，`--background-normal`、`--text-normal`）
+- CSS 变量值——所有可用的主题颜色和属性，作为 CSS 自定义属性（例如，`--background-normal`、`--text-normal`）
 
 此方法可确保您的插件无缝适应主题变更，在所有编辑器主题中提供一致的用户体验。

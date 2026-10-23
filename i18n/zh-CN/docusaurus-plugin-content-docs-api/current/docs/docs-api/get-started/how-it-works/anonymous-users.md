@@ -61,4 +61,4 @@ sidebar_position: -11
 
 ![Anonymous user warning](/assets/images/editor/anonymous-warning.png#gh-light-mode-only)![Anonymous user warning](/assets/images/editor/anonymous-warning.dark.png#gh-dark-mode-only)
 
-对于实时查看器，不会显示警告 — 它将静默回退到离线查看器。
+对于实时查看器，不会显示警告——它将静默回退到离线查看器。

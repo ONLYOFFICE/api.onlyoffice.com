@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # 快速入门
 
-宏非常简单 - 纯 JavaScript，无需安装。
+宏非常简单——纯 JavaScript，无需安装。
 
 **时间**：2 分钟 | **技能等级**：初级
 

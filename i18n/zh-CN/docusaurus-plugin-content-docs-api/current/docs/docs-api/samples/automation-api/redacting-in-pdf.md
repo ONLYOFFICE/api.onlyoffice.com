@@ -9,7 +9,7 @@ import { RedactPdfExternalToolbar } from '@site/src/components/BrowserWindow';
 
 # 在 PDF 中涂黑
 
-使用自动化 API 在 PDF 文档中查找敏感文本，并通过外部界面永久涂黑所有匹配项 — 输入搜索词、设置选项、预览涂黑标记，然后应用涂黑。
+使用自动化 API 在 PDF 文档中查找敏感文本，并通过外部界面永久涂黑所有匹配项——输入搜索词、设置选项、预览涂黑标记，然后应用涂黑。
 
 :::info
 文档以 PDF 格式打开。您的代码调用 `connector.callCommand()` 来执行 Document Builder API 方法，搜索文本并创建涂黑注释。当用户确认后，涂黑将被永久应用。

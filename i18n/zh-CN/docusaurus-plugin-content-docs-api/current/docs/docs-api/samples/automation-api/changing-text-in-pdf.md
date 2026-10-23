@@ -9,7 +9,7 @@ import { ChangeTextPdfExternalToolbar } from '@site/src/components/BrowserWindow
 
 # 在 PDF 中更改文本
 
-使用自动化 API 通过外部界面在 PDF 文档中查找和替换文本 — 输入搜索词、指定替换文本，然后在所有页面上应用更改。
+使用自动化 API 通过外部界面在 PDF 文档中查找和替换文本——输入搜索词、指定替换文本，然后在所有页面上应用更改。
 
 :::info
 文档以 PDF 格式打开。您的代码调用 `connector.callCommand()` 来执行 Document Builder API 方法，识别页面内容、遍历文本对象并替换匹配的文本。

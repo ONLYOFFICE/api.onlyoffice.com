@@ -173,7 +173,7 @@ cd document-builder-samples
             python configure/configure.py --vs --test cpp/creating_basic_form --test cpp/creating_advanced_form
             ```
 
-        2. 在 Visual Studio 中打开 `.sln` 文件。它会提示您将 Windows SDK 和 VS 工具集重新定向到您安装的版本 - 点击“确定”。
+        2. 在 Visual Studio 中打开 `.sln` 文件。它会提示您将 Windows SDK 和 VS 工具集重新定向到您安装的版本——点击“确定”。
 
         3. 解决方案已准备好进行构建和运行。文档将在项目文件目录中创建。
 

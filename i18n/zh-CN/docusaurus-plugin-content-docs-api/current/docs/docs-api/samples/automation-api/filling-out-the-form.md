@@ -7,7 +7,7 @@ import { FormExternalToolbar } from '@site/src/components/BrowserWindow';
 
 # 填写表格
 
-使用自动化 API 从外部 UI 填写表单字段 — 从下拉列表中选择一个人员，编辑器和自定义界面中的所有字段都会自动更新。
+使用自动化 API 从外部 UI 填写表单字段——从下拉列表中选择一个人员，编辑器和自定义界面中的所有字段都会自动更新。
 
 :::info
 文档以可填写的 PDF 表单打开。您的代码调用 `connector.executeMethod()` 来读取和写入表单值。更改在编辑器和外部界面之间实时双向同步。
