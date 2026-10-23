@@ -123,20 +123,20 @@ export function PanelHeader({ onClose }: { onClose: () => void }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `className`? | `string` | Applied to the header element. |
-| `dataTestId`? | `string` | Value of `data-testid` on the header. Default: `"aside-header"`. |
-| `header`? | `ReactNode` | Title of the panel. A string is rendered as bold 21px text; any other node is rendered inside a `Heading` that truncates with an ellipsis. Nothing is rendered when it is absent, including no placeholder. |
-| `headerComponent`? | `ReactNode` | Arbitrary node rendered after the icons and before the close cross, for a control that is not an icon. |
-| `headerHeight`? | `string` | Height of the header as a CSS length, applied through the `--aside-header-custom-height` custom property. Without it the header is 53px. |
-| `headerIcons`? | `HeaderIcon[]` | Extra icon buttons between the title and the close cross. Each needs a `key`, an `onClick` and either `iconNode` (JSX, preferred) or `url` — a URL fetched at runtime, not an asset name. Default: `[]`. |
-| `id`? | `string` | Applied to the header element. |
-| `isBackButton`? | `boolean` | Whether a back arrow is rendered before the title. It is mirrored in RTL. Default: `false`. |
-| `isCloseable`? | `boolean` | Whether the close cross is rendered. It is the only control that calls `onCloseClick`. Default: `true`. |
-| `isLoading`? | `boolean` | Replaces the whole header — title, icons and close cross alike — with a skeleton bar. There is no way out of a header that is loading. |
-| `onBackClick`? | `() => void` | Called by the back arrow. |
-| `onCloseClick`? | `() => void` | Called by the close cross. |
-| `style`? | `CSSProperties` | Applied to the header element. |
-| `withoutBorder`? | `boolean` | Hides the bottom border, which otherwise spans the full width of the panel regardless of the header's own side margins. Default: `false`. |
+| `className` | `string` | Applied to the header element. |
+| `dataTestId` | `string` | Value of `data-testid` on the header. Default: `"aside-header"`. |
+| `header` | `ReactNode` | Title of the panel. A string is rendered as bold 21px text; any other node is rendered inside a `Heading` that truncates with an ellipsis. Nothing is rendered when it is absent, including no placeholder. |
+| `headerComponent` | `ReactNode` | Arbitrary node rendered after the icons and before the close cross, for a control that is not an icon. |
+| `headerHeight` | `string` | Height of the header as a CSS length, applied through the `--aside-header-custom-height` custom property. Without it the header is 53px. |
+| `headerIcons` | `HeaderIcon[]` | Extra icon buttons between the title and the close cross. Each needs a `key`, an `onClick` and either `iconNode` (JSX, preferred) or `url` — a URL fetched at runtime, not an asset name. Default: `[]`. |
+| `id` | `string` | Applied to the header element. |
+| `isBackButton` | `boolean` | Whether a back arrow is rendered before the title. It is mirrored in RTL. Default: `false`. |
+| `isCloseable` | `boolean` | Whether the close cross is rendered. It is the only control that calls `onCloseClick`. Default: `true`. |
+| `isLoading` | `boolean` | Replaces the whole header — title, icons and close cross alike — with a skeleton bar. There is no way out of a header that is loading. |
+| `onBackClick` | `() => void` | Called by the back arrow. |
+| `onCloseClick` | `() => void` | Called by the close cross. |
+| `style` | `CSSProperties` | Applied to the header element. |
+| `withoutBorder` | `boolean` | Hides the bottom border, which otherwise spans the full width of the panel regardless of the header's own side margins. Default: `false`. |
 
 </APITable>
 

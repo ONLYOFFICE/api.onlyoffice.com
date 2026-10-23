@@ -19,22 +19,22 @@ Placeholder in the shape of a list of rows, shown while the rows themselves are 
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `count`? | `numberundefined` | How many placeholder rows to draw. Default: `25`. |
-| `style`? | `CSSPropertiesundefined` | Inline style applied to every placeholder row. |
-| `title`? | `stringundefined` | Accessible name given to every shape; empty by default, which leaves them unnamed. Default: `""`. |
-| `className`? | `stringundefined` | Class added to every placeholder row. |
-| `x`? | `stringundefined` | Ignored: the rows place their shapes themselves. |
-| `y`? | `stringundefined` | Ignored: the rows place their shapes themselves. |
-| `width`? | `stringundefined` | Ignored: the rows size their shapes themselves. |
-| `height`? | `stringundefined` | Ignored: the rows size their shapes themselves. |
-| `borderRadius`? | `stringundefined` | Corner radius of the square and bar shapes, in pixels. Default: `3`. |
-| `backgroundColor`? | `stringundefined` | Colour of the shapes at rest, drawn at backgroundOpacity; black in every theme. Default: `#000`. |
-| `foregroundColor`? | `stringundefined` | Colour of the band that sweeps across the shapes, drawn at foregroundOpacity. Default: `#000`. |
-| `backgroundOpacity`? | `numberundefined` | Opacity of backgroundColor, from 0 to 1. Default: `0.1`. |
-| `foregroundOpacity`? | `numberundefined` | Opacity of foregroundColor, from 0 to 1. Default: `0.15`. |
-| `speed`? | `numberundefined` | Duration of one sweep of the band, in seconds. Default: `2`. |
-| `animate`? | `booleanundefined` | Whether the light band sweeps across the shapes; turn it off for a still placeholder. Default: `true`. |
-| `uniqueKey`? | `stringundefined` | Ignored: every shape takes an id of its own. |
+| `count` | `numberundefined` | How many placeholder rows to draw. Default: `25`. |
+| `style` | `CSSPropertiesundefined` | Inline style applied to every placeholder row. |
+| `title` | `stringundefined` | Accessible name given to every shape; empty by default, which leaves them unnamed. Default: `""`. |
+| `className` | `stringundefined` | Class added to every placeholder row. |
+| `x` | `stringundefined` | Ignored: the rows place their shapes themselves. |
+| `y` | `stringundefined` | Ignored: the rows place their shapes themselves. |
+| `width` | `stringundefined` | Ignored: the rows size their shapes themselves. |
+| `height` | `stringundefined` | Ignored: the rows size their shapes themselves. |
+| `borderRadius` | `stringundefined` | Corner radius of the square and bar shapes, in pixels. Default: `3`. |
+| `backgroundColor` | `stringundefined` | Colour of the shapes at rest, drawn at backgroundOpacity; black in every theme. Default: `#000`. |
+| `foregroundColor` | `stringundefined` | Colour of the band that sweeps across the shapes, drawn at foregroundOpacity. Default: `#000`. |
+| `backgroundOpacity` | `numberundefined` | Opacity of backgroundColor, from 0 to 1. Default: `0.1`. |
+| `foregroundOpacity` | `numberundefined` | Opacity of foregroundColor, from 0 to 1. Default: `0.15`. |
+| `speed` | `numberundefined` | Duration of one sweep of the band, in seconds. Default: `2`. |
+| `animate` | `booleanundefined` | Whether the light band sweeps across the shapes; turn it off for a still placeholder. Default: `true`. |
+| `uniqueKey` | `stringundefined` | Ignored: every shape takes an id of its own. |
 
 </APITable>
 

@@ -50,34 +50,34 @@ import PeopleSelector from "@onlyoffice/apps-ui-kit/selectors/People";
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `withHeader`? | `boolean` | Show the header bar with a label and close button. Default: `false`. |
-| `headerProps`? | `object` |  |
-| `isMultiSelect`? | `boolean` | Allow selecting multiple items at once. Default: `false`. |
-| `onSubmit`? | `function` | Called with selected TSelectorItem array (and optional access right) on confirm. |
-| `onClose`? | `function` | Called when the selector panel is dismissed. |
-| `id`? | `-` | HTML id attribute for the root element. |
-| `className`? | `-` | Additional CSS class name for the root element. |
-| `withGroups`? | `-` | Show a Groups tab alongside the Members tab. Default: `false`. |
-| `isGroupsOnly`? | `-` | Show only the Groups tab (no Members tab). Default: `false`. |
-| `withGuests`? | `-` | Show a Guests tab alongside the Members tab. Default: `false`. |
-| `isGuestsOnly`? | `-` | Show only the Guests tab. Default: `false`. |
-| `currentUserId`? | `-` | ID of the current user — displayed with a '(Me)' label. |
-| `filterUserId`? | `-` | ID of a user to remove from the list. |
-| `withOutCurrentAuthorizedUser`? | `-` | Remove the current authorized user from the list entirely. Default: `false`. |
-| `excludeItems`? | `-` | Array of user IDs to exclude from results. |
-| `disableInvitedUsers`? | `-` | Array of user IDs to show as disabled (already invited). |
-| `disableDisabledUsers`? | `-` | Disable terminated users in the list. Default: `false`. |
-| `roomId`? | `-` | Scope the list to users/groups with access to this room ID. |
-| `targetEntityType`? | `-` | Entity type used for shared-access queries when roomId is set. Default: `room`. |
-| `onlyRoomMembers`? | `-` | Only show members already in the room. Default: `false`. |
-| `isAgent`? | `-` | Adjusts empty screen description text for AI agent context. Default: `false`. |
-| `useAside`? | `-` | Render the selector inside an Aside panel with a backdrop. Default: `false`. |
-| `withoutBackground`? | `-` | Remove the background overlay in Aside mode. Default: `false`. |
-| `withBlur`? | `-` | Apply blur effect to the Aside backdrop. Default: `false`. |
-| `withCancelButton`? | `-` | Show a cancel button in the footer. Default: `false`. |
-| `withFooterCheckbox`? | `-` | Show a checkbox in the footer. Default: `false`. |
-| `emptyScreenHeader`? | `-` | Custom header text for the empty state screen. |
-| `emptyScreenDescription`? | `-` | Custom description text for the empty state screen. |
-| `onCancel`? | `-` | Called when the cancel button is clicked. |
+| `withHeader` | `boolean` | Show the header bar with a label and close button. Default: `false`. |
+| `headerProps` | `object` |  |
+| `isMultiSelect` | `boolean` | Allow selecting multiple items at once. Default: `false`. |
+| `onSubmit` | `function` | Called with selected TSelectorItem array (and optional access right) on confirm. |
+| `onClose` | `function` | Called when the selector panel is dismissed. |
+| `id` | `-` | HTML id attribute for the root element. |
+| `className` | `-` | Additional CSS class name for the root element. |
+| `withGroups` | `-` | Show a Groups tab alongside the Members tab. Default: `false`. |
+| `isGroupsOnly` | `-` | Show only the Groups tab (no Members tab). Default: `false`. |
+| `withGuests` | `-` | Show a Guests tab alongside the Members tab. Default: `false`. |
+| `isGuestsOnly` | `-` | Show only the Guests tab. Default: `false`. |
+| `currentUserId` | `-` | ID of the current user — displayed with a '(Me)' label. |
+| `filterUserId` | `-` | ID of a user to remove from the list. |
+| `withOutCurrentAuthorizedUser` | `-` | Remove the current authorized user from the list entirely. Default: `false`. |
+| `excludeItems` | `-` | Array of user IDs to exclude from results. |
+| `disableInvitedUsers` | `-` | Array of user IDs to show as disabled (already invited). |
+| `disableDisabledUsers` | `-` | Disable terminated users in the list. Default: `false`. |
+| `roomId` | `-` | Scope the list to users/groups with access to this room ID. |
+| `targetEntityType` | `-` | Entity type used for shared-access queries when roomId is set. Default: `room`. |
+| `onlyRoomMembers` | `-` | Only show members already in the room. Default: `false`. |
+| `isAgent` | `-` | Adjusts empty screen description text for AI agent context. Default: `false`. |
+| `useAside` | `-` | Render the selector inside an Aside panel with a backdrop. Default: `false`. |
+| `withoutBackground` | `-` | Remove the background overlay in Aside mode. Default: `false`. |
+| `withBlur` | `-` | Apply blur effect to the Aside backdrop. Default: `false`. |
+| `withCancelButton` | `-` | Show a cancel button in the footer. Default: `false`. |
+| `withFooterCheckbox` | `-` | Show a checkbox in the footer. Default: `false`. |
+| `emptyScreenHeader` | `-` | Custom header text for the empty state screen. |
+| `emptyScreenDescription` | `-` | Custom description text for the empty state screen. |
+| `onCancel` | `-` | Called when the cancel button is clicked. |
 
 </APITable>

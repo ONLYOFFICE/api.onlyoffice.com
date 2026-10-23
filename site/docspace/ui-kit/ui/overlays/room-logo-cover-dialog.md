@@ -143,16 +143,16 @@ export function RoomCoverButton({ t }: { t: TTranslation }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `covers` | `ICover[]` | The cover icons to offer. Each carries raw SVG markup that is injected into the page, so take them only from a source you trust. An empty array leaves the icon picker out. |
-| `onApply` | `(color: string, cover: ICover \| null) => void` | Called with the chosen colour and cover when apply is clicked. The dialog does not close itself. |
-| `onClose` | `() => void` | Called by the cancel button, the header cross, Escape and the backdrop — but not while the colour picker is open, which swallows all four. |
-| `t` | `TTranslation` | Translation function. The dialog asks it for `Common:RoomCover`, `Common:ApplyButton` and `Common:CancelButton`, and its icon picker for keys outside `Common`, so a portal translation context is required. |
-| `visible` | `boolean` | Whether the dialog is on screen. Opening it remounts the picker, which discards whatever was chosen last time. |
-| `currentColorScheme`? | `CustomColorThemesSettingsItem` | The portal's accent colours, used to tint the hovered and selected icon. Without it those states have no accent. |
-| `initialColor`? | `string` | Colour selected when the dialog opens, as `#rrggbb`. Defaults to the first of the kit's logo colours. |
-| `initialCover`? | `ICover \| null` | Cover selected when the dialog opens, or `null` for the initials. |
-| `isBaseTheme`? | `boolean` | Whether the preview is drawn for the light theme. Taken from the theme context when it is not passed. |
-| `title`? | `string` | Room title, used for the initials drawn on the preview when no icon is chosen. Default: `""`. |
+| `covers` | `ICover[]` | **Required.** The cover icons to offer. Each carries raw SVG markup that is injected into the page, so take them only from a source you trust. An empty array leaves the icon picker out. |
+| `onApply` | `(color: string, cover: ICover \| null) => void` | **Required.** Called with the chosen colour and cover when apply is clicked. The dialog does not close itself. |
+| `onClose` | `() => void` | **Required.** Called by the cancel button, the header cross, Escape and the backdrop — but not while the colour picker is open, which swallows all four. |
+| `t` | `TTranslation` | **Required.** Translation function. The dialog asks it for `Common:RoomCover`, `Common:ApplyButton` and `Common:CancelButton`, and its icon picker for keys outside `Common`, so a portal translation context is required. |
+| `visible` | `boolean` | **Required.** Whether the dialog is on screen. Opening it remounts the picker, which discards whatever was chosen last time. |
+| `currentColorScheme` | `CustomColorThemesSettingsItem` | The portal's accent colours, used to tint the hovered and selected icon. Without it those states have no accent. |
+| `initialColor` | `string` | Colour selected when the dialog opens, as `#rrggbb`. Defaults to the first of the kit's logo colours. |
+| `initialCover` | `ICover \| null` | Cover selected when the dialog opens, or `null` for the initials. |
+| `isBaseTheme` | `boolean` | Whether the preview is drawn for the light theme. Taken from the theme context when it is not passed. |
+| `title` | `string` | Room title, used for the initials drawn on the preview when no icon is chosen. Default: `""`. |
 
 </APITable>
 
@@ -333,25 +333,25 @@ to whatever wraps it, because the dialog uses that flag to refuse closing.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `covers` | `ICover[]` | The cover icons to offer. Each carries raw SVG markup that is injected into the page, so take them only from a source you trust. An empty array leaves the icon picker out. |
-| `openColorPicker` | `boolean` | Whether the colour picker is open. The component does not own this: hold it in the state of whatever wraps it. |
-| `setOpenColorPicker` | `React.Dispatch<React.SetStateAction<boolean>>` | Opens and closes the colour picker. |
-| `t` | `TTranslation` | Translation function. Besides `Common:Color` the icon picker asks for keys outside the `Common` namespace the kit ships. |
-| `coverColor`? | `string` | A room's stored cover colour, six hex digits **without** a leading `#`. Used only when `initialColor` is absent, and it wins over `logoColor`. |
-| `coverId`? | `string` | Id of a room's stored cover, looked up in `covers`. Used only when `initialCover` is absent. |
-| `currentColorScheme`? | `CustomColorThemesSettingsItem` | The portal's accent colours, used to tint the hovered and selected icon. Without it those states have no accent. |
-| `forwardedRef`? | `React.Ref<HTMLDivElement>` | Attached to the outer element, for measuring its height: a ref object, or a callback that is handed the element once it is mounted. |
-| `generalScroll`? | `boolean` | Drops the inner scroll area, for when something outside scrolls instead. |
-| `initialColor`? | `string` | Colour chosen on the first render, as `#rrggbb`. Anything but `undefined` wins over `coverColor` and `logoColor`. |
-| `initialCover`? | `ICover \| null` | Cover chosen on the first render. An explicit `null` selects the initials and still wins over `coverId` and `logoCover`. |
-| `isBaseTheme`? | `boolean` | Whether the preview is drawn for the light theme. Taken from the theme context when it is not passed. |
-| `logoColor`? | `string` | A room's stored colour, six hex digits **without** a leading `#`. Used only when `initialColor` is absent. |
-| `logoCover`? | `ICover \| null` | A room's stored cover. Used only when `initialCover` and `coverId` are absent, and only together with `withSelection`. |
-| `onChange`? | `(color: string, cover: ICover \| null) => void` | Called with the colour and cover after every change. This is the only way out: the component keeps the selection in its own state. |
-| `onInit`? | `(color: string, cover: ICover \| null) => void` | Called once after mount with the starting colour and cover, so the owner can record what it will get back unchanged. |
-| `scrollHeight`? | `string` | Height of the scroll area around the two pickers, as a CSS length. Ignored on mobile and while `generalScroll` is set. |
-| `title`? | `string` | Room title, reduced to initials for the preview when no icon is chosen. Default: `""`. |
-| `withSelection`? | `boolean` | Lets `logoCover` be taken as the starting cover. Without it that field is ignored. |
+| `covers` | `ICover[]` | **Required.** The cover icons to offer. Each carries raw SVG markup that is injected into the page, so take them only from a source you trust. An empty array leaves the icon picker out. |
+| `openColorPicker` | `boolean` | **Required.** Whether the colour picker is open. The component does not own this: hold it in the state of whatever wraps it. |
+| `setOpenColorPicker` | `React.Dispatch<React.SetStateAction<boolean>>` | **Required.** Opens and closes the colour picker. |
+| `t` | `TTranslation` | **Required.** Translation function. Besides `Common:Color` the icon picker asks for keys outside the `Common` namespace the kit ships. |
+| `coverColor` | `string` | A room's stored cover colour, six hex digits **without** a leading `#`. Used only when `initialColor` is absent, and it wins over `logoColor`. |
+| `coverId` | `string` | Id of a room's stored cover, looked up in `covers`. Used only when `initialCover` is absent. |
+| `currentColorScheme` | `CustomColorThemesSettingsItem` | The portal's accent colours, used to tint the hovered and selected icon. Without it those states have no accent. |
+| `forwardedRef` | `React.Ref<HTMLDivElement>` | Attached to the outer element, for measuring its height: a ref object, or a callback that is handed the element once it is mounted. |
+| `generalScroll` | `boolean` | Drops the inner scroll area, for when something outside scrolls instead. |
+| `initialColor` | `string` | Colour chosen on the first render, as `#rrggbb`. Anything but `undefined` wins over `coverColor` and `logoColor`. |
+| `initialCover` | `ICover \| null` | Cover chosen on the first render. An explicit `null` selects the initials and still wins over `coverId` and `logoCover`. |
+| `isBaseTheme` | `boolean` | Whether the preview is drawn for the light theme. Taken from the theme context when it is not passed. |
+| `logoColor` | `string` | A room's stored colour, six hex digits **without** a leading `#`. Used only when `initialColor` is absent. |
+| `logoCover` | `ICover \| null` | A room's stored cover. Used only when `initialCover` and `coverId` are absent, and only together with `withSelection`. |
+| `onChange` | `(color: string, cover: ICover \| null) => void` | Called with the colour and cover after every change. This is the only way out: the component keeps the selection in its own state. |
+| `onInit` | `(color: string, cover: ICover \| null) => void` | Called once after mount with the starting colour and cover, so the owner can record what it will get back unchanged. |
+| `scrollHeight` | `string` | Height of the scroll area around the two pickers, as a CSS length. Ignored on mobile and while `generalScroll` is set. |
+| `title` | `string` | Room title, reduced to initials for the preview when no icon is chosen. Default: `""`. |
+| `withSelection` | `boolean` | Lets `logoCover` be taken as the starting cover. Without it that field is ignored. |
 
 </APITable>
 

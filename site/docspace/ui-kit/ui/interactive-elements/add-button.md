@@ -112,27 +112,27 @@ export function AddMember({ onAdd }: { onAdd: () => void }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `className`? | `string` | Applied to the wrapper that holds the square and the label. |
-| `dir`? | `"auto" \| "ltr" \| "rtl"` | Writing direction of the label. |
-| `fontSize`? | `string` | Font size of the label, as a CSS length. Default: `"13px"`. |
-| `iconName`? | `string` | URL of the icon, fetched at runtime. Ignored when `iconNode` is set; without either, a plus is drawn. |
-| `iconNode`? | `ReactNode` | Icon element to draw instead of the plus. |
-| `iconSize`? | `number` | Size of the icon inside the square, in pixels. Default: `12`. |
-| `id`? | `string` | Applied to the square, not to the wrapper. |
-| `isAction`? | `boolean` | Whether the square is tinted with the accent colour instead of grey. It needs a colour scheme from the theme. |
-| `isDisabled`? | `boolean` | Whether the button is inert: the icon greys out, the label dims and clicks are dropped. Default: `false`. |
-| `isLoading`? | `boolean` | Whether a spinner replaces the icon and clicks are dropped. Default: `false`. |
-| `label`? | `string` | Text drawn after the square. Without it the button is the square alone. |
-| `lineHeight`? | `string` | Line height of the label, as a CSS length. Default: `"20px"`. |
-| `noSelect`? | `boolean` | Whether the label cannot be selected with the pointer. |
-| `onClick`? | `(e: React.MouseEvent) => void` | Called with the event when the square or the label is clicked, and on Enter when the wrapper has focus. |
-| `size`? | `string` | Side of the square, as a CSS length. It only takes effect when the theme supplies a colour scheme. |
-| `style`? | `CSSProperties` | Applied to the square as inline style. |
-| `tabIndex`? | `number` | `tabIndex` of the wrapper. Without it the button cannot be focused, and the Enter handler never runs. |
-| `testId`? | `string` | `data-testid` of the square. Default: `"selector-add-button"`. |
-| `title`? | `string` | Tooltip shown on hover, through the kit's own tooltip rather than the browser's. |
-| `titleText`? | `string` | `title` attribute of the label — the browser's own tooltip, unlike `title`. |
-| `truncate`? | `boolean` | Whether the label is truncated with an ellipsis instead of wrapping. |
+| `className` | `string` | Applied to the wrapper that holds the square and the label. |
+| `dir` | `"auto" \| "ltr" \| "rtl"` | Writing direction of the label. |
+| `fontSize` | `string` | Font size of the label, as a CSS length. Default: `"13px"`. |
+| `iconName` | `string` | URL of the icon, fetched at runtime. Ignored when `iconNode` is set; without either, a plus is drawn. |
+| `iconNode` | `ReactNode` | Icon element to draw instead of the plus. |
+| `iconSize` | `number` | Size of the icon inside the square, in pixels. Default: `12`. |
+| `id` | `string` | Applied to the square, not to the wrapper. |
+| `isAction` | `boolean` | Whether the square is tinted with the accent colour instead of grey. It needs a colour scheme from the theme. |
+| `isDisabled` | `boolean` | Whether the button is inert: the icon greys out, the label dims and clicks are dropped. Default: `false`. |
+| `isLoading` | `boolean` | Whether a spinner replaces the icon and clicks are dropped. Default: `false`. |
+| `label` | `string` | Text drawn after the square. Without it the button is the square alone. |
+| `lineHeight` | `string` | Line height of the label, as a CSS length. Default: `"20px"`. |
+| `noSelect` | `boolean` | Whether the label cannot be selected with the pointer. |
+| `onClick` | `(e: React.MouseEvent) => void` | Called with the event when the square or the label is clicked, and on Enter when the wrapper has focus. |
+| `size` | `string` | Side of the square, as a CSS length. It only takes effect when the theme supplies a colour scheme. |
+| `style` | `CSSProperties` | Applied to the square as inline style. |
+| `tabIndex` | `number` | `tabIndex` of the wrapper. Without it the button cannot be focused, and the Enter handler never runs. |
+| `testId` | `string` | `data-testid` of the square. Default: `"selector-add-button"`. |
+| `title` | `string` | Tooltip shown on hover, through the kit's own tooltip rather than the browser's. |
+| `titleText` | `string` | `title` attribute of the label — the browser's own tooltip, unlike `title`. |
+| `truncate` | `boolean` | Whether the label is truncated with an ellipsis instead of wrapping. |
 
 </APITable>
 

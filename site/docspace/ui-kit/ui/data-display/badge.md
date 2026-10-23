@@ -123,22 +123,22 @@ tooltip wrapper the badge is built on, and `style` replaces the badge's own inli
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `border`? | `string` | CSS `border` shorthand for the outer element. The badge draws none of its own. |
-| `borderRadius`? | `string` | Corner radius of both the outer element and the pill inside it. The pill ignores it while `type` is `"high"`. Default: `"11px"`. |
-| `dataTestId`? | `string` | Value of `data-testid` on the outer element. Default: `"badge"`. |
-| `height`? | `string` | Height of the outer element. Without it the badge is as tall as its text. |
-| `isHovered`? | `boolean` | Draws the hover background without a pointer being there, for a badge inside a row that is itself hovered. Default: `false`. |
-| `isMutedBadge`? | `boolean` | Paints the badge grey, overriding `backgroundColor`, for something inactive. |
-| `isPaidBadge`? | `boolean` | Forces white text, overriding `color`, and removes `maxWidth` so the label is never clipped. |
-| `isVersionBadge`? | `boolean` | Lets the badge grow to its content width at tablet widths and below, where it is otherwise held to the pill's width. |
-| `label`? | `number \| string` | What the badge says. `0`, `"0"` and an empty string hide the badge entirely — the element stays in the DOM with `display: none`. Default: `0`. |
-| `maxWidth`? | `string` | Widest the pill may be. Longer text is clipped without an ellipsis. Not applied at all while `isPaidBadge` is set. Default: `"50px"`. |
-| `noHover`? | `boolean` | Drops the pointer cursor and the hover and active background shifts, for a badge that is only a marker. Default: `false`. |
-| `onMouseLeave`? | `(e: React.MouseEvent) => void` | Called with the event when the pointer leaves the badge. |
-| `onMouseOver`? | `(e: React.MouseEvent) => void` | Called with the event when the pointer enters the badge or moves within it. |
-| `padding`? | `string` | Padding of the pill inside the badge. Ignored while `type` is `"high"`. Default: `"0px 5px"`. |
-| `ref`? | `React.RefObject<HTMLDivElement \| null> & React.RefObject<HTMLDivElement>` | Attached to the outer element of the badge. |
-| `type`? | `"high"` | Switches to the emphasised preset: a 6px radius, roomier padding and 13px text at weight 400. |
+| `border` | `string` | CSS `border` shorthand for the outer element. The badge draws none of its own. |
+| `borderRadius` | `string` | Corner radius of both the outer element and the pill inside it. The pill ignores it while `type` is `"high"`. Default: `"11px"`. |
+| `dataTestId` | `string` | Value of `data-testid` on the outer element. Default: `"badge"`. |
+| `height` | `string` | Height of the outer element. Without it the badge is as tall as its text. |
+| `isHovered` | `boolean` | Draws the hover background without a pointer being there, for a badge inside a row that is itself hovered. Default: `false`. |
+| `isMutedBadge` | `boolean` | Paints the badge grey, overriding `backgroundColor`, for something inactive. |
+| `isPaidBadge` | `boolean` | Forces white text, overriding `color`, and removes `maxWidth` so the label is never clipped. |
+| `isVersionBadge` | `boolean` | Lets the badge grow to its content width at tablet widths and below, where it is otherwise held to the pill's width. |
+| `label` | `number \| string` | What the badge says. `0`, `"0"` and an empty string hide the badge entirely — the element stays in the DOM with `display: none`. Default: `0`. |
+| `maxWidth` | `string` | Widest the pill may be. Longer text is clipped without an ellipsis. Not applied at all while `isPaidBadge` is set. Default: `"50px"`. |
+| `noHover` | `boolean` | Drops the pointer cursor and the hover and active background shifts, for a badge that is only a marker. Default: `false`. |
+| `onMouseLeave` | `(e: React.MouseEvent) => void` | Called with the event when the pointer leaves the badge. |
+| `onMouseOver` | `(e: React.MouseEvent) => void` | Called with the event when the pointer enters the badge or moves within it. |
+| `padding` | `string` | Padding of the pill inside the badge. Ignored while `type` is `"high"`. Default: `"0px 5px"`. |
+| `ref` | `React.RefObject<HTMLDivElement \| null> & React.RefObject<HTMLDivElement>` | Attached to the outer element of the badge. |
+| `type` | `"high"` | Switches to the emphasised preset: a 6px radius, roomier padding and 13px text at weight 400. |
 
 </APITable>
 
@@ -150,38 +150,38 @@ Declared by [`components/text`](./text.md) and accepted here too.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `aria-hidden`? | `Booleanish` | Hides the element from assistive technology, passed unchanged, for decoration that repeats what is already read. |
-| `aria-label`? | `string` | Accessible name, passed unchanged, for text whose content is not what should be announced. |
-| `aria-live`? | `"assertive" \| "off" \| "polite"` | Live-region politeness, passed unchanged, for a line whose content changes and should be read out. |
-| `as`? | `ElementType<any, keyof JSX.IntrinsicElements>` | Element to render, replacing the component's own default — `p` for `Text` itself. Wins over `tag` when both are set. |
-| `backgroundColor`? | `string` | Background colour, as an inline style. Any CSS colour. |
-| `children`? | `ReactNode` | Text to render. |
-| `className`? | `string` | Added after the component's own classes. |
-| `color`? | `string` | Text colour, as an inline style. `Text` declares none of its own and inherits without it. |
-| `containerMinWidth`? | `string` | Not read here — it reaches the DOM as an unknown attribute. It is read off this element by `RowContent`, which uses it as the minimum width of a side slot. |
-| `containerWidth`? | `string` | Not read here — it reaches the DOM as an unknown attribute. It is read off this element by `RowContent` and `TileContent`, which use it as the width of the slot they put the child in. |
-| `dir`? | `"auto" \| "ltr" \| "rtl"` | Writing direction. `"ltr"` and `"rtl"` set the `dir` attribute; `"auto"` instead wraps the children in a span that takes the pointer events off them. |
-| `display`? | `string` | Ignored. Nothing reads this prop, and it reaches the DOM as an unknown attribute. Use `isInline` or `style`. |
-| `fontSize`? | `string` | Font size, as an inline style. Unset, `Text` is 13px through `--text-size`. |
-| `fontWeight`? | `number \| string` | Font weight, as an inline style. Ignored while `isBold` is set. Unset, `Text` is 400 through `--text-weight`. |
-| `href`? | `string` | Passed to the element unchanged, for `as="a"`. |
-| `htmlFor`? | `string` | Passed to the element unchanged, for `as="label"`. |
-| `id`? | `string` | `id` of the rendered element. |
-| `isBold`? | `boolean` | Sets the weight to 700, overriding `fontWeight`. |
-| `isInline`? | `boolean` | Renders the text inline instead of as a block — `inline-block` in `Text`, `inline` in `Heading`. |
-| `isItalic`? | `boolean` | Renders the text in italics. |
-| `lineHeight`? | `string` | Line height, as an inline style. |
-| `noSelect`? | `boolean` | Stops the text being selected, on every browser the kit supports. |
-| `onClick`? | `(e: React.MouseEvent<Element>) => void` | Called with the event when the element is clicked. |
-| `rel`? | `string` | Passed to the element unchanged, for `as="a"`. |
-| `role`? | `AriaRole` | ARIA role of the element, passed unchanged: `status` or `alert` for a line that reports an outcome, `button` alongside `tabIndex` and `onClick`. |
-| `style`? | `CSSProperties` | Inline style of the element. `Text` merges it over the style props above, so a `fontSize` here wins over the `fontSize` prop. |
-| `tabIndex`? | `number` | Passed to the element unchanged. The component adds no role, so a focusable text element needs one from you. |
-| `tag`? | `string` | Element to render, used only while `as` is unset. It is a tag name, not an id. |
-| `textAlign`? | `"center" \| "justify" \| "left" \| "right"` | Text alignment, as an inline style. |
-| `title`? | `string` | Tooltip text. On a component the kit wraps in its tooltip HOC it is consumed before the element is built and opens the shared tooltip instead, which needs `RootTooltip` mounted; elsewhere it is the native `title` attribute. |
-| `truncate`? | `boolean` | Holds the text on one line and ends it with an ellipsis. It needs a parent of bounded width; on its own the element grows instead. |
-| `view`? | `string` | Only `"tile"` is recognised, and only together with `dir="auto"`: it clamps the text to two lines. |
+| `aria-hidden` | `Booleanish` | Hides the element from assistive technology, passed unchanged, for decoration that repeats what is already read. |
+| `aria-label` | `string` | Accessible name, passed unchanged, for text whose content is not what should be announced. |
+| `aria-live` | `"assertive" \| "off" \| "polite"` | Live-region politeness, passed unchanged, for a line whose content changes and should be read out. |
+| `as` | `ElementType<any, keyof JSX.IntrinsicElements>` | Element to render, replacing the component's own default — `p` for `Text` itself. Wins over `tag` when both are set. |
+| `backgroundColor` | `string` | Background colour, as an inline style. Any CSS colour. |
+| `children` | `ReactNode` | Text to render. |
+| `className` | `string` | Added after the component's own classes. |
+| `color` | `string` | Text colour, as an inline style. `Text` declares none of its own and inherits without it. |
+| `containerMinWidth` | `string` | Not read here — it reaches the DOM as an unknown attribute. It is read off this element by `RowContent`, which uses it as the minimum width of a side slot. |
+| `containerWidth` | `string` | Not read here — it reaches the DOM as an unknown attribute. It is read off this element by `RowContent` and `TileContent`, which use it as the width of the slot they put the child in. |
+| `dir` | `"auto" \| "ltr" \| "rtl"` | Writing direction. `"ltr"` and `"rtl"` set the `dir` attribute; `"auto"` instead wraps the children in a span that takes the pointer events off them. |
+| `display` | `string` | Ignored. Nothing reads this prop, and it reaches the DOM as an unknown attribute. Use `isInline` or `style`. |
+| `fontSize` | `string` | Font size, as an inline style. Unset, `Text` is 13px through `--text-size`. |
+| `fontWeight` | `number \| string` | Font weight, as an inline style. Ignored while `isBold` is set. Unset, `Text` is 400 through `--text-weight`. |
+| `href` | `string` | Passed to the element unchanged, for `as="a"`. |
+| `htmlFor` | `string` | Passed to the element unchanged, for `as="label"`. |
+| `id` | `string` | `id` of the rendered element. |
+| `isBold` | `boolean` | Sets the weight to 700, overriding `fontWeight`. |
+| `isInline` | `boolean` | Renders the text inline instead of as a block — `inline-block` in `Text`, `inline` in `Heading`. |
+| `isItalic` | `boolean` | Renders the text in italics. |
+| `lineHeight` | `string` | Line height, as an inline style. |
+| `noSelect` | `boolean` | Stops the text being selected, on every browser the kit supports. |
+| `onClick` | `(e: React.MouseEvent<Element>) => void` | Called with the event when the element is clicked. |
+| `rel` | `string` | Passed to the element unchanged, for `as="a"`. |
+| `role` | `AriaRole` | ARIA role of the element, passed unchanged: `status` or `alert` for a line that reports an outcome, `button` alongside `tabIndex` and `onClick`. |
+| `style` | `CSSProperties` | Inline style of the element. `Text` merges it over the style props above, so a `fontSize` here wins over the `fontSize` prop. |
+| `tabIndex` | `number` | Passed to the element unchanged. The component adds no role, so a focusable text element needs one from you. |
+| `tag` | `string` | Element to render, used only while `as` is unset. It is a tag name, not an id. |
+| `textAlign` | `"center" \| "justify" \| "left" \| "right"` | Text alignment, as an inline style. |
+| `title` | `string` | Tooltip text. On a component the kit wraps in its tooltip HOC it is consumed before the element is built and opens the shared tooltip instead, which needs `RootTooltip` mounted; elsewhere it is the native `title` attribute. |
+| `truncate` | `boolean` | Holds the text on one line and ends it with an ellipsis. It needs a parent of bounded width; on its own the element grows instead. |
+| `view` | `string` | Only `"tile"` is recognised, and only together with `dir="auto"`: it clamps the text to two lines. |
 
 </APITable>
 

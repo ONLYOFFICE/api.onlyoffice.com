@@ -21,8 +21,8 @@ The Table README describes it in full.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `columns` | `TTableColumn[]` | The table's columns; only those with an onChange and without isDisabled get a checkbox. |
-| `disableSettings`? | `booleanundefined` | Greys the cog out and stops the list of columns opening. Default: `false`. |
+| `columns` | `TTableColumn[]` | **Required.** The table's columns; only those with an onChange and without isDisabled get a checkbox. |
+| `disableSettings` | `booleanundefined` | Greys the cog out and stops the list of columns opening. Default: `false`. |
 
 </APITable>
 

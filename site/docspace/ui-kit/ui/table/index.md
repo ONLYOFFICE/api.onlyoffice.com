@@ -107,11 +107,11 @@ of the table's behaviour is configured.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `forwardedRef` | `React.Ref<HTMLDivElement>` | Ref of the container element, which the header needs to set the grid on. |
-| `useReactWindow` | `boolean` | Whether the body inside is virtualised. It only switches a class here. |
-| `children`? | `React.ReactNode` | The header, the group menu and the body. |
-| `className`? | `string` | Applied to the container. |
-| `noSelect`? | `boolean` | Disables text selection inside the table. |
+| `forwardedRef` | `React.Ref<HTMLDivElement>` | **Required.** Ref of the container element, which the header needs to set the grid on. |
+| `useReactWindow` | `boolean` | **Required.** Whether the body inside is virtualised. It only switches a class here. |
+| `children` | `React.ReactNode` | The header, the group menu and the body. |
+| `className` | `string` | Applied to the container. |
+| `noSelect` | `boolean` | Disables text selection inside the table. |
 
 </APITable>
 
@@ -122,26 +122,26 @@ of the table's behaviour is configured.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `columns` | `TTableColumn[]` | The columns, in order. The header also calls a column's `onChange` itself when the table is sorted by a column that is not enabled. |
-| `columnStorageName` | `string` | `localStorage` key the column widths are saved under. It is required and has to be unique per table, or two tables overwrite each other's layout. |
-| `containerRef` | `{ current: HTMLDivElement \| null; }` | Ref of the `TableContainer`, whose `grid-template-columns` this component writes. |
-| `sectionWidth` | `number` | Width of the section around the table, in pixels. |
-| `showSettings` | `boolean` | Whether the settings cog is rendered at the end of the header. Default: `true`. |
-| `useReactWindow` | `boolean` | Whether the body is virtualised, which changes how the rows are re-laid out. Default: `false`. |
-| `columnInfoPanelStorageName`? | `string` | `localStorage` key used instead of `columnStorageName` while the info panel is open. |
-| `infoPanelVisible`? | `boolean` | Tells the header to use the info-panel storage key and its narrower layout. |
-| `isIndexEditingMode`? | `boolean` | Disables the settings cog while the rows are being reordered. |
-| `isLengthenHeader`? | `boolean` | Lets the header run past the table's width. |
-| `onClick`? | `() => void` | Called on a click on the header. |
-| `resetColumnsSize`? | `boolean` | Discards the saved widths and measures the columns again. |
-| `setHideColumns`? | `(value: boolean) => void` | Called when the header runs out of room and hides its columns. |
-| `settingsTitle`? | `string` | Hover tooltip of the settings cog. |
-| `sortBy`? | `string` | Field the table is sorted by; the matching column is highlighted. |
-| `sorted`? | `boolean` | Whether the sort is descending, which turns the arrow. |
-| `sortingVisible`? | `boolean` | Whether the sort arrows are rendered and the cells react to a click. Default: `true`. |
-| `style`? | `React.CSSProperties` | Ignored. Nothing reads this prop. |
-| `tagRef`? | `((node: HTMLDivElement) => void) \| React.ForwardedRef<HTMLDivElement>` | Ref handed to the cell of the column that asks for it with `withTagRef`. |
-| `withoutWideColumn`? | `boolean` | Stops the last column being stretched to fill the leftover width. |
+| `columns` | `TTableColumn[]` | **Required.** The columns, in order. The header also calls a column's `onChange` itself when the table is sorted by a column that is not enabled. |
+| `columnStorageName` | `string` | **Required.** `localStorage` key the column widths are saved under. It is required and has to be unique per table, or two tables overwrite each other's layout. |
+| `containerRef` | `{ current: HTMLDivElement \| null; }` | **Required.** Ref of the `TableContainer`, whose `grid-template-columns` this component writes. |
+| `sectionWidth` | `number` | **Required.** Width of the section around the table, in pixels. |
+| `showSettings` | `boolean` | **Required.** Whether the settings cog is rendered at the end of the header. Default: `true`. |
+| `useReactWindow` | `boolean` | **Required.** Whether the body is virtualised, which changes how the rows are re-laid out. Default: `false`. |
+| `columnInfoPanelStorageName` | `string` | `localStorage` key used instead of `columnStorageName` while the info panel is open. |
+| `infoPanelVisible` | `boolean` | Tells the header to use the info-panel storage key and its narrower layout. |
+| `isIndexEditingMode` | `boolean` | Disables the settings cog while the rows are being reordered. |
+| `isLengthenHeader` | `boolean` | Lets the header run past the table's width. |
+| `onClick` | `() => void` | Called on a click on the header. |
+| `resetColumnsSize` | `boolean` | Discards the saved widths and measures the columns again. |
+| `setHideColumns` | `(value: boolean) => void` | Called when the header runs out of room and hides its columns. |
+| `settingsTitle` | `string` | Hover tooltip of the settings cog. |
+| `sortBy` | `string` | Field the table is sorted by; the matching column is highlighted. |
+| `sorted` | `boolean` | Whether the sort is descending, which turns the arrow. |
+| `sortingVisible` | `boolean` | Whether the sort arrows are rendered and the cells react to a click. Default: `true`. |
+| `style` | `React.CSSProperties` | Ignored. Nothing reads this prop. |
+| `tagRef` | `((node: HTMLDivElement) => void) \| React.ForwardedRef<HTMLDivElement>` | Ref handed to the cell of the column that asks for it with `withTagRef`. |
+| `withoutWideColumn` | `boolean` | Stops the last column being stretched to fill the leftover width. |
 
 </APITable>
 
@@ -152,18 +152,18 @@ of the table's behaviour is configured.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children` | `React.ReactNode[]` | The rows. It must be an array, one entry per row. |
-| `columnStorageName` | `string` | `localStorage` key of the column widths. The body renders **nothing but an empty element** unless this and `columnInfoPanelStorageName` are both set. |
-| `fetchMoreFiles` | `(params: IndexRange) => Promise<void>` | Called with the range to load when the user scrolls near the end. |
-| `filesLength` | `number` | How many rows are loaded so far. |
-| `hasMoreFiles` | `boolean` | Whether there is another page to ask for. |
-| `itemCount` | `number` | How many rows there are in total. |
-| `itemHeight` | `number` | Height of one row in pixels, the same for every row. Default: `41`. |
-| `useReactWindow` | `boolean` | Whether the rows are virtualised. Default: `true`. |
-| `columnInfoPanelStorageName`? | `string` | The info-panel variant of that key. It is as required as the other one. |
-| `infoPanelVisible`? | `boolean` | Narrows the body for an open info panel. Default: `false`. |
-| `isIndexEditingMode`? | `boolean` | Passed through while the rows are being reordered. |
-| `onScroll`? | `() => void` | Called as the list scrolls. Only with virtualisation on. |
+| `children` | `React.ReactNode[]` | **Required.** The rows. It must be an array, one entry per row. |
+| `columnStorageName` | `string` | **Required.** `localStorage` key of the column widths. The body renders **nothing but an empty element** unless this and `columnInfoPanelStorageName` are both set. |
+| `fetchMoreFiles` | `(params: IndexRange) => Promise<void>` | **Required.** Called with the range to load when the user scrolls near the end. |
+| `filesLength` | `number` | **Required.** How many rows are loaded so far. |
+| `hasMoreFiles` | `boolean` | **Required.** Whether there is another page to ask for. |
+| `itemCount` | `number` | **Required.** How many rows there are in total. |
+| `itemHeight` | `number` | **Required.** Height of one row in pixels, the same for every row. Default: `41`. |
+| `useReactWindow` | `boolean` | **Required.** Whether the rows are virtualised. Default: `true`. |
+| `columnInfoPanelStorageName` | `string` | The info-panel variant of that key. It is as required as the other one. |
+| `infoPanelVisible` | `boolean` | Narrows the body for an open info panel. Default: `false`. |
+| `isIndexEditingMode` | `boolean` | Passed through while the rows are being reordered. |
+| `onScroll` | `() => void` | Called as the list scrolls. Only with virtualisation on. |
 
 </APITable>
 
@@ -174,29 +174,29 @@ of the table's behaviour is configured.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children` | `React.ReactNode` | The row's cells, normally `TableCell`s, one per column. |
-| `badgeUrl`? | `string` | URL of the badge image shown in the context menu's header. |
-| `checked`? | `boolean` | Highlights the row as selected. There is no checkbox here — put one in a cell. |
-| `className`? | `string` | Applied to the row. |
-| `contextMenuCellStyle`? | `React.CSSProperties` | Applied to the cell that holds the context button. |
-| `contextMenuTestId`? | `string` | Value of `data-testid` on the context menu. |
-| `contextOptions`? | `ContextMenuModel[]` | Items of the context menu. Its **presence** is what renders the context button — an empty array renders a spacer instead. |
-| `dataTestId`? | `string` | Value of `data-testid` on the row. Default: `"table-row"`. |
-| `dragging`? | `boolean` | Dims the row while it is being dragged. |
-| `fileContextClick`? | `(value?: boolean) => void` | Called when the context menu is asked for, with `true` for a right-click. |
-| `forwardedRef`? | `React.ForwardedRef<HTMLDivElement>` | Ref of the row element. |
-| `getContextModel`? | `() => ContextMenuModel[]` | Builds the context menu's items when it opens. |
-| `hideColumns`? | `boolean` | Applies the narrow layout the header asks for when it runs out of room. |
-| `isActive`? | `boolean` | Highlights the row as the one the context menu belongs to. |
-| `isIndexEditingMode`? | `boolean` | Hides the context button while the rows are being reordered. |
-| `onClick`? | `(e: React.MouseEvent) => void` | Called on a click anywhere in the row. |
-| `onDoubleClick`? | `(e: React.MouseEvent) => void` | Called on a double click anywhere in the row. |
-| `onHideContextMenu`? | `() => void` | Called when the context menu closes. |
-| `onMouseEnter`? | `(e: React.MouseEvent) => void` | Called when the pointer enters the row. |
-| `onMouseLeave`? | `(e: React.MouseEvent) => void` | Called when the pointer leaves the row. |
-| `selectionProp`? | `{ className?: string; value?: string; }` | Class and value spread onto the cell that holds the context button. |
-| `style`? | `React.CSSProperties` | Applied to the row. The header overwrites the grid columns of every row. |
-| `title`? | `string` | Hover tooltip of the context button. |
+| `children` | `React.ReactNode` | **Required.** The row's cells, normally `TableCell`s, one per column. |
+| `badgeUrl` | `string` | URL of the badge image shown in the context menu's header. |
+| `checked` | `boolean` | Highlights the row as selected. There is no checkbox here — put one in a cell. |
+| `className` | `string` | Applied to the row. |
+| `contextMenuCellStyle` | `React.CSSProperties` | Applied to the cell that holds the context button. |
+| `contextMenuTestId` | `string` | Value of `data-testid` on the context menu. |
+| `contextOptions` | `ContextMenuModel[]` | Items of the context menu. Its **presence** is what renders the context button — an empty array renders a spacer instead. |
+| `dataTestId` | `string` | Value of `data-testid` on the row. Default: `"table-row"`. |
+| `dragging` | `boolean` | Dims the row while it is being dragged. |
+| `fileContextClick` | `(value?: boolean) => void` | Called when the context menu is asked for, with `true` for a right-click. |
+| `forwardedRef` | `React.ForwardedRef<HTMLDivElement>` | Ref of the row element. |
+| `getContextModel` | `() => ContextMenuModel[]` | Builds the context menu's items when it opens. |
+| `hideColumns` | `boolean` | Applies the narrow layout the header asks for when it runs out of room. |
+| `isActive` | `boolean` | Highlights the row as the one the context menu belongs to. |
+| `isIndexEditingMode` | `boolean` | Hides the context button while the rows are being reordered. |
+| `onClick` | `(e: React.MouseEvent) => void` | Called on a click anywhere in the row. |
+| `onDoubleClick` | `(e: React.MouseEvent) => void` | Called on a double click anywhere in the row. |
+| `onHideContextMenu` | `() => void` | Called when the context menu closes. |
+| `onMouseEnter` | `(e: React.MouseEvent) => void` | Called when the pointer enters the row. |
+| `onMouseLeave` | `(e: React.MouseEvent) => void` | Called when the pointer leaves the row. |
+| `selectionProp` | `{ className?: string; value?: string; }` | Class and value spread onto the cell that holds the context button. |
+| `style` | `React.CSSProperties` | Applied to the row. The header overwrites the grid columns of every row. |
+| `title` | `string` | Hover tooltip of the context button. |
 
 </APITable>
 
@@ -207,15 +207,15 @@ of the table's behaviour is configured.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `checked`? | `boolean` | Applies the selected styling. |
-| `children`? | `React.ReactNode` | Content of the cell. |
-| `className`? | `string` | Applied to the cell. |
-| `dataTestId`? | `string` | Value of `data-testid` on the cell. Default: `"table-cell"`. |
-| `documentTitle`? | `string` | Written to the element as `data-document-title`. |
-| `forwardedRef`? | `React.ForwardedRef<HTMLDivElement>` | Ref of the cell element. |
-| `hasAccess`? | `boolean` | Applies the styling of a cell whose row the user may act on. |
-| `style`? | `React.CSSProperties` | Applied to the cell. |
-| `value`? | `string` | Written to the element as a `value` attribute, which drag and drop reads. |
+| `checked` | `boolean` | Applies the selected styling. |
+| `children` | `React.ReactNode` | Content of the cell. |
+| `className` | `string` | Applied to the cell. |
+| `dataTestId` | `string` | Value of `data-testid` on the cell. Default: `"table-cell"`. |
+| `documentTitle` | `string` | Written to the element as `data-document-title`. |
+| `forwardedRef` | `React.ForwardedRef<HTMLDivElement>` | Ref of the cell element. |
+| `hasAccess` | `boolean` | Applies the styling of a cell whose row the user may act on. |
+| `style` | `React.CSSProperties` | Applied to the cell. |
+| `value` | `string` | Written to the element as a `value` attribute, which drag and drop reads. |
 
 </APITable>
 
@@ -226,22 +226,22 @@ of the table's behaviour is configured.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `headerMenu` | `TGroupMenuItem[]` | The buttons of the menu, in order. |
-| `isChecked` | `boolean` | Whether the select-all checkbox is ticked. |
-| `isIndeterminate` | `boolean` | Whether it is drawn as partly ticked. |
-| `onChange` | `(isChecked: boolean) => void` | Called with the new state when the select-all checkbox changes. |
-| `withoutInfoPanelToggler` | `boolean` | Whether the info-panel button at the end is left out. |
-| `checkboxMargin`? | `string` | Margin around that checkbox, as a CSS length. |
-| `checkboxOptions`? | `React.ReactElement<{ children?: React.ReactNode; }, string \| React.JSXElementConstructor<any>>` | Element whose children become the options of the selection combo box. |
-| `headerLabel`? | `string` | Text shown instead of the select-all checkbox. |
-| `isBlocked`? | `boolean` | Greys every button out. |
-| `isCloseable`? | `boolean` | Whether a close cross is rendered. It comes with `onCloseClick` or not at all. |
-| `isInfoPanelVisible`? | `boolean` | Colours that button as active. |
-| `isMobileView`? | `boolean` | Lays the buttons out for a phone. |
-| `onClick`? | `() => void` | Called on a click anywhere in the menu. |
-| `onCloseClick`? | `() => void` | Called by that cross. |
-| `toggleInfoPanel`? | `() => void` | Called when the info-panel button is clicked. |
-| `withComboBox`? | `boolean` | Whether the selection combo box is rendered next to the checkbox. Default: `true`. |
+| `headerMenu` | `TGroupMenuItem[]` | **Required.** The buttons of the menu, in order. |
+| `isChecked` | `boolean` | **Required.** Whether the select-all checkbox is ticked. |
+| `isIndeterminate` | `boolean` | **Required.** Whether it is drawn as partly ticked. |
+| `onChange` | `(isChecked: boolean) => void` | **Required.** Called with the new state when the select-all checkbox changes. |
+| `withoutInfoPanelToggler` | `boolean` | **Required.** Whether the info-panel button at the end is left out. |
+| `checkboxMargin` | `string` | Margin around that checkbox, as a CSS length. |
+| `checkboxOptions` | `React.ReactElement<{ children?: React.ReactNode; }, string \| React.JSXElementConstructor<any>>` | Element whose children become the options of the selection combo box. |
+| `headerLabel` | `string` | Text shown instead of the select-all checkbox. |
+| `isBlocked` | `boolean` | Greys every button out. |
+| `isCloseable` | `boolean` | Whether a close cross is rendered. It comes with `onCloseClick` or not at all. |
+| `isInfoPanelVisible` | `boolean` | Colours that button as active. |
+| `isMobileView` | `boolean` | Lays the buttons out for a phone. |
+| `onClick` | `() => void` | Called on a click anywhere in the menu. |
+| `onCloseClick` | `() => void` | Called by that cross. |
+| `toggleInfoPanel` | `() => void` | Called when the info-panel button is clicked. |
+| `withComboBox` | `boolean` | Whether the selection combo box is rendered next to the checkbox. Default: `true`. |
 
 </APITable>
 
@@ -252,22 +252,22 @@ of the table's behaviour is configured.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `key` | `string` | Identifier of the column, used as its React key and in the settings menu. |
-| `title` | `string` | Text in the header cell. It is rendered only while `enable` is true. |
-| `active`? | `boolean` | Highlights the header cell without sorting by it. |
-| `checkbox`? | `{ value: boolean; isIndeterminate: boolean; onChange: (e?: React.ChangeEvent<HTMLInputElement>) => void; }` | Renders a checkbox before the title, shown only while it is ticked or indeterminate. |
-| `default`? | `boolean` | Marks the column as one of the set restored on a reset. |
-| `defaultSize`? | `number` | Width the column is reset to, in pixels. |
-| `enable`? | `boolean` | Whether the column is shown. A hidden column keeps its place in the grid. |
-| `isDisabled`? | `boolean` | Keeps the column out of the settings menu. |
-| `isShort`? | `boolean` | Renders the cell in its narrow form. |
-| `minWidth`? | `number` | Narrowest the column may be dragged, in pixels. The default is 110, or 210 for the first column. |
-| `onChange`? | `(key: string, e?: React.ChangeEvent<HTMLInputElement>) => void` | Called with the column's key when it is ticked in the settings menu. A column without this callback is not offered in that menu at all. |
-| `onClick`? | `(sortBy: string, e: React.MouseEvent) => void` | Called when the header cell is clicked, with `sortBy` and the event. |
-| `onIconClick`? | `() => void` | Called when the sort arrow is clicked, instead of `onClick`. |
-| `resizable`? | `boolean` | Whether the _next_ column may be dragged by this one's right edge. |
-| `sortBy`? | `string` | Field this column sorts by; the header compares it with its own `sortBy`. |
-| `withTagRef`? | `boolean` | Hands the header's `tagRef` to this column's cell. |
+| `key` | `string` | **Required.** Identifier of the column, used as its React key and in the settings menu. |
+| `title` | `string` | **Required.** Text in the header cell. It is rendered only while `enable` is true. |
+| `active` | `boolean` | Highlights the header cell without sorting by it. |
+| `checkbox` | `{ value: boolean; isIndeterminate: boolean; onChange: (e?: React.ChangeEvent<HTMLInputElement>) => void; }` | Renders a checkbox before the title, shown only while it is ticked or indeterminate. |
+| `default` | `boolean` | Marks the column as one of the set restored on a reset. |
+| `defaultSize` | `number` | Width the column is reset to, in pixels. |
+| `enable` | `boolean` | Whether the column is shown. A hidden column keeps its place in the grid. |
+| `isDisabled` | `boolean` | Keeps the column out of the settings menu. |
+| `isShort` | `boolean` | Renders the cell in its narrow form. |
+| `minWidth` | `number` | Narrowest the column may be dragged, in pixels. The default is 110, or 210 for the first column. |
+| `onChange` | `(key: string, e?: React.ChangeEvent<HTMLInputElement>) => void` | Called with the column's key when it is ticked in the settings menu. A column without this callback is not offered in that menu at all. |
+| `onClick` | `(sortBy: string, e: React.MouseEvent) => void` | Called when the header cell is clicked, with `sortBy` and the event. |
+| `onIconClick` | `() => void` | Called when the sort arrow is clicked, instead of `onClick`. |
+| `resizable` | `boolean` | Whether the _next_ column may be dragged by this one's right edge. |
+| `sortBy` | `string` | Field this column sorts by; the header compares it with its own `sortBy`. |
+| `withTagRef` | `boolean` | Hands the header's `tagRef` to this column's cell. |
 
 </APITable>
 

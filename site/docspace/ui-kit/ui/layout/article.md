@@ -23,7 +23,7 @@ the developer tools, the signed-in person — which is why it takes some thirty 
 
 ## Use this when / not when
 
-- **This is portal-internal.** It is the DocSpace client's own sidebar, down to the Zendesk widget,
+- **This is portal-internal.** It is the ONLYOFFICE Apps client's own sidebar, down to the Zendesk widget,
   the `/developer-tools` path and the "download the apps" block. Outside that product most of its
   props have no source.
 - Use it when you are rebuilding that layout and can supply a portal-shaped set of props.
@@ -182,55 +182,55 @@ export function Sidebar() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `articleOpen` | `boolean` | Whether the panel is open over the page. It only matters on a phone, where the panel is a portal with a backdrop. |
-| `children` | `JSX.Element[]` | The three slots, as an array. Each is `Article.Header`, `Article.MainButton` or `Article.Body`; anything else is dropped, and the slots are matched by display name, so a wrapper around one hides it. |
-| `currentDeviceType` | `DeviceType` | Which layout to render. The panel is a portal into `#root` on `mobile`, a collapsible sidebar on `tablet` and a fixed column on `desktop`; nothing here measures the viewport. |
-| `downloaddesktopUrl` | `string` | Address behind the desktop application link. |
-| `hideAppsBlock` | `boolean` | Removes the "download the apps" block at the foot of the panel. |
-| `hideProfileBlock` | `boolean` | Removes the profile block at the foot of the panel, and moves the collapse handle down to take its place. |
-| `isAdmin` | `boolean` | Whether the person is an administrator. With `limitedAccessDevToolsForUsers` it decides whether the developer tools entry is shown. |
-| `isBurgerLoading` | `boolean` | Renders the burger and logo as skeletons instead of images. |
-| `isLiveChatAvailable` | `boolean` | Whether the live chat is mounted at all. It is also suppressed on a mobile user agent. |
-| `isMobileArticle` | `boolean` | Whether the panel is in its narrow, overlay-capable mode. It is written back through `setIsMobileArticle` on mount and on every device change. |
-| `isShowLiveChat` | `boolean` | Whether the Zendesk widget is on the page. The script loads the first time this is true; from then on the "Live chat" switch shows and hides the widget through its API. |
-| `languageBaseName` | `string` | Locale handed to the Zendesk widget. |
-| `limitedAccessDevToolsForUsers` | `boolean` | Hides the developer tools entry from anyone who is not an administrator. |
-| `logoText` | `string` | Name shown in the "download the apps" block at the foot of the panel. |
-| `mainBarVisible` | `boolean` | Whether the portal's top bar is on screen. Its height is measured out of the window height on every resize — a measurement the component then does not use. |
-| `officeforandroidUrl` | `string` | Address behind the Android link. |
-| `officeforiosUrl` | `string` | Address behind the iOS link. |
-| `setArticleOpen` | `(value: boolean) => void` | Called with `false` when the browser goes back on a phone, to close the panel. |
-| `setIsMobileArticle` | `(value: boolean) => void` | Called on mount and on every device change. Wire it to the state behind `isMobileArticle`. |
-| `setShowText` | `(value: boolean) => void` | Called on mount and on every device change with the width the component has decided on. Wire it to the state behind `showText` or the panel never changes width. |
-| `showBackButton` | `boolean` | Shows the back button in the header, and a second one above the body on anything wider than a phone. |
-| `showText` | `boolean` | Whether the panel is expanded. It is the width switch — 243px when set, 60px when not — and it is written back through `setShowText` on mount and on every device change. |
-| `toggleArticleOpen` | `TToggleArticleOpen` | Called by the burger in the header, and by the backdrop on a phone. It is expected to flip `articleOpen`. |
-| `toggleShowText` | `VoidFunction` | Called by the collapse handle at the foot of the panel. It is expected to flip `showText`; the panel does not collapse on its own. |
-| `withCustomArticleHeader` | `boolean` | Tells the header that the `Article.Header` slot carries its own markup, which changes the header's own padding. |
-| `withCustomSlot` | `boolean` | Not read. The component works out whether there is a custom slot from `customSlot` itself. |
-| `withSendAgain` | `boolean` | Not read. Nothing in the component uses it. |
-| `zendeskKey` | `string` | Key of the Zendesk account. The live chat block loads a third-party script with it. |
-| `currentTariffPlanTitle`? | `string` | Not read. Nothing in the component uses it. |
-| `customSlot`? | `ReactNode` | Extra content between the body and the apps block. Its presence also shifts the collapse handle and the developer tools entry. |
-| `getActions`? | `(t?: (key: string, options?: Record<string, string \| number>) => string) => ContextMenuModel[]` | Returns the model of the profile block's context menu. It is handed a translate function, which this package does not supply. |
-| `isFreeTariff`? | `boolean` | Not read. Nothing in the component uses it. |
-| `isGracePeriod`? | `boolean` | Not read. Nothing in the component uses it. |
-| `isInfoPanelVisible`? | `boolean` | **Deprecated.** Not read: the live chat launcher no longer moves clear of the info panel. Kept so existing callers compile; it goes in the next major. |
-| `isLicenseDateExpired`? | `boolean` | Not read. Nothing in the component uses it. |
-| `isNonProfit`? | `boolean` | Not read. Nothing in the component uses it. |
-| `isPaymentPageAvailable`? | `boolean` | Not read. Nothing in the component uses it. |
-| `isTrial`? | `boolean` | Not read. Nothing in the component uses it. |
-| `navigate`? | `((path: string) => void) & ((path: string) => void)` | Router push used by the back button and the dev tools entry. Without it those elements navigate nowhere. |
-| `onBack`? | `() => void` | Called by the back button instead of navigating. |
-| `onLogoClickAction`? | `() => void` | Called when the logo in the panel's header is clicked. |
-| `onProfileClick`? | `(obj: { originalEvent: React.MouseEvent; }) => void` | Called when the profile block is clicked, with the original event wrapped in an object. |
-| `path`? | `string` | Not read at this level. The component passes its own `/developer-tools` path to the bar. |
-| `showArticleLoader`? | `boolean` | Replaces the profile block with a skeleton and removes the custom slot, the developer tools entry, the apps block, the live chat and the collapse handle. The header and the slots are still rendered. |
-| `showProgress`? | `boolean` | **Deprecated.** Not read: the live chat launcher no longer moves for a progress indicator. Kept so existing callers compile; it goes in the next major. |
-| `standalone`? | `boolean` | Not read. Nothing in the component uses it. |
-| `trialDaysLeft`? | `number` | Not read. Nothing in the component uses it. |
-| `user`? | `TUser` | The signed-in person, shown in the block at the foot of the panel. Its `isVisitor` also hides the developer tools entry. |
-| `withMainButton`? | `boolean` | Whether a main button belongs above the body. Without it the `Article.MainButton` slot is not rendered on anything but a phone. |
+| `articleOpen` | `boolean` | **Required.** Whether the panel is open over the page. It only matters on a phone, where the panel is a portal with a backdrop. |
+| `children` | `JSX.Element[]` | **Required.** The three slots, as an array. Each is `Article.Header`, `Article.MainButton` or `Article.Body`; anything else is dropped, and the slots are matched by display name, so a wrapper around one hides it. |
+| `currentDeviceType` | `DeviceType` | **Required.** Which layout to render. The panel is a portal into `#root` on `mobile`, a collapsible sidebar on `tablet` and a fixed column on `desktop`; nothing here measures the viewport. |
+| `downloaddesktopUrl` | `string` | **Required.** Address behind the desktop application link. |
+| `hideAppsBlock` | `boolean` | **Required.** Removes the "download the apps" block at the foot of the panel. |
+| `hideProfileBlock` | `boolean` | **Required.** Removes the profile block at the foot of the panel, and moves the collapse handle down to take its place. |
+| `isAdmin` | `boolean` | **Required.** Whether the person is an administrator. With `limitedAccessDevToolsForUsers` it decides whether the developer tools entry is shown. |
+| `isBurgerLoading` | `boolean` | **Required.** Renders the burger and logo as skeletons instead of images. |
+| `isLiveChatAvailable` | `boolean` | **Required.** Whether the live chat is mounted at all. It is also suppressed on a mobile user agent. |
+| `isMobileArticle` | `boolean` | **Required.** Whether the panel is in its narrow, overlay-capable mode. It is written back through `setIsMobileArticle` on mount and on every device change. |
+| `isShowLiveChat` | `boolean` | **Required.** Whether the Zendesk widget is on the page. The script loads the first time this is true; from then on the "Live chat" switch shows and hides the widget through its API. |
+| `languageBaseName` | `string` | **Required.** Locale handed to the Zendesk widget. |
+| `limitedAccessDevToolsForUsers` | `boolean` | **Required.** Hides the developer tools entry from anyone who is not an administrator. |
+| `logoText` | `string` | **Required.** Name shown in the "download the apps" block at the foot of the panel. |
+| `mainBarVisible` | `boolean` | **Required.** Whether the portal's top bar is on screen. Its height is measured out of the window height on every resize — a measurement the component then does not use. |
+| `officeforandroidUrl` | `string` | **Required.** Address behind the Android link. |
+| `officeforiosUrl` | `string` | **Required.** Address behind the iOS link. |
+| `setArticleOpen` | `(value: boolean) => void` | **Required.** Called with `false` when the browser goes back on a phone, to close the panel. |
+| `setIsMobileArticle` | `(value: boolean) => void` | **Required.** Called on mount and on every device change. Wire it to the state behind `isMobileArticle`. |
+| `setShowText` | `(value: boolean) => void` | **Required.** Called on mount and on every device change with the width the component has decided on. Wire it to the state behind `showText` or the panel never changes width. |
+| `showBackButton` | `boolean` | **Required.** Shows the back button in the header, and a second one above the body on anything wider than a phone. |
+| `showText` | `boolean` | **Required.** Whether the panel is expanded. It is the width switch — 243px when set, 60px when not — and it is written back through `setShowText` on mount and on every device change. |
+| `toggleArticleOpen` | `TToggleArticleOpen` | **Required.** Called by the burger in the header, and by the backdrop on a phone. It is expected to flip `articleOpen`. |
+| `toggleShowText` | `VoidFunction` | **Required.** Called by the collapse handle at the foot of the panel. It is expected to flip `showText`; the panel does not collapse on its own. |
+| `withCustomArticleHeader` | `boolean` | **Required.** Tells the header that the `Article.Header` slot carries its own markup, which changes the header's own padding. |
+| `withCustomSlot` | `boolean` | **Required.** Not read. The component works out whether there is a custom slot from `customSlot` itself. |
+| `withSendAgain` | `boolean` | **Required.** Not read. Nothing in the component uses it. |
+| `zendeskKey` | `string` | **Required.** Key of the Zendesk account. The live chat block loads a third-party script with it. |
+| `currentTariffPlanTitle` | `string` | Not read. Nothing in the component uses it. |
+| `customSlot` | `ReactNode` | Extra content between the body and the apps block. Its presence also shifts the collapse handle and the developer tools entry. |
+| `getActions` | `(t?: (key: string, options?: Record<string, string \| number>) => string) => ContextMenuModel[]` | Returns the model of the profile block's context menu. It is handed a translate function, which this package does not supply. |
+| `isFreeTariff` | `boolean` | Not read. Nothing in the component uses it. |
+| `isGracePeriod` | `boolean` | Not read. Nothing in the component uses it. |
+| `isInfoPanelVisible` | `boolean` | **Deprecated.** Not read: the live chat launcher no longer moves clear of the info panel. Kept so existing callers compile; it goes in the next major. |
+| `isLicenseDateExpired` | `boolean` | Not read. Nothing in the component uses it. |
+| `isNonProfit` | `boolean` | Not read. Nothing in the component uses it. |
+| `isPaymentPageAvailable` | `boolean` | Not read. Nothing in the component uses it. |
+| `isTrial` | `boolean` | Not read. Nothing in the component uses it. |
+| `navigate` | `((path: string) => void) & ((path: string) => void)` | Router push used by the back button and the dev tools entry. Without it those elements navigate nowhere. |
+| `onBack` | `() => void` | Called by the back button instead of navigating. |
+| `onLogoClickAction` | `() => void` | Called when the logo in the panel's header is clicked. |
+| `onProfileClick` | `(obj: { originalEvent: React.MouseEvent; }) => void` | Called when the profile block is clicked, with the original event wrapped in an object. |
+| `path` | `string` | Not read at this level. The component passes its own `/developer-tools` path to the bar. |
+| `showArticleLoader` | `boolean` | Replaces the profile block with a skeleton and removes the custom slot, the developer tools entry, the apps block, the live chat and the collapse handle. The header and the slots are still rendered. |
+| `showProgress` | `boolean` | **Deprecated.** Not read: the live chat launcher no longer moves for a progress indicator. Kept so existing callers compile; it goes in the next major. |
+| `standalone` | `boolean` | Not read. Nothing in the component uses it. |
+| `trialDaysLeft` | `number` | Not read. Nothing in the component uses it. |
+| `user` | `TUser` | The signed-in person, shown in the block at the foot of the panel. Its `isVisitor` also hides the developer tools entry. |
+| `withMainButton` | `boolean` | Whether a main button belongs above the body. Without it the `Article.MainButton` slot is not rendered on anything but a phone. |
 
 </APITable>
 

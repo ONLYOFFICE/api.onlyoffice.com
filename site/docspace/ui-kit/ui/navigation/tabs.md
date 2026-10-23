@@ -141,21 +141,21 @@ export function RoomSettings() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `items` | `TTabItem[]` | The tabs, in the order they are drawn. Each carries its own content. |
-| `selectedItemId` | `number \| string` | `id` of the selected tab. This is a controlled component; set it from `onSelect`. An empty value selects the first tab. |
-| `className`? | `string` | Applied to the outermost element. |
-| `hotkeysId`? | `string` | Suffix of the class the keyboard handler focuses, which turns the arrow-key navigation on. Secondary tabs only. |
-| `id`? | `string` | Applied to the tab list on primary tabs, and to the outermost element on secondary ones. |
-| `isLoading`? | `boolean` | Holds off the tab-width measurement until the labels are final. It renders no loader of its own. Secondary tabs only. |
-| `layoutId`? | `string` | Shared `layoutId` of the sliding background, and the `id` of the tab list. Secondary tabs only. |
-| `onSelect`? | `(element: TTabItem) => void` | Called with the whole tab object when a different tab is clicked. Clicking the selected one does nothing. |
-| `scaled`? | `boolean` | Whether the tabs share the container's width equally instead of being measured from the longest label. Secondary tabs only. |
-| `stickyHeader`? | `ReactNode` | Rendered in its own sticky strip above the tab bar, which the bar then sticks below. Primary tabs only. |
-| `stickyTop`? | `string` | `top` of the sticky tab bar, as a CSS length. Without it the bar sticks to the top of the scrolling ancestor. |
-| `style`? | `CSSProperties` | Applied to the outermost element as inline style. |
-| `type`? | `TabsTypes` | Which of the two tab bars is drawn: an underlined row, or a segmented control. |
-| `withAnimation`? | `boolean` | Whether selecting a tab animates the underline and awaits the item's `onClick` behind a loader. Primary tabs only. |
-| `withoutStickyIntend`? | `boolean` | Whether the spacer under the tab bar is left out. Default: `false`. |
+| `items` | `TTabItem[]` | **Required.** The tabs, in the order they are drawn. Each carries its own content. |
+| `selectedItemId` | `number \| string` | **Required.** `id` of the selected tab. This is a controlled component; set it from `onSelect`. An empty value selects the first tab. |
+| `className` | `string` | Applied to the outermost element. |
+| `hotkeysId` | `string` | Suffix of the class the keyboard handler focuses, which turns the arrow-key navigation on. Secondary tabs only. |
+| `id` | `string` | Applied to the tab list on primary tabs, and to the outermost element on secondary ones. |
+| `isLoading` | `boolean` | Holds off the tab-width measurement until the labels are final. It renders no loader of its own. Secondary tabs only. |
+| `layoutId` | `string` | Shared `layoutId` of the sliding background, and the `id` of the tab list. Secondary tabs only. |
+| `onSelect` | `(element: TTabItem) => void` | Called with the whole tab object when a different tab is clicked. Clicking the selected one does nothing. |
+| `scaled` | `boolean` | Whether the tabs share the container's width equally instead of being measured from the longest label. Secondary tabs only. |
+| `stickyHeader` | `ReactNode` | Rendered in its own sticky strip above the tab bar, which the bar then sticks below. Primary tabs only. |
+| `stickyTop` | `string` | `top` of the sticky tab bar, as a CSS length. Without it the bar sticks to the top of the scrolling ancestor. |
+| `style` | `CSSProperties` | Applied to the outermost element as inline style. |
+| `type` | `TabsTypes` | Which of the two tab bars is drawn: an underlined row, or a segmented control. |
+| `withAnimation` | `boolean` | Whether selecting a tab animates the underline and awaits the item's `onClick` behind a loader. Primary tabs only. |
+| `withoutStickyIntend` | `boolean` | Whether the spacer under the tab bar is left out. Default: `false`. |
 
 </APITable>
 
@@ -166,14 +166,14 @@ Each entry of `items`:
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `content` | `ReactNode` | What is rendered under the tab bar while this tab is the selected one. |
-| `id` | `string` | Identifier of the tab. `selectedItemId` is matched against it, and it prefixes the tab's `data-testid`. |
-| `name` | `ReactNode` | Text of the tab. |
-| `badge`? | `ReactNode` | Rendered after the tab's text. Primary tabs only. |
-| `iconName`? | `string` | URL of an SVG drawn before the text. Secondary tabs only. |
-| `isDisabled`? | `boolean` | Whether the tab is greyed out and cannot be clicked. |
-| `onClick`? | `() => void \| Promise<void>` | Called before `onSelect` when this tab is clicked. With `withAnimation` it is awaited and the body shows a loader meanwhile. |
-| `value`? | `number` | Ignored. Nothing in the component reads this; it is a slot for the caller's own bookkeeping. |
+| `content` | `ReactNode` | **Required.** What is rendered under the tab bar while this tab is the selected one. |
+| `id` | `string` | **Required.** Identifier of the tab. `selectedItemId` is matched against it, and it prefixes the tab's `data-testid`. |
+| `name` | `ReactNode` | **Required.** Text of the tab. |
+| `badge` | `ReactNode` | Rendered after the tab's text. Primary tabs only. |
+| `iconName` | `string` | URL of an SVG drawn before the text. Secondary tabs only. |
+| `isDisabled` | `boolean` | Whether the tab is greyed out and cannot be clicked. |
+| `onClick` | `() => void \| Promise<void>` | Called before `onSelect` when this tab is clicked. With `withAnimation` it is awaited and the body shows a loader meanwhile. |
+| `value` | `number` | Ignored. Nothing in the component reads this; it is a slot for the caller's own bookkeeping. |
 
 </APITable>
 

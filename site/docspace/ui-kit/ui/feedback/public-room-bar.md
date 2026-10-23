@@ -110,16 +110,16 @@ export function SharedNotice() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `bodyText` | `React.ReactNode` | The line under the header, at 12px. A string renders in the kit's `Text`; anything else is wrapped in a `div` instead of `Text`'s usual `p`. |
-| `headerText` | `React.ReactNode` | Bold first line, beside the icon. A string renders in the kit's `Text`; anything else is wrapped in a `div` instead of `Text`'s usual `p`. `hideHeader` removes it. |
-| `barIsVisible`? | `boolean` | Removes the bar's own 20px top margin, for a bar that already sits under something. It shows and hides nothing, whatever the name suggests. |
-| `className`? | `string` | Added after the component's own classes on the outer element. |
-| `dataTestId`? | `string` | Value of `data-testid` on the outer element. Default: `"public_room_bar"`. |
-| `hideHeader`? | `boolean` | Drops the whole first row, icon and header text together, leaving the body on its own. |
-| `iconName`? | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>> \| string` | Icon beside the header, the kit's 16px people glyph when unset. A string is fetched as an SVG through `react-svg`; an element is rendered as given. Only `path` fills are recoloured. Default: `defaultIcon`. |
-| `onClose`? | `() => void` | Called when the close button is clicked. The button exists only while this is set, and the bar does not hide itself. |
-| `ref`? | `React.RefObject<HTMLDivElement \| null>` | Attached to the outer element. |
-| `style`? | `React.CSSProperties` | Inline style of the outer element, and where the `--public-room-bar-*` custom properties go. |
+| `bodyText` | `React.ReactNode` | **Required.** The line under the header, at 12px. A string renders in the kit's `Text`; anything else is wrapped in a `div` instead of `Text`'s usual `p`. |
+| `headerText` | `React.ReactNode` | **Required.** Bold first line, beside the icon. A string renders in the kit's `Text`; anything else is wrapped in a `div` instead of `Text`'s usual `p`. `hideHeader` removes it. |
+| `barIsVisible` | `boolean` | Removes the bar's own 20px top margin, for a bar that already sits under something. It shows and hides nothing, whatever the name suggests. |
+| `className` | `string` | Added after the component's own classes on the outer element. |
+| `dataTestId` | `string` | Value of `data-testid` on the outer element. Default: `"public_room_bar"`. |
+| `hideHeader` | `boolean` | Drops the whole first row, icon and header text together, leaving the body on its own. |
+| `iconName` | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>> \| string` | Icon beside the header, the kit's 16px people glyph when unset. A string is fetched as an SVG through `react-svg`; an element is rendered as given. Only `path` fills are recoloured. Default: `defaultIcon`. |
+| `onClose` | `() => void` | Called when the close button is clicked. The button exists only while this is set, and the bar does not hide itself. |
+| `ref` | `React.RefObject<HTMLDivElement \| null>` | Attached to the outer element. |
+| `style` | `React.CSSProperties` | Inline style of the outer element, and where the `--public-room-bar-*` custom properties go. |
 
 </APITable>
 

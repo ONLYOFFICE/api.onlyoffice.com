@@ -125,17 +125,17 @@ export function CreateNew({ onCreate }: { onCreate: (kind: string) => void }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `model` | `ContextMenuModel[]` | Items of the menu. Required even with `isDropdown={false}`, when nothing reads it. |
-| `anchorRef`? | `RefObject<HTMLElement \| null>` | Element the menu is anchored to and sized from. Without it the button's own box is used; pass an outer wrapper when the button sits inside a larger clickable area. |
-| `className`? | `string` | Applied to the button, after the component's own classes. |
-| `hideArrow`? | `boolean` | Whether the arrow beside the text is left out. The menu still opens. Default: `false`. |
-| `id`? | `string` | Applied to the button, not to the wrapper around it. |
-| `isDisabled`? | `boolean` | Whether the button is inert: it dims to 60% opacity and the click is dropped. Default: `false`. |
-| `isDropdown`? | `boolean` | Whether clicking opens the menu built from `model`. When `false`, the click calls `onAction` instead. Default: `true`. |
-| `onAction`? | `(e: React.MouseEvent) => void` | Called with the event when the button is clicked. Only reached while `isDropdown` is `false`. |
-| `opened`? | `boolean` | Ignored. Nothing reads this prop, and it reaches the DOM as an unknown attribute. |
-| `style`? | `CSSProperties` | Applied to the button as inline style. |
-| `text`? | `string` | Text drawn in the button. It is the whole label: the component takes no children. Default: `"Button"`. |
+| `model` | `ContextMenuModel[]` | **Required.** Items of the menu. Required even with `isDropdown={false}`, when nothing reads it. |
+| `anchorRef` | `RefObject<HTMLElement \| null>` | Element the menu is anchored to and sized from. Without it the button's own box is used; pass an outer wrapper when the button sits inside a larger clickable area. |
+| `className` | `string` | Applied to the button, after the component's own classes. |
+| `hideArrow` | `boolean` | Whether the arrow beside the text is left out. The menu still opens. Default: `false`. |
+| `id` | `string` | Applied to the button, not to the wrapper around it. |
+| `isDisabled` | `boolean` | Whether the button is inert: it dims to 60% opacity and the click is dropped. Default: `false`. |
+| `isDropdown` | `boolean` | Whether clicking opens the menu built from `model`. When `false`, the click calls `onAction` instead. Default: `true`. |
+| `onAction` | `(e: React.MouseEvent) => void` | Called with the event when the button is clicked. Only reached while `isDropdown` is `false`. |
+| `opened` | `boolean` | Ignored. Nothing reads this prop, and it reaches the DOM as an unknown attribute. |
+| `style` | `CSSProperties` | Applied to the button as inline style. |
+| `text` | `string` | Text drawn in the button. It is the whole label: the component takes no children. Default: `"Button"`. |
 
 </APITable>
 
@@ -147,7 +147,7 @@ These need ONLYOFFICE Apps portal context and do nothing in a standalone app.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `setRefMap`? | `(key: GuidanceRefKey, ref: RefObject<HTMLDivElement \| null>) => void` | Registers the button's element in the portal's guidance map, for the onboarding tour. |
+| `setRefMap` | `(key: GuidanceRefKey, ref: RefObject<HTMLDivElement \| null>) => void` | Registers the button's element in the portal's guidance map, for the onboarding tour. |
 
 </APITable>
 

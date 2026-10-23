@@ -111,18 +111,18 @@ export function RoomTags({ tags }: { tags: string[] }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `columnCount` | `number` | How many tags are drawn before the rest collapse into one overflow tag. `-1` draws all of them. |
-| `onSelectTag` | `(tag: TagClickEvent) => void` | Called with `{ label, roomType, providerType }` when a tag, or an entry of the overflow drop-down, is clicked. |
-| `tags` | `(string \| TagType)[]` | Tags to lay out. A bare string is treated as `{ label }`. |
-| `className`? | `string` | Applied to the outermost element. |
-| `id`? | `string` | Applied to the outermost element. |
-| `onMouseEnter`? | `VoidFunction` | Called when the pointer enters any tag. It is not told which one. |
-| `onMouseLeave`? | `VoidFunction` | Called when the pointer leaves any tag. |
-| `onOptionTagClick`? | `VoidFunction` | Called when the overflow tag or the create tag is clicked. Passing it replaces the built-in drop-down. |
-| `optionTagRef`? | `RefObject<HTMLDivElement \| null>` | Ref to the overflow tag, for a menu of your own anchored to it. |
-| `removeTagIcon`? | `boolean` | Passed to the overflow drop-down, where it removes the leading margin of each entry. Default: `false`. |
-| `showCreateTag`? | `boolean` | Whether a plus tag is drawn for creating a new one. It is dropped as soon as the tags overflow. |
-| `style`? | `CSSProperties` | Applied to the outermost element as inline style. |
+| `columnCount` | `number` | **Required.** How many tags are drawn before the rest collapse into one overflow tag. `-1` draws all of them. |
+| `onSelectTag` | `(tag: TagClickEvent) => void` | **Required.** Called with `{ label, roomType, providerType }` when a tag, or an entry of the overflow drop-down, is clicked. |
+| `tags` | `(string \| TagType)[]` | **Required.** Tags to lay out. A bare string is treated as `{ label }`. |
+| `className` | `string` | Applied to the outermost element. |
+| `id` | `string` | Applied to the outermost element. |
+| `onMouseEnter` | `VoidFunction` | Called when the pointer enters any tag. It is not told which one. |
+| `onMouseLeave` | `VoidFunction` | Called when the pointer leaves any tag. |
+| `onOptionTagClick` | `VoidFunction` | Called when the overflow tag or the create tag is clicked. Passing it replaces the built-in drop-down. |
+| `optionTagRef` | `RefObject<HTMLDivElement \| null>` | Ref to the overflow tag, for a menu of your own anchored to it. |
+| `removeTagIcon` | `boolean` | Passed to the overflow drop-down, where it removes the leading margin of each entry. Default: `false`. |
+| `showCreateTag` | `boolean` | Whether a plus tag is drawn for creating a new one. It is dropped as soon as the tags overflow. |
+| `style` | `CSSProperties` | Applied to the outermost element as inline style. |
 
 </APITable>
 

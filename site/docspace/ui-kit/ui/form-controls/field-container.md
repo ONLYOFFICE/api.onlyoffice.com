@@ -132,27 +132,27 @@ export function NameField() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children` | `ReactNode` | Child elements |
-| `className`? | `string` | CSS class name for custom styling |
-| `dataTestId`? | `string` | `data-testid` of the container. The help button, when there is one, gets `<dataTestId>_help_button`. Default: `"field-container"`. |
-| `errorColor`? | `string` | Custom color for error text |
-| `errorMessage`? | `string` | Error message to display when hasError is true |
-| `errorMessageWidth`? | `string` | Width of the error message container (e.g., "293px"). Default: `"293px"`. |
-| `hasError`? | `boolean` | Indicates that the field has an error state |
-| `id`? | `string` | HTML id attribute |
-| `inlineHelpButton`? | `boolean` | Renders the help button inline instead of in a separate div |
-| `isRequired`? | `boolean` | Indicates that the field is required |
-| `isVertical`? | `boolean` | Vertical or horizontal alignment |
-| `labelFor`? | `string` | `id` of the control this labels, which becomes the label's `for`. Give the control that same `id` and the caption becomes clickable and is announced with the field; without it the label captions nothing. |
-| `labelText`? | `ReactNode` | Field label text or element |
-| `labelVisible`? | `boolean` | Controls visibility of the field label section. Default: `false`. |
-| `maxLabelWidth`? | `string` | Maximum label width in horizontal alignment (e.g., "110px"). Default: `"110px"`. |
-| `place`? | `TTooltipPlace` | Global position of the tooltip. Default: `"bottom"`. |
-| `removeMargin`? | `boolean` | Remove default margin property. Default: `false`. |
-| `style`? | `CSSProperties` | Inline CSS styles |
-| `tooltipClass`? | `string` | Additional CSS class for tooltip |
-| `tooltipContent`? | `ReactNode` | Content to display in the tooltip |
-| `tooltipMaxWidth`? | `string` | Maximum width of the tooltip |
+| `children` | `ReactNode` | **Required.** Child elements |
+| `className` | `string` | CSS class name for custom styling |
+| `dataTestId` | `string` | `data-testid` of the container. The help button, when there is one, gets `<dataTestId>_help_button`. Default: `"field-container"`. |
+| `errorColor` | `string` | Custom color for error text |
+| `errorMessage` | `string` | Error message to display when hasError is true |
+| `errorMessageWidth` | `string` | Width of the error message container (e.g., "293px"). Default: `"293px"`. |
+| `hasError` | `boolean` | Indicates that the field has an error state |
+| `id` | `string` | HTML id attribute |
+| `inlineHelpButton` | `boolean` | Renders the help button inline instead of in a separate div |
+| `isRequired` | `boolean` | Indicates that the field is required |
+| `isVertical` | `boolean` | Vertical or horizontal alignment |
+| `labelFor` | `string` | `id` of the control this labels, which becomes the label's `for`. Give the control that same `id` and the caption becomes clickable and is announced with the field; without it the label captions nothing. |
+| `labelText` | `ReactNode` | Field label text or element |
+| `labelVisible` | `boolean` | Controls visibility of the field label section. Default: `false`. |
+| `maxLabelWidth` | `string` | Maximum label width in horizontal alignment (e.g., "110px"). Default: `"110px"`. |
+| `place` | `TTooltipPlace` | Global position of the tooltip. Default: `"bottom"`. |
+| `removeMargin` | `boolean` | Remove default margin property. Default: `false`. |
+| `style` | `CSSProperties` | Inline CSS styles |
+| `tooltipClass` | `string` | Additional CSS class for tooltip |
+| `tooltipContent` | `ReactNode` | Content to display in the tooltip |
+| `tooltipMaxWidth` | `string` | Maximum width of the tooltip |
 
 </APITable>
 

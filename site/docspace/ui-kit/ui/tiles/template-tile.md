@@ -140,27 +140,27 @@ export function SimpleTemplateTile() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `columnCount` | `number` | Ignored. It is required by the type and read by nothing — the lower half is a two-column list, not a grid. |
-| `contextOptions` | `ContextMenuModel[]` | The menu's entries. Required — but the three-dot button appears only when `item` also carries a `contextOptions` key of its own. |
-| `item` | `TemplateItem` | The template this tile stands for. Its `createdBy` fills the owner line and its `security.EditRoom` decides whether the quota control is read-only. |
-| `openUser` | `() => void` | Called when the owner's name is clicked. Required, even when the template has no `createdBy` and the name is never rendered. |
-| `badges`? | `ReactNode` | Badges beside the content, in the upper half. |
-| `checked`? | `boolean` | Whether the tile is selected. |
-| `children`? | `ReactNode` | The tile's content. Only the first element is rendered, above the badges. |
-| `element`? | `ReactNode` | The icon beside the checkbox. Without it neither the icon nor the checkbox is rendered at all. |
-| `getContextModel`? | `() => ContextMenuModel[]` | Builds the menu shown on right-click. Without it the right-click menu never opens. |
-| `hideContextMenu`? | `() => void` | Called when the menu closes. |
-| `indeterminate`? | `boolean` | Draws the checkbox in its indeterminate state. |
-| `inProgress`? | `boolean` | Replaces the icon and the checkbox with the kit's track loader. |
-| `isActive`? | `boolean` | Whether the tile is the one being acted on, which keeps its hover background. |
-| `isBlockingOperation`? | `boolean` | Turns the pointer off while an operation is running over the tile: hover, clicks and right-clicks stop reaching it. It does not change how the tile looks. |
-| `isEdit`? | `boolean` | Renaming state: it removes the icon and the checkbox. |
-| `onSelect`? | `(checked: boolean, item: TemplateItem) => void` | Called with the new checked state and the `item`. A checked item that has no string `title` is dropped before it reaches you. |
-| `showHotkeyBorder`? | `boolean` | Draws the accent outline that marks the tile the keyboard is on. |
-| `showStorageInfo`? | `boolean` | Adds the storage line to the lower half. The value beside it appears only when `SpaceQuotaComponent` is given as well. |
-| `SpaceQuotaComponent`? | `ComponentType<SpaceQuotaProps>` | Renders the storage figure. It is handed the `item`, the literal type `"room"` and whether editing is allowed. |
-| `thumbnailClick`? | `(e: React.MouseEvent) => void` | Ignored. It reaches the base tile, which does not read it either. |
-| `tileContextClick`? | `() => void` | Called before the menu opens. |
+| `columnCount` | `number` | **Required.** Ignored. It is required by the type and read by nothing — the lower half is a two-column list, not a grid. |
+| `contextOptions` | `ContextMenuModel[]` | **Required.** The menu's entries. Required — but the three-dot button appears only when `item` also carries a `contextOptions` key of its own. |
+| `item` | `TemplateItem` | **Required.** The template this tile stands for. Its `createdBy` fills the owner line and its `security.EditRoom` decides whether the quota control is read-only. |
+| `openUser` | `() => void` | **Required.** Called when the owner's name is clicked. Required, even when the template has no `createdBy` and the name is never rendered. |
+| `badges` | `ReactNode` | Badges beside the content, in the upper half. |
+| `checked` | `boolean` | Whether the tile is selected. |
+| `children` | `ReactNode` | The tile's content. Only the first element is rendered, above the badges. |
+| `element` | `ReactNode` | The icon beside the checkbox. Without it neither the icon nor the checkbox is rendered at all. |
+| `getContextModel` | `() => ContextMenuModel[]` | Builds the menu shown on right-click. Without it the right-click menu never opens. |
+| `hideContextMenu` | `() => void` | Called when the menu closes. |
+| `indeterminate` | `boolean` | Draws the checkbox in its indeterminate state. |
+| `inProgress` | `boolean` | Replaces the icon and the checkbox with the kit's track loader. |
+| `isActive` | `boolean` | Whether the tile is the one being acted on, which keeps its hover background. |
+| `isBlockingOperation` | `boolean` | Turns the pointer off while an operation is running over the tile: hover, clicks and right-clicks stop reaching it. It does not change how the tile looks. |
+| `isEdit` | `boolean` | Renaming state: it removes the icon and the checkbox. |
+| `onSelect` | `(checked: boolean, item: TemplateItem) => void` | Called with the new checked state and the `item`. A checked item that has no string `title` is dropped before it reaches you. |
+| `showHotkeyBorder` | `boolean` | Draws the accent outline that marks the tile the keyboard is on. |
+| `showStorageInfo` | `boolean` | Adds the storage line to the lower half. The value beside it appears only when `SpaceQuotaComponent` is given as well. |
+| `SpaceQuotaComponent` | `ComponentType<SpaceQuotaProps>` | Renders the storage figure. It is handed the `item`, the literal type `"room"` and whether editing is allowed. |
+| `thumbnailClick` | `(e: React.MouseEvent) => void` | Ignored. It reaches the base tile, which does not read it either. |
+| `tileContextClick` | `() => void` | Called before the menu opens. |
 
 </APITable>
 

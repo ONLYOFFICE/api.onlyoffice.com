@@ -101,16 +101,16 @@ export function CoverColour() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `className`? | `string` | Applied to the outermost element. |
-| `dataTestId`? | `string` | `data-testid` of the outermost element. Default: `"color-input"`. |
-| `defaultColor`? | `string` | Colour the field starts on, as a hex string. It is read once, on mount — the component owns the value from then on, so this is a starting point and not a controlled value. The kit's blue is used when it is left out. |
-| `handleChange`? | `(color: string) => void` | Called with the new hex colour each time the field holds a complete 3- or 6-digit code, and on every move inside the picker. There is no confirm step and no `onApply`. |
-| `hasError`? | `boolean` | Whether the field is drawn in its error colours. |
-| `hasWarning`? | `boolean` | Whether the field is drawn in its warning colours. |
-| `id`? | `string` | Applied to the outermost element. |
-| `isDisabled`? | `boolean` | Whether the field is disabled. The swatch stops opening the picker too. |
-| `scale`? | `boolean` | Whether the field stretches to fill its container. |
-| `size`? | `InputSize` | Width, font size and padding of the field; the height does not change. |
+| `className` | `string` | Applied to the outermost element. |
+| `dataTestId` | `string` | `data-testid` of the outermost element. Default: `"color-input"`. |
+| `defaultColor` | `string` | Colour the field starts on, as a hex string. It is read once, on mount — the component owns the value from then on, so this is a starting point and not a controlled value. The kit's blue is used when it is left out. |
+| `handleChange` | `(color: string) => void` | Called with the new hex colour each time the field holds a complete 3- or 6-digit code, and on every move inside the picker. There is no confirm step and no `onApply`. |
+| `hasError` | `boolean` | Whether the field is drawn in its error colours. |
+| `hasWarning` | `boolean` | Whether the field is drawn in its warning colours. |
+| `id` | `string` | Applied to the outermost element. |
+| `isDisabled` | `boolean` | Whether the field is disabled. The swatch stops opening the picker too. |
+| `scale` | `boolean` | Whether the field stretches to fill its container. |
+| `size` | `InputSize` | Width, font size and padding of the field; the height does not change. |
 
 </APITable>
 

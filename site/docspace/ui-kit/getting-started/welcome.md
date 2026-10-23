@@ -97,7 +97,7 @@ const translations: TTranslations = new Map([
 
 `TranslationProvider` renders its children untranslated when `translations` is omitted, so pass
 the bundles you need — `Common.json`, `Payments.json` and `Settings.json` ship for English, and
-`pnpm sync-locales` refreshes the other languages from a DocSpace client checkout.
+`pnpm sync-locales` refreshes the other languages from a checkout of the ONLYOFFICE Apps client.
 
 There is also a composed `Providers` root, and it is **portal-specific**: it adds `ApiProvider`
 and fetches portal settings and the current user on mount, so it needs an ONLYOFFICE Apps endpoint to

@@ -105,41 +105,41 @@ export function RowActions({
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `asideHeader`? | `ReactNode` | Ignored. Nothing reads this prop. |
-| `className`? | `string` | Applied to the wrapper around the icon and the menu. |
-| `clickColor`? | `string` | Colour of the icon while it is held down. |
-| `color`? | `string` | Any CSS colour for the icon, or the literal `"accent"`. |
-| `columnCount`? | `number` | Ignored. It reaches the menu, which does not read it either. |
-| `data`? | `ContextMenuModel[]` | Items of the menu, read **once** to seed the internal state. Every later change is ignored — `getData` is what the open menu is built from. Default: `[]`. |
-| `directionX`? | `TDirectionX` | Preferred horizontal side of the menu. Default: `"left"`. |
-| `directionY`? | `TDirectionY` | Preferred vertical side of the menu. |
-| `displayIconBorder`? | `boolean` | Draws a rounded border around the icon, 32px square. Default: `false`. |
-| `displayType`? | `ContextMenuButtonDisplayType` | `toggle` renders no menu of its own and leaves `onClick` to open one; `auto` behaves exactly like `dropdown`. Default: `ContextMenuButtonDisplayType.dropdown`. |
-| `dropDownClassName`? | `string` | Applied to the menu element. |
-| `fixedDirection`? | `boolean` | Keeps those directions as given instead of flipping them to fit. Default: `false`. |
-| `getData`? | `() => ContextMenuModel[]` | Builds the items when the button is clicked. It is not optional in practice: the click handler calls it without checking, so a button without it throws on the first click. |
-| `hoverColor`? | `string` | Colour of the icon while the pointer is over it. |
-| `iconClassName`? | `string` | Applied to the icon. |
-| `iconClickName`? | `string` | URL of the icon shown while the button is held down. |
-| `iconHoverName`? | `string` | URL of the icon shown while the pointer is over the button. |
-| `iconName`? | `string` | URL of the icon, fetched at runtime. Without it the kit's vertical dots are drawn. |
-| `iconOpenName`? | `string` | URL of the icon shown while the menu is open. |
-| `id`? | `string` | Applied to that wrapper. |
-| `isDisabled`? | `boolean` | Greys the icon out and stops the menu opening. Default: `false`. |
-| `isFill`? | `boolean` | Colours the icon by filling its shapes rather than stroking them. Default: `true`. |
-| `onClick`? | `(e: React.MouseEvent) => void` | Called on a click — after the menu has opened in `dropdown` mode, and instead of opening anything in `toggle` mode, where it is how you render a menu of your own. |
-| `onClose`? | `() => void` | Called when the menu closes by itself, after a click outside. |
-| `onMouseEnter`? | `(e: React.MouseEvent) => void` | Called when the pointer enters the icon. |
-| `onMouseLeave`? | `(e: React.MouseEvent) => void` | Called when the pointer leaves the icon. |
-| `onMouseOut`? | `(e: React.MouseEvent) => void` | Called on **mouse up** on the icon, despite the name, and only for the middle and right buttons. |
-| `onMouseOver`? | `(e: React.MouseEvent) => void` | Called on **mouse down** on the icon, despite the name. |
-| `opened`? | `boolean` | Opens the menu from outside. Changing it opens or closes the menu. Default: `false`. |
-| `size`? | `number` | Size of the icon in pixels. Default: `16`. |
-| `style`? | `CSSProperties` | Applied to that wrapper. |
-| `testId`? | `string` | Value of `data-testid` on the wrapper. Default: `"context-menu-button"`. |
-| `title`? | `string` | Hover tooltip of the icon. It needs `RootTooltip` mounted. Default: `""`. |
-| `usePortal`? | `boolean` | Whether the menu is rendered in a portal on `document.body`. Default: `true`. |
-| `zIndex`? | `number` | Stacking order of the menu. |
+| `asideHeader` | `ReactNode` | Ignored. Nothing reads this prop. |
+| `className` | `string` | Applied to the wrapper around the icon and the menu. |
+| `clickColor` | `string` | Colour of the icon while it is held down. |
+| `color` | `string` | Any CSS colour for the icon, or the literal `"accent"`. |
+| `columnCount` | `number` | Ignored. It reaches the menu, which does not read it either. |
+| `data` | `ContextMenuModel[]` | Items of the menu, read **once** to seed the internal state. Every later change is ignored — `getData` is what the open menu is built from. Default: `[]`. |
+| `directionX` | `TDirectionX` | Preferred horizontal side of the menu. Default: `"left"`. |
+| `directionY` | `TDirectionY` | Preferred vertical side of the menu. |
+| `displayIconBorder` | `boolean` | Draws a rounded border around the icon, 32px square. Default: `false`. |
+| `displayType` | `ContextMenuButtonDisplayType` | `toggle` renders no menu of its own and leaves `onClick` to open one; `auto` behaves exactly like `dropdown`. Default: `ContextMenuButtonDisplayType.dropdown`. |
+| `dropDownClassName` | `string` | Applied to the menu element. |
+| `fixedDirection` | `boolean` | Keeps those directions as given instead of flipping them to fit. Default: `false`. |
+| `getData` | `() => ContextMenuModel[]` | Builds the items when the button is clicked. It is not optional in practice: the click handler calls it without checking, so a button without it throws on the first click. |
+| `hoverColor` | `string` | Colour of the icon while the pointer is over it. |
+| `iconClassName` | `string` | Applied to the icon. |
+| `iconClickName` | `string` | URL of the icon shown while the button is held down. |
+| `iconHoverName` | `string` | URL of the icon shown while the pointer is over the button. |
+| `iconName` | `string` | URL of the icon, fetched at runtime. Without it the kit's vertical dots are drawn. |
+| `iconOpenName` | `string` | URL of the icon shown while the menu is open. |
+| `id` | `string` | Applied to that wrapper. |
+| `isDisabled` | `boolean` | Greys the icon out and stops the menu opening. Default: `false`. |
+| `isFill` | `boolean` | Colours the icon by filling its shapes rather than stroking them. Default: `true`. |
+| `onClick` | `(e: React.MouseEvent) => void` | Called on a click — after the menu has opened in `dropdown` mode, and instead of opening anything in `toggle` mode, where it is how you render a menu of your own. |
+| `onClose` | `() => void` | Called when the menu closes by itself, after a click outside. |
+| `onMouseEnter` | `(e: React.MouseEvent) => void` | Called when the pointer enters the icon. |
+| `onMouseLeave` | `(e: React.MouseEvent) => void` | Called when the pointer leaves the icon. |
+| `onMouseOut` | `(e: React.MouseEvent) => void` | Called on **mouse up** on the icon, despite the name, and only for the middle and right buttons. |
+| `onMouseOver` | `(e: React.MouseEvent) => void` | Called on **mouse down** on the icon, despite the name. |
+| `opened` | `boolean` | Opens the menu from outside. Changing it opens or closes the menu. Default: `false`. |
+| `size` | `number` | Size of the icon in pixels. Default: `16`. |
+| `style` | `CSSProperties` | Applied to that wrapper. |
+| `testId` | `string` | Value of `data-testid` on the wrapper. Default: `"context-menu-button"`. |
+| `title` | `string` | Hover tooltip of the icon. It needs `RootTooltip` mounted. Default: `""`. |
+| `usePortal` | `boolean` | Whether the menu is rendered in a portal on `document.body`. Default: `true`. |
+| `zIndex` | `number` | Stacking order of the menu. |
 
 </APITable>
 

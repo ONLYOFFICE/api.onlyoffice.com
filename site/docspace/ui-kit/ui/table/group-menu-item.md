@@ -21,9 +21,9 @@ The Table README describes it in full.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `item` | `TGroupMenuItem` | The action: its label, icon URL, tooltip, click handler, and the options of its menu when it has one. |
-| `isBlocked`? | `booleanundefined` | Greys the button out and ignores clicks on it. Default: `false`. |
-| `dataTestId`? | `stringundefined` | Value of the item's data-testid attribute. Default: `group-menu-item`. |
+| `item` | `TGroupMenuItem` | **Required.** The action: its label, icon URL, tooltip, click handler, and the options of its menu when it has one. |
+| `isBlocked` | `booleanundefined` | Greys the button out and ignores clicks on it. Default: `false`. |
+| `dataTestId` | `stringundefined` | Value of the item's data-testid attribute. Default: `group-menu-item`. |
 
 </APITable>
 

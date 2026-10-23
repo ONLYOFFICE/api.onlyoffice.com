@@ -118,17 +118,17 @@ export function BrandColour() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `appliedColor` | `string` | Colour the picker starts on, as a hex string. It is read once, on mount — changing it afterwards does not move the picker. Default: `"#4781D1"`. |
-| `isPickerOnly` | `boolean` | Swaps which parts are drawn. `true` adds a header with a title and a closing cross and drops the hex field and both buttons — the shape used inside a drop-down. `false` keeps the hex field and the apply/cancel pair and draws no header. Default: `false`. |
-| `applyButtonLabel`? | `string` | Text of the apply button. It is not translated for you. Default: `"Apply"`. |
-| `cancelButtonLabel`? | `string` | Text of the cancel button. It is not translated for you. Default: `"Cancel"`. |
-| `className`? | `string` | Applied to the outermost element. |
-| `forwardedRef`? | `RefObject<HTMLDivElement \| null>` | Ignored. Nothing reads this prop. |
-| `handleChange`? | `(color: string) => void` | Called on every move of the saturation square and on every hex keystroke. |
-| `hexCodeLabel`? | `string` | Caption before the hex field. It is not translated for you. Default: `"Hex code"`. |
-| `id`? | `string` | Applied to the outermost element. |
-| `onApply`? | `(color: string) => void` | Called with the chosen colour when the apply button is clicked. Default: `() => {}`. |
-| `onClose`? | `() => void` | Called by the cancel button, and by the closing cross in `isPickerOnly` mode. Nothing here unmounts the picker; that is the caller's job. Default: `() => {}`. |
+| `appliedColor` | `string` | **Required.** Colour the picker starts on, as a hex string. It is read once, on mount — changing it afterwards does not move the picker. Default: `"#4781D1"`. |
+| `isPickerOnly` | `boolean` | **Required.** Swaps which parts are drawn. `true` adds a header with a title and a closing cross and drops the hex field and both buttons — the shape used inside a drop-down. `false` keeps the hex field and the apply/cancel pair and draws no header. Default: `false`. |
+| `applyButtonLabel` | `string` | Text of the apply button. It is not translated for you. Default: `"Apply"`. |
+| `cancelButtonLabel` | `string` | Text of the cancel button. It is not translated for you. Default: `"Cancel"`. |
+| `className` | `string` | Applied to the outermost element. |
+| `forwardedRef` | `RefObject<HTMLDivElement \| null>` | Ignored. Nothing reads this prop. |
+| `handleChange` | `(color: string) => void` | Called on every move of the saturation square and on every hex keystroke. |
+| `hexCodeLabel` | `string` | Caption before the hex field. It is not translated for you. Default: `"Hex code"`. |
+| `id` | `string` | Applied to the outermost element. |
+| `onApply` | `(color: string) => void` | Called with the chosen colour when the apply button is clicked. Default: `() => {}`. |
+| `onClose` | `() => void` | Called by the cancel button, and by the closing cross in `isPickerOnly` mode. Nothing here unmounts the picker; that is the caller's job. Default: `() => {}`. |
 
 </APITable>
 

@@ -134,24 +134,24 @@ export function ListFooter() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `countItems` | `TOption[]` | One `{ key, label }` per page size. Typed as required, but passing nothing simply leaves the per-page selector out. |
-| `nextAction` | `(e?: React.MouseEvent) => Promise<void> \| void` | Called when the next button is clicked. A promise it returns is not awaited: the component has no loading state of its own. |
-| `nextLabel` | `string` | Label of the next-page button. Nothing here is translated, so pass the string already localised. |
-| `pageItems` | `TOption[]` | One `{ key, label }` per page. Typed as required, but passing nothing simply leaves the page selector out. |
-| `previousAction` | `(e?: React.MouseEvent) => Promise<void> \| void` | Called when the previous button is clicked. A promise it returns is not awaited: the component has no loading state of its own. |
-| `previousLabel` | `string` | Label of the previous-page button. Nothing here is translated, so pass the string already localised. |
-| `selectedCountItem` | `TOption` | The option the per-page selector displays. It is read on every render, so hold it in your own state and update it from `onSelectCount`. |
-| `selectedPageItem` | `TOption` | The option the page selector displays. It is read on every render, so hold it in your own state and update it from `onSelectPage`. |
-| `className`? | `string` | Added after the component's own class on the outer element. |
-| `dataTestId`? | `string` | Value of `data-testid` on the outer element. Default: `"paging"`. |
-| `disableNext`? | `boolean` | Disables the next button. Default: `false`. |
-| `disablePrevious`? | `boolean` | Disables the previous button. The page selector is disabled only when `disableNext` is set as well. Default: `false`. |
-| `id`? | `string` | Value of `id` on the outer element. |
-| `onSelectCount`? | `(option: TOption) => Promise<void> \| void` | Called with the option that was picked in the per-page selector. Nothing changes until you update `selectedCountItem` yourself. |
-| `onSelectPage`? | `(option: TOption) => Promise<void> \| void` | Called with the option that was picked in the page selector. Nothing moves until you update `selectedPageItem` yourself. |
-| `openDirection`? | `"both" \| "bottom" \| "top"` | Which way both drop-downs open; `both` lets each one choose by the room under it. |
-| `showCountItem`? | `boolean` | Whether the per-page selector is rendered at all. Default: `true`. |
-| `style`? | `CSSProperties` | Inline style of the outer element, and where the `--paging-*` custom properties go. |
+| `countItems` | `TOption[]` | **Required.** One `{ key, label }` per page size. Typed as required, but passing nothing simply leaves the per-page selector out. |
+| `nextAction` | `(e?: React.MouseEvent) => Promise<void> \| void` | **Required.** Called when the next button is clicked. A promise it returns is not awaited: the component has no loading state of its own. |
+| `nextLabel` | `string` | **Required.** Label of the next-page button. Nothing here is translated, so pass the string already localised. |
+| `pageItems` | `TOption[]` | **Required.** One `{ key, label }` per page. Typed as required, but passing nothing simply leaves the page selector out. |
+| `previousAction` | `(e?: React.MouseEvent) => Promise<void> \| void` | **Required.** Called when the previous button is clicked. A promise it returns is not awaited: the component has no loading state of its own. |
+| `previousLabel` | `string` | **Required.** Label of the previous-page button. Nothing here is translated, so pass the string already localised. |
+| `selectedCountItem` | `TOption` | **Required.** The option the per-page selector displays. It is read on every render, so hold it in your own state and update it from `onSelectCount`. |
+| `selectedPageItem` | `TOption` | **Required.** The option the page selector displays. It is read on every render, so hold it in your own state and update it from `onSelectPage`. |
+| `className` | `string` | Added after the component's own class on the outer element. |
+| `dataTestId` | `string` | Value of `data-testid` on the outer element. Default: `"paging"`. |
+| `disableNext` | `boolean` | Disables the next button. Default: `false`. |
+| `disablePrevious` | `boolean` | Disables the previous button. The page selector is disabled only when `disableNext` is set as well. Default: `false`. |
+| `id` | `string` | Value of `id` on the outer element. |
+| `onSelectCount` | `(option: TOption) => Promise<void> \| void` | Called with the option that was picked in the per-page selector. Nothing changes until you update `selectedCountItem` yourself. |
+| `onSelectPage` | `(option: TOption) => Promise<void> \| void` | Called with the option that was picked in the page selector. Nothing moves until you update `selectedPageItem` yourself. |
+| `openDirection` | `"both" \| "bottom" \| "top"` | Which way both drop-downs open; `both` lets each one choose by the room under it. |
+| `showCountItem` | `boolean` | Whether the per-page selector is rendered at all. Default: `true`. |
+| `style` | `CSSProperties` | Inline style of the outer element, and where the `--paging-*` custom properties go. |
 
 </APITable>
 

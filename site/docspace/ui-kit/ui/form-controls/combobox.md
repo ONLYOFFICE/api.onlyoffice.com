@@ -144,75 +144,75 @@ export function RolePicker() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `options` | `TOption[]` | The options. Each needs a unique `key`, and a `label` unless it is a separator; `disabled`, `icon`, `description`, `isBeta` and `tooltip` are passed to the row. |
-| `selectedOption` | `TOption` | The option to show in the button. The component does not choose it: keep it in your own state and set it from `onSelect`. |
-| `advancedOptions`? | `ReactElement<{ children?: React.ReactNode; }, string \| JSXElementConstructor<any>>` | Element whose children replace the list entirely, for a menu that is not a list of options. `options` is then used only for the button. |
-| `advancedOptionsCount`? | `number` | How many advanced options there are, for deciding the mobile layout. |
-| `children`? | `ReactNode` | Content rendered inside the button, before the label. A click on it is ignored unless `disableIconClick` is false. |
-| `className`? | `string` | Applied to the element that wraps the button and the list. |
-| `comboIcon`? | `ReactNode` | Icon to draw instead of the arrow: a component, an element, or a URL. |
-| `dataTestId`? | `string` | Value of `data-testid` on the wrapper. Default: `"combobox"`. |
-| `directionX`? | `TDirectionX` | Preferred horizontal side of the list; it flips to fit the viewport. |
-| `directionY`? | `TDirectionY` | Preferred vertical side of the list; it flips to fit the viewport. |
-| `disableIconClick`? | `boolean` | Whether a click on `children` is swallowed instead of opening the list. Default: `true`. |
-| `disableItemClick`? | `boolean` | Stops the list opening at all, without the disabled styling. |
-| `disableItemClickFirstLevel`? | `boolean` | The same, but only for first-level items on a touch device. |
-| `displayArrow`? | `boolean` | Draws the arrow even when there are no options to open. |
-| `displaySelectedOption`? | `boolean` | Keeps the option that is currently selected usable and highlights it. Without it that option is rendered disabled, so the value cannot be picked again. |
-| `displayType`? | `ComboBoxDisplayType` | `toggle` renders the button alone and no list at all, for a control that only looks like a combo box. Default: `ComboBoxDisplayType.default`. |
-| `dropDownClassName`? | `string` | Applied to the list element. |
-| `dropDownId`? | `string` | Applied to the list element. |
-| `dropDownMaxHeight`? | `number` | Height of the list in pixels. It is also what gives the list a scrollbar: without it a long list is rendered in full. |
-| `dropDownTestId`? | `string` | Value of `data-testid` on the list. |
-| `fillIcon`? | `boolean` | Recolours the selected option's icon to the text colour. |
-| `fixedDirection`? | `boolean` | Keeps `directionX` and `directionY` as given instead of flipping them. |
-| `forceCloseClickOutside`? | `boolean` | Stops the outside-click listener being registered. |
-| `hideMobileView`? | `boolean` | Keeps the list anchored to the button on a phone instead of turning it into a bottom sheet. |
-| `id`? | `string` | Applied to the element that wraps the button and the list. |
-| `isAside`? | `boolean` | Marks the list's backdrop as belonging to a side panel. |
-| `isDefaultMode`? | `boolean` | Whether the list is rendered in a portal on `document.body`. Default: `true`. |
-| `isDisabled`? | `boolean` | Greys the button out and stops it opening. |
-| `isLoading`? | `boolean` | Replaces the arrow with a spinner and stops the button opening. |
-| `isMobileView`? | `boolean` | Pins the list to the bottom of the screen, full width, in portrait. |
-| `isNoFixedHeightOptions`? | `boolean` | Renders the options in a plain scrollbar instead of the virtualised list. |
-| `manualWidth`? | `string` | Width of the list as a CSS length. It has nothing to do with the button's width — use `scaledOptions` for that. Default: `"200px"`. |
-| `manualX`? | `string` | (Non-portal mode) Exact horizontal offset of the list from the button. |
-| `manualY`? | `number \| string` | (Non-portal mode) Exact vertical offset of the list from the button. |
-| `modernView`? | `boolean` | Compact button with no background until it is open. |
-| `noBorder`? | `boolean` | Removes the button's border. |
-| `noSelect`? | `boolean` | Whether the button's text cannot be selected. Default: `true`. |
-| `offsetX`? | `number` | Horizontal offset of the list, in pixels. |
-| `onBackdropClick`? | `(e: Event) => void` | Called when a click outside closes the list, if `withBackdrop` is on. |
-| `onClickSelectedItem`? | `(option: TOption) => void` | Called when the option already selected is clicked again. |
-| `onSelect`? | `(option: TOption) => void` | Called with the option that was clicked. Nothing changes on its own — `selectedOption` is yours to update. |
-| `onToggle`? | `(e: React.MouseEvent<HTMLDivElement>, isOpen: boolean) => void` | Called when the button is clicked, with the state being asked for. Passing it without `onBackdropClick` also stops a click outside closing the list. |
-| `opened`? | `boolean` | Opens or closes the list from outside. It seeds the internal state rather than controlling it: the next click on the button wins until this changes. |
-| `optionStyle`? | `CSSProperties` | Inline style applied to every option. |
-| `plusBadgeValue`? | `number` | Number shown as `+N` after the label, for a multi-select summary. |
-| `role`? | `string` | Ignored. Nothing reads this prop. |
-| `scaled`? | `boolean` | Makes the button take the full width of its parent, which overrides `size`. Default: `true`. |
-| `scaledOptions`? | `boolean` | Matches the list's width to the button's instead of `manualWidth`. |
-| `searchPlaceholder`? | `string` | Ignored. Nothing reads this prop; there is no search field. |
-| `setIsOpenItemAccess`? | `(isOpen: boolean) => void` | Called with the open state whenever it changes, alongside `onToggle`. |
-| `shouldShowBackdrop`? | `boolean` | Renders the backdrop even when another one is already on screen. |
-| `showDisabledItems`? | `boolean` | Ignored. The list is always told to keep disabled options. |
-| `size`? | `"base" \| "big" \| "content" \| "huge" \| "middle"` | One of the fixed widths — 173, 300, 350 or 500px, or the content's own. It only applies when `scaled` is false. Default: `ComboBoxSize.base`. |
-| `style`? | `CSSProperties` | Applied to the wrapper and, again, to the list. |
-| `tabIndex`? | `number` | Position of the button in the tab order. It is `0` by default, so the control is reachable; pass `-1` to take it off the tab order. Default: `0`. |
-| `textOverflow`? | `boolean` | Truncates an option's label with an ellipsis instead of wrapping it. |
-| `title`? | `string` | Hover tooltip for the whole control. It needs `RootTooltip` mounted. |
-| `topSpace`? | `number` | Space to leave above the list when it opens upwards, in pixels. |
-| `type`? | `TCombobox` | Shape of the button: `badge` draws the label as a coloured badge, `onlyIcon` drops the label, `descriptive` adds the option's `description` under it. |
-| `useImageIcon`? | `boolean` | Draws the kit's placeholder image next to the selected option's icon. |
-| `usePortalBackdrop`? | `boolean` | Moves the list's backdrop into the portal, above the page. |
-| `withBackdrop`? | `boolean` | Whether the list renders a backdrop to catch the next click. Default: `true`. |
-| `withBackground`? | `boolean` | Gives that backdrop its dimming background. |
-| `withBlur`? | `boolean` | Ignored. It reaches the list, which does not read it either. |
-| `withLabel`? | `boolean` | Whether the selected option is matched by label rather than by key. Default: `true`. |
-| `withoutArrow`? | `boolean` | Hides the arrow, whatever `displayArrow` and the options say. |
-| `withoutBackground`? | `boolean` | Makes that backdrop transparent. |
-| `withoutPadding`? | `boolean` | Removes the vertical padding around the button. |
-| `withSearch`? | `boolean` | Ignored. Nothing reads this prop; there is no search field. |
+| `options` | `TOption[]` | **Required.** The options. Each needs a unique `key`, and a `label` unless it is a separator; `disabled`, `icon`, `description`, `isBeta` and `tooltip` are passed to the row. |
+| `selectedOption` | `TOption` | **Required.** The option to show in the button. The component does not choose it: keep it in your own state and set it from `onSelect`. |
+| `advancedOptions` | `ReactElement<{ children?: React.ReactNode; }, string \| JSXElementConstructor<any>>` | Element whose children replace the list entirely, for a menu that is not a list of options. `options` is then used only for the button. |
+| `advancedOptionsCount` | `number` | How many advanced options there are, for deciding the mobile layout. |
+| `children` | `ReactNode` | Content rendered inside the button, before the label. A click on it is ignored unless `disableIconClick` is false. |
+| `className` | `string` | Applied to the element that wraps the button and the list. |
+| `comboIcon` | `ReactNode` | Icon to draw instead of the arrow: a component, an element, or a URL. |
+| `dataTestId` | `string` | Value of `data-testid` on the wrapper. Default: `"combobox"`. |
+| `directionX` | `TDirectionX` | Preferred horizontal side of the list; it flips to fit the viewport. |
+| `directionY` | `TDirectionY` | Preferred vertical side of the list; it flips to fit the viewport. |
+| `disableIconClick` | `boolean` | Whether a click on `children` is swallowed instead of opening the list. Default: `true`. |
+| `disableItemClick` | `boolean` | Stops the list opening at all, without the disabled styling. |
+| `disableItemClickFirstLevel` | `boolean` | The same, but only for first-level items on a touch device. |
+| `displayArrow` | `boolean` | Draws the arrow even when there are no options to open. |
+| `displaySelectedOption` | `boolean` | Keeps the option that is currently selected usable and highlights it. Without it that option is rendered disabled, so the value cannot be picked again. |
+| `displayType` | `ComboBoxDisplayType` | `toggle` renders the button alone and no list at all, for a control that only looks like a combo box. Default: `ComboBoxDisplayType.default`. |
+| `dropDownClassName` | `string` | Applied to the list element. |
+| `dropDownId` | `string` | Applied to the list element. |
+| `dropDownMaxHeight` | `number` | Height of the list in pixels. It is also what gives the list a scrollbar: without it a long list is rendered in full. |
+| `dropDownTestId` | `string` | Value of `data-testid` on the list. |
+| `fillIcon` | `boolean` | Recolours the selected option's icon to the text colour. |
+| `fixedDirection` | `boolean` | Keeps `directionX` and `directionY` as given instead of flipping them. |
+| `forceCloseClickOutside` | `boolean` | Stops the outside-click listener being registered. |
+| `hideMobileView` | `boolean` | Keeps the list anchored to the button on a phone instead of turning it into a bottom sheet. |
+| `id` | `string` | Applied to the element that wraps the button and the list. |
+| `isAside` | `boolean` | Marks the list's backdrop as belonging to a side panel. |
+| `isDefaultMode` | `boolean` | Whether the list is rendered in a portal on `document.body`. Default: `true`. |
+| `isDisabled` | `boolean` | Greys the button out and stops it opening. |
+| `isLoading` | `boolean` | Replaces the arrow with a spinner and stops the button opening. |
+| `isMobileView` | `boolean` | Pins the list to the bottom of the screen, full width, in portrait. |
+| `isNoFixedHeightOptions` | `boolean` | Renders the options in a plain scrollbar instead of the virtualised list. |
+| `manualWidth` | `string` | Width of the list as a CSS length. It has nothing to do with the button's width — use `scaledOptions` for that. Default: `"200px"`. |
+| `manualX` | `string` | (Non-portal mode) Exact horizontal offset of the list from the button. |
+| `manualY` | `number \| string` | (Non-portal mode) Exact vertical offset of the list from the button. |
+| `modernView` | `boolean` | Compact button with no background until it is open. |
+| `noBorder` | `boolean` | Removes the button's border. |
+| `noSelect` | `boolean` | Whether the button's text cannot be selected. Default: `true`. |
+| `offsetX` | `number` | Horizontal offset of the list, in pixels. |
+| `onBackdropClick` | `(e: Event) => void` | Called when a click outside closes the list, if `withBackdrop` is on. |
+| `onClickSelectedItem` | `(option: TOption) => void` | Called when the option already selected is clicked again. |
+| `onSelect` | `(option: TOption) => void` | Called with the option that was clicked. Nothing changes on its own — `selectedOption` is yours to update. |
+| `onToggle` | `(e: React.MouseEvent<HTMLDivElement>, isOpen: boolean) => void` | Called when the button is clicked, with the state being asked for. Passing it without `onBackdropClick` also stops a click outside closing the list. |
+| `opened` | `boolean` | Opens or closes the list from outside. It seeds the internal state rather than controlling it: the next click on the button wins until this changes. |
+| `optionStyle` | `CSSProperties` | Inline style applied to every option. |
+| `plusBadgeValue` | `number` | Number shown as `+N` after the label, for a multi-select summary. |
+| `role` | `string` | Ignored. Nothing reads this prop. |
+| `scaled` | `boolean` | Makes the button take the full width of its parent, which overrides `size`. Default: `true`. |
+| `scaledOptions` | `boolean` | Matches the list's width to the button's instead of `manualWidth`. |
+| `searchPlaceholder` | `string` | Ignored. Nothing reads this prop; there is no search field. |
+| `setIsOpenItemAccess` | `(isOpen: boolean) => void` | Called with the open state whenever it changes, alongside `onToggle`. |
+| `shouldShowBackdrop` | `boolean` | Renders the backdrop even when another one is already on screen. |
+| `showDisabledItems` | `boolean` | Ignored. The list is always told to keep disabled options. |
+| `size` | `"base" \| "big" \| "content" \| "huge" \| "middle"` | One of the fixed widths — 173, 300, 350 or 500px, or the content's own. It only applies when `scaled` is false. Default: `ComboBoxSize.base`. |
+| `style` | `CSSProperties` | Applied to the wrapper and, again, to the list. |
+| `tabIndex` | `number` | Position of the button in the tab order. It is `0` by default, so the control is reachable; pass `-1` to take it off the tab order. Default: `0`. |
+| `textOverflow` | `boolean` | Truncates an option's label with an ellipsis instead of wrapping it. |
+| `title` | `string` | Hover tooltip for the whole control. It needs `RootTooltip` mounted. |
+| `topSpace` | `number` | Space to leave above the list when it opens upwards, in pixels. |
+| `type` | `TCombobox` | Shape of the button: `badge` draws the label as a coloured badge, `onlyIcon` drops the label, `descriptive` adds the option's `description` under it. |
+| `useImageIcon` | `boolean` | Draws the kit's placeholder image next to the selected option's icon. |
+| `usePortalBackdrop` | `boolean` | Moves the list's backdrop into the portal, above the page. |
+| `withBackdrop` | `boolean` | Whether the list renders a backdrop to catch the next click. Default: `true`. |
+| `withBackground` | `boolean` | Gives that backdrop its dimming background. |
+| `withBlur` | `boolean` | Ignored. It reaches the list, which does not read it either. |
+| `withLabel` | `boolean` | Whether the selected option is matched by label rather than by key. Default: `true`. |
+| `withoutArrow` | `boolean` | Hides the arrow, whatever `displayArrow` and the options say. |
+| `withoutBackground` | `boolean` | Makes that backdrop transparent. |
+| `withoutPadding` | `boolean` | Removes the vertical padding around the button. |
+| `withSearch` | `boolean` | Ignored. Nothing reads this prop; there is no search field. |
 
 </APITable>
 

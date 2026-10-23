@@ -119,13 +119,13 @@ export function Upload() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `percent` | `number` | How far along the operation is, 0 to 100. Anything above 100 is clamped; a negative number is not, and reaches `aria-valuenow` as it stands. |
-| `className`? | `string` | Added after the component's own class on the bar element, not on the outer container. |
-| `error`? | `string` | Line of text under the bar in the error colour. It replaces `status` whenever both are given; nothing else about the bar changes. |
-| `isInfiniteProgress`? | `boolean` | Replaces the filled portion with a strip that slides across the track for ever. `percent` is still what `aria-valuenow` reports, so pass the label instead of a number a reader can act on. |
-| `label`? | `string` | Line of text above the bar. It is also the bar's `title` and its `aria-label`, so without it the progress bar has no accessible name. |
-| `status`? | `string` | Line of text under the bar — "3 of 4 files processed". It is hidden while `error` is set, which takes the same slot. |
-| `style`? | `CSSProperties` | Inline style of the outer container — the label, the bar and the status line together. The bar itself is styled through the `--progress-bar-*` custom properties. |
+| `percent` | `number` | **Required.** How far along the operation is, 0 to 100. Anything above 100 is clamped; a negative number is not, and reaches `aria-valuenow` as it stands. |
+| `className` | `string` | Added after the component's own class on the bar element, not on the outer container. |
+| `error` | `string` | Line of text under the bar in the error colour. It replaces `status` whenever both are given; nothing else about the bar changes. |
+| `isInfiniteProgress` | `boolean` | Replaces the filled portion with a strip that slides across the track for ever. `percent` is still what `aria-valuenow` reports, so pass the label instead of a number a reader can act on. |
+| `label` | `string` | Line of text above the bar. It is also the bar's `title` and its `aria-label`, so without it the progress bar has no accessible name. |
+| `status` | `string` | Line of text under the bar — "3 of 4 files processed". It is hidden while `error` is set, which takes the same slot. |
+| `style` | `CSSProperties` | Inline style of the outer container — the label, the bar and the status line together. The bar itself is styled through the `--progress-bar-*` custom properties. |
 
 </APITable>
 
@@ -231,16 +231,16 @@ A second, unrelated bar: 24px tall with the percentage written inside it, used o
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `percent` | `number` | How far along the operation is, 0 to 100. It is not clamped: a larger number overflows the track. |
-| `aria-label`? | `string` | Accessible name of the outer element. Not set by default. |
-| `aria-valuemax`? | `number` | Upper bound reported to assistive technology. Not set by default. |
-| `aria-valuemin`? | `number` | Lower bound reported to assistive technology. Not set by default. |
-| `aria-valuenow`? | `number` | Current value reported to assistive technology. Not set by default, and not derived from `percent`. |
-| `className`? | `string` | Added to the outer element, replacing nothing — this component has no class of its own there. |
-| `data-percent`? | `number` | Written to the outer element as-is; nothing in the component reads it. |
-| `data-testid`? | `string` | Replaces the outer element's `data-testid`. |
-| `role`? | `string` | Landmark role of the outer element. Nothing is set by default, so pass `"progressbar"` yourself. |
-| `text`? | `string` | Centred line of text under the bar. |
+| `percent` | `number` | **Required.** How far along the operation is, 0 to 100. It is not clamped: a larger number overflows the track. |
+| `aria-label` | `string` | Accessible name of the outer element. Not set by default. |
+| `aria-valuemax` | `number` | Upper bound reported to assistive technology. Not set by default. |
+| `aria-valuemin` | `number` | Lower bound reported to assistive technology. Not set by default. |
+| `aria-valuenow` | `number` | Current value reported to assistive technology. Not set by default, and not derived from `percent`. |
+| `className` | `string` | Added to the outer element, replacing nothing — this component has no class of its own there. |
+| `data-percent` | `number` | Written to the outer element as-is; nothing in the component reads it. |
+| `data-testid` | `string` | Replaces the outer element's `data-testid`. |
+| `role` | `string` | Landmark role of the outer element. Nothing is set by default, so pass `"progressbar"` yourself. |
+| `text` | `string` | Centred line of text under the bar. |
 
 </APITable>
 

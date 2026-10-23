@@ -96,9 +96,9 @@ export function App() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children` | `ReactNode` | The tree the React context applies to. The classes and attributes this component sets are global and apply to the whole document, not only to these children. |
-| `theme` | `Record<string, unknown>` | The theme object. Only three of its keys are read: `isBase` chooses light or dark, `interfaceDirection` sets the writing direction, and `fontFamily` becomes `--font-family` on the body. The type accepts any object, so a missing key is not a compile error. |
-| `currentColorScheme`? | `CustomColorThemesSettingsItem` | The portal's accent colours. When its `main` is present, eight custom properties are written onto both the document root and the body; otherwise nothing is written and nothing is cleared. |
+| `children` | `ReactNode` | **Required.** The tree the React context applies to. The classes and attributes this component sets are global and apply to the whole document, not only to these children. |
+| `theme` | `Record<string, unknown>` | **Required.** The theme object. Only three of its keys are read: `isBase` chooses light or dark, `interfaceDirection` sets the writing direction, and `fontFamily` becomes `--font-family` on the body. The type accepts any object, so a missing key is not a compile error. |
+| `currentColorScheme` | `CustomColorThemesSettingsItem` | The portal's accent colours. When its `main` is present, eight custom properties are written onto both the document root and the body; otherwise nothing is written and nothing is cleared. |
 
 </APITable>
 

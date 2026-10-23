@@ -139,41 +139,41 @@ export function NameInput() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `type` | `InputType` | Supported type of the input fields |
-| `value` | `string` | Value of the input |
-| `autoComplete`? | `string` | Used as HTML `autocomplete` property. Default: `"off"`. |
-| `children`? | `Iterable<ReactI18NextChildren> \| ReactI18NextChildren` |  |
-| `className`? | `string` | CSS class name |
-| `dir`? | `string` | Text direction. Default: `"auto"`. |
-| `fontWeight`? | `number \| string` | Sets the font weight |
-| `forwardedRef`? | `Ref<HTMLInputElement>` | Forwarded ref. Applied to the plain input only — when `mask` is set the masked input is rendered instead and the ref is dropped. |
-| `guide`? | `boolean` | When guide is true, Text Mask always shows both placeholder characters and non-placeholder mask characters |
-| `hasError`? | `boolean` | Indicates the input field has an error |
-| `hasWarning`? | `boolean` | Indicates the input field has a warning |
-| `id`? | `string` | Used as HTML `id` property |
-| `inputMode`? | `"decimal" \| "email" \| "none" \| "numeric" \| "search" \| "tel" \| "text" \| "url"` | Input mode for virtual keyboard |
-| `isAutoFocussed`? | `boolean` | Focus the input field on initial render |
-| `isBold`? | `boolean` | Sets font weight value to 600 |
-| `isDisabled`? | `boolean` | Indicates that the field cannot be used |
-| `isReadOnly`? | `boolean` | Indicates that the field is displaying read-only content |
-| `keepCharPositions`? | `boolean` | Allows to add or delete characters without changing the positions of the existing characters |
-| `mask`? | `((value: string) => Mask) \| Mask` | Input text mask |
-| `maxLength`? | `number` | Maximum number of characters the field accepts; further typing is silently dropped. Default: `255`. |
-| `name`? | `string` | Used as HTML `name` property |
-| `onBlur`? | `(e: React.FocusEvent<HTMLInputElement>) => void` | Called when field is blurred |
-| `onChange`? | `(e: React.ChangeEvent<HTMLInputElement>) => void` | Called with the new value. Required when input is not read only |
-| `onClick`? | `(e: React.MouseEvent<HTMLInputElement>) => void` | Called when clicked |
-| `onContextMenu`? | `(e: React.MouseEvent<HTMLInputElement>) => void` | Called when context menu is triggered |
-| `onFocus`? | `(e: React.FocusEvent<HTMLInputElement>) => void` | Called when field is focused |
-| `onKeyDown`? | `(e: React.KeyboardEvent<HTMLInputElement>) => void` | Called when a key is pressed |
-| `placeholder`? | `string` | Placeholder text for the input. The default is a single space, not an empty string, so `:placeholder-shown` matches even when no placeholder was asked for. Default: `" "`. |
-| `scale`? | `boolean` | Indicates the input field has scale |
-| `size`? | `InputSize` | Supported size of the input fields. Default: `InputSize.base`. |
-| `spellCheck`? | `boolean` | Used as HTML `spellcheck` property |
-| `style`? | `CSSProperties` | Inline CSS styles |
-| `tabIndex`? | `number` | Used as HTML `tabindex` property. Left out, the field takes its natural place in the tab order; pass `-1` only for a field the keyboard is meant to skip. |
-| `testId`? | `string` | HTML data-testid attribute |
-| `withBorder`? | `boolean` | Indicates that component contains border. Default: `true`. |
+| `type` | `InputType` | **Required.** Supported type of the input fields |
+| `value` | `string` | **Required.** Value of the input |
+| `autoComplete` | `string` | Used as HTML `autocomplete` property. Default: `"off"`. |
+| `children` | `Iterable<ReactI18NextChildren> \| ReactI18NextChildren` |  |
+| `className` | `string` | CSS class name |
+| `dir` | `string` | Text direction. Default: `"auto"`. |
+| `fontWeight` | `number \| string` | Sets the font weight |
+| `forwardedRef` | `Ref<HTMLInputElement>` | Forwarded ref. Applied to the plain input only — when `mask` is set the masked input is rendered instead and the ref is dropped. |
+| `guide` | `boolean` | When guide is true, Text Mask always shows both placeholder characters and non-placeholder mask characters |
+| `hasError` | `boolean` | Indicates the input field has an error |
+| `hasWarning` | `boolean` | Indicates the input field has a warning |
+| `id` | `string` | Used as HTML `id` property |
+| `inputMode` | `"decimal" \| "email" \| "none" \| "numeric" \| "search" \| "tel" \| "text" \| "url"` | Input mode for virtual keyboard |
+| `isAutoFocussed` | `boolean` | Focus the input field on initial render |
+| `isBold` | `boolean` | Sets font weight value to 600 |
+| `isDisabled` | `boolean` | Indicates that the field cannot be used |
+| `isReadOnly` | `boolean` | Indicates that the field is displaying read-only content |
+| `keepCharPositions` | `boolean` | Allows to add or delete characters without changing the positions of the existing characters |
+| `mask` | `((value: string) => Mask) \| Mask` | Input text mask |
+| `maxLength` | `number` | Maximum number of characters the field accepts; further typing is silently dropped. Default: `255`. |
+| `name` | `string` | Used as HTML `name` property |
+| `onBlur` | `(e: React.FocusEvent<HTMLInputElement>) => void` | Called when field is blurred |
+| `onChange` | `(e: React.ChangeEvent<HTMLInputElement>) => void` | Called with the new value. Required when input is not read only |
+| `onClick` | `(e: React.MouseEvent<HTMLInputElement>) => void` | Called when clicked |
+| `onContextMenu` | `(e: React.MouseEvent<HTMLInputElement>) => void` | Called when context menu is triggered |
+| `onFocus` | `(e: React.FocusEvent<HTMLInputElement>) => void` | Called when field is focused |
+| `onKeyDown` | `(e: React.KeyboardEvent<HTMLInputElement>) => void` | Called when a key is pressed |
+| `placeholder` | `string` | Placeholder text for the input. The default is a single space, not an empty string, so `:placeholder-shown` matches even when no placeholder was asked for. Default: `" "`. |
+| `scale` | `boolean` | Indicates the input field has scale |
+| `size` | `InputSize` | Supported size of the input fields. Default: `InputSize.base`. |
+| `spellCheck` | `boolean` | Used as HTML `spellcheck` property |
+| `style` | `CSSProperties` | Inline CSS styles |
+| `tabIndex` | `number` | Used as HTML `tabindex` property. Left out, the field takes its natural place in the tab order; pass `-1` only for a field the keyboard is meant to skip. |
+| `testId` | `string` | HTML data-testid attribute |
+| `withBorder` | `boolean` | Indicates that component contains border. Default: `true`. |
 
 </APITable>
 

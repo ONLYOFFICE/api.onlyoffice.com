@@ -118,26 +118,26 @@ export function QuotaBar({ onDismiss }: { onDismiss: () => void }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `countDownTime` | `number` | Milliseconds until the countdown fires `onAction`. Pass `-1` for no countdown at all: `0` fires it on the first frame. |
-| `sectionWidth` | `number` | Minimum width of the iframe on a tablet or wider, in pixels. It does nothing without `htmlContent`. |
-| `additionalHeaderText`? | `string` | Smaller line drawn next to the header. |
-| `backgroundImg`? | `string` | CSS `background-image` value of the bar — a whole shorthand such as `url(/banner.png)`, not a bare path. |
-| `btnText`? | `string` | Label of the inline action, drawn as underlined text after the message. Setting it removes the close cross. |
-| `fontSize`? | `string` | Font size of the countdown, as a CSS length. It does not reach the message, whose size is fixed by `--snackbar-text-size`. |
-| `fontWeight`? | `number` | Font weight of the countdown. It does not reach the message either. |
-| `headerText`? | `string` | Bold line above the message. Without it the heading element is still rendered, hidden with `display: none`. |
-| `htmlContent`? | `string` | HTML injected instead of `text`, sanitized with `xss`. Under `isCampaigns` it is read as the `src` of an iframe instead. |
-| `isCampaigns`? | `boolean` | Whether the bar is a campaign banner: `htmlContent` becomes an iframe URL and the only thing drawn over it is a close cross. |
-| `isMaintenance`? | `boolean` | Ignored. Nothing reads this prop, and it reaches the DOM as an unknown attribute. |
-| `onAction`? | `(e?: React.MouseEvent) => void` | Called by the action text, by the close cross, when the countdown reaches zero and when a click lands in an iframe. The event is only passed on a real click. |
-| `onClose`? | `() => void` | Ignored. Nothing reads this prop; the close cross calls `onAction`. |
-| `onLoad`? | `() => void` | Called once the bar is mounted. Under `isCampaigns` the iframe's own load is what reveals the cross. |
-| `opacity`? | `number` | Opacity of the bar. Without it the bar renders fully transparent — the stylesheet falls back to `0`. |
-| `showIcon`? | `boolean` | Whether the warning icon is drawn before the header. |
-| `skipBlur`? | `boolean` | Whether the window `blur` listener is skipped. It is on by default and turns a click inside an iframe into an `onAction` half a second later. |
-| `style`? | `CSSProperties` | Applied to the outermost element as inline style. It is merged after the opacity and background variables, so it can override them. |
-| `text`? | `ReactNode` | Message of the bar, rendered under the header. Ignored when `htmlContent` is set. |
-| `textAlign`? | `"match-parent" \| TextAlignValue` | Text alignment of the header and the message. |
+| `countDownTime` | `number` | **Required.** Milliseconds until the countdown fires `onAction`. Pass `-1` for no countdown at all: `0` fires it on the first frame. |
+| `sectionWidth` | `number` | **Required.** Minimum width of the iframe on a tablet or wider, in pixels. It does nothing without `htmlContent`. |
+| `additionalHeaderText` | `string` | Smaller line drawn next to the header. |
+| `backgroundImg` | `string` | CSS `background-image` value of the bar — a whole shorthand such as `url(/banner.png)`, not a bare path. |
+| `btnText` | `string` | Label of the inline action, drawn as underlined text after the message. Setting it removes the close cross. |
+| `fontSize` | `string` | Font size of the countdown, as a CSS length. It does not reach the message, whose size is fixed by `--snackbar-text-size`. |
+| `fontWeight` | `number` | Font weight of the countdown. It does not reach the message either. |
+| `headerText` | `string` | Bold line above the message. Without it the heading element is still rendered, hidden with `display: none`. |
+| `htmlContent` | `string` | HTML injected instead of `text`, sanitized with `xss`. Under `isCampaigns` it is read as the `src` of an iframe instead. |
+| `isCampaigns` | `boolean` | Whether the bar is a campaign banner: `htmlContent` becomes an iframe URL and the only thing drawn over it is a close cross. |
+| `isMaintenance` | `boolean` | Ignored. Nothing reads this prop, and it reaches the DOM as an unknown attribute. |
+| `onAction` | `(e?: React.MouseEvent) => void` | Called by the action text, by the close cross, when the countdown reaches zero and when a click lands in an iframe. The event is only passed on a real click. |
+| `onClose` | `() => void` | Ignored. Nothing reads this prop; the close cross calls `onAction`. |
+| `onLoad` | `() => void` | Called once the bar is mounted. Under `isCampaigns` the iframe's own load is what reveals the cross. |
+| `opacity` | `number` | Opacity of the bar. Without it the bar renders fully transparent — the stylesheet falls back to `0`. |
+| `showIcon` | `boolean` | Whether the warning icon is drawn before the header. |
+| `skipBlur` | `boolean` | Whether the window `blur` listener is skipped. It is on by default and turns a click inside an iframe into an `onAction` half a second later. |
+| `style` | `CSSProperties` | Applied to the outermost element as inline style. It is merged after the opacity and background variables, so it can override them. |
+| `text` | `ReactNode` | Message of the bar, rendered under the header. Ignored when `htmlContent` is set. |
+| `textAlign` | `"match-parent" \| TextAlignValue` | Text alignment of the header and the message. |
 
 </APITable>
 
