@@ -8,19 +8,19 @@ ONLYOFFICE macros are different from Microsoft macros because the latter use the
 
 This means that macros created in Microsoft Office are not compatible with ONLYOFFICE macros. You can convert them for use with ONLYOFFICE in two ways:
 
-- [Automatically](#automatic-conversion-using-ai-plugin) - using the AI plugin for ONLYOFFICE (recommended for quick conversion).
+- [Automatically](#automatic-conversion-using-ai-plugin) - using AI Tools (recommended for quick conversion).
 
 - [Manually](#manual-conversion-of-vba-macros) - by rewriting the logic in JavaScript using the [ONLYOFFICE Office API](../../office-api/get-started/overview.md).
 
-## Automatic conversion using AI plugin
+## Automatic conversion using AI Tools {#automatic-conversion-using-ai-plugin}
 
-Starting from version 9.0, you can use the AI plugin built into ONLYOFFICE to automatically convert VBA code into JavaScript compatible with ONLYOFFICE macros:
+Starting from version 9.0, you can use AI Tools to automatically convert VBA code into JavaScript compatible with ONLYOFFICE macros:
 
-1. Configure the AI plugin. See [Configuring the AI plugin](/docs/ai/guides/ai-plugin.md#configuring) for details.
+1. Configure AI Tools. See [Configuring AI Tools](/docs/ai/guides/ai-plugin.md#configuring) for details.
 2. Open the **View** tab and click **Macros**.
 3. Click the **AI** icon in the **Macros** window and select **Convert from VBA**.
 
-    ![AI plugin](/assets/images/plugins/ai-plugin.png#gh-light-mode-only)![AI plugin](/assets/images/plugins/ai-plugin.dark.png#gh-dark-mode-only)
+    ![AI Tools](/assets/images/plugins/ai-plugin.png#gh-light-mode-only)![AI Tools](/assets/images/plugins/ai-plugin.dark.png#gh-dark-mode-only)
 
 4. Insert VBA code into the **Convert macros from VBA** window and click **Create**. The generated macro sample will be inserted into the **Macros** window.
 
@@ -29,7 +29,7 @@ Starting from version 9.0, you can use the AI plugin built into ONLYOFFICE to au
 5. Review the code and make adjustments if necessary.
 
     :::warning
-    While the AI plugin can generate a complete and working macro, it's not always perfect. Make sure to review the output carefully and test it thoroughly, especially for complex macros.
+    While AI Tools can generate a complete and working macro, it's not always perfect. Make sure to review the output carefully and test it thoroughly, especially for complex macros.
     :::
 
 6. Click ![Play icon](/assets/images/plugins/play.svg) to test the script.
@@ -42,7 +42,7 @@ Sub UnmergeAllCells()
 End Sub
 ```
 
-You can paste this VBA code into the AI plugin converter. The plugin will return the following JavaScript macro:
+You can paste this VBA code into the AI Tools converter. AI Tools returns the following JavaScript macro:
 
 ```ts
 (function(){
@@ -71,14 +71,14 @@ Run this macro to check that it successfully unmerges all merged cells in the wo
 
 ### How the request is processed
 
-When the AI plugin handles a VBA conversion request, it follows this execution flow:
+When AI Tools handles a VBA conversion request, it follows this execution flow:
 1. **VBA input analysis:** The provided VBA code is parsed and its logic is detected (ranges, formulas, loops, conditions, and actions).
 2. **Office API mapping:** VBA operations are mapped to equivalent ONLYOFFICE Office API methods.
 3. **JavaScript macro generation:** A JavaScript macro compatible with ONLYOFFICE macros is generated.
 4. **Result insertion:** The generated script is inserted into the **Macros** window for review.
 5. **Validation and adjustment:** You review, test, and adjust the script if needed, especially for complex or VBA-specific behavior.
 
-If VBA conversion fails, the plugin will either output an error message or write a macro with comments explaining why it failed.
+If VBA conversion fails, AI Tools either outputs an error message or writes a macro with comments explaining why it failed.
 
 ## Manual conversion of VBA macros
 

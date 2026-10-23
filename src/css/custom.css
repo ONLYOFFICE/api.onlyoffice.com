@@ -136,6 +136,26 @@ html[data-theme='dark'] .theme-announcement-bar .close {
   display: none;
 }
 
+.side-by-side-images {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.side-by-side-images > * {
+  flex: 0 1 auto;
+  max-width: 100%;
+}
+
+.side-by-side-images img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
 html[data-theme='light'] {
   --ifm-menu-color: #444;
 }
