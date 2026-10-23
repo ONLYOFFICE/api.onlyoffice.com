@@ -173,7 +173,7 @@ Connect to ONLYOFFICE Apps for document management operations:
   "mcpServers": {
     "onlyoffice-apps": {
       "env": {
-        "DOCSPACE_BASE_URL": "https://your-docspace-instance.onlyoffice.com",
+        "DOCSPACE_BASE_URL": "https://your-instance.onlyoffice.com",
         "DOCSPACE_API_KEY": "your-api-key"
       },
       "command": "npx",
@@ -227,7 +227,7 @@ Configure multiple servers simultaneously:
     },
     "onlyoffice-apps": {
       "env": {
-        "DOCSPACE_BASE_URL": "https://your-docspace-instance.onlyoffice.com",
+        "DOCSPACE_BASE_URL": "https://your-instance.onlyoffice.com",
         "DOCSPACE_API_KEY": "your-api-key"
       },
       "command": "npx",

@@ -173,7 +173,7 @@ JSON.parse(AscDesktopEditor.getToolFunctions());
   "mcpServers": {
     "onlyoffice-apps": {
       "env": {
-        "DOCSPACE_BASE_URL": "https://your-docspace-instance.onlyoffice.com",
+        "DOCSPACE_BASE_URL": "https://your-instance.onlyoffice.com",
         "DOCSPACE_API_KEY": "your-api-key"
       },
       "command": "npx",
@@ -227,7 +227,7 @@ JSON.parse(AscDesktopEditor.getToolFunctions());
     },
     "onlyoffice-apps": {
       "env": {
-        "DOCSPACE_BASE_URL": "https://your-docspace-instance.onlyoffice.com",
+        "DOCSPACE_BASE_URL": "https://your-instance.onlyoffice.com",
         "DOCSPACE_API_KEY": "your-api-key"
       },
       "command": "npx",
