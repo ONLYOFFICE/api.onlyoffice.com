@@ -76,11 +76,11 @@ class Provider extends AI.Provider {
 
 要将自定义提供商添加到 AI 插件：
 
-1. 打开 ONLYOFFICE 编辑器顶部工具栏中的 **AI 工具** 选项卡。
-2. 选择 **设置**。
-3. 在 **AI 配置** 窗口中，选择 **编辑 AI 模型**。
-4. 在 **AI 模型列表** 窗口中，点击 ![编辑图标](/assets/images/plugins/edit.svg#gh-light-mode-only)![编辑图标](/assets/images/plugins/edit.dark.svg#gh-dark-mode-only) 来编辑模型。
-5. 在 **编辑 AI 模型** 窗口中，点击 **自定义提供商**。
+1. 打开 ONLYOFFICE 编辑器顶部工具栏中的 **AI 工具**选项卡。
+2. 选择**设置**。
+3. 在 **AI 配置**窗口中，选择**编辑 AI 模型**。
+4. 在 **AI 模型列表**窗口中，点击 ![编辑图标](/assets/images/plugins/edit.svg#gh-light-mode-only)![编辑图标](/assets/images/plugins/edit.dark.svg#gh-dark-mode-only) 来编辑模型。
+5. 在**编辑 AI 模型**窗口中，点击**自定义提供商**。
 
     ![自定义提供商](/assets/images/plugins/custom-providers.png#gh-light-mode-only)![自定义提供商](/assets/images/plugins/custom-providers.dark.png#gh-dark-mode-only)
 
@@ -88,10 +88,10 @@ class Provider extends AI.Provider {
 
     ![添加自定义提供商](/assets/images/plugins/add-custom-provider.png#gh-light-mode-only)![添加自定义提供商](/assets/images/plugins/add-custom-provider.dark.png#gh-dark-mode-only)
 
-7. 点击 **返回** 退出 **自定义提供商** 窗口。
-8. 在 **编辑 AI 模型** 窗口的列表中选择您的自定义提供商，然后点击 **确定**。
-9. 点击 **返回** 退出 **AI 模型列表** 窗口。
-10. 在 **AI 配置** 窗口中为特定任务设置自定义提供商模型。
+7. 点击**返回**退出**自定义提供商**窗口。
+8. 在**编辑 AI 模型**窗口的列表中选择您的自定义提供商，然后点击**确定**。
+9. 点击**返回**退出 **AI 模型列表**窗口。
+10. 在 **AI 配置**窗口中为特定任务设置自定义提供商模型。
 
 AI 插件已完全配置好，可处理各种任务。
 
