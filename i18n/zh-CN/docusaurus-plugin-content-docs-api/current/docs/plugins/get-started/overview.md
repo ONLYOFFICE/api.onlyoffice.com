@@ -5,7 +5,7 @@ description: 使用 HTML、CSS 和 JavaScript 构建 ONLYOFFICE 插件，为文�
 
 # 概述
 
-ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的 Web 应用，运行在文档、电子表格、演示文稿和 PDF 编辑器中。插件可以打开面板或窗口、添加工具栏按钮和上下文菜单项，也可以在后台运行，并通过插件 API 读取和修改文档。插件可在 ONLYOFFICE 文档、ONLYOFFICE 协作空间和 ONLYOFFICE 桌面编辑器中使用。
+ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的 Web 应用，运行在文档、电子表格、演示文稿和 PDF 编辑器中。插件可以打开面板或窗口、添加工具栏按钮和上下文菜单项，也可以在后台运行，并通过插件 API 读取和修改文档。插件可在 ONLYOFFICE 文档、ONLYOFFICE Apps和 ONLYOFFICE 桌面编辑器中使用。
 
 如果您希望直接开始编写代码，请前往[快速入门指南](quick-start.md)，或在[交互式 Playground](playground.md) 中体验。
 
