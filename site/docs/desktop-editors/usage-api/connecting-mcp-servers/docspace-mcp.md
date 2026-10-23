@@ -27,10 +27,6 @@ To obtain an API key from your ONLYOFFICE Apps instance:
 
 ## Configuration
 
-:::note
-The steps below apply to ONLYOFFICE Desktop Editors versions earlier than 10.0. Starting with version 10.0, MCP servers are configured in **AI Tools** → **Settings** → **MCP Servers**. For the current steps, see [Connect to ONLYOFFICE Desktop Editors](/docspace/mcp-server/getting-started/clients#connect-to-onlyoffice-desktop-editors).
-:::
-
 ### Step 1: Access MCP configuration
 
 1. Open ONLYOFFICE Desktop Editors
