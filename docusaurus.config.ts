@@ -393,7 +393,7 @@ const config: Config = {
               href: 'https://helpcenter.onlyoffice.com/installation/docs-developer-index?from=api',
             },
             {
-              label: 'Support contact form',
+              label: 'Contact support',
               href: 'https://www.onlyoffice.com/support-contact-form?from=api',
             },
           ],
