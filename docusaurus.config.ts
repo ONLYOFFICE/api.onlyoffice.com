@@ -377,10 +377,6 @@ const config: Config = {
               label: 'Legal notice',
               href: 'https://www.onlyoffice.com/legalterms?from=api',
             },
-            {
-              label: 'Legacy version',
-              href: 'https://legacy-api.onlyoffice.com/',
-            },
           ],
         },
         {
