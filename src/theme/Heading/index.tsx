@@ -25,14 +25,11 @@ export default function Heading({as: As, id, ...props}: Props): ReactNode {
 
   // H1 headings do not need an id because they don't appear in the TOC.
   if (As === 'h1') {
-    const isOpenApiHeading = shouldShowActions && props.className?.includes('openapi__heading');
-    const Wrapper = isOpenApiHeading ? 'header' : React.Fragment;
-
     return (
-      <Wrapper>
+      <>
         <As {...props} id={undefined} />
         {shouldShowActions && <PageActions />}
-      </Wrapper>
+      </>
     );
   }
 

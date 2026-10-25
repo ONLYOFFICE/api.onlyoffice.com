@@ -127,8 +127,6 @@ const config: Config = {
             return `${baseUrl}/${docPath}`;
           },
 
-          docItemComponent: '@theme/ApiItem',
-
           async sidebarItemsGenerator({defaultSidebarItemsGenerator, isCategoryIndex, ...args}) {
             const sidebarItems = await defaultSidebarItemsGenerator({
               ...args,
@@ -465,7 +463,7 @@ const config: Config = {
     ],
   } satisfies Preset.ThemeConfig,
 
-  themes: ["docusaurus-theme-openapi-docs", "@docusaurus/theme-mermaid"],
+  themes: ["@docusaurus/theme-mermaid"],
 };
 
 export default config;

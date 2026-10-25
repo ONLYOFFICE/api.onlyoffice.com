@@ -7,9 +7,7 @@
  * `llms-txt.js`.
  *
  * The twins are the page sources, not the rendered pages: these docs are written as plain
- * Markdown, so a twin only needs its links made absolute. The generated OpenAPI pages are
- * the exception, since their source is components around a compressed spec; those are
- * rendered from that spec instead.
+ * Markdown, so a twin only needs its links made absolute.
  *
  * `postBuild` runs once per locale with that locale's `outDir` and docs, so nothing here
  * has to know which locales are being built.
@@ -20,7 +18,6 @@ const path = require('path');
 
 const {createMarkdownResolver, rewriteLinks} = require('./links');
 const {buildLlmsTxt} = require('./llms-txt');
-const {renderApiPage} = require('./openapi');
 
 const DOCS_PLUGIN = 'docusaurus-plugin-content-docs';
 
@@ -100,21 +97,14 @@ module.exports = function pluginLlmsTxt(context, options) {
         const sourceFilePath = doc.source.replace(/^@site/, siteDir);
         const source = await fs.promises.readFile(sourceFilePath, 'utf8');
 
-        let content = sourceFilePath.endsWith('.api.mdx')
-          ? renderApiPage(source, {title: doc.title})
-          : null;
-
-        if (!content) {
-          const rewritten = rewriteLinks(source, {
-            sourceFilePath,
-            permalink: doc.permalink,
-            resolveMarkdown,
-            urlOf,
-            siteUrl,
-          });
-          content = rewritten.content;
-          broken.push(...rewritten.broken.map((target) => `${doc.id}: ${target}`));
-        }
+        const {content, broken: brokenLinks} = rewriteLinks(source, {
+          sourceFilePath,
+          permalink: doc.permalink,
+          resolveMarkdown,
+          urlOf,
+          siteUrl,
+        });
+        broken.push(...brokenLinks.map((target) => `${doc.id}: ${target}`));
 
         const target = twinPath(doc.permalink, baseUrl, outDir);
         await fs.promises.mkdir(path.dirname(target), {recursive: true});
