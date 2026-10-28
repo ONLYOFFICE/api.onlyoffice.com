@@ -6,7 +6,9 @@ description: 将 ONLYOFFICE 文档集成到您网站的各语言示例。
 
 # Docs API 集成示例
 
-集成示例是一些小型 Web 应用程序，它们可以列出文件、在 ONLYOFFICE 文档中打开文件，并通过回调处理程序将其保存回来。每个示例以不同的语言或框架完成相同的工作。在编写您自己的集成之前，运行与您的技术栈最接近的示例，即可看到一个完整可用的集成。所有示例的源代码均位于 [document-server-integration](https://github.com/ONLYOFFICE/document-server-integration) 仓库中。
+集成示例是一些小型 Web 应用程序，它们可以列出文件、在 ONLYOFFICE 文档中打开文件，并通过回调处理程序将其保存回来。每个示例以不同的语言或框架完成相同的工作。在编写您自己的集成之前，运行与您的技术栈最接近的示例，即可看到一个完整可用的集成。各语言示例的源代码均位于 [document-server-integration](https://github.com/ONLYOFFICE/document-server-integration) 仓库中。
+
+如需通过一条命令快速入门，请使用 [Create App](/docs/docs-api/samples/language-specific-examples/create-app-example.md) 生成 Next.js 示例。
 
 ONLYOFFICE 文档本身也包含 Node.js 示例。该示例默认处于禁用状态。要启用它，请按照 ONLYOFFICE 文档起始页面上的说明操作。
 
@@ -18,6 +20,7 @@ ONLYOFFICE 文档本身也包含 Node.js 示例。该示例默认处于禁用状
 
 | 示例 | 构建方式 | 设置 | 运行方式 |
 | ---- | -------- | ---- | -------- |
+| [Create App](/docs/docs-api/samples/language-specific-examples/create-app-example.md) | Next.js 和 React | `.env` | npm |
 | [.NET (C#)](/docs/docs-api/samples/language-specific-examples/net-example.md) | ASP.NET Web Forms 和 ASP.NET MVC | `settings.config`、`web.appsettings.config` | Visual Studio 和 IIS，仅限 Windows |
 | [Go](/docs/docs-api/samples/language-specific-examples/go-example.md) | gorilla/mux | `config/configuration.json` | `go run` |
 | [Java](/docs/docs-api/samples/language-specific-examples/java-example.md) | Servlet 和 JSP | `src/main/resources/settings.properties` | Docker Compose |
