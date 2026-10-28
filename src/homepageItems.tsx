@@ -39,23 +39,22 @@ export const Samples: Samples = {
     },
     {
       icon: <CodeIcon />,
-      title: 'Inserting Pivot Table',
+      title: 'Creating pivot table by categories',
       category: 'favorites',
       description: (
         <>
-          This AI tool inserts a pivot table into the specified range.
+          Creates a pivot table that groups rows by category and calculates sum totals.
         </>
       ),
       features: [
         'Summarize and group data',
-        'Custom range selection',
-        'AI-powered automation',
+        'Sum and count aggregates',
+        'Office JavaScript API',
       ],
-      viewLink:'/docs/ai/samples/spreadsheet-editor/insert-pivot-table',
+      viewLink:'/docs/office-api/samples/spreadsheet-editor/creating-pivot-table-by-categories',
       tags: [
         { label: 'Docs', variant: 'blue' },
-        { label: 'Plugins', variant: 'blue' },
-        { label: 'AI Tools', variant: 'pink' },
+        { label: 'Office API', variant: 'blue' },
         { label: 'Spreadsheets', variant: 'green' },
       ],
     },
