@@ -6,7 +6,9 @@ description: Language-specific examples for integrating ONLYOFFICE Docs into you
 
 # Docs API integration samples
 
-The integration examples are small web applications that list files, open them in ONLYOFFICE Docs, and save them back through the callback handler. Each one does the same job in a different language or framework. Run the one closest to your stack to see a complete integration working before you write your own. The source code of all examples is in the [document-server-integration](https://github.com/ONLYOFFICE/document-server-integration) repository.
+The integration examples are small web applications that list files, open them in ONLYOFFICE Docs, and save them back through the callback handler. Each one does the same job in a different language or framework. Run the one closest to your stack to see a complete integration working before you write your own. The source code of the language-specific examples is in the [document-server-integration](https://github.com/ONLYOFFICE/document-server-integration) repository.
+
+To get started with a single command, generate a Next.js example with [Create App](/docs/docs-api/samples/language-specific-examples/create-app-example.md).
 
 ONLYOFFICE Docs also includes the Node.js example. It is disabled by default. To enable it, follow the instructions on the ONLYOFFICE Docs start page.
 
@@ -18,6 +20,7 @@ The examples are for testing only. They have no authentication, do not validate 
 
 | Example | Built with | Settings | Runs with |
 | ------- | ---------- | -------- | --------- |
+| [Create App](/docs/docs-api/samples/language-specific-examples/create-app-example.md) | Next.js and React | `.env` | npm |
 | [.NET (C#)](/docs/docs-api/samples/language-specific-examples/net-example.md) | ASP.NET Web Forms and ASP.NET MVC | `settings.config`, `web.appsettings.config` | Visual Studio and IIS, Windows only |
 | [Go](/docs/docs-api/samples/language-specific-examples/go-example.md) | gorilla/mux | `config/configuration.json` | `go run` |
 | [Java](/docs/docs-api/samples/language-specific-examples/java-example.md) | Servlets and JSP | `src/main/resources/settings.properties` | Docker Compose |
