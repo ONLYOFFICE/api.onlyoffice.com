@@ -115,7 +115,7 @@ docker run -d \
 
 - `http://*` - allows requests from any HTTP domains
 - `https://*` - allows requests from any HTTPS domains
-- `onlyoffice://*` - allows requests from ONLYOFFICE Desktop Editors, where plugins run on the `onlyoffice://` scheme (the AI plugin's origin is `onlyoffice://plugin`)
+- `onlyoffice://*` - allows requests from ONLYOFFICE Desktop Editors, where plugins run on the `onlyoffice://` scheme (the AI Tools origin is `onlyoffice://plugin`)
 
 ### Verifying CORS configuration
 
@@ -148,7 +148,7 @@ The response should include an `Access-Control-Allow-Origin` header matching the
 
 ### Use cases
 
-- ONLYOFFICE Desktop with AI plugin
+- ONLYOFFICE Desktop with AI Tools
 - Local web applications on different ports/hosts
 - Electron/React applications interacting with Ollama API
 
@@ -582,4 +582,4 @@ Component interaction follows this scheme:
 - Nginx functions as a reverse proxy with CORS handling and forwards requests to the local Ollama instance on port 11434
 - Nginx provides TLS termination and access control
 - The `OLLAMA_ORIGINS` variable controls allowed request sources
-- The ONLYOFFICE AI plugin uses a secure HTTPS endpoint to connect to language models
+- ONLYOFFICE AI Tools uses a secure HTTPS endpoint to connect to language models

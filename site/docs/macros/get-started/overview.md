@@ -58,4 +58,4 @@ Automate repetitive tasks without leaving the editor.
 - [Writing macros](../guides/writing-macros.md)
 - [Debugging](../guides/debugging.md)
 
-Also available: [Plugins](../../plugins/get-started/overview.md) | [Custom AI tools](../../ai/get-started/overview.md)
+Also available: [Plugins](../../plugins/get-started/overview.md) | [AI Tools](../../ai/get-started/overview.md)

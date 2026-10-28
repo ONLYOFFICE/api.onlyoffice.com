@@ -25,7 +25,7 @@ A background plugin is considered as **bundled** if it has the following charact
 
 If a plugin is **bundled** and **background**, it starts immediately (from version 9.0.4).
 
-**Samples**: [AI](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai), [QR Code Generator](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/insertQR)
+**Samples**: [QR Code Generator](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/insertQR)
 
 ## window
 

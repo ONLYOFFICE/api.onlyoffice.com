@@ -75,7 +75,7 @@ export const docsSections = {
       link: 'ai/get-started/overview',
       sidebar: 'docsAI',
       description:
-        'Build AI-powered editor extensions that combine the plugin framework with an AI provider integration.',
+        'Connect ONLYOFFICE editors to AI providers with AI Tools, add custom providers and MCP servers, and use the AI agent.',
     },
     {
       id: 'document-builder',

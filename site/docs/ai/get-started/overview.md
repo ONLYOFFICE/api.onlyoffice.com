@@ -4,40 +4,23 @@ sidebar_position: -1
 
 # Overview
 
-ONLYOFFICE custom AI tools are editor extensions that combine the plugin framework with an AI provider integration to deliver intelligent, context-aware features directly inside the editors.
+AI Tools connects ONLYOFFICE editors to an AI provider, such as OpenAI or DeepSeek, or to a model running on your own server. It adds AI Chat, summarization, translation, grammar and spelling checks, Quick AI Actions, AI assistants, and the inline AI agent to the document, spreadsheet, presentation, and PDF editors.
 
-If you prefer to start coding right away, go directly to the [quick start guide](quick-start.md).
+:::note
+AI Tools no longer supports adding your own AI tools (functions). To change how AI Tools works, use the settings, custom providers, and MCP servers described in the guides below.
+:::
 
-## What you can build
+## What you can do
 
-Build next-generation document workflows powered by AI.
-
-**Perfect for**:
-
-- Writing assistance ([Rewrite text](../samples/document-editor/rewrite-text.md) - AI-powered text rewriting)
-- Smart styling ([Change text style](../samples/document-editor/change-text-style.md) - AI-powered text styling)
-- Automatic shape generation ([Add shape to slide](../samples/presentation-editor/add-shape-to-slide.md) - AI-powered presentation design)
-- Data insights ([Explain formula](../samples/spreadsheet-editor/explain-formula.md) - AI-powered formula explanations)
-
-**Development profile**:
-
-- **Skill**: Advanced | **Tech**: Plugin API + AI provider integration
-- **Requirements**: API keys for OpenAI, DeepSeek, or any OpenAI-compatible provider
-
-[Browse all AI tool examples](/samples/?doctype=ai&text=ai+tools)
+- **[Set up AI Tools](../guides/ai-plugin.md)**: connect an AI model, assign models to tasks, and add MCP servers and web search.
+- **[Configure AI providers for all users](../guides/server-ai-providers.md)**: connect models once in the Admin Panel so that users do not have to set up anything.
+- **[Add a custom provider](../guides/custom-providers.md)**: connect a provider that is not in the list.
+- **[Use the AI agent](../guides/ai-agent.md)**: run editing tasks with natural language commands right in the document.
+- **[Convert VBA macros](../guides/converting-vba-macros.md)**: turn VBA code into JavaScript macros with AI Tools.
+- **[Run a local model with Ollama](../guides/configuring-ollama-with-cors.md)**: keep requests on your own machine or server.
 
 ## Resources
 
-- **[AI Tools setup](../guides/ai-plugin.md)** - Configure AI Tools
-- **[Custom providers](../guides/custom-providers.md)** - Add your own AI provider
-- **[Custom AI tools guide](../guides/custom-ai-tools.md)** - Build custom tools
-- **[AI tool examples](/samples/?doctype=ai&text=ai+tools)** - Working examples
-- **[FAQ](../more-information/faq.md)** - Frequently asked questions
-
-## Next steps
-
-- [AI quick start](quick-start.md)
-- [Configure AI Tools](../guides/ai-plugin.md)
-- [Custom AI tools guide](../guides/custom-ai-tools.md)
+- **[FAQ](../more-information/faq.md)**: frequently asked questions
 
 Also available: [Plugins](../../plugins/get-started/overview.md) | [Macros](../../macros/get-started/overview.md)

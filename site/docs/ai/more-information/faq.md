@@ -32,7 +32,7 @@ Only the content you explicitly pass to an AI feature (such as selected text for
 
 ## Can I add a provider that is not in the default list?
 
-Yes. Any OpenAI-compatible provider can be added by supplying a base URL, model version, and API key. See [Adding custom providers](../guides/custom-providers.md) for step-by-step instructions.
+Yes. If the provider is compatible with the OpenAI API, select the built-in **OpenAI Compatible** provider and enter its base URL and API key. Otherwise, import a provider file. See [Adding custom providers](../guides/custom-providers.md) for step-by-step instructions.
 
 ## How do I connect an MCP server?
 
@@ -44,8 +44,4 @@ On the **Web search** tab in **AI Settings**, choose a search engine such as Exa
 
 ## How do I disable AI in an integration?
 
-Integrators can disable AI Tools for an editor instance with [`editorConfig.customization.ai.disabled`](/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding.md#aidisabled). Server administrators can disable it for the whole server by setting [`aiSettings.enable`](/docs/docs-api/get-started/configuration/server-config/server-config.md#aiSettings.enable) to `false`.
-
-## Where can I find ready-made AI tool examples?
-
-Sample AI tools organized by editor type are available on the [samples page](/samples/?doctype=ai&text=ai+tools).
+Integrators can disable AI Tools for an editor instance with [`editorConfig.customization.ai.disabled`](/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding.md#aidisabled). Server administrators can disable it for the whole server by setting [`aiSettings.enable`](/docs/docs-api/get-started/configuration/server-config/server-config.md#ai-tools-settings) to `false`.
