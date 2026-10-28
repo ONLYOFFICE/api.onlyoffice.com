@@ -37,24 +37,24 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的 Web 应用，运�
 
 ## 方案对比 {#comparing-approaches}
 
-不确定哪种方案适合您的使用场景？了解插件与宏及自定义 AI 工具的对比。
+不确定哪种方案适合您的使用场景？了解插件与宏的对比。
 
 ![ONLYOFFICE API Scheme](/assets/images/plugins/api-scheme.svg#gh-light-mode-only)
 ![ONLYOFFICE API Scheme](/assets/images/plugins/api-scheme-dark.svg#gh-dark-mode-only)
 
-| 功能           | **插件**                        | **宏**                   | **AI 工具**              |
-| -------------- | ------------------------------- | ------------------------ | ------------------------ |
-| **是什么？**   | 嵌入编辑器的 HTML/CSS/JS 应用  | 文档中的 JavaScript 代码 | 插件 + AI 提供商集成     |
-| **安装**       | 需要（应用市场或手动）          | 无需（嵌入文档）         | 需要（与插件相同）       |
-| **用户界面**   | ✅ 完整自定义 UI                | ❌ 无 UI                 | ✅ 完整自定义 UI         |
-| **外部 API**   | ✅ 支持（REST、GraphQL 等）     | ❌ 不支持                | ✅ 支持（需要 AI 服务）  |
-| **离线使用**   | ⚠️ 取决于功能                  | ✅ 完全离线              | ❌ 需要网络              |
-| **技能要求**   | 中级                            | 入门                     | 高级                     |
-| **分发方式**   | 应用市场、GitHub、私有          | 复制粘贴、模板           | 应用市场、私有           |
-| **最适合**     | 可复用工具、集成                | 个人自动化               | AI 驱动功能              |
-| **框架支持**   | ✅ 任意（React、Vue、Angular 或纯 HTML）  | ❌ 仅限原生 JavaScript   | ✅ 任意（与插件相同）         |
+| 功能           | **插件**                        | **宏**                   |
+| -------------- | ------------------------------- | ------------------------ |
+| **是什么？**   | 嵌入编辑器的 HTML/CSS/JS 应用  | 文档中的 JavaScript 代码 |
+| **安装**       | 需要（应用市场或手动）          | 无需（嵌入文档）         |
+| **用户界面**   | ✅ 完整自定义 UI                | ❌ 无 UI                 |
+| **外部 API**   | ✅ 支持（REST、GraphQL 等）     | ❌ 不支持                |
+| **离线使用**   | ⚠️ 取决于功能                  | ✅ 完全离线              |
+| **技能要求**   | 中级                            | 入门                     |
+| **分发方式**   | 应用市场、GitHub、私有          | 复制粘贴、模板           |
+| **最适合**     | 可复用工具、集成                | 个人自动化               |
+| **框架支持**   | ✅ 任意（React、Vue、Angular 或纯 HTML）  | ❌ 仅限原生 JavaScript   |
 
-另请参阅：[宏](../../macros/get-started/overview.md) | [自定义 AI 工具](../../ai/get-started/overview.md)
+另请参阅：[宏](../../macros/get-started/overview.md) | [AI 工具](../../ai/get-started/overview.md)
 
 ## 故障排除
 

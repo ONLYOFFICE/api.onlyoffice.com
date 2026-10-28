@@ -58,4 +58,4 @@ ONLYOFFICE 宏是直接在文档中使用 [Office JavaScript API](../../office-a
 - [编写宏](../guides/writing-macros.md)
 - [调试](../guides/debugging.md)
 
-另请参阅：[插件](../../plugins/get-started/overview.md) | [自定义 AI 工具](../../ai/get-started/overview.md)
+另请参阅：[插件](../../plugins/get-started/overview.md) | [AI 工具](../../ai/get-started/overview.md)
