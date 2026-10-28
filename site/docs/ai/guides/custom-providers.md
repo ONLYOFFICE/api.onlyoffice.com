@@ -8,19 +8,11 @@ Any custom provider can be added to AI Tools. To do this, follow the instruction
 
 ## Prerequisites
 
-- **Base URL**. The web address where API requests are sent. In some cases, the base URL may include an endpoint that specifies the model being used:
-
-    ```text
-    https://ai-provider-base-url
-    ```
-
-- **Model version**. The version of the accessed model. Sometimes, the model version is included in the base URL:
+- **Base URL**. The web address where API requests are sent. It usually includes the API version:
 
     ```text
     https://ai-provider-base-url/v1
     ```
-
-    In this example, the model version is **v1**.
 
 - **API key**. A unique key provided by the service provider, used for authentication.
 
@@ -28,62 +20,302 @@ Any custom provider can be added to AI Tools. To do this, follow the instruction
 Requests to a custom provider are cross-origin, so the provider's endpoint must allow the AI Tools origin — `onlyoffice://plugin` in the desktop app, or your Document Server address when the editors run in a browser — and must answer CORS preflight OPTIONS requests with a 2xx status. Public cloud APIs usually do this out of the box; for local servers and endpoints behind a proxy, see [CORS requirements](#cors-requirements) below.
 :::
 
-## Step 1. Create the external JavaScript file {#create-js-file}
+## Step 1. Create the provider file {#create-js-file}
 
-To add a custom provider and display it in the list of available providers within AI Tools, create and upload an external JS file. An example of such a file can be found [here](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ai/scripts/engine/providers/internal/openai.js).
+:::tip
+If the provider is compatible with the OpenAI API, you do not need a provider file. When adding a model, select the built-in **OpenAI Compatible** provider and enter the base URL and API key. Create a provider file when you want a provider with its own name, a preset base URL, or a fixed list of models, or when the provider uses a different API.
+:::
 
-Custom providers parsed from this file are instances of the [`Provider`](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ai/scripts/engine/providers/provider.js) class, which extends `AI.Provider`. This class manages all available providers within AI Tools.
+A custom provider is a JavaScript file that declares a class named `Provider`. The easiest way to start is the template: when adding a model, click the information icon next to **Import Custom Provider** and then click **Download template** in the tooltip. The template is a complete provider for an OpenAI-compatible API, and the comment at its beginning describes all methods and their arguments.
 
-#### Provider class
+AI Tools runs the file in a sandbox. You do not need `import` statements, and the file does not have to return anything. The following objects are already available in the file:
 
-```ts
-class Provider {
-    constructor(name, url, key, addon) {
-        this.name  = name  || "";
-        this.url   = url   || "";
-        this.key   = key   || "";
-        this.addon = addon || "";
+| Name                   | Description                                                                                        |
+|------------------------|----------------------------------------------------------------------------------------------------|
+| `AbstractBaseProvider` | The base class for the `Provider` class. It stores the credentials passed to the constructor in `this.creds`. |
+| `ProviderErrors`       | Factories for the errors returned by `checkProvider()`: `invalidKey()`, `emptyKey()`, `invalidUrl()`, `connectionFailed()`. |
+| `mapFetchError`        | Converts an error thrown by `fetch` into the error format that AI Tools displays.                 |
 
-        this.models = [];
-        this.modelsUI = [];
+### Provider class
+
+The `Provider` class must extend `AbstractBaseProvider` and define the following methods:
+
+| Method                                        | Required | Description |
+|-----------------------------------------------|----------|-------------|
+| `sendMessage(args)`                           | Yes      | Sends a chat request and streams the response. This is an async generator: it yields snapshots of the assistant message (`{ role, content }`) as the response arrives, and finally yields `{ isEnd: true, responseMessage }`. |
+| `sendMessageSync(args)`                       | Yes      | Sends a chat request without streaming. Returns a promise that resolves to the response text. |
+| `imageGeneration(args)`                       | No       | Generates an image. Returns a promise that resolves to a data URL or a remote URL of the image. |
+| `static getName()`                            | Yes      | Returns the provider name displayed in the **Provider** list. |
+| `static getBaseUrl()`                         | Yes      | Returns the default base URL filled in when the user adds a model. |
+| `static checkProvider({ baseUrl, apiKey })`   | Yes      | Checks the credentials. Returns `true`, or one of the `ProviderErrors` errors. |
+| `static getProviderModels({ baseUrl, apiKey })` | Yes    | Returns the list of models: `{ id, name, provider, capabilities }` objects. |
+| `static isDesktopOnly()`                      | No       | Returns `true` if the provider works only in Desktop Editors, for example, when it connects to a server on `localhost`. The web editors skip such a provider without showing an error. |
+
+The methods receive the following arguments:
+
+| Argument            | Properties                                                     |
+|---------------------|----------------------------------------------------------------|
+| `sendMessage`       | `{ messages, model, systemPrompt, tools, withReasoning, signal }` (`tools`, `withReasoning`, and `signal` are optional) |
+| `sendMessageSync`   | `{ messages, model, systemPrompt, signal }` (`signal` is optional) |
+| `imageGeneration`   | `{ model, prompt, width, height, signal }` (`width`, `height`, and `signal` are optional) |
+
+Follow these rules in the instance methods:
+
+- Send requests through the transport that AI Tools passes in `this.creds.fetch`, falling back to the global `fetch` (see `fetchFor()` in the example below). This lets AI Tools route the request through a proxy when needed.
+- Pass `args.signal` to every request, and check `signal.aborted` when reading a stream. Otherwise, the **Stop** button in **AI Chat** cannot cancel the request.
+
+### Model capabilities
+
+The `capabilities` property of each model returned by `getProviderModels()` defines what AI Tools can use the model for. Combine the values with `|`, for example, `0x01 | 0x80 | 0x100` for a chat model that supports images and tools.
+
+| Value   | Capability                        |
+|---------|-----------------------------------|
+| `0x01`  | Chat                              |
+| `0x02`  | Image generation                  |
+| `0x04`  | Embeddings                        |
+| `0x08`  | Audio (speech and transcription)  |
+| `0x80`  | Vision (image input)              |
+| `0x100` | Tools (function calling)          |
+
+### Example {#example}
+
+This provider connects to Alibaba Cloud with a fixed name, base URL, and list of models. It is based on the template: `sendMessage()`, `sendMessageSync()`, and the helper functions are the same, while `checkProvider()` and `getProviderModels()` do not call the endpoint. As a result, an invalid API key is reported on the first request instead of when the model is added.
+
+```js
+const PROVIDER_NAME = "Alibaba Cloud";
+const PROVIDER_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1";
+
+const CAP_CHAT = 0x01;
+const CAP_VISION = 0x80;
+const CAP_TOOLS = 0x100;
+
+const MODELS = [
+  { id: "qwen-max", capabilities: CAP_CHAT | CAP_TOOLS },
+  { id: "qwen-plus", capabilities: CAP_CHAT | CAP_TOOLS },
+  { id: "qwen-turbo", capabilities: CAP_CHAT | CAP_TOOLS },
+  { id: "qwen-vl-max", capabilities: CAP_CHAT | CAP_VISION },
+];
+
+// Host transport when set, e.g. a proxy that inserts the real API key or bypasses CORS.
+const fetchFor = (creds) => creds?.fetch ?? fetch;
+
+class Provider extends AbstractBaseProvider {
+  async *sendMessage({ messages, model, systemPrompt, tools, signal }) {
+    const body = {
+      model,
+      stream: true,
+      messages: [
+        { role: "system", content: systemPrompt },
+        ...messages.map(toOpenAIMessage),
+      ],
+    };
+    if (tools && tools.length) {
+      body.tools = tools.map(toOpenAITool);
     }
+
+    let res;
+    try {
+      res = await fetchFor(this.creds)(`${this.creds.baseUrl}/chat/completions`, {
+        method: "POST",
+        headers: this.headers(),
+        body: JSON.stringify(body),
+        signal,
+      });
+    } catch (err) {
+      throw mapFetchError(err, !!this.creds.apiKey);
+    }
+    if (!res.ok) {
+      throw mapFetchError(
+        new Error(await res.text().catch(() => res.statusText)),
+        !!this.creds.apiKey
+      );
+    }
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
+    const acc = {
+      role: "assistant",
+      content: [{ type: "text", text: "" }],
+    };
+    const toolCallsByIndex = new Map();
+
+    while (true) {
+      if (signal?.aborted) break;
+      const { value, done } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+
+      let nl;
+      while ((nl = buffer.indexOf("\n")) >= 0) {
+        const line = buffer.slice(0, nl).trim();
+        buffer = buffer.slice(nl + 1);
+        if (!line.startsWith("data:")) continue;
+        const payload = line.slice(5).trim();
+        if (payload === "[DONE]") continue;
+
+        let chunk;
+        try {
+          chunk = JSON.parse(payload);
+        } catch {
+          continue;
+        }
+        const delta = chunk.choices?.[0]?.delta;
+        if (!delta) continue;
+
+        if (typeof delta.content === "string" && delta.content.length) {
+          acc.content[0].text += delta.content;
+          yield cloneSnapshot(acc, toolCallsByIndex);
+        }
+        if (Array.isArray(delta.tool_calls)) {
+          for (const tc of delta.tool_calls) {
+            const idx = tc.index ?? 0;
+            const slot = toolCallsByIndex.get(idx) ?? {
+              id: "",
+              name: "",
+              args: "",
+            };
+            if (tc.id) slot.id = tc.id;
+            if (tc.function?.name) slot.name += tc.function.name;
+            if (tc.function?.arguments) slot.args += tc.function.arguments;
+            toolCallsByIndex.set(idx, slot);
+          }
+          yield cloneSnapshot(acc, toolCallsByIndex);
+        }
+      }
+    }
+
+    yield {
+      isEnd: true,
+      responseMessage: cloneSnapshot(acc, toolCallsByIndex),
+    };
+  }
+
+  async sendMessageSync({ messages, model, systemPrompt, signal }) {
+    let res;
+    try {
+      res = await fetchFor(this.creds)(`${this.creds.baseUrl}/chat/completions`, {
+        method: "POST",
+        headers: this.headers(),
+        body: JSON.stringify({
+          model,
+          messages: [
+            { role: "system", content: systemPrompt },
+            ...messages.map(toOpenAIMessage),
+          ],
+        }),
+        signal,
+      });
+    } catch (err) {
+      throw mapFetchError(err, !!this.creds.apiKey);
+    }
+    if (!res.ok) {
+      throw mapFetchError(
+        new Error(await res.text().catch(() => res.statusText)),
+        !!this.creds.apiKey
+      );
+    }
+    const json = await res.json();
+    return json.choices?.[0]?.message?.content ?? "";
+  }
+
+  headers() {
+    const h = { "Content-Type": "application/json" };
+    if (this.creds.apiKey) h.Authorization = `Bearer ${this.creds.apiKey}`;
+    return h;
+  }
+
+  static getName() {
+    return PROVIDER_NAME;
+  }
+  static getBaseUrl() {
+    return PROVIDER_BASE_URL;
+  }
+
+  static async checkProvider({ baseUrl, apiKey }) {
+    if (!baseUrl) return ProviderErrors.invalidUrl();
+    if (!apiKey) return ProviderErrors.emptyKey();
+    return true;
+  }
+
+  static async getProviderModels() {
+    return MODELS.map((m) => ({
+      id: m.id,
+      name: m.id,
+      provider: PROVIDER_NAME,
+      capabilities: m.capabilities,
+    }));
+  }
+}
+
+// Convert a chat message to an OpenAI chat message.
+function toOpenAIMessage(msg) {
+  const role = msg.role === "assistant" ? "assistant" : "user";
+  const content = [];
+  let text = "";
+  if (typeof msg.content === "string") {
+    text = msg.content;
+  } else if (Array.isArray(msg.content)) {
+    for (const part of msg.content) {
+      if (part?.type === "text" && typeof part.text === "string") {
+        text += part.text;
+      } else if (part?.type === "image" && (part.image || part.url)) {
+        content.push({
+          type: "image_url",
+          image_url: { url: part.image || part.url },
+        });
+      }
+    }
+  }
+  if (text) content.unshift({ type: "text", text });
+  return {
+    role,
+    content:
+      content.length === 1 && content[0].type === "text" ? text : content,
+  };
+}
+
+// Convert a tool descriptor to the OpenAI tool schema.
+function toOpenAITool(item) {
+  return {
+    type: "function",
+    function: {
+      name: item.name,
+      description: item.description ?? "",
+      parameters: item.inputSchema ?? { type: "object", properties: {} },
+    },
+  };
+}
+
+// Snapshot the accumulated assistant message (text + tool calls).
+function cloneSnapshot(acc, toolCallsByIndex) {
+  const content = acc.content.map((p) => ({ ...p }));
+  if (toolCallsByIndex.size > 0) {
+    const calls = [...toolCallsByIndex.values()].map((c) => ({
+      id: c.id,
+      name: c.name,
+      args: c.args,
+    }));
+    content.push({ type: "tool-call", calls });
+  }
+  return { role: acc.role, content };
 }
 ```
 
-#### Parameters
-
-| Name  | Type   | Example                                            | Description                                                                                                 |
-|-------|--------|----------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| name  | string | `"Alibaba Cloud"`                                  | The name of the provider that will be displayed in AI Tools.                                                |
-| url   | string | `"https://dashscope.aliyuncs.com/compatible-mode"` | The web address to which the API request will be sent.                                                      |
-| key   | string | `"yourAPIKey"`                                     | The API key issued by the provider. This is an optional field. Some providers may require a key for access. |
-| addon | string | `"v1"`                                             | A URL addon (e.g., version tag).                                                                            |
-
-#### Example
-
-```ts
-"use strict";
-
-class Provider extends AI.Provider {
-
-    constructor() {
-        super("Alibaba Cloud", "https://dashscope.aliyuncs.com/compatible-mode", "yourAPIKey", "v1");
-    }
-}
-```
+Save the file with the `.js` extension. Administrators can import the same file in the Admin Panel to make the provider available to all users. See [Configuring AI providers for all users](server-ai-providers.md).
 
 ## Step 2. Configure the provider in AI Tools
 
-To add the custom provider: 
+To add the custom provider:
 
 1. Open the **AI Tools** tab and click **Settings**. The **AI Settings** dialog opens.
- 
+
     ![Add model](/assets/images/plugins/add-model.png#gh-light-mode-only)![Add model](/assets/images/plugins/add-model.dark.png#gh-dark-mode-only)
 
 2. Click **Add Model** and in the **Connect new AI Model** form, click **Import Custom Provider**, then select the provider configuration JavaScript file in the system file picker.
 
-   :::note
-    The information icon next to **Import Custom Provider** opens a tooltip with a link to download an example configuration file. That file is a starter template for an OpenAI-compatible provider, separate from the [openai.js](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ai/scripts/engine/providers/internal/openai.js) example in Step 1. Edit the template for your provider, then import it in this step. The screenshots below use Ollama.
+    :::note
+    The information icon next to **Import Custom Provider** opens a tooltip with the **Download template** link. The template is described in [Step 1](#create-js-file). The screenshots below use Ollama.
     :::
 
     <div className="side-by-side-images">
@@ -105,28 +337,25 @@ To add the custom provider:
 
 4. On the **Model Assignment** tab, assign the custom provider's model as the **Default model** or to a specific task.
 
-    To edit or delete a connected model, open its **...** menu and choose **Edit** or **Delete**.
+    ![Model Assignment](/assets/images/plugins/model-assignment.png#gh-light-mode-only)![Model Assignment](/assets/images/plugins/model-assignment.dark.png#gh-dark-mode-only)
 
-   <div className="side-by-side-images">
-        <div>
-            <img alt="Model Assignment" src="/assets/images/plugins/model-assignment.png#gh-light-mode-only" />
-            <img alt="Model Assignment" src="/assets/images/plugins/model-assignment.dark.png#gh-dark-mode-only" />
-        </div>
-        <div>
-            <img alt="Custom Provider Edit" src="/assets/images/plugins/custom-provider-edit.png#gh-light-mode-only" />
-            <img alt="Custom Provider Edit" src="/assets/images/plugins/custom-provider-edit.dark.png#gh-dark-mode-only" />
-        </div>
-    </div>
+AI Tools is ready to use the custom provider.
 
-5. On the **AI Models** tab, click **Custom Providers**.
+### Managing custom providers {#managing-custom-providers}
+
+To edit or delete a connected model, open its **...** menu on the **AI Models** tab and choose **Edit** or **Delete**.
+
+![Custom Provider Edit](/assets/images/plugins/custom-provider-edit.png#gh-light-mode-only)![Custom Provider Edit](/assets/images/plugins/custom-provider-edit.dark.png#gh-dark-mode-only)
+
+To add or remove provider files:
+
+1. On the **AI Models** tab, click **Custom Providers**.
 
     ![Custom providers](/assets/images/plugins/add-custom-providers.png#gh-light-mode-only)![Custom providers](/assets/images/plugins/add-custom-providers.dark.png#gh-dark-mode-only)
 
-6. In the **Custom providers** dialog, click **Add** to upload another provider file, or select a provider and click **Delete** to remove it. Then click **Close**.
+2. In the **Custom providers** dialog, click **Add** to upload another provider file, or select a provider and click **Delete** to remove it. Then click **Close**.
 
     ![Custom providers dialog](/assets/images/plugins/add-custom-providers-dialog.png#gh-light-mode-only)![Custom providers dialog](/assets/images/plugins/add-custom-providers-dialog.dark.png#gh-dark-mode-only)
-
-AI Tools is ready to use the custom provider.
 
 ## CORS requirements {#cors-requirements}
 
@@ -148,7 +377,7 @@ In the desktop app AI Tools runs on the `onlyoffice://` scheme, which ONLYOFFICE
 
 AI Tools always sends `Content-Type: application/json`, and adds `Authorization: Bearer <key>` when the provider has an API key. `application/json` is not a CORS-safelisted value, so the browser sends a preflight OPTIONS request before the actual one. The endpoint must answer it with **200** or **204**, and **never with a redirect**.
 
-A provider class can override `isUseProxy()` to route its requests through a proxy service instead of calling the endpoint directly, which sidesteps CORS. This only applies to requests that are not GET, and the model list is a GET request, so the endpoint always has to return the headers above.
+A provider file does not decide whether its requests go through a proxy. Its instance methods send requests through the transport that AI Tools passes in `this.creds.fetch` (see `fetchFor()` in the [example](#example)), so AI Tools can route them through a proxy when needed. The static `checkProvider()` and `getProviderModels()` methods receive only the base URL and the API key and call the endpoint directly, so when they load the model list from the endpoint, the endpoint always has to return the headers above.
 
 ### Public cloud APIs
 
@@ -204,7 +433,7 @@ Verify the endpoint before adding it as a provider.
 Check the preflight:
 
 ```bash
-curl -i -X OPTIONS 'https://<base-url>/v1/models' \
+curl -i -X OPTIONS 'https://<base-url>/models' \
   -H 'Origin: onlyoffice://plugin' \
   -H 'Access-Control-Request-Method: GET' \
   -H 'Access-Control-Request-Headers: authorization,content-type'
@@ -213,7 +442,7 @@ curl -i -X OPTIONS 'https://<base-url>/v1/models' \
 Then check the request itself:
 
 ```bash
-curl -i 'https://<base-url>/v1/models' \
+curl -i 'https://<base-url>/models' \
   -H 'Origin: onlyoffice://plugin' \
   -H 'Authorization: Bearer <your-api-key>'
 ```
