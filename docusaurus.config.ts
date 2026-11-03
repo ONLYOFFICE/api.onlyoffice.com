@@ -207,6 +207,21 @@ const config: Config = {
         ],
       },
     ],
+    // Production keeps crawlers off tracking-parameter duplicates and names the sitemap;
+    // development is closed to crawlers on top of noIndex. Testing gets no robots.txt until
+    // Google drops the api.teamlab.info pages it indexed before noIndex: a `Disallow: /`
+    // would stop it re-crawling them and seeing the noindex tag. Then give it `['/']` too.
+    siteMode === 'testing'
+      ? false
+      : [
+          './plugins/robots-txt',
+          isProduction
+            ? {
+                disallow: ['/*?_ga=', '/*?from=', '/*?sa=', '/*?spm=', '/*?utm_source='],
+                sitemap: true,
+              }
+            : {disallow: ['/']},
+        ],
   ],
 
   themeConfig: {
