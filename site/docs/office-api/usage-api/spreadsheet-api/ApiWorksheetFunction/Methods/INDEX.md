@@ -1,3 +1,7 @@
+---
+slug: INDEX
+---
+
 # INDEX
 
 Returns a value or reference of the cell at the intersection of a particular row and column, in a given range.
