@@ -11,7 +11,7 @@ sidebar_position: -3
 | 参数        | 类型    | 是否必填 | 描述                                                                                                                             |
 | ---------------- | ------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | format           | string  | 必填 | 输出文件格式。                                                                                                                |
-| PDFVer           | string  | 非必填的 | 用于输出文件（PDF/A-1b、PDF/A-2b 等）的相应 PDF 类型的 pdf 版本。                               |
+| PDFVer           | string  | 非必填的 | 输出文件的 PDF/A 版本：**PDF/A-1a** 或 **PDF/A-2a**。其他 PDF/A 版本将替换为最接近的支持版本。在版本 10.0.3 之前，仅支持 PDF/A-2a。 |
 | FullSheetPreview | boolean | 非必填的 | 指定完整工作表预览是否可用。                                                                          |
 | file             | object  | 必填 | 要在负载中转换的文件。                                                                                                       |
 | lang             | string  | 非必填的 | 默认格式语言。它用于日期类型的单元格。如果指定了语言，它决定了显示/输出格式。 |
@@ -42,7 +42,7 @@ curl -F "data=sample.txt" https://documentserver/cool/convert-to/docx > result.d
 ### 带有*格式*参数的转换请求示例
 
 ```sh
-curl -F "data=sample.odt" -F "format=pdf" "PDFVer=PDF/A-2b" https://documentserver/cool/convert-to > result.pdf
+curl -F "data=sample.odt" -F "format=pdf" -F "PDFVer=PDF/A-2b" https://documentserver/cool/convert-to > result.pdf
 ```
 
 其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。

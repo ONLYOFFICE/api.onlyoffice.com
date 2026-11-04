@@ -49,6 +49,7 @@ Starting from version 10.0, you can also send the file itself in the request ins
 | password | string | optional | The password for the document file if it is protected with a password. After conversion the file has no password. |
 | pdf | object | optional | The settings for converting document files to pdf. |
 | pdf.form | boolean | optional | Whether the document will be converted to the *pdf* form (**true**) or to a regular *pdf* file (**false**). If this parameter is omitted, the document contents will not be changed. |
+| pdf.version | string | optional | The PDF/A version of the output *pdf* file: **PDF/A-1a** or **PDF/A-2a**. Other PDF/A versions are replaced with the closest supported one. Available from version 10.0.3. |
 | region | string | optional | The default display format for currency and date and time when converting from *Spreadsheet format* to *pdf*. Is set using the four letter (**en-US**, **fr-FR**, etc.) language codes. The default value is **en-US**. |
 | spreadsheetLayout | object | optional | The settings for converting the spreadsheet to pdf. |
 | spreadsheetLayout.fitToHeight | integer | optional | Sets the height of the converted area, measured in the number of pages. The default value is **0**. |

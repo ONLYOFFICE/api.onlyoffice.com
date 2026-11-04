@@ -49,6 +49,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | password | string | optional | 文件有密码保护时的密码。转换后的文件没有密码。 |
 | pdf | object | optional | 将文档文件转换为 pdf 的设置。 |
 | pdf.form | boolean | optional | 文档是否转换为 *pdf* 格式（**true**）或常规 *pdf* 文件（**false**）。如果省略此参数，则不会更改文档内容。 |
+| pdf.version | string | optional | 输出 *pdf* 文件的 PDF/A 版本：**PDF/A-1a** 或 **PDF/A-2a**。其他 PDF/A 版本将替换为最接近的支持版本。从版本 10.0.3 开始可用。 |
 | region | string | optional | 从*电子表格*格式转换为 *pdf* 时货币、日期和时间的默认显示格式。使用四个字母（**en-US**、**fr-FR** 等）语言代码设置。默认值为 **en-US**。 |
 | spreadsheetLayout | object | optional | 将电子表格转换为 pdf 的设置。 |
 | spreadsheetLayout.fitToHeight | integer | optional | 设置转换区域的高度，以页数为单位。默认值为 **0**。 |

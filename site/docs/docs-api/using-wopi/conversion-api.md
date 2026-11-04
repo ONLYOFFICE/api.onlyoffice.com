@@ -11,7 +11,7 @@ In order to convert different file formats in the online office, the POST reques
 | Parameter        | Type    | Presence | Description                                                                                                                             |
 | ---------------- | ------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | format           | string  | required | The output file format.                                                                                                                 |
-| PDFVer           | string  | optional | The pdf version for the respective type of PDF to be used for the output file (PDF/A-1b, PDF/A-2b, etc.).                               |
+| PDFVer           | string  | optional | The PDF/A version of the output file: **PDF/A-1a** or **PDF/A-2a**. Other PDF/A versions are replaced with the closest supported one. Before version 10.0.3, only PDF/A-2a is supported. |
 | FullSheetPreview | boolean | optional | Whether the full sheet previews will be available or not.                                                                          |
 | file             | object  | required | A file to convert in the payload.                                                                                                       |
 | lang             | string  | optional | The default format language. It is used for the date type cells. If the language is specified, it determines the display/output format. |
@@ -42,7 +42,7 @@ where the **documentserver** is the name of the server with the ONLYOFFICE Docs 
 ### Sample of conversion request with the *format* parameter
 
 ```sh
-curl -F "data=sample.odt" -F "format=pdf" "PDFVer=PDF/A-2b" https://documentserver/cool/convert-to > result.pdf
+curl -F "data=sample.odt" -F "format=pdf" -F "PDFVer=PDF/A-2b" https://documentserver/cool/convert-to > result.pdf
 ```
 
 where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
