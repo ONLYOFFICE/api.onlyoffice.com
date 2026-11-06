@@ -27,7 +27,7 @@ import TabItem from '@theme/TabItem';
 
 ## 先决条件
 
-- **ONLYOFFICE 文档**：9.3 或更高版本，[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/docs-registration?from=api)。Create App 不会安装 ONLYOFFICE 文档。ONLYOFFICE 文档必须能够访问运行应用程序的计算机。
+- **ONLYOFFICE 文档**：8.2 或更高版本，[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/docs-registration?from=api)。Create App 不会安装 ONLYOFFICE 文档。ONLYOFFICE 文档必须能够访问运行应用程序的计算机。
 - **Node.js**：20.12 或更高版本，请参阅[官方网站](https://nodejs.org/en/download/)。
 
 如需在本地试用此应用程序，您可以在 [Docker](https://docs.docker.com/get-started/get-docker/) 中启动 ONLYOFFICE 文档：
@@ -69,15 +69,15 @@ docker run -i -t -d -p 80:80 --restart=always \
   </TabItem>
 </Tabs>
 
-如果 npm 询问是否安装 `@onlyoffice/create-app` 包，请输入 `y` 确认。如果省略文件夹名称，该工具会提示您输入。该文件夹必须为空或尚不存在。
+如果 npm 询问是否安装 `@onlyoffice/create-app` 包，请输入 `y` 确认。如果省略文件夹名称，该工具会提示您输入。该文件夹必须尚不存在，或者只包含 `.git`、`README.md`、`LICENSE` 等文件。
+
+该工具会将应用程序复制到文件夹中，根据 `.env.example` 创建 `.env` 文件，并安装依赖项。它不会创建 Git 仓库。
 
 然后进入项目文件夹：
 
 ```sh
 cd my-docs-app
 ```
-
-该工具会将应用程序复制到文件夹中，根据 `.env.example` 创建 `.env` 文件，并安装依赖项。它不会创建 Git 仓库。
 
 该工具支持以下选项：
 
@@ -121,6 +121,8 @@ npm start
 
 此命令会构建应用程序并在 3000 端口上启动它。如需改为启动支持热重载的开发服务器，请运行 `npm run dev`。
 
+本页中的命令使用 npm。如果您使用其他包管理器创建了项目，请使用该包管理器运行相同的脚本，例如 `pnpm start`、`yarn start` 或 `bun run start`。
+
 首次启动时，应用程序会从 [document-templates](https://github.com/ONLYOFFICE/document-templates) 仓库将用于新建文件的空白文档下载到 `document-templates/new` 文件夹中，因此需要联网一次。如需重新下载，请运行 `npm run fetch-templates`。如需更改新文件的外观，请替换已下载的文件。
 
 在浏览器中打开 `APP_URL` 地址，例如 `http://localhost:3000` 或 `http://192.168.1.10:3000`。使用应用程序期间，请保持终端运行。您将看到文件管理器，可以在其中上传文件，或者新建文档、电子表格、演示文稿或 PDF 表单，然后单击文件即可在编辑器中打开。
@@ -135,6 +137,10 @@ npm start
 4. 当最后一个用户关闭编辑器时，ONLYOFFICE 文档会向[回调处理程序](/docs/docs-api/usage-api/callback-handler.md) `/api/callback` 发送请求。应用程序验证令牌，从 ONLYOFFICE 文档下载编辑后的文件，并替换已存储的文件。
 
 应用程序会向 ONLYOFFICE 文档查询其支持的格式（`GET /meta/formats`）。具有 `edit` 或 `lossy-edit` 操作的格式在编辑器中打开，仅具有 `view` 操作的格式在查看器中打开。应用程序不接受上传不受支持格式的文件。
+
+:::note
+`GET /meta/formats` 请求从 ONLYOFFICE 文档 9.4 版本开始提供。对于更早的版本，应用程序使用 `src/lib/fallback-formats.json` 文件中的内置格式列表，该列表可能与您的服务器所支持的格式不同。
+:::
 
 应用程序根据文件名、文件大小和修改时间生成 [`document.key`](/docs/docs-api/usage-api/config/document/document.md#key)。只要文件未更改，该密钥就保持不变，因此所有打开该文件的用户都会共同编辑同一个文档；每次保存后，该密钥都会更改。这样，应用程序无需数据库。
 
@@ -165,4 +171,4 @@ npm start
 - **页面可以打开，但按钮不起作用**：您通过不被允许的地址打开了开发服务器。请将该地址的主机名添加到 `.env` 中的 `ALLOWED_DEV_ORIGINS`，或使用 `npm start` 运行应用程序。
 - **无法新建文件**：空白文档未下载。请检查网络连接并运行 `npm run fetch-templates`。
 
-如需报告问题或提出改进建议，请在 [create-app](https://github.com/ONLYOFFICE/create-app/issues) 仓库中提交 issue，或通过 support@onlyoffice.com 联系我们。
+如需报告问题或提出改进建议，请在 [create-app](https://github.com/ONLYOFFICE/create-app/issues) 仓库中提交问题，或通过 support@onlyoffice.com 联系我们。

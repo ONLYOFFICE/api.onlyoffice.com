@@ -27,7 +27,7 @@ This example is for testing only. It has no authentication, opens every file as 
 
 ## Prerequisites
 
-- **ONLYOFFICE Docs**: version 9.3 or later, [self-hosted](https://www.onlyoffice.com/download?from=api#docs-developer) or [cloud](https://www.onlyoffice.com/docs-registration?from=api). Create App does not install ONLYOFFICE Docs. ONLYOFFICE Docs must be able to reach the computer where the app runs.
+- **ONLYOFFICE Docs**: version 8.2 or later, [self-hosted](https://www.onlyoffice.com/download?from=api#docs-developer) or [cloud](https://www.onlyoffice.com/docs-registration?from=api). Create App does not install ONLYOFFICE Docs. ONLYOFFICE Docs must be able to reach the computer where the app runs.
 - **Node.js**: version 20.12 or later, see the [official website](https://nodejs.org/en/download/).
 
 To try the app locally, you can start ONLYOFFICE Docs in [Docker](https://docs.docker.com/get-started/get-docker/):
@@ -69,15 +69,15 @@ Run Create App with the name of the project folder. Choose the command for your 
   </TabItem>
 </Tabs>
 
-If npm asks whether to install the `@onlyoffice/create-app` package, confirm with `y`. If you omit the folder name, the tool asks for it. The folder must be empty or not exist yet.
+If npm asks whether to install the `@onlyoffice/create-app` package, confirm with `y`. If you omit the folder name, the tool asks for it. The folder must not exist yet or contain only files such as `.git`, `README.md`, or `LICENSE`.
+
+The tool copies the app into the folder, creates the `.env` file from `.env.example`, and installs the dependencies. It does not create a Git repository.
 
 Then go to the project folder:
 
 ```sh
 cd my-docs-app
 ```
-
-The tool copies the app into the folder, creates the `.env` file from `.env.example`, and installs the dependencies. It does not create a Git repository.
 
 The tool accepts the following options:
 
@@ -121,6 +121,8 @@ npm start
 
 This command builds the app and starts it on port 3000. To start the development server with hot reload instead, run `npm run dev`.
 
+The commands on this page use npm. If you created the project with another package manager, run the same scripts with it, for example, `pnpm start`, `yarn start`, or `bun run start`.
+
 On the first start, the app downloads the blank documents for new files from the [document-templates](https://github.com/ONLYOFFICE/document-templates) repository into the `document-templates/new` folder, so it needs an Internet connection once. To download them again, run `npm run fetch-templates`. To change what new files look like, replace the downloaded files.
 
 Open the `APP_URL` address in your browser, for example, `http://localhost:3000` or `http://192.168.1.10:3000`. Keep the terminal running while you use the app. You will see the file manager, where you can upload a file or create a new document, spreadsheet, presentation, or PDF form, and then click it to open it in the editor.
@@ -136,7 +138,11 @@ The app follows the standard integration flow described in [How it works](/docs/
 
 The app asks ONLYOFFICE Docs which formats it supports (`GET /meta/formats`). Formats with the `edit` or `lossy-edit` action open in the editor, and formats with only the `view` action open in the viewer. The app does not accept uploads of unsupported formats.
 
-The app generates the [`document.key`](/docs/docs-api/usage-api/config/document/document.md#key) from the file name, size, and modification time. The key stays the same while the file is unchanged, so all users who open it co-edit one document, and changes after each save. This way, the app needs no database.
+:::note
+The `GET /meta/formats` request is available starting from ONLYOFFICE Docs 9.4. With earlier versions, the app uses its built-in list of formats from the `src/lib/fallback-formats.json` file, which may differ from the formats your server supports.
+:::
+
+The app generates the [`document.key`](/docs/docs-api/usage-api/config/document/document.md#key) from the file name, size, and modification time. The key stays the same while the file is unchanged, so all users who open it co-edit one document. The key changes after each save. This way, the app needs no database.
 
 The integration code is in the following files:
 
@@ -162,7 +168,7 @@ The app stores files on the local disk and edits them in place without version h
 - **The document security token is not correctly formed**: `DOCUMENT_SERVER_JWT_SECRET` is empty or does not match the secret of ONLYOFFICE Docs.
 - **Download failed**: ONLYOFFICE Docs cannot reach the app. Set `APP_URL` in `.env` to an address that ONLYOFFICE Docs can resolve. If it is a private IP address, start ONLYOFFICE Docs with `ALLOW_PRIVATE_IP_ADDRESS=true`.
 - **The editor does not load**: the browser cannot reach ONLYOFFICE Docs. Check that `DOCUMENT_SERVER_URL` opens in the browser.
-- **The page opens, but its buttons do not work**: you opened the development server by an address that is not allowed. Add its host name to `ALLOWED_DEV_ORIGINS` in `.env`, or run the app with `npm start`.
+- **The page opens, but its buttons do not work**: you opened the development server at an address that is not allowed. Add its host name to `ALLOWED_DEV_ORIGINS` in `.env`, or run the app with `npm start`.
 - **New files cannot be created**: the blank documents were not downloaded. Check the Internet connection and run `npm run fetch-templates`.
 
 To report a problem or suggest an improvement, open an issue in the [create-app](https://github.com/ONLYOFFICE/create-app/issues) repository or contact us at support@onlyoffice.com.
