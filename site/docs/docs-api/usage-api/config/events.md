@@ -1068,7 +1068,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestStartFilling
 
-The function called when the user is trying to start filling out ready forms by clicking the *Share & collect* button in PDF editing mode (the button caption can be changed with the [startFillingForm](./editor/customization/customization-standard-branding.md#startfillingform) parameter). When the user clicks the *Share & collect* button, the [startFilling](../methods.md#startfilling) method is called to lock PDF editing (only PDF viewing becomes available). This event is also called after the [requestRoles](../methods.md#requestroles) method is called.
+The function called when the user is trying to start filling out ready forms by clicking the *Share & collect* button in PDF editing mode (the button caption can be changed with the [startFillingForm](./editor/customization/customization-standard-branding.md#startfillingform) parameter). The array of form roles is passed in the `data` parameter. To lock PDF editing (only PDF viewing becomes available), call the [startFilling](../methods.md#startfilling) method in the event handler. This event is also called after the [requestRoles](../methods.md#requestroles) method is called.
 
 :::note
 The *Share & collect* button is displayed if this event or the [onStartFilling](#onstartfilling) event is declared. If only `onStartFilling` is declared, clicking the button opens the built-in **Send for signing** panel, where the user assigns users to the form roles and sends the form for filling. The list of users for this panel is requested with the [onRequestUsers](#onrequestusers) event with `c` set to `"filler"`. After the form is sent, the `onStartFilling` event is called.

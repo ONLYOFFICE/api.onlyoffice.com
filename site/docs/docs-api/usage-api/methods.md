@@ -715,7 +715,7 @@ Please note that displaying a tooltip with a message is not supported in the emb
 
 ## startFilling
 
-Start filling out the ready forms and lock the pdf editing (only pdf viewing becomes available). This method can be called only after the [onRequestStartFilling](./config/events.md#onrequeststartfilling) event. When the form preparation is complete, the [onStartFilling](./config/events.md#onstartfilling) event is called.
+Start filling out the ready forms and lock the PDF editing (only PDF viewing becomes available). This method can be called only after the [onRequestStartFilling](./config/events.md#onrequeststartfilling) event. When the form preparation is complete, the [onStartFilling](./config/events.md#onstartfilling) event is called.
 
 :::note
 This method works only if the [onStartFilling](./config/events.md#onstartfilling) event is declared. Otherwise, the call is ignored.

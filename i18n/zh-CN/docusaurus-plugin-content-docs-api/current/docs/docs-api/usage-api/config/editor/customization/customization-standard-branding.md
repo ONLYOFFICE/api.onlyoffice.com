@@ -427,7 +427,7 @@ customization 部分定义编辑器自定义参数。
 
 **类型**：`string`
 
-单击**反馈和支持**菜单按钮时将打开的网站绝对URL。如果未指定，将打开 ONLYOFFICE 支持联系表单。
+单击**反馈和支持**菜单按钮时将打开的网站绝对 URL。如果未指定，将打开 [ONLYOFFICE 支持联系表单](https://www.onlyoffice.com/support-contact-form)。
 
 **示例**：`"https://example.com"`
 
@@ -898,7 +898,7 @@ customization 部分定义编辑器自定义参数。
 
 **类型**：`object`
 
-PDF 表单编辑模式下*共享和收集数据*按钮的设置。
+PDF 表单编辑模式下*分享&收集*按钮的设置。
 
 **示例**：
 
@@ -912,7 +912,7 @@ PDF 表单编辑模式下*共享和收集数据*按钮的设置。
 
 **类型**：`string` | **默认值**：`"Share & collect"`
 
-PDF 表单编辑模式下*共享和收集数据*按钮的标题。
+PDF 表单编辑模式下*分享&收集*按钮的标题。
 
 **示例**：`"Start filling"`
 

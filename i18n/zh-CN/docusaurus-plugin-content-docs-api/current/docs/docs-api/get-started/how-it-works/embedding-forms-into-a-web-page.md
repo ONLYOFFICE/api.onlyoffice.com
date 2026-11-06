@@ -64,7 +64,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
                 "title": "Form Template.pdf",
                 "url": "https://example.com/url-to-example-form.pdf"
             },
-            "documentType": "pdf"
+            "documentType": "pdf",
+            "events": {
+                "onRequestStartFilling": function () {
+                    docEditor.startFilling();
+                },
+                "onStartFilling": function () {
+                    console.log("The form is ready for filling");
+                }
+            }
         };
 
         docEditor = new DocsAPI.DocEditor("placeholder", config);
@@ -72,9 +80,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 </script>
 ```
 
-编辑完成后，点击**共享和收集数据**按钮将表单发送以供填写。随后表单的编辑将被锁定，表单即可供填写。
+只有声明了 [`onRequestStartFilling`](../../usage-api/config/events.md#onrequeststartfilling) 或 [`onStartFilling`](../../usage-api/config/events.md#onstartfilling) 事件，才会显示**分享&收集**按钮，因此该页面同时声明了这两个事件。编辑完成后，点击**分享&收集**。编辑器会调用 `onRequestStartFilling`，其处理程序调用 [`startFilling`](../../usage-api/methods.md#startfilling) 方法，从而锁定表单，禁止继续编辑。表单准备好填写后，编辑器会调用 `onStartFilling`。
 
-![嵌入pdf表单进行编辑](/assets/images/editor/embed-pdf-for-editing.png#gh-light-mode-only)![嵌入pdf表单进行编辑](/assets/images/editor/embed-pdf-for-editing.dark.png#gh-dark-mode-only)
+![嵌入 PDF 表单进行编辑](/assets/images/editor/embed-pdf-for-editing.png#gh-light-mode-only)![嵌入 PDF 表单进行编辑](/assets/images/editor/embed-pdf-for-editing.dark.png#gh-dark-mode-only)
 
 ## 填写表单
 
@@ -131,4 +139,4 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 填写完所有必填字段后，点击**完成并提交**按钮提交数据。
 
-![嵌入pdf表格](/assets/images/editor/embed-pdf.png#gh-light-mode-only)![嵌入pdf表格](/assets/images/editor/embed-pdf.dark.png#gh-dark-mode-only)
+![嵌入 PDF 表单](/assets/images/editor/embed-pdf.png#gh-light-mode-only)![嵌入 PDF 表单](/assets/images/editor/embed-pdf.dark.png#gh-dark-mode-only)

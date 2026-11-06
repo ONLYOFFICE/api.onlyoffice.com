@@ -271,9 +271,9 @@ docEditor.insertImage({
 
 ## requestRoles
 
-请求正在编辑的 PDF 表单的角色。编辑器会调用 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件作为响应，并在其 `data` 参数中传递表单角色数组，与用户单击*共享和收集数据*按钮时相同。需要声明此事件才能接收角色。如果文档尚未加载完成，则会在加载完成后调用该事件。
+请求正在编辑的 PDF 表单的角色。编辑器会调用 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件作为响应，并在其 `data` 参数中传递表单角色数组，与用户单击*分享&收集*按钮时相同。需要声明此事件才能接收角色。如果文档尚未加载完成，则会在加载完成后调用该事件。
 
-使用此方法可以获取表单角色，而无需等待用户单击*共享和收集数据*按钮。
+使用此方法可以获取表单角色，而无需等待用户单击*分享&收集*按钮。
 
   ``` ts
   docEditor.requestRoles();
@@ -715,7 +715,7 @@ docEditor.insertImage({
 
 ## startFilling
 
-开始填写准备好的表格并锁定 pdf 编辑（仅可查看 pdf）。仅在 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件之后才可调用此方法。表单准备完成后，将调用 [onStartFilling](./config/events.md#onstartfilling) 事件。
+开始填写准备好的表单并锁定 PDF 编辑（仅可查看 PDF）。仅在 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件之后才可调用此方法。表单准备完成后，将调用 [onStartFilling](./config/events.md#onstartfilling) 事件。
 
 :::note
 仅当声明了 [onStartFilling](./config/events.md#onstartfilling) 事件时，此方法才有效。否则，调用将被忽略。

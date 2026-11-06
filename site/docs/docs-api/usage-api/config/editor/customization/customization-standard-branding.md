@@ -427,7 +427,7 @@ The settings for the **Feedback & Support** menu button. If set to `false`, the 
 
 **type**: `string`
 
-The absolute URL to the website which will be opened when clicking the **Feedback & Support** menu button. If not specified, the ONLYOFFICE support contact form is opened.
+The absolute URL to the website which will be opened when clicking the **Feedback & Support** menu button. If not specified, the [ONLYOFFICE support contact form](https://www.onlyoffice.com/support-contact-form) is opened.
 
 **Example**: `"https://example.com"`
 

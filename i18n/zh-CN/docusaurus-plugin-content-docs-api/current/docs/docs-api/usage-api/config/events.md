@@ -329,7 +329,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestCompareFile
 
-当用户尝试通过单击*存储中的文档*按钮来选择要进行比较的文档时调用的函数。
+当用户尝试通过单击*存储器中的文档*按钮来选择要进行比较的文档时调用的函数。
 
 :::note
 此事件仅适用于 [ONLYOFFICE 文档企业版](https://www.onlyoffice.com/docs-enterprise-prices?from=api)和 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
@@ -555,10 +555,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
  
 ## onRequestInsertImage
 
-当用户尝试通过单击*从存储中获取图像*按钮插入图像时调用的函数。要插入图像，请使用指定的命令调用 [insertImage](../methods.md#insertimage) 方法。调用此方法时，必须添加令牌以验证参数。
+当用户尝试通过单击*来自存储的图像*按钮插入图像时调用的函数。要插入图像，请使用指定的命令调用 [insertImage](../methods.md#insertimage) 方法。调用此方法时，必须添加令牌以验证参数。
 
 :::note
-如果未声明此事件，则不会显示*从存储中获取图像*按钮。
+如果未声明此事件，则不会显示*来自存储的图像*按钮。
 :::
 
 **参数**：
@@ -1068,10 +1068,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestStartFilling
 
-当用户尝试通过单击 PDF 编辑模式下的*共享和收集数据*按钮开始填写准备好的表单时调用的函数（可以使用 [startFillingForm](./editor/customization/customization-standard-branding.md#startfillingform) 参数更改按钮标题）。当用户单击*共享和收集数据*按钮时，将调用 [startFilling](../methods.md#startfilling) 方法来锁定 PDF 编辑（仅可查看 PDF）。调用 [requestRoles](../methods.md#requestroles) 方法后，也会调用此事件。
+当用户尝试通过单击 PDF 编辑模式下的*分享&收集*按钮开始填写准备好的表单时调用的函数（可以使用 [startFillingForm](./editor/customization/customization-standard-branding.md#startfillingform) 参数更改按钮标题）。表单角色数组通过 `data` 参数传递。要锁定 PDF 编辑（仅可查看 PDF），请在事件处理程序中调用 [startFilling](../methods.md#startfilling) 方法。调用 [requestRoles](../methods.md#requestroles) 方法后，也会调用此事件。
 
 :::note
-如果声明了此事件或 [onStartFilling](#onstartfilling) 事件，则会显示*共享和收集数据*按钮。如果仅声明了 `onStartFilling`，单击该按钮将打开内置的**发送以供签署**面板，用户可以在其中为表单角色分配用户并发送表单以供填写。此面板的用户列表通过 `c` 设置为 `"filler"` 的 [onRequestUsers](#onrequestusers) 事件请求。表单发送后，将调用 `onStartFilling` 事件。
+如果声明了此事件或 [onStartFilling](#onstartfilling) 事件，则会显示*分享&收集*按钮。如果仅声明了 `onStartFilling`，单击该按钮将打开内置的**发送以供签署**面板，用户可以在其中为表单角色分配用户并发送表单以供填写。此面板的用户列表通过 `c` 设置为 `"filler"` 的 [onRequestUsers](#onrequestusers) 事件请求。表单发送后，将调用 `onStartFilling` 事件。
 :::
 
 **参数**：
