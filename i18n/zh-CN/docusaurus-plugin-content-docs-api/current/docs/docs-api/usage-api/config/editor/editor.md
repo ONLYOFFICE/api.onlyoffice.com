@@ -107,7 +107,7 @@ editorConfig 部分定义了编辑器界面参数。
 在 iframe 中打开的文件选择对话框的 URL，用于插入图像、选择比较文档或选择邮件合并数据源。URL 可以包含 `{documentType}` 和 `{fileExt}` 占位符，它们将被替换为相应的值（例如 `ImagesOnly`、`DocumentsOnly`）。
 
 :::note
-需要 `{documentType}` 占位符才能显示*从存储中获取图像*和*从存储中获取文档*按钮。
+需要 `{documentType}` 占位符才能显示*来自存储的图像*和*存储器中的文档*按钮。
 :::
 
 :::danger[已弃用]

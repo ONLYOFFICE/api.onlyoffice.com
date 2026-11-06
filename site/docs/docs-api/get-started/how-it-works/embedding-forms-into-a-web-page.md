@@ -64,7 +64,15 @@ The complete HTML page:
                 "title": "Form Template.pdf",
                 "url": "https://example.com/url-to-example-form.pdf"
             },
-            "documentType": "pdf"
+            "documentType": "pdf",
+            "events": {
+                "onRequestStartFilling": function () {
+                    docEditor.startFilling();
+                },
+                "onStartFilling": function () {
+                    console.log("The form is ready for filling");
+                }
+            }
         };
 
         docEditor = new DocsAPI.DocEditor("placeholder", config);
@@ -72,7 +80,7 @@ The complete HTML page:
 </script>
 ```
 
-After editing, click **Start filling** to switch the form to filling mode.
+The **Share & collect** button appears only if the [`onRequestStartFilling`](../../usage-api/config/events.md#onrequeststartfilling) or [`onStartFilling`](../../usage-api/config/events.md#onstartfilling) event is declared, so the page declares both. After editing, click **Share & collect**. The editor calls `onRequestStartFilling`, and its handler calls the [`startFilling`](../../usage-api/methods.md#startfilling) method, which locks the form against further editing. When the form is ready for filling, the editor calls `onStartFilling`.
 
 ![Embed pdf form for editing](/assets/images/editor/embed-pdf-for-editing.png#gh-light-mode-only)![Embed pdf form for editing](/assets/images/editor/embed-pdf-for-editing.dark.png#gh-dark-mode-only)
 

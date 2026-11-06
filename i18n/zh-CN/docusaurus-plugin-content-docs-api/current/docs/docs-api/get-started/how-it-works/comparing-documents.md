@@ -13,7 +13,7 @@ sidebar_position: -9
 1. 用户在浏览器中使用**文档管理器**打开文档进行查看或编辑。
 2. **文档管理器**使用包含 [`onRequestSelectDocument`](../../usage-api/config/events.md#onrequestselectdocument) 事件处理程序的 [`config`](../../usage-api/config/config.md) 初始化**文档编辑器**。
 3. 文件被[打开](./opening-file.md)进行编辑。
-4. 用户点击比较菜单中的**来自存储的文档**按钮。**文档编辑器**触发 [`onRequestSelectDocument`](../../usage-api/config/events.md#onrequestselectdocument) 事件，`data.c` 设置为 `"compare"`。
+4. 用户点击比较菜单中的**存储器中的文档**按钮。**文档编辑器**触发 [`onRequestSelectDocument`](../../usage-api/config/events.md#onrequestselectdocument) 事件，`data.c` 设置为 `"compare"`。
 5. **文档管理器**允许用户从存储中选择要比较的文档。
 6. **文档管理器**调用 [`setRequestedDocument`](../../usage-api/methods.md#setrequesteddocument) 方法，传递所选文档的 URL 和 `c: "compare"` 参数给**文档编辑器**进行比较。
 
@@ -21,7 +21,7 @@ sidebar_position: -9
 
 1. 创建一个 `.html` 文件，用于[打开文件](./opening-file.md#how-this-can-be-done-in-practice)。
 
-2. 将 [`onRequestSelectDocument`](../../usage-api/config/events.md#onrequestselectdocument) 事件处理程序添加到编辑器配置中。当用户点击比较菜单中的**来自存储的文档**按钮时，会触发此事件，`data.c` 设置为 `"compare"`。处理程序调用 [`setRequestedDocument`](../../usage-api/methods.md#setrequesteddocument) 传递比较文档：
+2. 将 [`onRequestSelectDocument`](../../usage-api/config/events.md#onrequestselectdocument) 事件处理程序添加到编辑器配置中。当用户点击比较菜单中的**存储器中的文档**按钮时，会触发此事件，`data.c` 设置为 `"compare"`。处理程序调用 [`setRequestedDocument`](../../usage-api/methods.md#setrequesteddocument) 传递比较文档：
 
    ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png#gh-light-mode-only)![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.dark.png#gh-dark-mode-only)
 
