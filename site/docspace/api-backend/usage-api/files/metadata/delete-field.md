@@ -19,9 +19,9 @@ Deletes a metadata field from its template together with every value written for
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | OK | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The field and every value written for it are deleted; the response carries no content | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | You don't have enough permission to perform the operation | - | - |
-| **404** | Field not found | - | - |
+| **404** | The template does not exist, or it has no field with this identifier | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

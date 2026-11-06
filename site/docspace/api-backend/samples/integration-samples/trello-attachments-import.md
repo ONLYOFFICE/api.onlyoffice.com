@@ -1,18 +1,18 @@
 ---
-description: Import Trello card attachments into a DocSpace room.
-tags: ["DocSpace", "REST API", "Integration"]
+description: Import Trello card attachments into an ONLYOFFICE Apps room.
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 # Trello attachments import
 
-This integration allows you to automatically import all file attachments from a specific Trello card into an ONLYOFFICE DocSpace room. It's useful for syncing project files, archiving task assets, or aggregating external documentation into a centralized workspace.
+This integration allows you to automatically import all file attachments from a specific Trello card into an ONLYOFFICE Apps room. It's useful for syncing project files, archiving task assets, or aggregating external documentation into a centralized workspace.
 
 ## How it works
 
 - Locate the Trello card - Find a card by its name on a specified board.
 - Get attachments - Retrieve a list of file attachments from the card.
 - Download each file - Retrieve binary content using a signed Trello URL.
-- Upload to DocSpace - Push files to the selected DocSpace room via API.
+- Upload to ONLYOFFICE Apps - Push files to the selected ONLYOFFICE Apps room via API.
 
 <details>
   <summary>Full example</summary>
@@ -20,7 +20,7 @@ This integration allows you to automatically import all file attachments from a 
 ```py
 import requests, io
 
-# DocSpace configuration
+# ONLYOFFICE Apps configuration
 ONLYOFFICE_API_HOST = "your-docspace.onlyoffice.com"
 ONLYOFFICE_API_KEY = "your_onlyoffice_api_key"
 ONLYOFFICE_ROOM_ID = "your_room_id"
@@ -62,12 +62,12 @@ def download_trello_attachment(file_url):
     response = requests.get(signed_url, headers={"Accept": "application/json"})
     return response.content if response.status_code == 200 else None
 
-# Step 4: Upload to DocSpace
+# Step 4: Upload to ONLYOFFICE Apps
 def upload_to_docspace(file_content, filename, room_id):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/files/{room_id}/upload"
     files = {"file": (filename, io.BytesIO(file_content))}
     response = requests.post(url, headers=ONLYOFFICE_HEADERS, files=files)
-    print(f"DocSpace upload status for '{filename}': {response.status_code}")
+    print(f"ONLYOFFICE Apps upload status for '{filename}': {response.status_code}")
 
 # Step 5: Execute transfer
 def transfer_trello_to_docspace(board_id, card_name, room_id):
@@ -96,8 +96,8 @@ if __name__ == '__main__':
 
 ## Before you start
 
-1. Replace `your-docspace.onlyoffice.com`, `your_onlyoffice_api_key`, and `your_room_id` with your actual DocSpace portal host, API key, and room ID. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
+1. Replace `your-docspace.onlyoffice.com`, `your_onlyoffice_api_key`, and `your_room_id` with your actual ONLYOFFICE Apps portal host, API key, and room ID. Ensure you have the necessary permissions to perform user operations.
+2. Before you can make requests to the API, you need to create an ONLYOFFICE Apps API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
 3. Create a [Trello Developer App](https://developer.atlassian.com/cloud/trello/power-ups/rest-api-client/) to obtain an API key and token. Grant read access to cards and attachments by authorizing with `read` scope.
 4. Replace `your_trello_api_key`, `your_trello_token`, `your_board_id`, and `TargetCardName` with your actual Trello API key, token, board ID, and card name.
 
@@ -143,22 +143,22 @@ def download_trello_attachment(file_url):
     return response.content if response.status_code == 200 else None
 ```
 
-## Step 4: Upload the file to DocSpace
+## Step 4: Upload the file to ONLYOFFICE Apps
 
-Upload the downloaded file into a specific DocSpace room using [`POST /api/2.0/files/{room_id}/upload`](/docspace/api-backend/usage-api/files/folders/upload-file)
+Upload the downloaded file into a specific ONLYOFFICE Apps room using [`POST /api/2.0/files/{room_id}/upload`](/docspace/api-backend/usage-api/files/folders/upload-file)
 
 ```py
-# Step 4: Upload to DocSpace
+# Step 4: Upload to ONLYOFFICE Apps
 def upload_to_docspace(file_content, filename, room_id):
     url = f"https://{ONLYOFFICE_API_HOST}/api/2.0/files/{room_id}/upload"
     files = {"file": (filename, io.BytesIO(file_content))}
     response = requests.post(url, headers=ONLYOFFICE_HEADERS, files=files)
-    print(f"DocSpace upload status for '{filename}': {response.status_code}")
+    print(f"ONLYOFFICE Apps upload status for '{filename}': {response.status_code}")
 ```
 
 ## Step 5: Run the import process
 
-Trigger the entire process: match Trello card, extract attachments, download them, and send to DocSpace.
+Trigger the entire process: match Trello card, extract attachments, download them, and send to ONLYOFFICE Apps.
 
 ```py
 # Step 5: Execute transfer

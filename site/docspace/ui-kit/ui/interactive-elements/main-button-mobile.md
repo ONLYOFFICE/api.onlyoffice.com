@@ -122,28 +122,28 @@ export function CreateSheet({
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `actionOptions`? | `ActionOption[]` | Items of the upper group of the menu. An item with `items` becomes a submenu. |
-| `alert`? | `boolean` | Whether the alert badge is drawn over the button. It is hidden while the menu is open. |
-| `buttonOptions`? | `ButtonOption[]` | Items of the lower group, drawn on a background of its own. An item with `items` becomes a submenu. |
-| `className`? | `string` | Applied to the wrapper that carries the button and the menu. |
-| `dropdownStyle`? | `CSSProperties` | Merged into the menu's inline style. The measured height is applied after it and wins. |
-| `isOpenButton`? | `boolean` | Whether `onClose` is called at all. It then fires on every toggle, including the one that opens the menu. |
-| `mainButtonRef`? | `RefObject<HTMLDivElement \| null>` | Ignored. The component uses an internal ref of the same name; use `ref` for the element. |
-| `manualWidth`? | `string` | Width of the menu, as a CSS length. |
-| `onAlertClick`? | `() => void` | Called when the alert badge is clicked, and only while `withAlertClick` is set. |
-| `onClick`? | `(e: React.MouseEvent) => void` | Called with the event when the button is clicked, and only while `withMenu` is `false`. |
-| `onClose`? | `() => void` | Called on every toggle of the menu, and only while `isOpenButton` is set. |
-| `onUploadClick`? | `() => void` | Ignored. Nothing reads this prop; the button's own handler is `onClick`. |
-| `opened`? | `boolean` | Whether the menu is open. It is copied into state, so a click changes it back without telling you. |
-| `percent`? | `number` | Ignored. Nothing reads this prop; the button draws no progress. |
-| `ref`? | `RefObject<MainButtonMobileRef>` | Handle exposing `contains` and `getButtonElement`, for deciding whether a click landed on the button. |
-| `sectionWidth`? | `number` | Ignored. Nothing reads this prop. |
-| `style`? | `CSSProperties` | Merged into the wrapper's inline style, after the z-index the component sets itself. |
-| `title`? | `string` | Ignored. Nothing reads this prop; the groups have no heading. |
-| `withAlertClick`? | `boolean` | Whether clicking the alert badge calls `onAlertClick`. |
-| `withButton`? | `boolean` | Ignored. Nothing reads this prop. |
-| `withMenu`? | `boolean` | Whether the button opens the menu. When `false` it calls `onClick` and the menu never opens. Default: `true`. |
-| `withoutButton`? | `boolean` | Whether the lower group takes the plain wrapper background instead of the accent one. |
+| `actionOptions` | `ActionOption[]` | Items of the upper group of the menu. An item with `items` becomes a submenu. |
+| `alert` | `boolean` | Whether the alert badge is drawn over the button. It is hidden while the menu is open. |
+| `buttonOptions` | `ButtonOption[]` | Items of the lower group, drawn on a background of its own. An item with `items` becomes a submenu. |
+| `className` | `string` | Applied to the wrapper that carries the button and the menu. |
+| `dropdownStyle` | `CSSProperties` | Merged into the menu's inline style. The measured height is applied after it and wins. |
+| `isOpenButton` | `boolean` | Whether `onClose` is called at all. It then fires on every toggle, including the one that opens the menu. |
+| `mainButtonRef` | `RefObject<HTMLDivElement \| null>` | Ignored. The component uses an internal ref of the same name; use `ref` for the element. |
+| `manualWidth` | `string` | Width of the menu, as a CSS length. |
+| `onAlertClick` | `() => void` | Called when the alert badge is clicked, and only while `withAlertClick` is set. |
+| `onClick` | `(e: React.MouseEvent) => void` | Called with the event when the button is clicked, and only while `withMenu` is `false`. |
+| `onClose` | `() => void` | Called on every toggle of the menu, and only while `isOpenButton` is set. |
+| `onUploadClick` | `() => void` | Ignored. Nothing reads this prop; the button's own handler is `onClick`. |
+| `opened` | `boolean` | Whether the menu is open. It is copied into state, so a click changes it back without telling you. |
+| `percent` | `number` | Ignored. Nothing reads this prop; the button draws no progress. |
+| `ref` | `RefObject<MainButtonMobileRef>` | Handle exposing `contains` and `getButtonElement`, for deciding whether a click landed on the button. |
+| `sectionWidth` | `number` | Ignored. Nothing reads this prop. |
+| `style` | `CSSProperties` | Merged into the wrapper's inline style, after the z-index the component sets itself. |
+| `title` | `string` | Ignored. Nothing reads this prop; the groups have no heading. |
+| `withAlertClick` | `boolean` | Whether clicking the alert badge calls `onAlertClick`. |
+| `withButton` | `boolean` | Ignored. Nothing reads this prop. |
+| `withMenu` | `boolean` | Whether the button opens the menu. When `false` it calls `onClick` and the menu never opens. Default: `true`. |
+| `withoutButton` | `boolean` | Whether the lower group takes the plain wrapper background instead of the accent one. |
 
 </APITable>
 

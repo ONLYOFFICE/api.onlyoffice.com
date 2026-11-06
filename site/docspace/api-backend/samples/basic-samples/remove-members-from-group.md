@@ -1,6 +1,6 @@
 ---
 description: Remove one or more members from a group via the API.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,13 +8,13 @@ import TabItem from '@theme/TabItem';
 
 # Remove members from a group
 
-This example demonstrates how to remove one or more members from a group in ONLYOFFICE DocSpace using the API.
+This example demonstrates how to remove one or more members from a group in ONLYOFFICE Apps using the API.
 
 Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/nodejs/samples/remove-members-from-group.js)/[Python](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/python/samples/remove-members-from-group.py)
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>
@@ -23,7 +23,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
   <TabItem value="nodejs" label="Node.js">
 
   ``` ts
-  // Set your DocSpace portal URL and API key
+  // Set your ONLYOFFICE Apps portal URL and API key
   const API_HOST = 'https://yourportal.onlyoffice.com';
   const API_KEY = 'your_api_key';
 
@@ -71,7 +71,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
   ``` py
   import requests
 
-  # Set your DocSpace portal URL and API key
+  # Set your ONLYOFFICE Apps portal URL and API key
   API_HOST = 'https://yourportal.onlyoffice.com'
   API_KEY = 'your_api_key'
 

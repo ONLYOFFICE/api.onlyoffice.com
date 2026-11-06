@@ -4,7 +4,7 @@ sidebar_position: 8
 title: Global configuration
 ---
 
-All available configuration options for the DocSpace MCP server provided through environment variables, organized by their functional area.
+All available configuration options for the ONLYOFFICE Apps MCP server provided through environment variables, organized by their functional area.
 
 ## MCP options
 
@@ -38,7 +38,6 @@ Enables meta tools for dynamic tool selection. Complementary to `DOCSPACE_TOOLSE
 | **Attributes** | trimmable, case-insensitive |
 | **Transports** | all |
 
-
 ### DOCSPACE_TOOLSETS
 
 Comma-separated list of toolsets to enable. Use `all` to include every available tool.
@@ -50,7 +49,6 @@ Comma-separated list of toolsets to enable. Use `all` to include every available
 | **Example** | `files,people` |
 | **Attributes** | trimmable, case-insensitive |
 | **Transports** | all |
-
 
 ### DOCSPACE_ENABLED_TOOLS
 
@@ -113,10 +111,9 @@ User agent sent in the `User-Agent` header for API requests.
 | **Attributes** | trimmable |
 | **Transports** | all |
 
-
 ### DOCSPACE_BASE_URL
 
-Base URL of the DocSpace instance for API requests. Must use HTTP or HTTPS with no search parameters or hash fragments. Required if any authentication option is set.
+Base URL of the ONLYOFFICE Apps instance for API requests. Must use HTTP or HTTPS with no search parameters or hash fragments. Required if any authentication option is set.
 
 | | |
 |---|---|
@@ -155,7 +152,6 @@ and the [`DOCSPACE_OAUTH_CLIENT_ID`]/[`DOCSPACE_OAUTH_CLIENT_SECRET`] pair if
 | **Example** | `Bearer sk-a499e...` |
 | **Attributes** | sensitive, trimmable |
 | **Transports** | all |
-
 
 ### DOCSPACE_AUTH_TOKEN
 
@@ -200,10 +196,9 @@ This option is mutually exclusive with [`DOCSPACE_AUTHORIZATION`],
 | **Attributes** | sensitive, trimmable |
 | **Transports** | all |
 
-
 ### DOCSPACE_OAUTH_BASE_URL
 
-Base URL of the DocSpace OAuth service. Must use HTTP or HTTPS with no search parameters or hash fragments. Set to an empty string to disable OAuth authentication.
+Base URL of the ONLYOFFICE Apps OAuth service. Must use HTTP or HTTPS with no search parameters or hash fragments. Set to an empty string to disable OAuth authentication.
 
 | | |
 |---|---|
@@ -316,6 +311,34 @@ Secret key for signing OAuth state tokens. Used together with `DOCSPACE_OAUTH_ST
 | **Attributes** | sensitive, trimmable |
 | **Transports** | `sse` `streamable-http` `http` |
 
+## File operation options
+
+The following options are used to configure how the server waits for long-running file operations to complete.
+
+### DOCSPACE_FILE_OPERATION_INTERVAL
+
+The interval for polling the status of in-progress file operations in milliseconds.
+
+| | |
+|---|---|
+| **Type** | number |
+| **Default** | `300` (300 milliseconds) |
+| **Minimum** | `0` |
+| **Attributes** | trimmable |
+| **Transports** | all |
+
+### DOCSPACE_FILE_OPERATION_TIMEOUT
+
+The maximum time to wait for a file operation to complete in milliseconds. Set to `0` to disable the timeout.
+
+| | |
+|---|---|
+| **Type** | number |
+| **Default** | `3600000` (1 hour) |
+| **Minimum** | `0` |
+| **Attributes** | trimmable |
+| **Transports** | all |
+
 ## Server options
 
 The following options are used to configure the behavior of the HTTP server.
@@ -366,7 +389,7 @@ The `0` is a special value that binds the server to a random port.
 | **Default** | `8080` |
 | **Transports** | `sse` `streamable-http` `http` |
 
-### DOCSPACE_SERVER_PROXY_HOPS
+### DOCSPACE_PROXY_HOPS
 
 The number of proxy servers between the server and the client.
 
@@ -730,7 +753,7 @@ Prefix for custom configuration headers. Set to an empty string to disable custo
 | | |
 |---|---|
 | **Type** | string |
-| **Default** | `x-mcp-` |
+| **Default** | `X-Mcp-` |
 | **Attributes** | trimmable, lowercase |
 | **Transports** | `sse`, `streamable-http`, `http` |
 
@@ -807,8 +830,6 @@ DOCSPACE_HOST=0.0.0.0
 DOCSPACE_SERVER_CORS_MCP_ORIGIN=https://example.com,https://another-example.com
 DOCSPACE_SERVER_CORS_MCP_MAX_AGE=1800000 # 30 minutes
 ```
-
-<!-- Definitions -->
 
 [`DOCSPACE_TRANSPORT`]: #docspace_transport
 [`DOCSPACE_TOOLSETS`]: #docspace_toolsets

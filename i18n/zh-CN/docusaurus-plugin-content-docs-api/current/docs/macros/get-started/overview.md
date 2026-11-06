@@ -14,10 +14,10 @@ ONLYOFFICE 宏是直接在文档中使用 [Office JavaScript API](../../office-a
 
 **适用场景**：
 
-- 一键格式化（[重置文本属性](../samples/document-editor/reset-text-properties.md) - 快速将文本重置为默认格式）
-- 批量操作（[删除空表格](../samples/document-editor/remove-empty-tables.md) - 删除整个文档中的所有空表格）
-- 自定义计算（[加权平均值](../samples/spreadsheet-editor/weighted-average-function.md) - 计算所选范围的加权平均值）
-- 文档清理（[删除空段落](../samples/presentation-editor/remove-empty-paragraphs.md) - 删除整个演示文稿中所有不必要的空段落）
+- 一键格式化（[重置文本属性](../samples/document-editor/reset-text-properties.md)：快速将文本重置为默认格式）
+- 批量操作（[删除空表格](../samples/document-editor/remove-empty-tables.md)：删除整个文档中的所有空表格）
+- 自定义计算（[加权平均值](../samples/spreadsheet-editor/weighted-average-function.md)：计算所选范围的加权平均值）
+- 文档清理（[删除空段落](../samples/presentation-editor/remove-empty-paragraphs.md)：删除整个演示文稿中所有不必要的空段落）
 
 **开发概况**：
 
@@ -42,15 +42,15 @@ ONLYOFFICE 宏是直接在文档中使用 [Office JavaScript API](../../office-a
 
 **需要更多帮助？**
 
-- [开发者论坛](https://community.onlyoffice.com/) - 社区支持
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice) - 问答归档
+- [开发者论坛](https://community.onlyoffice.com/)：社区支持
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice)：问答归档
 
 ## 资源
 
-- **[宏示例](/samples/?doctype=docs&text=macros)** - 即用脚本
-- **[Office API 参考](../../office-api/get-started/overview.md)** - 完整 API 文档
-- **[编写宏](../guides/writing-macros.md)** - 宏开发指南
-- **[常见问题](../more-information/faq.md)** - 常见问题解答
+- **[宏示例](/samples/?doctype=docs&text=macros)**：即用脚本
+- **[Office API 参考](../../office-api/get-started/overview.md)**：完整 API 文档
+- **[编写宏](../guides/writing-macros.md)**：宏开发指南
+- **[常见问题](../more-information/faq.md)**：常见问题解答
 
 ## 下一步
 

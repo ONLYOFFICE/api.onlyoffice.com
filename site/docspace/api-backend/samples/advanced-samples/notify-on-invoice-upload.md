@@ -1,6 +1,6 @@
 ---
 description: Send a notification to the manager when a client uploads an invoice.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,9 +8,9 @@ import TabItem from '@theme/TabItem';
 
 # Notifying on invoice upload
 
-This example shows how to use ONLYOFFICE DocSpace webhooks to react when a client uploads an invoice to their room.
+This example shows how to use ONLYOFFICE Apps webhooks to react when a client uploads an invoice to their room.
 
-When DocSpace sends a webhook to your backend, the receiver:
+When ONLYOFFICE Apps sends a webhook to your backend, the receiver:
 
 - verifies the webhook signature,
 - reads the event trigger (`event.trigger`) and file data (`payload`),
@@ -24,21 +24,21 @@ When DocSpace sends a webhook to your backend, the receiver:
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 3. Expose your webhook endpoint over HTTPS in production (terminate TLS in your app or behind a reverse proxy/load balancer, and reject non-HTTPS requests). For local testing, use a secure tunnel that provides an HTTPS URL.
 
 ## Webhook configuration
 
-This example relies on DocSpace webhooks. To register and manage webhooks on your portal, see [Webhooks](/docspace/api-backend/get-started/how-it-works/webhooks.md) and the Help Center instructions: https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx.
+This example relies on ONLYOFFICE Apps webhooks. To register and manage webhooks on your portal, see [Webhooks](/docspace/api-backend/get-started/how-it-works/webhooks.md) and the Help Center instructions: https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx.
 
 - Register a webhook and enable the triggers used in this example.
 - Set the payload URL to your backend endpoint.
-- Generate/set a secret key and store it on the backend as `WEBHOOK_SECRET`. DocSpace sends the signature in the `x-docspace-signature-256` header so you can validate the request against the raw body.
+- Generate/set a secret key and store it on the backend as `WEBHOOK_SECRET`. ONLYOFFICE Apps sends the signature in the `x-docspace-signature-256` header so you can validate the request against the raw body.
 
 ## Timeouts and retries
 
-DocSpace retries failed webhook deliveries. According to the webhook docs:
+ONLYOFFICE Apps retries failed webhook deliveries. According to the webhook docs:
 
 - Up to 5 attempts are made, with exponential backoff (`2^attempt` seconds).
 - Any successful status (any 2xx) stops retries.
@@ -222,7 +222,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
   });
 
   app.listen(3000, () => {
-    console.log('DocSpace webhook listener: http://localhost:3000/docspace/webhook');
+    console.log('ONLYOFFICE Apps webhook listener: http://localhost:3000/docspace/webhook');
   });
   ```
 
@@ -384,7 +384,7 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 
   if __name__ == '__main__':
     port = int(os.environ.get('PORT', 3000))
-    print(f'DocSpace webhook listener: http://localhost:{port}/docspace/webhook')
+    print(f'ONLYOFFICE Apps webhook listener: http://localhost:{port}/docspace/webhook')
     app.run(host='0.0.0.0', port=port)
   ```
 
@@ -392,18 +392,18 @@ Keep the handler fast: validate the request, enqueue background work if needed, 
 </Tabs>
 </details>
 
-## Step 1: Receive an event from DocSpace
+## Step 1: Receive an event from ONLYOFFICE Apps
 
-When a client uploads a file, DocSpace calls your webhook URL (`/docspace/webhook`) and sends a JSON payload.
+When a client uploads a file, ONLYOFFICE Apps calls your webhook URL (`/docspace/webhook`) and sends a JSON payload.
 
 The handler:
 
 - receives the request,
-- makes sure the request is really coming from DocSpace (basic security check),
+- makes sure the request is really coming from ONLYOFFICE Apps (basic security check),
 - then reads the event data from JSON.
 
 If the request does not look valid, the handler returns 401.
-DocSpace may also send a `HEAD` request to check that your URL is reachable, so the example answers `200` for `HEAD`.
+ONLYOFFICE Apps may also send a `HEAD` request to check that your URL is reachable, so the example answers `200` for `HEAD`.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -457,7 +457,7 @@ DocSpace may also send a `HEAD` request to check that your URL is reachable, so 
 
 The script reads:
 - `event.trigger` — what happened (`file.uploaded`, `file.created`, etc.)
-- `payload` — file data sent by DocSpace
+- `payload` — file data sent by ONLYOFFICE Apps
 
 It processes only upload-like triggers:
 - `file.uploaded`
@@ -560,7 +560,7 @@ If `rootId` does not match your client room, the script skips the event.
 
 The script verifies the file name the title must start with `invoice` (case-insensitive)
 
-To be safer, it also loads the file title from DocSpace GET [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/files/files/get-file-info)
+To be safer, it also loads the file title from ONLYOFFICE Apps GET [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/files/files/get-file-info)
 
 If the file does not look like an invoice, the script skips it.
 

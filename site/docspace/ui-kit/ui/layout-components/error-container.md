@@ -110,18 +110,18 @@ export function NotFoundPage() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `bodyText`? | `string` | The line under the heading, 14px and no wider than 560px. |
-| `buttonText`? | `string` | Label of the action button. The button appears only when `onClickButton` is set as well. |
-| `children`? | `ReactNode` | Rendered last, below the button: the place for a support link or a details block. |
-| `className`? | `string` | Added after the component's own classes on the outer element. |
-| `customizedBodyText`? | `string` | A third line under `bodyText`, 13px and 600-weight, in the muted colour. It takes plain text, not markup. |
-| `headerText`? | `string` | The heading, rendered as an `h1` at 23px. |
-| `hideLogo`? | `boolean` | Hides the portal logo above the illustration. Set it outside an ONLYOFFICE Apps portal, where the logo endpoint does not resolve. Default: `false`. |
-| `id`? | `string` | Value of `id` on the outer element. It does not rename the fixed ids the component uses inside itself. |
-| `isEditor`? | `boolean` | Takes the container out of the flow — `position: absolute` at full width — for the document editor, which mounts it over a layout of its own. Default: `false`. |
-| `isPrimaryButton`? | `boolean` | Whether the action button is the filled accent one rather than the outlined one. Default: `true`. |
-| `onClickButton`? | `VoidFunction` | Called when the action button is clicked. The button appears only when `buttonText` is set as well. |
-| `style`? | `CSSProperties` | Inline style of the outer element. |
+| `bodyText` | `string` | The line under the heading, 14px and no wider than 560px. |
+| `buttonText` | `string` | Label of the action button. The button appears only when `onClickButton` is set as well. |
+| `children` | `ReactNode` | Rendered last, below the button: the place for a support link or a details block. |
+| `className` | `string` | Added after the component's own classes on the outer element. |
+| `customizedBodyText` | `string` | A third line under `bodyText`, 13px and 600-weight, in the muted colour. It takes plain text, not markup. |
+| `headerText` | `string` | The heading, rendered as an `h1` at 23px. |
+| `hideLogo` | `boolean` | Hides the portal logo above the illustration. Set it outside an ONLYOFFICE Apps portal, where the logo endpoint does not resolve. Default: `false`. |
+| `id` | `string` | Value of `id` on the outer element. It does not rename the fixed ids the component uses inside itself. |
+| `isEditor` | `boolean` | Takes the container out of the flow — `position: absolute` at full width — for the document editor, which mounts it over a layout of its own. Default: `false`. |
+| `isPrimaryButton` | `boolean` | Whether the action button is the filled accent one rather than the outlined one. Default: `true`. |
+| `onClickButton` | `VoidFunction` | Called when the action button is clicked. The button appears only when `buttonText` is set as well. |
+| `style` | `CSSProperties` | Inline style of the outer element. |
 
 </APITable>
 

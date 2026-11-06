@@ -9,7 +9,7 @@ import Video from '@site/src/components/Video/Video';
 
 将特殊符号插入到文档中。
 
-**插件类型：** 可视化，非系统插件。
+**插件类型：** 可视化、非系统插件。
 
 **支持的编辑器：** 文档、电子表格、演示文稿。
 

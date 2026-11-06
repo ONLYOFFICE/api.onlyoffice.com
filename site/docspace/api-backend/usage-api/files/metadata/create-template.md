@@ -18,7 +18,7 @@ Creates a metadata template for the whole portal, optionally with its fields in 
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | New metadata template | [**MetadataTemplateWrapper**](../../models/metadata-template-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The created template with its fields and the generated identifiers of their options | [**MetadataTemplateWrapper**](../../models/metadata-template-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | An invalid template or field: a name in use, reserved or too long, an unknown field type, duplicate field names or wrong options | - | - |
 | **403** | The caller is not a DocSpace admin | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

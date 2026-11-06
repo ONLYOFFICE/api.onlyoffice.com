@@ -103,17 +103,17 @@ export function DesignSwitch({
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `ariaLabel`? | `string` | Accessible name of the switch button. The English default is not translated for you. Default: `"Switch ONLYOFFICE Apps design"`. |
-| `className`? | `string` | Applied to the wrapper around the title and the pill. |
-| `confirmBody`? | `string` | First paragraph of that dialog. Default: `"You are about to leave the new Dashboard and return to the classic ONLYOFFICE Apps view."`. |
-| `confirmCancel`? | `string` | Label of its cancel button. Default: `"Cancel"`. |
-| `confirmHint`? | `string` | Second paragraph of that dialog. An empty string removes it. Default: `"You can return to the new Dashboard at any time by navigating to /dashboard."`. |
-| `confirmOk`? | `string` | Label of that dialog's primary button. Default: `"Switch"`. |
-| `confirmTitle`? | `string` | Heading of the dialog shown when leaving the new view. Default: `"Switch to Old Design"`. |
-| `labelNew`? | `string` | Label on the right half, the new dashboard. Default: `"NEW"`. |
-| `labelOld`? | `string` | Label on the left half of the pill, the classic view. Default: `"OLD"`. |
-| `onNavigate`? | `(url: string) => void` | Called with the URL to go to — `/dashboard` or `/`, both hard-coded. Pass your router's navigate here; without it the component assigns `window.location.href` and the page reloads. |
-| `title`? | `string` | Text to the left of the pill. An empty string removes it. Default: `"ONLYOFFICE Apps design"`. |
+| `ariaLabel` | `string` | Accessible name of the switch button. The English default is not translated for you. Default: `"Switch ONLYOFFICE Apps design"`. |
+| `className` | `string` | Applied to the wrapper around the title and the pill. |
+| `confirmBody` | `string` | First paragraph of that dialog. Default: `"You are about to leave the new Dashboard and return to the classic ONLYOFFICE Apps view."`. |
+| `confirmCancel` | `string` | Label of its cancel button. Default: `"Cancel"`. |
+| `confirmHint` | `string` | Second paragraph of that dialog. An empty string removes it. Default: `"You can return to the new Dashboard at any time by navigating to /dashboard."`. |
+| `confirmOk` | `string` | Label of that dialog's primary button. Default: `"Switch"`. |
+| `confirmTitle` | `string` | Heading of the dialog shown when leaving the new view. Default: `"Switch to Old Design"`. |
+| `labelNew` | `string` | Label on the right half, the new dashboard. Default: `"NEW"`. |
+| `labelOld` | `string` | Label on the left half of the pill, the classic view. Default: `"OLD"`. |
+| `onNavigate` | `(url: string) => void` | Called with the URL to go to — `/dashboard` or `/`, both hard-coded. Pass your router's navigate here; without it the component assigns `window.location.href` and the page reloads. |
+| `title` | `string` | Text to the left of the pill. An empty string removes it. Default: `"ONLYOFFICE Apps design"`. |
 
 </APITable>
 

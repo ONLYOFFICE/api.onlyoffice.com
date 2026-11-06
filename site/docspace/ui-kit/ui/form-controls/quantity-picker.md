@@ -123,28 +123,28 @@ export function Seats() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `maxValue` | `number` | Upper bound; nothing the component does goes past it, except the one overflow step `showPlusSign` allows |
-| `minValue` | `number` | Lower bound for the controls, typed input and slider |
-| `onChange` | `(value: number) => void` | Called with the new value |
-| `step` | `number` | Amount the plus and minus controls and the slider move by; the last step up is shortened so it stops at the bound |
-| `value` | `number` | Current value; the component is controlled |
-| `className`? | `string` | Class name on the root element |
-| `decreaseLabel`? | `string` | Accessible name of the minus control, e.g. a translated "Decrease"; no `aria-label` is rendered without it |
-| `disableValue`? | `string` | Text shown in place of the value while `isDisabled` is set; the field then sizes to its content |
-| `enableZero`? | `boolean` | Allows zero as a value below `minValue`; other values below it are flagged |
-| `increaseLabel`? | `string` | Accessible name of the plus control, e.g. a translated "Increase"; no `aria-label` is rendered without it |
-| `isDisabled`? | `boolean` | Disables every control and replaces the input with static text |
-| `isLarge`? | `boolean` | Widens the value field from 101px to 140px |
-| `isZeroAllowed`? | `boolean` | **Deprecated.** Use `enableZero`. |
-| `items`? | `(number \| TabItemObject)[]` | Preset tabs; selecting one adds its amount to the current value, capped like the plus control |
-| `minusDisabled`? | `boolean` | Disables only the minus control; it stays focusable (`aria-disabled`) so `minusTooltipId` can still explain why |
-| `minusTooltipId`? | `string` | Tooltip id set as `data-tooltip-id` on the minus control |
-| `showPlusSign`? | `boolean` | Lets the value go exactly one past `maxValue` (to `maxValue + 1`), shown as `maxValue+` |
-| `showSlider`? | `boolean` | Renders a slider bound to the value, from `minValue` to `maxValue` (`maxValue + 1` with `showPlusSign`) |
-| `subtitle`? | `string` | Secondary line under the title; omitted when empty |
-| `title`? | `null \| string` | Heading above the controls; omitted when empty |
-| `underControlsTitle`? | `React.ReactNode` | Text under the controls; turns to the warning colour while an invalid value is entered with `enableZero` |
-| `withoutControls`? | `boolean` | Hides the plus and minus controls |
+| `maxValue` | `number` | **Required.** Upper bound; nothing the component does goes past it, except the one overflow step `showPlusSign` allows |
+| `minValue` | `number` | **Required.** Lower bound for the controls, typed input and slider |
+| `onChange` | `(value: number) => void` | **Required.** Called with the new value |
+| `step` | `number` | **Required.** Amount the plus and minus controls and the slider move by; the last step up is shortened so it stops at the bound |
+| `value` | `number` | **Required.** Current value; the component is controlled |
+| `className` | `string` | Class name on the root element |
+| `decreaseLabel` | `string` | Accessible name of the minus control, e.g. a translated "Decrease"; no `aria-label` is rendered without it |
+| `disableValue` | `string` | Text shown in place of the value while `isDisabled` is set; the field then sizes to its content |
+| `enableZero` | `boolean` | Allows zero as a value below `minValue`; other values below it are flagged |
+| `increaseLabel` | `string` | Accessible name of the plus control, e.g. a translated "Increase"; no `aria-label` is rendered without it |
+| `isDisabled` | `boolean` | Disables every control and replaces the input with static text |
+| `isLarge` | `boolean` | Widens the value field from 101px to 140px |
+| `isZeroAllowed` | `boolean` | **Deprecated.** Use `enableZero`. |
+| `items` | `(number \| TabItemObject)[]` | Preset tabs; selecting one adds its amount to the current value, capped like the plus control |
+| `minusDisabled` | `boolean` | Disables only the minus control; it stays focusable (`aria-disabled`) so `minusTooltipId` can still explain why |
+| `minusTooltipId` | `string` | Tooltip id set as `data-tooltip-id` on the minus control |
+| `showPlusSign` | `boolean` | Lets the value go exactly one past `maxValue` (to `maxValue + 1`), shown as `maxValue+` |
+| `showSlider` | `boolean` | Renders a slider bound to the value, from `minValue` to `maxValue` (`maxValue + 1` with `showPlusSign`) |
+| `subtitle` | `string` | Secondary line under the title; omitted when empty |
+| `title` | `null \| string` | Heading above the controls; omitted when empty |
+| `underControlsTitle` | `React.ReactNode` | Text under the controls; turns to the warning colour while an invalid value is entered with `enableZero` |
+| `withoutControls` | `boolean` | Hides the plus and minus controls |
 
 </APITable>
 

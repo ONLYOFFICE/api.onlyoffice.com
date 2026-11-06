@@ -4,7 +4,7 @@ sidebar_position: -10
 
 # 共享问题
 
-## 如何打开启用了"跟踪更改"模式的文档？ {#how-to-open-a-document-with-track-changes-mode-enabled}
+## 如何打开启用了“跟踪更改”模式的文档？ {#how-to-open-a-document-with-track-changes-mode-enabled}
 
 要在启用跟踪更改模式的情况下打开文档，请使用 `document.permissions` 参数（请参阅[此处](../../usage-api/advanced-parameters.md)了解 ONLYOFFICE 文档配置对象的完整结构）。
 
@@ -76,7 +76,7 @@ sidebar_position: -10
 
 有关权限的更多信息，请参见[此页面](../../usage-api/config/document/permissions.md)。
 
-## 如何打开文档并启用"评论"模式？ {#how-to-open-a-document-with-commenting-mode-enabled}
+## 如何打开文档并启用“评论”模式？ {#how-to-open-a-document-with-commenting-mode-enabled}
 
 要在启用评论模式的情况下打开文档，需要使用 `document.permissions` 参数（请参阅[此处](../../usage-api/advanced-parameters.md)了解 ONLYOFFICE 文档配置对象的完整结构）。
 
@@ -285,7 +285,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 要在禁用下载选项的情况下打开文档，请使用 `document.permissions` 参数（请参阅[此处](../../usage-api/advanced-parameters.md)了解 ONLYOFFICE 文档配置对象的完整结构）。
 
-您需要将 `document.permissions.download` 设置为 `false`，以便从文档**文件**菜单（如果 `document.permissions.edit` 参数设置为 `true`）或顶部工具栏中删除**下载为...**选项（如果 `document.permissions.edit` 设置为 `false` 并且该文件仅供查看），并且用户无法从编辑器下载该文档。这种情况下的 `permissions` 配置将如下所示：
+您需要将 `document.permissions.download` 设置为 `false`，以便从文档**文件**菜单（如果 `document.permissions.edit` 参数设置为 `true`）或顶部工具栏中删除**下载为...** 选项（如果 `document.permissions.edit` 设置为 `false` 并且该文件仅供查看），并且用户无法从编辑器下载该文档。这种情况下的 `permissions` 配置将如下所示：
 
 ```ts
 const config = {
@@ -307,7 +307,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 要在禁用打印选项的情况下打开文档，请使用 `document.permissions` 参数（请参阅[此处](../../usage-api/advanced-parameters.md)了解 ONLYOFFICE 文档配置对象的完整结构）。
 
-您需要将 `document.permissions.print` 设置为 `false`，以便从文档 **文件** 菜单（如果 `document.permissions.edit` 参数设置为 `true`）或顶部工具栏（如果 `document.permissions.edit` 设置为 `false` 并且该文件仅供查看）移除**打印**选项，并且用户无法从编辑器中打印出该文档。这种情况下的 `permissions` 配置将如下所示：
+您需要将 `document.permissions.print` 设置为 `false`，以便从文档**文件**菜单（如果 `document.permissions.edit` 参数设置为 `true`）或顶部工具栏（如果 `document.permissions.edit` 设置为 `false` 并且该文件仅供查看）移除**打印**选项，并且用户无法从编辑器中打印出该文档。这种情况下的 `permissions` 配置将如下所示：
 
 ```ts
 const config = {
@@ -336,7 +336,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 `document.info.sharingSettings.permissions` 也是一个字符串参数，它显示了与定义用户对当前文档的访问权限的规则集对应的访问权限的名称。
 
 :::note
-请注意，最初没有任何预定义的文档访问规则集。如果您使用 **ONLYOFFICE 社区服务器**，将使用和显示几个访问权限规则（**完全访问**、**只读**、**拒绝访问**）。如果您设置自己的 **文档存储服务**，您将必须定义自己的一组规则及其名称（例如，**只读访问**：将参数 `document.permissions.edit`、`document.permissions.review`、`document.permissions.fillForms` 设置为 `false`；或 **只下载**：将所有 `document.permissions` 参数设置为 `false` 并且仅 `document.permissions.download` 参数设置为 `true` 等），并将它们发送到**文档编辑服务**，以便用户可以访问文档，并且这些设置显示在文档**访问权限中...**窗口中。
+请注意，最初没有任何预定义的文档访问规则集。如果您使用 **ONLYOFFICE 社区服务器**，将使用和显示几个访问权限规则（**完全访问**、**只读**、**拒绝访问**）。如果您设置自己的**文档存储服务**，您将必须定义自己的一组规则及其名称（例如，**只读访问**：将参数 `document.permissions.edit`、`document.permissions.review`、`document.permissions.fillForms` 设置为 `false`；或**只下载**：将所有 `document.permissions` 参数设置为 `false` 并且仅 `document.permissions.download` 参数设置为 `true` 等），并将它们发送到**文档编辑服务**，以便用户可以访问文档，并且这些设置显示在文档**访问权限...** 窗口中。
 :::
 
 `sharingSettings` 配置可能如下所示：

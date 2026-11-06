@@ -150,14 +150,14 @@ const selectorProps: TBaseSelector = {
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| `isLoading?` | `boolean` | If true, shows a loading indicator for the entire selector. |
-| `isMultiSelect?` | `boolean` | If true, allows multiple items to be selected. |
-| `maxSelectedItems?` | `number` | The maximum number of items that can be selected. |
-| `selectedItems?` | [`TSelectorItem`](#tselectoritem)[] | An array of initially selected items. |
-| `descriptionText?` | `string` | A descriptive text displayed within the selector. |
-| `searchEmptyScreenHeader?` | `string` | The header text to display when a search yields no results. |
-| `searchEmptyScreenDescription?` | `string` | The description text to display when a search yields no results. |
-| `onSelect()?` | (`params`: \{ `selectedId?`: `string` \| `number`; `isDoubleClick`: `boolean`; \}) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when an item is selected. |
+| `isLoading` | `boolean` | If true, shows a loading indicator for the entire selector. |
+| `isMultiSelect` | `boolean` | If true, allows multiple items to be selected. |
+| `maxSelectedItems` | `number` | The maximum number of items that can be selected. |
+| `selectedItems` | [`TSelectorItem`](#tselectoritem)[] | An array of initially selected items. |
+| `descriptionText` | `string` | A descriptive text displayed within the selector. |
+| `searchEmptyScreenHeader` | `string` | The header text to display when a search yields no results. |
+| `searchEmptyScreenDescription` | `string` | The description text to display when a search yields no results. |
+| `onSelect()` | (`params`: \{ `selectedId?`: `string` \| `number`; `isDoubleClick`: `boolean`; \}) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when an item is selected. |
 
 ### See
 
@@ -187,7 +187,7 @@ Represents a single item within a selector component.
 | Name | Type | Description |
 | ------ | ------ | ------ |
 | `label` | `string` | The display text for the item. |
-| `id?` | `string` \| `number` | A unique identifier for the item. |
+| `id` | `string` \| `number` | A unique identifier for the item. |
 
 ### See
 
@@ -214,7 +214,7 @@ Defines properties for an item that represents a file.
 
 import APITable from '@site/src/components/APITable/APITable';
 
-<APITable>
+<APITable name="TSelectorItemFile">
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -242,7 +242,7 @@ Defines properties for an item that functions as an input field.
 
 ### Properties
 
-<APITable>
+<APITable name="TSelectorItemInput">
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -268,7 +268,7 @@ Defines properties for an item that allows creating a new entity.
 
 ### Properties
 
-<APITable>
+<APITable name="TSelectorItemNew">
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -293,13 +293,13 @@ Represents a single item in a breadcrumb trail.
 
 ### Properties
 
-<APITable>
+<APITable name="TBreadCrumbItem">
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `label` | `string` | The display text for the breadcrumb item. |
 | `id` | `string` \| `number` | A unique identifier for the breadcrumb item. |
-| `isRoom?` | `boolean` | If true, indicates that the breadcrumb item represents a room. |
+| `isRoom` | `boolean` | If true, indicates that the breadcrumb item represents a room. |
 
 </APITable>
 
@@ -320,14 +320,14 @@ Defines properties for configuring breadcrumbs in a selector.
 
 ### Properties
 
-<APITable>
+<APITable name="TSelectorBreadCrumbs">
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `withBreadCrumbs?` | `boolean` | If true, displays the breadcrumb navigation. |
-| `isBreadCrumbsLoading?` | `boolean` | If true, shows a loading indicator for the breadcrumbs. |
-| `breadCrumbs?` | [`TBreadCrumbItem`](#tbreadcrumbitem)[] | An array of breadcrumb items to display. |
-| `onSelectBreadCrumb?` | (`id`: `string` \| `number`) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when a breadcrumb item is selected. |
+| `withBreadCrumbs` | `boolean` | If true, displays the breadcrumb navigation. |
+| `isBreadCrumbsLoading` | `boolean` | If true, shows a loading indicator for the breadcrumbs. |
+| `breadCrumbs` | [`TBreadCrumbItem`](#tbreadcrumbitem)[] | An array of breadcrumb items to display. |
+| `onSelectBreadCrumb` | (`id`: `string` \| `number`) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when a breadcrumb item is selected. |
 
 </APITable>
 
@@ -349,15 +349,15 @@ Defines properties for pagination within a selector.
 
 ### Properties
 
-<APITable>
+<APITable name="TSelectorPagination">
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `items` | [`TSelectorItem`](#tselectoritem)[] | The list of items to display on the current page. |
-| `hasNextPage?` | `boolean` | If true, indicates that more items are available on subsequent pages. |
-| `isNextPageLoading?` | `boolean` | If true, shows a loading indicator while the next page is being loaded. |
-| `onLoadNextPage?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered to load the next page of items. |
-| `totalItems?` | `number` | The total number of items available. |
+| `hasNextPage` | `boolean` | If true, indicates that more items are available on subsequent pages. |
+| `isNextPageLoading` | `boolean` | If true, shows a loading indicator while the next page is being loaded. |
+| `onLoadNextPage` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered to load the next page of items. |
+| `totalItems` | `number` | The total number of items available. |
 
 </APITable>
 
@@ -382,17 +382,17 @@ Defines properties for the selector's header.
 
 ### Properties
 
-<APITable>
+<APITable name="TSelectorHeader">
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `withHeader?` | `boolean` | If true, displays the header. |
-| `headerProps?` | \{ `label`: `string`; `isCloseable?`: `boolean`; `onCloseClick?`: () => [`TReturnMessage`](../utils.md#treturnmessage); `withBackButton?`: `boolean`; `onBackClick?`: () => [`TReturnMessage`](../utils.md#treturnmessage); \} | An object containing properties for the header. |
+| `withHeader` | `boolean` | If true, displays the header. |
+| `headerProps` | \{ `label`: `string`; `isCloseable?`: `boolean`; `onCloseClick?`: () => [`TReturnMessage`](../utils.md#treturnmessage); `withBackButton?`: `boolean`; `onBackClick?`: () => [`TReturnMessage`](../utils.md#treturnmessage); \} | An object containing properties for the header. |
 | `headerProps.label` | `string` | The title text to display in the header. |
-| `headerProps.isCloseable?` | `boolean` | If true, displays a close button in the header. |
-| `headerProps.onCloseClick?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the close button is clicked. |
-| `headerProps.withBackButton?` | `boolean` | If true, displays a back button in the header. |
-| `headerProps.onBackClick?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the back button is clicked. |
+| `headerProps.isCloseable` | `boolean` | If true, displays a close button in the header. |
+| `headerProps.onCloseClick` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the close button is clicked. |
+| `headerProps.withBackButton` | `boolean` | If true, displays a back button in the header. |
+| `headerProps.onBackClick` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the back button is clicked. |
 
 </APITable>
 
@@ -412,13 +412,13 @@ Defines properties for a checkbox in the selector's footer.
 
 ### Properties
 
-<APITable>
+<APITable name="TSelectorCheckbox">
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `withCheckbox?` | `boolean` | If true, displays a checkbox in the footer. |
-| `footerCheckboxLabel?` | `string` | The label for the footer checkbox. |
-| `isChecked?` | `boolean` | The initial checked state of the footer checkbox. |
+| `withCheckbox` | `boolean` | If true, displays a checkbox in the footer. |
+| `footerCheckboxLabel` | `string` | The label for the footer checkbox. |
+| `isChecked` | `boolean` | The initial checked state of the footer checkbox. |
 
 </APITable>
 
@@ -438,13 +438,13 @@ Defines properties for the cancel button in the selector.
 
 ### Properties
 
-<APITable>
+<APITable name="TSelectorCancelButton">
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `withCancelButton?` | `boolean` | If true, displays the cancel button. |
-| `cancelButtonLabel?` | `string` | The text label for the cancel button. |
-| `onCancel?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the cancel button is clicked. |
+| `withCancelButton` | `boolean` | If true, displays the cancel button. |
+| `cancelButtonLabel` | `string` | The text label for the cancel button. |
+| `onCancel` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the cancel button is clicked. |
 
 </APITable>
 
@@ -463,12 +463,12 @@ Common base properties shared across all selector types.
 
 ### Properties
 
-<APITable>
+<APITable name="TSelectorBaseProps">
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `id?` | `string` | A unique identifier for the selector component. |
-| `className?` | `string` | A CSS class name to apply to the selector component. |
+| `id` | `string` | A unique identifier for the selector component. |
+| `className` | `string` | A CSS class name to apply to the selector component. |
 
 </APITable>
 
@@ -487,12 +487,12 @@ Lifecycle callback properties for selectors.
 
 ### Properties
 
-<APITable>
+<APITable name="TSelectorLifecycleEvents">
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `onLoad?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the selector is loaded. |
-| `onClose?` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the user clicks outside the selector. Return [`Actions.closeSelector`](../../enums/Actions.md#closeselector) to close it. Not called by the Files selector. |
+| `onLoad` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the selector is loaded. |
+| `onClose` | () => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the user clicks outside the selector. Return [`Actions.closeSelector`](../../enums/Actions.md#closeselector) to close it. Not called by the Files selector. |
 
 </APITable>
 
@@ -511,12 +511,12 @@ Empty screen message properties for selectors.
 
 ### Properties
 
-<APITable>
+<APITable name="TSelectorEmptyScreen">
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `emptyScreenHeader?` | `string` | The header text to display when there are no items to show. |
-| `emptyScreenDescription?` | `string` | The description text to display when there are no items to show. |
+| `emptyScreenHeader` | `string` | The header text to display when there are no items to show. |
+| `emptyScreenDescription` | `string` | The description text to display when there are no items to show. |
 
 </APITable>
 
@@ -535,12 +535,12 @@ Search and create functionality properties for selectors.
 
 ### Properties
 
-<APITable>
+<APITable name="TSelectorSearchCreate">
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `withSearch?` | `boolean` | If true, displays a search input field. |
-| `withCreate?` | `boolean` | If true, allows users to create new items. |
+| `withSearch` | `boolean` | If true, displays a search input field. |
+| `withCreate` | `boolean` | If true, allows users to create new items. |
 
 </APITable>
 
@@ -564,12 +564,12 @@ Defines properties for the submit button in the selector.
 
 ### Properties
 
-<APITable>
+<APITable name="TSelectorSubmitButton">
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `submitButtonLabel` | `string` | The text label for the submit button. |
-| `disabledSubmitButton?` | `boolean` | If true, the submit button will be disabled. |
+| `disabledSubmitButton` | `boolean` | If true, the submit button will be disabled. |
 | `onSubmit` | (`params`: \{ `selectedIds`: (`string` \| `number`)[]; `fileName`: `string`; `isFooterCheckboxChecked`: `boolean`; \}) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the submit button is clicked. |
 
 </APITable>
@@ -689,21 +689,21 @@ const filesSelectorProps: TFilesSelector = {
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| `isMultiSelect?` | `boolean` | If true, allows multiple items to be selected. |
-| `withBreadCrumbs?` | `boolean` | If true, displays breadcrumb navigation. |
-| `currentFolderId?` | `string` \| `number` | The ID of the folder to open by default. |
-| `isRoomsOnly?` | `boolean` | If true, displays only rooms at the root level. |
-| `openRoot?` | `boolean` | If true, opens the root directory by default. |
-| `descriptionText?` | `string` | A descriptive text displayed within the selector. |
-| `withFooterInput?` | `boolean` | If true, displays an input field in the footer. |
-| `footerInputHeader?` | `string` | The header text for the footer input. |
-| `currentFooterInputValue?` | `string` | The initial value for the footer input. |
-| `withFooterCheckbox?` | `boolean` | If true, displays a checkbox in the footer. |
-| `footerCheckboxLabel?` | `string` | The label for the footer checkbox. |
-| `filterParam?` | [`FilterType`](../../enums/Utility.md) | File type filter. |
-| `getIsDisabled()` | (`params`: \{ `selectedItemId`: `string` \| `number` \| `undefined`; `selectedItemType?`: `"rooms"` \| `"files"`; `selectedItemSecurity?`: \| [`FilesSecurity`](../../enums/Files.md#filessecurity) \| [`Security`](../../enums/Security.md); `selectedFileInfo`: \| \{ `id`: `string` \| `number`; `title`: `string`; `fileExst?`: [`FilesExst`](../../enums/Files.md#filesexst) \| `string`; \} \| `null`; `isFirstLoad`: `boolean`; `isDisabledFolder?`: `boolean`; `isRoot`: `boolean`; \}) => `boolean` | A callback function to determine if the submit button should be disabled. |
-| `onSubmit()?` | (`params`: \{ `selectedItemId`: `string` \| `number` \| `undefined`; `folderTitle`: `string`; `fileName`: `string`; `isChecked`: `boolean`; `selectedFileInfo`: \| \{ `id`: `string` \| `number`; `title`: `string`; `fileExst?`: [`FilesExst`](../../enums/Files.md#filesexst) \| `string`; \} \| `null`; `breadCrumbs?`: [`TBreadCrumbItem`](#tbreadcrumbitem)[]; \}) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the submit button is clicked. |
-| `onSelect()?` | (`id`: `string` \| `number` \| `undefined`) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when an item is selected. |
+| `isMultiSelect` | `boolean` | If true, allows multiple items to be selected. |
+| `withBreadCrumbs` | `boolean` | If true, displays breadcrumb navigation. |
+| `currentFolderId` | `string` \| `number` | The ID of the folder to open by default. |
+| `isRoomsOnly` | `boolean` | If true, displays only rooms at the root level. |
+| `openRoot` | `boolean` | If true, opens the root directory by default. |
+| `descriptionText` | `string` | A descriptive text displayed within the selector. |
+| `withFooterInput` | `boolean` | If true, displays an input field in the footer. |
+| `footerInputHeader` | `string` | The header text for the footer input. |
+| `currentFooterInputValue` | `string` | The initial value for the footer input. |
+| `withFooterCheckbox` | `boolean` | If true, displays a checkbox in the footer. |
+| `footerCheckboxLabel` | `string` | The label for the footer checkbox. |
+| `filterParam` | [`FilterType`](../../enums/Utility.md) | File type filter. |
+| `getIsDisabled()` | (`params`: \{ `selectedItemId`: `string` \| `number` \| `undefined`; `selectedItemType?`: `"rooms"` \| `"files"`; `selectedItemSecurity?`: [`FilesSecurity`](../../enums/Files.md#filessecurity) \| [`Security`](../../enums/Security.md); `selectedFileInfo`: \{ `id`: `string` \| `number`; `title`: `string`; `fileExst?`: [`FilesExst`](../../enums/Files.md#filesexst) \| `string`; \} \| `null`; `isFirstLoad`: `boolean`; `isDisabledFolder?`: `boolean`; `isRoot`: `boolean`; \}) => `boolean` | A callback function to determine if the submit button should be disabled. |
+| `onSubmit()` | (`params`: \{ `selectedItemId`: `string` \| `number` \| `undefined`; `folderTitle`: `string`; `fileName`: `string`; `isChecked`: `boolean`; `selectedFileInfo`: \{ `id`: `string` \| `number`; `title`: `string`; `fileExst?`: [`FilesExst`](../../enums/Files.md#filesexst) \| `string`; \} \| `null`; `breadCrumbs?`: [`TBreadCrumbItem`](#tbreadcrumbitem)[]; \}) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the submit button is clicked. |
+| `onSelect()` | (`id`: `string` \| `number` \| `undefined`) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when an item is selected. |
 
 ### See
 
@@ -846,19 +846,19 @@ const peopleSelectorProps: TPeopleSelector = {
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| `targetEntityType?` | `"file"` \| `"folder"` \| `"room"` | The type of entity for which the user is being selected (e.g., for sharing a file). **Example** `"file" \| "folder" \| "room"` |
-| `withGroups?` | `boolean` | If true, allows the selection of groups. **Default** `false` |
-| `isGroupsOnly?` | `boolean` | If true, displays only groups in the selector. **Default** `false` |
-| `withGuests?` | `boolean` | If true, includes guest users in the selector. **Default** `false` |
-| `isGuestsOnly?` | `boolean` | If true, displays only guest users in the selector. **Default** `false` |
-| `isMultiSelect?` | `boolean` | If true, allows multiple users and/or groups to be selected. **Default** `false` |
-| `currentUserId?` | `string` | The ID of the current user, to be excluded from the list. **Example** `"user-1234"` |
-| `excludeItems?` | `string`[] | An array of user or group IDs to exclude from the list. **Example** `["user-1234", "group-5678"]` |
-| `disableInvitedUsers?` | `string`[] | An array of user IDs that are already invited and should be disabled. **Example** `["user-1234", "user-5678"]` |
-| `disableDisabledUsers?` | `boolean` | If true, users with a 'disabled' status will not be displayed. **Default** `false` |
-| `roomId?` | `string` \| `number` | The ID of the room to which the selector is related. **Example** `"room-1234"` |
-| `alwaysShowFooter?` | `boolean` | If true, the footer will always be visible, even if no users are selected. **Default** `false` |
-| `onlyRoomMembers?` | `boolean` | If true, displays only the members of the current room. **Default** `false` |
+| `targetEntityType` | `"file"` \| `"folder"` \| `"room"` | The type of entity for which the user is being selected (e.g., for sharing a file). **Example** `"file" \| "folder" \| "room"` |
+| `withGroups` | `boolean` | If true, allows the selection of groups. **Default** `false` |
+| `isGroupsOnly` | `boolean` | If true, displays only groups in the selector. **Default** `false` |
+| `withGuests` | `boolean` | If true, includes guest users in the selector. **Default** `false` |
+| `isGuestsOnly` | `boolean` | If true, displays only guest users in the selector. **Default** `false` |
+| `isMultiSelect` | `boolean` | If true, allows multiple users and/or groups to be selected. **Default** `false` |
+| `currentUserId` | `string` | The ID of the current user, to be excluded from the list. **Example** `"user-1234"` |
+| `excludeItems` | `string`[] | An array of user or group IDs to exclude from the list. **Example** `["user-1234", "group-5678"]` |
+| `disableInvitedUsers` | `string`[] | An array of user IDs that are already invited and should be disabled. **Example** `["user-1234", "user-5678"]` |
+| `disableDisabledUsers` | `boolean` | If true, users with a 'disabled' status will not be displayed. **Default** `false` |
+| `roomId` | `string` \| `number` | The ID of the room to which the selector is related. **Example** `"room-1234"` |
+| `alwaysShowFooter` | `boolean` | If true, the footer will always be visible, even if no users are selected. **Default** `false` |
+| `onlyRoomMembers` | `boolean` | If true, displays only the members of the current room. **Default** `false` |
 
 ### See
 
@@ -949,13 +949,13 @@ const roomSelectorProps: TRoomSelector = {
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| `isMultiSelect?` | `boolean` | If true, allows multiple rooms to be selected. |
-| `roomType?` | \| [`RoomsType`](../../enums/Rooms.md#roomstype) \| [`RoomsType`](../../enums/Rooms.md#roomstype)[] | The type of rooms to display (e.g., 'collaboration', 'custom'). Can be a single type or an array of types. |
-| `searchArea?` | [`RoomSearchArea`](../../enums/Rooms.md#roomsearcharea) | The area to search for rooms within (e.g., 'myRooms', 'allRooms'). |
-| `excludeItems?` | (`number` \| `string` \| `undefined`)[] | An array of room IDs to exclude from the list. |
-| `createDefineRoomLabel?` | `string` | The label for the 'create new room' option. |
-| `createDefineRoomType?` | [`RoomsType`](../../enums/Rooms.md#roomstype) | The default type for newly created rooms. |
-| `onSubmit()?` | (`selectedIds`: (`string` \| `number`)[]) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the submit button is clicked. |
+| `isMultiSelect` | `boolean` | If true, allows multiple rooms to be selected. |
+| `roomType` | [`RoomsType`](../../enums/Rooms.md#roomstype) \| [`RoomsType`](../../enums/Rooms.md#roomstype)[] | The type of rooms to display (e.g., 'collaboration', 'custom'). Can be a single type or an array of types. |
+| `searchArea` | [`RoomSearchArea`](../../enums/Rooms.md#roomsearcharea) | The area to search for rooms within (e.g., 'myRooms', 'allRooms'). |
+| `excludeItems` | (`number` \| `string` \| `undefined`)[] | An array of room IDs to exclude from the list. |
+| `createDefineRoomLabel` | `string` | The label for the 'create new room' option. |
+| `createDefineRoomType` | [`RoomsType`](../../enums/Rooms.md#roomstype) | The default type for newly created rooms. |
+| `onSubmit()` | (`selectedIds`: (`string` \| `number`)[]) => [`TReturnMessage`](../utils.md#treturnmessage) | A callback function that is triggered when the submit button is clicked. |
 
 ### See
 

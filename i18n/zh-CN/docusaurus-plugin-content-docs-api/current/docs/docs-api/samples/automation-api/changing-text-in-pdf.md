@@ -9,7 +9,7 @@ import { ChangeTextPdfExternalToolbar } from '@site/src/components/BrowserWindow
 
 # 在 PDF 中更改文本
 
-使用自动化 API 通过外部界面在 PDF 文档中查找和替换文本 — 输入搜索词、指定替换文本，然后在所有页面上应用更改。
+使用自动化 API 通过外部界面在 PDF 文档中查找和替换文本——输入搜索词、指定替换文本，然后在所有页面上应用更改。
 
 :::info
 文档以 PDF 格式打开。您的代码调用 `connector.callCommand()` 来执行 Document Builder API 方法，识别页面内容、遍历文本对象并替换匹配的文本。
@@ -74,5 +74,5 @@ import { ChangeTextPdfExternalToolbar } from '@site/src/components/BrowserWindow
 :::note
 请注意，该连接器仅适用于 **ONLYOFFICE 文档开发者版本**。
 
-该连接器是一项需额外付费的高级功能。请参阅 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api) 了解价格详情，或联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
+该连接器是一项需额外付费的高级功能。请参阅 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)了解价格详情，或联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
 :::

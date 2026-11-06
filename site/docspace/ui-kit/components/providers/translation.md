@@ -76,11 +76,11 @@ export function App() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children` | `React.ReactNode` | The tree the translations apply to. |
-| `locale`? | `string` | Language tag to translate into. It outranks both of the above. |
-| `settings`? | `SettingsDto` | Portal settings. Its `culture` is the fallback language and its `timezone` is published on `window`. Portal-internal. |
-| `translations`? | `TTranslations` | Language to namespace to a flat table of key and string. Without it no i18n context is installed at all. |
-| `user`? | `EmployeeFullDto` | The signed-in portal user, whose `cultureName` outranks the portal's culture. Portal-internal. |
+| `children` | `React.ReactNode` | **Required.** The tree the translations apply to. |
+| `locale` | `string` | Language tag to translate into. It outranks both of the above. |
+| `settings` | `SettingsDto` | Portal settings. Its `culture` is the fallback language and its `timezone` is published on `window`. Portal-internal. |
+| `translations` | `TTranslations` | Language to namespace to a flat table of key and string. Without it no i18n context is installed at all. |
+| `user` | `EmployeeFullDto` | The signed-in portal user, whose `cultureName` outranks the portal's culture. Portal-internal. |
 
 </APITable>
 

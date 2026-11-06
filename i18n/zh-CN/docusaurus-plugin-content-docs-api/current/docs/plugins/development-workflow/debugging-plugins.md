@@ -5,7 +5,7 @@ description: 在 Web 编辑器和桌面编辑器中使用浏览器开发者工�
 
 # 调试插件
 
-ONLYOFFICE 插件使用浏览器开发者工具进行调试。在 Web 编辑器中，按常规方式打开开发者工具，例如按 **F12**。在桌面编辑器中，使用 `--ascdesktop-support-debug-info` 标志启动应用程序，然后在文档中的任意位置单击并按 **F1**，或者右键单击工具栏字段并选择 **检查元素**。有关在各操作系统中设置该标志的方法，请参阅[调试](../../desktop-editors/usage-api/debugging.md)。
+ONLYOFFICE 插件使用浏览器开发者工具进行调试。在 Web 编辑器中，按常规方式打开开发者工具，例如按 **F12**。在桌面编辑器中，使用 `--ascdesktop-support-debug-info` 标志启动应用程序，然后在文档中的任意位置单击并按 **F1**，或者右键单击工具栏字段并选择**检查元素**。有关在各操作系统中设置该标志的方法，请参阅[调试](../../desktop-editors/usage-api/debugging.md)。
 
 ## 代码在哪个框架中运行
 

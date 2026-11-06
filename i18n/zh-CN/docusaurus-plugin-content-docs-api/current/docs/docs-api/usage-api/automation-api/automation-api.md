@@ -4,12 +4,12 @@ sidebar_position: -2
 
 # 自动化应用程序编程接口（API）
 
-自动化 API 允许通过自定义界面元素从外部源与办公文档进行交互。利用 ONLYOFFICE 文档处理功能构建您自己的 UI 组件 — 管理评论、控制审阅工作流程、自动填写表单等，所有操作都在编辑器外部完成。
+自动化 API 允许通过自定义界面元素从外部源与办公文档进行交互。利用 ONLYOFFICE 文档处理功能构建您自己的 UI 组件——管理评论、控制审阅工作流程、自动填写表单等，所有操作都在编辑器外部完成。
 
 :::info
 自动化 API 仅适用于 **ONLYOFFICE 文档开发者版**。
 
-这是一项需额外付费的高级功能。请参阅 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api) 了解价格详情，或联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
+这是一项需额外付费的高级功能。请参阅 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)了解价格详情，或联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
 :::
 
 ## 功能展示
@@ -19,13 +19,13 @@ sidebar_position: -2
 | 用例 | 描述 |
 | -------- | ----------- |
 | [处理评论](../../samples/automation-api/working-with-comments.md) | 在自定义界面中收集和显示所有文档评论。从您自己的 UI 添加、删除和导航评论。 |
-| [管理审阅修订](../../samples/automation-api/working-with-review-changes.md) | 从外部控制审阅流程 — 从自定义面板接受或拒绝修订并在修订之间导航。 |
+| [管理审阅修订](../../samples/automation-api/working-with-review-changes.md) | 从外部控制审阅流程——从自定义面板接受或拒绝修订并在修订之间导航。 |
 | [填写表单](../../samples/automation-api/filling-out-the-form.md) | 使用外部数据自动填充表单字段。在您的界面和文档之间实时同步表单值。 |
 | [使用内容控件](../../samples/automation-api/working-with-content-controls.md) | 添加不同类型的内容控件，并从外部 UI 查看其属性。 |
 
 ## 快速入门
 
-要开始使用自动化 API，请使用 [createConnector](../methods.md#createconnector) 方法创建连接器。请在编辑器准备就绪后创建连接器 — 在 [onDocumentReady](../config/events.md#ondocumentready) 事件处理程序中，或在该事件触发之后的任意时刻：
+要开始使用自动化 API，请使用 [createConnector](../methods.md#createconnector) 方法创建连接器。请在编辑器准备就绪后创建连接器——在 [onDocumentReady](../config/events.md#ondocumentready) 事件处理程序中，或在该事件触发之后的任意时刻：
 
 ```ts
 let connector;
@@ -121,5 +121,5 @@ connector.callCommand(() => {
 
 ## API 参考
 
-- [连接器类](./connector-class.md) — 与编辑器交互的方法
-- [连接器窗口](./connector-window.md) — 创建和管理模态窗口的方法
+- [连接器类](./connector-class.md)：与编辑器交互的方法
+- [连接器窗口](./connector-window.md)：创建和管理模态窗口的方法

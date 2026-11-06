@@ -18,7 +18,7 @@ Go 集成示例是一个基于 gorilla/mux 路由器的小型 Web 应用程序�
 - **Go**：请参阅[官方网站](https://go.dev/dl/)。
 - **Git**：请参阅[官方网站](https://git-scm.com/downloads)。
 
-## 步骤1. 下载示例
+## 步骤 1. 下载示例
 
 克隆[示例仓库](https://github.com/ONLYOFFICE/document-server-integration/tree/main/web/documentserver-example/go)，进入 Go 示例目录，并获取其子模块：
 
@@ -28,7 +28,7 @@ cd document-server-integration/web/documentserver-example/go
 git submodule update --init --depth 1 .
 ```
 
-## 步骤2. 配置连接
+## 步骤 2. 配置连接
 
 打开 `config/configuration.json` 文件并编辑以下键：
 
@@ -51,7 +51,7 @@ git submodule update --init --depth 1 .
 
 如果您想尝试配置编辑器，请修改 `server/managers/default/document.go` 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)，示例在该文件中构建编辑器配置。
 
-## 步骤3. 安装依赖项并运行示例
+## 步骤 3. 安装依赖项并运行示例
 
 请在示例文件夹中运行以下命令，因为示例会从当前文件夹加载其模板和文件：
 

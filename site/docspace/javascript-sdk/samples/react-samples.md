@@ -1,24 +1,24 @@
 ---
 sidebar_position: 2
-description: Integrate ONLYOFFICE DocSpace into React projects.
-tags: ["DocSpace", "Embed SDK", "Integration", "React"]
+description: Integrate ONLYOFFICE Apps into React projects.
+tags: ["Apps", "Embed SDK", "Integration", "React"]
 ---
 
 # React component
 
-The ONLYOFFICE DocSpace React [component](https://github.com/ONLYOFFICE/docspace-react) integrates ONLYOFFICE DocSpace into [React](https://react.dev/) projects.
+The ONLYOFFICE Apps React [component](https://github.com/ONLYOFFICE/docspace-react) integrates ONLYOFFICE Apps into [React](https://react.dev/) projects.
 
 :::note
-To work with this component, you need to have ONLYOFFICE DocSpace. If you are new to DocSpace, [create an account](https://www.onlyoffice.com/docspace-registration?from=api).
+To work with this component, you need to have ONLYOFFICE Apps. If you are new to ONLYOFFICE Apps, [create an account](https://www.onlyoffice.com/docspace-registration?from=api).
 :::
 
 ## Prerequisites
 
 This procedure requires [Node.js (and npm)](https://nodejs.org/en).
 
-## Creating the demo React application with ONLYOFFICE DocSpace
+## Creating the demo React application with ONLYOFFICE Apps
 
-This procedure creates a [basic React application](https://github.com/facebook/create-react-app) and installs an ONLYOFFICE DocSpace in it.
+This procedure creates a [basic React application](https://github.com/facebook/create-react-app) and installs an ONLYOFFICE Apps in it.
 
 1. Create a new React project named *docspace-react-demo* using the *Create React App* package:
 
@@ -32,7 +32,7 @@ This procedure creates a [basic React application](https://github.com/facebook/c
    cd docspace-react-demo
    ```
 
-3. Install ONLYOFFICE DocSpace React component from **npm** and save it to the *package.json* file with *--save*:
+3. Install ONLYOFFICE Apps React component from **npm** and save it to the *package.json* file with *--save*:
 
    ``` sh
    npm install --save @onlyoffice/docspace-react
@@ -45,7 +45,7 @@ This procedure creates a [basic React application](https://github.com/facebook/c
    import React, {useRef} from "react";
 
    function onAppReady(e) {
-     console.log("ONLYOFFICE DocSpace App is ready!");
+     console.log("ONLYOFFICE Apps is ready!");
    }
 
    function onAppError(e) {
@@ -82,7 +82,7 @@ This procedure creates a [basic React application](https://github.com/facebook/c
 
    - `http://example-onlyoffice.com/` - replace with the URL of your server.
 
-   This JavaScript file will create the *App* component containing the ONLYOFFICE DocSpace configured with basic features.
+   This JavaScript file will create the *App* component containing the ONLYOFFICE Apps configured with basic features.
 
 5. Test the application using the Node.js development server:
 
@@ -137,17 +137,17 @@ Now you can deploy the application to the created server:
 
 The application will be deployed on the web server (`http://localhost:3000` by default).
 
-## ONLYOFFICE DocSpace React component API
+## ONLYOFFICE Apps React component API
 
 ### Properties
 
 | Name                  | Type                                                  | Default | Description                                                                                                 |
 | --------------------- | ----------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------- |
-| url\*                 | string                                                | null    | Address of ONLYOFFICE DocSpace.                                                                             |
+| url\*                 | string                                                | null    | Address of ONLYOFFICE Apps.                                                                             |
 | config\*              | object                                                | null    | Generic [configuration object](../usage-sdk/type-aliases/TFrameConfig.md) for opening a file with a token.          |
-| email                 | string                                                | null    | The user email to login in DocSpace.                                                                        |
-| onRequestPasswordHash | (email: string) => string                             | null    | The function called when the email parameter is passed, returning the *passwordHash* for login in DocSpace. |
-| onUnsuccessLogin      | () => void                                            | null    | The function called when DocSpace account login failed.                                                     |
+| email                 | string                                                | null    | The user email to login in ONLYOFFICE Apps.                                                                        |
+| onRequestPasswordHash | (email: string) => string                             | null    | The function called when the email parameter is passed, returning the *passwordHash* for login in ONLYOFFICE Apps. |
+| onUnsuccessLogin      | () => void                                            | null    | The function called when ONLYOFFICE Apps account login failed.                                                     |
 | onLoadComponentError  | (errorCode: number, errorDescription: string) => void | null    | The function called when an error occurs while loading a component.                                         |
 
 \* *- required field*
@@ -156,13 +156,13 @@ The application will be deployed on the web server (`http://localhost:3000` by d
 
 Install [Storybook](https://storybook.js.org/) to develop UI components in isolation:
 
-1. Change the address of the DocSpace in the *.env* file:
+1. Change the address of ONLYOFFICE Apps in the *.env* file:
 
    ``` ini
    "DOCSPACE_URL": "https://example-onlyoffice.com/"
    ```
 
-   where `http://example-onlyoffice.com/` is the URL to the server with **ONLYOFFICE DocSpace** installed.
+   where `http://example-onlyoffice.com/` is the URL to the server with **ONLYOFFICE Apps** installed.
 
 2. Build Storybook with the following command:
 
@@ -176,7 +176,7 @@ Install [Storybook](https://storybook.js.org/) to develop UI components in isola
    npm run storybook
    ```
 
-## Developing ONLYOFFICE DocSpace React component
+## Developing ONLYOFFICE Apps React component
 
 1. Clone project from the GitHub repository:
 
@@ -210,4 +210,4 @@ Install [Storybook](https://storybook.js.org/) to develop UI components in isola
 
 ## Feedback and support
 
-In case you have any issues, questions, or suggestions for the ONLYOFFICE DocSpace React component, please refer to the [Issues](https://github.com/ONLYOFFICE/docspace-react/issues) section.
+In case you have any issues, questions, or suggestions for the ONLYOFFICE Apps React component, please refer to the [Issues](https://github.com/ONLYOFFICE/docspace-react/issues) section.

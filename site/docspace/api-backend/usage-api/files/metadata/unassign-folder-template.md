@@ -6,7 +6,7 @@
 
 Unassign a template from a folder
 
-Removes a metadata template from a folder or a room together with the values of its fields. The caller needs the right to edit the folder; for a room that is its manager. When the template was cascaded from this folder, the cascade stops here: the folders and files below keep the template and their values as a direct assignment of their own, and there is no bulk rollback. To take the template off them as well, remove it entry by entry with `DELETE api/2.0/files/metadata/file/{fileId}/templates/{templateId}`. A pass of the cascade still running is stopped for this template. A folder the caller cannot edit is answered with 403; a folder, or a template, that does not exist with 404.
+Removes a metadata template from a folder or a room together with the values of its fields. The caller needs the right to create content in the folder, that is a room manager or a content creator; for a room that is its manager. When the template was cascaded from this folder, the cascade stops here: the folders and files below keep the template and their values as a direct assignment of their own, and there is no bulk rollback. To take the template off them as well, remove it entry by entry with `DELETE api/2.0/files/metadata/file/{fileId}/templates/{templateId}`. A pass of the cascade still running is stopped for this template. To stop the cascade and keep the template and its values on the folder use `PUT api/2.0/files/metadata/folder/{folderId}/templates/{templateId}` with `cascade` false instead. A caller without the right to create in the folder is answered with 403; a folder, or a template, that does not exist with 404.
 
 ## Parameters
 
@@ -19,8 +19,8 @@ Removes a metadata template from a folder or a room together with the values of 
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | OK | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | You don't have enough permission to perform the operation | - | - |
+| **200** | The template and its values are removed from the folder, and a cascade of it from this folder stops; the response carries no content | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **403** | The caller cannot create in the folder, or is not the manager of the room | - | - |
 | **404** | The folder or the template does not exist | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |

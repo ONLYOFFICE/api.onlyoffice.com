@@ -1,6 +1,6 @@
 ---
 description: 将文档、电子表格和演示文稿转换为 PDF。
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # PDF converter
@@ -11,7 +11,7 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 ## 安装
 
-默认在 DocSpace SaaS 解决方案中可用。
+默认在 ONLYOFFICE Apps SaaS 解决方案中可用。
 
 您可以按照[此处](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins)的说明启用它。
 
@@ -21,10 +21,10 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 1. 使用 [ConvertAPI](https://convertapi.com) 生成 API 令牌。
 2. 前往**设置 → 集成 → 插件**。
-3. 点击 **PDF converter** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
+3. 点击 **pdf-converter** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。
 4. 在相应字段中输入 API 令牌。
 
-启用 API 令牌后，该插件将对当前 DocSpace 门户的所有用户可用。
+启用 API 令牌后，该插件将对当前 ONLYOFFICE Apps 门户的所有用户可用。
 
 默认情况下，插件初始化为 `PluginStatus.hide`，因此在配置 API 令牌之前，它对用户保持隐藏。
 
@@ -40,8 +40,8 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 1. 打开**文档**部分或某个可用房间。
 2. 右键点击文件名以打开文件上下文菜单。
-3. 点击 **Convert to PDF**。
-4. 在弹出窗口中更改文件名，然后点击 **Convert file**。转换后的文件会保存在与原始文件相同的文件夹中。
+3. 点击**转换为 PDF**。
+4. 在弹出窗口中更改文件名，然后点击**转换文件**。转换后的文件会保存在与原始文件相同的文件夹中。
 
 ## 插件结构
 
@@ -53,7 +53,7 @@ GitHub 仓库：[pdf-converter](https://github.com/ONLYOFFICE/docspace-plugins/t
 
 使用以下插件接口：
 
-- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 DocSpace。
+- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 ONLYOFFICE Apps。
 - [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。必需，因为我们实现了第三方服务（[ConvertAPI](https://convertapi.com)）。
 - [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md) 和 [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts)。用于添加插件配置设置块。用户可以从**设置 → 集成 → 插件**访问该块以调整插件参数。
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于实现上下文菜单操作。

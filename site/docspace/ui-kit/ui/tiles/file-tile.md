@@ -124,35 +124,35 @@ export function DocumentTile() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `contextOptions` | `ContextMenuModel[]` | The menu's entries. Required — but the three-dot button appears only when `item` also carries a `contextOptions` key of its own. |
-| `item` | `FileItemType` | The file this tile stands for. |
-| `badges`? | `ReactElement<unknown, string \| JSXElementConstructor<any>>` | Badges drawn in a row in the thumbnail's top end corner. Give them the class `badges` so a click on them does not select the tile. |
-| `checked`? | `boolean` | Whether the tile is selected. |
-| `children`? | `ReactElement<unknown, string \| JSXElementConstructor<any>> \| ReactElement<unknown, string \| JSXElementConstructor<any>>…` | The tile's content. Only the first element is rendered, in the row beside the icon; the rest are dropped. |
-| `contentElement`? | `ReactElement<unknown, string \| JSXElementConstructor<any>>` | Quick-action buttons, stacked in a column in the thumbnail's top start corner. |
-| `contextButtonSpacerWidth`? | `number` | Ignored. Nothing reads it, and it is spread onto the outer element as an unknown attribute. |
-| `dataTestId`? | `string` | Value of `data-testid` on the outer element. Default: `"tile"`. |
-| `element`? | `ReactElement<unknown, string \| JSXElementConstructor<any>>` | The icon beside the checkbox. Without it neither the icon nor the checkbox is rendered at all. |
-| `forwardRef`? | `RefObject<HTMLDivElement \| null>` | Attached to the outer element, and clicked by the component itself on a right-click before the menu is mounted. |
-| `getContextModel`? | `() => ContextMenuModel[]` | Builds the menu shown on right-click. Without it the right-click menu never opens. |
-| `hideContextMenu`? | `() => void` | Called when the menu closes. |
-| `inProgress`? | `boolean` | Replaces the icon and the checkbox with the kit's track loader. |
-| `isActive`? | `boolean` | Whether the tile is the one being acted on, which keeps its hover state. |
-| `isBlockingOperation`? | `boolean` | Meant to turn the pointer off while an operation runs over the tile, but the rule it adds never matches, so it currently changes nothing. |
-| `isDragging`? | `boolean` | Marks the tile as being dragged: the checkbox no longer replaces the icon on hover. It does not dim the tile. |
-| `isEdit`? | `boolean` | Renaming state: it removes the icon and the checkbox. |
-| `isHighlight`? | `boolean` | Fades `--highlightColor` out of the lower half once, on mount, for a file that a search or a filter has just matched. The kit sets no such colour, so nothing shows until you do. |
-| `onSelect`? | `(checked: boolean, item: FileItemType) => void` | Called with the new checked state and the `item` — from the checkbox, from a plain click on the tile, and from a tap on the icon below 600px. |
-| `setSelection`? | `(items: FileItem[]) => void` | Called with an empty array before a plain click selects the tile, unless the click landed on an image, an input or an SVG shape. |
-| `showHotkeyBorder`? | `boolean` | Draws the accent outline that marks the tile the keyboard is on. |
-| `sideColor`? | `string` | Ignored. Nothing reads it, and it is spread onto the outer element as an unknown attribute. |
-| `temporaryIcon`? | `ReactElement<unknown, string \| JSXElementConstructor<any>> \| string` | Drawn when there is no `thumbnail`: a URL is fetched as an SVG, an element is rendered as given. |
-| `thumbnail`? | `string` | Preview image for the file. It falls back to `temporaryIcon` when the image fails to load. |
-| `thumbnailClick`? | `(e: React.MouseEvent) => void` | Called with the event when the thumbnail area is clicked. The tile's own click handler runs as well. |
-| `thumbSize`? | `number` | Ignored. Only its difference from `null` is tested, which a `number \| undefined` always satisfies, so the branch it guards is unreachable. |
-| `tileContextClick`? | `(isRightClick?: boolean) => void` | Called before the menu opens, with `true` when the trigger was a right-click. |
-| `withCtrlSelect`? | `(item: FileItemType) => void` | Called with the `item` on a Ctrl- or Cmd-click, instead of selecting. |
-| `withShiftSelect`? | `(item: FileItemType) => void` | Called with the `item` on a Shift-click, instead of selecting. |
+| `contextOptions` | `ContextMenuModel[]` | **Required.** The menu's entries. Required — but the three-dot button appears only when `item` also carries a `contextOptions` key of its own. |
+| `item` | `FileItemType` | **Required.** The file this tile stands for. |
+| `badges` | `ReactElement<unknown, string \| JSXElementConstructor<any>>` | Badges drawn in a row in the thumbnail's top end corner. Give them the class `badges` so a click on them does not select the tile. |
+| `checked` | `boolean` | Whether the tile is selected. |
+| `children` | `ReactElement<unknown, string \| JSXElementConstructor<any>> \| ReactElement<unknown, string \| JSXElementConstructor<any>>…` | The tile's content. Only the first element is rendered, in the row beside the icon; the rest are dropped. |
+| `contentElement` | `ReactElement<unknown, string \| JSXElementConstructor<any>>` | Quick-action buttons, stacked in a column in the thumbnail's top start corner. |
+| `contextButtonSpacerWidth` | `number` | Ignored. Nothing reads it, and it is spread onto the outer element as an unknown attribute. |
+| `dataTestId` | `string` | Value of `data-testid` on the outer element. Default: `"tile"`. |
+| `element` | `ReactElement<unknown, string \| JSXElementConstructor<any>>` | The icon beside the checkbox. Without it neither the icon nor the checkbox is rendered at all. |
+| `forwardRef` | `RefObject<HTMLDivElement \| null>` | Attached to the outer element, and clicked by the component itself on a right-click before the menu is mounted. |
+| `getContextModel` | `() => ContextMenuModel[]` | Builds the menu shown on right-click. Without it the right-click menu never opens. |
+| `hideContextMenu` | `() => void` | Called when the menu closes. |
+| `inProgress` | `boolean` | Replaces the icon and the checkbox with the kit's track loader. |
+| `isActive` | `boolean` | Whether the tile is the one being acted on, which keeps its hover state. |
+| `isBlockingOperation` | `boolean` | Meant to turn the pointer off while an operation runs over the tile, but the rule it adds never matches, so it currently changes nothing. |
+| `isDragging` | `boolean` | Marks the tile as being dragged: the checkbox no longer replaces the icon on hover. It does not dim the tile. |
+| `isEdit` | `boolean` | Renaming state: it removes the icon and the checkbox. |
+| `isHighlight` | `boolean` | Fades `--highlightColor` out of the lower half once, on mount, for a file that a search or a filter has just matched. The kit sets no such colour, so nothing shows until you do. |
+| `onSelect` | `(checked: boolean, item: FileItemType) => void` | Called with the new checked state and the `item` — from the checkbox, from a plain click on the tile, and from a tap on the icon below 600px. |
+| `setSelection` | `(items: FileItem[]) => void` | Called with an empty array before a plain click selects the tile, unless the click landed on an image, an input or an SVG shape. |
+| `showHotkeyBorder` | `boolean` | Draws the accent outline that marks the tile the keyboard is on. |
+| `sideColor` | `string` | Ignored. Nothing reads it, and it is spread onto the outer element as an unknown attribute. |
+| `temporaryIcon` | `ReactElement<unknown, string \| JSXElementConstructor<any>> \| string` | Drawn when there is no `thumbnail`: a URL is fetched as an SVG, an element is rendered as given. |
+| `thumbnail` | `string` | Preview image for the file. It falls back to `temporaryIcon` when the image fails to load. |
+| `thumbnailClick` | `(e: React.MouseEvent) => void` | Called with the event when the thumbnail area is clicked. The tile's own click handler runs as well. |
+| `thumbSize` | `number` | Ignored. Only its difference from `null` is tested, which a `number \| undefined` always satisfies, so the branch it guards is unreachable. |
+| `tileContextClick` | `(isRightClick?: boolean) => void` | Called before the menu opens, with `true` when the trigger was a right-click. |
+| `withCtrlSelect` | `(item: FileItemType) => void` | Called with the `item` on a Ctrl- or Cmd-click, instead of selecting. |
+| `withShiftSelect` | `(item: FileItemType) => void` | Called with the `item` on a Shift-click, instead of selecting. |
 
 </APITable>
 

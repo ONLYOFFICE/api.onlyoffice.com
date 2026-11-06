@@ -1,6 +1,6 @@
 ---
-description: Link tasks to DocSpace rooms using the room selector component.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+description: Link tasks to ONLYOFFICE Apps rooms using the room selector component.
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,13 +8,13 @@ import TabItem from '@theme/TabItem';
 
 # Room selector
 
-This example shows how to use the DocSpace Room Selector within a custom task creation dialog. Each task is linked to a room selection via the Embed SDK.
+This example shows how to use the ONLYOFFICE Apps Room Selector within a custom task creation dialog. Each task is linked to a room selection via the Embed SDK.
 
 Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/task-room-selector.html)
 
 ## Before you start
 
-Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server. You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server. You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of ONLYOFFICE Apps.
 
 <details>
   <summary>Full example</summary>

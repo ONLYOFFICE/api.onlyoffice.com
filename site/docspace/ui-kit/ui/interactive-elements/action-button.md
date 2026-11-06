@@ -79,10 +79,10 @@ export function ClearFilter({ onClear }: { onClear: () => void }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `as`? | `C` | Renders as the given element or component. Defaults to `button`. |
-| `className`? | `string` | Applied to the rendered element, after the component's own class. |
-| `icon`? | `ReactNode` | Icon node rendered before the label text. It is drawn at 12px and filled with the text colour. |
-| `label`? | `ReactNode` | Text of the button. Anything else you pass as `children` is dropped. |
+| `as` | `C` | Renders as the given element or component. Defaults to `button`. |
+| `className` | `string` | Applied to the rendered element, after the component's own class. |
+| `icon` | `ReactNode` | Icon node rendered before the label text. It is drawn at 12px and filled with the text colour. |
+| `label` | `ReactNode` | Text of the button. Anything else you pass as `children` is dropped. |
 
 </APITable>
 

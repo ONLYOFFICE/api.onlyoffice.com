@@ -50,7 +50,7 @@ A plain item with a label, the row a menu is made of; change any other prop live
 
 Each item reads as two lines: the label, and under it an always-visible explanation of what choosing it means (`description`). Use it where picking an item has consequences the label alone cannot convey.
 
-<ThemedImage alt="With Description" width={266} sources={{ light: require('./drop-down-item--with-description-light.png').default, dark: require('./drop-down-item--with-description-dark.png').default }} />
+<ThemedImage alt="With Description" width={242} sources={{ light: require('./drop-down-item--with-description-light.png').default, dark: require('./drop-down-item--with-description-dark.png').default }} />
 
 ### Item Types
 
@@ -86,7 +86,7 @@ Any element can sit at the end of the row, such as the keyboard shortcut of a co
 
 A nested menu level needs a way back: **Header with Back** shows an arrow before the title (`isHeader`, `withHeaderArrow`); click it to see `headerArrowAction` in the Actions panel.
 
-<ThemedImage alt="Header With Arrow" width={266} sources={{ light: require('./drop-down-item--header-with-arrow-light.png').default, dark: require('./drop-down-item--header-with-arrow-dark.png').default }} />
+<ThemedImage alt="Header With Arrow" width={172} sources={{ light: require('./drop-down-item--header-with-arrow-light.png').default, dark: require('./drop-down-item--header-with-arrow-dark.png').default }} />
 
 ### With Text Overflow
 
@@ -129,51 +129,51 @@ export function RenameItem({ onRename }: { onRename: () => void }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `additionalElement`? | `ReactNode` | Additional element to render at the end of the item, after all other content |
-| `badgeLabel`? | `string` | Text of the paid badge, used instead of the translated default. |
-| `betaLabel`? | `string` | Text of the beta badge, used instead of the host's own constant. |
-| `checked`? | `boolean` | Whether the toggle switch is in a checked state |
-| `children`? | `ReactNode` | Content of the item, used **instead of** `label` — it is rendered only when `label` is empty, not alongside it. `additionalElement` is the one that comes after the label. |
-| `className`? | `string` | CSS class name to apply to the root element for custom styling |
-| `description`? | `ReactNode` | Secondary line rendered under the item label and always visible - what choosing this item means. The item grows to fit it. |
-| `disabled`? | `boolean` | Stops `onClick` firing and greys the item out. The enclosing `DropDown` also drops disabled items from its list unless `showDisabledItems` is set. Default: `false`. |
-| `externalLinkPath`? | `string` | URL to navigate to when the external link icon is clicked |
-| `fillIcon`? | `boolean` | Whether the icon should be filled with the current text color. If false, uses original icon colors. Default: `true`. |
-| `headerArrowAction`? | `() => void` | Callback function triggered when the header's back arrow is clicked |
-| `height`? | `number` | Height the enclosing `DropDown` reserves for this item in its virtualised list, in pixels. It does not style the item — the row is 32px tall until you also set `--drop-down-item-height` — and it reaches the DOM as an attribute. |
-| `heightTablet`? | `number` | The same, used instead of `height` on a tablet-width viewport. |
-| `icon`? | `ComponentClass<any, any> \| FunctionComponent<any> \| ReactElement<unknown, string \| JSXElementConstructor<any>> \| string` | Icon at the start of the item. A component or element is rendered as given; a string is a URL — a path containing `.svg` or `images/` is fetched and inlined, anything else becomes an `<img>`. |
-| `id`? | `string` | HTML ID attribute for the root element |
-| `isActive`? | `boolean` | Whether the item is in an active/pressed state. Default: `false`. |
-| `isActiveDescendant`? | `boolean` | Whether the item is the current active descendant for keyboard navigation |
-| `isBeta`? | `boolean` | Whether to show a beta badge next to the item |
-| `isHeader`? | `boolean` | Whether to render the item as a header with special styling. Default: `false`. |
-| `isModern`? | `boolean` | Whether to use modern compact styling with minimal padding |
-| `isPaidBadge`? | `boolean` | Whether to show a paid badge next to the item |
-| `isSelected`? | `boolean` | Whether the item is currently selected in a menu context |
-| `isSeparator`? | `boolean` | Whether to render the item as a separator line instead of content. Default: `false`. |
-| `isSubMenu`? | `boolean` | Whether this item opens a submenu when clicked. Default: `false`. |
-| `label`? | `ReactNode` | Primary text content or React node to display in the item. Default: `""`. |
-| `minWidth`? | `string` | Sets minimum width for the root element |
-| `noActive`? | `boolean` | Whether to disable the active/pressed state styling. Default: `false`. |
-| `noHover`? | `boolean` | Whether to disable the hover state styling. Default: `false`. |
-| `onClick`? | `(e: React.MouseEvent<HTMLElement> \| React.ChangeEvent<HTMLInputElement>) => void` | Called on a click on the item, and on a change of the toggle when `withToggle` is set — hence the event union. It is not called while the item is disabled. |
-| `onClickSelectedItem`? | `() => void` | Callback function triggered when a selected item is clicked |
-| `onExternalLinkClick`? | `() => void` | Callback triggered when the external link icon is clicked |
-| `onMouseDown`? | `(e: React.MouseEvent<HTMLElement>) => void` | Callback function triggered on mouse down |
-| `paidLabel`? | `string` | Text of the paid badge, used instead of the translated default. |
-| `setOpen`? | `(open: boolean) => void` | Called with `false` after every click, disabled ones included, for the enclosing menu to close itself. |
-| `stopMouseDownPropagation`? | `boolean` | When true, stops mousedown propagation to prevent click-outside detection from closing dropdown before click fires |
-| `style`? | `CSSProperties` | Inline CSS styles to apply to the root element |
-| `tabIndex`? | `number` | Position in the tab order. The default of -1 keeps the item off it. Default: `-1`. |
-| `testId`? | `string` | Value of `data-testid` on the item. Default: `"drop-down-item"`. |
-| `textOverflow`? | `boolean` | Whether text content should be truncated with ellipsis when it overflows. Default: `false`. |
-| `tooltip`? | `string` | Hint shown when the item is disabled, on a touch device only. It needs `RootTooltip` mounted, and it does nothing on an enabled item or with a pointer. |
-| `truncateText`? | `boolean` | Whether to apply additional text truncation styling to the label |
-| `withExternalLink`? | `boolean` | Whether to show an external link icon at the end of the item |
-| `withHeaderArrow`? | `boolean` | Whether to show a back arrow icon when item is a header |
-| `withoutIcon`? | `boolean` | Whether to hide the icon element even when an icon prop is provided. Default: `false`. |
-| `withToggle`? | `boolean` | Whether to show a toggle switch at the end of the item |
+| `additionalElement` | `ReactNode` | Additional element to render at the end of the item, after all other content |
+| `badgeLabel` | `string` | Text of the paid badge, used instead of the translated default. |
+| `betaLabel` | `string` | Text of the beta badge, used instead of the host's own constant. |
+| `checked` | `boolean` | Whether the toggle switch is in a checked state |
+| `children` | `ReactNode` | Content of the item, used **instead of** `label` — it is rendered only when `label` is empty, not alongside it. `additionalElement` is the one that comes after the label. |
+| `className` | `string` | CSS class name to apply to the root element for custom styling |
+| `description` | `ReactNode` | Secondary line rendered under the item label and always visible - what choosing this item means. The item grows to fit it. |
+| `disabled` | `boolean` | Stops `onClick` firing and greys the item out. The enclosing `DropDown` also drops disabled items from its list unless `showDisabledItems` is set. Default: `false`. |
+| `externalLinkPath` | `string` | URL to navigate to when the external link icon is clicked |
+| `fillIcon` | `boolean` | Whether the icon should be filled with the current text color. If false, uses original icon colors. Default: `true`. |
+| `headerArrowAction` | `() => void` | Callback function triggered when the header's back arrow is clicked |
+| `height` | `number` | Height the enclosing `DropDown` reserves for this item in its virtualised list, in pixels. It does not style the item — the row is 32px tall until you also set `--drop-down-item-height` — and it reaches the DOM as an attribute. |
+| `heightTablet` | `number` | The same, used instead of `height` on a tablet-width viewport. |
+| `icon` | `ComponentClass<any, any> \| FunctionComponent<any> \| ReactElement<unknown, string \| JSXElementConstructor<any>> \| string` | Icon at the start of the item. A component or element is rendered as given; a string is a URL — a path containing `.svg` or `images/` is fetched and inlined, anything else becomes an `<img>`. |
+| `id` | `string` | HTML ID attribute for the root element |
+| `isActive` | `boolean` | Whether the item is in an active/pressed state. Default: `false`. |
+| `isActiveDescendant` | `boolean` | Whether the item is the current active descendant for keyboard navigation |
+| `isBeta` | `boolean` | Whether to show a beta badge next to the item |
+| `isHeader` | `boolean` | Whether to render the item as a header with special styling. Default: `false`. |
+| `isModern` | `boolean` | Whether to use modern compact styling with minimal padding |
+| `isPaidBadge` | `boolean` | Whether to show a paid badge next to the item |
+| `isSelected` | `boolean` | Whether the item is currently selected in a menu context |
+| `isSeparator` | `boolean` | Whether to render the item as a separator line instead of content. Default: `false`. |
+| `isSubMenu` | `boolean` | Whether this item opens a submenu when clicked. Default: `false`. |
+| `label` | `ReactNode` | Primary text content or React node to display in the item. Default: `""`. |
+| `minWidth` | `string` | Sets minimum width for the root element |
+| `noActive` | `boolean` | Whether to disable the active/pressed state styling. Default: `false`. |
+| `noHover` | `boolean` | Whether to disable the hover state styling. Default: `false`. |
+| `onClick` | `(e: React.MouseEvent<HTMLElement> \| React.ChangeEvent<HTMLInputElement>) => void` | Called on a click on the item, and on a change of the toggle when `withToggle` is set — hence the event union. It is not called while the item is disabled. |
+| `onClickSelectedItem` | `() => void` | Callback function triggered when a selected item is clicked |
+| `onExternalLinkClick` | `() => void` | Callback triggered when the external link icon is clicked |
+| `onMouseDown` | `(e: React.MouseEvent<HTMLElement>) => void` | Callback function triggered on mouse down |
+| `paidLabel` | `string` | Text of the paid badge, used instead of the translated default. |
+| `setOpen` | `(open: boolean) => void` | Called with `false` after every click, disabled ones included, for the enclosing menu to close itself. |
+| `stopMouseDownPropagation` | `boolean` | When true, stops mousedown propagation to prevent click-outside detection from closing dropdown before click fires |
+| `style` | `CSSProperties` | Inline CSS styles to apply to the root element |
+| `tabIndex` | `number` | Position in the tab order. The default of -1 keeps the item off it. Default: `-1`. |
+| `testId` | `string` | Value of `data-testid` on the item. Default: `"drop-down-item"`. |
+| `textOverflow` | `boolean` | Whether text content should be truncated with ellipsis when it overflows. Default: `false`. |
+| `tooltip` | `string` | Hint shown when the item is disabled, on a touch device only. It needs `RootTooltip` mounted, and it does nothing on an enabled item or with a pointer. |
+| `truncateText` | `boolean` | Whether to apply additional text truncation styling to the label |
+| `withExternalLink` | `boolean` | Whether to show an external link icon at the end of the item |
+| `withHeaderArrow` | `boolean` | Whether to show a back arrow icon when item is a header |
+| `withoutIcon` | `boolean` | Whether to hide the icon element even when an icon prop is provided. Default: `false`. |
+| `withToggle` | `boolean` | Whether to show a toggle switch at the end of the item |
 
 </APITable>
 

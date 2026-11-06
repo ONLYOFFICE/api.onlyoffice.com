@@ -35,14 +35,14 @@ import APITable from '@site/src/components/APITable/APITable';
 | 参数 | 类型 | 是否必填 | 描述 |
 | --------- | ---- | -------- | ----------- |
 | async | boolean | optional | 转换请求类型：异步与否。支持的值：**true**，**false**。使用异步请求类型时，响应立即形成。在这种情况下，要获得结果，必须在转换完成之前发送不更改参数的请求。默认值为 **false**。 |
-| codePage | integer | optional | 从 *csv* 或 *txt* 格式转换时的文件编码。主要支持的值：**932** - 日语 (Shift-JIS)，**950** - 繁体中文 (Big5)，**1250** - 中欧 (Windows)，**1251** - 西里尔字母 (Windows)，**65001** - Unicode (UTF-8)。您可以在[此文件](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js)中找到所有支持的值。 |
-| delimiter | integer | optional | 从 *csv* 格式转换时用于分隔值的定界符。支持的值：**0** - 没有定界符，**1** - 制表符，**2** - 分号，**3** - 冒号，**4** - 逗号，**5** - 空格。 |
+| codePage | integer | optional | 从 *csv* 或 *txt* 格式转换时的文件编码。主要支持的值：**932**：日语（Shift-JIS），**950**：繁体中文（Big5），**1250**：中欧（Windows），**1251**：西里尔字母（Windows），**65001** - Unicode（UTF-8）。您可以在[此文件](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js)中找到所有支持的值。 |
+| delimiter | integer | optional | 从 *csv* 格式转换时用于分隔值的定界符。支持的值：**0**：没有定界符，**1**：制表符，**2**：分号，**3**：冒号，**4**：逗号，**5**：空格。 |
 | documentLayout | object | optional | 文档布局，该布局指定参数，用于说明将表单打印为 *pdf* 文档还是图像。 |
 | documentLayout.drawPlaceHolders | boolean | optional | 是否将绘制占位符。 |
 | documentLayout.drawFormHighlight | boolean | optional | 表单是否突出显示。 |
 | documentLayout.isPrint | boolean | optional | 打印模式是打开还是关闭。此参数仅用于将 *docx* 转换为 *pdf*。如果此参数等于 **true**，则使用 *drawPlaceHolders* 和 *drawFormHighlight* 标志，如上所述。如果此参数为 **false**，则 *drawFormHighlight* 标志不起作用，并且 *drawPlaceHolders* 参数允许将表单保存为 *pdf* 格式。默认值为 **false**。 |
 | documentRenderer | object | optional | 从 *pdf*、*xps*、*oxps* 转换时的文档渲染器。 |
-| documentRenderer.textAssociation | string | optional | 渲染模式：**blockChar** - 所有文本都由单个字符转换，**blockLine** - 所有文本都由单独的行转换，**plainLine** - 所有文本都转换为纯文本，每行作为单独的段落，**plainParagraph** - 所有文本都转换为纯文本，行被组合成段落。默认值为 **plainLine**。 |
+| documentRenderer.textAssociation | string | optional | 渲染模式：**blockChar**：所有文本都由单个字符转换，**blockLine**：所有文本都由单独的行转换，**plainLine**：所有文本都转换为纯文本，每行作为单独的段落，**plainParagraph**：所有文本都转换为纯文本，行被组合成段落。默认值为 **plainLine**。 |
 | filetype | string | required | 要转换的文档文件的类型。 |
 | key | string | required | 文档标识符，用于明确标识文档文件。 |
 | outputtype | string | required | 生成的转换文档类型。从 7.0 版开始，可以指定文件格式而不是扩展名：**ooxml**（转换为 *docx*、*docm*、*xlsx*、*xlsm*、*pptx* 或 *pptm*），**odf**（转换为 *odt*、*ods* 或 *odp*）。 |
@@ -67,7 +67,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | spreadsheetLayout.pageSize.width | string | optional | 设置输出 PDF 文件的页面宽度。默认值为 **210mm**。 |
 | spreadsheetLayout.scale | integer | optional | 允许设置输出 PDF 文件的缩放比例。默认值为 **100**。 |
 | thumbnail | object | optional | 在将图像格式（*bmp*、*gif*、*jpg*、*png*）指定为 *outputtype* 时的缩略图设置。 |
-| thumbnail.aspect | integer | optional | 使图像适合指定的高度和宽度的模式：**0** - 拉伸文件以适应高度和宽度，**1** - 保持图像的外观，**2** - 页面的米制尺寸被转换为 96dpi 的像素。默认值为 **2**。 |
+| thumbnail.aspect | integer | optional | 使图像适合指定的高度和宽度的模式：**0**：拉伸文件以适应高度和宽度，**1**：保持图像的外观，**2**：页面的米制尺寸被转换为 96dpi 的像素。默认值为 **2**。 |
 | thumbnail.first | boolean | optional | 是否应仅为首页或所有文档页面生成缩略图。如果为 false，将创建包含所有页面缩略图的 zip 存档。默认值为 **true**。 |
 | thumbnail.height | integer | optional | 缩略图高度（以像素为单位）。默认值为 **100**。 |
 | thumbnail.width | integer | optional | 缩略图宽度（以像素为单位）。默认值为 **100**。 |
@@ -75,12 +75,12 @@ import APITable from '@site/src/components/APITable/APITable';
 | token | string | required by configuration | 以[令牌](../signature/request/token-in-body.md#convert-document)的形式添加到 **ONLYOFFICE 文档**配置的加密签名。 |
 | url | string | required | 要转换的文档的绝对 URL。使用本地链接时请务必添加[令牌](../../get-started/how-it-works/security.md)。否则会出现错误。 |
 | watermark | object | optional | 一个 JSON 对象，其中包含水印的[属性](../../../plugins/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md)，在转换过程中将其插入到 pdf 和图像文件中。 |
-| watermark.align | integer | optional | 水印形状中的垂直文本对齐方式：**0** - 底部、**1** - 中心、**4** - 顶部。 |
+| watermark.align | integer | optional | 水印形状中的垂直文本对齐方式：**0**：底部、**1**：中心、**4**：顶部。 |
 | watermark.fill | integer[] \| string | optional | 以 RGB 格式表示的水印填充颜色，或图像的 URL（base64 支持：*data:image/png;...*）。空数组 \[] 表示水印没有填充。 |
 | watermark.height | integer | optional | 以毫米为单位测量的水印高度。 |
 | watermark.margins | integer[] | optional | 水印形状中的文本边距（以毫米为单位）。 |
 | watermark.paragraphs | object[] | optional | 当前水印中的段落及其属性的数组。 |
-| watermark.paragraphs.align | integer | optional | 当前段落中的水平文本对齐方式：**0** - 右、**1** - 左、**2** - 居中、**3** - 两端对齐。 |
+| watermark.paragraphs.align | integer | optional | 当前段落中的水平文本对齐方式：**0**：右、**1**：左、**2**：居中、**3**：两端对齐。 |
 | watermark.paragraphs.fill | integer[] | optional | 以 RGB 格式表示的段落高亮。空数组 \[] 表示该段落不突出显示。 |
 | watermark.paragraphs.linespacing | integer | optional | 当前段落中的文本行间距。 |
 | watermark.paragraphs.runs | object[] | optional | 包含当前段落中的 runs 及其属性的数组。 |

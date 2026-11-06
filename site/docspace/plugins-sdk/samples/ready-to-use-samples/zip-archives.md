@@ -1,17 +1,17 @@
 ---
 description: Open and extract ZIP archives with the ZIP archives plugin.
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # ZIP archives
 
-Open and extract ZIP archives directly in DocSpace.
+Open and extract ZIP archives directly in ONLYOFFICE Apps.
 
 ![ZIP archives](/assets/images/docspace/zip-archives.png#gh-light-mode-only)![ZIP archives](/assets/images/docspace/zip-archives.dark.png#gh-dark-mode-only)
 
 ## Installation
 
-Available by default in the DocSpace SaaS solution.
+Available by default in the ONLYOFFICE Apps SaaS solution.
 
 You can enable it following the instructions [here](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins).
 
@@ -19,13 +19,13 @@ You can enable it following the instructions [here](/docspace/plugins-sdk/usage-
 
 To start working with the plugin, you don't need to change any settings — the ZIP archives plugin has no configurable parameters.
 
-If you want to view plugin information, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **ZIP archives** plugin. The settings panel displays metadata only, such as the author, version, status, homepage, and description.
+If you want to view plugin information, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **zip-archives** plugin. The settings panel displays metadata only, such as the author, version, status, homepage, and description.
 
 ## Usage
 
 ### Working with archive files
 
-The plugin enables you to work with ZIP archives directly in DocSpace. To get started, right-click on an archive file and open the **More options** dropdown menu:
+The plugin enables you to work with ZIP archives directly in ONLYOFFICE Apps. To get started, right-click on an archive file and open the **More options** dropdown menu:
 
 - **Open archive** - view the contents of the archive without extracting it. You can also extract specific files directly from the preview window.
 - **Unzip it** submenu:
@@ -61,8 +61,8 @@ All the required files are described [here](/docspace/plugins-sdk/usage-sdk/plug
 
 The following plugin interfaces are used:
 
-- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md). Required for each plugin. It contains the plugin [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status) (PluginStatus) variable, used to embed the plugin into the DocSpace.
-- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md). Required for API interactions with DocSpace.
+- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md). Required for each plugin. It contains the plugin [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status) (PluginStatus) variable, used to embed the plugin into ONLYOFFICE Apps.
+- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md). Required for API interactions with ONLYOFFICE Apps.
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) and [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md). Used to implement context menu actions: **Open archive**; the **Unzip it** submenu (**Choose a location**, **Unzip here**) for archive files; the **Archive it** submenu (**Archive here**, **Choose a location**) for folders; and **Archive selected item** / **Archive selected items** for files, images, and videos.
 - [IFilePlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IFilePlugin.md) and [IFileItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md). Used to register the `.zip` file type and handle archive operations.
 

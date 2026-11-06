@@ -95,18 +95,18 @@ export function ReminderTime({ day }: { day: DateTime }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `className`? | `string` | Applied to the outermost element. Default: `""`. |
-| `classNameInput`? | `string` | Prefix for the two fields' class names: they become `<classNameInput>-hours-input` and `-minutes-input`. Left out, the fields get no extra class. |
-| `focusOnRender`? | `boolean` | Whether the hours field is selected on mount. Default: `false`. |
-| `forwardedRef`? | `RefObject<HTMLDivElement \| null>` | Ref to the outermost element. |
-| `hasError`? | `boolean` | Whether the group is drawn in its error colours; they stay while a field is focused. Default: `false`. |
-| `initialTime`? | `Date \| DateTime<boolean> \| string` | Time the fields start on. It is read once, on mount; changing it afterwards does nothing. Its **date** part is carried into every value `onChange` reports, so pass a full date-time if that matters. Midnight today is used when it is left out. |
-| `isTwelveHourFormat`? | `boolean` | Whether hours run 1 to 12 rather than 0 to 23. It changes the fields only — no AM/PM control is rendered — and requires `meridiem`. |
-| `meridiem`? | `string` | `"AM"` or `"PM"`, used when parsing the typed time in 12-hour mode. You own this value and the control that changes it. |
-| `onBlur`? | `() => void` | Called when typing completes the minutes field — two digits, a single digit above 5, a third digit or a value above 59 — not when the field loses focus. |
-| `onChange`? | `(date: DateTime) => void` | Called on every accepted keystroke with a full `DateTime` — the date from `initialTime` combined with the typed time. Default: `() => {}`. |
-| `tabIndex`? | `number` | Position of both fields in the tab order. Left out, both take their natural place in it. |
-| `testId`? | `string` | `data-testid` of the outermost element. Default: `"time-picker"`. |
+| `className` | `string` | Applied to the outermost element. Default: `""`. |
+| `classNameInput` | `string` | Prefix for the two fields' class names: they become `<classNameInput>-hours-input` and `-minutes-input`. Left out, the fields get no extra class. |
+| `focusOnRender` | `boolean` | Whether the hours field is selected on mount. Default: `false`. |
+| `forwardedRef` | `RefObject<HTMLDivElement \| null>` | Ref to the outermost element. |
+| `hasError` | `boolean` | Whether the group is drawn in its error colours; they stay while a field is focused. Default: `false`. |
+| `initialTime` | `Date \| DateTime<boolean> \| string` | Time the fields start on. It is read once, on mount; changing it afterwards does nothing. Its **date** part is carried into every value `onChange` reports, so pass a full date-time if that matters. Midnight today is used when it is left out. |
+| `isTwelveHourFormat` | `boolean` | Whether hours run 1 to 12 rather than 0 to 23. It changes the fields only — no AM/PM control is rendered — and requires `meridiem`. |
+| `meridiem` | `string` | `"AM"` or `"PM"`, used when parsing the typed time in 12-hour mode. You own this value and the control that changes it. |
+| `onBlur` | `() => void` | Called when typing completes the minutes field — two digits, a single digit above 5, a third digit or a value above 59 — not when the field loses focus. |
+| `onChange` | `(date: DateTime) => void` | Called on every accepted keystroke with a full `DateTime` — the date from `initialTime` combined with the typed time. Default: `() => {}`. |
+| `tabIndex` | `number` | Position of both fields in the tab order. Left out, both take their natural place in it. |
+| `testId` | `string` | `data-testid` of the outermost element. Default: `"time-picker"`. |
 
 </APITable>
 

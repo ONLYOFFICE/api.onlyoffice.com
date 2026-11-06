@@ -96,16 +96,16 @@ export function Listing() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children` | `ReactNode` | The tiles. Each one must carry an `item` prop; a child without it is silently dropped, including plain markup. |
-| `className`? | `string` | Added before the component's own class on the outer element. |
-| `headingFiles`? | `ReactNode` | Heading above the files group. It is rendered only when that group has something in it. |
-| `headingFolders`? | `ReactNode` | Heading above the folders group. It is rendered only when that group has something in it. |
-| `id`? | `string` | Value of `id` on the outer element. Default: `"tileContainer"`. |
-| `infiniteGrid`? | `ComponentType<{ children: React.ReactNode; isRooms?: boolean; isTemplates?: boolean; }>` | The virtualising grid to render the tiles into. It is told whether the current run is rooms or templates. |
-| `isDesc`? | `boolean` | Flips the arrow class on both headings. It sorts nothing. |
-| `noSelect`? | `boolean` | Turns off text selection across the whole container. |
-| `style`? | `CSSProperties` | Inline style of the outer element, and where `--tile-container-gap` goes. |
-| `useReactWindow`? | `boolean` | Hands the four groups to `infiniteGrid` instead of wrapping each in its own grid. Without an `infiniteGrid` alongside it the tiles are emitted with no grid at all. |
+| `children` | `ReactNode` | **Required.** The tiles. Each one must carry an `item` prop; a child without it is silently dropped, including plain markup. |
+| `className` | `string` | Added before the component's own class on the outer element. |
+| `headingFiles` | `ReactNode` | Heading above the files group. It is rendered only when that group has something in it. |
+| `headingFolders` | `ReactNode` | Heading above the folders group. It is rendered only when that group has something in it. |
+| `id` | `string` | Value of `id` on the outer element. Default: `"tileContainer"`. |
+| `infiniteGrid` | `ComponentType<{ children: React.ReactNode; isRooms?: boolean; isTemplates?: boolean; }>` | The virtualising grid to render the tiles into. It is told whether the current run is rooms or templates. |
+| `isDesc` | `boolean` | Flips the arrow class on both headings. It sorts nothing. |
+| `noSelect` | `boolean` | Turns off text selection across the whole container. |
+| `style` | `CSSProperties` | Inline style of the outer element, and where `--tile-container-gap` goes. |
+| `useReactWindow` | `boolean` | Hands the four groups to `infiniteGrid` instead of wrapping each in its own grid. Without an `infiniteGrid` alongside it the tiles are emitted with no grid at all. |
 
 </APITable>
 

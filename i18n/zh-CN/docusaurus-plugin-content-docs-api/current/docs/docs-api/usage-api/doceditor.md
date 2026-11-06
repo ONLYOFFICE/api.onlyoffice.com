@@ -71,10 +71,10 @@ iframe 路径中的应用程序取决于 [`documentType`](./config/config.md#doc
 
 由于宿主页面的 CSS 无法作用于 iframe 内部，编辑器的外观通过[配置对象](./config/config.md)进行配置。编辑器的布局保持不变，但您可以更改其品牌标识、颜色以及向用户显示的界面元素集合：
 
-- [customization](./config/editor/customization/customization-standard-branding.md) - 徽标、页眉颜色以及界面元素的可见性。
-- [uiTheme](./config/editor/customization/customization-standard-branding.md#uitheme) - 界面主题，包括添加到 ONLYOFFICE 文档 服务器的[自定义主题](../get-started/how-it-works/customizing-themes.md)。
-- [type](./config/config.md#type) - 界面布局：`desktop`、`mobile` 或 [`embedded`](./config/editor/embedded.md)。
-- [plugins](./config/editor/plugins.md) - 添加到编辑器界面的功能。
+- [customization](./config/editor/customization/customization-standard-branding.md)：徽标、页眉颜色以及界面元素的可见性。
+- [uiTheme](./config/editor/customization/customization-standard-branding.md#uitheme)：界面主题，包括添加到 ONLYOFFICE 文档 服务器的[自定义主题](../get-started/how-it-works/customizing-themes.md)。
+- [type](./config/config.md#type)：界面布局：`desktop`、`mobile` 或 [`embedded`](./config/editor/embedded.md)。
+- [plugins](./config/editor/plugins.md)：添加到编辑器界面的功能。
 
 ## 实例方法
 

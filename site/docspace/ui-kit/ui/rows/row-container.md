@@ -93,19 +93,19 @@ export function FileList({ names }: { names: string[] }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children` | `ReactNode[]` | The rows. It must be an array, one entry per row. |
-| `className`? | `string` | Applied to the container. |
-| `fetchMoreFiles`? | `(params: IndexRange) => Promise<void>` | Called with the range to load when the user scrolls near the end. |
-| `filesLength`? | `number` | How many rows are loaded so far. Read by the virtual list only. |
-| `hasMoreFiles`? | `boolean` | Whether there is another page to ask for. |
-| `id`? | `string` | Id of the container. The virtual list finds the container by the literal id `rowContainer` to measure its width, so changing this — or rendering two containers — leaves the rows with a width of zero. Default: `"rowContainer"`. |
-| `itemCount`? | `number` | How many rows there are in total. Read by the virtual list only. |
-| `itemHeight`? | `number` | Height of one row in pixels, which the virtualised list uses for every row alike. A row that is taller is clipped. Default: `50`. |
-| `manualHeight`? | `string` | Height of the container as a CSS length, read only while `useReactWindow` is on. Without it the container is 100% of its parent, which has to have a height of its own; with virtualisation off the container is as tall as its rows and this prop does nothing. |
-| `noSelect`? | `boolean` | Disables text selection, which is on by default inside the container. |
-| `onScroll`? | `() => void` | Sets a callback function that is called when the list scroll positions change |
-| `style`? | `CSSProperties` | Applied to the container. |
-| `useReactWindow`? | `boolean` | Whether the rows are virtualised and paged in as the user scrolls. Turn it off for a short list: the virtual list needs the portal's own scroll container and measures its width by a literal element id. Default: `true`. |
+| `children` | `ReactNode[]` | **Required.** The rows. It must be an array, one entry per row. |
+| `className` | `string` | Applied to the container. |
+| `fetchMoreFiles` | `(params: IndexRange) => Promise<void>` | Called with the range to load when the user scrolls near the end. |
+| `filesLength` | `number` | How many rows are loaded so far. Read by the virtual list only. |
+| `hasMoreFiles` | `boolean` | Whether there is another page to ask for. |
+| `id` | `string` | Id of the container. The virtual list finds the container by the literal id `rowContainer` to measure its width, so changing this — or rendering two containers — leaves the rows with a width of zero. Default: `"rowContainer"`. |
+| `itemCount` | `number` | How many rows there are in total. Read by the virtual list only. |
+| `itemHeight` | `number` | Height of one row in pixels, which the virtualised list uses for every row alike. A row that is taller is clipped. Default: `50`. |
+| `manualHeight` | `string` | Height of the container as a CSS length, read only while `useReactWindow` is on. Without it the container is 100% of its parent, which has to have a height of its own; with virtualisation off the container is as tall as its rows and this prop does nothing. |
+| `noSelect` | `boolean` | Disables text selection, which is on by default inside the container. |
+| `onScroll` | `() => void` | Sets a callback function that is called when the list scroll positions change |
+| `style` | `CSSProperties` | Applied to the container. |
+| `useReactWindow` | `boolean` | Whether the rows are virtualised and paged in as the user scrolls. Turn it off for a short list: the virtual list needs the portal's own scroll container and measures its width by a literal element id. Default: `true`. |
 
 </APITable>
 

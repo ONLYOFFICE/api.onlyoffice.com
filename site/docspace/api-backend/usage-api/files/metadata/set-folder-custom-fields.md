@@ -6,7 +6,7 @@
 
 Set folder custom fields
 
-Sets the custom text fields of a folder or a room: free-form name and value pairs that need no template. The caller needs the right to edit the folder; for a room that is its manager. A field is addressed by its name regardless of case: a listed name gets the value, a null or empty value removes the field, the names not listed are left alone. A name the portal has not seen yet creates the field for the whole portal, and a name no entry holds a value for any more is dropped. A name is at most 255 characters, a value at most 8000, a name may be listed once and a folder holds at most 50 custom fields. The custom fields never cascade to the content of the folder. The write finishes in the request; the values take part in the free text search and in the `metadataFilters` of the listings. The answer is the custom fields of the folder after the write. An empty list, a blank, repeated or over-long name, an over-long value or more than 50 fields is answered with 400; a folder the caller cannot edit with 403; a folder that does not exist with 404.
+Sets the custom text fields of a folder or a room: free-form name and value pairs that need no template. The caller needs the right to create in the folder (a room manager or a content creator); for a room that is its manager. A field is addressed by its name regardless of case: a listed name gets the value, a null or empty value removes the field, the names not listed are left alone. A new name creates the field for the whole portal, and a name no entry holds a value for any more is dropped. A name is at most 255 characters, a value at most 8000, a name may be listed once and a folder holds at most 50 custom fields. The custom fields never cascade to the content of the folder. The write finishes in the request. The answer is the custom fields of the folder after the write. An empty list, a blank, repeated or over-long name, an over-long value or more than 50 fields is answered with 400; a caller without the right to create in the folder with 403; a folder that does not exist with 404.
 
 ## Parameters
 
@@ -21,8 +21,8 @@ Sets the custom text fields of a folder or a room: free-form name and value pair
 |------------- | ------------- | ------------- | -------------|
 | **200** | The custom fields of the folder with their values | [**CustomFieldValueArrayWrapper**](../../models/custom-field-value-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | Invalid custom fields or too many of them | - | - |
-| **403** | You don't have enough permission to perform the operation | - | - |
-| **404** | Folder not found | - | - |
+| **403** | The caller cannot create in the folder, or is not the manager of the room | - | - |
+| **404** | No folder or room with this identifier exists | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

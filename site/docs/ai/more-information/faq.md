@@ -18,7 +18,7 @@ Most often the provider's endpoint does not allow the plugin's origin, so the br
 
 ## What is the difference between the AI plugin and the AI agent?
 
-The **AI plugin** is the full AI integration available via the **AI** tab in the top toolbar. It provides features such as Chatbot, Summarization, Translation, and Grammar & Spelling checking.
+The **AI plugin** is the full AI integration available via the **AI Tools** tab in the top toolbar. It provides features such as Chatbot, Summarization, Translation, and Grammar & Spelling checking.
 
 The **AI agent** is a lightweight inline assistant invoked with `Ctrl + /` directly inside the editor. It lets you execute editing tasks through natural language without leaving the document. The agent is a beta feature of the AI plugin. See [AI agent](../guides/ai-agent.md) for details.
 

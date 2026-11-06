@@ -53,13 +53,10 @@
   --card-border-color: #ededed;
   --card-background-color: var(--ifm-card-background-color);
 
-  /* START OPENAPI */
-  --openapi-input-background: var(--ifm-color-emphasis-0) !important;
   --ifm-pre-background: var(--ifm-color-emphasis-100);
-  /* END OPENAPI */
 
   --ifm-heading-color: var(--ifm-font-color-base);
-  --ifm-card-background-color: var(--openapi-card-background-color);
+  --ifm-card-background-color: var(--ifm-color-gray-100);
 
   --color-foreground-link: #ff6e3d;
   --color-foreground-accent: var(--color-foreground-link);
@@ -153,6 +150,7 @@ html[data-theme='dark'] {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
   --card-border-color: #454545;
+  --ifm-card-background-color: var(--ifm-color-gray-900);
 
   /* START STATUS OPENAPI */
   --ifm-color-get: #0f6c47;
@@ -181,7 +179,7 @@ html[data-theme='dark'] {
 }
 
 /* START CODE */
-pre code:not(.openapi-explorer__code-block-lines) {
+pre code {
   background-color: var(--ifm-code-background);
 }
 /* END CODE */

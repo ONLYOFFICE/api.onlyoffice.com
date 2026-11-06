@@ -138,17 +138,17 @@ export function RoomTypePicker({ onPick }: { onPick: () => void }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `isOpen` | `boolean` | Whether the row is drawn as opened: an accent border on `dropdownButton`, and its arrow turned the other way. |
-| `onClick` | `React.MouseEventHandler<HTMLElement>` | Called with the event when the row is clicked, once per click wherever inside the row it lands. A disabled row does not call it at all. |
-| `selectedId` | `number \| string` | Written to `data-selected-id` and read by nothing else. Required all the same. |
-| `disabledFormRoom`? | `boolean` | Greys the row out while `roomType` is `FormRoom`, marks it `aria-disabled` and stops it calling `onClick`. |
-| `disabledPublicRoom`? | `boolean` | Greys the row out while `roomType` is `PublicRoom`, marks it `aria-disabled` and stops it calling `onClick`. |
-| `id`? | `string` | `id` of the outer element. |
-| `isFormSection`? | `boolean` | Uses the form-set wording for the title and the description instead of the room type's. |
-| `isTemplate`? | `boolean` | Replaces the title and the description with the "from template" wording, whatever `roomType` says, and switches the glyph to the template one. |
-| `isTemplateRoom`? | `boolean` | Switches the glyph to the template variant of `roomType` without touching the texts. |
-| `roomType`? | `RoomsType` | Which room type the row describes. It picks the glyph, the title and the description; an unknown value leaves both texts empty. |
-| `type`? | `"dropdownButton" \| "dropdownItem" \| "listItem"` | Which layout to render. Default: `"listItem"`. |
+| `isOpen` | `boolean` | **Required.** Whether the row is drawn as opened: an accent border on `dropdownButton`, and its arrow turned the other way. |
+| `onClick` | `React.MouseEventHandler<HTMLElement>` | **Required.** Called with the event when the row is clicked, once per click wherever inside the row it lands. A disabled row does not call it at all. |
+| `selectedId` | `number \| string` | **Required.** Written to `data-selected-id` and read by nothing else. Required all the same. |
+| `disabledFormRoom` | `boolean` | Greys the row out while `roomType` is `FormRoom`, marks it `aria-disabled` and stops it calling `onClick`. |
+| `disabledPublicRoom` | `boolean` | Greys the row out while `roomType` is `PublicRoom`, marks it `aria-disabled` and stops it calling `onClick`. |
+| `id` | `string` | `id` of the outer element. |
+| `isFormSection` | `boolean` | Uses the form-set wording for the title and the description instead of the room type's. |
+| `isTemplate` | `boolean` | Replaces the title and the description with the "from template" wording, whatever `roomType` says, and switches the glyph to the template one. |
+| `isTemplateRoom` | `boolean` | Switches the glyph to the template variant of `roomType` without touching the texts. |
+| `roomType` | `RoomsType` | Which room type the row describes. It picks the glyph, the title and the description; an unknown value leaves both texts empty. |
+| `type` | `"dropdownButton" \| "dropdownItem" \| "listItem"` | Which layout to render. Default: `"listItem"`. |
 
 </APITable>
 

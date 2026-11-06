@@ -14,7 +14,7 @@ sidebar_position: -1
 
    你将获得一个地址为 `https://github.com/YOUR-USERNAME/onlyoffice.github.io` 的仓库。
 
-3. 从该仓库构建你自己的 GitHub 页面网站。请参考官方 [GitHub 文档](https://docs.github.com/en/pages/quickstart) 了解详细操作。
+3. 从该仓库构建你自己的 GitHub 页面网站。请参考官方 [GitHub 文档](https://docs.github.com/en/pages/quickstart)了解详细操作。
 
 4. 将分叉仓库克隆到本地计算机。
 

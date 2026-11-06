@@ -12,7 +12,7 @@ import APITable from '@site/src/components/APITable/APITable';
 The thin bar at the top of the page, driven by three static calls rather than by React. It renders
 nothing: it finds an element you put in the document by id and writes a width onto it every 50ms.
 
-<ThemedImage alt="TopLoader" width={231} sources={{ light: require('./top-loading-indicator--primary-light.png').default, dark: require('./top-loading-indicator--primary-dark.png').default }} />
+<ThemedImage alt="TopLoader" width={232} sources={{ light: require('./top-loading-indicator--primary-light.png').default, dark: require('./top-loading-indicator--primary-dark.png').default }} />
 
 ## Use this when / not when
 
@@ -44,7 +44,7 @@ plain script.
 
 Press **Start Loading** and a thin bar grows along the top of the viewport and stops at 90%; **End Loading** runs it to the full width and clears it, **Cancel** clears it at once (`start`, `end`, `cancel`). Use it to see how long a wait looks before the work finishes.
 
-<ThemedImage alt="Default" width={231} sources={{ light: require('./top-loading-indicator--default-light.png').default, dark: require('./top-loading-indicator--default-dark.png').default }} />
+<ThemedImage alt="Default" width={232} sources={{ light: require('./top-loading-indicator--default-light.png').default, dark: require('./top-loading-indicator--default-dark.png').default }} />
 
 ### Css Customization
 

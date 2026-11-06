@@ -1,6 +1,6 @@
 ---
 description: 使用 Draw.io 插件创建图表和流程图。
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # Draw.io
@@ -11,7 +11,7 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 ## 安装
 
-默认在 DocSpace SaaS 解决方案中可用。
+默认在 ONLYOFFICE Apps SaaS 解决方案中可用。
 
 您可以按照[此处](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins)的说明启用它。
 
@@ -19,11 +19,11 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 要开始使用该插件，您无需更改默认设置。
 
-如需调整插件设置，请前往**设置 → 集成 → 插件**，然后点击 **Draw.io** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。您可以更改以下插件参数：
+如需调整插件设置，请前往**设置 → 集成 → 插件**，然后点击 **draw.io** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。您可以更改以下插件参数：
 
-- **Languages**：从列表中选择所需语言。**Auto** 选项对应门户语言。
-- **Offline mode**：启用此设置后，出于安全原因，所有远程操作和功能都将被禁用。
-- **Libraries**：打开开关以加载自定义形状库（在 **Draw.io** 菜单中选择 **File → New Library / Open Library from**）。
+- **语言**：从列表中选择所需语言。**Auto** 选项对应门户语言。
+- **离线模式**：启用此设置后，出于安全原因，所有远程操作和功能都将被禁用。
+- **资源库**：打开开关以加载自定义形状库（在 **Draw.io** 菜单中选择**文件 → 新建库 / 从...打开库**）。
 
 您还可以在此查看插件元数据，例如作者、版本、状态、主页和描述。
 
@@ -36,9 +36,9 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 1. 打开**文档**部分或某个可用房间。
 2. 点击**操作 → 更多**。
 3. 从出现的菜单中选择 **Draw.io** 插件。
-4. 在弹出窗口中更改文件名，然后点击 **Create**。新的 `.drawio` 文件会显示在文件列表中。
+4. 在弹出窗口中更改文件名，然后点击**创建**。新的 `.drawio` 文件会显示在文件列表中。
 
-要打开已创建的图表，请点击文件名，或通过文件上下文菜单操作：**右键点击 → Edit diagram**。文件将在同一标签页中打开。要返回文件列表，请点击 **Save & Exit** 或 **Exit**。如果图表由具有查看权限的用户打开，则仅提供 **Exit** 按钮。该用户所做的任何更改都不会被保存。
+要打开已创建的图表，请点击文件名，或通过文件上下文菜单操作：**右键点击 → 打开图表**。文件将在同一标签页中打开。要返回文件列表，请点击**保存并退出**或**退出**。如果图表由具有查看权限的用户打开，则仅提供**退出**按钮。该用户所做的任何更改都不会被保存。
 
 ### 编辑已导出的图表
 
@@ -54,7 +54,7 @@ GitHub 仓库：[draw.io](https://github.com/ONLYOFFICE/docspace-plugins/tree/ma
 
 使用以下插件接口：
 
-- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 DocSpace。
+- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 ONLYOFFICE Apps。
 - [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。必需，因为我们实现了第三方服务（[Draw.io](https://www.drawio.com/)）。
 - [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md) 和 [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts)。用于添加插件配置设置块。用户可以从**设置 → 集成 → 插件**访问该块以调整插件参数。
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于实现上下文菜单操作。

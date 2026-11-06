@@ -4,15 +4,15 @@ sidebar_position: -20
 
 # 协同编辑
 
-以下图示和步骤解释了在ONLYOFFICE 文档中如何协同编辑文档。
+以下图示和步骤解释了在 ONLYOFFICE 文档中如何协同编辑文档。
 
 ![Co-editing scheme](/assets/images/editor/coedit.jpg)
 
-1. **用户1**和**用户2**都在**文档编辑器**中打开同一个文档——即他们的配置包含相同的 [`document.key`](../../usage-api/config/document/document.md#key)。
-2. **用户1**对打开的文档进行修改。
-3. **文档编辑器**将**用户1**所做的修改发送给**文档编辑服务**。
-4. **文档编辑服务**将**用户1**所做的修改发送给**用户2**的**文档编辑器**。
-5. 现在这些修改对**用户2**可见。
+1. **用户 1** 和**用户 2** 都在**文档编辑器**中打开同一个文档——即他们的配置包含相同的 [`document.key`](../../usage-api/config/document/document.md#key)。
+2. **用户 1** 对打开的文档进行修改。
+3. **文档编辑器**将**用户 1** 所做的修改发送给**文档编辑服务**。
+4. **文档编辑服务**将**用户 1** 所做的修改发送给**用户 2** 的**文档编辑器**。
+5. 现在这些修改对**用户 2** 可见。
 
 ![共同编辑](/assets/images/editor/coedit-view.png#gh-light-mode-only)![共同编辑](/assets/images/editor/coedit-view.dark.png#gh-dark-mode-only)
 

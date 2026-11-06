@@ -6,16 +6,16 @@ sidebar_position: -4
 
 [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/) is an authentication protocol based on OAuth 2.0, which simplifies the way to verify the identity of users and obtain basic profile information in a secure and standardized way. It is commonly used in scenarios where applications need to authenticate users and establish their identity.
 
-DocSpace supports the OpenID Connect protocol for authenticating DocSpace users with your applications. This allows your users to sign in to your application using their DocSpace accounts.
+ONLYOFFICE Apps supports the OpenID Connect protocol for authenticating ONLYOFFICE Apps users with your applications. This allows your users to sign in to your application using their ONLYOFFICE Apps accounts.
 
-OpenID Connect implementation in DocSpace includes:
+OpenID Connect implementation in ONLYOFFICE Apps includes:
 
 1. [OAuth 2.0 authorization code flow](oauth2/authorization-flow.md);
 2. access token and refresh token handling;
 3. [JWT decoding](#jwt-decoding);
 4. [fetching user profile via OpenID Connect UserInfo endpoint](#accessing-user-info-with-userinfo-endpoint).
 
-[This repo](https://github.com/ONLYOFFICE/docspace-samples/tree/develop/oauth2) contains Node.js and Python examples demonstrating how to implement OAuth 2.0 authentication with OpenID Connect using DocSpace.
+[This repo](https://github.com/ONLYOFFICE/docspace-samples/tree/develop/oauth2) contains Node.js and Python examples demonstrating how to implement OAuth 2.0 authentication with OpenID Connect using ONLYOFFICE Apps.
 
 ## Authentication flow
 
@@ -84,4 +84,4 @@ The response contains the following fields.
 }
 ```
 
-For more details about DocSpace OAuth 2.0 authorization, refer to the [DocSpace API documentation](oauth2/oauth2.md).
+For more details about ONLYOFFICE Apps OAuth 2.0 authorization, refer to the [ONLYOFFICE Apps API documentation](oauth2/oauth2.md).

@@ -6,7 +6,7 @@
 
 Delete an API key
 
-Deletes the API key with the ID given in the route, so that it stops authenticating requests immediately. The caller may delete a key they created themselves, and a DocSpace administrator may delete any key of the portal. The removal is permanent and cannot be undone: the secret was only ever readable at creation time, so a deleted key cannot be restored and a new one has to be issued through `POST api/2.0/keys`. To stop a key temporarily instead, set `isActive` to false through `PUT api/2.0/keys/{keyId}`. The answer is a plain boolean reporting whether the key was removed.
+Deletes the API key with the ID given in the route, so that it stops authenticating requests immediately. The caller may delete a key they created themselves, and a DocSpace administrator may delete any key of the portal. The removal is permanent and cannot be undone: the secret was only ever readable at creation time, so a deleted key cannot be restored and a new one has to be issued through `POST api/2.0/keys`. To stop a key temporarily instead, set `isActive` to false through `PUT api/2.0/keys/{keyId}`. The answer is a plain boolean reporting whether the key was removed. An ID that matches no key of the portal, including a key that has already been deleted, is rejected with 404.
 
 ## Parameters
 
@@ -20,9 +20,10 @@ Deletes the API key with the ID given in the route, so that it stops authenticat
 |------------- | ------------- | ------------- | -------------|
 | **200** | True if the key was removed | [**BooleanWrapper**](../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | The key belongs to another member and the caller is not a DocSpace admin | - | - |
-| **500** | The portal has no key with this ID | - | - |
+| **404** | The portal has no key with this ID | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

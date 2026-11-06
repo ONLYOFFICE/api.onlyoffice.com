@@ -49,7 +49,7 @@ const config: Config = {
   // name goes to the llms-txt plugin below, which is where it earns its keep.
   title: 'ONLYOFFICE',
   tagline:
-    'API documentation for ONLYOFFICE Docs and ONLYOFFICE DocSpace: editor integration and configuration, plugins, macros, and the Office JavaScript API.',
+    'API documentation for ONLYOFFICE Docs and ONLYOFFICE Apps: editor integration and configuration, plugins, macros, and the Office JavaScript API.',
   favicon: 'img/favicon.ico',
 
   url: siteUrl,
@@ -126,8 +126,6 @@ const config: Config = {
 
             return `${baseUrl}/${docPath}`;
           },
-
-          docItemComponent: '@theme/ApiItem',
 
           async sidebarItemsGenerator({defaultSidebarItemsGenerator, isCategoryIndex, ...args}) {
             const sidebarItems = await defaultSidebarItemsGenerator({
@@ -209,6 +207,21 @@ const config: Config = {
         ],
       },
     ],
+    // Production keeps crawlers off tracking-parameter duplicates and names the sitemap;
+    // development is closed to crawlers on top of noIndex. Testing gets no robots.txt until
+    // Google drops the api.teamlab.info pages it indexed before noIndex: a `Disallow: /`
+    // would stop it re-crawling them and seeing the noindex tag. Then give it `['/']` too.
+    siteMode === 'testing'
+      ? false
+      : [
+          './plugins/robots-txt',
+          isProduction
+            ? {
+                disallow: ['/*?_ga=', '/*?from=', '/*?sa=', '/*?spm=', '/*?utm_source='],
+                sitemap: true,
+              }
+            : {disallow: ['/']},
+        ],
   ],
 
   themeConfig: {
@@ -296,7 +309,7 @@ const config: Config = {
         },
         {
           type: 'dropdown',
-          label: 'Docspace',
+          label: 'Apps',
           position: 'left',
           to: 'docspace',
           items: [
@@ -377,10 +390,6 @@ const config: Config = {
               label: 'Legal notice',
               href: 'https://www.onlyoffice.com/legalterms?from=api',
             },
-            {
-              label: 'Legacy version',
-              href: 'https://legacy-api.onlyoffice.com/',
-            },
           ],
         },
         {
@@ -399,7 +408,7 @@ const config: Config = {
               href: 'https://helpcenter.onlyoffice.com/installation/docs-developer-index?from=api',
             },
             {
-              label: 'Support contact form',
+              label: 'Contact support',
               href: 'https://www.onlyoffice.com/support-contact-form?from=api',
             },
           ],
@@ -469,7 +478,7 @@ const config: Config = {
     ],
   } satisfies Preset.ThemeConfig,
 
-  themes: ["docusaurus-theme-openapi-docs", "@docusaurus/theme-mermaid"],
+  themes: ["@docusaurus/theme-mermaid"],
 };
 
 export default config;

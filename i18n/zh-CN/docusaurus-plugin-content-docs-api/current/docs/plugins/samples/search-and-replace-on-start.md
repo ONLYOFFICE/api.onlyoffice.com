@@ -9,7 +9,7 @@ import Video from '@site/src/components/Video/Video';
 
 在重新打开文档时搜索并替换文本。
 
-**插件类型：** 非可视，系统型。
+**插件类型：** 非可视化、系统插件。
 
 **支持的编辑器：** 文本文档。
 

@@ -67,7 +67,7 @@ export const DocsFeatures: Features = toFeatures(docsSections, {
 });
 
 export const DocSpaceFeatures: Features = toFeatures(docspaceSections, {
-  text: "Try DocSpace Playground",
+  text: "Try Apps Playground",
   href: "/docspace-playground",
 });
 

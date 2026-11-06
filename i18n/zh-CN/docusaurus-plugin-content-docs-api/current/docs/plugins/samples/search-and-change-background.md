@@ -9,7 +9,7 @@ import Video from '@site/src/components/Video/Video';
 
 搜索目标文本并更改其背景颜色。
 
-**插件类型：** 可视化，非系统插件。
+**插件类型：** 可视化、非系统插件。
 
 **支持的编辑器：** 文本文档。
 
@@ -17,7 +17,7 @@ import Video from '@site/src/components/Video/Video';
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color) 下载此插件，并按照以下说明进行安装：[桌面版](../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../development-workflow/installing-and-testing/docs-on-premises-installation.md) 或[云端版](../development-workflow/installing-and-testing/cloud-saas-installation.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color) 下载此插件，并按照以下说明进行安装：[桌面版](../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端版](../development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 ## 使用方法
 

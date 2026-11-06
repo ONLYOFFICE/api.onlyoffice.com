@@ -6,7 +6,7 @@ custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/s
 
 Defines the supported user types.
 
-## Deprecated:
+## Deprecated
 
 Use [`UserRole`](UserRole.md) instead — its members carry the names the
 portal itself uses, and `docSpaceAdmin` is gone from them. Every member here

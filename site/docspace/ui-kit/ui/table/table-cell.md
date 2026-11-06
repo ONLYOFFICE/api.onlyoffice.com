@@ -21,15 +21,15 @@ The Table README describes it in full.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `className`? | `stringundefined` | Class applied to the cell after the component's own. |
-| `hasAccess`? | `booleanundefined` | Shows the child marked table-container_row-checkbox in place of the child marked table-container_element while the pointer is over the cell. Default: `false`. |
-| `checked`? | `booleanundefined` | Shows the child marked table-container_row-checkbox in place of the child marked table-container_element all the time. Default: `false`. |
-| `forwardedRef`? | `ForwardedRef<HTMLDivElement> \| undefined` | Ref of the cell element. |
-| `style`? | `CSSPropertiesundefined` | Inline styles applied to the cell. |
-| `children`? | `ReactNode` | Content of the cell: text or elements. |
-| `value`? | `stringundefined` | Written onto the cell as a value attribute, which drag and drop reads to identify the item. |
-| `dataTestId`? | `stringundefined` | Value of the cell's data-testid attribute. Default: `table-cell`. |
-| `documentTitle`? | `stringundefined` | Written onto the cell as a data-document-title attribute. |
+| `className` | `stringundefined` | Class applied to the cell after the component's own. |
+| `hasAccess` | `booleanundefined` | Shows the child marked table-container_row-checkbox in place of the child marked table-container_element while the pointer is over the cell. Default: `false`. |
+| `checked` | `booleanundefined` | Shows the child marked table-container_row-checkbox in place of the child marked table-container_element all the time. Default: `false`. |
+| `forwardedRef` | `ForwardedRef<HTMLDivElement> \| undefined` | Ref of the cell element. |
+| `style` | `CSSPropertiesundefined` | Inline styles applied to the cell. |
+| `children` | `ReactNode` | Content of the cell: text or elements. |
+| `value` | `stringundefined` | Written onto the cell as a value attribute, which drag and drop reads to identify the item. |
+| `dataTestId` | `stringundefined` | Value of the cell's data-testid attribute. Default: `table-cell`. |
+| `documentTitle` | `stringundefined` | Written onto the cell as a data-document-title attribute. |
 
 </APITable>
 
@@ -45,7 +45,7 @@ A cell holding plain text, the most common case; change any other prop live in t
 
 An avatar that turns into a checkbox when the pointer is over the cell, so a row can be picked without a separate checkbox column (`hasAccess`). Hover the cell to see the swap.
 
-<ThemedImage alt="With Element" width={57} sources={{ light: require('./table-cell--with-element-light.png').default, dark: require('./table-cell--with-element-dark.png').default }} />
+<ThemedImage alt="With Element" width={48} sources={{ light: require('./table-cell--with-element-light.png').default, dark: require('./table-cell--with-element-dark.png').default }} />
 
 ### With Element Checked
 

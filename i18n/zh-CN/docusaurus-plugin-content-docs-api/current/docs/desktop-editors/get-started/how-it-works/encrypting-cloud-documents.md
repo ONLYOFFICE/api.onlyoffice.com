@@ -8,8 +8,8 @@ sidebar_position: -1
 
 ONLYOFFICE 采用的双层加密模型包括：
 
-- 使用 **AES-256 算法** 对文档进行对称加密；
-- 使用 **RSA 非对称加密** 对授权共享和协作所需的文档密码进行加密。
+- 使用 **AES-256 算法**对文档进行对称加密；
+- 使用 **RSA 非对称加密**对授权共享和协作所需的文档密码进行加密。
 
 通过当前的加密模型，可以实现以下目标：
 
@@ -87,7 +87,7 @@ return true;
 
 以下步骤解释了在 ONLYOFFICE Docs 中协同编辑加密文档的过程。
 
-1. 用户 1 和用户 2 在 **文档编辑器** 中打开同一个文档。
+1. 用户 1 和用户 2 在**文档编辑器**中打开同一个文档。
 2. 用户 1 对打开的文档进行修改。
 3. 编辑器使用基于 AES-256 CBC 的 *NSOpenSSL::AES_Encrypt_desktop* 算法对修改内容进行加密。
 4. 所有保存的修改都发送到门户。
@@ -112,5 +112,5 @@ ONLYOFFICE 利用云存储和用户本地存储之间的文档和加密数据存
 
 - 删除文档管理系统（DMS）数据库中的密钥；
 - 从 *sdkjs-plugins* 目录中删除 *cloud_crypto.xml* 文件。文件夹路径取决于所使用的操作系统：
-  - Linux 系统 - *home/\<username>/.local/share/onlyoffice/desktopeditors/sdkjs-plugins/*
-  - Windows 系统 - *C:\Users\\\<username>\AppData\Local\ONLYOFFICE\DesktopEditors\data\sdkjs-plugins\\*
+  - Linux 系统：*home/\<username>/.local/share/onlyoffice/desktopeditors/sdkjs-plugins/*
+  - Windows 系统：*C:\Users\\\<username>\AppData\Local\ONLYOFFICE\DesktopEditors\data\sdkjs-plugins\\*

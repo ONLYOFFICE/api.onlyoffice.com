@@ -6,7 +6,7 @@ info 部分定义文档信息参数。
 
 **类型**：`boolean`
 
-*收藏*图标的高亮状态。当用户单击图标时，将调用 [onMetaChange](../events.md#onmetachange)事件。如果参数为`undefined`或`null`，则*收藏*图标不会显示在编辑器窗口标题处。
+*收藏*图标的高亮状态。当用户单击图标时，将调用 [onMetaChange](../events.md#onmetachange) 事件。如果参数为`undefined`或`null`，则*收藏*图标不会显示在编辑器窗口标题处。
 
 **示例**：`true`
 

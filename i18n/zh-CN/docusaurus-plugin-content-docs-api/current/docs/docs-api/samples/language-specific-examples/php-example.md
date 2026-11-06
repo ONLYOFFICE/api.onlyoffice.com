@@ -19,7 +19,7 @@ PHP 集成示例是一个不依赖框架、使用纯 PHP 编写的小型应用�
 - **Composer**：请参阅[官方网站](https://getcomposer.org/download/)。
 - **Git**：请参阅[官方网站](https://git-scm.com/downloads)。
 
-## 步骤1. 下载示例
+## 步骤 1. 下载示例
 
 克隆[示例仓库](https://github.com/ONLYOFFICE/document-server-integration/tree/main/web/documentserver-example/php)，进入 PHP 示例目录，并获取其子模块：
 
@@ -29,7 +29,7 @@ cd document-server-integration/web/documentserver-example/php
 git submodule update --init --depth 1 .
 ```
 
-## 步骤2. 配置连接
+## 步骤 2. 配置连接
 
 本示例没有配置文件，而是从环境变量中读取设置。因此，请在下一步运行示例所用的终端中设置这些变量：
 
@@ -49,7 +49,7 @@ export EXAMPLE_URL=http://example.com:9000
 
 如果您想尝试配置编辑器，请修改 `src/views/DocEditorView.php` 文件中 `$config` 数组的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
-## 步骤3. 安装依赖项并运行示例
+## 步骤 3. 安装依赖项并运行示例
 
 ```sh
 composer install --no-dev

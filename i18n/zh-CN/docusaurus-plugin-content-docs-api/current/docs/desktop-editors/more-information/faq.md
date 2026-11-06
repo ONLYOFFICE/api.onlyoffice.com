@@ -32,9 +32,9 @@ ONLYOFFICE 桌面编辑器支持 Windows、Linux 和 macOS 系统。从 6.1 版�
 
 创建此请求时，集成[配置](../usage-api/adding-a-dms-provider/adding-a-dms-provider.md)中应指定以下两个参数：
 
-- *check.url* - 请求中使用的 URL，
+- *check.url*：请求中使用的 URL，
 
-- *check.headers* - 添加到 *ajax* 请求的标头。
+- *check.headers*：添加到 *ajax* 请求的标头。
 
   ```json
   {

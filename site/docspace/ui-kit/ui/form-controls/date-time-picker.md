@@ -110,20 +110,20 @@ export function ExpiresAt() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `className` | `string` | Applied to the outermost element. |
-| `hasError` | `boolean` | Whether the control is drawn in its error colours. |
-| `id` | `string` | Applied to the outermost element. |
-| `locale` | `string` | BCP 47 tag the calendar is written in. It also decides whether the time is shown as 12-hour or 24-hour. |
-| `onChange` | `(d: null \| DateTime) => void` | Called whenever either half changes, with the combined date and time, or `null` when the date is cleared. |
-| `openDate` | `Date \| DateTime<boolean>` | Month the calendar opens on. |
-| `selectDateText` | `string` | Text of the button shown while no date is chosen. |
-| `translations` | `DateTimePickerTranslations` | Labels of the AM and PM options. Required: the component reads them while rendering, and nothing here translates them for you. |
-| `dataTestId`? | `string` | `data-testid` of the outermost element. Default: `"date-time-picker"`. |
-| `hideCross`? | `boolean` | Whether the date chip's clearing cross is hidden. |
-| `initialDate`? | `Nullable<string \| DateTime<boolean> \| Date>` | Date and time the component starts on. |
-| `maxDate`? | `Date \| DateTime<boolean>` | Latest selectable day in the calendar. |
-| `minDate`? | `Date \| DateTime<boolean>` | Earliest selectable day in the calendar. |
-| `useMaxTime`? | `boolean` | Whether a picked day is reported at the end of that day rather than at midnight. |
+| `className` | `string` | **Required.** Applied to the outermost element. |
+| `hasError` | `boolean` | **Required.** Whether the control is drawn in its error colours. |
+| `id` | `string` | **Required.** Applied to the outermost element. |
+| `locale` | `string` | **Required.** BCP 47 tag the calendar is written in. It also decides whether the time is shown as 12-hour or 24-hour. |
+| `onChange` | `(d: null \| DateTime) => void` | **Required.** Called whenever either half changes, with the combined date and time, or `null` when the date is cleared. |
+| `openDate` | `Date \| DateTime<boolean>` | **Required.** Month the calendar opens on. |
+| `selectDateText` | `string` | **Required.** Text of the button shown while no date is chosen. |
+| `translations` | `DateTimePickerTranslations` | **Required.** Labels of the AM and PM options. Required: the component reads them while rendering, and nothing here translates them for you. |
+| `dataTestId` | `string` | `data-testid` of the outermost element. Default: `"date-time-picker"`. |
+| `hideCross` | `boolean` | Whether the date chip's clearing cross is hidden. |
+| `initialDate` | `Nullable<string \| DateTime<boolean> \| Date>` | Date and time the component starts on. |
+| `maxDate` | `Date \| DateTime<boolean>` | Latest selectable day in the calendar. |
+| `minDate` | `Date \| DateTime<boolean>` | Earliest selectable day in the calendar. |
+| `useMaxTime` | `boolean` | Whether a picked day is reported at the end of that day rather than at midnight. |
 
 </APITable>
 

@@ -56,8 +56,8 @@ sidebar_position: -21
 
 编辑完成后，**文档编辑服务**会通知**文档存储服务**。此过程所需的总时间取决于两个因素：
 
-- **转换时间** — 将编辑文件转换为编辑器原生格式（`.docx`、`.xlsx`、`.pptx` 或 `.pdf`）。因文件大小、复杂性和服务器性能而异。
-- **转换开始延迟** — 默认为 5 秒。此延迟允许用户在不触发保存的情况下返回编辑会话——例如，在文件仍处于打开状态时重新加载浏览器页面。
+- **转换时间**：将编辑文件转换为编辑器原生格式（`.docx`、`.xlsx`、`.pptx` 或 `.pdf`）。因文件大小、复杂性和服务器性能而异。
+- **转换开始延迟**：默认为 5 秒。此延迟允许用户在不触发保存的情况下返回编辑会话——例如，在文件仍处于打开状态时重新加载浏览器页面。
 
 在大多数情况下，保存在编辑结束后约 10 秒完成。默认延迟由 [ONLYOFFICE 文档服务器配置](../configuration/server-config/server-config.md)中的 [`savetimeoutdelay`](../configuration/server-config/server-config.md#services.CoAuthoring.server.savetimeoutdelay) 参数定义。
 

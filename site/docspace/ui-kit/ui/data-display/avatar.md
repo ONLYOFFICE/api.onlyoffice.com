@@ -147,29 +147,29 @@ export function MemberAvatar({ name }: { name: string }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `role` | `AvatarRole` | Which role badge is drawn over the bottom corner. Only `owner` and `admin` draw anything — every other member, `none` included, renders no badge. |
-| `size` | `AvatarSize` | Diameter of the avatar, from `extraSmall` (24px) to `max` (124px). It also picks the font size of the initials and the size and offset of the role icon; `extraSmall` has neither of those, so it fits a picture only. |
-| `className`? | `string` | Applied to the avatar element and, again, to the picture inside it. |
-| `dataTestId`? | `string` | Value of `data-testid` on the avatar. Default: `"avatar"`. |
-| `editAction`? | `() => void` | Ignored. Nothing reads this prop; the edit button calls `model[0].onClick`. |
-| `editing`? | `boolean` | Shows the edit button over the avatar — a pencil when `hasAvatar`, a plus otherwise. It is read only at `size` `max`; at any other size nothing is rendered. |
-| `hasAvatar`? | `boolean` | Whether the user already has a picture. It picks the pencil over the plus, and decides whether a click opens the menu of `model` or goes straight to the file dialog. |
-| `hideRoleIcon`? | `boolean` | Hides the role badge that `role` would otherwise draw. |
-| `id`? | `string` | Ignored. Nothing reads this prop and no `id` reaches the DOM. |
-| `imgClassName`? | `string` | Added to the `<img>`, for a source shown as a picture. Default: `""`. |
-| `isDefaultSource`? | `boolean` | Shows the kit's own illustration when there is no `source` and no `userName`. Default: `false`. |
-| `isGroup`? | `boolean` | Uppercases the initials and gives them the group background and colour. Default: `false`. |
-| `isNotIcon`? | `boolean` | Renders a `.svg` source as a picture rather than fetching it as an icon. Default: `false`. |
-| `model`? | `TAvatarModel[]` | Actions of the edit menu, in order. The first entry is the upload action: it is what a click runs when there is no picture yet, and the entry whose `key` is `AvatarActionKeys.PROFILE_AVATAR_UPLOAD` is handed the file input's ref. |
-| `noClick`? | `boolean` | Stops a click from opening the upload menu, leaving the avatar inert. Default: `false`. |
-| `onChangeFile`? | `() => void` | Called with the change event of the hidden file input, which is rendered only when this prop is given. Without it the avatar is not editable at all. |
-| `onClick`? | `(e: React.MouseEvent) => void` | Called on a click on the avatar, and on a middle-button press. Passing it replaces the editing behaviour entirely: the upload menu no longer opens. |
-| `roleIcon`? | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>>` | Badge to draw instead of the one `role` would choose. |
-| `source`? | `React.JSX.Element \| string` | The picture. A React element is rendered as given; a string is a URL, shown with an `<img>` — except a path containing `.svg`, which is fetched and inlined as an icon unless `isNotIcon` is set, and one containing `default_user_photo`, which is replaced by the kit's own illustration. |
-| `style`? | `React.CSSProperties` | Ignored. Nothing reads this prop and no inline style reaches the DOM. |
-| `tooltipContent`? | `string` | Text of that tooltip. |
-| `userName`? | `string` | Name to build initials from when there is no `source`: the first letter of each word, two at most. Lower case is preserved unless `isGroup` is set. |
-| `withTooltip`? | `boolean` | Renders a tooltip anchored to the role badge. It needs a badge to attach to, so it does nothing unless `role` is `owner` or `admin`. |
+| `role` | `AvatarRole` | **Required.** Which role badge is drawn over the bottom corner. Only `owner` and `admin` draw anything — every other member, `none` included, renders no badge. |
+| `size` | `AvatarSize` | **Required.** Diameter of the avatar, from `extraSmall` (24px) to `max` (124px). It also picks the font size of the initials and the size and offset of the role icon; `extraSmall` has neither of those, so it fits a picture only. |
+| `className` | `string` | Applied to the avatar element and, again, to the picture inside it. |
+| `dataTestId` | `string` | Value of `data-testid` on the avatar. Default: `"avatar"`. |
+| `editAction` | `() => void` | Ignored. Nothing reads this prop; the edit button calls `model[0].onClick`. |
+| `editing` | `boolean` | Shows the edit button over the avatar — a pencil when `hasAvatar`, a plus otherwise. It is read only at `size` `max`; at any other size nothing is rendered. |
+| `hasAvatar` | `boolean` | Whether the user already has a picture. It picks the pencil over the plus, and decides whether a click opens the menu of `model` or goes straight to the file dialog. |
+| `hideRoleIcon` | `boolean` | Hides the role badge that `role` would otherwise draw. |
+| `id` | `string` | Ignored. Nothing reads this prop and no `id` reaches the DOM. |
+| `imgClassName` | `string` | Added to the `<img>`, for a source shown as a picture. Default: `""`. |
+| `isDefaultSource` | `boolean` | Shows the kit's own illustration when there is no `source` and no `userName`. Default: `false`. |
+| `isGroup` | `boolean` | Uppercases the initials and gives them the group background and colour. Default: `false`. |
+| `isNotIcon` | `boolean` | Renders a `.svg` source as a picture rather than fetching it as an icon. Default: `false`. |
+| `model` | `TAvatarModel[]` | Actions of the edit menu, in order. The first entry is the upload action: it is what a click runs when there is no picture yet, and the entry whose `key` is `AvatarActionKeys.PROFILE_AVATAR_UPLOAD` is handed the file input's ref. |
+| `noClick` | `boolean` | Stops a click from opening the upload menu, leaving the avatar inert. Default: `false`. |
+| `onChangeFile` | `() => void` | Called with the change event of the hidden file input, which is rendered only when this prop is given. Without it the avatar is not editable at all. |
+| `onClick` | `(e: React.MouseEvent) => void` | Called on a click on the avatar, and on a middle-button press. Passing it replaces the editing behaviour entirely: the upload menu no longer opens. |
+| `roleIcon` | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>>` | Badge to draw instead of the one `role` would choose. |
+| `source` | `React.JSX.Element \| string` | The picture. A React element is rendered as given; a string is a URL, shown with an `<img>` — except a path containing `.svg`, which is fetched and inlined as an icon unless `isNotIcon` is set, and one containing `default_user_photo`, which is replaced by the kit's own illustration. |
+| `style` | `React.CSSProperties` | Ignored. Nothing reads this prop and no inline style reaches the DOM. |
+| `tooltipContent` | `string` | Text of that tooltip. |
+| `userName` | `string` | Name to build initials from when there is no `source`: the first letter of each word, two at most. Lower case is preserved unless `isGroup` is set. |
+| `withTooltip` | `boolean` | Renders a tooltip anchored to the role badge. It needs a badge to attach to, so it does nothing unless `role` is `owner` or `admin`. |
 
 </APITable>
 

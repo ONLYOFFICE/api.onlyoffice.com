@@ -133,15 +133,15 @@ export function App() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `className`? | `string` | Applied to the container the toasts are stacked in. |
-| `data`? | `ReactNode` | Ignored. A toast's body is the first argument of `toastr.success` and its siblings. |
-| `id`? | `string` | Ignored. Nothing reads this prop; the container carries no `id`. |
-| `isSSR`? | `boolean` | Whether the container renders nothing until the first client-side effect, for a server-rendered tree. |
-| `style`? | `CSSProperties` | Applied to that container as inline style. |
-| `timeout`? | `number` | Ignored. It is the third argument of `toastr.success` and its siblings. |
-| `title`? | `string` | Ignored. A toast's title is the second argument of `toastr.success` and its siblings. |
-| `type`? | `ToastType` | Ignored. A toast's type is the `toastr` method you call. |
-| `withCross`? | `boolean` | Ignored. It is the fourth argument of `toastr.success` and its siblings. |
+| `className` | `string` | Applied to the container the toasts are stacked in. |
+| `data` | `ReactNode` | Ignored. A toast's body is the first argument of `toastr.success` and its siblings. |
+| `id` | `string` | Ignored. Nothing reads this prop; the container carries no `id`. |
+| `isSSR` | `boolean` | Whether the container renders nothing until the first client-side effect, for a server-rendered tree. |
+| `style` | `CSSProperties` | Applied to that container as inline style. |
+| `timeout` | `number` | Ignored. It is the third argument of `toastr.success` and its siblings. |
+| `title` | `string` | Ignored. A toast's title is the second argument of `toastr.success` and its siblings. |
+| `type` | `ToastType` | Ignored. A toast's type is the `toastr` method you call. |
+| `withCross` | `boolean` | Ignored. It is the fourth argument of `toastr.success` and its siblings. |
 
 </APITable>
 

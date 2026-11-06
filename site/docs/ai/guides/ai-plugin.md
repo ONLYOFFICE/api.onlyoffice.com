@@ -32,7 +32,7 @@ To start using the plugin, you need to set up an AI provider:
 
 1. Open the **Plugins** tab and click the **Plugin Manager** icon. Find the **AI plugin** and click **Install** or **Update** if the plugin is already installed.
 2. Click the **Background Plugins** button and activate the **AI** switch.
-3. Go to the **AI** tab, click **Settings** to open the configuration window.
+3. Go to the **AI Tools** tab, click **Settings** to open the configuration window.
 4. Select **Edit AI models** and click ![Plus icon](/assets/images/plugins/plus.svg#gh-light-mode-only)![Plus icon](/assets/images/plugins/plus.dark.svg#gh-dark-mode-only).
 5. Choose an AI provider from the list or add new AI models by entering your API keys.
 6. In the row of icons, select what the model is used for: *Text*, *Images*, *Embeddings*, *Audio Processing*, *Content Moderation*, *Realtime Tasks*, *Coding Help*, *Visual Analysis*.
@@ -44,7 +44,7 @@ For details on adding a custom provider, refer to these [instructions](custom-pr
 
 To start using the AI plugin:
 
-1. Open the **AI** tab in the top toolbar of ONLYOFFICE editors.
+1. Open the **AI Tools** tab in the top toolbar of ONLYOFFICE editors.
 2. Choose one of the buttons:
    - **Settings**: the configuration panel to select your AI provider, enter the API key, and select one of its models;
    - **Chatbot**: start a conversation with the AI to ask questions, rewrite text, brainstorm ideas, and more;

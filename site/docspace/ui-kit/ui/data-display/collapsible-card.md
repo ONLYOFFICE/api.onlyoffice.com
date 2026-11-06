@@ -96,15 +96,15 @@ export function Faq() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `title` | `React.ReactNode` | First line of the header, next to the chevron. The whole header is the button, so this is part of its accessible name. |
-| `children`? | `React.ReactNode` | Body, rendered only while the card is open. Without it the card opens to nothing. |
-| `className`? | `string` | Added after the component's own class, on the outer element. |
-| `dataTestId`? | `string` | Value of `data-testid` on the outer element. Default: `"collapsible-card"`. |
-| `defaultOpen`? | `boolean` | Whether the card starts open. Read once, on the first render, and only while `isOpen` is unset. Default: `false`. |
-| `description`? | `React.ReactNode` | Second line of the header, under the title. Also inside the button, and so also part of its accessible name. |
-| `isOpen`? | `boolean` | Whether the card is open. Passing it — even as `false` — takes control away from the component for good: it then opens and closes only when you change this value from `onToggle`. |
-| `onToggle`? | `(nextOpen: boolean) => void` | Called with the state the card is moving to whenever the header is activated, in both the controlled and the uncontrolled case. |
-| `style`? | `React.CSSProperties` | Inline style of the outer element. |
+| `title` | `React.ReactNode` | **Required.** First line of the header, next to the chevron. The whole header is the button, so this is part of its accessible name. |
+| `children` | `React.ReactNode` | Body, rendered only while the card is open. Without it the card opens to nothing. |
+| `className` | `string` | Added after the component's own class, on the outer element. |
+| `dataTestId` | `string` | Value of `data-testid` on the outer element. Default: `"collapsible-card"`. |
+| `defaultOpen` | `boolean` | Whether the card starts open. Read once, on the first render, and only while `isOpen` is unset. Default: `false`. |
+| `description` | `React.ReactNode` | Second line of the header, under the title. Also inside the button, and so also part of its accessible name. |
+| `isOpen` | `boolean` | Whether the card is open. Passing it — even as `false` — takes control away from the component for good: it then opens and closes only when you change this value from `onToggle`. |
+| `onToggle` | `(nextOpen: boolean) => void` | Called with the state the card is moving to whenever the header is activated, in both the controlled and the uncontrolled case. |
+| `style` | `React.CSSProperties` | Inline style of the outer element. |
 
 </APITable>
 

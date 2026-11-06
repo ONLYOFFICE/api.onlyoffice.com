@@ -30,4 +30,4 @@ To build a plugin, you need to have *npm* (included with Node.js) installed. The
 The maximum size of the plugin archive and each file within it must not exceed 5 MB.
 :::
 
-The *dist* folder will be created in the plugin root folder and the plugin archive will be placed in it. This archive is the completed plugin that can be uploaded to the DocSpace portal.
+The *dist* folder will be created in the plugin root folder and the plugin archive will be placed in it. This archive is the completed plugin that can be uploaded to the ONLYOFFICE Apps portal.

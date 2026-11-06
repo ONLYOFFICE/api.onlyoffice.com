@@ -126,20 +126,20 @@ export function MemberAccess() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `accessOptions` | `TOption[]` | The access levels to choose from. Each is rendered as a row with its icon, label, description and quota badge; an entry with `isSeparator` becomes a divider. Ignored when `advancedOptions` is given. |
-| `availableAccess`? | `number[]` | The `access` values that may still be chosen while `isSelectionDisabled` is set. Without it only the current level is allowed. |
-| `comboIcon`? | `string` | Passed straight to `ComboBox`: URL of an icon to show instead of the arrow. |
-| `dataTestId`? | `string` | `data-testid` of the combo button. |
-| `directionX`? | `"left" \| "right"` | Which side of the button the drop-down opens towards. |
-| `directionY`? | `"both" \| "bottom" \| "top"` | Whether the drop-down opens above or below the button. |
-| `fillIcon`? | `boolean` | Passed straight to `ComboBox`: whether the arrow icon is recoloured. |
-| `isDefaultMode`? | `boolean` | Passed straight to `ComboBox`: renders the open list in a portal at the end of the page, positioned against the button; `false` renders it in place, next to the button, where a wrapper's CSS variables reach it. Default: `true`. |
-| `isSelectionDisabled`? | `boolean` | Whether picking a level other than the current one is refused. What is still allowed is `availableAccess`; everything else raises a toast. |
-| `modernView`? | `boolean` | Passed straight to `ComboBox`: its compact presentation. |
-| `selectionErrorText`? | `ReactNode` | The toast shown when a refused level is picked. |
-| `setIsOpenItemAccess`? | `Dispatch<SetStateAction<boolean>>` | Passed straight to `ComboBox`: told when the drop-down opens and closes. |
-| `topSpace`? | `number` | Passed straight to `ComboBox`: space above the drop-down, in pixels. |
-| `usePortalBackdrop`? | `boolean` | Passed straight to `ComboBox`: whether the backdrop is rendered in a portal. |
+| `accessOptions` | `TOption[]` | **Required.** The access levels to choose from. Each is rendered as a row with its icon, label, description and quota badge; an entry with `isSeparator` becomes a divider. Ignored when `advancedOptions` is given. |
+| `availableAccess` | `number[]` | The `access` values that may still be chosen while `isSelectionDisabled` is set. Without it only the current level is allowed. |
+| `comboIcon` | `string` | Passed straight to `ComboBox`: URL of an icon to show instead of the arrow. |
+| `dataTestId` | `string` | `data-testid` of the combo button. |
+| `directionX` | `"left" \| "right"` | Which side of the button the drop-down opens towards. |
+| `directionY` | `"both" \| "bottom" \| "top"` | Whether the drop-down opens above or below the button. |
+| `fillIcon` | `boolean` | Passed straight to `ComboBox`: whether the arrow icon is recoloured. |
+| `isDefaultMode` | `boolean` | Passed straight to `ComboBox`: renders the open list in a portal at the end of the page, positioned against the button; `false` renders it in place, next to the button, where a wrapper's CSS variables reach it. Default: `true`. |
+| `isSelectionDisabled` | `boolean` | Whether picking a level other than the current one is refused. What is still allowed is `availableAccess`; everything else raises a toast. |
+| `modernView` | `boolean` | Passed straight to `ComboBox`: its compact presentation. |
+| `selectionErrorText` | `ReactNode` | The toast shown when a refused level is picked. |
+| `setIsOpenItemAccess` | `Dispatch<SetStateAction<boolean>>` | Passed straight to `ComboBox`: told when the drop-down opens and closes. |
+| `topSpace` | `number` | Passed straight to `ComboBox`: space above the drop-down, in pixels. |
+| `usePortalBackdrop` | `boolean` | Passed straight to `ComboBox`: whether the backdrop is rendered in a portal. |
 
 </APITable>
 
@@ -151,31 +151,31 @@ Declared by [`components/combobox`](./combobox.md) and accepted here too.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `selectedOption` | `TOption` | The option to show in the button. The component does not choose it: keep it in your own state and set it from `onSelect`. |
-| `advancedOptions`? | `ReactElement<{ children?: React.ReactNode; }, string \| JSXElementConstructor<any>>` | Element whose children replace the list entirely, for a menu that is not a list of options. `options` is then used only for the button. |
-| `className`? | `string` | Applied to the element that wraps the button and the list. |
-| `displaySelectedOption`? | `boolean` | Keeps the option that is currently selected usable and highlights it. Without it that option is rendered disabled, so the value cannot be picked again. |
-| `fixedDirection`? | `boolean` | Keeps `directionX` and `directionY` as given instead of flipping them. |
-| `isAside`? | `boolean` | Marks the list's backdrop as belonging to a side panel. |
-| `isDisabled`? | `boolean` | Greys the button out and stops it opening. |
-| `isLoading`? | `boolean` | Replaces the arrow with a spinner and stops the button opening. |
-| `isMobileView`? | `boolean` | Pins the list to the bottom of the screen, full width, in portrait. |
-| `manualWidth`? | `string` | Width of the list as a CSS length. It has nothing to do with the button's width — use `scaledOptions` for that. Default: `"200px"`. |
-| `manualY`? | `number \| string` | (Non-portal mode) Exact vertical offset of the list from the button. |
-| `noBorder`? | `boolean` | Removes the button's border. |
-| `noSelect`? | `boolean` | Whether the button's text cannot be selected. Default: `true`. |
-| `onSelect`? | `(option: TOption) => void` | Called with the option that was clicked. Nothing changes on its own — `selectedOption` is yours to update. |
-| `scaled`? | `boolean` | Makes the button take the full width of its parent, which overrides `size`. Default: `true`. |
-| `scaledOptions`? | `boolean` | Matches the list's width to the button's instead of `manualWidth`. |
-| `shouldShowBackdrop`? | `boolean` | Renders the backdrop even when another one is already on screen. |
-| `showDisabledItems`? | `boolean` | Ignored. The list is always told to keep disabled options. |
-| `size`? | `"base" \| "big" \| "content" \| "huge" \| "middle"` | One of the fixed widths — 173, 300, 350 or 500px, or the content's own. It only applies when `scaled` is false. Default: `ComboBoxSize.base`. |
-| `title`? | `string` | Hover tooltip for the whole control. It needs `RootTooltip` mounted. |
-| `type`? | `TCombobox` | Shape of the button: `badge` draws the label as a coloured badge, `onlyIcon` drops the label, `descriptive` adds the option's `description` under it. |
-| `withBackdrop`? | `boolean` | Whether the list renders a backdrop to catch the next click. Default: `true`. |
-| `withBackground`? | `boolean` | Gives that backdrop its dimming background. |
-| `withBlur`? | `boolean` | Ignored. It reaches the list, which does not read it either. |
-| `withoutBackground`? | `boolean` | Makes that backdrop transparent. |
+| `selectedOption` | `TOption` | **Required.** The option to show in the button. The component does not choose it: keep it in your own state and set it from `onSelect`. |
+| `advancedOptions` | `ReactElement<{ children?: React.ReactNode; }, string \| JSXElementConstructor<any>>` | Element whose children replace the list entirely, for a menu that is not a list of options. `options` is then used only for the button. |
+| `className` | `string` | Applied to the element that wraps the button and the list. |
+| `displaySelectedOption` | `boolean` | Keeps the option that is currently selected usable and highlights it. Without it that option is rendered disabled, so the value cannot be picked again. |
+| `fixedDirection` | `boolean` | Keeps `directionX` and `directionY` as given instead of flipping them. |
+| `isAside` | `boolean` | Marks the list's backdrop as belonging to a side panel. |
+| `isDisabled` | `boolean` | Greys the button out and stops it opening. |
+| `isLoading` | `boolean` | Replaces the arrow with a spinner and stops the button opening. |
+| `isMobileView` | `boolean` | Pins the list to the bottom of the screen, full width, in portrait. |
+| `manualWidth` | `string` | Width of the list as a CSS length. It has nothing to do with the button's width — use `scaledOptions` for that. Default: `"200px"`. |
+| `manualY` | `number \| string` | (Non-portal mode) Exact vertical offset of the list from the button. |
+| `noBorder` | `boolean` | Removes the button's border. |
+| `noSelect` | `boolean` | Whether the button's text cannot be selected. Default: `true`. |
+| `onSelect` | `(option: TOption) => void` | Called with the option that was clicked. Nothing changes on its own — `selectedOption` is yours to update. |
+| `scaled` | `boolean` | Makes the button take the full width of its parent, which overrides `size`. Default: `true`. |
+| `scaledOptions` | `boolean` | Matches the list's width to the button's instead of `manualWidth`. |
+| `shouldShowBackdrop` | `boolean` | Renders the backdrop even when another one is already on screen. |
+| `showDisabledItems` | `boolean` | Ignored. The list is always told to keep disabled options. |
+| `size` | `"base" \| "big" \| "content" \| "huge" \| "middle"` | One of the fixed widths — 173, 300, 350 or 500px, or the content's own. It only applies when `scaled` is false. Default: `ComboBoxSize.base`. |
+| `title` | `string` | Hover tooltip for the whole control. It needs `RootTooltip` mounted. |
+| `type` | `TCombobox` | Shape of the button: `badge` draws the label as a coloured badge, `onlyIcon` drops the label, `descriptive` adds the option's `description` under it. |
+| `withBackdrop` | `boolean` | Whether the list renders a backdrop to catch the next click. Default: `true`. |
+| `withBackground` | `boolean` | Gives that backdrop its dimming background. |
+| `withBlur` | `boolean` | Ignored. It reaches the list, which does not read it either. |
+| `withoutBackground` | `boolean` | Makes that backdrop transparent. |
 
 </APITable>
 

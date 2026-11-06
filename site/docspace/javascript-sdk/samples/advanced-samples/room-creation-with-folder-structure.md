@@ -1,11 +1,11 @@
 ---
 description: Create client rooms with predefined folders and document templates.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # Structured room creation
 
-This example demonstrates how to use the DocSpace Embed SDK to create a structured workspace for each new client. When a user adds a client, the system:
+This example demonstrates how to use the ONLYOFFICE Apps Embed SDK to create a structured workspace for each new client. When a user adds a client, the system:
 
 - Creates a shared room with the clients name
 - Automatically generates a set of predefined folders inside that room
@@ -18,7 +18,7 @@ Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docsp
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.  
-You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of ONLYOFFICE Apps.
 
 <details>
   <summary>Full example</summary>
@@ -64,7 +64,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
         document.getElementById("ds-frame").style.display = "none"
       }
 
-      // Step 7: Init DocSpace SDK
+      // Step 7: Init ONLYOFFICE Apps SDK
       docSpace = DocSpace.SDK.initManager({
         frameId: "ds-frame",
         events: { onAppReady }
@@ -186,7 +186,7 @@ docSpace = DocSpace.SDK.initManager({
 });
 ```
 
-- Template IDs point to public DocSpace documents used as base templates
+- Template IDs point to public ONLYOFFICE Apps documents used as base templates
 - The SDK is initialized and hidden (`iframe`) and activates the UI once ready
 
 ---

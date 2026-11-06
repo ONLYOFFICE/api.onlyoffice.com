@@ -48,17 +48,17 @@ import AIAgentSelector from "@onlyoffice/apps-ui-kit/selectors/AIAgent";
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `id`? | `stringundefined` | HTML id attribute for the root element. |
-| `className`? | `stringundefined` | Additional CSS class name for the root element. |
-| `style`? | `CSSPropertiesundefined` |  |
-| `onSubmit` | `(items: TSelectorItem[]) => void \| Promise<void>` | Called with the selected TSelectorItem array on confirm. |
-| `excludeItems`? | `(string \| number \| undefined)[] \| undefined` | List of item ids to exclude from the selector list. |
-| `setIsDataReady`? | `((value: boolean) => void) \| undefined` | Called with true/false when data loading state changes. |
-| `withPadding`? | `booleanundefined` | Add inner padding to the selector panel. Default: `false`. |
-| `onClose` | `() => void` | Called when the selector panel is dismissed. |
-| `disableBySecurity`? | `stringundefined` | Message shown on items where UseChat security permission is missing. |
-| `externalInfoBarData`? | `TInfoBarDataundefined` |  |
-| `withInit`? | `trueundefined` | Use pre-loaded init data instead of fetching from the API. Default: `false`. |
-| `initItems`? | `FolderDtoInteger[] \| undefined` |  |
+| `id` | `stringundefined` | HTML id attribute for the root element. |
+| `className` | `stringundefined` | Additional CSS class name for the root element. |
+| `style` | `CSSPropertiesundefined` |  |
+| `onSubmit` | `(items: TSelectorItem[]) => void \| Promise<void>` | **Required.** Called with the selected TSelectorItem array on confirm. |
+| `excludeItems` | `(string \| number \| undefined)[] \| undefined` | List of item ids to exclude from the selector list. |
+| `setIsDataReady` | `((value: boolean) => void) \| undefined` | Called with true/false when data loading state changes. |
+| `withPadding` | `booleanundefined` | Add inner padding to the selector panel. Default: `false`. |
+| `onClose` | `() => void` | **Required.** Called when the selector panel is dismissed. |
+| `disableBySecurity` | `stringundefined` | Message shown on items where UseChat security permission is missing. |
+| `externalInfoBarData` | `TInfoBarDataundefined` |  |
+| `withInit` | `trueundefined` | Use pre-loaded init data instead of fetching from the API. Default: `false`. |
+| `initItems` | `FolderDtoInteger[] \| undefined` |  |
 
 </APITable>

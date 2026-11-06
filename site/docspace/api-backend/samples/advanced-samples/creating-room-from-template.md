@@ -1,6 +1,6 @@
 ---
 description: Create a new project room from an existing room template.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 # Creating room from template
 
-This example demonstrates how to create a DocSpace room for a new project from an existing room template.
+This example demonstrates how to create an ONLYOFFICE Apps room for a new project from an existing room template.
 The external project system (PM/ERP/CRM) sends project data (for example, `projectId`, `projectType`, `projectName`). The integration then:
 
 - fetches available room templates,
@@ -19,7 +19,7 @@ The external project system (PM/ERP/CRM) sends project data (for example, `proje
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>
@@ -40,7 +40,7 @@ The external project system (PM/ERP/CRM) sends project data (for example, `proje
 
   const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-  // Helper: DocSpace request wrapper
+  // Helper: ONLYOFFICE Apps request wrapper
   async function docspaceRequest(path: string, method: string = "GET", body: any = null) {
     const url = `${API_HOST}${path}`;
 
@@ -52,7 +52,7 @@ The external project system (PM/ERP/CRM) sends project data (for example, `proje
 
     if (!res.ok) {
       const text = await res.text();
-      console.log(`DocSpace request failed: ${method} ${url}`);
+      console.log(`ONLYOFFICE Apps request failed: ${method} ${url}`);
       console.log(`Status: ${res.status}, Message: ${text}`);
       return null;
     }
@@ -193,18 +193,18 @@ The external project system (PM/ERP/CRM) sends project data (for example, `proje
     "Content-Type": "application/json",
   }
 
-  # Helper: DocSpace request wrapper
+  # Helper: ONLYOFFICE Apps request wrapper
   def docspace_request(method, path, json_body = None):
     url = f"{API_HOST}{path}"
 
     try:
       r = requests.request(method.upper(), url, headers=HEADERS, json=json_body, timeout=30)
     except Exception as e:
-      print(f"DocSpace request error: {e}")
+      print(f"ONLYOFFICE Apps request error: {e}")
       return None
 
     if not (200 <= r.status_code < 300):
-      print(f"DocSpace request failed: {method} {url}")
+      print(f"ONLYOFFICE Apps request failed: {method} {url}")
       print(f"Status: {r.status_code}, Message: {r.text}")
       return None
 
@@ -342,7 +342,7 @@ The external project system (PM/ERP/CRM) sends project data (for example, `proje
 
 ## Step 1: Get templates and choose one for the project
 
-The integration loads templates from DocSpace and picks a suitable template for the project type.
+The integration loads templates from ONLYOFFICE Apps and picks a suitable template for the project type.
 
 It requests the templates list using GET [/api/2.0/files/rooms?searchArea=Templates](/docspace/api-backend/usage-api/rooms/get-rooms-folder) and selects a template (for example, by matching `projectType` against template `title`).
 

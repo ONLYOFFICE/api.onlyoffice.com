@@ -7,11 +7,11 @@ custom_edit_url: https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/s
 React hooks for plugin components rendered inside the ONLYOFFICE Apps application tree.
 
 A plugin component is passed to the SDK through one of the `*Component` props —
-[`IInfoPanelItem.component`](../interfaces/items/IInfoPanelItem.md#component?),
-[`IArticleButtonItem.component`](../interfaces/items/IArticleButtonItem.md#component?),
+[`IInfoPanelItem.component`](../interfaces/items/IInfoPanelItem.md#component),
+[`IArticleButtonItem.component`](../interfaces/items/IArticleButtonItem.md#component),
 [`IArticleNavigationItem.component`](../interfaces/items/IArticleNavigationItem.md#component),
-[`IModalDialog.dialogBodyComponent`](../interfaces/components/IModalDialog.md#dialogBodyComponent?)
-or [`ISettings.component`](../interfaces/settings/ISettings.md#component?).
+[`IModalDialog.dialogBodyComponent`](../interfaces/components/IModalDialog.md#dialogBodyComponent)
+or [`ISettings.component`](../interfaces/settings/ISettings.md#component).
 ONLYOFFICE Apps renders it with the plugin runtime in context, and these hooks read
 that context.
 
@@ -65,7 +65,7 @@ function MyComponent() {
 
 [`PluginRuntime`](runtime.md#pluginruntime)
 
-### Remarks:
+### Remarks
 
 Prefer the focused hooks ([`useCurrentFile`](#usecurrentfile), [`usePluginActions`](#usepluginactions),
 etc.) when you only need a single slice of the runtime — they are more

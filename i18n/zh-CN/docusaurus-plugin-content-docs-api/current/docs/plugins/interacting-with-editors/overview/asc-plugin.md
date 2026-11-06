@@ -370,12 +370,12 @@ Asc.plugin.onThemeChanged = onThemeChanged;
 
 上下文菜单类型：
 
-- `None` — 未使用
-- `Target` — 无选中内容
-- `Selection` — 选中文本
-- `Image` — 选中图片
-- `Shape` — 选中形状
-- `OleObject` — 选中 OLE 对象
+- `None`：未使用
+- `Target`：无选中内容
+- `Selection`：选中文本
+- `Image`：选中图片
+- `Shape`：选中形状
+- `OleObject`：选中 OLE 对象
 
 根据选中类型，可以添加不同的上下文菜单项。
 

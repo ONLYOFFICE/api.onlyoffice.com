@@ -7,9 +7,9 @@ import TabItem from '@theme/TabItem';
 
 # Webhooks
 
-Webhooks are HTTP/HTTPS callbacks triggered by events (triggers) related to portal entities such as Users, Groups, Documents, Folders, and Rooms. DocSpace users can create, subscribe to, and configure webhooks so that events in the portal trigger actions in external services. This functionality is useful for synchronizing and tracking specific events.
+Webhooks are HTTP/HTTPS callbacks triggered by events (triggers) related to portal entities such as Users, Groups, Documents, Folders, and Rooms. ONLYOFFICE Apps users can create, subscribe to, and configure webhooks so that events in the portal trigger actions in external services. This functionality is useful for synchronizing and tracking specific events.
 
-The triggers for a particular webhook are activated only if the webhook owner has access rights to the entity being modified. DocSpace users can view only their own webhooks, while DocSpace administrators can see all webhooks on the portal.
+The triggers for a particular webhook are activated only if the webhook owner has access rights to the entity being modified. ONLYOFFICE Apps users can view only their own webhooks, while ONLYOFFICE Apps administrators can see all webhooks on the portal.
 
 Instructions for creating and configuring webhooks can be found [here](https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx).
 

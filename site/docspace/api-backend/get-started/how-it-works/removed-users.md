@@ -6,7 +6,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # Removed users
 
-Users removed from the DocSpace portal are specified with the `LostUser` constant, which is a `UserInfo` object in the following format:
+Users removed from the ONLYOFFICE Apps portal are specified with the `LostUser` constant, which is a `UserInfo` object in the following format:
 
 ``` cs
 public static readonly UserInfo LostUser = new()
@@ -18,7 +18,7 @@ public static readonly UserInfo LostUser = new()
 };
 ```
 
-This object is also used for all users not found in the DocSpace portal (guests, users with the pending activation status, etc.).
+This object is also used for all users not found in the ONLYOFFICE Apps portal (guests, users with the pending activation status, etc.).
 
 ## Parameters
 

@@ -119,17 +119,17 @@ export function Popover() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `visible` | `boolean` | Whether the layer is rendered at all. It is not a CSS switch: a backdrop that is not visible renders nothing. Default: `false`. |
-| `className`? | `string \| string[]` | Custom CSS class name(s) to apply to the backdrop Can be a single string or an array of strings |
-| `id`? | `string` | HTML id attribute for the backdrop element |
-| `isAside`? | `boolean` | Marks the backdrop as belonging to a side panel: it then dims the page, and it is allowed to render even when two backdrops are already on screen. Default: `false`. |
-| `isModalDialog`? | `boolean` | Lets touch scrolling through the backdrop go on as usual. Without it a touch move over the layer has its default action prevented. Default: `false`. |
-| `onClick`? | `(e: React.MouseEvent) => void` | Called on a click, and on a touch move or touch end, which pass a touch event cast to a mouse event. |
-| `shouldShowBackdrop`? | `boolean` | Renders the layer even when another backdrop is already on screen, which would otherwise suppress it. Default: `false`. |
-| `style`? | `React.CSSProperties` | Custom inline styles to apply to the backdrop. `zIndex` is merged in first. |
-| `withBackground`? | `boolean` | Dims the page. Without it the layer is transparent and only catches clicks — except on a viewport of 600px or less, where it dims anyway. Default: `false`. |
-| `withoutBackground`? | `boolean` | Forces the backdrop to render without a background Takes precedence over withBackground. Default: `false`. |
-| `zIndex`? | `number` | Stacking order of the layer. The component it covers needs a higher one. Default: `203`. |
+| `visible` | `boolean` | **Required.** Whether the layer is rendered at all. It is not a CSS switch: a backdrop that is not visible renders nothing. Default: `false`. |
+| `className` | `string \| string[]` | Custom CSS class name(s) to apply to the backdrop Can be a single string or an array of strings |
+| `id` | `string` | HTML id attribute for the backdrop element |
+| `isAside` | `boolean` | Marks the backdrop as belonging to a side panel: it then dims the page, and it is allowed to render even when two backdrops are already on screen. Default: `false`. |
+| `isModalDialog` | `boolean` | Lets touch scrolling through the backdrop go on as usual. Without it a touch move over the layer has its default action prevented. Default: `false`. |
+| `onClick` | `(e: React.MouseEvent) => void` | Called on a click, and on a touch move or touch end, which pass a touch event cast to a mouse event. |
+| `shouldShowBackdrop` | `boolean` | Renders the layer even when another backdrop is already on screen, which would otherwise suppress it. Default: `false`. |
+| `style` | `React.CSSProperties` | Custom inline styles to apply to the backdrop. `zIndex` is merged in first. |
+| `withBackground` | `boolean` | Dims the page. Without it the layer is transparent and only catches clicks — except on a viewport of 600px or less, where it dims anyway. Default: `false`. |
+| `withoutBackground` | `boolean` | Forces the backdrop to render without a background Takes precedence over withBackground. Default: `false`. |
+| `zIndex` | `number` | Stacking order of the layer. The component it covers needs a higher one. Default: `203`. |
 
 </APITable>
 

@@ -51,14 +51,14 @@ import GroupsSelector from "@onlyoffice/apps-ui-kit/selectors/Groups";
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `withHeader`? | `trueundefined` | Show the header bar with a label and close button. Default: `false`. |
-| `headerProps`? | `HeaderPropsundefined` | The header's own props. Required once withHeader is set. |
-| `useAside`? | `booleanundefined` | Render the selector inside an Aside panel with a backdrop. Default: `false`. |
-| `onClose`? | `VoidFunctionundefined` | Called when the selector panel is dismissed. |
-| `withoutBackground`? | `booleanundefined` | Remove the background overlay when rendered in Aside mode. Default: `false`. |
-| `withBlur`? | `booleanundefined` | Apply a blur effect to the Aside backdrop. Default: `false`. |
-| `id`? | `stringundefined` | HTML id attribute for the root element. |
-| `className`? | `stringundefined` | Additional CSS class name for the root element. |
-| `onSubmit` | `(selectedItems: TSelectorItem[], access?: TAccessRight \| null \| undefined, fileName?: string \| undefined, isFooterCheckboxChecked?: boolean \| undefined) => void \| Promise<...>` | Called with the selected TSelectorItem array when the user confirms their choice. |
+| `withHeader` | `trueundefined` | Show the header bar with a label and close button. Default: `false`. |
+| `headerProps` | `HeaderPropsundefined` | The header's own props. Required once withHeader is set. |
+| `useAside` | `booleanundefined` | Render the selector inside an Aside panel with a backdrop. Default: `false`. |
+| `onClose` | `VoidFunctionundefined` | Called when the selector panel is dismissed. |
+| `withoutBackground` | `booleanundefined` | Remove the background overlay when rendered in Aside mode. Default: `false`. |
+| `withBlur` | `booleanundefined` | Apply a blur effect to the Aside backdrop. Default: `false`. |
+| `id` | `stringundefined` | HTML id attribute for the root element. |
+| `className` | `stringundefined` | Additional CSS class name for the root element. |
+| `onSubmit` | `(selectedItems: TSelectorItem[], access?: TAccessRight \| null \| undefined, fileName?: string \| undefined, isFooterCheckboxChecked?: boolean \| undefined) => void \| Promise<...>` | **Required.** Called with the selected TSelectorItem array when the user confirms their choice. |
 
 </APITable>

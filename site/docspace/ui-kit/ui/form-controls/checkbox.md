@@ -118,20 +118,20 @@ export function TermsCheckbox() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `className`? | `string` | Applied to the `<label>` that wraps the whole control. |
-| `dataTestId`? | `string` | Value of `data-testid` on the `<label>`. Default: `"checkbox"`. |
-| `hasError`? | `boolean` | Draws the box and the label in the error colour. It renders no message — pair it with `FieldContainer` for that. Default: `false`. |
-| `helpButton`? | `React.ReactNode` | Node rendered after the label, usually a `HelpButton`. Clicking it does not toggle the checkbox. |
-| `id`? | `string` | Applied to the `<label>` that wraps the whole control. |
-| `isChecked`? | `boolean` | The state the checkbox starts in, and the one it is reset to whenever this prop changes. It is **not** a controlled value: a click flips the component's own state whether or not the parent agrees. Default: `false`. |
-| `isDisabled`? | `boolean` | Disables the input, dims the box and the label, and stops the control responding to a click. |
-| `isIndeterminate`? | `boolean` | Draws a dash instead of a tick and sets the input's DOM `indeterminate` property, for a parent whose children are partly selected. Default: `false`. |
-| `label`? | `string` | Text beside the box. It sits in the flow beside the icon, so a long one wraps unless `truncate` is set. |
-| `name`? | `string` | Name of the underlying checkbox input. |
-| `onChange`? | `React.ChangeEventHandler<HTMLInputElement, Element>` | Called with the input's change event; the new state is `event.target.checked`. The event does not bubble further — the component stops its propagation. |
-| `style`? | `React.CSSProperties` | Applied to the `<label>` that wraps the whole control. |
-| `tabIndex`? | `number` | Applied to the checkbox's **icon**, which is the focusable element — the input beneath it is always `-1`. Pass `-1` for a checkbox the keyboard is meant to skip. Default: `0`. |
-| `value`? | `number \| readonly string[] \| string` | Value of the underlying checkbox input, for a form read by name. |
+| `className` | `string` | Applied to the `<label>` that wraps the whole control. |
+| `dataTestId` | `string` | Value of `data-testid` on the `<label>`. Default: `"checkbox"`. |
+| `hasError` | `boolean` | Draws the box and the label in the error colour. It renders no message — pair it with `FieldContainer` for that. Default: `false`. |
+| `helpButton` | `React.ReactNode` | Node rendered after the label, usually a `HelpButton`. Clicking it does not toggle the checkbox. |
+| `id` | `string` | Applied to the `<label>` that wraps the whole control. |
+| `isChecked` | `boolean` | The state the checkbox starts in, and the one it is reset to whenever this prop changes. It is **not** a controlled value: a click flips the component's own state whether or not the parent agrees. Default: `false`. |
+| `isDisabled` | `boolean` | Disables the input, dims the box and the label, and stops the control responding to a click. |
+| `isIndeterminate` | `boolean` | Draws a dash instead of a tick and sets the input's DOM `indeterminate` property, for a parent whose children are partly selected. Default: `false`. |
+| `label` | `string` | Text beside the box. It sits in the flow beside the icon, so a long one wraps unless `truncate` is set. |
+| `name` | `string` | Name of the underlying checkbox input. |
+| `onChange` | `React.ChangeEventHandler<HTMLInputElement, Element>` | Called with the input's change event; the new state is `event.target.checked`. The event does not bubble further — the component stops its propagation. |
+| `style` | `React.CSSProperties` | Applied to the `<label>` that wraps the whole control. |
+| `tabIndex` | `number` | Applied to the checkbox's **icon**, which is the focusable element — the input beneath it is always `-1`. Pass `-1` for a checkbox the keyboard is meant to skip. Default: `0`. |
+| `value` | `number \| readonly string[] \| string` | Value of the underlying checkbox input, for a form read by name. |
 
 </APITable>
 
@@ -143,8 +143,8 @@ Declared by [`components/text`](../data-display/text.md) and accepted here too.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `title`? | `string` | Tooltip text. On a component the kit wraps in its tooltip HOC it is consumed before the element is built and opens the shared tooltip instead, which needs `RootTooltip` mounted; elsewhere it is the native `title` attribute. |
-| `truncate`? | `boolean` | Holds the text on one line and ends it with an ellipsis. It needs a parent of bounded width; on its own the element grows instead. |
+| `title` | `string` | Tooltip text. On a component the kit wraps in its tooltip HOC it is consumed before the element is built and opens the shared tooltip instead, which needs `RootTooltip` mounted; elsewhere it is the native `title` attribute. |
+| `truncate` | `boolean` | Holds the text on one line and ends it with an ellipsis. It needs a parent of bounded width; on its own the element grows instead. |
 
 </APITable>
 

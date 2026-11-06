@@ -125,7 +125,7 @@ git push origin master
 
 ## 从市场中移除插件 {#removing-a-plugin-from-the-marketplace}
 
-在 [https://github.com/ONLYOFFICE/onlyoffice.github.io/issues](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues) 提交 issue，注明插件名称和原因。
+在 [https://github.com/ONLYOFFICE/onlyoffice.github.io/issues](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues) 提交问题，注明插件名称和原因。
 
 ## 后续步骤 {#next-steps}
 

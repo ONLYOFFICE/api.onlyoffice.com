@@ -84,11 +84,11 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `label?` | `string` | Defines the toggle button label |
+| `label` | `string` | Defines the toggle button label |
 | `isChecked` | `boolean` | Specifies whether the toggle button is enabled |
 | `onChange` | () => `void` \| [`IMessage`](../utils.md#imessage) | Sets a function which is triggered whenever the toggle button is clicked |
-| `isDisabled?` | `boolean` | Specifies whether the toggle button is disabled |
-| `style?` | `any` | Defines the toggle button CSS style |
-| `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
+| `isDisabled` | `boolean` | Specifies whether the toggle button is disabled |
+| `style` | `any` | Defines the toggle button CSS style |
+| `className` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
 </APITable>

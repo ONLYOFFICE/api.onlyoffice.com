@@ -38,7 +38,7 @@ If you want to add your own plugin, you can do it manually, even if you are offl
 
 2. Open the **Plugin Manager** on the **Plugins** tab.
 
-3. Go to the **My plugins** tab and click the **Install plugin manually** button.
+3. Click **Install plugin manually** at the bottom of the left panel.
 
 4. Choose your created archive and click **Open**.
 
@@ -83,11 +83,11 @@ So, the folder name of this plugin will be `{91EAC419-EF8B-440C-A960-B451C7DF3A3
 
 **Step 3.** Put all the plugin files to this folder:
 
-![Plugin folder](/assets/images/plugins/plugins_folder.png)
+![Plugin folder](/assets/images/desktop/plugins_folder.png#gh-light-mode-only)![Plugin folder](/assets/images/desktop/plugins_folder.dark.png#gh-dark-mode-only)
 
 **Step 4.** Start [ONLYOFFICE Desktop Editors](../../../desktop-editors/get-started/overview.md). If everything is done correctly, the plugin will be displayed within the **Plugins** tab:
 
-![Extended comments](/assets/images/plugins/extended_comments.png)
+![Extended comments](/assets/images/desktop/extended_comments.png#gh-light-mode-only)![Extended comments](/assets/images/desktop/extended_comments.dark.png#gh-dark-mode-only)
 
 ## Removing plugins from ONLYOFFICE Desktop Editors
 
@@ -95,7 +95,8 @@ To uninstall the newly added plugins, proceed in the following way:
 
 1. Open the **Plugins** tab.
 2. Go to **Plugin Manager**.
-3. Click the **Remove** button under the corresponding plugin.
+3. Open the **Installed** section in the left panel.
+4. Click the **Remove** button under the corresponding plugin.
 
 :::note
 This option is not available for the default plugins and the plugins added via the plugin folder.

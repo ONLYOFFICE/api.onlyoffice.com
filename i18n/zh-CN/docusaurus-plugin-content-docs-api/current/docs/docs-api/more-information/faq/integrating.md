@@ -50,6 +50,6 @@ sidebar_position: -6
 
 ## 通过本地和公共网络将 ONLYOFFICE 连接到 ownClowd/Nextcloud 时应该使用哪些设置？ {#what-settings-should-be-used-when-connecting-onlyoffice-to-ownclowdnextcloud-via-a-local-and-public-network}
 
-将 ownCloud/Nextcloud安装连接到 ONLYOFFICE 文档时，您需要确保 Internet 浏览器和 ownCloud/Nextcloud 安装都可以访问安装了 ONLYOFFICE 文档的服务器，即一台可以向它发送请求，也可以接受来自它的响应的安装了 ONLYOFFICE 文档的计算机。
+将 ownCloud/Nextcloud 安装连接到 ONLYOFFICE 文档时，您需要确保 Internet 浏览器和 ownCloud/Nextcloud 安装都可以访问安装了 ONLYOFFICE 文档的服务器，即一台可以向它发送请求，也可以接受来自它的响应的安装了 ONLYOFFICE 文档的计算机。
 
 ownCloud 安装和 ONLYOFFICE 文档之间的交互方案可在[此处](../../get-started/ready-to-use-connectors/owncloud-integration.md#configuring-owncloud-onlyoffice-integration-app)获得。如果您使用 Nextcloud，请访问[此页面](../../get-started/ready-to-use-connectors/nextcloud-integration.md#configuring-nextcloud-onlyoffice-integration-app)以了解如何正确设置服务器。

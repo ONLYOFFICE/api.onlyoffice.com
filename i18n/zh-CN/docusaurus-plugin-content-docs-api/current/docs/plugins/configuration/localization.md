@@ -137,7 +137,7 @@ window.Asc.plugin.onTranslate = () => {
 _window\.Asc.plugin.onTranslate_ 函数将在插件启动后立即调用，也会在更改插件语言时再次调用。
 
 :::warning
-`onTranslate` 仅用于 DOM 文本本地化。请勿在此处理函数中调用 `executeMethod`、`callCommand` 或 `PluginWindow.show` — 这些方法可能尚不可用，因为 `onTranslate` 可能在 `init` 之前触发。
+`onTranslate` 仅用于 DOM 文本本地化。请勿在此处理函数中调用 `executeMethod`、`callCommand` 或 `PluginWindow.show`——这些方法可能尚不可用，因为 `onTranslate` 可能在 `init` 之前触发。
 :::
 
 如果你需要本地化多个词语/短语，_window\.Asc.plugin.onTranslate_ 函数可写为如下形式：
@@ -183,7 +183,7 @@ var language = document.getElementById("language");
 
 :::
 
-错误输出：_"document.getElementBy 不是一个函数"_ (开发者工具)
+错误输出：_“document.getElementBy 不是一个函数”_（开发者工具）
 
 **错误名称：** 元素 ID 不匹配
 
@@ -287,7 +287,7 @@ highlightcode/
 
 :::
 
-错误输出：_"ERR_FILE_NOT_FOUND ; translations/de-DE.json"_ (开发者工具)
+错误输出：_"ERR_FILE_NOT_FOUND ; translations/de-DE.json"_（开发者工具）
 
 ### 配置文件错误
 

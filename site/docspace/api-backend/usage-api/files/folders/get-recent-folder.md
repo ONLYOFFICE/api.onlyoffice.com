@@ -1,6 +1,6 @@
 # getRecentFolder
 
-> FolderContentWrapper getRecentFolder(userIdOrGroupId, filterType, excludeSubject, applyFilterOption, searchArea, extension, count, startIndex, sortBy, sortOrder, filterValue, metadataTemplateId, metadataFilters)
+> FolderContentWrapper getRecentFolder(userIdOrGroupId, filterType, excludeSubject, applyFilterOption, searchArea, extension, count, startIndex, sortBy, sortOrder, filterValue, metadataTemplateId, metadataFilters, includeHiddenMetadata)
 
 `GET /api/2.0/files/recent`
 
@@ -24,7 +24,8 @@ Returns the Recent section: the files the calling account has opened lately. The
 | **sortOrder** | query | **SortOrder** | The direction in which the `sortBy` field is ordered. It is saved together with `sortBy` as the default order of the account. The Recent section keeps its own newest-first order, so the value does not reorder this listing. | [optional] [example: `1`] [enum: `0`, `1`] |
 | **filterValue** | query | **String** | The search string the history is filtered by: it is matched as a substring of file titles and against the indexed document content as well. Omit it to list the whole history. | [optional] [example: `My Document`] |
 | **metadataTemplateId** | query | **Integer** (int32) | The ID of the metadata template the recent files must be assigned to. On its own it narrows the listing to the files carrying the template; together with the metadata filters it also pins the template the filtered fields belong to. The third-party files never carry metadata and are left out when the filter is set. | [optional] [example: `1`] |
-| **metadataFilters** | query | **String** | The URL-encoded JSON array of the metadata filter conditions, e.g. [\{fieldId:1,op:eq,value:ACME\},\{fieldId:2,op:range,from:2026-01-01,to:2026-06-30\},\{fieldId:3,op:in,optionIds:[...]\}]. The range bounds are inclusive; a date-only bound covers the whole day. A custom field is addressed by its name instead of the fieldId: \{name:Client,op:eq,value:ACME\}. | [optional] [example: `[{"fieldId":1,"op":"eq","value":"ACME"}]`] |
+| **metadataFilters** | query | **String** | The URL-encoded JSON array of the metadata filter conditions, e.g. [\{fieldId:1,op:contains,value:ACME\},\{fieldId:2,op:range,from:2026-01-01,to:2026-06-30\},\{fieldId:3,op:in,optionIds:[...]\}]. A string field takes eq or contains; a number or a date field takes range with inclusive bounds, or gt, gte, lt, lte with the bound in value; a date-only bound covers the whole day. A custom field is addressed by its name instead of the fieldId: \{name:Client,op:eq,value:ACME\}. | [optional] [example: `[{"fieldId":1,"op":"eq","value":"ACME"}]`] |
+| **includeHiddenMetadata** | query | **Boolean** | Whether the text search, and the metadataMatches it reports, also look at the values of the hidden metadata templates (created with visible false for the metadata a service keeps for itself, which the web client never shows). False, the default, leaves them out, so an entry is not found by such a value; true takes them in. metadataTemplateId and metadataFilters are not concerned: a hidden template or field named there is searched either way. | [optional] [example: `false`] |
 
 ## Responses
 

@@ -4,11 +4,11 @@ hide_table_of_contents: true
 
 # 获取所有表单值
 
-在表单填写完成后，将所有表单字段值收集到单个JSON对象中，用于分析、服务器提交或数据库存储：
+在表单填写完成后，将所有表单字段值收集到单个 JSON 对象中，用于分析、服务器提交或数据库存储：
 
 - 创建包含多种字段类型（包括单选按钮）的综合表单（[Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)、[Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md)、[Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md)）；
 - 使用示例数据预填充表单字段（[ApiTextForm/SetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetText.md)、[ApiCheckBoxForm/SetChecked](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/SetChecked.md)）；
-- 将所有表单值收集到JSON对象中（[ApiDocument/GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md)、[ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md)、[ApiFormBase/GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md)）。
+- 将所有表单值收集到 JSON 对象中（[ApiDocument/GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md)、[ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md)、[ApiFormBase/GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md)）。
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();

@@ -126,18 +126,18 @@ export function NotificationSetting() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `className`? | `string` | Applied to the outer element **and** to the inner `<label>`. |
-| `dataTestId`? | `string` | Value of `data-testid` on the outer element. Default: `"toggle-button"`. |
-| `dataTooltipId`? | `string` | Value of `data-tooltip-id` on the outer element, which is how a `Tooltip` elsewhere in the tree anchors itself to this control. |
-| `id`? | `string` | Applied to the outer element **and** to the inner `<label>`, so it appears twice in the document. |
-| `isChecked`? | `boolean` | Whether the switch is on. The control is fully controlled: this is the `checked` of a real checkbox input, so pass `onChange` with it or React warns and the switch never moves. |
-| `isDisabled`? | `boolean` | Disables the underlying input and stops pointer events on the whole control, and dims the switch and the label. |
-| `isLoading`? | `boolean` | Pulses the knob to show work in progress. It does **not** disable the control — a click during it still reaches `onChange`. |
-| `label`? | `string` | Text rendered beside the switch, in a `Text` span. Omit it and the component is the 28×16 switch alone. |
-| `name`? | `string` | Name of the hidden checkbox input, for a form that reads the control by name rather than by state. |
-| `noAnimation`? | `boolean` | Runs the state transitions with a duration of zero instead of animating them. The animation is otherwise always on. Default: `false`. |
-| `onChange`? | `ChangeEventHandler<HTMLInputElement, Element>` | Called with the checkbox's change event; the new state is `event.target.checked`. Required in practice, since `isChecked` makes the input controlled. |
-| `style`? | `CSSProperties` | Applied to the outer element **and** to the inner `<label>`, so a margin or a padding set here takes effect at both levels. |
+| `className` | `string` | Applied to the outer element **and** to the inner `<label>`. |
+| `dataTestId` | `string` | Value of `data-testid` on the outer element. Default: `"toggle-button"`. |
+| `dataTooltipId` | `string` | Value of `data-tooltip-id` on the outer element, which is how a `Tooltip` elsewhere in the tree anchors itself to this control. |
+| `id` | `string` | Applied to the outer element **and** to the inner `<label>`, so it appears twice in the document. |
+| `isChecked` | `boolean` | Whether the switch is on. The control is fully controlled: this is the `checked` of a real checkbox input, so pass `onChange` with it or React warns and the switch never moves. |
+| `isDisabled` | `boolean` | Disables the underlying input and stops pointer events on the whole control, and dims the switch and the label. |
+| `isLoading` | `boolean` | Pulses the knob to show work in progress. It does **not** disable the control — a click during it still reaches `onChange`. |
+| `label` | `string` | Text rendered beside the switch, in a `Text` span. Omit it and the component is the 28×16 switch alone. |
+| `name` | `string` | Name of the hidden checkbox input, for a form that reads the control by name rather than by state. |
+| `noAnimation` | `boolean` | Runs the state transitions with a duration of zero instead of animating them. The animation is otherwise always on. Default: `false`. |
+| `onChange` | `ChangeEventHandler<HTMLInputElement, Element>` | Called with the checkbox's change event; the new state is `event.target.checked`. Required in practice, since `isChecked` makes the input controlled. |
+| `style` | `CSSProperties` | Applied to the outer element **and** to the inner `<label>`, so a margin or a padding set here takes effect at both levels. |
 
 </APITable>
 
@@ -149,8 +149,8 @@ Declared by [`components/text`](../data-display/text.md) and accepted here too.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `fontSize`? | `string` | Font size, as an inline style. Unset, `Text` is 13px through `--text-size`. |
-| `fontWeight`? | `number \| string` | Font weight, as an inline style. Ignored while `isBold` is set. Unset, `Text` is 400 through `--text-weight`. |
+| `fontSize` | `string` | Font size, as an inline style. Unset, `Text` is 13px through `--text-size`. |
+| `fontWeight` | `number \| string` | Font weight, as an inline style. Ignored while `isBold` is set. Unset, `Text` is 400 through `--text-weight`. |
 
 </APITable>
 

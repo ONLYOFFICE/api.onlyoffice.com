@@ -4,7 +4,7 @@ sidebar_position: -6
 
 # Creating plugin template
 
-Before starting plugin development, create a plugin template and configure its settings, which will be displayed in the DocSpace plugin settings.
+Before starting plugin development, create a plugin template and configure its settings, which will be displayed in the ONLYOFFICE Apps plugin settings.
 
 1. Install the *@onlyoffice/docspace-plugin-sdk* npm package globally:
 
@@ -25,15 +25,15 @@ Before starting plugin development, create a plugin template and configure its s
    | Parameter              | Description                                                                                                                                                                                                                                                                       |
    | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
    | Name                   | A folder with this name will be created for deploying the plugin. This field is required. The name may only include lower case letters, *-* and *_*.                                                                                                                             |
-   | Version                | The current plugin version that will be displayed in the DocSpace plugin settings.                                                                                                                                                                                                |
-   | Author                 | The plugin author that will be displayed in the DocSpace plugin settings.                                                                                                                                                                                                         |
-   | Name of the logo image | The name of the plugin logo image that must be uploaded to the *assets* folder. There is no need to specify the path to this file. The logo will be displayed in the list of plugins on the DocSpace **Plugins** tab. The required icon size is 48x48 px. Otherwise, it will be compressed to this size. |
-   | Description            | The plugin description that will be displayed in the DocSpace plugin settings.                                                                                                                                                                                                    |
+   | Version                | The current plugin version that will be displayed in the ONLYOFFICE Apps plugin settings.                                                                                                                                                                                                |
+   | Author                 | The plugin author that will be displayed in the ONLYOFFICE Apps plugin settings.                                                                                                                                                                                                         |
+   | Name of the logo image | The name of the plugin logo image that must be uploaded to the *assets* folder. There is no need to specify the path to this file. The logo will be displayed in the list of plugins on the ONLYOFFICE Apps **Plugins** tab. The required icon size is 48x48 px. Otherwise, it will be compressed to this size. |
+   | Description            | The plugin description that will be displayed in the ONLYOFFICE Apps plugin settings.                                                                                                                                                                                                    |
    | License                | The plugin license.                                                                                                                                                                                                                                                               |
-   | Homepage               | The plugin homepage. For example, it can be the plugin GitHub repository. This information will be displayed in the DocSpace plugin settings.                                                                                                                                     |
+   | Homepage               | The plugin homepage. For example, it can be the plugin GitHub repository. This information will be displayed in the ONLYOFFICE Apps plugin settings.                                                                                                                                     |
 
    :::note
-   Plugins are cached based on their version number. If you upload a plugin with the same version as before, DocSpace will show a warning and skip the update. Increment the version in *package.json* before each re-upload to make sure your changes are applied.
+   Plugins are cached based on their version number. If you upload a plugin with the same version as before, ONLYOFFICE Apps will show a warning and skip the update. Increment the version in *package.json* before each re-upload to make sure your changes are applied.
    :::
 
 4. Select the plugin scopes from the list: use the arrow keys to move through the list, press *Space* to select the necessary scopes, *a* to toggle all, *i* to invert the selection, and *Enter* to proceed:
@@ -79,7 +79,7 @@ Key fields:
 
 - `"private": true` — prevents accidental publication to npm registry
 - `"type": "module"` — required for ES modules; enables `import`/`export` syntax in the build process
-- `"runtime": "module"` — required for SDK 3.0.0; tells DocSpace to load the plugin as an ES module
+- `"runtime": "module"` — required for SDK 3.0.0; tells ONLYOFFICE Apps to load the plugin as an ES module
 
 ``` json
 {

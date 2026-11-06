@@ -9,15 +9,15 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="_1Q86nRnumo"/>
 
-这个[插件](https://github.com/ONLYOFFICE/onlyoffice-redmine)能让用户借助ONLYOFFICE 文档，在[Redmine](https://www.redmine.org/)中编辑附件。
+这个[插件](https://github.com/ONLYOFFICE/onlyoffice-redmine)能让用户借助 ONLYOFFICE 文档，在 [Redmine](https://www.redmine.org/) 中编辑附件。
 
-该插件可在官方的[Redmine插件目录](https://www.redmine.org/plugins/onlyoffice_redmine)中获取。
+该插件可在官方的 [Redmine 插件目录](https://www.redmine.org/plugins/onlyoffice_redmine)中获取。
 
 ## 功能特性
 
-- 可查看和编辑文本文档、电子表格、演示文稿、PDF以及表单。
+- 可查看和编辑文本文档、电子表格、演示文稿、PDF 以及表单。
 - 支持通过两种协同编辑模式（快速模式和严格模式）进行文档实时协同编辑，具备修订跟踪、添加注释和内置聊天功能。
-- 设有设置页面，用于配置与服务器的连接、JWT身份验证，还能自定义编辑器外观。
+- 设有设置页面，用于配置与服务器的连接、JWT 身份验证，还能自定义编辑器外观。
 - 授权编辑器支持移动端查看。
 - 可依据用户的语言偏好，使用模板创建新附件。
 - 能够转换附件格式，并进行保存或下载操作。
@@ -32,19 +32,19 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 \* *- 要能够打开这些格式进行编辑，请在[格式设置](#formats)中勾选。由于某些格式限制，可能会出现数据丢失的情况。*
 
-## 安装ONLYOFFICE 文档
+## 安装 ONLYOFFICE 文档
 
-在安装插件之前，请确保您拥有一个ONLYOFFICE 文档（文档服务器）实例，该实例必须能从Redmine和任何终端客户端解析并连接。此外，要确保ONLYOFFICE 文档能够直接向Redmine发送POST请求。
+在安装插件之前，请确保您拥有一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Redmine 和任何终端客户端解析并连接。此外，要确保 ONLYOFFICE 文档能够直接向 Redmine 发送 POST 请求。
 
-我们建议使用[Docker](https://github.com/onlyoffice/Docker-DocumentServer)来安装ONLYOFFICE 文档。或者，您也可以按照[这些说明](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)，在Debian、Ubuntu或其衍生系统上进行安装。
+我们建议使用 [Docker](https://github.com/onlyoffice/Docker-DocumentServer) 来安装 ONLYOFFICE 文档。或者，您也可以按照[这些说明](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)，在 Debian、Ubuntu 或其衍生系统上进行安装。
 
-## 安装Redmine ONLYOFFICE集成插件
+## 安装 Redmine ONLYOFFICE 集成插件
 
-安装该插件需要Redmine4.2或更高版本，或者5.0或更高版本。同时要注意，该插件与Ruby2.7.2或更高版本，或者3.0.0或更高版本兼容。我们建议使用Redmine5搭配Ruby3。
+安装该插件需要 Redmine4.2 或更高版本，或者 5.0 或更高版本。同时要注意，该插件与 Ruby2.7.2 或更高版本，或者 3.0.0 或更高版本兼容。我们建议使用 Redmine5 搭配 Ruby3。
 
-此外，您可能需要[zstd](https://github.com/facebook/zstd)来解压该插件。
+此外，您可能需要 [zstd](https://github.com/facebook/zstd) 来解压该插件。
 
-1. 如果您是Redmine新手，请按照[这些说明](https://www.redmine.org/projects/redmine/wiki/RedmineInstall)安装Redmine。
+1. 如果您是 Redmine 新手，请按照[这些说明](https://www.redmine.org/projects/redmine/wiki/RedmineInstall)安装 Redmine。
 
 2. 下载[插件](https://github.com/ONLYOFFICE/onlyoffice-redmine/releases):
 
@@ -58,7 +58,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
    tar --extract --file onlyoffice_redmine.tar.zst --directory plugins
    ```
 
-4. 如果Redmine没有自动安装插件依赖项，则需手动安装：
+4. 如果 Redmine 没有自动安装插件依赖项，则需手动安装：
 
    ``` sh
    bundle install
@@ -70,29 +70,29 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
    RAILS_ENV=production bundle exec rake redmine:plugins:migrate NAME=onlyoffice_redmine
    ```
 
-6. 重启Redmine。
+6. 重启 Redmine。
 
-在Redmine的[维基页面](https://www.redmine.org/projects/redmine/wiki/plugins#Installing-a-plugin)上可以了解更多关于插件安装的信息。
+在 Redmine 的[维基页面](https://www.redmine.org/projects/redmine/wiki/plugins#Installing-a-plugin)上可以了解更多关于插件安装的信息。
 
-## 配置Redmine ONLYOFFICE集成插件
+## 配置 Redmine ONLYOFFICE 集成插件
 
-通过Redmine界面配置插件。进入**管理->插件**，找到Redmine的ONLYOFFICE集成插件并点击**配置**：
+通过 Redmine 界面配置插件。进入**管理->插件**，找到 Redmine 的 ONLYOFFICE 集成插件并点击**配置**：
 
-![Redmine设置](/assets/images/editor/redmine-settings.png)
+![Redmine 设置](/assets/images/editor/redmine-settings.png)
 
 ### 常规设置
 
-- **文档编辑服务地址**：已安装的ONLYOFFICE 文档（文档服务器）的URL。留空则会禁用该插件。
+- **文档编辑服务地址**：已安装的 ONLYOFFICE 文档（文档服务器）的 URL。留空则会禁用该插件。
 
 ### 高级服务器设置
 
-- **服务器内部请求的ONLYOFFICE 文档地址。**
+- **服务器内部请求的 ONLYOFFICE 文档地址。**
 - **ONLYOFFICE 文档内部请求的服务器地址。**
-- **连接到演示ONLYOFFICE 文档服务器。**
+- **连接到演示 ONLYOFFICE 文档服务器。**
 
 ### 安全设置
 
-- **密钥**：从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE 文档的访问，保障安全性和数据完整性。在ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中指定您的密钥，然后在插件的设置页面中指定相同的密钥。留空则会禁用身份验证。
+- **密钥**：从 7.2 版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中指定您的密钥，然后在插件的设置页面中指定相同的密钥。留空则会禁用身份验证。
 - **授权标头。**
 - **禁用证书验证（不安全）。**
 
@@ -110,7 +110,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 工作原理
 
-该插件使用[ONLYOFFICE 文档API](../basic-concepts.md)并集成到Redmine的多个页面中，包括[文档](#documents)，[附件](#attachments)，[文件](#files)，[问题](#issues)，[新闻](#news)，[维基](#wiki)，和[论坛](#forums)。此外，该插件还添加了诸如["在ONLYOFFICE中创建"](#create-in-onlyoffice)和["使用ONLYOFFICE转换"](#convert-with-onlyoffice)等常规页面。
+该插件使用 [ONLYOFFICE 文档 API](../basic-concepts.md) 并集成到 Redmine 的多个页面中，包括[文档](#documents)，[附件](#attachments)，[文件](#files)，[问题](#issues)，[新闻](#news)，[维基](#wiki)，和[论坛](#forums)。此外，该插件还添加了诸如[“在 ONLYOFFICE 中创建”](#create-in-onlyoffice)和[“使用 ONLYOFFICE 转换”](#convert-with-onlyoffice)等常规页面。
 
 ### 文档 {#documents}
 
@@ -197,22 +197,22 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 | 转换：保存         | 查看消息、编辑消息             |
 | 转换：下载         | 查看消息                      |
 
-### 在ONLYOFFICE中查看或编辑
+### 在 ONLYOFFICE 中查看或编辑
 
-![在ONLYOFFICE中查看或编辑](/assets/images/editor/view-or-edit.png)
+![在 ONLYOFFICE 中查看或编辑](/assets/images/editor/view-or-edit.png)
 
-在**ONLYOFFICE中查看或编辑**页面，用户可以查看或编辑附件。此页面的可见性取决于用户对附件所在模块的权限。
+在 **ONLYOFFICE 中查看或编辑**页面，用户可以查看或编辑附件。此页面的可见性取决于用户对附件所在模块的权限。
 
-### 在ONLYOFFICE中创建 {#create-in-onlyoffice}
+### 在 ONLYOFFICE 中创建 {#create-in-onlyoffice}
 
-![在ONLYOFFICE中创建](/assets/images/editor/create-page.png)
+![在 ONLYOFFICE 中创建](/assets/images/editor/create-page.png)
 
-**在ONLYOFFICE中创建**页面，用户可以使用考虑用户语言偏好的模板创建附件。查看[支持的格式](#formats)。此页面的可见性取决于用户对模块的权限。
+**在 ONLYOFFICE 中创建**页面，用户可以使用考虑用户语言偏好的模板创建附件。查看[支持的格式](#formats)。此页面的可见性取决于用户对模块的权限。
 
-### 使用ONLYOFFICE转换 {#convert-with-onlyoffice}
+### 使用 ONLYOFFICE 转换 {#convert-with-onlyoffice}
 
-![使用ONLYOFFICE转换](/assets/images/editor/convert-page.png)
+![使用 ONLYOFFICE 转换](/assets/images/editor/convert-page.png)
 
-在**使用ONLYOFFICE转换**页面，用户可以转换附件。此页面的可见性取决于用户对附件所在模块的权限。
+在**使用 ONLYOFFICE 转换**页面，用户可以转换附件。此页面的可见性取决于用户对附件所在模块的权限。
 
-在[这里](https://github.com/ONLYOFFICE/onlyoffice-redmine)下载Redmine ONLYOFFICE插件。
+在[这里](https://github.com/ONLYOFFICE/onlyoffice-redmine)下载 Redmine ONLYOFFICE 插件。

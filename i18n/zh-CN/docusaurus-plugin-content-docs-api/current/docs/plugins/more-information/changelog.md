@@ -134,7 +134,7 @@ ONLYOFFICE 插件与宏 API 的变更列表。
 - 为 Presentation API 添加了 [GetAllComments](../interacting-with-editors/presentation-api/Methods/GetAllComments.md) 方法。
 - 在简单类型定义中添加了 [OLEProperties](../interacting-with-editors/document-api/Enumeration/OLEProperties.md) 类型。
 - 在简单类型定义中添加了 [PluginOptions](../interacting-with-editors/document-api/Enumeration/PluginOptions.md) 类型。
-- 在简单类型定义中添加了[工具栏菜单项](../customization/toolbar.md#toolbarmenuitem) 类型。
+- 在简单类型定义中添加了[工具栏菜单项](../customization/toolbar.md#toolbarmenuitem)类型。
 - 在简单类型定义中添加了[工具栏菜单主项](../customization/toolbar.md#toolbarmenumainitem)类型。
 - 在简单类型定义中添加了[工具栏菜单选项卡](../customization/toolbar.md#toolbarmenutab)类型。
 - 在简单类型定义中添加了[工具栏菜单项类型](../customization/toolbar.md#toolbarmenuitemtype)类型。

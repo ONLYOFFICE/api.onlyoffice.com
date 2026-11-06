@@ -1,6 +1,7 @@
 import { type FC, type ReactNode, memo } from 'react';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
+import TagBadge, {type TagBadgeProps} from '@site/src/components/TagBadge';
 import styles from './styles.module.css';
 
 export namespace SamplesGrid {
@@ -10,10 +11,7 @@ export namespace SamplesGrid {
     onTagClick?: (label: string) => void;
   }
 
-  export type Tag = {
-    label: string;
-    variant?: 'green' | 'blue' | 'purple' | 'pink' | 'default';
-  };
+  export type Tag = Pick<TagBadgeProps, 'label' | 'variant'>;
 
   export type Item = {
     icon?: ReactNode;
@@ -26,25 +24,6 @@ export namespace SamplesGrid {
   };
 }
 
-
-const variantStyles: Record<string, string | undefined> = {
-  green: styles.tagGreen,
-  blue: styles.tagBlue,
-  purple: styles.tagPurple,
-  pink: styles.tagPink,
-};
-
-type TagBadgeProps = SamplesGrid.Tag & { onClick?: (label: string) => void };
-
-const TagBadge: FC<TagBadgeProps> = ({ label, variant = 'default', onClick }) => {
-  const className = [styles.tag, onClick && styles.tagClickable, variantStyles[variant]].filter(Boolean).join(' ');
-
-  return (
-    <span className={className} onClick={onClick ? () => onClick(label) : undefined}>
-      {label}
-    </span>
-  );
-};
 
 type FeatureProps = SamplesGrid.Item & { compact?: boolean; onTagClick?: (label: string) => void };
 

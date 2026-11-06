@@ -133,18 +133,18 @@ export function AvatarCropper({ t }: { t: TTranslation }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `editorBorderRadius` | `number` | Corner radius of the crop window in pixels, measured on the 648px canvas — half of it, 324, is a circle. |
-| `image` | `TImage` | The picture and its crop, held in your state. The whole editor renders nothing while `uploadedFile` is empty. |
-| `isDisabled` | `boolean` | Blocks dragging, zooming and choosing another file. It is required, so pass `false` when nothing is in flight. |
-| `onChangeFile` | `(e: React.ChangeEvent<HTMLInputElement>) => void` | Called with the change event of the hidden file input when another picture is chosen. Read the file and put it in `image.uploadedFile` yourself. |
-| `onChangeImage` | `TChangeImage` | Called with a new `image` whenever the crop is dragged or the zoom changes. Apply it to your state or nothing moves. |
-| `Preview` | `ReactNode` | Rendered beside the cropper, inside the wrapper that `classNameWrapperImageCropper` names — the place for a preview of the cropped result. |
-| `setPreview` | `TSetPreview` | Called, at most every 300ms, with the cropped picture as a `data:` URL. A canvas tainted by a cross-origin image makes it stop silently. |
-| `t` | `TTranslation` | Translation function. The editor asks it for `Common:ChooseAnother`, so a portal translation context is required. |
-| `className`? | `string` | Added to the outer element. |
-| `classNameWrapperImageCropper`? | `string` | Added to the element that wraps the cropper and `Preview`. It is the hook for laying those two out side by side. |
-| `disableImageRescaling`? | `boolean` | Hides the zoom row and freezes the crop position, leaving the picture as it is. |
-| `maxImageSize`? | `number` | **Deprecated.** Ignored. Nothing in this folder reads it; check the file's size in `onChangeFile` instead. |
+| `editorBorderRadius` | `number` | **Required.** Corner radius of the crop window in pixels, measured on the 648px canvas — half of it, 324, is a circle. |
+| `image` | `TImage` | **Required.** The picture and its crop, held in your state. The whole editor renders nothing while `uploadedFile` is empty. |
+| `isDisabled` | `boolean` | **Required.** Blocks dragging, zooming and choosing another file. It is required, so pass `false` when nothing is in flight. |
+| `onChangeFile` | `(e: React.ChangeEvent<HTMLInputElement>) => void` | **Required.** Called with the change event of the hidden file input when another picture is chosen. Read the file and put it in `image.uploadedFile` yourself. |
+| `onChangeImage` | `TChangeImage` | **Required.** Called with a new `image` whenever the crop is dragged or the zoom changes. Apply it to your state or nothing moves. |
+| `Preview` | `ReactNode` | **Required.** Rendered beside the cropper, inside the wrapper that `classNameWrapperImageCropper` names — the place for a preview of the cropped result. |
+| `setPreview` | `TSetPreview` | **Required.** Called, at most every 300ms, with the cropped picture as a `data:` URL. A canvas tainted by a cross-origin image makes it stop silently. |
+| `t` | `TTranslation` | **Required.** Translation function. The editor asks it for `Common:ChooseAnother`, so a portal translation context is required. |
+| `className` | `string` | Added to the outer element. |
+| `classNameWrapperImageCropper` | `string` | Added to the element that wraps the cropper and `Preview`. It is the hook for laying those two out side by side. |
+| `disableImageRescaling` | `boolean` | Hides the zoom row and freezes the crop position, leaving the picture as it is. |
+| `maxImageSize` | `number` | **Deprecated.** Ignored. Nothing in this folder reads it; check the file's size in `onChangeFile` instead. |
 
 </APITable>
 

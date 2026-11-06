@@ -1,6 +1,6 @@
 ---
 description: Retrieve a group and its members by ID via the API.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,13 +8,13 @@ import TabItem from '@theme/TabItem';
 
 # Get a group with members
 
-This example demonstrates how to retrieve a group by ID in ONLYOFFICE DocSpace and include its members in the response.
+This example demonstrates how to retrieve a group by ID in ONLYOFFICE Apps and include its members in the response.
 
 Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/nodejs/samples/get-group-with-members.js)/[Python](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/python/samples/get-group-with-members.py)
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>
@@ -23,7 +23,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
   <TabItem value="nodejs" label="Node.js">
 
   ``` ts
-  // Set your DocSpace portal URL and API key
+  // Set your ONLYOFFICE Apps portal URL and API key
   const API_HOST = 'https://yourportal.onlyoffice.com';
   const API_KEY = 'your_api_key';
   const GROUP_ID = '08e455dc-98c4-4390-b36f-54757080149c'; // Replace with your actual group ID
@@ -72,7 +72,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
   ``` py
   import requests
 
-  # Set your DocSpace portal URL and API key
+  # Set your ONLYOFFICE Apps portal URL and API key
   API_HOST = 'https://yourportal.onlyoffice.com'
   API_KEY = 'your_api_key'
   GROUP_ID = '08e455dc-98c4-4390-b36f-54757080149c'  # Replace with your actual group ID

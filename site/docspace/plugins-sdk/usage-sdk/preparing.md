@@ -10,10 +10,10 @@ Before you start developing a plugin, you should go through the following prepar
 
 Set up the following:
 
-- ONLYOFFICE DocSpace. Choose one of the following:
+- ONLYOFFICE Apps. Choose one of the following:
 
-  - **On-premises**: [get ONLYOFFICE DocSpace](https://www.onlyoffice.com/download-developer?from=api#docspace-developer) and follow the [installation instructions](https://helpcenter.onlyoffice.com/docspace/installation/developer?from=api) in ONLYOFFICE Help Center.
-  - **SaaS**: [register a DocSpace SaaS account](https://onlyoffice.com/docspace-registration?from=api).
+  - **On-premises**: [get ONLYOFFICE Apps](https://www.onlyoffice.com/download-developer?from=api#docspace-developer) and follow the [installation instructions](https://helpcenter.onlyoffice.com/docspace/installation/developer?from=api) in ONLYOFFICE Help Center.
+  - **SaaS**: [register an ONLYOFFICE Apps SaaS account](https://onlyoffice.com/docspace-registration?from=api).
 
 - *@onlyoffice/docspace-plugin-sdk* npm package
 
@@ -27,7 +27,7 @@ Set up the following:
 
 Design the way your plugin will work:
 
-1. Choose the service that allows you to add the necessary functionality to your DocSpace.
+1. Choose the service that allows you to add the necessary functionality to your ONLYOFFICE Apps.
 
    For example, [AssemblyAI](https://www.assemblyai.com/), [ConvertAPI](https://www.convertapi.com/), [Draw.io](https://www.drawio.com/).
 

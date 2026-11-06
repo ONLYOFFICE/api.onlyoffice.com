@@ -200,7 +200,7 @@ connector.connect();
 
 ## createWindow
 
-调用该函数来创建 [连接器模态窗口](./connector-window.md) 以在编辑器内显示附加信息。
+调用该函数来创建[连接器模态窗口](./connector-window.md)以在编辑器内显示附加信息。
 
 ### 示例
 

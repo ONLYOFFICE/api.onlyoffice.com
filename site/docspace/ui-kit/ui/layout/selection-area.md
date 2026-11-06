@@ -118,19 +118,19 @@ export function SelectableList() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `containerClass` | `string` | Class of the element the rectangle is clamped to. When nothing matches it, the `<html>` element is used. Required. |
-| `itemClass` | `string` | In row view, the class of the descendant that carries the `value` attribute. Required. |
-| `itemsContainerClass` | `string` | Class of the element the items sit in. It is measured once, at the start of each drag, to place the grid's origin. Required. |
-| `scrollClass` | `string` | Class of the scrolling element. The component listens to its `scroll` and shifts the rectangle to match; without a match it falls back to the document. Required. |
-| `selectableClass` | `string` | Class every selectable element carries. Each one must also have a `value` attribute shaped `type_…_index`, which is how the component works out where it sits. Required. Default: `""`. |
-| `viewAs` | `TViewAs` | `"tile"` switches to the grid arithmetic — columns, row gaps and missing tiles; anything else is treated as a single column. Required. |
-| `arrayTypes`? | `TArrayTypes[]` | One entry per group of items, in the order they appear. Tile arithmetic needs it; without it every gap and row count is taken as zero. |
-| `countTilesInRow`? | `number` | How many tiles fit in a row. It is asserted to exist in tile view, where a missing value makes every position `NaN`. |
-| `defaultHeaderHeight`? | `number` | Height in pixels of one group heading, multiplied by the number of headings above a group. |
-| `folderHeaderHeight`? | `number` | Height in pixels of the header above the tiles, added to the grid's origin unless `isRooms` is set. It is asserted to exist in tile view. |
-| `isRooms`? | `boolean` | In tile view, skips adding `folderHeaderHeight` to the grid's origin. |
-| `onMouseDown`? | `(event: MouseEvent) => void` | Called on every mouse-down on the document, before the button and the target are checked — so it fires for the right button and for clicks that start no selection. |
-| `onMove`? | `({ added, removed, clear }: TOnMove) => void` | Called on every animation frame of a drag with the full covered and uncovered sets. |
+| `containerClass` | `string` | **Required.** Class of the element the rectangle is clamped to. When nothing matches it, the `<html>` element is used. Required. |
+| `itemClass` | `string` | **Required.** In row view, the class of the descendant that carries the `value` attribute. Required. |
+| `itemsContainerClass` | `string` | **Required.** Class of the element the items sit in. It is measured once, at the start of each drag, to place the grid's origin. Required. |
+| `scrollClass` | `string` | **Required.** Class of the scrolling element. The component listens to its `scroll` and shifts the rectangle to match; without a match it falls back to the document. Required. |
+| `selectableClass` | `string` | **Required.** Class every selectable element carries. Each one must also have a `value` attribute shaped `type_…_index`, which is how the component works out where it sits. Required. Default: `""`. |
+| `viewAs` | `TViewAs` | **Required.** `"tile"` switches to the grid arithmetic — columns, row gaps and missing tiles; anything else is treated as a single column. Required. |
+| `arrayTypes` | `TArrayTypes[]` | One entry per group of items, in the order they appear. Tile arithmetic needs it; without it every gap and row count is taken as zero. |
+| `countTilesInRow` | `number` | How many tiles fit in a row. It is asserted to exist in tile view, where a missing value makes every position `NaN`. |
+| `defaultHeaderHeight` | `number` | Height in pixels of one group heading, multiplied by the number of headings above a group. |
+| `folderHeaderHeight` | `number` | Height in pixels of the header above the tiles, added to the grid's origin unless `isRooms` is set. It is asserted to exist in tile view. |
+| `isRooms` | `boolean` | In tile view, skips adding `folderHeaderHeight` to the grid's origin. |
+| `onMouseDown` | `(event: MouseEvent) => void` | Called on every mouse-down on the document, before the button and the target are checked — so it fires for the right button and for clicks that start no selection. |
+| `onMove` | `({ added, removed, clear }: TOnMove) => void` | Called on every animation frame of a drag with the full covered and uncovered sets. |
 
 </APITable>
 

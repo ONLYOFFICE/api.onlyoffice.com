@@ -117,21 +117,21 @@ export function Quality() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `max` | `number` | Highest value of the range. |
-| `min` | `number` | Lowest value of the range. |
-| `value` | `number` | The current value. This is a controlled input; it does not keep its own. |
-| `className`? | `string` | Applied to the input. |
-| `dataTestId`? | `string` | `data-testid` of the input. Default: `"slider"`. |
-| `id`? | `string` | Applied to the input. |
-| `isDisabled`? | `boolean` | Whether the input is disabled, which also greys the handle. Default: `false`. |
-| `onChange`? | `(e: React.ChangeEvent<HTMLInputElement>) => void` | Called on every move of the handle, with the range input's change event — `event.target.value` is a string. Required in practice: the input is controlled, so without this the handle cannot move. |
-| `runnableTrackHeight`? | `string` | Height of the track the handle runs along, as a CSS length. |
-| `step`? | `number` | How far one step of the handle moves. |
-| `style`? | `CSSProperties` | Applied to the input. |
-| `thumbBorderWidth`? | `string` | Border width of the drag handle, as a CSS length. |
-| `thumbHeight`? | `string` | Height of the drag handle, as a CSS length. |
-| `thumbWidth`? | `string` | Width of the drag handle, as a CSS length. |
-| `withPouring`? | `boolean` | Fills the track to the left of the handle. The fill is computed from `value`, `min` and `max`, and flipped for a right-to-left interface. |
+| `max` | `number` | **Required.** Highest value of the range. |
+| `min` | `number` | **Required.** Lowest value of the range. |
+| `value` | `number` | **Required.** The current value. This is a controlled input; it does not keep its own. |
+| `className` | `string` | Applied to the input. |
+| `dataTestId` | `string` | `data-testid` of the input. Default: `"slider"`. |
+| `id` | `string` | Applied to the input. |
+| `isDisabled` | `boolean` | Whether the input is disabled, which also greys the handle. Default: `false`. |
+| `onChange` | `(e: React.ChangeEvent<HTMLInputElement>) => void` | Called on every move of the handle, with the range input's change event — `event.target.value` is a string. Required in practice: the input is controlled, so without this the handle cannot move. |
+| `runnableTrackHeight` | `string` | Height of the track the handle runs along, as a CSS length. |
+| `step` | `number` | How far one step of the handle moves. |
+| `style` | `CSSProperties` | Applied to the input. |
+| `thumbBorderWidth` | `string` | Border width of the drag handle, as a CSS length. |
+| `thumbHeight` | `string` | Height of the drag handle, as a CSS length. |
+| `thumbWidth` | `string` | Width of the drag handle, as a CSS length. |
+| `withPouring` | `boolean` | Fills the track to the left of the handle. The fill is computed from `value`, `min` and `max`, and flipped for a right-to-left interface. |
 
 </APITable>
 

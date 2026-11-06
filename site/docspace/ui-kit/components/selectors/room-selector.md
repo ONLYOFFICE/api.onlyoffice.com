@@ -52,33 +52,33 @@ import RoomSelector from "@onlyoffice/apps-ui-kit/selectors/Room";
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `withHeader`? | `boolean` | Show the header bar with a label and close button. Default: `false`. |
-| `headerProps`? | `object` |  |
-| `withSearch`? | `boolean` | Show a search input above the room list. Default: `false`. |
-| `isMultiSelect`? | `boolean` | Allow selecting multiple rooms at once. Default: `false`. |
-| `onSubmit`? | `function` | Called with the array of selected TSelectorItem(s) on confirm. |
-| `onClose`? | `function` | Called when the selector panel is dismissed. |
-| `id`? | `-` | HTML id attribute for the root element. |
-| `className`? | `-` | Additional CSS class name for the root element. |
-| `roomType`? | `-` | Filter rooms by type. Omit to show all room types. |
-| `searchArea`? | `-` | Search scope — Active rooms, Archive, or Templates. |
-| `excludeItems`? | `-` | Array of room IDs to exclude from the list. |
-| `disableThirdParty`? | `-` | Hide rooms backed by third-party storage. Default: `false`. |
-| `useAside`? | `-` | Render the selector inside an Aside panel with a backdrop. Default: `false`. |
-| `withoutBackground`? | `-` | Remove the background overlay in Aside mode. Default: `false`. |
-| `withBlur`? | `-` | Apply blur effect to the Aside backdrop. Default: `false`. |
-| `withCancelButton`? | `-` | Show a cancel button in the footer. Default: `false`. |
-| `cancelButtonLabel`? | `-` | Label for the cancel button. |
-| `withPadding`? | `-` | Add padding inside the selector. Default: `false`. |
-| `withCreate`? | `-` | Show a create-room button at the top of the list. Default: `false`. |
-| `createDefineRoomLabel`? | `-` | Label for the create-room button (requires withCreate). |
-| `createDefineRoomType`? | `-` | Room type to pre-fill on create (requires withCreate). |
-| `forceIsMultiSelect`? | `-` | Force multi-select UI behavior regardless of the isMultiSelect prop. Default: `false`. |
-| `sortSelectedFirst`? | `-` | Float pre-selected rooms to the top of the list. Default: `false`. |
-| `disableSubmitUntilChanged`? | `-` | Keep submit disabled until the selection differs from the initial state. Default: `false`. |
-| `submitButtonLabel`? | `-` | Custom label for the submit button. |
-| `emptyScreenHeader`? | `-` | Custom header text for the empty state screen. |
-| `emptyScreenDescription`? | `-` | Custom description text for the empty state screen. |
-| `onCancel`? | `-` | Called when the cancel button is clicked. |
+| `withHeader` | `boolean` | Show the header bar with a label and close button. Default: `false`. |
+| `headerProps` | `object` |  |
+| `withSearch` | `boolean` | Show a search input above the room list. Default: `false`. |
+| `isMultiSelect` | `boolean` | Allow selecting multiple rooms at once. Default: `false`. |
+| `onSubmit` | `function` | Called with the array of selected TSelectorItem(s) on confirm. |
+| `onClose` | `function` | Called when the selector panel is dismissed. |
+| `id` | `-` | HTML id attribute for the root element. |
+| `className` | `-` | Additional CSS class name for the root element. |
+| `roomType` | `-` | Filter rooms by type. Omit to show all room types. |
+| `searchArea` | `-` | Search scope — Active rooms, Archive, or Templates. |
+| `excludeItems` | `-` | Array of room IDs to exclude from the list. |
+| `disableThirdParty` | `-` | Hide rooms backed by third-party storage. Default: `false`. |
+| `useAside` | `-` | Render the selector inside an Aside panel with a backdrop. Default: `false`. |
+| `withoutBackground` | `-` | Remove the background overlay in Aside mode. Default: `false`. |
+| `withBlur` | `-` | Apply blur effect to the Aside backdrop. Default: `false`. |
+| `withCancelButton` | `-` | Show a cancel button in the footer. Default: `false`. |
+| `cancelButtonLabel` | `-` | Label for the cancel button. |
+| `withPadding` | `-` | Add padding inside the selector. Default: `false`. |
+| `withCreate` | `-` | Show a create-room button at the top of the list. Default: `false`. |
+| `createDefineRoomLabel` | `-` | Label for the create-room button (requires withCreate). |
+| `createDefineRoomType` | `-` | Room type to pre-fill on create (requires withCreate). |
+| `forceIsMultiSelect` | `-` | Force multi-select UI behavior regardless of the isMultiSelect prop. Default: `false`. |
+| `sortSelectedFirst` | `-` | Float pre-selected rooms to the top of the list. Default: `false`. |
+| `disableSubmitUntilChanged` | `-` | Keep submit disabled until the selection differs from the initial state. Default: `false`. |
+| `submitButtonLabel` | `-` | Custom label for the submit button. |
+| `emptyScreenHeader` | `-` | Custom header text for the empty state screen. |
+| `emptyScreenDescription` | `-` | Custom description text for the empty state screen. |
+| `onCancel` | `-` | Called when the cancel button is clicked. |
 
 </APITable>

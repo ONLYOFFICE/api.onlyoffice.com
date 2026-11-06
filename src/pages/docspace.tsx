@@ -5,15 +5,15 @@ import Link from "@docusaurus/Link";
 import { DocSpaceFeatures } from "@site/src/features";
 
 const templateProps: FeaturePageTemplate.Props = {
-  title: 'DocSpace',
+  title: 'Apps',
   description: (
     <>
-      ONLYOFFICE DocSpace is a collaborative cloud platform that allows users to store, manage, edit,
+      ONLYOFFICE Apps is a collaborative cloud platform that allows users to store, manage, edit,
       and collaborate on documents, spreadsheets, presentations, and forms in customizable rooms.
     </>
   ),
   links: [
-    <>If you have any questions about ONLYOFFICE DocSpace, try the <Link href='/docspace/api-backend/more-information/faq'>FAQ</Link> section first.</>,
+    <>If you have any questions about ONLYOFFICE Apps, try the <Link href='/docspace/api-backend/more-information/faq'>FAQ</Link> section first.</>,
     <>You can request a feature or report a bug by posting an issue on <a href='https://github.com/ONLYOFFICE/DocSpace/issues'>GitHub</a>.</>,
     <>You can also ask our developers on <a href='https://community.onlyoffice.com/c/docspace/46'>ONLYOFFICE forum</a> (registration required).</>,
   ],
@@ -24,8 +24,8 @@ const templateProps: FeaturePageTemplate.Props = {
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="DocSpace API"
-      description="Detailed guides on how to integrate ONLYOFFICE DocSpace into your solution, create and manage secure document rooms, control access, and streamline collaboration.">
+      title="Apps API"
+      description="Detailed guides on how to integrate ONLYOFFICE Apps into your solution, create and manage secure document rooms, control access, and streamline collaboration.">
       <FeaturePageTemplate {...templateProps}/>
     </Layout>
   );

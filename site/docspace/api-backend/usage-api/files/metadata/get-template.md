@@ -18,8 +18,8 @@ Returns one metadata template with its fields, in their display order, and the o
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | Metadata template | [**MetadataTemplateWrapper**](../../models/metadata-template-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **404** | Template not found | - | - |
+| **200** | The template with its fields in display order and the options of its choice fields | [**MetadataTemplateWrapper**](../../models/metadata-template-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **404** | No metadata template with this identifier exists on the portal | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

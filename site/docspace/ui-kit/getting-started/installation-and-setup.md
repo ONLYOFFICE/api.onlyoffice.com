@@ -244,7 +244,7 @@ person, and outside that context they fail at runtime rather than at build time.
 plain `import { … } from "@onlyoffice/apps-ui-kit"`. Reachable is not usable.
 
 Components carry the same distinction. A README's metadata says `"status": "portal-internal"` when
-the component is shipped for the DocSpace client rather than for you — `Section`, `Article`,
+the component is shipped for the ONLYOFFICE Apps client rather than for you — `Section`, `Article`,
 `Navigation`, `FilterInput`, the image and room-cover editors. They are documented all the same,
 because the portal reads these pages too; the catalogue in
 [`components.md`](./catalogue.md) has the full list.

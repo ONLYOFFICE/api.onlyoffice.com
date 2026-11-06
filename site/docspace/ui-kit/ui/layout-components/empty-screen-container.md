@@ -95,18 +95,18 @@ export function NoFiles() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `headerText` | `string` | The large line under the image, 19px and bold. |
-| `imageAlt` | `string` | Alternative text for the illustration. Pass an empty string when the artwork repeats what the text below already says. |
-| `imageSrc` | `string` | Source of the illustration. The stylesheet pins the image to 200×140, and to 150×105 below 600px, so supply artwork of that shape. |
-| `buttons`? | `ReactNode` | Actions under the text, stacked in a 16px column and centred. |
-| `buttonStyle`? | `CSSProperties` | Inline style of the row that holds `buttons`. |
-| `className`? | `string` | Added after the component's own classes on the outer element. |
-| `descriptionText`? | `ReactNode` | Optional explanatory line at 12px, in the muted colour. |
-| `id`? | `string` | Ignored. Nothing reads this prop and the component spreads no unknown props, so it never reaches the DOM. |
-| `imageStyle`? | `CSSProperties` | Inline style of the `<img>`, and the only way past its fixed size. It is dropped between 601px and 1023px, where the component passes an empty object instead. |
-| `style`? | `CSSProperties` | Ignored. Nothing reads this prop; style the outer element through `className`. |
-| `subheadingText`? | `string` | Optional 600-weight line between the header and the description. It has no styling of its own beyond that weight. |
-| `withoutFilter`? | `boolean` | Adds the height of the filter bar to the top padding — 91px in place of 52px — for a screen that has no filter above it. It removes nothing. |
+| `headerText` | `string` | **Required.** The large line under the image, 19px and bold. |
+| `imageAlt` | `string` | **Required.** Alternative text for the illustration. Pass an empty string when the artwork repeats what the text below already says. |
+| `imageSrc` | `string` | **Required.** Source of the illustration. The stylesheet pins the image to 200×140, and to 150×105 below 600px, so supply artwork of that shape. |
+| `buttons` | `ReactNode` | Actions under the text, stacked in a 16px column and centred. |
+| `buttonStyle` | `CSSProperties` | Inline style of the row that holds `buttons`. |
+| `className` | `string` | Added after the component's own classes on the outer element. |
+| `descriptionText` | `ReactNode` | Optional explanatory line at 12px, in the muted colour. |
+| `id` | `string` | Ignored. Nothing reads this prop and the component spreads no unknown props, so it never reaches the DOM. |
+| `imageStyle` | `CSSProperties` | Inline style of the `<img>`, and the only way past its fixed size. It is dropped between 601px and 1023px, where the component passes an empty object instead. |
+| `style` | `CSSProperties` | Ignored. Nothing reads this prop; style the outer element through `className`. |
+| `subheadingText` | `string` | Optional 600-weight line between the header and the description. It has no styling of its own beyond that weight. |
+| `withoutFilter` | `boolean` | Adds the height of the filter bar to the top padding — 91px in place of 52px — for a screen that has no filter above it. It removes nothing. |
 
 </APITable>
 

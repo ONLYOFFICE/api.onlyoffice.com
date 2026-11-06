@@ -1,6 +1,6 @@
 ---
 description: Track portal storage usage and send alerts when quota is nearly full.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,12 +8,12 @@ import TabItem from '@theme/TabItem';
 
 # Monitoring disk quota
 
-This example shows how to track DocSpace storage consumption using the API. The script reads the portal quota (total capacity) and the current used space, calculates the usage percentage, and triggers a warning (placeholder) when the usage exceeds a configured threshold.
+This example shows how to track ONLYOFFICE Apps storage consumption using the API. The script reads the portal quota (total capacity) and the current used space, calculates the usage percentage, and triggers a warning (placeholder) when the usage exceeds a configured threshold.
 Optionally, it requests files usage statistics (if available) and prints the largest folders/files returned by the API to help you locate the main storage consumers.
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>
@@ -169,13 +169,13 @@ Optionally, it requests files usage statistics (if available) and prints the lar
 
     const percentUsed = (usedBytes / totalBytes) * 100;
 
-    console.log('\n=== DocSpace storage usage report ===');
+    console.log('\n=== ONLYOFFICE Apps storage usage report ===');
     console.log(`Total quota: ${bytesToGb(totalBytes)}`);
     console.log(`Used space: ${bytesToGb(usedBytes)} (${percentUsed.toFixed(1)}%)`);
 
     if (percentUsed >= QUOTA_THRESHOLD_PERCENT) {
       const warningMessage =
-        `DocSpace storage usage has reached ${percentUsed.toFixed(1)}% of the quota. ` +
+        `ONLYOFFICE Apps storage usage has reached ${percentUsed.toFixed(1)}% of the quota. ` +
         `Please clean up or increase the quota.`;
       sendQuotaWarning(warningMessage);
     }
@@ -345,13 +345,13 @@ Optionally, it requests files usage statistics (if available) and prints the lar
     used_bytes = int(used_bytes)
     percent_used = (used_bytes / total_bytes) * 100
 
-    print("\n=== DocSpace storage usage report ===")
+    print("\n=== ONLYOFFICE Apps storage usage report ===")
     print(f"Total quota: {bytes_to_gb(total_bytes)}")
     print(f"Used space: {bytes_to_gb(used_bytes)} ({percent_used:.1f}%)")
 
     if percent_used >= QUOTA_THRESHOLD_PERCENT:
       warning_message = (
-        f"DocSpace storage usage has reached {percent_used:.1f}% of the quota. "
+        f"ONLYOFFICE Apps storage usage has reached {percent_used:.1f}% of the quota. "
         f"Please clean up or increase the quota."
       )
       send_quota_warning(warning_message)

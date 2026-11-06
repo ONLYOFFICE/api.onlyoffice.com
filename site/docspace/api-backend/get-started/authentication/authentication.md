@@ -4,13 +4,13 @@ sidebar_position: -6
 
 # Authentication
 
-Interacting with the DocSpace API requires authentication. ONLYOFFICE offers several methods to authenticate your requests. The chosen authentication method depends on your application's purpose, its users, and the features it requires.
+Interacting with the ONLYOFFICE Apps API requires authentication. ONLYOFFICE offers several methods to authenticate your requests. The chosen authentication method depends on your application's purpose, its users, and the features it requires.
 
 ## OAuth 2.0
 
 *Recommended for apps accessing data on behalf of multiple users*
 
-Register an OAuth app in DocSpace Developer Tools, redirect users to the authorization URL, and use the returned access token to call the API. Users authorize access to their DocSpace data without sharing credentials with your app.
+Register an OAuth app in ONLYOFFICE Apps Developer Tools, redirect users to the authorization URL, and use the returned access token to call the API. Users authorize access to their ONLYOFFICE Apps data without sharing credentials with your app.
 
 ```sh
 curl https://yourportal.onlyoffice.com/api/2.0/people/@self \
@@ -23,7 +23,7 @@ curl https://yourportal.onlyoffice.com/api/2.0/people/@self \
 
 *User identity verification built on OAuth 2.0*
 
-Use OpenID Connect when your app needs to authenticate users with their DocSpace accounts. The flow follows OAuth 2.0, but also returns a JWT token with the user's identity — no extra profile request needed.
+Use OpenID Connect when your app needs to authenticate users with their ONLYOFFICE Apps accounts. The flow follows OAuth 2.0, but also returns a JWT token with the user's identity — no extra profile request needed.
 
 ```ts
 res.redirect(
@@ -37,7 +37,7 @@ res.redirect(
 
 *Server-to-server communication without user context*
 
-Generate an API key in DocSpace Developer Tools and pass it as a Bearer token. API keys are tied to the application, not to a specific user — suitable for backend integrations and automated services.
+Generate an API key in ONLYOFFICE Apps Developer Tools and pass it as a Bearer token. API keys are tied to the application, not to a specific user — suitable for backend integrations and automated services.
 
 ```sh
 curl https://yourportal.onlyoffice.com/api/2.0/people/@self \
@@ -69,7 +69,7 @@ curl https://yourportal.onlyoffice.com/api/2.0/people/@self \
 
 *For testing only, not recommended for production*
 
-Encode your DocSpace username and password in Base64 and pass them in the `Authorization` header. Simple to set up, but credentials are transmitted with every request — use only for local testing or quick integrations.
+Encode your ONLYOFFICE Apps username and password in Base64 and pass them in the `Authorization` header. Simple to set up, but credentials are transmitted with every request — use only for local testing or quick integrations.
 
 ```sh
 curl -u yourusername:yourpassword \

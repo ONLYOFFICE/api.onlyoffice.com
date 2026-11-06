@@ -8,14 +8,14 @@ sidebar_position: -5
 
 ONLYOFFICE 文档使用以下 WOPI 操作：
 
-- [CheckFileInfo](checkfileinfo.md) - 返回有关文件属性、访问权限和编辑器设置的信息。
-- [GetFile](getfile.md) - 请求消息以检索 `HTTP://server/<...>/wopi*/files/<id>/contents` 操作的文件。
-- [Lock](lock.md) - 由请求锁定的online office锁定文件编辑。
-- [RefreshLock](refreshlock.md) - 通过将文件的自动到期计时器重置为 30 分钟来刷新文件的锁定。
-- [Unlock](unlock.md) - 允许文件编辑。
-- [PutFile](putfile.md) - 请求消息以更新 `HTTP://server/<...>/wopi*/files/<id>/contents` 操作的文件。
-- [PutRelativeFile](putrelativefile.md) - 基于当前文件在主机上创建一个新文件。
-- [RenameFile](renamefile.md) - 重命名文件。
+- [CheckFileInfo](checkfileinfo.md)：返回有关文件属性、访问权限和编辑器设置的信息。
+- [GetFile](getfile.md)：请求消息以检索 `HTTP://server/<...>/wopi*/files/<id>/contents` 操作的文件。
+- [Lock](lock.md)：由请求锁定的online office锁定文件编辑。
+- [RefreshLock](refreshlock.md)：通过将文件的自动到期计时器重置为 30 分钟来刷新文件的锁定。
+- [Unlock](unlock.md)：允许文件编辑。
+- [PutFile](putfile.md)：请求消息以更新 `HTTP://server/<...>/wopi*/files/<id>/contents` 操作的文件。
+- [PutRelativeFile](putrelativefile.md)：基于当前文件在主机上创建一个新文件。
+- [RenameFile](renamefile.md)：重命名文件。
 
 ## 可能的错误代码及其描述
 

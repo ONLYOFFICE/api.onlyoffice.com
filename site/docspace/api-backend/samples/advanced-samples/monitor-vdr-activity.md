@@ -1,6 +1,6 @@
 ---
 description: Analyze VDR audit logs and alert on unusually high user activity.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 # Monitoring VDR activity
 
-This example shows how to monitor user activity in a Virtual Data Room (VDR) in ONLYOFFICE DocSpace using audit logs.
+This example shows how to monitor user activity in a Virtual Data Room (VDR) in ONLYOFFICE Apps using audit logs.
 
 The workflow analyzes audit events for a selected period and identifies users with unusually high activity inside the VDR. For those users, it additionally retrieves login history to provide context for further investigation.
 
@@ -16,7 +16,7 @@ The result is a structured alert payload that can be sent to a security or compl
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>

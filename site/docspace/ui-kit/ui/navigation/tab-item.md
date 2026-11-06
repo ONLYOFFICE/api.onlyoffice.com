@@ -114,15 +114,15 @@ export function FileFilters() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `label` | `React.ReactNode` | Text of the pill. |
-| `allowNoSelection`? | `boolean` | Freezes the selected look at whatever it was on mount, so the pill can be driven by something other than its own clicks. |
-| `className`? | `string` | Applied to the outermost element. |
-| `dataTestId`? | `string` | `data-testid` of the outermost element. |
-| `isActive`? | `boolean` | Whether the pill starts selected. The component then keeps that state itself; changing this prop re-syncs it. Default: `false`. |
-| `isDisabled`? | `boolean` | Whether the pill is inert. Pointer events are dropped in CSS as well, unless it is also active. |
-| `lockLastSelection`? | `boolean` | Whether a click on an already selected pill is dropped entirely — `onSelect` does not fire either. Default: `false`. |
-| `onSelect`? | `(event: React.MouseEvent<HTMLDivElement>) => void` | Called with the click event whenever the pill is clicked and not blocked by `isDisabled` or `lockLastSelection`. |
-| `withMultiSelect`? | `boolean` | Whether clicking an already selected pill deselects it. Without this a selected pill stays selected. Default: `false`. |
+| `label` | `React.ReactNode` | **Required.** Text of the pill. |
+| `allowNoSelection` | `boolean` | Freezes the selected look at whatever it was on mount, so the pill can be driven by something other than its own clicks. |
+| `className` | `string` | Applied to the outermost element. |
+| `dataTestId` | `string` | `data-testid` of the outermost element. |
+| `isActive` | `boolean` | Whether the pill starts selected. The component then keeps that state itself; changing this prop re-syncs it. Default: `false`. |
+| `isDisabled` | `boolean` | Whether the pill is inert. Pointer events are dropped in CSS as well, unless it is also active. |
+| `lockLastSelection` | `boolean` | Whether a click on an already selected pill is dropped entirely — `onSelect` does not fire either. Default: `false`. |
+| `onSelect` | `(event: React.MouseEvent<HTMLDivElement>) => void` | Called with the click event whenever the pill is clicked and not blocked by `isDisabled` or `lockLastSelection`. |
+| `withMultiSelect` | `boolean` | Whether clicking an already selected pill deselects it. Without this a selected pill stays selected. Default: `false`. |
 
 </APITable>
 

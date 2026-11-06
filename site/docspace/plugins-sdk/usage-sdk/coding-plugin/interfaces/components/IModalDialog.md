@@ -109,20 +109,20 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `displayType?` | [`ModalDisplayType`](#modaldisplaytype) | Defines the modal dialog display type |
-| `dialogHeader?` | `string` | Defines the modal dialog header |
-| `dialogBody?` | [`IBox`](IBox.md) | Defines the modal dialog body rendered via the IBox component tree. Use either `dialogBody` or `dialogBodyComponent`, not both. **Deprecated:** Use `dialogBodyComponent` instead — accepts a React component and supports hooks from `@onlyoffice/docspace-plugin-sdk/react`. |
-| `dialogBodyComponent?` | `ComponentType` | A React component rendered as the modal dialog body. Use either `dialogBodyComponent` or `dialogBody`, not both. The component can use `usePluginActions` and other hooks from `@onlyoffice/docspace-plugin-sdk/react`. |
-| `dialogFooter?` | [`IBox`](IBox.md) | Defines the modal dialog footer rendered via the IBox component tree. **Deprecated:** Use `dialogBodyComponent` to render footer content within the component instead. |
-| `autoMaxWidth?` | `boolean` | Specifies whether the "max-width: auto" property is set |
-| `autoMaxHeight?` | `boolean` | Specifies whether the "max-height: auto" property is set |
-| `withoutBodyPadding?` | `boolean` | Specifies whether the modal dialog body has no paddings |
-| `withoutHeaderMargin?` | `boolean` | Specifies whether the modal dialog header has no bottom margins |
-| `withFooterBorder?` | `boolean` | Specifies whether the border betweeen the body and footer is displayed |
-| `fullScreen?` | `boolean` | Specifies whether to display the modal dialog body in the full screen mode without paddings |
-| `eventListeners?` | \{ `name`: `string`; `onAction`: () => `void` \| `Promise`\<`void`\> \| [`IMessage`](../utils.md#imessage) \| `Promise`\<[`IMessage`](../utils.md#imessage)\>; \}[] | Defines the event listeners. |
-| `onClose?` | () => `void` \| `Promise`\<`void`\> \| [`IMessage`](../utils.md#imessage) \| `Promise`\<[`IMessage`](../utils.md#imessage)\> | Sets a function which is triggered whenever the "Close" button in the modal dialog is clicked |
-| `onLoad?` | () => `Promise`\<\{ `newDialogHeader?`: `string`; `newDialogBody?`: [`IBox`](IBox.md); `newDialogFooter?`: [`IBox`](IBox.md); \}\> | Sets a function which is triggered whenever the modal dialog is loaded. **Deprecated:** Use a React component via `dialogBodyComponent` with `useEffect` for data loading instead. |
+| `displayType` | [`ModalDisplayType`](#modaldisplaytype) | Defines the modal dialog display type |
+| `dialogHeader` | `string` | Defines the modal dialog header |
+| `dialogBody` | [`IBox`](IBox.md) | Defines the modal dialog body rendered via the IBox component tree. Use either `dialogBody` or `dialogBodyComponent`, not both. **Deprecated:** Use `dialogBodyComponent` instead — accepts a React component and supports hooks from `@onlyoffice/docspace-plugin-sdk/react`. |
+| `dialogBodyComponent` | `ComponentType` | A React component rendered as the modal dialog body. Use either `dialogBodyComponent` or `dialogBody`, not both. The component can use `usePluginActions` and other hooks from `@onlyoffice/docspace-plugin-sdk/react`. |
+| `dialogFooter` | [`IBox`](IBox.md) | Defines the modal dialog footer rendered via the IBox component tree. **Deprecated:** Use `dialogBodyComponent` to render footer content within the component instead. |
+| `autoMaxWidth` | `boolean` | Specifies whether the "max-width: auto" property is set |
+| `autoMaxHeight` | `boolean` | Specifies whether the "max-height: auto" property is set |
+| `withoutBodyPadding` | `boolean` | Specifies whether the modal dialog body has no paddings |
+| `withoutHeaderMargin` | `boolean` | Specifies whether the modal dialog header has no bottom margins |
+| `withFooterBorder` | `boolean` | Specifies whether the border betweeen the body and footer is displayed |
+| `fullScreen` | `boolean` | Specifies whether to display the modal dialog body in the full screen mode without paddings |
+| `eventListeners` | \{ `name`: `string`; `onAction`: () => `void` \| `Promise`\<`void`\> \| [`IMessage`](../utils.md#imessage) \| `Promise`\<[`IMessage`](../utils.md#imessage)\>; \}[] | Defines the event listeners. |
+| `onClose` | () => `void` \| `Promise`\<`void`\> \| [`IMessage`](../utils.md#imessage) \| `Promise`\<[`IMessage`](../utils.md#imessage)\> | Sets a function which is triggered whenever the "Close" button in the modal dialog is clicked |
+| `onLoad` | () => `Promise`\<\{ `newDialogHeader?`: `string`; `newDialogBody?`: [`IBox`](IBox.md); `newDialogFooter?`: [`IBox`](IBox.md); \}\> | Sets a function which is triggered whenever the modal dialog is loaded. **Deprecated:** Use a React component via `dialogBodyComponent` with `useEffect` for data loading instead. |
 
 </APITable>
 

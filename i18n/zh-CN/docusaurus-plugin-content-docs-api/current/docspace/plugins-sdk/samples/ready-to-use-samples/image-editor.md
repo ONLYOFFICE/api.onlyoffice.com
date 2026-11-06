@@ -1,17 +1,17 @@
 ---
 description: 使用 Image editor 插件查看和编辑图像。
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # Image editor
 
-直接在 DocSpace 中查看和编辑图像。
+直接在 ONLYOFFICE Apps 中查看和编辑图像。
 
 ![Image editor](/assets/images/docspace/image-editor.png#gh-light-mode-only)![Image editor](/assets/images/docspace/image-editor.dark.png#gh-dark-mode-only)
 
 ## 安装
 
-默认在 DocSpace SaaS 解决方案中可用。
+默认在 ONLYOFFICE Apps SaaS 解决方案中可用。
 
 您可以按照[此处](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins)的说明启用它。
 
@@ -19,7 +19,7 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 要开始使用该插件，您无需更改任何设置——Image editor 插件没有可配置参数。
 
-如需查看插件信息，请前往**设置 → 集成 → 插件**，然后点击 **Image editor** 插件旁的 ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。设置面板仅显示元数据，例如作者、版本、状态、主页和描述。
+如需查看插件信息，请前往**设置 → 集成 → 插件**，然后点击 **image-editor** 插件旁的 ![设置图标](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![设置图标](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only)。设置面板仅显示元数据，例如作者、版本、状态、主页和描述。
 
 ## 使用
 
@@ -55,8 +55,8 @@ GitHub 仓库：[image-editor](https://github.com/ONLYOFFICE/docspace-plugins/tr
 
 使用以下插件接口：
 
-- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 DocSpace。
-- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。用于与 DocSpace 进行 API 交互。
+- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md)。每个插件都需要。它包含插件 [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status)（PluginStatus）变量，用于将插件嵌入 ONLYOFFICE Apps。
+- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md)。用于与 ONLYOFFICE Apps 进行 API 交互。
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) 和 [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md)。用于为受支持的图像格式实现**编辑图片**上下文菜单操作。
 
 ## 支持

@@ -137,19 +137,19 @@ export function NameField({
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children`? | `React.ReactNode` | Rendered after the text and the asterisk, inside the same label. |
-| `className`? | `string` | Applied to the label. |
-| `display`? | `string` | Written onto the label as an HTML `display` attribute, which changes nothing about its layout. Set `display` through `style` instead. |
-| `error`? | `boolean` | Turns the text red and sets `aria-invalid` on the label. The error message is not part of this component. Default: `false`. |
-| `htmlFor`? | `string` | `for` attribute, which points at the `id` of the field this labels. |
-| `id`? | `string` | Applied to the label. |
-| `isInline`? | `boolean` | Makes the label an inline block, so it keeps its own width and padding on the line beside the field. Without it the label is a plain inline element. Default: `false`. |
-| `isRequired`? | `boolean` | Appends a red asterisk to the text and sets `aria-required` on the label. It does not mark the field itself — put `required` on your input too. Default: `false`. |
-| `style`? | `React.CSSProperties` | Applied to the label. |
-| `text`? | `React.ReactNode` | The label's text. |
-| `title`? | `string` | Text of the kit's shared tooltip, opened when the pointer rests on the label. It shows only while `RootTooltip` is mounted. |
-| `tooltipMaxWidth`? | `string` | Ignored. Nothing reads this prop; the shared tooltip sizes itself. |
-| `truncate`? | `boolean` | Cuts text that does not fit on one line with an ellipsis. The label is inline, so it also needs `display: block` (through `style`) and a width to cut against. Default: `false`. |
+| `children` | `React.ReactNode` | Rendered after the text and the asterisk, inside the same label. |
+| `className` | `string` | Applied to the label. |
+| `display` | `string` | Written onto the label as an HTML `display` attribute, which changes nothing about its layout. Set `display` through `style` instead. |
+| `error` | `boolean` | Turns the text red and sets `aria-invalid` on the label. The error message is not part of this component. Default: `false`. |
+| `htmlFor` | `string` | `for` attribute, which points at the `id` of the field this labels. |
+| `id` | `string` | Applied to the label. |
+| `isInline` | `boolean` | Makes the label an inline block, so it keeps its own width and padding on the line beside the field. Without it the label is a plain inline element. Default: `false`. |
+| `isRequired` | `boolean` | Appends a red asterisk to the text and sets `aria-required` on the label. It does not mark the field itself — put `required` on your input too. Default: `false`. |
+| `style` | `React.CSSProperties` | Applied to the label. |
+| `text` | `React.ReactNode` | The label's text. |
+| `title` | `string` | Text of the kit's shared tooltip, opened when the pointer rests on the label. It shows only while `RootTooltip` is mounted. |
+| `tooltipMaxWidth` | `string` | Ignored. Nothing reads this prop; the shared tooltip sizes itself. |
+| `truncate` | `boolean` | Cuts text that does not fit on one line with an ellipsis. The label is inline, so it also needs `display: block` (through `style`) and a width to cut against. Default: `false`. |
 
 </APITable>
 

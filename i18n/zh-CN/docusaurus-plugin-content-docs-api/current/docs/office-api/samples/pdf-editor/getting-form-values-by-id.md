@@ -2,12 +2,12 @@
 hide_table_of_contents: true
 ---
 
-# 通过ID获取表单值
+# 通过 ID 获取表单值
 
 使用唯一标识符从特定表单字段中提取值，用于验证和动态处理：
 
 - 创建具有各种输入类型和唯一标识符的表单（[Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)、[Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md)、[Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md)）；
-- 通过键/ID检索特定表单值（[ApiDocument/GetFormsByKey](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsByKey.md)、[ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md)）；
+- 通过键/ID 检索特定表单值（[ApiDocument/GetFormsByKey](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsByKey.md)、[ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md)）；
 - 验证表单数据并高亮显示必填字段（[ApiTextForm/GetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md)、[ApiCheckBoxForm/IsChecked](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/IsChecked.md)、[ApiFormBase/SetBorderColor](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/SetBorderColor.md)）。
 
 ```ts editor-pdf zoom=60

@@ -18,11 +18,11 @@ window.cloudCryptoCommand = function cloudCryptoCommand(type, params, callback) 
 
 命令类型：
 
-- *encryptionKeys* - 将私钥和公钥保存到参数中；
+- *encryptionKeys*：将私钥和公钥保存到参数中；
 
-- *relogin* - 在密钥解密失败后重新进入门户；
+- *relogin*：在密钥解密失败后重新进入门户；
 
-- *getsharingkeys* - 请求所有有权访问该文件的用户的公钥。这些密钥将通过回调传递：
+- *getsharingkeys*：请求所有有权访问该文件的用户的公钥。这些密钥将通过回调传递：
 
   ``` ts
   callback({

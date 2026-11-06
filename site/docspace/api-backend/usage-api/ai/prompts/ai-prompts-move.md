@@ -6,7 +6,7 @@
 
 Move a prompt to a folder
 
-Moves a saved prompt into another folder, or to the root when `folderId` is omitted or null. The name is re-validated in the target folder, so the move fails when a prompt of that name already sits there - rename it first with `PUT api/2.0/ai/prompts/update`. Nothing about the prompt other than its folder changes. The answer carries the moved prompt.
+Moves a saved prompt into another folder, or to the root when `folderId` is omitted or null. The name is re-validated in the target folder, so the move fails with 409 when a prompt of that name already sits there - rename it first with `PUT api/2.0/ai/prompts/update`; an unknown prompt or folder answers 404. Nothing about the prompt other than its folder changes. The answer carries the moved prompt.
 
 ## Parameters
 
@@ -19,8 +19,11 @@ Moves a saved prompt into another folder, or to the root when `folderId` is omit
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Whether the prompt was moved, with the moved prompt in `prompt`. | [**AiPromptMutationResult**](../../models/ai-prompt-mutation-result.md) | - |
+| **400** | `id` is missing or `folderId` is neither a string nor null. | [**AiPromptMutationResult**](../../models/ai-prompt-mutation-result.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **404** | No prompt has this ID, or `folderId` names no folder of the caller's. | [**AiPromptMutationResult**](../../models/ai-prompt-mutation-result.md) | - |
+| **409** | A prompt of that name already sits in the target folder. | [**AiPromptMutationResult**](../../models/ai-prompt-mutation-result.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **500** | Unhandled failure. The reason is logged server-side and never echoed back. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 

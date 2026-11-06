@@ -9,3 +9,4 @@ Possible values:
 - `4` - Restoring (`Restoring`)
 - `5` - Migrating (`Migrating`)
 - `6` - Encryption (`Encryption`)
+- `7` - Blocked (`Blocked`)

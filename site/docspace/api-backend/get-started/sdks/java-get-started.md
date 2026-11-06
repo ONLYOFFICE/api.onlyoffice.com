@@ -4,9 +4,9 @@ sidebar_position: -5
 
 # Java
 
-The ONLYOFFICE DocSpace SDK for Java is a library that provides tools for integrating and managing DocSpace features within your applications.
+The ONLYOFFICE Apps SDK for Java is a library that provides tools for integrating and managing ONLYOFFICE Apps features within your applications.
 
-It simplifies interaction with the DocSpace API by offering ready-to-use methods and models.
+It simplifies interaction with the ONLYOFFICE Apps API by offering ready-to-use methods and models.
 
 **[ONLYOFFICE Java Library on GitHub](https://github.com/ONLYOFFICE/docspace-api-sdk-java)**
 
@@ -35,7 +35,7 @@ Add the dependency to your `pom.xml`:
 
 ## Getting Started
 
-Once you have Java 1.8+ installed and added the SDK dependency (via Maven or Gradle), you can create an instance of the API client and call DocSpace endpoints.
+Once you have Java 1.8+ installed and added the SDK dependency (via Maven or Gradle), you can create an instance of the API client and call ONLYOFFICE Apps endpoints.
 
 ```java
 import org.openapitools.client.*;

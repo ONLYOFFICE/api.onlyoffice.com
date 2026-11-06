@@ -1,6 +1,6 @@
 # Get started
 
-**DocSpace Plugins SDK** allows developers to create their own plugins and add them to the DocSpace portal.
+**ONLYOFFICE Apps Plugins SDK** allows developers to create their own plugins and add them to the ONLYOFFICE Apps portal.
 
 This documentation describes:
 
@@ -12,7 +12,7 @@ This documentation describes:
 
 ## What plugins can do
 
-Here are some examples of what you can do with ONLYOFFICE DocSpace plugins:
+Here are some examples of what you can do with ONLYOFFICE Apps plugins:
 
 - connect third-party services, like [Draw.io](../samples/ready-to-use-samples/drawio.md), [Markdown](../samples/ready-to-use-samples/markdown.md), [Speech to Text](../samples/ready-to-use-samples/speech-to-text.md), etc.
 - enhance the existing user experience and the editors' functionality: [PDF converter](../samples/ready-to-use-samples/pdf-converter.md).
@@ -31,7 +31,7 @@ To create your own plugin, you need to follow a few steps:
 
 ### Step 1. Preparing
 
-[Prepare](../usage-sdk/preparing.md) your environment: make sure you have access to ONLYOFFICE DocSpace (either the on-premises version or a DocSpace SaaS account), then install the *@onlyoffice/docspace-plugin-sdk* npm package globally:
+[Prepare](../usage-sdk/preparing.md) your environment: make sure you have access to ONLYOFFICE Apps (either the on-premises version or an ONLYOFFICE Apps SaaS account), then install the *@onlyoffice/docspace-plugin-sdk* npm package globally:
 
 ``` sh
 npm i -g @onlyoffice/docspace-plugin-sdk
@@ -65,7 +65,7 @@ Develop a plugin. Follow the plugin structure described [here](../usage-sdk/plug
 
 - Specify [plugin messages](../usage-sdk/coding-plugin/interfaces/utils.md) that will be returned by the items. Use the appropriate [events](../usage-sdk/coding-plugin/enums/Actions.md) that will be processed on the portal side.
 
-- Learn which [plugin components](../usage-sdk/coding-plugin/interfaces/components/index.md) can be used for the DocSpace plugin interface and add them to your scripts.
+- Learn which [plugin components](../usage-sdk/coding-plugin/interfaces/components/index.md) can be used for the ONLYOFFICE Apps plugin interface and add them to your scripts.
 
 Code samples are available at [GitHub](https://github.com/ONLYOFFICE/docspace-plugins).
 
@@ -75,10 +75,10 @@ To build a plugin, you need to have *npm* (included with Node.js) installed. The
 
 1. Install all the necessary dependencies using the **npm install** command in the plugin root folder (if this was not done previously in Step 2).
 
-2. Build a plugin archive by running the **npm run build** command. The completed plugin will be located in the *dist* folder and can be uploaded to the DocSpace portal. For more information, see [building a plugin](../usage-sdk/building-plugin.md).
+2. Build a plugin archive by running the **npm run build** command. The completed plugin will be located in the *dist* folder and can be uploaded to the ONLYOFFICE Apps portal. For more information, see [building a plugin](../usage-sdk/building-plugin.md).
 
 ### Step 5. Uploading to the portal
 
-To upload a plugin to the DocSpace portal, follow the instructions [here](../usage-sdk/adding-plugin.md).
+To upload a plugin to the ONLYOFFICE Apps portal, follow the instructions [here](../usage-sdk/adding-plugin.md).
 
 The plugin will appear in the plugin list and start functioning automatically.

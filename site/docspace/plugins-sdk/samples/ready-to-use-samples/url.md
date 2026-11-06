@@ -1,6 +1,6 @@
 ---
 description: Save external URLs in the file list and open them in a new browser tab.
-tags: ["DocSpace", "Plugins", "Ready-to-use"]
+tags: ["Apps", "Plugins", "Ready-to-use"]
 ---
 
 # URL
@@ -11,7 +11,7 @@ Save external URLs in a file list. When a saved link is opened, the correspondin
 
 ## Installation
 
-Available by default in the DocSpace SaaS solution.
+Available by default in the ONLYOFFICE Apps SaaS solution.
 
 You can enable it following the instructions [here](/docspace/plugins-sdk/usage-sdk/adding-plugin.md#enabling-system-plugins).
 
@@ -19,7 +19,7 @@ You can enable it following the instructions [here](/docspace/plugins-sdk/usage-
 
 To start working with the plugin, you don't need to change the default settings.
 
-In case you want to view the plugin metadata, such as the author, version, status, homepage, and description, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **URL** plugin.
+In case you want to view the plugin metadata, such as the author, version, status, homepage, and description, go to **Settings → Integration → Plugins** and click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only) next to the **url** plugin.
 
 ## Usage
 
@@ -56,8 +56,8 @@ All the required files are described [here](/docspace/plugins-sdk/usage-sdk/plug
 
 The following plugin interfaces are used:
 
-- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md). Required for each plugin. It contains the plugin [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status) (PluginStatus) variable, used to embed the plugin into the DocSpace.
-- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md). Required for API interactions with DocSpace (creating, updating, and reading `.url` files).
+- [IPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md). Required for each plugin. It contains the plugin [status](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IPlugin.md#status) (PluginStatus) variable, used to embed the plugin into ONLYOFFICE Apps.
+- [IApiPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IApiPlugin.md). Required for API interactions with ONLYOFFICE Apps (creating, updating, and reading `.url` files).
 - [ISettingsPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/ISettingsPlugin.md) and [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts). Used to add a settings block for plugin configuration. Users can access this block from **Settings → Integration → Plugins** to view plugin metadata.
 - [IMainButtonPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IMainButtonPlugin.md) and [IMainButtonItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md). Used to add the **New URL** option to the **Actions → More** menu.
 - [IContextMenuPlugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/plugins/IContextMenuPlugin.md) and [IContextMenuItem](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md). Used to implement the **Edit URL** context menu action for `.url` files.

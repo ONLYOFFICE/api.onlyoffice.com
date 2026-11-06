@@ -14,10 +14,10 @@ const DocSpacePlaygroundRoute = () => {
     return (
         <ColorModeProvider>
             <Head>
-                <title>DocSpace SDK Playground | ONLYOFFICE</title>
-                <meta name="description" content="An interactive platform to explore and test ONLYOFFICE DocSpace SDK embedding modes — manager, editor, viewer, selectors, and more." />
-                <meta property="og:title" content="DocSpace SDK Playground | ONLYOFFICE" />
-                <meta property="og:description" content="An interactive platform to explore and test ONLYOFFICE DocSpace SDK embedding modes — manager, editor, viewer, selectors, and more." />
+                <title>Apps SDK Playground | ONLYOFFICE</title>
+                <meta name="description" content="An interactive platform to explore and test ONLYOFFICE Apps SDK embedding modes — manager, editor, viewer, selectors, and more." />
+                <meta property="og:title" content="Apps SDK Playground | ONLYOFFICE" />
+                <meta property="og:description" content="An interactive platform to explore and test ONLYOFFICE Apps SDK embedding modes — manager, editor, viewer, selectors, and more." />
             </Head>
             <BrowserOnly>
                 {() => (

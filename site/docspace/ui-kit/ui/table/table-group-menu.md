@@ -21,22 +21,22 @@ The Table README describes it in full.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `isChecked` | `boolean` | Ticks the select-all checkbox. |
-| `isIndeterminate` | `boolean` | Draws the select-all checkbox partly ticked, for a selection that covers some rows but not all. |
-| `headerMenu` | `TGroupMenuItem[]` | The action buttons, in order; an entry whose disabled is set is left out. |
-| `checkboxOptions`? | `ReactElement<{ children?: ReactNode; }, string \| JSXElementConstructor<any>> \| undefined` | Element whose children become the options of the menu the arrow after the checkbox opens. |
-| `onClick`? | `(() => void) \| undefined` | Called on a click anywhere in the toolbar. |
-| `onChange` | `(isChecked: boolean) => void` | Called with the new state when the select-all checkbox is clicked. |
-| `checkboxMargin`? | `stringundefined` | Space before the checkbox or the label as a CSS length, such as 12px; tablets and phones always use 24px. Default: `28px`. |
-| `withoutInfoPanelToggler` | `boolean` | Leaves out the info panel button at the end. |
-| `isInfoPanelVisible`? | `booleanundefined` | Draws the info panel button in the accent colour on a round background. Default: `false`. |
-| `isMobileView`? | `booleanundefined` | Opens the selection menu and the action menus in their phone form. Default: `false`. |
-| `isBlocked`? | `booleanundefined` | Greys every action button out and ignores clicks on them. Default: `false`. |
-| `toggleInfoPanel`? | `(() => void) \| undefined` | Called when the info panel button is clicked. |
-| `withComboBox`? | `booleanundefined` | Shows the arrow after the checkbox that opens checkboxOptions. Default: `true`. |
-| `headerLabel`? | `stringundefined` | Text shown in place of the select-all checkbox. |
-| `isCloseable`? | `booleanundefined` | Adds a cross before the info panel button; it comes together with onCloseClick. Default: `false`. |
-| `onCloseClick`? | `(() => void) \| undefined` | Called when the cross is clicked. |
+| `isChecked` | `boolean` | **Required.** Ticks the select-all checkbox. |
+| `isIndeterminate` | `boolean` | **Required.** Draws the select-all checkbox partly ticked, for a selection that covers some rows but not all. |
+| `headerMenu` | `TGroupMenuItem[]` | **Required.** The action buttons, in order; an entry whose disabled is set is left out. |
+| `checkboxOptions` | `ReactElement<{ children?: ReactNode; }, string \| JSXElementConstructor<any>> \| undefined` | Element whose children become the options of the menu the arrow after the checkbox opens. |
+| `onClick` | `(() => void) \| undefined` | Called on a click anywhere in the toolbar. |
+| `onChange` | `(isChecked: boolean) => void` | **Required.** Called with the new state when the select-all checkbox is clicked. |
+| `checkboxMargin` | `stringundefined` | Space before the checkbox or the label as a CSS length, such as 12px; tablets and phones always use 24px. Default: `28px`. |
+| `withoutInfoPanelToggler` | `boolean` | **Required.** Leaves out the info panel button at the end. |
+| `isInfoPanelVisible` | `booleanundefined` | Draws the info panel button in the accent colour on a round background. Default: `false`. |
+| `isMobileView` | `booleanundefined` | Opens the selection menu and the action menus in their phone form. Default: `false`. |
+| `isBlocked` | `booleanundefined` | Greys every action button out and ignores clicks on them. Default: `false`. |
+| `toggleInfoPanel` | `(() => void) \| undefined` | Called when the info panel button is clicked. |
+| `withComboBox` | `booleanundefined` | Shows the arrow after the checkbox that opens checkboxOptions. Default: `true`. |
+| `headerLabel` | `stringundefined` | Text shown in place of the select-all checkbox. |
+| `isCloseable` | `booleanundefined` | Adds a cross before the info panel button; it comes together with onCloseClick. Default: `false`. |
+| `onCloseClick` | `(() => void) \| undefined` | Called when the cross is clicked. |
 
 </APITable>
 

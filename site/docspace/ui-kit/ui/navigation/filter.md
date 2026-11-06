@@ -220,58 +220,58 @@ export function ListingFilter() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `clearAll` | `() => void` | Called by the "clear all" link, which appears once more than one chip carries a label. |
-| `clearSearch` | `boolean` | Set it to `true` to clear the search box. The component empties the field, calls `onClearFilter` and then calls `setClearSearch(false)` itself. |
-| `currentDeviceType` | `DeviceType` | Which layout to render: on a desktop the view selector is a control of its own, below that it moves inside the sort menu. Nothing here measures the viewport. |
-| `filterHeader` | `string` | Heading of the filter panel. Nothing translates it for you. |
-| `filterTitle` | `string` | Native tooltip of the filter button. |
-| `getFilterData` | `TGetFilterData` | Loads the groups of filter options, awaited when the filter panel opens. |
-| `getSelectedFilterData` | `() => Promise<TItem[]> \| TItem[]` | Returns the filters in force, which become the chips under the bar. **Give it a stable identity**: it is re-read whenever the function changes. |
-| `getSelectedInputValue` | `() => string` | Returns the text the search box should show. **Give it a stable identity**: the effect that reads it also focuses the field, so a new function on every render keeps stealing focus. |
-| `getSelectedSortData` | `TGetSelectedSortData` | Returns the sort in force, as a key and a direction. |
-| `getSortData` | `TGetSortData` | Returns the sort options. It is called when the sort menu opens. |
-| `getViewSettingsData` | `() => TViewSelectorOption[]` | Returns the views the selector offers. **Give it a stable identity**: it is called during render and again in an effect keyed on the function itself, so a new one each render loops. |
-| `isContactsGroupsPage` | `boolean` | Whether the contacts page is showing groups. |
-| `isContactsGuestsPage` | `boolean` | Whether the contacts page is showing guests. |
-| `isContactsInsideGroupPage` | `boolean` | Whether the contacts page is showing the members of one group. |
-| `isContactsPage` | `boolean` | Whether the listing is the contacts page. It and the four flags below decide which groups the panel shows. |
-| `isContactsPeoplePage` | `boolean` | Whether the contacts page is showing people. |
-| `isIndexEditingMode` | `boolean` | Removes the filter button while the listing is being reordered. |
-| `isIndexing` | `boolean` | Whether the listing is being reordered, which removes the sort button and the view selector. |
-| `isRecentFolder` | `boolean` | Whether the listing is the recent folder. It hides the sort button and keeps the view selector on screen below the desktop breakpoint. |
-| `isRooms` | `boolean` | Whether the listing is of rooms, which changes which filter groups are offered. |
-| `onChangeViewAs` | `TOnChangeViewAs` | Called when the view is switched. The component holds no view state of its own. |
-| `onClearFilter` | `() => void` | Called when the search box is cleared through `clearSearch`. |
-| `onFilter` | `TOnFilter` | Called with the whole new selection whenever the filter panel is applied. |
-| `onSearch` | `(value: string) => void` | Called with the search string on every keystroke — the string itself, not an event. The component keeps no value of its own beyond the caret. |
-| `onSort` | `TOnSort` | Called with the chosen key and direction. |
-| `onSortButtonClick` | `TOnSortButtonClick` | Called with `true` when the sort menu opens and `false` when it closes. |
-| `placeholder` | `string` | Placeholder of the search box. Nothing translates it for you. |
-| `removeSelectedItem` | `({ key, group, }: { key: string \| number; group?: FilterGroups; }) => void` | Called when one chip is removed. The component drops the chip from its own list first and does not wait for you. |
-| `selectorLabel` | `string` | Heading of the selector the panel opens for a group that picks a person or a room. |
-| `setClearSearch` | `(value: boolean) => void` | Called with `false` once a requested clear has been carried out. |
-| `sortByTitle` | `string` | Native tooltip of the sort button. |
-| `userId` | `string` | Id of the signed-in person, handed to the selector so it can exclude them. |
-| `view` | `string` | Name of the current page, used as the key under which the sort menu remembers its width. |
-| `viewAs` | `TViewAs` | The listing's current view. `"table"` is treated as `"row"` by the sort menu and the view selector. |
-| `viewSelectorVisible` | `boolean` | Whether a view selector belongs on screen at all. On a desktop it is a separate control; below that breakpoint it moves inside the sort menu. |
-| `currentGroupId`? | `null \| string` | Current group ID from URL filter - used to highlight the correct group tag on page load |
-| `disableThirdParty`? | `boolean` | Removes the third-party storage group from the filter panel. |
-| `getAllRoomGroups`? | `() => Promise<TRoomGroup[]>` | Loads the room groups. It is awaited once, only while `organizeRoomsGrouping` is set, and only to decide that the row may be shown — the groups themselves come from `roomGroups`. |
-| `initSearchValue`? | `string` | Text the search box starts with, read once. |
-| `initSelectedFilterData`? | `TItem[]` | The filters in force at the first render, so the chips are right before `getSelectedFilterData` has resolved. |
-| `isFilterOrSearchActive`? | `boolean` | When true, hides the room grouping row because filters/search are active |
-| `isFlowsPage`? | `boolean` | Whether the listing is the flows page. It removes the filter button, the sort button and the view selector outright. |
-| `isFormsSection`? | `boolean` | Switches the grouping row wording from rooms to form spaces. |
-| `mainButtonIcon`? | `React.ReactNode` | Icon node rendered inside the MainButton (12x12) |
-| `mainButtonProps`? | `MainButtonProps` | Props for the MainButton displayed to the left of the search field |
-| `onFilterByGroup`? | `(groupId: string \| null) => void` | Called with a group's id when its chip is chosen, and with `null` for "all rooms". |
-| `organizeRoomsGrouping`? | `boolean` | Whether room grouping is turned on for the portal. Without it the grouping row is never rendered. |
-| `renderSelector`? | `TRenderSelector` | Renders the selector the panel opens for a person or a room group. Without it that step is empty — this package ships no portal selector. |
-| `roomGroups`? | `TRoomGroup[]` | The room groups to show as chips. Only those whose `icon` is an object are rendered; a string or `null` icon drops the group from the row. |
-| `setEditRoomGroupsDialogVisible`? | `(visible: boolean, roomIds?: number[] \| null, openInCreateMode?: boolean) => void` | Opens the host's "manage room groups" dialog. Without it the group management button and the create-group chip do nothing. |
-| `showMainButton`? | `boolean` | Shows a MainButton to the left of the search field |
-| `withRoomGroups`? | `boolean` | Whether the listing is the Rooms or the Forms section. It is one of four conditions for the room grouping row. |
+| `clearAll` | `() => void` | **Required.** Called by the "clear all" link, which appears once more than one chip carries a label. |
+| `clearSearch` | `boolean` | **Required.** Set it to `true` to clear the search box. The component empties the field, calls `onClearFilter` and then calls `setClearSearch(false)` itself. |
+| `currentDeviceType` | `DeviceType` | **Required.** Which layout to render: on a desktop the view selector is a control of its own, below that it moves inside the sort menu. Nothing here measures the viewport. |
+| `filterHeader` | `string` | **Required.** Heading of the filter panel. Nothing translates it for you. |
+| `filterTitle` | `string` | **Required.** Native tooltip of the filter button. |
+| `getFilterData` | `TGetFilterData` | **Required.** Loads the groups of filter options, awaited when the filter panel opens. |
+| `getSelectedFilterData` | `() => Promise<TItem[]> \| TItem[]` | **Required.** Returns the filters in force, which become the chips under the bar. **Give it a stable identity**: it is re-read whenever the function changes. |
+| `getSelectedInputValue` | `() => string` | **Required.** Returns the text the search box should show. **Give it a stable identity**: the effect that reads it also focuses the field, so a new function on every render keeps stealing focus. |
+| `getSelectedSortData` | `TGetSelectedSortData` | **Required.** Returns the sort in force, as a key and a direction. |
+| `getSortData` | `TGetSortData` | **Required.** Returns the sort options. It is called when the sort menu opens. |
+| `getViewSettingsData` | `() => TViewSelectorOption[]` | **Required.** Returns the views the selector offers. **Give it a stable identity**: it is called during render and again in an effect keyed on the function itself, so a new one each render loops. |
+| `isContactsGroupsPage` | `boolean` | **Required.** Whether the contacts page is showing groups. |
+| `isContactsGuestsPage` | `boolean` | **Required.** Whether the contacts page is showing guests. |
+| `isContactsInsideGroupPage` | `boolean` | **Required.** Whether the contacts page is showing the members of one group. |
+| `isContactsPage` | `boolean` | **Required.** Whether the listing is the contacts page. It and the four flags below decide which groups the panel shows. |
+| `isContactsPeoplePage` | `boolean` | **Required.** Whether the contacts page is showing people. |
+| `isIndexEditingMode` | `boolean` | **Required.** Removes the filter button while the listing is being reordered. |
+| `isIndexing` | `boolean` | **Required.** Whether the listing is being reordered, which removes the sort button and the view selector. |
+| `isRecentFolder` | `boolean` | **Required.** Whether the listing is the recent folder. It hides the sort button and keeps the view selector on screen below the desktop breakpoint. |
+| `isRooms` | `boolean` | **Required.** Whether the listing is of rooms, which changes which filter groups are offered. |
+| `onChangeViewAs` | `TOnChangeViewAs` | **Required.** Called when the view is switched. The component holds no view state of its own. |
+| `onClearFilter` | `() => void` | **Required.** Called when the search box is cleared through `clearSearch`. |
+| `onFilter` | `TOnFilter` | **Required.** Called with the whole new selection whenever the filter panel is applied. |
+| `onSearch` | `(value: string) => void` | **Required.** Called with the search string on every keystroke — the string itself, not an event. The component keeps no value of its own beyond the caret. |
+| `onSort` | `TOnSort` | **Required.** Called with the chosen key and direction. |
+| `onSortButtonClick` | `TOnSortButtonClick` | **Required.** Called with `true` when the sort menu opens and `false` when it closes. |
+| `placeholder` | `string` | **Required.** Placeholder of the search box. Nothing translates it for you. |
+| `removeSelectedItem` | `({ key, group, }: { key: string \| number; group?: FilterGroups; }) => void` | **Required.** Called when one chip is removed. The component drops the chip from its own list first and does not wait for you. |
+| `selectorLabel` | `string` | **Required.** Heading of the selector the panel opens for a group that picks a person or a room. |
+| `setClearSearch` | `(value: boolean) => void` | **Required.** Called with `false` once a requested clear has been carried out. |
+| `sortByTitle` | `string` | **Required.** Native tooltip of the sort button. |
+| `userId` | `string` | **Required.** Id of the signed-in person, handed to the selector so it can exclude them. |
+| `view` | `string` | **Required.** Name of the current page, used as the key under which the sort menu remembers its width. |
+| `viewAs` | `TViewAs` | **Required.** The listing's current view. `"table"` is treated as `"row"` by the sort menu and the view selector. |
+| `viewSelectorVisible` | `boolean` | **Required.** Whether a view selector belongs on screen at all. On a desktop it is a separate control; below that breakpoint it moves inside the sort menu. |
+| `currentGroupId` | `null \| string` | Current group ID from URL filter - used to highlight the correct group tag on page load |
+| `disableThirdParty` | `boolean` | Removes the third-party storage group from the filter panel. |
+| `getAllRoomGroups` | `() => Promise<TRoomGroup[]>` | Loads the room groups. It is awaited once, only while `organizeRoomsGrouping` is set, and only to decide that the row may be shown — the groups themselves come from `roomGroups`. |
+| `initSearchValue` | `string` | Text the search box starts with, read once. |
+| `initSelectedFilterData` | `TItem[]` | The filters in force at the first render, so the chips are right before `getSelectedFilterData` has resolved. |
+| `isFilterOrSearchActive` | `boolean` | When true, hides the room grouping row because filters/search are active |
+| `isFlowsPage` | `boolean` | Whether the listing is the flows page. It removes the filter button, the sort button and the view selector outright. |
+| `isFormsSection` | `boolean` | Switches the grouping row wording from rooms to form spaces. |
+| `mainButtonIcon` | `React.ReactNode` | Icon node rendered inside the MainButton (12x12) |
+| `mainButtonProps` | `MainButtonProps` | Props for the MainButton displayed to the left of the search field |
+| `onFilterByGroup` | `(groupId: string \| null) => void` | Called with a group's id when its chip is chosen, and with `null` for "all rooms". |
+| `organizeRoomsGrouping` | `boolean` | Whether room grouping is turned on for the portal. Without it the grouping row is never rendered. |
+| `renderSelector` | `TRenderSelector` | Renders the selector the panel opens for a person or a room group. Without it that step is empty — this package ships no portal selector. |
+| `roomGroups` | `TRoomGroup[]` | The room groups to show as chips. Only those whose `icon` is an object are rendered; a string or `null` icon drops the group from the row. |
+| `setEditRoomGroupsDialogVisible` | `(visible: boolean, roomIds?: number[] \| null, openInCreateMode?: boolean) => void` | Opens the host's "manage room groups" dialog. Without it the group management button and the create-group chip do nothing. |
+| `showMainButton` | `boolean` | Shows a MainButton to the left of the search field |
+| `withRoomGroups` | `boolean` | Whether the listing is the Rooms or the Forms section. It is one of four conditions for the room grouping row. |
 
 </APITable>
 

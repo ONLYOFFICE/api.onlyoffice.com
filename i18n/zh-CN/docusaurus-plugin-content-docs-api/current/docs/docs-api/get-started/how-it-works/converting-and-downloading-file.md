@@ -4,17 +4,17 @@ sidebar_position: -13
 
 # 转换和下载文件
 
-**文档转换服务**是ONLYOFFICE 文档的一部分。它在支持的格式之间转换文档文件——用于准备编辑或以用户需要的格式导出。
+**文档转换服务**是 ONLYOFFICE 文档的一部分。它在支持的格式之间转换文档文件——用于准备编辑或以用户需要的格式导出。
 
-**文档编辑器**使用编辑器的原生格式处理文件：文本文档为`.docx`，电子表格为`.xlsx`，演示文稿为`.pptx`，PDF为`.pdf`。
+**文档编辑器**使用编辑器的原生格式处理文件：文本文档为`.docx`，电子表格为`.xlsx`，演示文稿为`.pptx`，PDF 为`.pdf`。
 
 ## 默认行为
 
-**文档编辑服务**在[打开](./opening-file.md)文件时会自动将其转换为原生格式——集成商无需调用转换API。保存时，[`assemblyFormatAsOrigin`](../configuration/server-config/server-config.md#services.CoAuthoring.server.assemblyFormatAsOrigin)服务器设置（默认启用）确保文件被转换回其原始格式。有关详细信息，请参阅[以原始格式保存](./saving-file.md#saving-in-original-format)。
+**文档编辑服务**在[打开](./opening-file.md)文件时会自动将其转换为原生格式——集成商无需调用转换 API。保存时，[`assemblyFormatAsOrigin`](../configuration/server-config/server-config.md#services.CoAuthoring.server.assemblyFormatAsOrigin)服务器设置（默认启用）确保文件被转换回其原始格式。有关详细信息，请参阅[以原始格式保存](./saving-file.md#saving-in-original-format)。
 
 ## 编辑前转换
 
-如果集成商需要在将文件传递给编辑器之前进行转换——例如，以原生格式存储文件——可以显式使用[转换API](../../additional-api/conversion-api/request.md)。
+如果集成商需要在将文件传递给编辑器之前进行转换——例如，以原生格式存储文件——可以显式使用[转换 API](../../additional-api/conversion-api/request.md)。
 
 以下图示和步骤解释了此过程。
 
@@ -22,7 +22,7 @@ sidebar_position: -13
 
 1. 用户选择要上传到**文档管理器**的文件。
 2. **文档管理器**将文件上传到**文档存储服务**。
-3. **文档存储服务**使用[转换API](../../additional-api/conversion-api/request.md)将文件发送到**文档转换服务**，以将其转换为适当的原生格式。
+3. **文档存储服务**使用[转换 API](../../additional-api/conversion-api/request.md) 将文件发送到**文档转换服务**，以将其转换为适当的原生格式。
 4. **文档转换服务**将文件转换为原生格式。
 5. **文档存储服务**下载已转换的文件。
 
@@ -38,7 +38,7 @@ sidebar_position: -13
 
 1. 用户在**文档管理器**中选择文件并选择下载格式。
 2. **文档管理器**将请求发送到**文档存储服务**。
-3. **文档存储服务**使用[转换API](../../additional-api/conversion-api/request.md)将文件发送到**文档转换服务**，以将其转换为请求的格式。
+3. **文档存储服务**使用[转换 API](../../additional-api/conversion-api/request.md) 将文件发送到**文档转换服务**，以将其转换为请求的格式。
 4. **文档转换服务**将文件转换为请求的格式。
 5. 转换完成后，**文档存储服务**下载已转换的文件。
 6. **文档存储服务**将已转换的文件发送到**文档管理器**。

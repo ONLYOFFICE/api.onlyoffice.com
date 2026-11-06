@@ -162,29 +162,29 @@ optional); the second makes the four badge props all-or-nothing. The table below
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `title` | `string` | Room name. Only its initials are drawn — the first letter of the first word and of the last. |
-| `badgeIconColor`? | `string` | Keeps the glyph's own colours instead of filling it with the tile's background colour. |
-| `badgeIconNode`? | `ReactNode` | Badge glyph as a node, used instead of `badgeUrl`. |
-| `badgeUrl`? | `string` | URL of the badge glyph, drawn in the corner. Either this or `badgeIconNode` renders the badge; `withEditing` suppresses it. |
-| `className`? | `string` | Added to the outer element, before the component's own classes. |
-| `color`? | `string` | Background of the tile and the source of the initials' colour, as six hex digits **without** a leading `#`. Required unless you pass `imgClassName` instead. |
-| `dataTestId`? | `string` | Value of `data-testid` on the outer element. Default: `"room-icon"`. |
-| `dropDownManualX`? | `string` | Horizontal offset of the logo menu. Default: `"-10px"`. |
-| `hoverSrc`? | `string` | Image faded in over the tile while the pointer is on it. Ignored while `isArchive` is set. |
-| `imgClassName`? | `string` | Added to the `<img>` the logo renders into. The type refuses it alongside a required `color`: a coloured default or an image, not both. |
-| `isArchive`? | `boolean` | Paints the tile in the archive grey instead of `color`, and turns off the hover overlay. Default: `false`. |
-| `isEmptyIcon`? | `boolean` | Draws a dashed empty frame with a camera glyph and a plus button, for a room that has no logo yet. It replaces every other content, including the initials. |
-| `isTemplate`? | `boolean` | Draws the template outline instead of the round tile, with the logo shrunk to 24px inside it. Default: `false`. |
-| `logo`? | `string \| TLogo` | The room's logo: a URL, or the portal's logo object. An object with a `cover` is inlined as a base64 SVG and recoloured; otherwise `medium` is used as a URL. |
-| `model`? | `TModel[]` | Entries of the logo menu. Without it the menu opens empty. |
-| `onBadgeClick`? | `() => void` | Called when the badge is clicked. The click also reaches the tile, which toggles the logo menu. |
-| `onChangeFile`? | `(e: React.ChangeEvent<HTMLInputElement>) => void` | Called with the change event of the hidden file input. Passing it is what renders that input at all. |
-| `radius`? | `string` | Corner radius of the tile and of the image inside it. Default: `"6px"`. |
-| `showDefault`? | `boolean` | Draws the initials instead of the logo, whatever `logo` holds. |
-| `size`? | `string` | Side of the square, as a px string. It is also divided to scale the cover glyph, so a value in any other unit gives `NaN`. Default: `"32px"`. |
-| `tooltipContent`? | `string` | Text of the badge's tooltip. It also needs `tooltipId`, and it is what makes the badge show a pointer cursor. |
-| `tooltipId`? | `string` | Id the badge's tooltip is registered under. Without it the tooltip has nothing to attach to. |
-| `withEditing`? | `boolean` | Adds the pencil button and the menu it opens. It also makes the tile 64px wide at the least. |
+| `title` | `string` | **Required.** Room name. Only its initials are drawn — the first letter of the first word and of the last. |
+| `badgeIconColor` | `string` | Keeps the glyph's own colours instead of filling it with the tile's background colour. |
+| `badgeIconNode` | `ReactNode` | Badge glyph as a node, used instead of `badgeUrl`. |
+| `badgeUrl` | `string` | URL of the badge glyph, drawn in the corner. Either this or `badgeIconNode` renders the badge; `withEditing` suppresses it. |
+| `className` | `string` | Added to the outer element, before the component's own classes. |
+| `color` | `string` | Background of the tile and the source of the initials' colour, as six hex digits **without** a leading `#`. Required unless you pass `imgClassName` instead. |
+| `dataTestId` | `string` | Value of `data-testid` on the outer element. Default: `"room-icon"`. |
+| `dropDownManualX` | `string` | Horizontal offset of the logo menu. Default: `"-10px"`. |
+| `hoverSrc` | `string` | Image faded in over the tile while the pointer is on it. Ignored while `isArchive` is set. |
+| `imgClassName` | `string` | Added to the `<img>` the logo renders into. The type refuses it alongside a required `color`: a coloured default or an image, not both. |
+| `isArchive` | `boolean` | Paints the tile in the archive grey instead of `color`, and turns off the hover overlay. Default: `false`. |
+| `isEmptyIcon` | `boolean` | Draws a dashed empty frame with a camera glyph and a plus button, for a room that has no logo yet. It replaces every other content, including the initials. |
+| `isTemplate` | `boolean` | Draws the template outline instead of the round tile, with the logo shrunk to 24px inside it. Default: `false`. |
+| `logo` | `string \| TLogo` | The room's logo: a URL, or the portal's logo object. An object with a `cover` is inlined as a base64 SVG and recoloured; otherwise `medium` is used as a URL. |
+| `model` | `TModel[]` | Entries of the logo menu. Without it the menu opens empty. |
+| `onBadgeClick` | `() => void` | Called when the badge is clicked. The click also reaches the tile, which toggles the logo menu. |
+| `onChangeFile` | `(e: React.ChangeEvent<HTMLInputElement>) => void` | Called with the change event of the hidden file input. Passing it is what renders that input at all. |
+| `radius` | `string` | Corner radius of the tile and of the image inside it. Default: `"6px"`. |
+| `showDefault` | `boolean` | Draws the initials instead of the logo, whatever `logo` holds. |
+| `size` | `string` | Side of the square, as a px string. It is also divided to scale the cover glyph, so a value in any other unit gives `NaN`. Default: `"32px"`. |
+| `tooltipContent` | `string` | Text of the badge's tooltip. It also needs `tooltipId`, and it is what makes the badge show a pointer cursor. |
+| `tooltipId` | `string` | Id the badge's tooltip is registered under. Without it the tooltip has nothing to attach to. |
+| `withEditing` | `boolean` | Adds the pencil button and the menu it opens. It also makes the tile 64px wide at the least. |
 
 </APITable>
 

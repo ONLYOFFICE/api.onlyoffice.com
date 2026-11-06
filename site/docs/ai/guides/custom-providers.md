@@ -76,7 +76,7 @@ class Provider extends AI.Provider {
 
 To add the custom provider to the AI plugin:
 
-1. Open the **AI** tab in the top toolbar of ONLYOFFICE editors.
+1. Open the **AI Tools** tab in the top toolbar of ONLYOFFICE editors.
 2. Select **Settings**.
 3. In the **AI configuration** window, select **Edit AI models**.
 4. In the **AI Models list** window, click ![Edit icon](/assets/images/plugins/edit.svg#gh-light-mode-only)![Edit icon](/assets/images/plugins/edit.dark.svg#gh-dark-mode-only) to edit models.

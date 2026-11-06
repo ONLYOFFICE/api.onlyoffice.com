@@ -1,21 +1,21 @@
 ---
 description: Create a review folder and grant reviewers access.
-tags: ["DocSpace", "MCP Server", "AI"]
+tags: ["Apps", "MCP Server", "AI"]
 ---
 
 # Create review folder with reviewers
 
-This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to organize a lightweight review process: create a dedicated "Review" folder, collect selected files into it, and grant reviewers the appropriate access role.
+This example demonstrates how to use the ONLYOFFICE Apps MCP Server from an MCP-compatible client to organize a lightweight review process: create a dedicated "Review" folder, collect selected files into it, and grant reviewers the appropriate access role.
 
 ## Before you start
 
-Please make sure your MCP client is configured to use the DocSpace MCP Server so it can access your DocSpace portal and perform actions on your behalf.
-You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
+Please make sure your MCP client is configured to use the ONLYOFFICE Apps MCP Server so it can access your ONLYOFFICE Apps workspace and perform actions on your behalf.
+You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the ONLYOFFICE Apps MCP Server to your client configuration and provide the required credentials.
 
-If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
+If you are not sure which server option to use, start from the [ONLYOFFICE Apps MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
 
-- use the public [Remote Server](../getting-started/installation.md#access-via-the-remote-docspace-mcp-server) if your client supports remote MCP servers;
-- run the [Local Server](../getting-started/installation.md#access-via-a-local-docspace-mcp-server) if your client requires a locally hosted MCP server.
+- use the public [Remote Server](../getting-started/installation.md#access-via-the-remote-onlyoffice-apps-mcp-server) if your client supports remote MCP servers;
+- run the [Local Server](../getting-started/installation.md#access-via-a-local-onlyoffice-apps-mcp-server) if your client requires a locally hosted MCP server.
 
 ## Workflow steps
 
@@ -69,7 +69,7 @@ Invite reviewers and assign a role appropriate for review (usually Viewer).
 
 What you should expect:
 
-- Reviewers get access to open files in DocSpace.
+- Reviewers get access to open files in ONLYOFFICE Apps.
 - Reviewers cannot modify content if they are assigned the Viewer role.
 
 If you want reviewers to focus only on the review materials, invite them to the room as Viewers and share a direct link to the "Review" folder:
@@ -85,7 +85,7 @@ Request the folder contents and a link so reviewers can open it directly.
 What you should expect in the response:
 
 - A list of files collected for review
-- (Optional) a link to open the folder in DocSpace
+- (Optional) a link to open the folder in ONLYOFFICE Apps
 
 ## Result
 

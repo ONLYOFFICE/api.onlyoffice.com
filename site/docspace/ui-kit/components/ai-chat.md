@@ -25,7 +25,7 @@ write at all.
 ## Putting it on a screen
 
 There is no `AiChatPanel` component to render. `useAiChatPanel()` returns the panel content
-and the state to place it by, and the host decides where it goes — in the DocSpace client, the
+and the state to place it by, and the host decides where it goes — in the ONLYOFFICE Apps client, the
 info panel beside a section.
 
 ```tsx
@@ -145,10 +145,10 @@ model. **Connect a portal** on the banner opens the API Config form.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `locale`? | `string` | Language of the chat widget; also sets its direction. Default: `en`. |
-| `canUseAi`? | `boolean` | Whether the session may reach the AI API at all. Default: `true`. |
-| `isAvailable`? | `boolean` | Whether this view offers AI. Default: `false`. |
-| `aiReady`? | `boolean` | Whether the portal has a usable AI profile; false with noAccessProps shows the not-configured screen. |
-| `noAccessProps`? | `-` | Wiring for the not-configured screen: who the user is and where its buttons lead. |
+| `locale` | `string` | Language of the chat widget; also sets its direction. Default: `en`. |
+| `canUseAi` | `boolean` | Whether the session may reach the AI API at all. Default: `true`. |
+| `isAvailable` | `boolean` | Whether this view offers AI. Default: `false`. |
+| `aiReady` | `boolean` | Whether the portal has a usable AI profile; false with noAccessProps shows the not-configured screen. |
+| `noAccessProps` | `-` | Wiring for the not-configured screen: who the user is and where its buttons lead. |
 
 </APITable>

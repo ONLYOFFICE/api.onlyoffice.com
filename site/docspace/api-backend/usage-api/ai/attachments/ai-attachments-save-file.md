@@ -19,7 +19,7 @@ Stores one file attachment as a draft and returns it, so its ID can be attached 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The stored draft, whose ID links it to a message later. | [**AiAttachment**](../../models/ai-attachment.md) | - |
-| **400** | The attachment payload is malformed. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **400** | The attachment payload is malformed, or `input.path` is missing or empty. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |

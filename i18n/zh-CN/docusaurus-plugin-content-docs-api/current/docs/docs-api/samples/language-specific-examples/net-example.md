@@ -22,7 +22,7 @@ tags: ["Docs", "Integration", "C#"]
 
 在 **Windows 功能**中启用 IIS 时，请展开 **Internet Information Services** > **万维网服务**，并选中 **.NET Extensibility 4.8**、**ASP.NET 4.8**、**ISAPI 扩展**、**ISAPI 筛选器**、**默认文档**和**请求筛选**。在 Visual Studio 中，请安装 **ASP.NET 和 Web 开发**工作负载。
 
-## 步骤1. 下载示例
+## 步骤 1. 下载示例
 
 克隆示例仓库，进入您要运行的示例目录，并获取其子模块。以下命令使用的是 [Web Forms 示例](https://github.com/ONLYOFFICE/document-server-integration/tree/main/web/documentserver-example/csharp)。对于 [MVC 示例](https://github.com/ONLYOFFICE/document-server-integration/tree/main/web/documentserver-example/csharp-mvc)，请改为进入 `csharp-mvc` 目录：
 
@@ -32,7 +32,7 @@ cd document-server-integration/web/documentserver-example/csharp
 git submodule update --init --depth 1 .
 ```
 
-## 步骤2. 配置连接
+## 步骤 2. 配置连接
 
 打开 `settings.config` 文件（MVC 示例中为 `web.appsettings.config`）并编辑以下键：
 
@@ -52,7 +52,7 @@ git submodule update --init --depth 1 .
 
 如果您想尝试配置编辑器，请修改 `DocEditor.aspx.cs` 文件（MVC 示例中为 `Models/FileModel.cs`）中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
-## 步骤3. 构建并运行示例
+## 步骤 3. 构建并运行示例
 
 1. 在 Visual Studio 中打开 `OnlineEditorsExample.sln`（MVC 示例中为 `OnlineEditorsExampleMVC.sln`），然后选择**生成** > **生成解决方案**。Visual Studio 会还原 NuGet 包，并将示例编译到 `bin` 文件夹中。
 2. 在 IIS 管理器中，右键单击**网站**，然后选择**添加网站**。将**物理路径**设置为示例文件夹，并将**端口**设置为任意空闲端口。

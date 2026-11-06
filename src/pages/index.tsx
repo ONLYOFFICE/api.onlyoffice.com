@@ -34,7 +34,7 @@ const templateProps: HomepageFeaturesProps.Props = {
       button: DocsFeatures.button,
     },
     {
-      heading: 'DocSpace',
+      heading: 'Apps',
       linkPrefix: DocSpaceFeatures.linkPrefix,
       items: DocSpaceFeatures.items,
       button: DocSpaceFeatures.button,
@@ -62,7 +62,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="API Documentation"
-      description="Learn how to integrate ONLYOFFICE Docs and DocSpace into your solution, configure and customize them — with code samples and detailed guides."
+      description="Learn how to integrate ONLYOFFICE Docs and ONLYOFFICE Apps into your solution, configure and customize them — with code samples and detailed guides."
       wrapperClassName={styles.homepageWrapper}>
       <HomepageHeader />
       <main>

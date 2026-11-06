@@ -6,7 +6,7 @@
 
 Set disabled
 
-Switches off the listed tools of one server type in the scope, so the model is no longer offered them. `serverType` has to be a key the round's tool filter actually matches - a host-configured system server, one of the two DocSpace integration groups, web search, image generation, or one of the scope's registered custom servers - and an unknown value is rejected with the list of valid ones in the message, rather than stored and silently ignored. `toolNames` replaces the previous selection for that server type, so send the full list and pass an empty one to switch everything back on. `entityId` has to name a room the caller can open.
+Switches off the listed tools of one server type in the scope, so the model is no longer offered them. `serverType` has to be a key the round's tool filter actually matches - a host-configured system server, one of the two DocSpace integration groups, web search, image generation, or one of the scope's registered custom servers - and an unknown value is rejected with the list of valid ones in the message, rather than stored and silently ignored. `toolNames` is required and replaces the previous selection for that server type, so send the full list and pass an empty one to switch everything back on; a missing or non-array value is rejected rather than read as a request to clear, and so is one with anything but non-empty tool names in it. `entityId` has to name a room the caller can open. `scope` picks the list the write lands in: omitted or `user`, the caller's own; `tenant`, the list an administrator keeps for everyone, which every user's reads fold in - the portal settings page writes that one, the composer's own toggles the first.
 
 ## Parameters
 
@@ -19,7 +19,7 @@ Switches off the listed tools of one server type in the scope, so the model is n
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Confirms the new disable list was stored for that server type. | [**AiSuccessResponse**](../../models/ai-success-response.md) | - |
-| **400** | The list of tools to disable is malformed. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
+| **400** | `toolNames` is missing or not an array of non-empty tool names, `serverType` is unknown, or `scope` is not `user` or `tenant`. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **404** | The referenced object does not exist: an unknown or deleted room named by `entityId`, or an object the caller cannot read - for those the two cases are deliberately indistinguishable. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |

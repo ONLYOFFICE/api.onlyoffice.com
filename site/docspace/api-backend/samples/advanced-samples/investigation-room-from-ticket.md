@@ -1,6 +1,6 @@
 ---
 description: Create a dedicated investigation room when a helpdesk ticket arrives.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,12 +8,12 @@ import TabItem from '@theme/TabItem';
 
 # Investigation room from ticket
 
-This example shows how to create a dedicated investigation room in ONLYOFFICE DocSpace when your helpdesk system (Zendesk / Freshdesk / Jira Service Management) reports a new ticket.
+This example shows how to create a dedicated investigation room in ONLYOFFICE Apps when your helpdesk system (Zendesk / Freshdesk / Jira Service Management) reports a new ticket.
 
 When a ticket is created, the integration:
 
 - receives a `ticket.created` webhook from the helpdesk system,
-- creates a room in DocSpace for the ticket,
+- creates a room in ONLYOFFICE Apps for the ticket,
 - creates a standard folder structure inside the room,
 - optionally grants access to a support team,
 - generates a room link,
@@ -21,7 +21,7 @@ When a ticket is created, the integration:
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>
@@ -32,7 +32,7 @@ When a ticket is created, the integration:
   ``` ts
   import express from "express";
 
-  // DocSpace configuration
+  // ONLYOFFICE Apps configuration
   const API_HOST = process.env.DOCSPACE_API_HOST; // Set DOCSPACE_API_HOST in env (recommended). For quick tests you can temporarily paste your portal URL here.
   const API_KEY = process.env.DOCSPACE_API_KEY; // Set DOCSPACE_API_KEY in env (recommended). For quick tests you can temporarily paste token here.
 
@@ -46,7 +46,7 @@ When a ticket is created, the integration:
     // { id: "SUPPORT_TEAM_ID", isGroup: true, access: 4 },
   ];
 
-  // DocSpace auth headers
+  // ONLYOFFICE Apps auth headers
   const HEADERS: Record<string, string> = {
     Accept: "application/json",
     Authorization: `Bearer ${API_KEY}`,
@@ -66,14 +66,14 @@ When a ticket is created, the integration:
 
       if (!res.ok) {
         const text = await res.text();
-        console.error(`[ERROR] DocSpace request failed: ${method} ${url}`);
+        console.error(`[ERROR] ONLYOFFICE Apps request failed: ${method} ${url}`);
         console.error(`[ERROR] Status: ${res.status}, Message: ${text}`);
         return null;
       }
 
       return res.json();
     } catch (err: any) {
-      console.error(`[ERROR] DocSpace request error: ${err?.message || err}`);
+      console.error(`[ERROR] ONLYOFFICE Apps request error: ${err?.message || err}`);
       return null;
     }
   }
@@ -227,7 +227,7 @@ When a ticket is created, the integration:
   from flask import Flask, request, jsonify
   import requests
 
-  # DocSpace configuration
+  # ONLYOFFICE Apps configuration
   API_HOST = os.environ.get("DOCSPACE_API_HOST")  # Set DOCSPACE_API_HOST in env (recommended). For quick tests you can temporarily paste your portal URL here.
   API_KEY = os.environ.get("DOCSPACE_API_KEY")  # Set DOCSPACE_API_KEY in env (recommended). For quick tests you can temporarily paste token here.
 
@@ -256,11 +256,11 @@ When a ticket is created, the integration:
     try:
       r = requests.request(method.upper(), url, headers=HEADERS, json=json_body, timeout=30)
     except Exception as e:
-      print(f"[ERROR] DocSpace request error: {e}")
+      print(f"[ERROR] ONLYOFFICE Apps request error: {e}")
       return None
 
     if not (200 <= r.status_code < 300):
-      print(f"[ERROR] DocSpace request failed: {method} {url}")
+      print(f"[ERROR] ONLYOFFICE Apps request failed: {method} {url}")
       print(f"[ERROR] Status: {r.status_code}, Message: {r.text}")
       return None
 
@@ -415,7 +415,7 @@ When a ticket is created, the integration:
 ## Step 1: Receive the “ticket created” event
 
 Your helpdesk system sends a webhook to your backend when a new ticket is created.
-The handler extracts `ticketId` and `subject` from the incoming payload and starts the DocSpace workflow.
+The handler extracts `ticketId` and `subject` from the incoming payload and starts the ONLYOFFICE Apps workflow.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -450,7 +450,7 @@ The handler extracts `ticketId` and `subject` from the incoming payload and star
 
 ## Step 2: Create a dedicated investigation room
 
-The backend creates a new DocSpace room with a title that includes the ticket id and subject.
+The backend creates a new ONLYOFFICE Apps room with a title that includes the ticket id and subject.
 It uses POST [/api/2.0/files/rooms](/docspace/api-backend/usage-api/rooms/create-room) with a body like `{ "title": "Ticket #123 - Login error", "roomType": 2 }`
 
 <Tabs>
@@ -567,7 +567,7 @@ If you do not need this step, keep `SHARE_ENTRIES` empty.
 
 ## Step 5: Generate an access link to the room
 
-The script requests a DocSpace-generated room link using PUT [/api/2.0/files/rooms/:roomId/links](/docspace/api-backend/usage-api/rooms/set-room-link).
+The script requests a room link generated by ONLYOFFICE Apps, using PUT [/api/2.0/files/rooms/:roomId/links](/docspace/api-backend/usage-api/rooms/set-room-link).
 
 This avoids constructing UI links manually and ensures the returned URL is correct for your portal.
 

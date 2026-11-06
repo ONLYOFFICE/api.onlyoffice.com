@@ -130,22 +130,22 @@ export function DueDateFilter() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `locale` | `string` | BCP 47 tag the calendar and the chip's date are written in. |
-| `onChange` | `(d: null \| DateTime) => void` | Called with the chosen date, and with `null` when the cross clears it. Feed the value back through `outerDate` or the chip never appears. |
-| `openDate` | `Date \| DateTime<boolean>` | Month the calendar opens on. |
-| `autoPosition`? | `boolean` | Whether the calendar flips to the right edge when there is less than 340px of room to its right. Measured when it opens, not while it is open. |
-| `className`? | `string` | Applied to the outermost element. |
-| `hideCross`? | `boolean` | Whether the chip's clearing cross is hidden. |
-| `id`? | `string` | Applied to the outermost element. |
-| `initialDate`? | `Nullable<string \| DateTime<boolean> \| Date>` | Date the component starts with. On its own it does not survive the first effect — pass `outerDate` as well, or instead. |
-| `isMobile`? | `boolean` | Whether the calendar uses its larger touch layout. |
-| `maxDate`? | `Date \| DateTime<boolean>` | Latest selectable day in the calendar. |
-| `minDate`? | `Date \| DateTime<boolean>` | Earliest selectable day in the calendar. |
-| `outerDate`? | `DateTime<boolean> \| null` | The chosen date, held by you. This is the prop that actually controls what is displayed: the component copies it into its own state on every render and clears that state whenever this is empty. |
-| `selectDateText`? | `string` | Text of the button shown while no date is chosen. Default: `"Select date"`. |
-| `showCalendarIcon`? | `boolean` | Whether a calendar glyph is drawn before the date in the chip. Default: `true`. |
-| `testId`? | `string` | `data-testid` of the outermost element. Default: `"date-picker"`. |
-| `useMaxTime`? | `boolean` | Whether a picked day is reported at the end of that day rather than at midnight. |
+| `locale` | `string` | **Required.** BCP 47 tag the calendar and the chip's date are written in. |
+| `onChange` | `(d: null \| DateTime) => void` | **Required.** Called with the chosen date, and with `null` when the cross clears it. Feed the value back through `outerDate` or the chip never appears. |
+| `openDate` | `Date \| DateTime<boolean>` | **Required.** Month the calendar opens on. |
+| `autoPosition` | `boolean` | Whether the calendar flips to the right edge when there is less than 340px of room to its right. Measured when it opens, not while it is open. |
+| `className` | `string` | Applied to the outermost element. |
+| `hideCross` | `boolean` | Whether the chip's clearing cross is hidden. |
+| `id` | `string` | Applied to the outermost element. |
+| `initialDate` | `Nullable<string \| DateTime<boolean> \| Date>` | Date the component starts with. On its own it does not survive the first effect — pass `outerDate` as well, or instead. |
+| `isMobile` | `boolean` | Whether the calendar uses its larger touch layout. |
+| `maxDate` | `Date \| DateTime<boolean>` | Latest selectable day in the calendar. |
+| `minDate` | `Date \| DateTime<boolean>` | Earliest selectable day in the calendar. |
+| `outerDate` | `DateTime<boolean> \| null` | The chosen date, held by you. This is the prop that actually controls what is displayed: the component copies it into its own state on every render and clears that state whenever this is empty. |
+| `selectDateText` | `string` | Text of the button shown while no date is chosen. Default: `"Select date"`. |
+| `showCalendarIcon` | `boolean` | Whether a calendar glyph is drawn before the date in the chip. Default: `true`. |
+| `testId` | `string` | `data-testid` of the outermost element. Default: `"date-picker"`. |
+| `useMaxTime` | `boolean` | Whether a picked day is reported at the end of that day rather than at midnight. |
 
 </APITable>
 

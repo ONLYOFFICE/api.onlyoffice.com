@@ -109,15 +109,15 @@ export function SortOrder() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `onClick` | `(e: React.ChangeEvent<HTMLInputElement>) => void` | Called when the choice changes. Despite the name it receives the input's change event, so the new value is `event.target.value` — always a string, even where the option's `value` was a number. |
-| `options` | `TRadioButtonOption[]` | The options, in order. An entry with `type: "text"` is a caption, not a button. |
-| `className`? | `string` | Applied to the group. |
-| `dataTestId`? | `string` | `data-testid` of the group. Default: `"radio-button-group"`. |
-| `id`? | `string` | Applied to the group. |
-| `orientation`? | `RadioButtonOrientation` | Which way the options run. Horizontal makes the group a flex row; vertical makes it `inline-block`, so it shrinks to its content. Note the default differs from a lone `RadioButton`, which is vertical. Default: `"horizontal"`. |
-| `selected`? | `number \| string` | Value of the chosen option, compared as a string. It seeds the group's own state and is re-applied whenever it changes. |
-| `style`? | `CSSProperties` | Applied to the group. |
-| `width`? | `string` | Width of the group, as a CSS length. |
+| `onClick` | `(e: React.ChangeEvent<HTMLInputElement>) => void` | **Required.** Called when the choice changes. Despite the name it receives the input's change event, so the new value is `event.target.value` — always a string, even where the option's `value` was a number. |
+| `options` | `TRadioButtonOption[]` | **Required.** The options, in order. An entry with `type: "text"` is a caption, not a button. |
+| `className` | `string` | Applied to the group. |
+| `dataTestId` | `string` | `data-testid` of the group. Default: `"radio-button-group"`. |
+| `id` | `string` | Applied to the group. |
+| `orientation` | `RadioButtonOrientation` | Which way the options run. Horizontal makes the group a flex row; vertical makes it `inline-block`, so it shrinks to its content. Note the default differs from a lone `RadioButton`, which is vertical. Default: `"horizontal"`. |
+| `selected` | `number \| string` | Value of the chosen option, compared as a string. It seeds the group's own state and is re-applied whenever it changes. |
+| `style` | `CSSProperties` | Applied to the group. |
+| `width` | `string` | Width of the group, as a CSS length. |
 
 </APITable>
 
@@ -129,11 +129,11 @@ Declared by [`components/radio-button`](./radio-button.md) and accepted here too
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `fontSize`? | `string` | Font size of the text beside the button. |
-| `fontWeight`? | `number \| string` | Font weight of that text. |
-| `isDisabled`? | `boolean` | Whether the input is disabled and the label greyed out. |
-| `name`? | `string` | `name` of the input. Buttons sharing one behave as a single choice. |
-| `spacing`? | `string` | Gap to the neighbouring button, as a CSS length: `margin-inline-start` when horizontal, `margin-block-end` when vertical. There is no gap at all without it — the buttons touch. |
+| `fontSize` | `string` | Font size of the text beside the button. |
+| `fontWeight` | `number \| string` | Font weight of that text. |
+| `isDisabled` | `boolean` | Whether the input is disabled and the label greyed out. |
+| `name` | `string` | `name` of the input. Buttons sharing one behave as a single choice. |
+| `spacing` | `string` | Gap to the neighbouring button, as a CSS length: `margin-inline-start` when horizontal, `margin-block-end` when vertical. There is no gap at all without it — the buttons touch. |
 
 </APITable>
 
@@ -144,13 +144,13 @@ Declared by [`components/radio-button`](./radio-button.md) and accepted here too
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `value` | `number \| string` | Value of this option, and what `onClick` reads off the event. It is also the React key, so two options may not share one. |
-| `autoFocus`? | `boolean` | Whether this option's input takes focus on mount. |
-| `dataTestId`? | `string` | `data-testid` of this option; it doubles as the button's test id. |
-| `disabled`? | `boolean` | Whether this one option is disabled while the rest stay live. |
-| `id`? | `string` | Applied to this option's label element. |
-| `label`? | `ReactNode` | What is written beside this option. `value` is used when it is left out. |
-| `type`? | `"radio" \| "text"` | `"text"` renders a caption inside the group instead of a button — a sub-heading between two runs of options. Anything else renders a button. |
+| `value` | `number \| string` | **Required.** Value of this option, and what `onClick` reads off the event. It is also the React key, so two options may not share one. |
+| `autoFocus` | `boolean` | Whether this option's input takes focus on mount. |
+| `dataTestId` | `string` | `data-testid` of this option; it doubles as the button's test id. |
+| `disabled` | `boolean` | Whether this one option is disabled while the rest stay live. |
+| `id` | `string` | Applied to this option's label element. |
+| `label` | `ReactNode` | What is written beside this option. `value` is used when it is left out. |
+| `type` | `"radio" \| "text"` | `"text"` renders a caption inside the group instead of a button — a sub-heading between two runs of options. Anything else renders a button. |
 
 </APITable>
 

@@ -50,16 +50,16 @@ import APITable from '@site/src/components/APITable/APITable';
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `isChecked` | `boolean` | Sets the checked state of the checkbox |
-| `label?` | `string` | Defines the checkbox label |
+| `label` | `string` | Defines the checkbox label |
 | `onChange` | () => `void` \| [`IMessage`](../utils.md#imessage) | Sets a function which is triggered whenever the checkbox input is clicked |
-| `truncate?` | `boolean` | Specifies if the word wrapping is disabled or not |
-| `tabIndex?` | `number` | Defines the checkbox tab index |
-| `hasError?` | `boolean` | Specifies whether a notification will be sent if an error occurs |
-| `name?` | `string` | Defines the HTML "name" property |
-| `value?` | `string` | Defines the checkbox input value |
-| `isIndeterminate?` | `boolean` | Specifies whether the checkbox state will be displayed as a black rectangle in the checkbox when it is set to true |
-| `isDisabled?` | `boolean` | Specifies if the checkbox input is disabled |
-| `title?` | `string` | Defines the checkbox input title |
-| `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
+| `truncate` | `boolean` | Specifies if the word wrapping is disabled or not |
+| `tabIndex` | `number` | Defines the checkbox tab index |
+| `hasError` | `boolean` | Specifies whether a notification will be sent if an error occurs |
+| `name` | `string` | Defines the HTML "name" property |
+| `value` | `string` | Defines the checkbox input value |
+| `isIndeterminate` | `boolean` | Specifies whether the checkbox state will be displayed as a black rectangle in the checkbox when it is set to true |
+| `isDisabled` | `boolean` | Specifies if the checkbox input is disabled |
+| `title` | `string` | Defines the checkbox input title |
+| `className` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
 </APITable>

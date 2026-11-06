@@ -1,6 +1,6 @@
 ---
 description: Enable the custom filter mode for a spreadsheet via the API.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,13 +8,13 @@ import TabItem from '@theme/TabItem';
 
 # Enable custom filter mode for a file
 
-This example demonstrates how to enable the Custom Filter mode for a specific file in ONLYOFFICE DocSpace using the API. The Custom Filter feature allows you to restrict spreadsheet views so that users only see their own applied filters.
+This example demonstrates how to enable the Custom Filter mode for a specific file in ONLYOFFICE Apps using the API. The Custom Filter feature allows you to restrict spreadsheet views so that users only see their own applied filters.
 
 Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/nodejs/samples/enable-custom-filter.js)/[Python](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/python/samples/enable-custom-filter.py)
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>
@@ -23,7 +23,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
   <TabItem value="nodejs" label="Node.js">
 
   ``` ts
-  // Set your DocSpace portal URL and access token
+  // Set your ONLYOFFICE Apps portal URL and access token
   const API_HOST = 'https://yourportal.onlyoffice.com';
   const API_KEY = 'your_api_key';
   const FILE_ID = 123456; // Replace with your actual file ID
@@ -72,7 +72,7 @@ Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace
   ``` py
   import requests
 
-  # Set your DocSpace portal URL and access token
+  # Set your ONLYOFFICE Apps portal URL and access token
   API_HOST = 'https://yourportal.onlyoffice.com'
   API_KEY = 'your_api_key'
   FILE_ID = 123456  # Replace with your actual file ID

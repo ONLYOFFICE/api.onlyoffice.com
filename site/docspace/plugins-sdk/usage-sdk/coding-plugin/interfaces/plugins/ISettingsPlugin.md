@@ -130,7 +130,7 @@ The method is called on the portal side with the stored settings string,
 
 `void`
 
-#### Remarks:
+#### Remarks
 
 Called as the plugin loads and after a save through the React
 settings client, with [`getStatus`](IPlugin.md#getstatus) re-read straight

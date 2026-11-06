@@ -4,12 +4,12 @@ sidebar_position: 2
 
 # Migration
 
-This guide helps you migrate your plugins to newer versions of the DocSpace Plugin SDK.
+This guide helps you migrate your plugins to newer versions of the ONLYOFFICE Apps Plugin SDK.
 
 ## Updating a plugin to SDK 3.0.0
 
 :::note
-SDK 3.0.0 is compatible with DocSpace 4.0.0 and later. Plugins built with SDK 3.0.0 have `minDocSpaceVersion: "4.0.0"` set automatically in *config.json* by the build process. On older versions, plugins install but are flagged as incompatible and do not function.
+SDK 3.0.0 is compatible with ONLYOFFICE Apps 4.0.0 and later. Plugins built with SDK 3.0.0 have `minDocSpaceVersion: "4.0.0"` set automatically in *config.json* by the build process. On older versions, plugins install but are flagged as incompatible and do not function.
 :::
 
 :::important
@@ -104,7 +104,7 @@ For plugins created with an SDK 2.x template:
          fileName: () => "plugin.js",
        },
        rolldownOptions: {
-         // Kept out of the bundle: DocSpace supplies its own copies at load
+         // Kept out of the bundle: ONLYOFFICE Apps supplies its own copies at load
          // time and rewrites these specifiers to them. A second React arrives with
          // its own contexts, so every SDK hook throws. The SDK root stays bundled
          // like any other dependency: string enums and types, no module state.
@@ -134,7 +134,13 @@ For plugins created with an SDK 2.x template:
 5. Change the build script in *package.json*:
 
    ```json
-   "build": "vite build && npx build-docspace-plugin"
+   {
+     "scripts": {
+       "build": "vite build && npx build-docspace-plugin",
+       ...
+     },
+     ...
+   }
    ```
 
 6. Update *package.json* and *src/index.ts*:

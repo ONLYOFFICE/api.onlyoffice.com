@@ -123,9 +123,9 @@ unknown attribute and warns in the console.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `level`? | `HeadingLevel` | Which heading element is rendered, `h1` through `h6`. It is the semantics only: the size comes from `size`, so a `h3` can be the largest thing on the page. Default: `HeadingLevel.h1`. |
-| `size`? | `HeadingSize` | One of the five preset sizes, 15px to 27px. Ignored while `type` is set, which brings a size of its own. Default: `HeadingSize.medium`. |
-| `type`? | `HeadingType` | Portal-sized preset that replaces `size`: `content` 18px, `menu` 23px, `header` 28px, each with a 50px line height. |
+| `level` | `HeadingLevel` | Which heading element is rendered, `h1` through `h6`. It is the semantics only: the size comes from `size`, so a `h3` can be the largest thing on the page. Default: `HeadingLevel.h1`. |
+| `size` | `HeadingSize` | One of the five preset sizes, 15px to 27px. Ignored while `type` is set, which brings a size of its own. Default: `HeadingSize.medium`. |
+| `type` | `HeadingType` | Portal-sized preset that replaces `size`: `content` 18px, `menu` 23px, `header` 28px, each with a 50px line height. |
 
 </APITable>
 
@@ -137,40 +137,40 @@ Declared by [`components/text`](./text.md) and accepted here too.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `aria-hidden`? | `Booleanish` | Hides the element from assistive technology, passed unchanged, for decoration that repeats what is already read. |
-| `aria-label`? | `string` | Accessible name, passed unchanged, for text whose content is not what should be announced. |
-| `aria-live`? | `"assertive" \| "off" \| "polite"` | Live-region politeness, passed unchanged, for a line whose content changes and should be read out. |
-| `as`? | `ElementType<any, keyof JSX.IntrinsicElements>` | Element to render, replacing the component's own default — `p` for `Text` itself. Wins over `tag` when both are set. |
-| `backgroundColor`? | `string` | Background colour, as an inline style. Any CSS colour. |
-| `children`? | `((string \| number \| bigint \| boolean \| ReactElement<unknown, string \| JSXElementConstructor<any>> \| Iterable<ReactNode>…` | Text to render. |
-| `className`? | `string` | Added after the component's own classes. |
-| `color`? | `string` | Text colour, as an inline style. `Text` declares none of its own and inherits without it. |
-| `containerMinWidth`? | `string` | Not read here — it reaches the DOM as an unknown attribute. It is read off this element by `RowContent`, which uses it as the minimum width of a side slot. |
-| `containerWidth`? | `string` | Not read here — it reaches the DOM as an unknown attribute. It is read off this element by `RowContent` and `TileContent`, which use it as the width of the slot they put the child in. |
-| `dataTestId`? | `string` | Value of `data-testid` on the element. Default: `"text"`. |
-| `dir`? | `"auto" \| "ltr" \| "rtl"` | Writing direction. `"ltr"` and `"rtl"` set the `dir` attribute; `"auto"` instead wraps the children in a span that takes the pointer events off them. |
-| `display`? | `string` | Ignored. Nothing reads this prop, and it reaches the DOM as an unknown attribute. Use `isInline` or `style`. |
-| `fontSize`? | `string` | Font size, as an inline style. Unset, `Text` is 13px through `--text-size`. |
-| `fontWeight`? | `number \| string` | Font weight, as an inline style. Ignored while `isBold` is set. Unset, `Text` is 400 through `--text-weight`. |
-| `href`? | `string` | Passed to the element unchanged, for `as="a"`. |
-| `htmlFor`? | `string` | Passed to the element unchanged, for `as="label"`. |
-| `id`? | `string` | `id` of the rendered element. |
-| `isBold`? | `boolean` | Sets the weight to 700, overriding `fontWeight`. |
-| `isInline`? | `boolean` | Renders the text inline instead of as a block — `inline-block` in `Text`, `inline` in `Heading`. |
-| `isItalic`? | `boolean` | Renders the text in italics. |
-| `lineHeight`? | `string` | Line height, as an inline style. |
-| `noSelect`? | `boolean` | Stops the text being selected, on every browser the kit supports. |
-| `onClick`? | `((e: React.MouseEvent<Element>) => void) & MouseEventHandler<HTMLHeadingElement>` | Called with the event when the element is clicked. |
-| `ref`? | `RefObject<HTMLDivElement \| null>` | Attached to the rendered element, whatever `as` made it. Typed for a div whatever that element actually is. |
-| `rel`? | `string` | Passed to the element unchanged, for `as="a"`. |
-| `role`? | `AriaRole` | ARIA role of the element, passed unchanged: `status` or `alert` for a line that reports an outcome, `button` alongside `tabIndex` and `onClick`. |
-| `style`? | `CSSProperties` | Inline style of the element. `Text` merges it over the style props above, so a `fontSize` here wins over the `fontSize` prop. |
-| `tabIndex`? | `number` | Passed to the element unchanged. The component adds no role, so a focusable text element needs one from you. |
-| `tag`? | `string` | Element to render, used only while `as` is unset. It is a tag name, not an id. |
-| `textAlign`? | `"center" \| "justify" \| "left" \| "right"` | Text alignment, as an inline style. |
-| `title`? | `string` | Tooltip text. On a component the kit wraps in its tooltip HOC it is consumed before the element is built and opens the shared tooltip instead, which needs `RootTooltip` mounted; elsewhere it is the native `title` attribute. |
-| `truncate`? | `boolean` | Holds the text on one line and ends it with an ellipsis. It needs a parent of bounded width; on its own the element grows instead. |
-| `view`? | `string` | Only `"tile"` is recognised, and only together with `dir="auto"`: it clamps the text to two lines. |
+| `aria-hidden` | `Booleanish` | Hides the element from assistive technology, passed unchanged, for decoration that repeats what is already read. |
+| `aria-label` | `string` | Accessible name, passed unchanged, for text whose content is not what should be announced. |
+| `aria-live` | `"assertive" \| "off" \| "polite"` | Live-region politeness, passed unchanged, for a line whose content changes and should be read out. |
+| `as` | `ElementType<any, keyof JSX.IntrinsicElements>` | Element to render, replacing the component's own default — `p` for `Text` itself. Wins over `tag` when both are set. |
+| `backgroundColor` | `string` | Background colour, as an inline style. Any CSS colour. |
+| `children` | `((string \| number \| bigint \| boolean \| ReactElement<unknown, string \| JSXElementConstructor<any>> \| Iterable<ReactNode>…` | Text to render. |
+| `className` | `string` | Added after the component's own classes. |
+| `color` | `string` | Text colour, as an inline style. `Text` declares none of its own and inherits without it. |
+| `containerMinWidth` | `string` | Not read here — it reaches the DOM as an unknown attribute. It is read off this element by `RowContent`, which uses it as the minimum width of a side slot. |
+| `containerWidth` | `string` | Not read here — it reaches the DOM as an unknown attribute. It is read off this element by `RowContent` and `TileContent`, which use it as the width of the slot they put the child in. |
+| `dataTestId` | `string` | Value of `data-testid` on the element. Default: `"text"`. |
+| `dir` | `"auto" \| "ltr" \| "rtl"` | Writing direction. `"ltr"` and `"rtl"` set the `dir` attribute; `"auto"` instead wraps the children in a span that takes the pointer events off them. |
+| `display` | `string` | Ignored. Nothing reads this prop, and it reaches the DOM as an unknown attribute. Use `isInline` or `style`. |
+| `fontSize` | `string` | Font size, as an inline style. Unset, `Text` is 13px through `--text-size`. |
+| `fontWeight` | `number \| string` | Font weight, as an inline style. Ignored while `isBold` is set. Unset, `Text` is 400 through `--text-weight`. |
+| `href` | `string` | Passed to the element unchanged, for `as="a"`. |
+| `htmlFor` | `string` | Passed to the element unchanged, for `as="label"`. |
+| `id` | `string` | `id` of the rendered element. |
+| `isBold` | `boolean` | Sets the weight to 700, overriding `fontWeight`. |
+| `isInline` | `boolean` | Renders the text inline instead of as a block — `inline-block` in `Text`, `inline` in `Heading`. |
+| `isItalic` | `boolean` | Renders the text in italics. |
+| `lineHeight` | `string` | Line height, as an inline style. |
+| `noSelect` | `boolean` | Stops the text being selected, on every browser the kit supports. |
+| `onClick` | `((e: React.MouseEvent<Element>) => void) & MouseEventHandler<HTMLHeadingElement>` | Called with the event when the element is clicked. |
+| `ref` | `RefObject<HTMLDivElement \| null>` | Attached to the rendered element, whatever `as` made it. Typed for a div whatever that element actually is. |
+| `rel` | `string` | Passed to the element unchanged, for `as="a"`. |
+| `role` | `AriaRole` | ARIA role of the element, passed unchanged: `status` or `alert` for a line that reports an outcome, `button` alongside `tabIndex` and `onClick`. |
+| `style` | `CSSProperties` | Inline style of the element. `Text` merges it over the style props above, so a `fontSize` here wins over the `fontSize` prop. |
+| `tabIndex` | `number` | Passed to the element unchanged. The component adds no role, so a focusable text element needs one from you. |
+| `tag` | `string` | Element to render, used only while `as` is unset. It is a tag name, not an id. |
+| `textAlign` | `"center" \| "justify" \| "left" \| "right"` | Text alignment, as an inline style. |
+| `title` | `string` | Tooltip text. On a component the kit wraps in its tooltip HOC it is consumed before the element is built and opens the shared tooltip instead, which needs `RootTooltip` mounted; elsewhere it is the native `title` attribute. |
+| `truncate` | `boolean` | Holds the text on one line and ends it with an ellipsis. It needs a parent of bounded width; on its own the element grows instead. |
+| `view` | `string` | Only `"tile"` is recognised, and only together with `dir="auto"`: it clamps the text to two lines. |
 
 </APITable>
 

@@ -1,5 +1,70 @@
 # Change log
 
+## 10.1.0
+
+### New features
+
+#### Docs API
+
+* Added an FAQ entry on reading form field values from a document that is open in the editor
+
+#### Samples
+
+* Search now covers every Docs, DocSpace and AI sample, whatever category is selected
+* Added a clear button to the samples search
+
+#### ONLYOFFICE Apps
+
+* Added the Chat, Personal, Public room and Forms mode pages to the Embed SDK
+* Added the Customization (locale, theming, UI elements) and Events and callbacks sections to the Embed SDK
+* Documented OAuth authentication in the Embed SDK, including token refresh, session guards and sign-out
+* Documented custom actions and the expanded Manager mode methods in the Embed SDK
+* Added the Embed SDK changelog page
+
+### Improvements
+
+#### Docs API
+
+* Documented the `wopi.requireIpFilterRule` setting and the explicit IP filter rule that the WOPI host requires from 10.0
+* Listed the WOPI request checks that always apply and explained how the Request Filtering Agent lists interact with the IP filter
+
+#### ONLYOFFICE Apps
+
+* Renamed DocSpace to ONLYOFFICE Apps in site labels, page copy, samples, SDK pages and code comments
+* Updated the API backend get-started screenshots and texts for v4.0.0, including the API keys, OAuth 2.0 and Developer Tools menu paths
+* Clarified which OAuth app settings can be changed after creation
+* Synced the MCP server docs with the `docspace-mcp` repository, refreshed the quickstart screenshots and described the tool confirmation dialog
+* Polished the MCP server getting started, tutorials and troubleshooting pages
+* Moved Troubleshooting & FAQ into More information in the Embed SDK
+* Linked the Desktop Editors MCP setup steps from the MCP server clients page instead of duplicating them
+* Showed the build script in its `package.json` context in the Plugins SDK migration guide
+* Used plugin package names as shown in the plugins list on the Plugins SDK sample pages
+
+#### AI
+
+* Renamed the AI tab to AI Tools across the AI guides
+* Clarified the setup steps on the server-wide AI providers page
+
+#### Desktop
+
+* Updated screenshots and UI steps for 10.0
+* Renamed the MCP chat to AI Chat, clarified the MCP version history and noted which setup steps predate 10.0
+* Dropped DocSpace from the placeholder URL in the MCP server samples
+
+#### Localization
+
+* Replaced 协作空间 with ONLYOFFICE Apps and spaced product names, Latin text and numbers from adjacent Chinese text
+* Switched zh-CN pages to full-width quotes, brackets and `——` dashes, `：` between terms and descriptions, and `、` between list items
+* Translated remaining English UI labels, menu names and image alt text in plugin samples, MCP and AI guides, and the WOPI overview
+
+### Fixes
+
+* Fixed the WOPI IP filter example address not matching the step that describes it
+* Fixed inaccuracies in the Embed SDK authentication, events, customization and forms pages
+* Fixed broken API doc links and switched to case-sensitive `APITable` anchors in the Embed SDK
+* Fixed installation anchors in the MCP server use cases and removed leftover generator markers
+* Fixed spacing around bold text next to Chinese characters in zh-CN pages
+
 ## 10.0.0
 
 ### New features
@@ -21,8 +86,8 @@
 
 #### Plugins and macros
 
+* Documented the `Editor` object for calling editor methods and `Editor.RunMacro` as the replacement for `callCommand`
 * Added the 10.0 changelog
-* Documented the `Editor` object and `Editor.RunMacro`
 
 #### Desktop
 
@@ -57,6 +122,10 @@
 
 * Updated the plugin API references for 10.0
 * Described the `executeMethod` signature and callback in How to call methods
+
+#### AI
+
+* Reordered the AI guides sidebar so the setup pages come first
 
 #### DocSpace
 

@@ -8,9 +8,9 @@ ONLYOFFICE 宏与 Microsoft 宏有所不同，Microsoft 宏使用的是 Visual B
 
 如果您此前在 Microsoft Office 中使用了宏功能，可能会遇到一些不便，因为这些宏与 ONLYOFFICE 不兼容。不过，您可以将之前使用的宏转换为适用于新编辑器的版本。
 
-- [自动转换](#automatic-conversion-using-ai-plugin) - 使用 ONLYOFFICE 的 AI 插件进行自动转换（推荐用于快速转换）。
+- [自动转换](#automatic-conversion-using-ai-plugin)：使用 ONLYOFFICE 的 AI 插件进行自动转换（推荐用于快速转换）。
 
-- [手动转换](#manual-conversion-of-vba-macros) - 使用 [ONLYOFFICE Office API](../../office-api/get-started/overview.md) 用 JavaScript 重写逻辑。
+- [手动转换](#manual-conversion-of-vba-macros)：使用 [ONLYOFFICE Office API](../../office-api/get-started/overview.md) 用 JavaScript 重写逻辑。
 
 ## 使用 AI 插件进行自动转换 {#automatic-conversion-using-ai-plugin}
 
@@ -32,7 +32,7 @@ ONLYOFFICE 宏与 Microsoft 宏有所不同，Microsoft 宏使用的是 Visual B
     尽管 AI 插件可以生成完整且可运行的宏，但它并不总是完美的。请务必仔细检查输出内容，并进行彻底测试，尤其是对于复杂的宏。
     :::
 
-6. 点击 ![播放图标](/assets/images/plugins/play.svg) 测试脚本。
+6. 点击 ![播放图标](/assets/images/plugins/play.svg)测试脚本。
 
 例如，您有一个简单的 VBA 宏，用于取消活动工作表中所有合并单元格的合并：
 

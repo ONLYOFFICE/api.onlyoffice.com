@@ -50,7 +50,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | ------ | ------ | ------ |
 | `width` | `string` | Defines the skeleton width |
 | `height` | `string` | Defines the skeleton height |
-| `borderRadius?` | `string` | Defines the skeleton border radius |
-| `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
+| `borderRadius` | `string` | Defines the skeleton border radius |
+| `className` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
 </APITable>

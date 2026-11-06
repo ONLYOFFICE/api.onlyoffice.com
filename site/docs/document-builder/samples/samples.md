@@ -62,7 +62,7 @@ See: [C++](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cp
 
 ## Generating employment agreement
 
-Creates a personalized PDF employment agreement from HR form data and saves it to DocSpace for signing and storage.
+Creates a personalized PDF employment agreement from HR form data and saves it to ONLYOFFICE Apps for signing and storage.
 
 See: [C++](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cpp/creating_employment_agreement/main.cpp) / [.Net](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cs/creating_employment_agreement/Program.cs) / [Python](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/python/creating_employment_agreement/main.py) / [Java](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/java/creating_employment_agreement/Program.java)
 

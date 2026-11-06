@@ -56,3 +56,39 @@ Set the mode using the `editorConfig` section of the configuration file:
   ```
 
 For more information, see [editorConfig.mode](../../usage-api/config/editor/editor.md#mode).
+
+## How to get the form field values from a document that is open in the editor?
+
+To read the fields of a document that is open in the editor, including unsaved changes, use the [Automation API](../../usage-api/automation-api/automation-api.md). Create a connector after the [onDocumentReady](../../usage-api/config/events.md#ondocumentready) event. From then on, you can read the fields at any moment, for example in [onRequestStartFilling](../../usage-api/config/events.md#onrequeststartfilling) to check the form before you call the [startFilling](../../usage-api/methods.md#startfilling) method. The method to use depends on the editor that opens the form:
+
+- ONLYOFFICE forms ([document.isForm](../../usage-api/config/document/document.md#isform) is `true`) open in the document editor. Call the [GetAllForms](../../../plugins/interacting-with-editors/form-api/Methods/GetAllForms.md) method. Each returned object contains the field key in `FormKey` and its current value in `FormValue`:
+
+  ``` ts
+  function onRequestStartFilling() {
+    connector.executeMethod("GetAllForms", null, (forms) => {
+      for (const form of forms) {
+        console.log(form.FormKey, form.FormValue);
+      }
+      docEditor.startFilling();
+    });
+  }
+  ```
+
+- Other PDF files open in the PDF editor. Run the [GetAllFields](../../../office-api/usage-api/pdf-api/ApiDocument/Methods/GetAllFields.md) method of the PDF API with [callCommand](../../usage-api/automation-api/connector-class.md#callcommand) and return the name and value of each field:
+
+  ``` ts
+  connector.callCommand(() => {
+    return Api.GetDocument().GetAllFields().map((field) => ({
+      name: field.GetFullName(),
+      value: field.GetValue(),
+    }));
+  }, (fields) => {
+    console.log(fields);
+  });
+  ```
+
+:::info
+Automation API is available only for **ONLYOFFICE Docs Developer**.
+:::
+
+If you need only the values of a submitted form, the Automation API is not required. After the user clicks *Complete & Submit*, the [callback handler](../../usage-api/callback-handler.md#formsdataurl) receives a link to them in the `formsdataurl` parameter.

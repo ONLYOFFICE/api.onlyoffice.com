@@ -21,29 +21,29 @@ The Table README describes it in full.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `fileContextClick`? | `((value?: boolean \| undefined) => void) \| undefined` | Called when the context menu is asked for, with true for a right-click. |
-| `children` | `ReactNode` | The row's cells, normally one TableCell per column. |
-| `contextOptions`? | `ContextMenuModel[] \| undefined` | Items of the context menu; a non-empty list renders the three-dot button, an empty one leaves a blank space instead. |
-| `onHideContextMenu`? | `(() => void) \| undefined` | Called when the context menu closes. |
-| `selectionProp`? | `{ className?: string \| undefined; value?: string \| undefined; } \| undefined` | Class and value spread onto the last cell, which holds the context menu button. |
-| `className`? | `stringundefined` | Class applied to the row after the component's own. |
-| `style`? | `CSSPropertiesundefined` | Inline styles of the row; inside a table the header overwrites its grid columns. |
-| `contextMenuCellStyle`? | `CSSPropertiesundefined` | Inline styles of the last cell. |
-| `title`? | `stringundefined` | Hover tooltip of the three-dot button. |
-| `getContextModel`? | `(() => ContextMenuModel[]) \| undefined` | Builds the context menu items at the moment the menu opens. |
-| `badgeUrl`? | `stringundefined` | URL of a badge image shown in the context menu's header. |
-| `isIndexEditingMode`? | `booleanundefined` | Leaves out the last cell with the context menu button, for rows being reordered. Default: `false`. |
-| `onClick`? | `((e: MouseEvent<Element, MouseEvent>) => void) \| undefined` | Called with the mouse event on a click anywhere in the row. |
-| `onDoubleClick`? | `((e: MouseEvent<Element, MouseEvent>) => void) \| undefined` | Called with the mouse event on a double click anywhere in the row. |
-| `forwardedRef`? | `ForwardedRef<HTMLDivElement> \| undefined` | Ref of the row element. |
-| `hideColumns`? | `booleanundefined` | Adds a class for the narrow layout the header asks for when it runs out of room; the kit styles nothing with it. Default: `false`. |
-| `isActive`? | `booleanundefined` | Marks the row whose context menu is open: reveals children marked create-share-link and turns off the drop highlight. Default: `false`. |
-| `checked`? | `booleanundefined` | Adds a checked class to the row for the consumer's highlight and reveals children marked create-share-link. Default: `false`. |
-| `dragging`? | `booleanundefined` | Fills children marked droppable-hover with the drop colour while something is dragged over the table. Default: `false`. |
-| `dataTestId`? | `stringundefined` | Value of the row's data-testid attribute. Default: `table-row`. |
-| `contextMenuTestId`? | `stringundefined` | Value of the context menu's data-testid attribute. |
-| `onMouseEnter`? | `((e: MouseEvent<Element, MouseEvent>) => void) \| undefined` | Called when the pointer enters the row. |
-| `onMouseLeave`? | `((e: MouseEvent<Element, MouseEvent>) => void) \| undefined` | Called when the pointer leaves the row. |
+| `fileContextClick` | `((value?: boolean \| undefined) => void) \| undefined` | Called when the context menu is asked for, with true for a right-click. |
+| `children` | `ReactNode` | **Required.** The row's cells, normally one TableCell per column. |
+| `contextOptions` | `ContextMenuModel[] \| undefined` | Items of the context menu; a non-empty list renders the three-dot button, an empty one leaves a blank space instead. |
+| `onHideContextMenu` | `(() => void) \| undefined` | Called when the context menu closes. |
+| `selectionProp` | `{ className?: string \| undefined; value?: string \| undefined; } \| undefined` | Class and value spread onto the last cell, which holds the context menu button. |
+| `className` | `stringundefined` | Class applied to the row after the component's own. |
+| `style` | `CSSPropertiesundefined` | Inline styles of the row; inside a table the header overwrites its grid columns. |
+| `contextMenuCellStyle` | `CSSPropertiesundefined` | Inline styles of the last cell. |
+| `title` | `stringundefined` | Hover tooltip of the three-dot button. |
+| `getContextModel` | `(() => ContextMenuModel[]) \| undefined` | Builds the context menu items at the moment the menu opens. |
+| `badgeUrl` | `stringundefined` | URL of a badge image shown in the context menu's header. |
+| `isIndexEditingMode` | `booleanundefined` | Leaves out the last cell with the context menu button, for rows being reordered. Default: `false`. |
+| `onClick` | `((e: MouseEvent<Element, MouseEvent>) => void) \| undefined` | Called with the mouse event on a click anywhere in the row. |
+| `onDoubleClick` | `((e: MouseEvent<Element, MouseEvent>) => void) \| undefined` | Called with the mouse event on a double click anywhere in the row. |
+| `forwardedRef` | `ForwardedRef<HTMLDivElement> \| undefined` | Ref of the row element. |
+| `hideColumns` | `booleanundefined` | Adds a class for the narrow layout the header asks for when it runs out of room; the kit styles nothing with it. Default: `false`. |
+| `isActive` | `booleanundefined` | Marks the row whose context menu is open: reveals children marked create-share-link and turns off the drop highlight. Default: `false`. |
+| `checked` | `booleanundefined` | Adds a checked class to the row for the consumer's highlight and reveals children marked create-share-link. Default: `false`. |
+| `dragging` | `booleanundefined` | Fills children marked droppable-hover with the drop colour while something is dragged over the table. Default: `false`. |
+| `dataTestId` | `stringundefined` | Value of the row's data-testid attribute. Default: `table-row`. |
+| `contextMenuTestId` | `stringundefined` | Value of the context menu's data-testid attribute. |
+| `onMouseEnter` | `((e: MouseEvent<Element, MouseEvent>) => void) \| undefined` | Called when the pointer enters the row. |
+| `onMouseLeave` | `((e: MouseEvent<Element, MouseEvent>) => void) \| undefined` | Called when the pointer leaves the row. |
 
 </APITable>
 

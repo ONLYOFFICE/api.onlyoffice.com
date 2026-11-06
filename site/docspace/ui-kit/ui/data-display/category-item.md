@@ -107,14 +107,14 @@ export function SettingsIndex() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `badgeLabel` | `string` | Text inside the paid badge. Required even when `withPaidBadge` is `false`; pass an empty string then. |
-| `onClickLink` | `(e: MouseEvent<Element>) => void` | Called with the click event on the title link. Nothing prevents the browser from following `url` — call `preventDefault` yourself when you route in JavaScript. |
-| `subtitle` | `string` | Explanatory line under the title, at 12px and no wider than 1024px. |
-| `title` | `string` | Heading of the card, rendered as the text of a link at 16px. |
-| `url` | `string` | Where the link points. It is dropped while `isDisabled` is set, which leaves an `<a>` with no `href`. |
-| `withPaidBadge` | `boolean` | Shows the paid badge beside the title — unless the page's path contains `management`, where it is suppressed. Required, so pass `false` when there is no badge. |
-| `dataTestId`? | `string` | Value of `data-testid` on the wrapper, and the stem of the title link's own `<dataTestId>_category_link`. Without it the link keeps the shared `link` id. |
-| `isDisabled`? | `boolean` | Greys the subtitle and removes both `href` and `onClickLink` from the link. The title keeps its colour and the arrow still points right, so say elsewhere that the card is unavailable. |
+| `badgeLabel` | `string` | **Required.** Text inside the paid badge. Required even when `withPaidBadge` is `false`; pass an empty string then. |
+| `onClickLink` | `(e: MouseEvent<Element>) => void` | **Required.** Called with the click event on the title link. Nothing prevents the browser from following `url` — call `preventDefault` yourself when you route in JavaScript. |
+| `subtitle` | `string` | **Required.** Explanatory line under the title, at 12px and no wider than 1024px. |
+| `title` | `string` | **Required.** Heading of the card, rendered as the text of a link at 16px. |
+| `url` | `string` | **Required.** Where the link points. It is dropped while `isDisabled` is set, which leaves an `<a>` with no `href`. |
+| `withPaidBadge` | `boolean` | **Required.** Shows the paid badge beside the title — unless the page's path contains `management`, where it is suppressed. Required, so pass `false` when there is no badge. |
+| `dataTestId` | `string` | Value of `data-testid` on the wrapper, and the stem of the title link's own `<dataTestId>_category_link`. Without it the link keeps the shared `link` id. |
+| `isDisabled` | `boolean` | Greys the subtitle and removes both `href` and `onClickLink` from the link. The title keeps its colour and the arrow still points right, so say elsewhere that the card is unavailable. |
 
 </APITable>
 

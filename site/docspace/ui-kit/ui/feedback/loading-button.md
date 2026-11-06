@@ -102,15 +102,15 @@ export function UploadProgress({
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `backgroundColor`? | `string` | CSS colour of the disc behind the cross. |
-| `className`? | `string` | Ignored. Nothing reads this prop; style the ring through the custom properties. |
-| `id`? | `string` | Ignored. Nothing reads this prop; the element carries no `id`. |
-| `inConversion`? | `boolean` | Whether the cross in the middle is dropped, leaving the ring on its own. Default: `false`. |
-| `isDefaultMode`? | `boolean` | Whether the ring is drawn in the idle grey instead of the accent colour, and lightens on hover. |
-| `loaderColor`? | `string` | CSS colour of the ring and of the cross. Overrides the accent colour. |
-| `onClick`? | `VoidFunction` | Called when anything inside the 16px square is clicked, including the cross. |
-| `percent`? | `number` | How much of the ring is filled, 0–100. At `0` the ring spins instead of showing an arc. Default: `0`. |
-| `style`? | `CSSProperties` | Ignored. Nothing reads this prop either. |
+| `backgroundColor` | `string` | CSS colour of the disc behind the cross. |
+| `className` | `string` | Ignored. Nothing reads this prop; style the ring through the custom properties. |
+| `id` | `string` | Ignored. Nothing reads this prop; the element carries no `id`. |
+| `inConversion` | `boolean` | Whether the cross in the middle is dropped, leaving the ring on its own. Default: `false`. |
+| `isDefaultMode` | `boolean` | Whether the ring is drawn in the idle grey instead of the accent colour, and lightens on hover. |
+| `loaderColor` | `string` | CSS colour of the ring and of the cross. Overrides the accent colour. |
+| `onClick` | `VoidFunction` | Called when anything inside the 16px square is clicked, including the cross. |
+| `percent` | `number` | How much of the ring is filled, 0–100. At `0` the ring spins instead of showing an arc. Default: `0`. |
+| `style` | `CSSProperties` | Ignored. Nothing reads this prop either. |
 
 </APITable>
 

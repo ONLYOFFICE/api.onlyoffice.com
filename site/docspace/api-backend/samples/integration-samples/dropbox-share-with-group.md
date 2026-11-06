@@ -1,17 +1,17 @@
 ---
-description: Create shared Dropbox folders for DocSpace group members.
-tags: ["DocSpace", "REST API", "Integration"]
+description: Create shared Dropbox folders for ONLYOFFICE Apps group members.
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 # Dropbox share with group
-This integration automates the process of creating shared Dropbox folders for DocSpace group members and inviting them to collaborate.
+This integration automates the process of creating shared Dropbox folders for ONLYOFFICE Apps group members and inviting them to collaborate.
 
 ## How it works
 
-- Retrieve DocSpace groups - Fetch a list of groups from DocSpace.
+- Retrieve ONLYOFFICE Apps groups - Fetch a list of groups from ONLYOFFICE Apps.
 - Create Dropbox folders - Generate a shared Dropbox folder for each group.
-- Get groups members - Fetch all users assigned to each DocSpace group.
-- Share Dropbox folders - Invite DocSpace group members to their corresponding Dropbox folders.
+- Get groups members - Fetch all users assigned to each ONLYOFFICE Apps group.
+- Share Dropbox folders - Invite ONLYOFFICE Apps group members to their corresponding Dropbox folders.
 
 <details>
   <summary>Full example</summary>
@@ -34,17 +34,17 @@ ONLYOFFICE_HEADERS = {
     'Content-Type': 'application/json'
 }
 
-# Step 1: Retrieve DocSpace groups
+# Step 1: Retrieve ONLYOFFICE Apps groups
 def get_docspace_groups():
     url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/group'
     response = requests.get(url, headers=ONLYOFFICE_HEADERS)
     
     if response.status_code == 200:
         return [{'id': group['id'], 'name': group['name']} for group in response.json()['response']]
-    print(f'Failed to retrieve DocSpace groups: {response.status_code} - {response.text}')
+    print(f'Failed to retrieve ONLYOFFICE Apps groups: {response.status_code} - {response.text}')
     return []
 
-# Step 2: Create a Dropbox folder for each DocSpace group
+# Step 2: Create a Dropbox folder for each ONLYOFFICE Apps group
 def create_dropbox_group_folder(group_name):
     folder_path = f'/DocSpace_Groups/{group_name.replace(" ", "_")}'
     try:
@@ -55,7 +55,7 @@ def create_dropbox_group_folder(group_name):
         print(f'Failed to create folder for {group_name}: {e}')
         return None
 
-# Step 3: Retrieve DocSpace group members
+# Step 3: Retrieve ONLYOFFICE Apps group members
 def get_group_members(group_id):
     url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/group/{group_id}'
     response = requests.get(url, headers=ONLYOFFICE_HEADERS)
@@ -92,8 +92,8 @@ if __name__ == '__main__':
 
 ## Before you start
 
-1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
+1. Replace `your-docspace.onlyoffice.com` and `your_onlyoffice_api_key` with your actual ONLYOFFICE Apps portal host and API key. Ensure you have the necessary permissions to perform user operations.
+2. Before you can make requests to the API, you need to create an ONLYOFFICE Apps API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys.md) to learn how to obtain and use API keys.
 3. Create a [Dropbox App](https://www.dropbox.com/developers) with `files.content.write` and `sharing.write` permissions.
 4. Replace `your_dropbox_access_token` with your actual Dropbox token.
 5. Install the [Dropbox Python SDK](https://www.dropbox.com/developers/documentation/python#install):
@@ -102,19 +102,19 @@ if __name__ == '__main__':
     pip install dropbox
     ```
 
-## Step 1: Retrieve DocSpace groups
+## Step 1: Retrieve ONLYOFFICE Apps groups
 
 Use a [`GET /api/2.0/group`](/docspace/api-backend/usage-api/group/get-groups) request to retrieve the group ID and the group name for each team.
 
 ```py
-# Step 1: Retrieve DocSpace groups
+# Step 1: Retrieve ONLYOFFICE Apps groups
 def get_docspace_groups():
     url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/group'
     response = requests.get(url, headers=ONLYOFFICE_HEADERS)
     
     if response.status_code == 200:
         return [{'id': group['id'], 'name': group['name']} for group in response.json()['response']]
-    print(f'Failed to retrieve DocSpace groups: {response.status_code} - {response.text}')
+    print(f'Failed to retrieve ONLYOFFICE Apps groups: {response.status_code} - {response.text}')
     return []
 
 if __name__ == '__main__':
@@ -123,10 +123,10 @@ if __name__ == '__main__':
 
 ## Step 2: Create shared Dropbox folders
 
-Use the Dropbox SDK [`files_create_folder_v2`](https://dropbox-sdk-python.readthedocs.io/en/latest/api/dropbox.html#dropbox.dropbox_client.Dropbox.files_create_folder_v2) method to generate a Dropbox folder for each DocSpace group.
+Use the Dropbox SDK [`files_create_folder_v2`](https://dropbox-sdk-python.readthedocs.io/en/latest/api/dropbox.html#dropbox.dropbox_client.Dropbox.files_create_folder_v2) method to generate a Dropbox folder for each ONLYOFFICE Apps group.
 
 ``` py
-# Step 2: Create a Dropbox folder for each DocSpace group
+# Step 2: Create a Dropbox folder for each ONLYOFFICE Apps group
 def create_dropbox_group_folder(group_name):
     folder_path = f'/DocSpace_Groups/{group_name.replace(" ", "_")}'
     try:
@@ -143,12 +143,12 @@ if __name__ == '__main__':
         folder = create_dropbox_group_folder(group['name'])
 ```
 
-## Step 3: Retrieve DocSpace group members
+## Step 3: Retrieve ONLYOFFICE Apps group members
 
 Use a [`GET /api/2.0/group/{group_id}`](/docspace/api-backend/usage-api/group/get-group) request to get a group by ID and extract user names and emails.
 
 ```py
-# Step 3: Retrieve DocSpace group members
+# Step 3: Retrieve ONLYOFFICE Apps group members
 def get_group_members(group_id):
     url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/group/{group_id}'
     response = requests.get(url, headers=ONLYOFFICE_HEADERS)
@@ -172,7 +172,7 @@ if __name__ == '__main__':
 
 ## Step 4: Share the Dropbox folders with the group members
 
-Use the Dropbox SDK [`sharing_create_shared_link_with_settings`](https://dropbox-sdk-python.readthedocs.io/en/latest/api/dropbox.html#dropbox.dropbox_client.Dropbox.sharing_create_shared_link_with_settings) method to share Dropbox folders with DocSpace group members.
+Use the Dropbox SDK [`sharing_create_shared_link_with_settings`](https://dropbox-sdk-python.readthedocs.io/en/latest/api/dropbox.html#dropbox.dropbox_client.Dropbox.sharing_create_shared_link_with_settings) method to share Dropbox folders with ONLYOFFICE Apps group members.
 
 ```py
 # Step 4: Share the Dropbox group folder with its members

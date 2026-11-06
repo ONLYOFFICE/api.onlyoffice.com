@@ -20,7 +20,7 @@ Java 集成示例是一个运行在 Apache Tomcat 上的小型 Servlet 和 JSP �
 
 Docker Compose 会使用 Maven 和 JDK 8 构建示例，并在 Apache Tomcat 中运行它，因此您无需自行安装 Java、Maven 或 Tomcat。
 
-## 步骤1. 下载示例
+## 步骤 1. 下载示例
 
 克隆[示例仓库](https://github.com/ONLYOFFICE/document-server-integration/tree/main/web/documentserver-example/java)，进入 Java 示例目录，并获取其子模块：
 
@@ -30,7 +30,7 @@ cd document-server-integration/web/documentserver-example/java
 git submodule update --init --depth 1 .
 ```
 
-## 步骤2. 配置连接
+## 步骤 2. 配置连接
 
 打开 `src/main/resources/settings.properties` 文件并编辑以下键：
 
@@ -50,7 +50,7 @@ files.docservice.secret=
 
 如果您想尝试配置编辑器，请修改 `src/main/java/entities/FileModel.java` 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。该类会构建配置，再由 `src/main/webapp/editor.jsp` 传递给编辑器。
 
-## 步骤3. 构建并运行示例
+## 步骤 3. 构建并运行示例
 
 ```sh
 docker compose up --build

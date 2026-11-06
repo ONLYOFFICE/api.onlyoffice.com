@@ -6,7 +6,7 @@
 
 Set folder metadata values
 
-Writes the values of metadata fields on a folder or a room. The caller needs the right to edit the folder; for a room that is its manager. Every field must belong to a template the folder carries, assigned with `PUT api/2.0/files/metadata/folder/{folderId}/templates` or inherited from a cascading folder, and a field may be listed once. A value carries exactly the member of its type: `stringValue` for a text field of at most 8000 characters, `numberValue` for a number, `dateValue` for a date, `optionIds` for a choice field; an empty value clears the field. A date without a time zone offset is read as UTC. The write finishes in the request and touches the folder only: to push the new values down a cascading folder run the cascade again with `Overwrite`, while entries created or moved in later take them on their own. The custom text fields are written with `PUT api/2.0/files/metadata/folder/{folderId}/customFields` instead. The answer is the whole metadata of the folder after the write. A value of the wrong type, a field listed twice, a custom field or a field of a template the folder does not carry is answered with 400; a folder the caller cannot edit with 403; a folder or a field that does not exist with 404.
+Writes the values of metadata fields on a folder or a room. The caller needs the right to create in the folder (a room manager or a content creator); for a room that is its manager. Every field must belong to a template the folder carries, assigned with `PUT api/2.0/files/metadata/folder/{folderId}/templates` or inherited from a cascading folder, and a field may be listed once. A value carries exactly the member of its type: `stringValue` for a text field of at most 8000 characters, `numberValue` for a whole number of at most 2^53-1 in magnitude (the largest integer a JSON client reads exactly), `dateValue` for a date, `optionIds` for a choice field; an empty value clears the field. The write finishes in the request and touches the folder only: to push the new values down a cascading folder run the cascade again with `Overwrite`. The custom text fields are written with `PUT api/2.0/files/metadata/folder/{folderId}/customFields`. The answer is the whole metadata of the folder after the write. A value of the wrong type or beyond the number limit, a field listed twice, a custom field or a field of a template the folder does not carry is answered with 400; a caller without the right to create in the folder with 403; a folder or a field that does not exist with 404.
 
 ## Parameters
 
@@ -20,8 +20,8 @@ Writes the values of metadata fields on a folder or a room. The caller needs the
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The metadata of the folder after the write: the assigned templates with the values of their fields, and the custom fields | [**EntryMetadataWrapper**](../../models/entry-metadata-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | A value does not match the field type, a field is listed twice or is a custom field, or the field belongs to a template the folder does not have | - | - |
-| **403** | You don't have enough permission to perform the operation | - | - |
+| **400** | A value does not match the field type or exceeds the number limit, a field is listed twice or is a custom field, or the field belongs to a template the folder does not have | - | - |
+| **403** | The caller cannot create in the folder, or is not the manager of the room | - | - |
 | **404** | The folder or a field does not exist | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |

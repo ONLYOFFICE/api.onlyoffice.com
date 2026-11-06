@@ -18,7 +18,7 @@ Node.js 集成示例是一个小型 Express 应用程序，它可以列出文件
 - **Node.js**：请参阅[官方网站](https://nodejs.org/en/download/)。
 - **Git**：请参阅[官方网站](https://git-scm.com/downloads)。
 
-## 步骤1. 下载示例
+## 步骤 1. 下载示例
 
 克隆[示例仓库](https://github.com/ONLYOFFICE/document-server-integration/tree/main/web/documentserver-example/nodejs)，进入 Node.js 示例目录，并获取其子模块：
 
@@ -28,7 +28,7 @@ cd document-server-integration/web/documentserver-example/nodejs
 git submodule update --init --depth 1 .
 ```
 
-## 步骤2. 配置连接
+## 步骤 2. 配置连接
 
 打开 `config/default.json` 文件并编辑以下键。它们都位于 `server` 对象中：
 
@@ -53,7 +53,7 @@ git submodule update --init --depth 1 .
 
 如果您想尝试配置编辑器，请修改 `views/config.ejs` 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
-## 步骤3. 安装依赖项并运行示例
+## 步骤 3. 安装依赖项并运行示例
 
 ```sh
 npm install

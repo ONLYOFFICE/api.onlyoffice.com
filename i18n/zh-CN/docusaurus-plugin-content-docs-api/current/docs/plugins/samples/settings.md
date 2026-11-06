@@ -9,7 +9,7 @@ import Video from '@site/src/components/Video/Video';
 
 使用水印保护文档。
 
-**插件类型：** 非可视化，系统插件。
+**插件类型：** 非可视化、系统插件。
 
 **支持的编辑器：** 文档、电子表格、演示文稿。
 
@@ -17,7 +17,7 @@ import Video from '@site/src/components/Video/Video';
 
 ## 安装方式
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/settings) 下载该插件，并按照以下说明进行安装：[桌面端](../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../development-workflow/installing-and-testing/docs-on-premises-installation.md) 或 [云端](../development-workflow/installing-and-testing/cloud-saas-installation.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/settings) 下载该插件，并按照以下说明进行安装：[桌面端](../development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端](../development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 ## 使用方法
 

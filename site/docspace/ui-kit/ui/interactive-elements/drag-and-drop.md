@@ -94,19 +94,19 @@ export function DropTarget({ upload }: { upload: (files: File[]) => void }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children` | `ReactNode` | What the drop target wraps. The component adds no layout of its own beyond filling its parent's height. |
-| `className`? | `string` | Added after the component's own classes on the outer element. |
-| `dragging`? | `boolean` | Your own "a drag is in progress" flag. **Nothing is highlighted without it** — the accept colour is nested inside this state. |
-| `forwardedRef`? | `RefObject<HTMLDivElement \| null>` | Ignored. The drop library supplies the element's ref, and this one is never attached. |
-| `isDragDisabled`? | `boolean` | Fades the element to 40%. It does not stop the drop: `onDrop` still fires. |
-| `isDropZone`? | `boolean` | Lets drag events bubble out of this element to a drop target above it. Without it they are stopped here. |
-| `onDragLeave`? | `(e: React.DragEvent<HTMLElement>) => void` | Called when the dragged selection leaves the target. |
-| `onDragOver`? | `(isDragActive: boolean, e: React.DragEvent<HTMLElement>) => void` | Called on every drag-over with the drag-active flag as it stood when the current render began — on the first event of a drag that is still `false`. |
-| `onDrop`? | `(acceptedFiles: File[]) => void` | Called with the dropped files. It is skipped entirely when the drop carried none, and nothing is ever rejected: there is no accepted-type or size filter here. |
-| `onMouseDown`? | `() => void` | Called when the pointer is pressed. It is passed straight to the element, not through the drop library. |
-| `style`? | `CSSProperties` | Inline style of the outer element, and where the `--dnd-*` custom properties go. |
-| `targetFile`? | `(file?: File \| null) => void` | Ignored. Nothing reads it, and React warns about a function landing on a DOM element. |
-| `value`? | `string` | Ignored. Nothing reads it, and it is spread onto the outer element as an unknown attribute. |
+| `children` | `ReactNode` | **Required.** What the drop target wraps. The component adds no layout of its own beyond filling its parent's height. |
+| `className` | `string` | Added after the component's own classes on the outer element. |
+| `dragging` | `boolean` | Your own "a drag is in progress" flag. **Nothing is highlighted without it** — the accept colour is nested inside this state. |
+| `forwardedRef` | `RefObject<HTMLDivElement \| null>` | Ignored. The drop library supplies the element's ref, and this one is never attached. |
+| `isDragDisabled` | `boolean` | Fades the element to 40%. It does not stop the drop: `onDrop` still fires. |
+| `isDropZone` | `boolean` | Lets drag events bubble out of this element to a drop target above it. Without it they are stopped here. |
+| `onDragLeave` | `(e: React.DragEvent<HTMLElement>) => void` | Called when the dragged selection leaves the target. |
+| `onDragOver` | `(isDragActive: boolean, e: React.DragEvent<HTMLElement>) => void` | Called on every drag-over with the drag-active flag as it stood when the current render began — on the first event of a drag that is still `false`. |
+| `onDrop` | `(acceptedFiles: File[]) => void` | Called with the dropped files. It is skipped entirely when the drop carried none, and nothing is ever rejected: there is no accepted-type or size filter here. |
+| `onMouseDown` | `() => void` | Called when the pointer is pressed. It is passed straight to the element, not through the drop library. |
+| `style` | `CSSProperties` | Inline style of the outer element, and where the `--dnd-*` custom properties go. |
+| `targetFile` | `(file?: File \| null) => void` | Ignored. Nothing reads it, and React warns about a function landing on a DOM element. |
+| `value` | `string` | Ignored. Nothing reads it, and it is spread onto the outer element as an unknown attribute. |
 
 </APITable>
 

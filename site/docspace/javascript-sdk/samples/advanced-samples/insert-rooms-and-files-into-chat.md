@@ -1,16 +1,16 @@
 ---
 description: Insert room and file links into a chat using slash commands.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
-# DocSpace chat commands
+# ONLYOFFICE Apps chat commands
 
-This example shows how to integrate DocSpace SDK selectors into a chat interface. Users can enter special slash commands to open file or room selectors. Once an item is selected, the link is automatically added to the chat.
+This example shows how to integrate ONLYOFFICE Apps SDK selectors into a chat interface. Users can enter special slash commands to open file or room selectors. Once an item is selected, the link is automatically added to the chat.
 
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.  
-You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of ONLYOFFICE Apps.
 
 <details>
   <summary>Full example</summary>
@@ -22,7 +22,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat with DocSpace Selectors</title>
+    <title>Chat with ONLYOFFICE Apps Selectors</title>
     <!-- Replace with your actual portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/2.2.0/api.js"></script>
     <style>
@@ -56,7 +56,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-se
       <div class="input-container">
         <input type="text" id="messageInput" placeholder="Type a message">
         <button onclick="sendMessage()">Send</button>
-        <button onclick="openSelectorChoice()">DocSpace</button>
+        <button onclick="openSelectorChoice()">ONLYOFFICE Apps</button>
       </div>
     </div>
 
@@ -225,7 +225,7 @@ function openSelectorChoice() {
 }
 ```
 
-- Disables the **DocSpace** button and shows the room/file choice
+- Disables the **ONLYOFFICE Apps** button and shows the room/file choice
 - Both modals are hidden by the `.selector-modal` style until the script shows them
 
 ### 3. Show and destroy SDK selector
@@ -292,4 +292,4 @@ function returnToChat() {
 
 - Closes selector modal and cleans up frame
 - `destroyFrame()` leaves a placeholder with the same `frameId`, so the selector can be opened again. The instance is cleared afterwards, so closing the choice modal never calls a method on a destroyed instance.
-- Re-enables the **DocSpace** button
+- Re-enables the **ONLYOFFICE Apps** button

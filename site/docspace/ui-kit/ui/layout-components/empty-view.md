@@ -150,14 +150,14 @@ export function NoRooms({ onCreate }: { onCreate: () => void }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `description` | `ReactNode` | Description content, can be text or React node |
-| `icon` | `ReactElement<unknown, string \| JSXElementConstructor<any>>` | Icon component to display |
-| `options` | `Nullable<EmptyViewOptionsType>` | Array of options to display, can be null |
-| `title` | `string` | Title text to display |
-| `bodyClassName`? | `string` | Optional CSS class name for body styling |
-| `className`? | `string` | Optional CSS class name for wrapper styling |
-| `extraContent`? | `ReactNode` | Optional content rendered between header and options body |
-| `LinkRouter`? | `ComponentType<LinkRouterProps>` | Router Link component for navigation |
+| `description` | `ReactNode` | **Required.** Description content, can be text or React node |
+| `icon` | `ReactElement<unknown, string \| JSXElementConstructor<any>>` | **Required.** Icon component to display |
+| `options` | `Nullable<EmptyViewOptionsType>` | **Required.** Array of options to display, can be null |
+| `title` | `string` | **Required.** Title text to display |
+| `bodyClassName` | `string` | Optional CSS class name for body styling |
+| `className` | `string` | Optional CSS class name for wrapper styling |
+| `extraContent` | `ReactNode` | Optional content rendered between header and options body |
+| `LinkRouter` | `ComponentType<LinkRouterProps>` | Router Link component for navigation |
 
 </APITable>
 

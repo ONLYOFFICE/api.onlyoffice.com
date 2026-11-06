@@ -1,12 +1,12 @@
 # getMyFolder
 
-> FolderContentWrapper getMyFolder(userIdOrGroupId, filterType, applyFilterOption, count, startIndex, sortBy, sortOrder, filterValue)
+> FolderContentWrapper getMyFolder(userIdOrGroupId, filterType, applyFilterOption, count, startIndex, sortBy, sortOrder, filterValue, metadataTemplateId, metadataFilters, includeHiddenMetadata)
 
 `GET /api/2.0/files/@my`
 
 Get the My documents section
 
-Returns the contents of the caller's My documents section, the personal storage that belongs to this account alone and stays invisible to other members until something in it is shared explicitly. Any authenticated member that has a personal section can read it; guest accounts are not given one, and the call then answers 404. Nothing in the section is modified, though passing `sortBy` saves the requested order as the default order for this account. Without a filter only the top level of the section is listed; as soon as `filterType`, `userIdOrGroupId` or `filterValue` narrows the request, the search descends through the whole subtree. `filterValue` is matched against titles and against indexed document content, and the index is written asynchronously, so a file uploaded a moment ago can be missing from a search for a short while. `folders` and `files` hold one page of the result, `total` counts everything that matches before `count` and `startIndex` are applied, and `current` describes the section folder. To open a folder inside the section, call `GET api/2.0/files/{folderId}` with its identifier.
+Returns the contents of the caller's My documents section, the personal storage that belongs to this account alone and stays invisible to other members until something in it is shared explicitly. Any authenticated member that has a personal section can read it; guest accounts are not given one, and the call then answers 404. Nothing in the section is modified, though passing `sortBy` saves the requested order as the default order for this account. Without a filter only the top level of the section is listed; as soon as `filterType`, `userIdOrGroupId`, `filterValue` or a metadata filter narrows the request, the search descends through the whole subtree. `filterValue` is matched against titles and against indexed document content, and the index is written asynchronously, so a file uploaded a moment ago can be missing from a search for a short while. `metadataTemplateId` and `metadataFilters` keep only the entries carrying the template and matching the conditions, the same way `GET api/2.0/files/{folderId}` does; an unknown template or field, or a malformed condition, is refused with 400. `folders` and `files` hold one page of the result, `total` counts everything that matches before `count` and `startIndex` are applied, and `current` describes the section folder. To open a folder inside the section, call `GET api/2.0/files/{folderId}` with its identifier.
 
 ## Parameters
 
@@ -20,13 +20,16 @@ Returns the contents of the caller's My documents section, the personal storage 
 | **sortBy** | query | **String** | The name of the field the entries are ordered by, matched case-insensitively against the file sort fields: `DateAndTime`, `AZ`, `Size`, `Author`, `Type`, `New`, `DateAndTimeCreation`, `RoomType`, `Tags`, `Room`, `CustomOrder`, `LastOpened` and `UsedSpace`. A recognized value is also saved as the default order of the account and reused by later listings that omit the parameter, while a value matching none of the fields leaves that saved order in place. | [optional] [example: `DateAndTime`] |
 | **sortOrder** | query | **SortOrder** | The direction in which the `sortBy` field is ordered. It is saved together with `sortBy` as the default order of the account. | [optional] [example: `1`] [enum: `0`, `1`] |
 | **filterValue** | query | **String** | The search string the section is filtered by, matched as a substring of entry titles. Omit it to list the section unfiltered. | [optional] [example: `My Document`] |
+| **metadataTemplateId** | query | **Integer** (int32) | The ID of the metadata template the entries must be assigned to. On its own it narrows the listing to the entries carrying the template; together with the metadata filters it also pins the template the filtered fields belong to. The third-party entries never carry metadata and are left out when the filter is set. | [optional] [example: `1`] |
+| **metadataFilters** | query | **String** | The URL-encoded JSON array of the metadata filter conditions, e.g. [\{fieldId:1,op:contains,value:ACME\},\{fieldId:2,op:range,from:2026-01-01,to:2026-06-30\},\{fieldId:3,op:in,optionIds:[...]\}]. A string field takes eq or contains; a number or a date field takes range with inclusive bounds, or gt, gte, lt, lte with the bound in value; a date-only bound covers the whole day. A custom field is addressed by its name instead of the fieldId: \{name:Client,op:eq,value:ACME\}. | [optional] [example: `[{"fieldId":1,"op":"eq","value":"ACME"}]`] |
+| **includeHiddenMetadata** | query | **Boolean** | Whether the text search, and the metadataMatches it reports, also look at the values of the hidden metadata templates (created with visible false for the metadata a service keeps for itself, which the web client never shows). False, the default, leaves them out, so an entry is not found by such a value; true takes them in. metadataTemplateId and metadataFilters are not concerned: a hidden template or field named there is searched either way. | [optional] [example: `false`] |
 
 ## Responses
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The My documents section with one page of its contents | [**FolderContentWrapper**](../../models/folder-content-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | A parameter has the wrong type, the `count` is outside its allowed range, or the `startIndex` is negative | - | - |
+| **400** | A parameter has the wrong type, the `count` is outside its allowed range, the `startIndex` is negative, or the metadata filter names an unknown template or field | - | - |
 | **403** | The caller is not allowed to read the My documents section | - | - |
 | **404** | This account has no personal section | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

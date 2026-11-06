@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # 快速入门
 
-宏非常简单 - 纯 JavaScript，无需安装。
+宏非常简单——纯 JavaScript，无需安装。
 
 **时间**：2 分钟 | **技能等级**：初级
 
@@ -51,8 +51,8 @@ sidebar_position: 2
 ## 第 4 步：保存宏
 
 1. 点击宏编辑器中的**保存**。
-2. 为其命名，例如"插入蓝色文本"。
-3. 之后可随时从**查看 → 宏 → [您的宏名称]**运行它。
+2. 为其命名，例如“插入蓝色文本”。
+3. 之后可随时从**查看 → 宏 → [您的宏名称]** 运行它。
 
 ## 练习宏
 
@@ -149,6 +149,6 @@ sidebar_position: 2
 
 **需要帮助？**
 
-- [开发者论坛](https://community.onlyoffice.com/) - 社区支持
-- [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) - 报告错误
-- [常见问题](../more-information/faq.md) - 常见问题解答
+- [开发者论坛](https://community.onlyoffice.com/)：社区支持
+- [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins)：报告错误
+- [常见问题](../more-information/faq.md)：常见问题解答

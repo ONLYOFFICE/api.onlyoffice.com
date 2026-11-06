@@ -23,7 +23,7 @@ a folder trail, two context menu getters and a device type you tell it about.
 
 ## Use this when / not when
 
-- **This is portal-internal.** It is shipped so the DocSpace client can use it; outside that layout
+- **This is portal-internal.** It is shipped so the ONLYOFFICE Apps client can use it; outside that layout
   most of its props have no natural source, and the parts it renders assume the portal's header.
 - Use it when you are rebuilding a file browser with the same trail-and-actions header and can
   supply a `Section` around it.
@@ -165,68 +165,68 @@ export function FolderHeader() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `burgerLogo` | `string` | URL of the logo shown in the collapsed header. It is an `<img src>`, not an icon name. |
-| `canCreate` | `boolean` | Whether the person may create anything here. It is one of two conditions for the plus button; `isPlusButtonVisible` is the other, and both must hold. |
-| `clearTrash` | `() => void` | Not read. Nothing destructures it. |
-| `currentDeviceType` | `DeviceType` | Which layout to render: it decides the breakpoint-dependent behaviour rather than a media query, so a wrong value shows the wrong buttons at the right width. |
-| `getContextOptionsFolder` | `TGetContextMenuModel` | Returns the model of the folder's context menu. **It is called on every render**, whether or not the button is shown, so it has to be cheap and free of side effects. |
-| `getContextOptionsPlus` | `TGetContextMenuModel` | Returns the model of the plus button's menu. It is called on every render of that button. |
-| `isCurrentFolderInfo` | `boolean` | Not read. Nothing destructures it. |
-| `isDesktop` | `boolean` | Whether the viewport is a desktop one. It is derived from `currentDeviceType` and passed down; your own value is overwritten. |
-| `isInfoPanelVisible` | `boolean` | Whether the info panel is open; it is the toggle's pressed state and reaches the container as `data-is-info-panel-visible`. |
-| `isRoom` | `boolean` | Not read. Nothing destructures it. |
-| `isRootFolder` | `boolean` | Whether the current folder is the root of its tree. It hides the back arrow, keeps the drop box shut and drops the title icon. |
-| `navigationItems` | `TNavigationItem[]` | The breadcrumb trail, outermost folder first. The last entry is the current folder; an empty list makes the title unclickable. |
-| `onBackToParentFolder` | `TOnBackToParenFolder` | Called when the back arrow is clicked. In the open drop box it also closes the box. |
-| `onClickFolder` | `TOnNavigationItemClick` | Called with a crumb's id when one is chosen from the drop box, and when the room title above the heading is clicked. |
-| `rootRoomTitle` | `string` | Title of the room shown above the folder name. Without it the second-to-last crumb's title is used. |
-| `showFolderInfo` | `() => void` | Not read. Nothing destructures it. |
-| `showNavigationButton` | `boolean` | Written to the container as `data-show-navigation-button`, which only affects the stylesheet. The button itself is governed by `navigationButtonLabel`. |
-| `showRootFolderTitle` | `boolean` | Shows the room's title above the folder's own, as a second clickable line. It is ignored in the root folder, on a phone, and when there is neither a `rootRoomTitle` nor more than one crumb. |
-| `showText` | `boolean` | Not read. Nothing destructures it. |
-| `title` | `string` | Title of the context menu's mobile header, and the native tooltip of the plus button. The component passes the folder's `title` here. |
-| `titleIcon` | `string` | URL of the small icon before the title. It is hidden in the root folder. |
-| `toggleInfoPanel` | `(e?: React.MouseEvent) => void` | Called when the info panel toggle is clicked. |
-| `withLogo` | `boolean \| string` | Shows the logo block at the start of the header. A string is used as the logo's `src`; `true` shows only the burger logo. |
-| `addButtonRef`? | `RefObject<HTMLDivElement \| null>` | Ref attached to the plus button's wrapper, for a guidance overlay to anchor to. |
-| `analyzeResponsesButton`? | `ReactNode` | Rendered as-is at the end of the button row, after the tariff notice. |
-| `badgeLabel`? | `string` | Text of the small badge next to the title. It sits next to the room title when one is shown, and next to the folder name otherwise. |
-| `buttonRef`? | `RefObject<HTMLButtonElement>` | Ref attached to the extra navigation button. |
-| `contextButtonAnimation`? | `(setAnimationClasses: (classes: string[]) => void) => () => void` | Runs the one-off guidance animation on the context button and returns its cleanup. It is called once, while `guidAnimationVisible` is set and the menu is closed. |
-| `contextMenuHeader`? | `HeaderType` | Header of the folder's context menu, used where the menu opens as a mobile sheet. |
-| `forwardedRef`? | `RefObject<HTMLDivElement \| null>` | Ref of the plus button's wrapper, used both to anchor its menu and as the guidance anchor. |
-| `guidAnimationVisible`? | `boolean` | Whether the guidance animation should play. Opening the menu ends it. |
-| `hideChatButton`? | `boolean` | Hides the AI chat button even when `toggleChatPanel` is passed |
-| `hideInfoPanel`? | `() => void` | **A flag, despite its type.** Its truthiness hides the info panel toggle, and a function is always truthy — passing the callback the type asks for hides the button. It is never called. |
-| `id`? | `string` | `id` of the plus button's icon element. |
-| `ignoreChangeView`? | `boolean` | Not read at this level. The component computes its own value from the viewport and the menu header. |
-| `isChatPanelVisible`? | `boolean` | Drives the pressed state of the AI chat button |
-| `isContextButtonVisible`? | `boolean` | **Required for the context button to appear at all.** It is not defaulted: leave it out and the folder's context menu is never rendered, whatever `getContextOptionsFolder` returns. |
-| `isEmptyFilesList`? | `boolean` | Not read. Nothing in this component or its children destructures it. |
-| `isEmptyPage`? | `boolean` | Not read. Nothing in this component or its children destructures it. |
-| `isFrame`? | `boolean` | Whether the kit is rendered inside the portal's iframe. It hides the plus, context and tariff elements and widens the menu's offset. |
-| `isMobileOnly`? | `boolean` | Whether the viewport is a phone. It is derived from `currentDeviceType`; your own value is overwritten. |
-| `isPlusButtonVisible`? | `boolean` | **Required for the plus button to appear at all.** It is not defaulted: leave it out and no plus button is rendered, even with `canCreate`. |
-| `isPublicRoom`? | `boolean` | Hides the folder's context button and shows a second one that is rendered only when at least one option is enabled. |
-| `isTrashFolder`? | `boolean` | Passed to the context menu, which uses it to decide whether the trash warning belongs in the header. |
-| `navigationButtonLabel`? | `string` | Label of the extra button at the end of the row. Without it the button is not rendered, and it is also hidden inside a frame and in the root folder. |
-| `onCloseDropBox`? | `(() => void) & (() => void)` | Called when the context menu closes. Supplied internally to close the breadcrumb drop box with it. |
-| `onContextOptionsClick`? | `() => void` | Called when the context button is clicked, before the menu opens. |
-| `onLogoClick`? | `() => void` | Called when the logo is clicked. Only reachable while `withLogo` is set. |
-| `onNavigationButtonClick`? | `() => void` | Called when that extra button is clicked. |
-| `onPlusClick`? | `VoidFunction` | Called on click instead of opening the menu, and only while `withMenu` is `false`. |
-| `ref`? | `RefObject<HTMLDivElement \| null>` | Ref of the drop box element. Supplied internally, so a ref you pass never reaches the DOM. |
-| `setGuidAnimationVisible`? | `(visible: boolean) => void` | Called with `false` when the guidance animation is reset or the button unmounts. |
-| `showBackButton`? | `boolean` | Shows the back arrow even in the root folder, where it is otherwise hidden. |
-| `showTitle`? | `boolean` | Adds a 16px inline-start margin to the button row, to clear the title next to it. |
-| `showTitleInDropBox`? | `boolean` | Controls rendering of title/header inside DropBox; defaults to true |
-| `tariffBar`? | `ReactElement<unknown, string \| JSXElementConstructor<any>>` | Portal element for the tariff notice. It is cloned with the folder's `title` added as a prop, so the element has to tolerate one. Hidden inside a frame. |
-| `titleIconTooltip`? | `string` | Text of the tooltip on the title icon. Without it no tooltip element is rendered. |
-| `titles`? | `TTitles` | Native tooltips of the buttons — info panel, AI chat, plus menu, context menu — and the text and icon of the warning chip. Nothing here is translated for you. |
-| `titleTooltip`? | `string` | Replaces the heading's `title` attribute — the native tooltip on the folder name. It is dropped when the room title is shown above. |
-| `toggleChatPanel`? | `(e?: React.MouseEvent) => void` | Opens/closes the AI chat panel. The button is not rendered without it, which keeps every host that has no AI chat surface unchanged. |
-| `toggleDropBox`? | `() => void` | Closes the breadcrumb drop box after the info panel is toggled from inside it. Supplied internally; a value you pass is overwritten. |
-| `withMenu`? | `boolean` | Whether the button opens the menu itself. With `false` it only calls the click handler and the menu is yours to open. |
+| `burgerLogo` | `string` | **Required.** URL of the logo shown in the collapsed header. It is an `<img src>`, not an icon name. |
+| `canCreate` | `boolean` | **Required.** Whether the person may create anything here. It is one of two conditions for the plus button; `isPlusButtonVisible` is the other, and both must hold. |
+| `clearTrash` | `() => void` | **Required.** Not read. Nothing destructures it. |
+| `currentDeviceType` | `DeviceType` | **Required.** Which layout to render: it decides the breakpoint-dependent behaviour rather than a media query, so a wrong value shows the wrong buttons at the right width. |
+| `getContextOptionsFolder` | `TGetContextMenuModel` | **Required.** Returns the model of the folder's context menu. **It is called on every render**, whether or not the button is shown, so it has to be cheap and free of side effects. |
+| `getContextOptionsPlus` | `TGetContextMenuModel` | **Required.** Returns the model of the plus button's menu. It is called on every render of that button. |
+| `isCurrentFolderInfo` | `boolean` | **Required.** Not read. Nothing destructures it. |
+| `isDesktop` | `boolean` | **Required.** Whether the viewport is a desktop one. It is derived from `currentDeviceType` and passed down; your own value is overwritten. |
+| `isInfoPanelVisible` | `boolean` | **Required.** Whether the info panel is open; it is the toggle's pressed state and reaches the container as `data-is-info-panel-visible`. |
+| `isRoom` | `boolean` | **Required.** Not read. Nothing destructures it. |
+| `isRootFolder` | `boolean` | **Required.** Whether the current folder is the root of its tree. It hides the back arrow, keeps the drop box shut and drops the title icon. |
+| `navigationItems` | `TNavigationItem[]` | **Required.** The breadcrumb trail, outermost folder first. The last entry is the current folder; an empty list makes the title unclickable. |
+| `onBackToParentFolder` | `TOnBackToParenFolder` | **Required.** Called when the back arrow is clicked. In the open drop box it also closes the box. |
+| `onClickFolder` | `TOnNavigationItemClick` | **Required.** Called with a crumb's id when one is chosen from the drop box, and when the room title above the heading is clicked. |
+| `rootRoomTitle` | `string` | **Required.** Title of the room shown above the folder name. Without it the second-to-last crumb's title is used. |
+| `showFolderInfo` | `() => void` | **Required.** Not read. Nothing destructures it. |
+| `showNavigationButton` | `boolean` | **Required.** Written to the container as `data-show-navigation-button`, which only affects the stylesheet. The button itself is governed by `navigationButtonLabel`. |
+| `showRootFolderTitle` | `boolean` | **Required.** Shows the room's title above the folder's own, as a second clickable line. It is ignored in the root folder, on a phone, and when there is neither a `rootRoomTitle` nor more than one crumb. |
+| `showText` | `boolean` | **Required.** Not read. Nothing destructures it. |
+| `title` | `string` | **Required.** Title of the context menu's mobile header, and the native tooltip of the plus button. The component passes the folder's `title` here. |
+| `titleIcon` | `string` | **Required.** URL of the small icon before the title. It is hidden in the root folder. |
+| `toggleInfoPanel` | `(e?: React.MouseEvent) => void` | **Required.** Called when the info panel toggle is clicked. |
+| `withLogo` | `boolean \| string` | **Required.** Shows the logo block at the start of the header. A string is used as the logo's `src`; `true` shows only the burger logo. |
+| `addButtonRef` | `RefObject<HTMLDivElement \| null>` | Ref attached to the plus button's wrapper, for a guidance overlay to anchor to. |
+| `analyzeResponsesButton` | `ReactNode` | Rendered as-is at the end of the button row, after the tariff notice. |
+| `badgeLabel` | `string` | Text of the small badge next to the title. It sits next to the room title when one is shown, and next to the folder name otherwise. |
+| `buttonRef` | `RefObject<HTMLButtonElement>` | Ref attached to the extra navigation button. |
+| `contextButtonAnimation` | `(setAnimationClasses: (classes: string[]) => void) => () => void` | Runs the one-off guidance animation on the context button and returns its cleanup. It is called once, while `guidAnimationVisible` is set and the menu is closed. |
+| `contextMenuHeader` | `HeaderType` | Header of the folder's context menu, used where the menu opens as a mobile sheet. |
+| `forwardedRef` | `RefObject<HTMLDivElement \| null>` | Ref of the plus button's wrapper, used both to anchor its menu and as the guidance anchor. |
+| `guidAnimationVisible` | `boolean` | Whether the guidance animation should play. Opening the menu ends it. |
+| `hideChatButton` | `boolean` | Hides the AI chat button even when `toggleChatPanel` is passed |
+| `hideInfoPanel` | `() => void` | **A flag, despite its type.** Its truthiness hides the info panel toggle, and a function is always truthy — passing the callback the type asks for hides the button. It is never called. |
+| `id` | `string` | `id` of the plus button's icon element. |
+| `ignoreChangeView` | `boolean` | Not read at this level. The component computes its own value from the viewport and the menu header. |
+| `isChatPanelVisible` | `boolean` | Drives the pressed state of the AI chat button |
+| `isContextButtonVisible` | `boolean` | **Required for the context button to appear at all.** It is not defaulted: leave it out and the folder's context menu is never rendered, whatever `getContextOptionsFolder` returns. |
+| `isEmptyFilesList` | `boolean` | Not read. Nothing in this component or its children destructures it. |
+| `isEmptyPage` | `boolean` | Not read. Nothing in this component or its children destructures it. |
+| `isFrame` | `boolean` | Whether the kit is rendered inside the portal's iframe. It hides the plus, context and tariff elements and widens the menu's offset. |
+| `isMobileOnly` | `boolean` | Whether the viewport is a phone. It is derived from `currentDeviceType`; your own value is overwritten. |
+| `isPlusButtonVisible` | `boolean` | **Required for the plus button to appear at all.** It is not defaulted: leave it out and no plus button is rendered, even with `canCreate`. |
+| `isPublicRoom` | `boolean` | Hides the folder's context button and shows a second one that is rendered only when at least one option is enabled. |
+| `isTrashFolder` | `boolean` | Passed to the context menu, which uses it to decide whether the trash warning belongs in the header. |
+| `navigationButtonLabel` | `string` | Label of the extra button at the end of the row. Without it the button is not rendered, and it is also hidden inside a frame and in the root folder. |
+| `onCloseDropBox` | `(() => void) & (() => void)` | Called when the context menu closes. Supplied internally to close the breadcrumb drop box with it. |
+| `onContextOptionsClick` | `() => void` | Called when the context button is clicked, before the menu opens. |
+| `onLogoClick` | `() => void` | Called when the logo is clicked. Only reachable while `withLogo` is set. |
+| `onNavigationButtonClick` | `() => void` | Called when that extra button is clicked. |
+| `onPlusClick` | `VoidFunction` | Called on click instead of opening the menu, and only while `withMenu` is `false`. |
+| `ref` | `RefObject<HTMLDivElement \| null>` | Ref of the drop box element. Supplied internally, so a ref you pass never reaches the DOM. |
+| `setGuidAnimationVisible` | `(visible: boolean) => void` | Called with `false` when the guidance animation is reset or the button unmounts. |
+| `showBackButton` | `boolean` | Shows the back arrow even in the root folder, where it is otherwise hidden. |
+| `showTitle` | `boolean` | Adds a 16px inline-start margin to the button row, to clear the title next to it. |
+| `showTitleInDropBox` | `boolean` | Controls rendering of title/header inside DropBox; defaults to true |
+| `tariffBar` | `ReactElement<unknown, string \| JSXElementConstructor<any>>` | Portal element for the tariff notice. It is cloned with the folder's `title` added as a prop, so the element has to tolerate one. Hidden inside a frame. |
+| `titleIconTooltip` | `string` | Text of the tooltip on the title icon. Without it no tooltip element is rendered. |
+| `titles` | `TTitles` | Native tooltips of the buttons — info panel, AI chat, plus menu, context menu — and the text and icon of the warning chip. Nothing here is translated for you. |
+| `titleTooltip` | `string` | Replaces the heading's `title` attribute — the native tooltip on the folder name. It is dropped when the room title is shown above. |
+| `toggleChatPanel` | `(e?: React.MouseEvent) => void` | Opens/closes the AI chat panel. The button is not rendered without it, which keeps every host that has no AI chat surface unchanged. |
+| `toggleDropBox` | `() => void` | Closes the breadcrumb drop box after the info panel is toggled from inside it. Supplied internally; a value you pass is overwritten. |
+| `withMenu` | `boolean` | Whether the button opens the menu itself. With `false` it only calls the click handler and the menu is yours to open. |
 
 </APITable>
 

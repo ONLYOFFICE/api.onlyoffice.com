@@ -215,90 +215,90 @@ type-check. Setting one makes the props listed beside it required, which is how 
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `disableSubmitButton` | `boolean` | Whether the primary button is dead. With `withFooterInput` an empty input disables it too, whatever this says. |
-| `emptyScreenDescription` | `string` | Paragraph under that heading. |
-| `emptyScreenHeader` | `string` | Heading for the empty folder. |
-| `emptyScreenImage` | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>> \| string` | Picture for the empty folder. A string is used as an `<img>` source, an element is rendered as it is. |
-| `hasNextPage` | `boolean` | Whether another page can be fetched. |
-| `isLoading` | `boolean` | Initial load: the body is replaced with a skeleton loader |
-| `isMultiSelect` | `boolean` | Whether rows carry checkboxes and more than one can be ticked. |
-| `isNextPageLoading` | `boolean` | Whether a page request is in flight, which suppresses another one. |
-| `items` | `TSelectorItem[]` | The page of items loaded so far, in the order they are shown. |
-| `loadNextPage` | `(startIndex: number) => Promise<void>` | Called with the index to start from when the list nears its end, and once with 0 on mount unless `disableFirstFetch` is set. Append to `items`. |
-| `onSubmit` | `TOnSubmit` | Called with everything the footer holds. Return a promise and the button shows its spinner until it settles. Enter fires it as well. |
-| `rowLoader` | `React.ReactNode` | Skeleton for a row that has not arrived yet, and for the whole body during the initial load. `RowLoader` from this folder fits. |
-| `searchEmptyScreenDescription` | `string` | Paragraph under that heading. |
-| `searchEmptyScreenHeader` | `string` | Heading for a search that found nothing. |
-| `searchEmptyScreenImage` | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>> \| string` | The same picture, for a search that found nothing. |
-| `submitButtonLabel` | `string` | Text of the primary button. In multi-select the count is appended in brackets, so pass "Add", not "Add (3)". |
-| `totalItems` | `number` | How many items exist in total, which is what the scrollbar is sized from. |
-| `accessRights`? | `TAccessRight[]` | The choices in that drop-down. |
-| `accessRightsMode`? | `SelectorAccessRightsMode` | Whether each entry shows its `description`. |
-| `activeTabId`? | `string` | Id of the open tab. Selector keeps one selection per tab id and adds them all up, so switching tabs does not drop what was ticked on the other. |
-| `alwaysShowFooter`? | `boolean` | Whether the footer stays put instead of appearing with the first tick. |
-| `bodyIsLoading`? | `boolean` | Ignored. Selector overwrites it with its own `isLoading` before the trail ever sees it; the type demands the field all the same. |
-| `breadCrumbs`? | `TBreadCrumb[]` | The trail, outermost first. The last entry is the current folder. |
-| `breadCrumbsLoader`? | `React.ReactNode` | Shown in place of the trail while it loads; `BreadCrumbsLoader` fits. |
-| `cancelButtonId`? | `string` | `id` attribute of that button. |
-| `cancelButtonLabel`? | `string` | Text of that button. |
-| `className`? | `string` | Applied to the outermost element. |
-| `currentFooterInputValue`? | `string` | Initial text of the field. Selector owns the value from then on and hands the edited one to `onSubmit`; changing this prop later does nothing. |
-| `dataTestId`? | `string` | `data-testid` of the outermost element. Default: `"selector"`. |
-| `descriptionText`? | `string` | A line of bold text above the list. It costs the list 32px of height. |
-| `disableFirstFetch`? | `boolean` | Whether to skip the `loadNextPage(0)` call Selector makes on mount. |
-| `displayFileExtension`? | `boolean` | Whether a file's extension is drawn after its name, in a dimmer colour. |
-| `folderFormValidation`? | `RegExp` | Matched against the footer input on every keystroke. A match marks the field as in error and shows the kit's "contains special characters" line — so it describes what is _forbidden_, not what is allowed. |
-| `footerCheckboxLabel`? | `string` | Label beside that checkbox. |
-| `footerInputHeader`? | `string` | Label above that field. |
-| `forceIsMultiSelect`? | `boolean` | Whether an item's own `disableMultiSelect` is overruled. |
-| `headerProps`? | `HeaderProps` | The header's own props. Required once `withHeader` is set. |
-| `hideBackButton`? | `boolean` | Whether the empty screen's "back" link is hidden. |
-| `id`? | `string` | Applied to the outermost element. |
-| `infoBarData`? | `TInfoBarData` | What that bar says. Nothing is drawn without it. |
-| `infoText`? | `string` | Text of that note. |
-| `injectedElement`? | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>>` | Rendered between the breadcrumbs and the search box. Selector clones it to attach a ref and subtracts its measured height from the list. |
-| `isBreadCrumbsLoading`? | `boolean` | Whether to replace the trail with `breadCrumbsLoader`. Default: `false`. |
-| `isChecked`? | `boolean` | Initial state of the checkbox. Selector owns it from then on and hands the current value to `onSubmit`; changing this prop later does nothing. |
-| `isContentLoading`? | `boolean` | Content refresh: the current body stays on screen dimmed; wins over isLoading |
-| `isSearchLoading`? | `boolean` | Whether to replace the box with `searchLoader`. |
-| `isSSR`? | `boolean` | Whether to render every item as plain markup instead of virtualising. The list needs a measured height, which server rendering cannot give it. |
-| `maxSelectedItems`? | `number` | Largest number of items that may be ticked at once. Beyond it the unticked rows go grey and stop responding, with no message of their own. |
-| `onAccessRightsChange`? | `(access: TAccessRight) => void` | Called when the choice changes. |
-| `onCancel`? | `() => void` | Called by that button — and by Escape, which Selector listens for on the window whether or not the button is there. |
-| `onClearSearch`? | `(callback?: VoidFunction) => void` | Called by the box's cross and by the empty screen's "clear filter" link. Call the callback to take the selector out of its searching state. |
-| `onClose`? | `VoidFunction` | Called by the backdrop and by the aside. Required once `useAside` is set. |
-| `onSearch`? | `(value: string, callback?: VoidFunction) => void` | Called with the trimmed query once typing stops. Call the callback to put the selector into its searching state, which is what swaps the empty screen for the search one. An empty query calls `onClearSearch` instead. |
-| `onSelect`? | `(item: TSelectorItem, isDoubleClick: boolean, doubleClickCallback: () => Promise<void>) => void` | Called when a row is clicked, before Selector updates its own selection. The third argument submits with that one item, which is how a double click confirms a choice. |
-| `onSelectAll`? | `() => void` | Called when the row is clicked. Selector ticks and unticks the loaded items itself; this is a notification, not the implementation. |
-| `onSelectBreadCrumb`? | `(item: TBreadCrumb) => void` | Called with the crumb that was clicked. Navigating is your job: fetch that folder and hand back new `items` and `breadCrumbs`. |
-| `renderCustomItem`? | `TRenderCustomItem` | Replaces the text of a row, keeping its avatar, checkbox and layout. |
-| `searchLoader`? | `React.ReactNode` | Shown in place of the box while `isSearchLoading` is set. |
-| `searchPlaceholder`? | `string` | Placeholder of the box. |
-| `searchValue`? | `string` | Text in the box. Searching is yours to do; this is what is displayed. |
-| `selectAllIcon`? | `string` | URL of the icon beside it. |
-| `selectAllLabel`? | `string` | Text of that row. |
-| `selectedAccessRight`? | `null \| TAccessRight` | The chosen access. Selector copies it into its own state on mount and whenever this changes, and hands that copy to `onSubmit`. |
-| `selectedItem`? | `null \| TSelectorItem` | The one ticked item outside multi-select, matched by `id`. |
-| `selectedItems`? | `TSelectorItem[]` | Items to start out ticked, matched by `id`. Selector copies them into its own state; it is a starting point, not a controlled value. |
-| `style`? | `React.CSSProperties` | Applied to the outermost element. |
-| `submitButtonId`? | `string` | `id` attribute of the primary button. |
-| `tabsData`? | `TTabItem[]` | The tabs, in order. |
-| `useAside`? | `boolean` | Whether Selector wraps itself in a backdrop and an `Aside`. It is the only way the component becomes a panel; on its own it is a plain box that fills its parent. |
-| `withAccessRights`? | `true` | Whether the footer carries an access drop-down. It only accepts `true`. |
-| `withBlur`? | `boolean` | Ignored. Nothing reads this prop. |
-| `withBreadCrumbs`? | `true` | Whether the folder trail is shown above the list. It only accepts `true`. |
-| `withCancelButton`? | `true` | Whether a second, non-primary button sits in the footer. It only accepts `true`. |
-| `withFooterCheckbox`? | `true` | Whether the footer carries a checkbox. It only accepts `true`, and it makes the footer 110px, or 181px alongside `withFooterInput`. |
-| `withFooterInput`? | `true` | Whether the footer carries a text field — the "save as" name. It only accepts `true`, and it makes the footer 145px instead of 73px. |
-| `withHeader`? | `true` | Whether the panel has a header bar. It only accepts `true` — leave it out for a selector with no header of its own. |
-| `withInfo`? | `true` | Whether a tinted note sits between the search box and the list. It only accepts `true`, and the note is hidden during the initial load. |
-| `withInfoBadge`? | `boolean` | Whether an icon is drawn beside the text. |
-| `withInfoBar`? | `boolean` | Whether a dismissable bar is shown above the list. |
-| `withoutBackground`? | `boolean` | Whether the backdrop behind the aside is transparent. |
-| `withPadding`? | `boolean` | Whether the body keeps its 16px of padding at the top. Default: `true`. |
-| `withSearch`? | `true` | Whether the list can be searched. It only accepts `true`. The box hides itself while the list is empty and no search is running, so an empty folder shows the empty screen rather than a search over nothing. |
-| `withSelectAll`? | `true` | Whether the "select all" row sits above the list. It only accepts `true`, and the row appears only with `isMultiSelect` and only while no search is running. |
-| `withTabs`? | `true` | Whether a tab strip is shown above the list. It only accepts `true`. |
+| `disableSubmitButton` | `boolean` | **Required.** Whether the primary button is dead. With `withFooterInput` an empty input disables it too, whatever this says. |
+| `emptyScreenDescription` | `string` | **Required.** Paragraph under that heading. |
+| `emptyScreenHeader` | `string` | **Required.** Heading for the empty folder. |
+| `emptyScreenImage` | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>> \| string` | **Required.** Picture for the empty folder. A string is used as an `<img>` source, an element is rendered as it is. |
+| `hasNextPage` | `boolean` | **Required.** Whether another page can be fetched. |
+| `isLoading` | `boolean` | **Required.** Initial load: the body is replaced with a skeleton loader |
+| `isMultiSelect` | `boolean` | **Required.** Whether rows carry checkboxes and more than one can be ticked. |
+| `isNextPageLoading` | `boolean` | **Required.** Whether a page request is in flight, which suppresses another one. |
+| `items` | `TSelectorItem[]` | **Required.** The page of items loaded so far, in the order they are shown. |
+| `loadNextPage` | `(startIndex: number) => Promise<void>` | **Required.** Called with the index to start from when the list nears its end, and once with 0 on mount unless `disableFirstFetch` is set. Append to `items`. |
+| `onSubmit` | `TOnSubmit` | **Required.** Called with everything the footer holds. Return a promise and the button shows its spinner until it settles. Enter fires it as well. |
+| `rowLoader` | `React.ReactNode` | **Required.** Skeleton for a row that has not arrived yet, and for the whole body during the initial load. `RowLoader` from this folder fits. |
+| `searchEmptyScreenDescription` | `string` | **Required.** Paragraph under that heading. |
+| `searchEmptyScreenHeader` | `string` | **Required.** Heading for a search that found nothing. |
+| `searchEmptyScreenImage` | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>> \| string` | **Required.** The same picture, for a search that found nothing. |
+| `submitButtonLabel` | `string` | **Required.** Text of the primary button. In multi-select the count is appended in brackets, so pass "Add", not "Add (3)". |
+| `totalItems` | `number` | **Required.** How many items exist in total, which is what the scrollbar is sized from. |
+| `accessRights` | `TAccessRight[]` | The choices in that drop-down. |
+| `accessRightsMode` | `SelectorAccessRightsMode` | Whether each entry shows its `description`. |
+| `activeTabId` | `string` | Id of the open tab. Selector keeps one selection per tab id and adds them all up, so switching tabs does not drop what was ticked on the other. |
+| `alwaysShowFooter` | `boolean` | Whether the footer stays put instead of appearing with the first tick. |
+| `bodyIsLoading` | `boolean` | Ignored. Selector overwrites it with its own `isLoading` before the trail ever sees it; the type demands the field all the same. |
+| `breadCrumbs` | `TBreadCrumb[]` | The trail, outermost first. The last entry is the current folder. |
+| `breadCrumbsLoader` | `React.ReactNode` | Shown in place of the trail while it loads; `BreadCrumbsLoader` fits. |
+| `cancelButtonId` | `string` | `id` attribute of that button. |
+| `cancelButtonLabel` | `string` | Text of that button. |
+| `className` | `string` | Applied to the outermost element. |
+| `currentFooterInputValue` | `string` | Initial text of the field. Selector owns the value from then on and hands the edited one to `onSubmit`; changing this prop later does nothing. |
+| `dataTestId` | `string` | `data-testid` of the outermost element. Default: `"selector"`. |
+| `descriptionText` | `string` | A line of bold text above the list. It costs the list 32px of height. |
+| `disableFirstFetch` | `boolean` | Whether to skip the `loadNextPage(0)` call Selector makes on mount. |
+| `displayFileExtension` | `boolean` | Whether a file's extension is drawn after its name, in a dimmer colour. |
+| `folderFormValidation` | `RegExp` | Matched against the footer input on every keystroke. A match marks the field as in error and shows the kit's "contains special characters" line — so it describes what is _forbidden_, not what is allowed. |
+| `footerCheckboxLabel` | `string` | Label beside that checkbox. |
+| `footerInputHeader` | `string` | Label above that field. |
+| `forceIsMultiSelect` | `boolean` | Whether an item's own `disableMultiSelect` is overruled. |
+| `headerProps` | `HeaderProps` | The header's own props. Required once `withHeader` is set. |
+| `hideBackButton` | `boolean` | Whether the empty screen's "back" link is hidden. |
+| `id` | `string` | Applied to the outermost element. |
+| `infoBarData` | `TInfoBarData` | What that bar says. Nothing is drawn without it. |
+| `infoText` | `string` | Text of that note. |
+| `injectedElement` | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>>` | Rendered between the breadcrumbs and the search box. Selector clones it to attach a ref and subtracts its measured height from the list. |
+| `isBreadCrumbsLoading` | `boolean` | Whether to replace the trail with `breadCrumbsLoader`. Default: `false`. |
+| `isChecked` | `boolean` | Initial state of the checkbox. Selector owns it from then on and hands the current value to `onSubmit`; changing this prop later does nothing. |
+| `isContentLoading` | `boolean` | Content refresh: the current body stays on screen dimmed; wins over isLoading |
+| `isSearchLoading` | `boolean` | Whether to replace the box with `searchLoader`. |
+| `isSSR` | `boolean` | Whether to render every item as plain markup instead of virtualising. The list needs a measured height, which server rendering cannot give it. |
+| `maxSelectedItems` | `number` | Largest number of items that may be ticked at once. Beyond it the unticked rows go grey and stop responding, with no message of their own. |
+| `onAccessRightsChange` | `(access: TAccessRight) => void` | Called when the choice changes. |
+| `onCancel` | `() => void` | Called by that button — and by Escape, which Selector listens for on the window whether or not the button is there. |
+| `onClearSearch` | `(callback?: VoidFunction) => void` | Called by the box's cross and by the empty screen's "clear filter" link. Call the callback to take the selector out of its searching state. |
+| `onClose` | `VoidFunction` | Called by the backdrop and by the aside. Required once `useAside` is set. |
+| `onSearch` | `(value: string, callback?: VoidFunction) => void` | Called with the trimmed query once typing stops. Call the callback to put the selector into its searching state, which is what swaps the empty screen for the search one. An empty query calls `onClearSearch` instead. |
+| `onSelect` | `(item: TSelectorItem, isDoubleClick: boolean, doubleClickCallback: () => Promise<void>) => void` | Called when a row is clicked, before Selector updates its own selection. The third argument submits with that one item, which is how a double click confirms a choice. |
+| `onSelectAll` | `() => void` | Called when the row is clicked. Selector ticks and unticks the loaded items itself; this is a notification, not the implementation. |
+| `onSelectBreadCrumb` | `(item: TBreadCrumb) => void` | Called with the crumb that was clicked. Navigating is your job: fetch that folder and hand back new `items` and `breadCrumbs`. |
+| `renderCustomItem` | `TRenderCustomItem` | Replaces the text of a row, keeping its avatar, checkbox and layout. |
+| `searchLoader` | `React.ReactNode` | Shown in place of the box while `isSearchLoading` is set. |
+| `searchPlaceholder` | `string` | Placeholder of the box. |
+| `searchValue` | `string` | Text in the box. Searching is yours to do; this is what is displayed. |
+| `selectAllIcon` | `string` | URL of the icon beside it. |
+| `selectAllLabel` | `string` | Text of that row. |
+| `selectedAccessRight` | `null \| TAccessRight` | The chosen access. Selector copies it into its own state on mount and whenever this changes, and hands that copy to `onSubmit`. |
+| `selectedItem` | `null \| TSelectorItem` | The one ticked item outside multi-select, matched by `id`. |
+| `selectedItems` | `TSelectorItem[]` | Items to start out ticked, matched by `id`. Selector copies them into its own state; it is a starting point, not a controlled value. |
+| `style` | `React.CSSProperties` | Applied to the outermost element. |
+| `submitButtonId` | `string` | `id` attribute of the primary button. |
+| `tabsData` | `TTabItem[]` | The tabs, in order. |
+| `useAside` | `boolean` | Whether Selector wraps itself in a backdrop and an `Aside`. It is the only way the component becomes a panel; on its own it is a plain box that fills its parent. |
+| `withAccessRights` | `true` | Whether the footer carries an access drop-down. It only accepts `true`. |
+| `withBlur` | `boolean` | Ignored. Nothing reads this prop. |
+| `withBreadCrumbs` | `true` | Whether the folder trail is shown above the list. It only accepts `true`. |
+| `withCancelButton` | `true` | Whether a second, non-primary button sits in the footer. It only accepts `true`. |
+| `withFooterCheckbox` | `true` | Whether the footer carries a checkbox. It only accepts `true`, and it makes the footer 110px, or 181px alongside `withFooterInput`. |
+| `withFooterInput` | `true` | Whether the footer carries a text field — the "save as" name. It only accepts `true`, and it makes the footer 145px instead of 73px. |
+| `withHeader` | `true` | Whether the panel has a header bar. It only accepts `true` — leave it out for a selector with no header of its own. |
+| `withInfo` | `true` | Whether a tinted note sits between the search box and the list. It only accepts `true`, and the note is hidden during the initial load. |
+| `withInfoBadge` | `boolean` | Whether an icon is drawn beside the text. |
+| `withInfoBar` | `boolean` | Whether a dismissable bar is shown above the list. |
+| `withoutBackground` | `boolean` | Whether the backdrop behind the aside is transparent. |
+| `withPadding` | `boolean` | Whether the body keeps its 16px of padding at the top. Default: `true`. |
+| `withSearch` | `true` | Whether the list can be searched. It only accepts `true`. The box hides itself while the list is empty and no search is running, so an empty folder shows the empty screen rather than a search over nothing. |
+| `withSelectAll` | `true` | Whether the "select all" row sits above the list. It only accepts `true`, and the row appears only with `isMultiSelect` and only while no search is running. |
+| `withTabs` | `true` | Whether a tab strip is shown above the list. It only accepts `true`. |
 
 </APITable>
 
@@ -311,12 +311,12 @@ Required once `withHeader` is set.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `headerLabel` | `string` | Title of the panel. |
-| `onCloseClick` | `() => void` | Called by the closing cross. |
-| `isCloseable`? | `boolean` | Whether the closing cross is drawn. Default: `true`. |
-| `onBackClick`? | `() => void` | Called by the back arrow. |
-| `withoutBackButton`? | `false` | Whether to hide the back arrow. The arrow is drawn only when this is literally `false`; leaving the prop out hides it, as does `true`. |
-| `withoutBorder`? | `boolean` | Whether the line under the header is removed. |
+| `headerLabel` | `string` | **Required.** Title of the panel. |
+| `onCloseClick` | `() => void` | **Required.** Called by the closing cross. |
+| `isCloseable` | `boolean` | Whether the closing cross is drawn. Default: `true`. |
+| `onBackClick` | `() => void` | Called by the back arrow. |
+| `withoutBackButton` | `false` | Whether to hide the back arrow. The arrow is drawn only when this is literally `false`; leaving the prop out hides it, as does `true`. |
+| `withoutBorder` | `boolean` | Whether the line under the header is removed. |
 
 </APITable>
 
@@ -332,67 +332,67 @@ and the inline name field.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `label` | `string` | Text of the row. The only field every kind of item must carry. |
-| `access`? | `number \| string` | The user's current access, where the row shows one. |
-| `avatar`? | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>> \| string` | URL of the avatar picture. An empty string draws the default one. Picture drawn instead of the folder icon. |
-| `color`? | `string` | Colour of the generated logo, when there is no picture. Colour of the generated logo beside the field. |
-| `cover`? | `ICover` | The room's cover art, which replaces the generated logo. Cover art drawn beside the field. |
-| `createDefineRoomType`? | `RoomType` | Which room the create link makes, for that empty screen. |
-| `defaultInputValue`? | `string` | Text the field starts with. |
-| `disabledText`? | `string` | Text shown at the end of a disabled row, saying why. |
-| `disableMultiSelect`? | `boolean` | Whether this row stays single-select while the rest are not. |
-| `displayName`? | `string` | Full name, where it differs from `label`. |
-| `dropDownItems`? | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>>[]` | Entries of a menu opened instead of calling `onCreateClick`. |
-| `email`? | `string` | Shown under the name, and handed to `renderCustomItem`. |
-| `fileExst`? | `string` | Extension including the dot; shown after the name with `displayFileExtension`. |
-| `filesCount`? | `number` | How many files it holds. |
-| `fileType`? | `FileType` | Which kind of document it is, which picks the icon. |
-| `foldersCount`? | `number` | How many sub-folders it holds. |
-| `forceIsMultiSelect`? | `boolean` | Overrules this row's own `disableMultiSelect`. |
-| `groups`? | `TUserGroup[]` | Groups the user belongs to. |
-| `hasAvatar`? | `boolean` | Whether the user has a picture at all, which picks the fallback. |
-| `hotkey`? | `string` | Shortcut printed on the right of the row. |
-| `icon`? | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>> \| string \| TSvgComponent` | The icon: a URL, or an SVG component the row renders itself. URL of the room's own logo. Icon beside the field: a URL, or an element rendered as it is. A URL for remotely hosted icons, or a rendered element for the ones bundled as SVG components (see utils/ai/getServerIcon). |
-| `iconOriginal`? | `string` | URL of the logo before cropping. |
-| `id`? | `number \| string` | Identifies the item. Selection is matched on it throughout, so two rows sharing an id tick and untick together. |
-| `isAdmin`? | `boolean` | Whether the user is a full admin. |
-| `isCollaborator`? | `boolean` | Whether the user is a power user. |
-| `isCreateNewItem`? | `boolean` | Marks the row as the "create new" entry. It must be first in `items`, and it is what the empty screen turns into its create link. |
-| `isDisabled`? | `boolean` | Whether the row is greyed out and ignores clicks. |
-| `isFolder`? | `boolean` | Marks the row as a folder, which lets a click open it. Marks the row as openable, as a folder is. |
-| `isGroup`? | `boolean` | Marks the row as a group, which draws the group avatar. |
-| `isInputItem`? | `boolean` | Marks the row as the inline name field. It must be second in `items`, right after the "create new" row, and it takes over the whole body while it is there. |
-| `isMCP`? | `boolean` | Marks the row as an MCP server, which draws the server tile. |
-| `isOwner`? | `boolean` | Whether the user owns the portal. |
-| `isRoomAdmin`? | `boolean` | Whether the user administers a room. |
-| `isRoomsOnly`? | `boolean` | Whether only rooms may be created here, which picks the form-room empty screen. |
-| `isSectionSeparator`? | `boolean` | Makes that divider a section break, 25px tall. |
-| `isSelected`? | `boolean` | Whether the row starts out ticked. Selector recomputes it from `selectedItems` and its own state, so setting it here is a starting point. |
-| `isSeparator`? | `boolean` | Renders the row as a thin divider, 16px tall, that cannot be clicked. |
-| `isSystem`? | `boolean` | Whether this is a built-in group such as Everyone. System rows are sorted to the top and a divider is inserted under the first of them. |
-| `isTemplate`? | `boolean` | Whether the room is a template, which changes its logo. |
-| `isVisitor`? | `boolean` | Whether the user is a guest. |
-| `key`? | `string` | React key of the row. |
-| `lifetimeTooltip`? | `null \| string` | Tooltip about the file's lifetime. |
-| `name`? | `string` | Name of the group. |
-| `onAcceptInput`? | `(value: string) => void` | Called with the typed name when the tick is clicked or Enter pressed. |
-| `onBackClick`? | `VoidFunction` | Called by the empty screen's "back" link. |
-| `onCancelInput`? | `VoidFunction` | Called when the cross is clicked or Escape pressed. |
-| `onCreateClick`? | `VoidFunction` | Called when the row is clicked, unless `dropDownItems` is set. |
-| `parentId`? | `number \| string` | Folder the file sits in. Folder this one sits in. Folder the room sits in. |
-| `placeholder`? | `string` | Placeholder of the field. |
-| `private`? | `boolean` | Whether the room is private, which adds the shield badge. |
-| `role`? | `AvatarRole` | Badge drawn on the avatar. |
-| `roomType`? | `RoomType` | Which room it is, which picks the default logo. Which room logo to draw beside the field. |
-| `rootFolderType`? | `number \| string` | Root section it belongs to. |
-| `security`? | `FileEntryDtoIntegerAllOfSecurity` | What the current user may do with it. |
-| `shared`? | `boolean` | Whether the room is shared, which adds the badge on its logo. |
-| `specialFolderScope`? | `SpecialFolderScope` | Marks the row as a virtual folder such as Recent or Favorites. |
-| `status`? | `EmployeeStatus` | Whether the account is active, pending or disabled. |
-| `templateAccess`? | `FileShare` | The current user's access to that template. |
-| `templateIsOwner`? | `boolean` | Whether the current user owns that template. |
-| `userType`? | `EmployeeType` | Which type label is drawn — translated through the app's i18n instance. |
-| `viewUrl`? | `string` | Link the row's title opens. |
+| `label` | `string` | **Required.** Text of the row. The only field every kind of item must carry. |
+| `access` | `number \| string` | The user's current access, where the row shows one. |
+| `avatar` | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>> \| string` | URL of the avatar picture. An empty string draws the default one. Picture drawn instead of the folder icon. |
+| `color` | `string` | Colour of the generated logo, when there is no picture. Colour of the generated logo beside the field. |
+| `cover` | `ICover` | The room's cover art, which replaces the generated logo. Cover art drawn beside the field. |
+| `createDefineRoomType` | `RoomType` | Which room the create link makes, for that empty screen. |
+| `defaultInputValue` | `string` | Text the field starts with. |
+| `disabledText` | `string` | Text shown at the end of a disabled row, saying why. |
+| `disableMultiSelect` | `boolean` | Whether this row stays single-select while the rest are not. |
+| `displayName` | `string` | Full name, where it differs from `label`. |
+| `dropDownItems` | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>>[]` | Entries of a menu opened instead of calling `onCreateClick`. |
+| `email` | `string` | Shown under the name, and handed to `renderCustomItem`. |
+| `fileExst` | `string` | Extension including the dot; shown after the name with `displayFileExtension`. |
+| `filesCount` | `number` | How many files it holds. |
+| `fileType` | `FileType` | Which kind of document it is, which picks the icon. |
+| `foldersCount` | `number` | How many sub-folders it holds. |
+| `forceIsMultiSelect` | `boolean` | Overrules this row's own `disableMultiSelect`. |
+| `groups` | `TUserGroup[]` | Groups the user belongs to. |
+| `hasAvatar` | `boolean` | Whether the user has a picture at all, which picks the fallback. |
+| `hotkey` | `string` | Shortcut printed on the right of the row. |
+| `icon` | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>> \| string \| TSvgComponent` | The icon: a URL, or an SVG component the row renders itself. URL of the room's own logo. Icon beside the field: a URL, or an element rendered as it is. A URL for remotely hosted icons, or a rendered element for the ones bundled as SVG components (see utils/ai/getServerIcon). |
+| `iconOriginal` | `string` | URL of the logo before cropping. |
+| `id` | `number \| string` | Identifies the item. Selection is matched on it throughout, so two rows sharing an id tick and untick together. |
+| `isAdmin` | `boolean` | Whether the user is a full admin. |
+| `isCollaborator` | `boolean` | Whether the user is a power user. |
+| `isCreateNewItem` | `boolean` | Marks the row as the "create new" entry. It must be first in `items`, and it is what the empty screen turns into its create link. |
+| `isDisabled` | `boolean` | Whether the row is greyed out and ignores clicks. |
+| `isFolder` | `boolean` | Marks the row as a folder, which lets a click open it. Marks the row as openable, as a folder is. |
+| `isGroup` | `boolean` | Marks the row as a group, which draws the group avatar. |
+| `isInputItem` | `boolean` | Marks the row as the inline name field. It must be second in `items`, right after the "create new" row, and it takes over the whole body while it is there. |
+| `isMCP` | `boolean` | Marks the row as an MCP server, which draws the server tile. |
+| `isOwner` | `boolean` | Whether the user owns the portal. |
+| `isRoomAdmin` | `boolean` | Whether the user administers a room. |
+| `isRoomsOnly` | `boolean` | Whether only rooms may be created here, which picks the form-room empty screen. |
+| `isSectionSeparator` | `boolean` | Makes that divider a section break, 25px tall. |
+| `isSelected` | `boolean` | Whether the row starts out ticked. Selector recomputes it from `selectedItems` and its own state, so setting it here is a starting point. |
+| `isSeparator` | `boolean` | Renders the row as a thin divider, 16px tall, that cannot be clicked. |
+| `isSystem` | `boolean` | Whether this is a built-in group such as Everyone. System rows are sorted to the top and a divider is inserted under the first of them. |
+| `isTemplate` | `boolean` | Whether the room is a template, which changes its logo. |
+| `isVisitor` | `boolean` | Whether the user is a guest. |
+| `key` | `string` | React key of the row. |
+| `lifetimeTooltip` | `null \| string` | Tooltip about the file's lifetime. |
+| `name` | `string` | Name of the group. |
+| `onAcceptInput` | `(value: string) => void` | Called with the typed name when the tick is clicked or Enter pressed. |
+| `onBackClick` | `VoidFunction` | Called by the empty screen's "back" link. |
+| `onCancelInput` | `VoidFunction` | Called when the cross is clicked or Escape pressed. |
+| `onCreateClick` | `VoidFunction` | Called when the row is clicked, unless `dropDownItems` is set. |
+| `parentId` | `number \| string` | Folder the file sits in. Folder this one sits in. Folder the room sits in. |
+| `placeholder` | `string` | Placeholder of the field. |
+| `private` | `boolean` | Whether the room is private, which adds the shield badge. |
+| `role` | `AvatarRole` | Badge drawn on the avatar. |
+| `roomType` | `RoomType` | Which room it is, which picks the default logo. Which room logo to draw beside the field. |
+| `rootFolderType` | `number \| string` | Root section it belongs to. |
+| `security` | `FileEntryDtoIntegerAllOfSecurity` | What the current user may do with it. |
+| `shared` | `boolean` | Whether the room is shared, which adds the badge on its logo. |
+| `specialFolderScope` | `SpecialFolderScope` | Marks the row as a virtual folder such as Recent or Favorites. |
+| `status` | `EmployeeStatus` | Whether the account is active, pending or disabled. |
+| `templateAccess` | `FileShare` | The current user's access to that template. |
+| `templateIsOwner` | `boolean` | Whether the current user owns that template. |
+| `userType` | `EmployeeType` | Which type label is drawn — translated through the app's i18n instance. |
+| `viewUrl` | `string` | Link the row's title opens. |
 
 </APITable>
 
@@ -403,15 +403,15 @@ and the inline name field.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `id` | `number \| string` | Identifies the crumb; it is what `onSelectBreadCrumb` is handed back. |
-| `label` | `string` | Text of the crumb. |
-| `isAgent`? | `boolean` | Whether the crumb stands for an agent, which draws the agent's icon. |
-| `isRoom`? | `boolean` | Whether the crumb stands for a room, which draws the room's logo. |
-| `minWidth`? | `string` | Smallest width this crumb may shrink to, as a CSS length. |
-| `onClick`? | `TOnBreadCrumbClick` | Called instead of the default navigation when this crumb is clicked. |
-| `roomType`? | `RoomType` | Which room icon to draw, when `isRoom` is set. |
-| `rootFolderType`? | `FolderType` | Root section the crumb belongs to, which picks its icon. |
-| `shared`? | `boolean` | Whether the room is shared, which adds the badge on its logo. |
+| `id` | `number \| string` | **Required.** Identifies the crumb; it is what `onSelectBreadCrumb` is handed back. |
+| `label` | `string` | **Required.** Text of the crumb. |
+| `isAgent` | `boolean` | Whether the crumb stands for an agent, which draws the agent's icon. |
+| `isRoom` | `boolean` | Whether the crumb stands for a room, which draws the room's logo. |
+| `minWidth` | `string` | Smallest width this crumb may shrink to, as a CSS length. |
+| `onClick` | `TOnBreadCrumbClick` | Called instead of the default navigation when this crumb is clicked. |
+| `roomType` | `RoomType` | Which room icon to draw, when `isRoom` is set. |
+| `rootFolderType` | `FolderType` | Root section the crumb belongs to, which picks its icon. |
+| `shared` | `boolean` | Whether the room is shared, which adds the badge on its logo. |
 
 </APITable>
 
@@ -422,11 +422,11 @@ and the inline name field.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `access` | `number \| string` | The value handed back to you; the component never reads it. |
-| `key` | `string` | Identifies the entry within the drop-down. |
-| `label` | `string` | Text of the entry. |
-| `description`? | `string` | Second line under the label, in the detailed mode. |
-| `isSeparator`? | `boolean` | Whether this entry is a divider rather than a choice. |
+| `access` | `number \| string` | **Required.** The value handed back to you; the component never reads it. |
+| `key` | `string` | **Required.** Identifies the entry within the drop-down. |
+| `label` | `string` | **Required.** Text of the entry. |
+| `description` | `string` | Second line under the label, in the detailed mode. |
+| `isSeparator` | `boolean` | Whether this entry is a divider rather than a choice. |
 
 </APITable>
 
@@ -437,11 +437,11 @@ and the inline name field.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `description` | `React.ReactNode` | Everything under the title. |
-| `title` | `string` | Bold first line of the bar. |
-| `className`? | `string` | Applied to the bar. |
-| `icon`? | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>> \| string` | Icon on the left: a URL for `<img>`, or an element rendered as it is. |
-| `onClose`? | `VoidFunction` | Called by the bar's own cross. Without it no cross is drawn. |
+| `description` | `React.ReactNode` | **Required.** Everything under the title. |
+| `title` | `string` | **Required.** Bold first line of the bar. |
+| `className` | `string` | Applied to the bar. |
+| `icon` | `React.ReactElement<unknown, string \| React.JSXElementConstructor<any>> \| string` | Icon on the left: a URL for `<img>`, or an element rendered as it is. |
+| `onClose` | `VoidFunction` | Called by the bar's own cross. Without it no cross is drawn. |
 
 </APITable>
 

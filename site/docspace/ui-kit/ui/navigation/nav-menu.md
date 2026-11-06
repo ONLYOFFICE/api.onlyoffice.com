@@ -204,14 +204,14 @@ export function Sidebar() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `groups` | `NavMenuGroup[]` | The sections of the menu, in order. A group with a `label` renders it as a caption above its items. |
-| `activeItemId`? | `string` | Id of the item or sub-item that is currently open. It highlights that entry and, through an effect, expands the section it belongs to. |
-| `className`? | `string` | Added after the component's own classes on the `nav` element. |
-| `defaultExpandedId`? | `string` | Section expanded on the first render. After that the expansion is the component's own state. |
-| `iconOnly`? | `boolean` | Collapsed rail: labels become tooltips, sub-menus are not rendered, and the active section's children are flattened into the list instead. Default: `false`. |
-| `LinkRouter`? | `React.ComponentType<LinkRouterProps>` | Your router's link component. Without it `linkData` is ignored and every entry is a `button`. |
-| `withAnimation`? | `boolean` | Plays the sliding highlight when an entry is clicked. Default: `false`. |
-| `withExpandControl`? | `boolean` | Gives each section its own chevron and leaves the item body to navigation. Several sections may then be open at once. Default: `false`. |
+| `groups` | `NavMenuGroup[]` | **Required.** The sections of the menu, in order. A group with a `label` renders it as a caption above its items. |
+| `activeItemId` | `string` | Id of the item or sub-item that is currently open. It highlights that entry and, through an effect, expands the section it belongs to. |
+| `className` | `string` | Added after the component's own classes on the `nav` element. |
+| `defaultExpandedId` | `string` | Section expanded on the first render. After that the expansion is the component's own state. |
+| `iconOnly` | `boolean` | Collapsed rail: labels become tooltips, sub-menus are not rendered, and the active section's children are flattened into the list instead. Default: `false`. |
+| `LinkRouter` | `React.ComponentType<LinkRouterProps>` | Your router's link component. Without it `linkData` is ignored and every entry is a `button`. |
+| `withAnimation` | `boolean` | Plays the sliding highlight when an entry is clicked. Default: `false`. |
+| `withExpandControl` | `boolean` | Gives each section its own chevron and leaves the item body to navigation. Several sections may then be open at once. Default: `false`. |
 
 </APITable>
 
@@ -223,7 +223,7 @@ The `index` module exports a wrapped component, so these are accepted on top of 
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `ref`? | `Ref<HTMLElement>` | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). |
+| `ref` | `Ref<HTMLElement>` | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). |
 
 </APITable>
 

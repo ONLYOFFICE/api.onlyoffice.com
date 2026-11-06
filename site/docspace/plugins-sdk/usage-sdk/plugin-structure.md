@@ -4,7 +4,7 @@ sidebar_position: -5
 
 # Plugin structure
 
-Each DocSpace plugin is a folder with files. It must contain the following files required for the plugin to work.
+Each ONLYOFFICE Apps plugin is a folder with files. It must contain the following files required for the plugin to work.
 
 ## Files created automatically
 
@@ -57,7 +57,7 @@ This file can be edited if needed.
 The Vite configuration file generated automatically when creating the plugin template. This file configures the build output requirements:
 - The plugin code is bundled into *plugin.js* as an ES module via `build.lib`
 - CSS styles are output to *plugin.css*
-- External dependencies (`react`, `react-dom`, `react/jsx-runtime`, the SDK React entry `@onlyoffice/docspace-plugin-sdk/react`, and the UI kit `@onlyoffice/apps-ui-kit`) are kept out of the bundle — DocSpace supplies them at load time
+- External dependencies (`react`, `react-dom`, `react/jsx-runtime`, the SDK React entry `@onlyoffice/docspace-plugin-sdk/react`, and the UI kit `@onlyoffice/apps-ui-kit`) are kept out of the bundle — ONLYOFFICE Apps supplies them at load time
 
 This file can be edited if needed. For more information on migrating older plugins, see [Updating a plugin to SDK 3.0.0](../more-information/migration.md).
 
@@ -91,7 +91,7 @@ A folder for storing plugin images. This folder is not created automatically by 
 
 Nesting is not supported. The number of icons and their sizes will depend on the plugin types you implement. **The number of plugin icons must not exceed 10 if the archive does not contain *plugin.css*, or 9 if it does** (the server allows up to 10 asset files plus 3 archive entries: *plugin.js*, *config.json*, and the *assets/* folder itself; *plugin.css*, when present, takes one of the 10 asset slots). The following formats are currently supported: *.jpg*, *.jpeg*, *.png*, *.svg*.
 
-- The default plugin type requires a [logo](config.md#image) image. It is equal to the *logo* parameter from the *package.json* file. The logo will be displayed in the list of plugins on the DocSpace **Plugins** tab. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.
+- The default plugin type requires a [logo](config.md#image) image. It is equal to the *logo* parameter from the *package.json* file. The logo will be displayed in the list of plugins on the ONLYOFFICE Apps **Plugins** tab. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.
 
   <img alt="Plugin logo" src="/assets/images/docspace/plugin-logo.png#gh-light-mode-only" width="300px" /><img alt="Plugin logo" src="/assets/images/docspace/plugin-logo.dark.png#gh-dark-mode-only" width="300px" />
 

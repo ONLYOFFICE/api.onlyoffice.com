@@ -1,6 +1,6 @@
 ---
 description: Disable external contractors who have not logged in recently.
-tags: ["DocSpace", "REST API", "Integration"]
+tags: ["Apps", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -12,7 +12,7 @@ Script loads external contractors (placeholder), checks their last login via aud
 
 ## Before you start
 
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual ONLYOFFICE Apps portal URL and API key. Ensure you have the necessary data and permissions to perform these operations.
 2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
 
 <details>
@@ -81,7 +81,7 @@ Script loads external contractors (placeholder), checks their last login via aud
   function fetchExternalContractors() {
     // Replace this with:
     // - your HR/CRM source, or
-    // - DocSpace People list filtered by your own logic.
+    // - ONLYOFFICE Apps People list filtered by your own logic.
     return [
       { id: 'user-id-1', email: 'contractor1@vendor.com', displayName: 'Contractor One' },
       { id: 'user-id-2', email: 'contractor2@vendor.com', displayName: 'Contractor Two' },
@@ -246,7 +246,7 @@ Script loads external contractors (placeholder), checks their last login via aud
   def fetch_external_contractors():
     # Replace this with:
     # - your HR/CRM source, or
-    # - DocSpace People list filtered by your own logic.
+    # - ONLYOFFICE Apps People list filtered by your own logic.
     return [
       {"id": "user-id-1", "email": "contractor1@vendor.com", "displayName": "Contractor One"},
       {"id": "user-id-2", "email": "contractor2@vendor.com", "displayName": "Contractor Two"},
@@ -378,7 +378,7 @@ The script prepares a list of external contractors (placeholder). Replace this p
   function fetchExternalContractors() {
     // Replace this with:
     // - your HR/CRM source, or
-    // - DocSpace People list filtered by your own logic.
+    // - ONLYOFFICE Apps People list filtered by your own logic.
     return [
       { id: 'user-id-1', email: 'contractor1@vendor.com', displayName: 'Contractor One' },
       { id: 'user-id-2', email: 'contractor2@vendor.com', displayName: 'Contractor Two' },
@@ -393,7 +393,7 @@ The script prepares a list of external contractors (placeholder). Replace this p
   def fetch_external_contractors():
     # Replace this with:
     # - your HR/CRM source, or
-    # - DocSpace People list filtered by your own logic.
+    # - ONLYOFFICE Apps People list filtered by your own logic.
     return [
       {"id": "user-id-1", "email": "contractor1@vendor.com", "displayName": "Contractor One"},
       {"id": "user-id-2", "email": "contractor2@vendor.com", "displayName": "Contractor Two"},
@@ -407,7 +407,7 @@ The script prepares a list of external contractors (placeholder). Replace this p
 
 Then it sends a GET request to [/api/2.0/security/audit/login/filter](/docspace/api-backend/usage-api/security/login-history/get-login-events-by-filter) with:
 
-- `userId`: contractor user ID in DocSpace
+- `userId`: contractor user ID in ONLYOFFICE Apps
 - `action=0`: login events only
 - `from` / `to`: date range for audit search (for example, the last 180 days)
 

@@ -138,31 +138,31 @@ export function SimpleTile() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `contextOptions` | `ContextMenuModel[]` | The menu's entries. Required — but the three-dot button appears only when `item` also carries a `contextOptions` key of its own. |
-| `item` | `TileItem` | The item this tile stands for. It is also what `onSelect` is called with, and the fallback source of the context menu's header. |
-| `badgeUrl`? | `string` | Passed to the context menu, for the badge it draws in its header. |
-| `bottomContent`? | `ReactNode` | The lower half of the tile — where the room tile puts its tags. |
-| `checkboxContainerRef`? | `RefObject<HTMLDivElement \| null>` | Attached to the element holding the icon and the checkbox, so a wrapper can tell clicks on it apart. |
-| `checked`? | `boolean` | Whether the tile is selected. It ticks the checkbox and keeps it visible when the pointer leaves. |
-| `className`? | `string` | Added after the component's own classes on the outer element. |
-| `dataTestId`? | `string` | Value of `data-testid` on the outer element. Default: `"tile"`. |
-| `element`? | `ReactNode` | The icon in the corner. Without it neither the icon nor the checkbox is rendered at all. |
-| `forwardRef`? | `RefObject<HTMLDivElement \| null>` | A ref the component clicks on a right-click when the menu is not mounted yet. It is not attached to anything here. |
-| `getContextModel`? | `() => ContextMenuModel[]` | Builds the menu shown on right-click. Without it the right-click menu never opens, whatever `contextOptions` holds. |
-| `hideContextMenu`? | `() => void` | Called when the menu closes. |
-| `indeterminate`? | `boolean` | Draws the checkbox in its indeterminate state. |
-| `inProgress`? | `boolean` | Replaces the icon and the checkbox with the kit's track loader. |
-| `isActive`? | `boolean` | Whether the tile is the one being acted on, which keeps its hover background. |
-| `isBlockingOperation`? | `boolean` | Turns the pointer off while an operation is running over the tile: hover, clicks and right-clicks stop reaching it. It does not change how the tile looks. |
-| `isEdit`? | `boolean` | Renaming state: it removes the icon and the checkbox and leaves `topContent` the whole row. |
-| `onHover`? | `() => void` | Called when the pointer enters the tile. |
-| `onLeave`? | `() => void` | Called when the pointer leaves the tile. |
-| `onRoomClick`? | `(e: React.MouseEvent) => void` | Called with the event on any click on the tile. It is the tile's `onClick`, not a room-specific one. |
-| `onSelect`? | `(checked: boolean, item: TileItem) => void` | Called with the new checked state and the `item` when the checkbox changes, or when the icon is tapped on a screen narrower than 600px. |
-| `showHotkeyBorder`? | `boolean` | Draws the accent outline that marks the tile the keyboard is on. |
-| `thumbnailClick`? | `(e: React.MouseEvent) => void` | Ignored. Nothing in this component reads it; put the handler on `onRoomClick` or on your own `topContent`. |
-| `tileContextClick`? | `(isRightClick?: boolean) => void` | Called before the menu opens, with `true` when the trigger was a right-click. It is the hook for building the options lazily. |
-| `topContent`? | `ReactNode` | The upper half of the tile. Its first child is read for a nested `item`, which then takes over the context menu's header. |
+| `contextOptions` | `ContextMenuModel[]` | **Required.** The menu's entries. Required — but the three-dot button appears only when `item` also carries a `contextOptions` key of its own. |
+| `item` | `TileItem` | **Required.** The item this tile stands for. It is also what `onSelect` is called with, and the fallback source of the context menu's header. |
+| `badgeUrl` | `string` | Passed to the context menu, for the badge it draws in its header. |
+| `bottomContent` | `ReactNode` | The lower half of the tile — where the room tile puts its tags. |
+| `checkboxContainerRef` | `RefObject<HTMLDivElement \| null>` | Attached to the element holding the icon and the checkbox, so a wrapper can tell clicks on it apart. |
+| `checked` | `boolean` | Whether the tile is selected. It ticks the checkbox and keeps it visible when the pointer leaves. |
+| `className` | `string` | Added after the component's own classes on the outer element. |
+| `dataTestId` | `string` | Value of `data-testid` on the outer element. Default: `"tile"`. |
+| `element` | `ReactNode` | The icon in the corner. Without it neither the icon nor the checkbox is rendered at all. |
+| `forwardRef` | `RefObject<HTMLDivElement \| null>` | A ref the component clicks on a right-click when the menu is not mounted yet. It is not attached to anything here. |
+| `getContextModel` | `() => ContextMenuModel[]` | Builds the menu shown on right-click. Without it the right-click menu never opens, whatever `contextOptions` holds. |
+| `hideContextMenu` | `() => void` | Called when the menu closes. |
+| `indeterminate` | `boolean` | Draws the checkbox in its indeterminate state. |
+| `inProgress` | `boolean` | Replaces the icon and the checkbox with the kit's track loader. |
+| `isActive` | `boolean` | Whether the tile is the one being acted on, which keeps its hover background. |
+| `isBlockingOperation` | `boolean` | Turns the pointer off while an operation is running over the tile: hover, clicks and right-clicks stop reaching it. It does not change how the tile looks. |
+| `isEdit` | `boolean` | Renaming state: it removes the icon and the checkbox and leaves `topContent` the whole row. |
+| `onHover` | `() => void` | Called when the pointer enters the tile. |
+| `onLeave` | `() => void` | Called when the pointer leaves the tile. |
+| `onRoomClick` | `(e: React.MouseEvent) => void` | Called with the event on any click on the tile. It is the tile's `onClick`, not a room-specific one. |
+| `onSelect` | `(checked: boolean, item: TileItem) => void` | Called with the new checked state and the `item` when the checkbox changes, or when the icon is tapped on a screen narrower than 600px. |
+| `showHotkeyBorder` | `boolean` | Draws the accent outline that marks the tile the keyboard is on. |
+| `thumbnailClick` | `(e: React.MouseEvent) => void` | Ignored. Nothing in this component reads it; put the handler on `onRoomClick` or on your own `topContent`. |
+| `tileContextClick` | `(isRightClick?: boolean) => void` | Called before the menu opens, with `true` when the trigger was a right-click. It is the hook for building the options lazily. |
+| `topContent` | `ReactNode` | The upper half of the tile. Its first child is read for a nested `item`, which then takes over the context menu's header. |
 
 </APITable>
 

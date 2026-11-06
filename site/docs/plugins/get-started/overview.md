@@ -5,7 +5,7 @@ description: Build ONLYOFFICE plugins with HTML, CSS, and JavaScript to add pane
 
 # Overview
 
-ONLYOFFICE plugins are web apps built with HTML, CSS, and JavaScript that run inside the document, spreadsheet, presentation, and PDF editors. A plugin can open a panel or a window, add toolbar buttons and context menu items, or run in the background, and it reads and changes the document through the Plugin API. Plugins work in ONLYOFFICE Docs, ONLYOFFICE DocSpace, and ONLYOFFICE Desktop Editors.
+ONLYOFFICE plugins are web apps built with HTML, CSS, and JavaScript that run inside the document, spreadsheet, presentation, and PDF editors. A plugin can open a panel or a window, add toolbar buttons and context menu items, or run in the background, and it reads and changes the document through the Plugin API. Plugins work in ONLYOFFICE Docs, ONLYOFFICE Apps, and ONLYOFFICE Desktop Editors.
 
 If you prefer to start coding right away, go directly to the [quick start](quick-start.md) or try things out in the [interactive playground](playground.md).
 

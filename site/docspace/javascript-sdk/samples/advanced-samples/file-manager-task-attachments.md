@@ -1,18 +1,18 @@
 ---
-description: Attach files to tasks using a DocSpace file selector modal.
-tags: ["DocSpace", "Embed SDK", "Integration"]
+description: Attach files to tasks using an ONLYOFFICE Apps file selector modal.
+tags: ["Apps", "Embed SDK", "Integration"]
 ---
 
 # File manager with task attachments
 
-This example demonstrates how to integrate the DocSpace file selector into a task management interface. Users can attach files to individual tasks by selecting a row and using a modal-based file selector.
+This example demonstrates how to integrate the ONLYOFFICE Apps file selector into a task management interface. Users can attach files to individual tasks by selecting a row and using a modal-based file selector.
 
 Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/file-manager-task-attachments.html)
 
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the Embed SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/authentication-security.md#registering-allowed-embed-origins) of your server's root directory to the **Developer Tools** section of ONLYOFFICE Apps.
 
 <details>
   <summary>Full example</summary>

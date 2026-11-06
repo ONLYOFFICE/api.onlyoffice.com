@@ -4,7 +4,7 @@ sidebar_position: -3
 
 # 转换 API
 
-在线办公中要转换不同的文件格式，就要用到POST请求。这些请求被发送到 */cool/convert-to/\<format>&\<lang=xx-XX>* 或 */lool/convert-to/\<format>&\<lang=xx-XX>* 端点。
+在线办公中要转换不同的文件格式，就要用到 POST 请求。这些请求被发送到 */cool/convert-to/\<format>&\<lang=xx-XX>* 或 */lool/convert-to/\<format>&\<lang=xx-XX>* 端点。
 
 ## 请求参数及其说明：
 

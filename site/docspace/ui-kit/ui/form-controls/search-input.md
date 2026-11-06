@@ -152,30 +152,30 @@ export function RoomSearch() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `size` | `InputSize` | Supported size of the input fields. |
-| `value` | `string` | The search term. The field keeps its own copy while the user types and re-seeds it from this prop whenever the prop changes. Default: `""`. |
-| `autoRefresh`? | `boolean` | Whether typing triggers the debounced `onChange` at all. Setting it to false does not make the callback immediate — it stops the component calling it entirely. Default: `true`. |
-| `children`? | `React.ReactNode` | Rendered inside the `MainButton`'s dropdown; ignored unless `showMainButton` is set. |
-| `className`? | `string` | Accepts class |
-| `dataTestId`? | `string` | Value of `data-testid` on the outer element. Default: `"search-input"`. |
-| `forwardedRef`? | `React.Ref<HTMLInputElement>` | Forwarded ref |
-| `id`? | `string` | Used as HTML `id` property |
-| `isDisabled`? | `boolean` | Disables the field and greys it. Default: `false`. |
-| `mainButtonDataTestId`? | `string` | data-testid for the main button wrapper element |
-| `mainButtonIcon`? | `React.ReactNode` | Icon node rendered inside the MainButton (12x12). Default: `<PlusIconSvg />`. |
-| `mainButtonProps`? | `MainButtonProps` | Props for the MainButton displayed to the left of the search field |
-| `name`? | `string` | Sets the unique element name |
-| `onChange`? | `(value: string) => void` | Called with the **string** the user typed, not with the change event — unlike every other input in this kit. It is debounced by `refreshTimeout`, and it is not called at all when `autoRefresh` is false or when the field is cleared through the clear button. |
-| `onClearSearch`? | `() => void` | Called when the clear button is used. `onChange` is deliberately skipped for that transition, so this is the only signal that the search term is now empty. |
-| `onClick`? | `(e: React.MouseEvent<HTMLInputElement>) => void` | Called when the field is clicked. |
-| `onFocus`? | `(e: React.FocusEvent<HTMLInputElement>) => void` | The callback function that is called when the field is focused |
-| `placeholder`? | `string` | Placeholder text for the input |
-| `refreshTimeout`? | `number` | Milliseconds of quiet typing before `onChange` fires. Default: `1000`. |
-| `scale`? | `boolean` | Makes the field fill the width of its container. Default: `false`. |
-| `showClearButton`? | `boolean` | Shows the cross that clears the field. Without it the user has to select and delete the text. Default: `false`. |
-| `showMainButton`? | `boolean` | Renders a `MainButton` to the left of the field, for the "create new" action a search bar often sits beside. Default: `false`. |
-| `style`? | `React.CSSProperties` | Accepts css style |
-| `tabIndex`? | `number` | HTML tabindex property |
+| `size` | `InputSize` | **Required.** Supported size of the input fields. |
+| `value` | `string` | **Required.** The search term. The field keeps its own copy while the user types and re-seeds it from this prop whenever the prop changes. Default: `""`. |
+| `autoRefresh` | `boolean` | Whether typing triggers the debounced `onChange` at all. Setting it to false does not make the callback immediate — it stops the component calling it entirely. Default: `true`. |
+| `children` | `React.ReactNode` | Rendered inside the `MainButton`'s dropdown; ignored unless `showMainButton` is set. |
+| `className` | `string` | Accepts class |
+| `dataTestId` | `string` | Value of `data-testid` on the outer element. Default: `"search-input"`. |
+| `forwardedRef` | `React.Ref<HTMLInputElement>` | Forwarded ref |
+| `id` | `string` | Used as HTML `id` property |
+| `isDisabled` | `boolean` | Disables the field and greys it. Default: `false`. |
+| `mainButtonDataTestId` | `string` | data-testid for the main button wrapper element |
+| `mainButtonIcon` | `React.ReactNode` | Icon node rendered inside the MainButton (12x12). Default: `<PlusIconSvg />`. |
+| `mainButtonProps` | `MainButtonProps` | Props for the MainButton displayed to the left of the search field |
+| `name` | `string` | Sets the unique element name |
+| `onChange` | `(value: string) => void` | Called with the **string** the user typed, not with the change event — unlike every other input in this kit. It is debounced by `refreshTimeout`, and it is not called at all when `autoRefresh` is false or when the field is cleared through the clear button. |
+| `onClearSearch` | `() => void` | Called when the clear button is used. `onChange` is deliberately skipped for that transition, so this is the only signal that the search term is now empty. |
+| `onClick` | `(e: React.MouseEvent<HTMLInputElement>) => void` | Called when the field is clicked. |
+| `onFocus` | `(e: React.FocusEvent<HTMLInputElement>) => void` | The callback function that is called when the field is focused |
+| `placeholder` | `string` | Placeholder text for the input |
+| `refreshTimeout` | `number` | Milliseconds of quiet typing before `onChange` fires. Default: `1000`. |
+| `scale` | `boolean` | Makes the field fill the width of its container. Default: `false`. |
+| `showClearButton` | `boolean` | Shows the cross that clears the field. Without it the user has to select and delete the text. Default: `false`. |
+| `showMainButton` | `boolean` | Renders a `MainButton` to the left of the field, for the "create new" action a search bar often sits beside. Default: `false`. |
+| `style` | `React.CSSProperties` | Accepts css style |
+| `tabIndex` | `number` | HTML tabindex property |
 
 </APITable>
 

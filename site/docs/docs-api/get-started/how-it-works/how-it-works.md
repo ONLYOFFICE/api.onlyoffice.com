@@ -24,5 +24,5 @@ The server side includes:
 - **Document builder service** - the server service that allows you to build a document easily without running a document editor.
 
 :::note
-ONLYOFFICE Docs includes the **document editor**, **document editing service**, **document command service**, **document conversion service**, and **document builder service**. The **document manager** and **document storage service** must be provided by an integrator. This can be **ONLYOFFICE DocSpace**, your own implementation on your server, or the **Node.js test example** bundled with ONLYOFFICE Docs (intended for testing only — see the [Node.js example](../../samples/language-specific-examples/nodejs-example.md)).
+ONLYOFFICE Docs includes the **document editor**, **document editing service**, **document command service**, **document conversion service**, and **document builder service**. The **document manager** and **document storage service** must be provided by an integrator. This can be **ONLYOFFICE Apps**, your own implementation on your server, or the **Node.js test example** bundled with ONLYOFFICE Docs (intended for testing only — see the [Node.js example](../../samples/language-specific-examples/nodejs-example.md)).
 :::

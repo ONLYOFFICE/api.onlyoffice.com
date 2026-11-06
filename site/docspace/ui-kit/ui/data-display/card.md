@@ -109,13 +109,13 @@ export function StorageCard() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children`? | `React.ReactNode` | Body of the card. Nothing is rendered when it is empty. |
-| `className`? | `string` | Added after the component's own class, on the outer element. |
-| `dataTestId`? | `string` | Value of `data-testid` on the outer element. Default: `"card"`. |
-| `extra`? | `React.ReactNode` | Right side of the header row, pushed against the trailing edge — a status, a badge, a link. |
-| `footer`? | `React.ReactNode` | Contents of a `<footer>` below the body. It gets no styling of its own beyond the card's 12px gap. |
-| `style`? | `React.CSSProperties` | Inline style of the outer element. |
-| `title`? | `React.ReactNode` | Left side of the header row. The row is dropped entirely when both this and `extra` are unset. |
+| `children` | `React.ReactNode` | Body of the card. Nothing is rendered when it is empty. |
+| `className` | `string` | Added after the component's own class, on the outer element. |
+| `dataTestId` | `string` | Value of `data-testid` on the outer element. Default: `"card"`. |
+| `extra` | `React.ReactNode` | Right side of the header row, pushed against the trailing edge — a status, a badge, a link. |
+| `footer` | `React.ReactNode` | Contents of a `<footer>` below the body. It gets no styling of its own beyond the card's 12px gap. |
+| `style` | `React.CSSProperties` | Inline style of the outer element. |
+| `title` | `React.ReactNode` | Left side of the header row. The row is dropped entirely when both this and `extra` are unset. |
 
 </APITable>
 

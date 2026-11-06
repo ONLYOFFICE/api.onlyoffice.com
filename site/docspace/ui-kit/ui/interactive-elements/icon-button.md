@@ -127,33 +127,33 @@ export function CloseButton({ onClose }: { onClose: () => void }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `className`? | `string` | Sets component class |
-| `clickColor`? | `"accent" \| (string & {})` | Colour while the button is held down; same forms as `color`. |
-| `color`? | `"accent" \| (string & {})` | Any CSS colour, the literal `"accent"` for the theme accent, or the name of a custom property starting with `--`, which is wrapped in `var()`. |
-| `dataTestId`? | `string` | Value of `data-testid` on the button. Default: `"icon-button"`. |
-| `dataTip`? | `string` | Value of the legacy `data-tip` attribute, read by an older tooltip implementation. Use `tooltipId` with `tooltipContent`, or `title`. Default: `""`. |
-| `hoverColor`? | `"accent" \| (string & {})` | Colour while the pointer is over the button; same forms as `color`. |
-| `iconClickName`? | `string` | URL of the icon swapped in while the button is held down. |
-| `iconHoverName`? | `string` | URL of the icon swapped in while the pointer is over the button, on a device that has a pointer. |
-| `iconName`? | `string` | **A URL, not an asset name.** It is handed to `react-svg` as `src`, which fetches it at runtime and inlines the response, so it has to resolve from the browser — an imported `?url`, or a path under your public directory. Ignored when `iconNode` is set. |
-| `iconNode`? | `ReactNode` | The icon as JSX, rendered inline. Preferred over `iconName`: it needs no network request and is typed by your own bundler. |
-| `id`? | `string` | Sets component id |
-| `isClickable`? | `boolean` | Shows the pointer cursor without an `onClick`, for a button whose click is handled by an ancestor. Default: `false`. |
-| `isDisabled`? | `boolean` | Greys the icon and stops every handler, including the hover and click icon swaps. It sets `aria-disabled`, not the `disabled` property — there is no button element to carry one. Default: `false`. |
-| `isFill`? | `boolean` | Colours the icon by filling its shapes. Turn it off for an outline icon and use `isStroke` instead. Default: `true`. |
-| `isStroke`? | `boolean` | Colours the icon by stroking its paths, which wins over `isFill`. Default: `false`. |
-| `onClick`? | `(e: React.MouseEvent<HTMLDivElement>) => void` | Sets a button callback function triggered when the button is clicked |
-| `onKeyDown`? | `(e: React.KeyboardEvent<HTMLDivElement>) => void` | Called on a key press. The element is a `<div>` with no button role, so Enter and Space do nothing unless this handler implements them. |
-| `onMouseDown`? | `(e: React.MouseEvent<HTMLDivElement>) => void` | Sets a button callback function triggered when the cursor moves down |
-| `onMouseEnter`? | `(e: React.MouseEvent) => void` | Sets a button callback function triggered when the cursor enters the area |
-| `onMouseLeave`? | `(e: React.MouseEvent) => void` | Sets a button callback function triggered when the cursor leaves the icon |
-| `onMouseUp`? | `(e: React.MouseEvent<HTMLDivElement>) => void` | Called when a mouse button is released over the icon — but only for the middle and right buttons, which is a defect in the component rather than a design. Use `onClick` for the left button. |
-| `size`? | `IconSize \| InputSize \| number` | Size of the button on both axes. A number is pixels; the `InputSize` members all resolve to 15px; any other string is used as a CSS length. Default: `20`. |
-| `style`? | `CSSProperties` | Accepts css style |
-| `tabIndex`? | `number` | Applied to the element, which is a `<div>`: without this the button is not reachable by keyboard at all. |
-| `title`? | `string` | Tooltip text. Consumed by the tooltip container this component renders, so it never reaches the DOM as a `title` attribute. |
-| `tooltipContent`? | `string` | Text of that tooltip. Without `tooltipId` it does nothing. |
-| `tooltipId`? | `string` | Anchor id for a tooltip. Together with `tooltipContent` it makes the component render its own `Tooltip`, placed below the button. |
+| `className` | `string` | Sets component class |
+| `clickColor` | `"accent" \| (string & {})` | Colour while the button is held down; same forms as `color`. |
+| `color` | `"accent" \| (string & {})` | Any CSS colour, the literal `"accent"` for the theme accent, or the name of a custom property starting with `--`, which is wrapped in `var()`. |
+| `dataTestId` | `string` | Value of `data-testid` on the button. Default: `"icon-button"`. |
+| `dataTip` | `string` | Value of the legacy `data-tip` attribute, read by an older tooltip implementation. Use `tooltipId` with `tooltipContent`, or `title`. Default: `""`. |
+| `hoverColor` | `"accent" \| (string & {})` | Colour while the pointer is over the button; same forms as `color`. |
+| `iconClickName` | `string` | URL of the icon swapped in while the button is held down. |
+| `iconHoverName` | `string` | URL of the icon swapped in while the pointer is over the button, on a device that has a pointer. |
+| `iconName` | `string` | **A URL, not an asset name.** It is handed to `react-svg` as `src`, which fetches it at runtime and inlines the response, so it has to resolve from the browser — an imported `?url`, or a path under your public directory. Ignored when `iconNode` is set. |
+| `iconNode` | `ReactNode` | The icon as JSX, rendered inline. Preferred over `iconName`: it needs no network request and is typed by your own bundler. |
+| `id` | `string` | Sets component id |
+| `isClickable` | `boolean` | Shows the pointer cursor without an `onClick`, for a button whose click is handled by an ancestor. Default: `false`. |
+| `isDisabled` | `boolean` | Greys the icon and stops every handler, including the hover and click icon swaps. It sets `aria-disabled`, not the `disabled` property — there is no button element to carry one. Default: `false`. |
+| `isFill` | `boolean` | Colours the icon by filling its shapes. Turn it off for an outline icon and use `isStroke` instead. Default: `true`. |
+| `isStroke` | `boolean` | Colours the icon by stroking its paths, which wins over `isFill`. Default: `false`. |
+| `onClick` | `(e: React.MouseEvent<HTMLDivElement>) => void` | Sets a button callback function triggered when the button is clicked |
+| `onKeyDown` | `(e: React.KeyboardEvent<HTMLDivElement>) => void` | Called on a key press. The element is a `<div>` with no button role, so Enter and Space do nothing unless this handler implements them. |
+| `onMouseDown` | `(e: React.MouseEvent<HTMLDivElement>) => void` | Sets a button callback function triggered when the cursor moves down |
+| `onMouseEnter` | `(e: React.MouseEvent) => void` | Sets a button callback function triggered when the cursor enters the area |
+| `onMouseLeave` | `(e: React.MouseEvent) => void` | Sets a button callback function triggered when the cursor leaves the icon |
+| `onMouseUp` | `(e: React.MouseEvent<HTMLDivElement>) => void` | Called when a mouse button is released over the icon — but only for the middle and right buttons, which is a defect in the component rather than a design. Use `onClick` for the left button. |
+| `size` | `IconSize \| InputSize \| number` | Size of the button on both axes. A number is pixels; the `InputSize` members all resolve to 15px; any other string is used as a CSS length. Default: `20`. |
+| `style` | `CSSProperties` | Accepts css style |
+| `tabIndex` | `number` | Applied to the element, which is a `<div>`: without this the button is not reachable by keyboard at all. |
+| `title` | `string` | Tooltip text. Consumed by the tooltip container this component renders, so it never reaches the DOM as a `title` attribute. |
+| `tooltipContent` | `string` | Text of that tooltip. Without `tooltipId` it does nothing. |
+| `tooltipId` | `string` | Anchor id for a tooltip. Together with `tooltipContent` it makes the component render its own `Tooltip`, placed below the button. |
 
 </APITable>
 
@@ -214,7 +214,7 @@ export function DeleteButton({ onDelete }: { onDelete: () => void }) {
 
 - **`iconName` is a URL.** It goes to `react-svg` as `src`, which fetches it and inlines the
   markup, so an asset name, an import of the SVG as a component, or a build-time alias of the
-  DocSpace client will not work. `iconNode` avoids the request entirely.
+  ONLYOFFICE Apps client will not work. `iconNode` avoids the request entirely.
 - **It renders a `<div>`, not a `<button>`.** There is no implicit role, no tab stop and no
   Enter or Space activation. A button anyone can use from the keyboard needs `tabIndex`,
   `onKeyDown` and a role of your own — the minimal example shows the minimum.

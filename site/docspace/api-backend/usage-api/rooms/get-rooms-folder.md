@@ -1,6 +1,6 @@
 # getRoomsFolder
 
-> FolderContentWrapper getRoomsFolder(type, subjectId, subjectOwnerId, searchArea, withoutTags, tags, excludeSubject, provider, quotaFilter, storageFilter, privacyFilter, withAiFolder, count, startIndex, sortBy, sortOrder, filterValue, groupId, metadataTemplateId, metadataFilters)
+> FolderContentWrapper getRoomsFolder(type, subjectId, subjectOwnerId, searchArea, withoutTags, tags, excludeSubject, provider, quotaFilter, storageFilter, privacyFilter, withAiFolder, count, startIndex, sortBy, sortOrder, filterValue, groupId, metadataTemplateId, metadataFilters, includeHiddenMetadata)
 
 `GET /api/2.0/files/rooms`
 
@@ -31,7 +31,8 @@ Lists the rooms of one section of the portal: the active rooms by default, or th
 | **filterValue** | query | **String** | Keeps only the rooms whose title contains this text, ignoring case. It is a substring match over the title alone: room content and tags are not searched. | [optional] [example: `Sales`] |
 | **groupId** | query | **Integer** (int32) | Keeps only the rooms that belong to this room group. The identifier comes from `GET api/2.0/files/group`; the groups of portal members are a different concept and their identifiers do not match here. | [optional] [example: `1`] |
 | **metadataTemplateId** | query | **Integer** (int32) | The ID of the metadata template the entries must be assigned to. On its own it narrows the listing to the entries carrying the template; together with the metadata filters it also pins the template the filtered fields belong to. | [optional] [example: `1`] |
-| **metadataFilters** | query | **String** | The URL-encoded JSON array of the metadata filter conditions, e.g. [\{fieldId:1,op:eq,value:ACME\},\{fieldId:2,op:range,from:2026-01-01,to:2026-06-30\},\{fieldId:3,op:in,optionIds:[...]\}]. The range bounds are inclusive; a date-only bound covers the whole day, so to:2026-06-30 includes the values stored on 30 June. A custom field is addressed by its name instead of the fieldId: \{name:Client,op:eq,value:ACME\}. The same filter is taken as a typed request body by POST api/2.0/files/rooms/search. | [optional] [example: `[{"fieldId":1,"op":"eq","value":"ACME"}]`] |
+| **metadataFilters** | query | **String** | The URL-encoded JSON array of the metadata filter conditions, e.g. [\{fieldId:1,op:contains,value:ACME\},\{fieldId:2,op:range,from:2026-01-01,to:2026-06-30\},\{fieldId:3,op:in,optionIds:[...]\}]. A string field takes eq (the whole value) or contains (a part of it); a number or a date field takes range with inclusive bounds, or gt, gte, lt, lte with the single bound in value; a choice field takes in. A date-only bound covers the whole day, so to:2026-06-30 includes the values stored on 30 June and gt:2026-06-30 starts after it. A custom field is addressed by its name instead of the fieldId: \{name:Client,op:eq,value:ACME\}. The same filter is taken as a typed request body by POST api/2.0/files/rooms/search. | [optional] [example: `[{"fieldId":1,"op":"eq","value":"ACME"}]`] |
+| **includeHiddenMetadata** | query | **Boolean** | Whether the text search, and the metadataMatches it reports, also look at the values of the hidden metadata templates (created with visible false for the metadata a service keeps for itself, which the web client never shows). False, the default, leaves them out, so an entry is not found by such a value; true takes them in. metadataTemplateId and metadataFilters are not concerned: a hidden template or field named there is searched either way. | [optional] [example: `false`] |
 
 ## Responses
 

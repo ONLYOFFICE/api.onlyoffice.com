@@ -10,11 +10,11 @@ Before you begin, make sure you meet the [prerequisites](./get-started.md#prereq
 
 :::
 
-There are two ways to embed a working DocSpace instance in your web application. You can do it using an HTML script tag, or installing our [npm package](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js). Both methods render DocSpace inside a `div` you control.
+There are two ways to embed a working ONLYOFFICE Apps instance in your web application. You can do it using an HTML script tag, or installing our [npm package](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js). Both methods render ONLYOFFICE Apps inside a `div` you control.
 
 ## Embedding with a script tag
 
-The fastest way to get DocSpace running in your app is via a script tag. No install required.
+The fastest way to get ONLYOFFICE Apps running in your app is via a script tag. No install required.
 
 **Step 1.** Add a placeholder `div` to your HTML file:
 
@@ -22,7 +22,7 @@ The fastest way to get DocSpace running in your app is via a script tag. No inst
 <div id="ds-frame"></div>
 ```
 
-**Step 2.** Load the SDK from your DocSpace server:
+**Step 2.** Load the SDK from your ONLYOFFICE Apps server:
 
 ```html
 <script src="https://your-docspace.onlyoffice.com/static/scripts/sdk/2.2.0/api.js"></script>
@@ -37,7 +37,9 @@ const docSpace = DocSpace.SDK.initManager({
 });
 ```
 
-The DocSpace instance will render inside the `ds-frame` div. Users who are already logged in will see their workspace immediately. Users who are not logged in will be prompted to sign in.
+The ONLYOFFICE Apps instance will render inside the `ds-frame` div. Users who are already logged in will see their workspace immediately. Users who are not logged in will be prompted to sign in.
+
+`src` must be the portal's own absolute URL — the SDK only accepts messages from the iframe if they come from that exact origin, so a `src` that redirects to a different origin on load will leave the frame looking stuck, with no error of its own.
 
 Below is a basic working example you can save and serve to verify your setup:
 
@@ -46,7 +48,7 @@ Below is a basic working example you can save and serve to verify your setup:
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>DocSpace</title>
+    <title>ONLYOFFICE Apps</title>
     <style>
       html,
       body {
@@ -80,7 +82,7 @@ This example uses the `initManager` mode. Configuration options may change depen
 
 :::tip
 
-If you are testing on localhost, make sure to whitelist your local origin (e.g., `http://localhost:<port>`) in your DocSpace settings under the **Embed SDK** tab.
+If you are testing on localhost, make sure to whitelist your local origin (e.g., `http://localhost:<port>`) in ONLYOFFICE Apps **Developer Tools** → **Embed SDK**.
 
 :::
 
@@ -135,17 +137,17 @@ export default function App() {
 npm run dev
 ```
 
-Open `http://localhost:5173` in your browser to access your DocSpace instance.
+Open `http://localhost:5173` in your browser to access your ONLYOFFICE Apps instance.
 
 :::tip
 
-If you are testing on localhost, make sure to whitelist your local origin (e.g., `http://localhost:5173`) in your DocSpace settings under the **Embed SDK** tab. If you still see a Content Security Policy (CSP) error, add `checkCSP: false` to your config (for local development only).
+If you are testing on localhost, make sure to whitelist your local origin (e.g., `http://localhost:5173`) in ONLYOFFICE Apps **Developer Tools** → **Embed SDK**. If you still see a Content Security Policy (CSP) error, add `checkCSP: false` to your config (for local development only).
 
 :::
 
 ## What's next
 
-Now that DocSpace is running, a few parameters to explore:
+Now that ONLYOFFICE Apps is running, a few parameters to explore:
 
 - `showMenu` — show or hide the left navigation panel
 - `width` / `height` — control the frame dimensions (percentages or pixels)

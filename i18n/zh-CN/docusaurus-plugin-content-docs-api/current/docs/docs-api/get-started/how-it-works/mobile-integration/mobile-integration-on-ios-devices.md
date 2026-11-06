@@ -14,11 +14,11 @@ sidebar_label: iOS
 
 ### 打开 ONLYOFFICE 编辑器
 
-1. 下载并安装ONLYOFFICE 文档[企业版](https://www.onlyoffice.com/zh/docs-enterprise?from=api)或[开发者版](https://www.onlyoffice.com/zh/developer-edition?from=api)。
+1. 下载并安装 ONLYOFFICE 文档[企业版](https://www.onlyoffice.com/zh/docs-enterprise?from=api)或[开发者版](https://www.onlyoffice.com/zh/developer-edition?from=api)。
 
 2. 从 [GitHub](https://github.com/ONLYOFFICE/editors-webview-ios) 下载 iOS 移动演示示例。
 
-3. 使用 [Xcode](https://developer.apple.com/xcode/) 打开 `EditorWebViewDemo.xcodeproj` 项目，修改代码以适应您的DMS系统。
+3. 使用 [Xcode](https://developer.apple.com/xcode/) 打开 `EditorWebViewDemo.xcodeproj` 项目，修改代码以适应您的 DMS 系统。
 
 4. 在 `EditorWebViewDemo.xcconfig` 配置文件中设置 `DOCUMENT_SERVER_EXAMPLE_URL` 属性值为 ONLYOFFICE 文档示例页面的地址：
 

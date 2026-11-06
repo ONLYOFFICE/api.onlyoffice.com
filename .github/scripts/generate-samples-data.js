@@ -58,7 +58,8 @@ for (const source of SOURCES) {
   }
 
   const patterns = source.include || ['**/*.md'];
-  const files = patterns.flatMap(p => glob.sync(p, { cwd: samplesDir }));
+  // glob 7 sorted its results; newer versions do not, so sort to keep the output order stable.
+  const files = patterns.flatMap(p => glob.sync(p, { cwd: samplesDir, posix: true }).sort());
 
   const items = files
     .filter(f => {

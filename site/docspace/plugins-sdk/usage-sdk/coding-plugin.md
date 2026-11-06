@@ -24,7 +24,7 @@ Develop a plugin. Follow the plugin structure described [here](plugin-structure.
 
 - Specify [plugin messages](coding-plugin/interfaces/utils.md) that will be returned by the items. Use the appropriate [events](coding-plugin/enums/Actions.md) that will be processed on the portal side.
 
-- Learn which [plugin components](coding-plugin/interfaces/components/index.md) can be used for the DocSpace plugin interface and add them to your scripts. You can also pass a React component through the `component` or `dialogBodyComponent` property instead of a declarative [IBox](coding-plugin/interfaces/components/IBox.md) tree.
+- Learn which [plugin components](coding-plugin/interfaces/components/index.md) can be used for the ONLYOFFICE Apps plugin interface and add them to your scripts. You can also pass a React component through the `component` or `dialogBodyComponent` property instead of a declarative [IBox](coding-plugin/interfaces/components/IBox.md) tree.
 
 ## React components
 
@@ -33,7 +33,7 @@ An item can render a React component instead of a declarative [IBox](coding-plug
 - `component` on [IInfoPanelItem](coding-plugin/interfaces/items/IInfoPanelItem.md), [IArticleButtonItem](coding-plugin/interfaces/items/IArticleButtonItem.md), [IArticleNavigationItem](coding-plugin/interfaces/items/IArticleNavigationItem.md), [IMediaViewer](coding-plugin/interfaces/components/IMediaViewer.md), and [ISettings](coding-plugin/interfaces/settings/ISettings.md)
 - `dialogBodyComponent` on [IModalDialog](coding-plugin/interfaces/components/IModalDialog.md)
 
-The component is rendered inside the DocSpace application tree and reaches the portal through the hooks from *@onlyoffice/docspace-plugin-sdk/react*:
+The component is rendered inside the ONLYOFFICE Apps application tree and reaches the portal through the hooks from *@onlyoffice/docspace-plugin-sdk/react*:
 
 ``` tsx
 import {
@@ -82,7 +82,7 @@ function FileList() {
 
 ### External Dependencies
 
-`react`, `react-dom`, `react/jsx-runtime`, *@onlyoffice/docspace-plugin-sdk/react*, and *@onlyoffice/apps-ui-kit* must stay out of the plugin bundle — DocSpace supplies them at load time.
+`react`, `react-dom`, `react/jsx-runtime`, *@onlyoffice/docspace-plugin-sdk/react*, and *@onlyoffice/apps-ui-kit* must stay out of the plugin bundle — ONLYOFFICE Apps supplies them at load time.
 
 **Import only from `@onlyoffice/apps-ui-kit`; do not use subpath imports.** The portal only substitutes the exact package specifier `@onlyoffice/apps-ui-kit`. A plugin that imports `@onlyoffice/apps-ui-kit/components/button` will fail to load with an error: "…which the portal does not provide."
 

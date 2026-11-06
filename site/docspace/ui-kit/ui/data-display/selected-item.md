@@ -129,24 +129,24 @@ export function ActiveFilters() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `label` | `ReactNode` | Text of the chip. A falsy label renders nothing at all. |
-| `onClose` | `(propKey: string \| number, label: React.ReactNode, group?: string, e?: React.MouseEvent) => void` | Called when the cross is clicked, with `propKey`, `label`, `group` (`""` when it was not set) and the event. |
-| `propKey` | `number \| string` | Identifier handed back to `onClose` and `onClick`. It is not used for anything else. |
-| `className`? | `string` | Applied to the outermost element. |
-| `classNameCloseButton`? | `string` | Applied to the cross button, in addition to the class the component needs there itself. |
-| `clickable`? | `boolean` | Ignored. Nothing reads this prop; passing `onClick` is what makes the chip clickable. |
-| `dataTestId`? | `string` | `data-testid` of the outermost element. |
-| `forwardedRef`? | `RefObject<HTMLDivElement \| null>` | Ref to the outermost element. |
-| `group`? | `string` | Second identifier handed back to both handlers, for chips that belong to several filters. |
-| `hideCross`? | `boolean` | Whether the cross is left out. `onClose` then has nothing to fire it. |
-| `icon`? | `FC<SVGProps<SVGSVGElement>> \| string` | Glyph before the label: an SVG URL, or a component rendered with no props. |
-| `id`? | `string` | Applied to the outermost element. |
-| `isActive`? | `boolean` | Whether the chip is drawn in its selected colours. |
-| `isDisabled`? | `boolean` | Whether the chip is inert. Both handlers stop firing and the label and the cross grey out. Default: `false`. |
-| `isInline`? | `boolean` | Whether the chip shrinks to its content. Without it the chip fills the width of its container. Default: `true`. |
-| `onClick`? | `(propKey: string \| number, label: React.ReactNode, group?: string, e?: React.MouseEvent<HTMLElement>) => void` | Called when the chip is clicked, with `propKey`, `label`, `group` and the event. A click on the cross reaches it too, after `onClose`. |
-| `style`? | `CSSProperties` | Ignored. Nothing reads this prop; style the chip through `className` or the custom properties. |
-| `title`? | `string` | Text of the kit's shared tooltip for a truncated label; it shows only once `RootTooltip` is mounted. |
+| `label` | `ReactNode` | **Required.** Text of the chip. A falsy label renders nothing at all. |
+| `onClose` | `(propKey: string \| number, label: React.ReactNode, group?: string, e?: React.MouseEvent) => void` | **Required.** Called when the cross is clicked, with `propKey`, `label`, `group` (`""` when it was not set) and the event. |
+| `propKey` | `number \| string` | **Required.** Identifier handed back to `onClose` and `onClick`. It is not used for anything else. |
+| `className` | `string` | Applied to the outermost element. |
+| `classNameCloseButton` | `string` | Applied to the cross button, in addition to the class the component needs there itself. |
+| `clickable` | `boolean` | Ignored. Nothing reads this prop; passing `onClick` is what makes the chip clickable. |
+| `dataTestId` | `string` | `data-testid` of the outermost element. |
+| `forwardedRef` | `RefObject<HTMLDivElement \| null>` | Ref to the outermost element. |
+| `group` | `string` | Second identifier handed back to both handlers, for chips that belong to several filters. |
+| `hideCross` | `boolean` | Whether the cross is left out. `onClose` then has nothing to fire it. |
+| `icon` | `FC<SVGProps<SVGSVGElement>> \| string` | Glyph before the label: an SVG URL, or a component rendered with no props. |
+| `id` | `string` | Applied to the outermost element. |
+| `isActive` | `boolean` | Whether the chip is drawn in its selected colours. |
+| `isDisabled` | `boolean` | Whether the chip is inert. Both handlers stop firing and the label and the cross grey out. Default: `false`. |
+| `isInline` | `boolean` | Whether the chip shrinks to its content. Without it the chip fills the width of its container. Default: `true`. |
+| `onClick` | `(propKey: string \| number, label: React.ReactNode, group?: string, e?: React.MouseEvent<HTMLElement>) => void` | Called when the chip is clicked, with `propKey`, `label`, `group` and the event. A click on the cross reaches it too, after `onClose`. |
+| `style` | `CSSProperties` | Ignored. Nothing reads this prop; style the chip through `className` or the custom properties. |
+| `title` | `string` | Text of the kit's shared tooltip for a truncated label; it shows only once `RootTooltip` is mounted. |
 
 </APITable>
 

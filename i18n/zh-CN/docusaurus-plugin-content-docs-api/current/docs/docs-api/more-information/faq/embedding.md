@@ -31,7 +31,7 @@ sidebar_position: -9
 
 嵌入模式只允许使用三个控制按钮显示文档：**下载**、 **共享**和**嵌入**。您可以通过以下方式更改这些按钮的行为：
 
-- `editorConfig.embedded.embedUrl` 是配置中 `type` 参数设置为 **embedded** 的文档的绝对URL，其他用户可以使用该URL将其嵌入到自己的网站页面中。
+- `editorConfig.embedded.embedUrl` 是配置中 `type` 参数设置为 **embedded** 的文档的绝对 URL，其他用户可以使用该 URL 将其嵌入到自己的网站页面中。
 
 - `editorConfig.embedded.saveUrl` 是 `document.permissions.download` 参数设置为 `true` 的文档的绝对 URL，其他用户可以根据文件类型以 DOCX、PPTX 或 XLSX 格式将其保存到自己的计算机上。
 

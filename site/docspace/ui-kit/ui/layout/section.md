@@ -155,92 +155,92 @@ export function Page() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children` | `ReactNode` | The slots. Each child must be one of the ten `Section.*` markers; the section reads their contents and renders them in its own places, and drops everything else. With no header, filter or body slot it renders nothing at all. |
-| `settingsStudio` | `boolean` | Applies the settings pages' narrower body padding. Default: `false`. |
-| `withBodyScroll` | `boolean` | Whether the section scrolls its own body. With `false` the page scrolls instead and the section takes a 20px inline-start padding. Default: `true`. |
-| `aiChatID`? | `string` | Not read. Nothing in the component destructures it. |
-| `aiChatIsVisible`? | `boolean` | Not read. Nothing in the component destructures it. |
-| `aiSelectedFolder`? | `number \| string` | Not read. Nothing in the component destructures it. |
-| `aiUserId`? | `string` | Not read. Nothing in the component destructures it. |
-| `anotherDialogOpen`? | `boolean` | Suppresses the info panel below the desktop breakpoint while a dialog of yours is open, so the two do not stack. |
-| `asideInfoPanel`? | `boolean` | Not read. The info panel reads `topInfoPanel`, which the section never passes on. |
-| `bannerContent`? | `ReactNode` | Not read by the section: the banner comes from the `SectionBanner` slot instead. |
-| `cancelSecondaryOperationById`? | `(operation: string, operationId: string) => void` | Cancels one background operation by id. |
-| `cancelUpload`? | `() => void` | Called by the progress button's cancel control while an upload is running. |
-| `canDisplay`? | `boolean` | **The info panel is not rendered without this.** `isInfoPanelVisible` alone is not enough: both must be true. |
-| `chatFiles`? | `(TFile \| TFolder)[]` | Not read. Nothing in the component destructures it. |
-| `chatPanelDropTargetLabel`? | `string` | Overlay label shown while a drag started in the section body hovers the chat panel; leave unset the rest of the time. The host owns both the hit-testing (its list drag is mouse-based, not HTML5 DnD) and the wording — the panel only renders the affordance. |
-| `chatPanelWidth`? | `number` | Current width of the docked chat panel in pixels. |
-| `clearDropPreviewLocation`? | `() => void` | Clears that drop preview. |
-| `clearPrimaryProgressData`? | `(operation?: string \| null) => void` | Clears a finished upload operation. |
-| `clearSecondaryProgressData`? | `(operationId?: string \| null, operation?: string \| null, operationItem?: Operation) => void` | Clears a finished background operation. |
-| `currentDeviceType`? | `DeviceType` | Which layout to render. It decides where the header and the filter go, whether the body scrolls itself, and whether the info panel is inline or a portal over the page. Nothing here measures the viewport. |
-| `displayFileExtension`? | `boolean` | Not read. Nothing in the component destructures it. |
-| `dragging`? | `boolean` | Whether a drag of the host's own items is in progress, which the progress button uses for its drop-preview state. |
-| `dropTargetPreview`? | `string` | Name of the folder a dragged item would land in, shown by the progress button. |
-| `fullHeightBody`? | `boolean` | Makes the body fill the section's height rather than its content's, for a chat-like page whose inner regions scroll instead. |
-| `getContextModel`? | `() => ContextMenuModel[]` | Returns the model for the body's own right-click menu. Without it no menu is mounted; it is also suppressed while `isIndexEditingMode` is set. |
-| `getIcon`? | `(size: number, fileExst: string) => string` | Not read. Nothing in the component destructures it. |
-| `inert`? | `boolean` | Marks the section root (`#section`) and its whole subtree as inert — non-focusable and non-interactive. Used when the section is visually collapsed but kept mounted (e.g. behind the fullscreen AI chat panel). |
-| `infoPanelWithoutScroll`? | `boolean` | Removes the info panel body's scroller and the aside's, for a body that scrolls its own regions. |
-| `isChatPanelAvailable`? | `boolean` | Whether the AI chat region exists at all. It defaults to `false`. Default: `false`. |
-| `isChatPanelFullscreen`? | `boolean` | Whether the host renders the chat panel fullscreen right now. |
-| `isChatPanelResizable`? | `boolean` | Opt-in edge resizer for the docked chat panel (desktop only). Pass the width the host stores plus a setter; leave unset for a fixed-width panel. |
-| `isChatPanelVisible`? | `boolean` | Whether the AI chat panel is open. |
-| `isDesktop`? | `boolean` | Not read by the section: it is never forwarded to the body. |
-| `isEmptyPage`? | `boolean` | Not read. Nothing in the component destructures it. |
-| `isHeaderVisible`? | `boolean` | Not read. Nothing in the component destructures it. |
-| `isIndexEditingMode`? | `boolean` | Suppresses the body's right-click menu while the listing is being reordered. |
-| `isInfoPanelAvailable`? | `boolean` | Whether the info panel region exists at all. It defaults to `true`, so the panel's markup is mounted unless you turn it off. Default: `true`. |
-| `isInfoPanelScrollLocked`? | `boolean` | Freezes the info panel's own scroller, for a drag or a menu that must not scroll the panel under it. |
-| `isInfoPanelVisible`? | `boolean` | Whether the info panel is open. It narrows the section and is one of the two conditions for the panel being rendered at all — `canDisplay` is the other. |
-| `isMobileHidden`? | `boolean` | Hides the info panel on anything narrower than a desktop, where it would otherwise cover the page. |
-| `isTabletView`? | `boolean` | Not read. Nothing in the component destructures it. |
-| `isTrashFolder`? | `boolean` | Not read. Nothing in the component destructures it. |
-| `mainBarVisible`? | `boolean` | Not read. Nothing in the component destructures it. |
-| `mainButtonVisible`? | `boolean` | Whether the main button is on screen, which moves the progress button clear of it. |
-| `maintenanceExist`? | `boolean` | Not read. Nothing in the component destructures it. |
-| `needErrorChecking`? | `boolean` | Makes the progress button check its operations for errors before reporting them complete. |
-| `onCancelOperation`? | `(callback: () => void) => void` | Not read. Nothing in the component destructures it. |
-| `onClose`? | `() => void` | Not read by the section: it is never forwarded to the info panel. |
-| `onDragLeaveEmpty`? | `() => void` | Called when a drag leaves the body. |
-| `onDragOverEmpty`? | `(isDragActive: boolean) => void` | Called on every drag-over of the body, with a drag-active flag that is one render behind. |
-| `onDrop`? | `TOnDrop` | Called with the files dropped anywhere on the body, which is itself a drop target. Nothing is filtered and nothing is highlighted — see `DragAndDrop`. |
-| `onOpenUploadPanel`? | `() => void` | Called when the operations button asks to open the upload panel. |
-| `pathname`? | `string` | The current route. Changing it re-focuses the body on a desktop, which is how the portal restores keyboard scrolling after a navigation. |
-| `pluginOperations`? | `Operation[]` | Operations contributed by plugins, merged into the background operations of the progress button. Default: `[]`. |
-| `pluginOperationsAlert`? | `boolean` | Puts the progress button in its alert state for a failed plugin operation. |
-| `pluginOperationsCompleted`? | `boolean` | Whether those plugin operations have finished. |
-| `pluginShowCancelButton`? | `boolean` | Forces the progress button's cancel control on, whatever the operations say. |
-| `primaryOperationsAlert`? | `boolean` | Puts the progress button in its alert state for a failed upload. |
-| `primaryOperationsArray`? | `Operation[]` | Upload operations shown in the progress button's own panel. Default: `[]`. |
-| `primaryOperationsCanceled`? | `boolean` | Whether the uploads were cancelled. |
-| `primaryOperationsCompleted`? | `boolean` | Whether the panel operations — uploads — have finished. |
-| `progressBarDropDownContent`? | `ReactNode` | Not read. Nothing in the component destructures it. |
-| `ref`? | `RefObject<HTMLDivElement \| null>` | Not read by the section: it keeps its own ref on the container. |
-| `scrollableBanner`? | `boolean` | When true, the banner is rendered inside the scrollable body (as its first element) instead of being pinned above the scroll container. Lets the banner scroll away under the sticky section header. Defaults to false to preserve the legacy pinned-banner behaviour. |
-| `secondaryActiveOperations`? | `Operation[]` | Background operations shown in the progress button. Its length is one of the three that decide whether the button appears. Default: `[]`. |
-| `secondaryOperationsAlert`? | `boolean` | Puts the progress button in its alert state for a failed background operation. |
-| `secondaryOperationsCompleted`? | `boolean` | Whether the background operations have finished, for the progress button's completed state. |
-| `secondaryOperationsStopped`? | `boolean` | Whether the background operations were stopped rather than finished. |
-| `setAiChatIsVisible`? | `() => void` | Not read. Nothing in the component destructures it. |
-| `setChatPanelFullscreen`? | `() => void` | Turns the chat panel fullscreen on. Called when the edge resizer is dragged past the widest docked width; leave unset to keep that drag clamped at the limit. |
-| `setChatPanelWidth`? | `(value: number) => void` | Called once per resize drag, on mouse up, with the committed width. |
-| `setIsChatPanelVisible`? | `(value: boolean) => void` | Called by the chat panel's own close control. |
-| `setIsInfoPanelVisible`? | `(value: boolean) => void` | Called with `false` when the info panel closes itself — a click beside it, or the browser going back below the desktop breakpoint. |
-| `showText`? | `boolean` | Not read. Nothing in the component destructures it. |
-| `snackbarExist`? | `boolean` | Not read. Nothing in the component destructures it. |
-| `startDropPreview`? | `() => void` | Its mere presence makes the progress button appear, even with no operations, so that a drag can show its drop preview. |
-| `stickyTableHeader`? | `boolean` | When true, the desktop SectionFilter slot is rendered INSIDE the scroll body as a sticky element (below the optional scrollable banner) instead of the always-pinned `.section-sticky-container`, and the table header is switched from `position: fixed` to `position: sticky` so it pins below the in-body filter natively (no host JS to measure the header `top`). The host supplies the pin offset via the `--section-filter-bottom` CSS variable. Defaults to false (legacy fixed-header + sticky-container-filter). |
-| `topInfoPanel`? | `boolean` | Not read by the section: it is never forwarded to the info panel. |
-| `unsetChatPanelFullscreen`? | `() => void` | Turns the chat panel fullscreen off. Called when the resizer is dragged back inwards in fullscreen, which then continues as a normal resize. |
-| `uploadFiles`? | `boolean` | Not read. Nothing in the body destructures it. |
-| `user`? | `TUser` | Not read. Nothing in the component destructures it. |
-| `vectorizedFiles`? | `TFile[]` | Not read. Nothing in the component destructures it. |
-| `viewAs`? | `TViewAs` | Which listing the body holds. It changes the body's padding, and in `row` view it lets a click beside the info panel close it. |
-| `withoutFooter`? | `boolean` | Drops both the footer slot and the spacer under the body. Default: `false`. |
-| `withoutScroll`? | `boolean` | Not read at this level. The component passes `infoPanelWithoutScroll` here instead. |
-| `withTabs`? | `boolean` | Tells the filter row that tabs sit above it, which removes its top margin. Honoured below the desktop breakpoint, where the filter lives inside the body. |
+| `children` | `ReactNode` | **Required.** The slots. Each child must be one of the ten `Section.*` markers; the section reads their contents and renders them in its own places, and drops everything else. With no header, filter or body slot it renders nothing at all. |
+| `settingsStudio` | `boolean` | **Required.** Applies the settings pages' narrower body padding. Default: `false`. |
+| `withBodyScroll` | `boolean` | **Required.** Whether the section scrolls its own body. With `false` the page scrolls instead and the section takes a 20px inline-start padding. Default: `true`. |
+| `aiChatID` | `string` | Not read. Nothing in the component destructures it. |
+| `aiChatIsVisible` | `boolean` | Not read. Nothing in the component destructures it. |
+| `aiSelectedFolder` | `number \| string` | Not read. Nothing in the component destructures it. |
+| `aiUserId` | `string` | Not read. Nothing in the component destructures it. |
+| `anotherDialogOpen` | `boolean` | Suppresses the info panel below the desktop breakpoint while a dialog of yours is open, so the two do not stack. |
+| `asideInfoPanel` | `boolean` | Not read. The info panel reads `topInfoPanel`, which the section never passes on. |
+| `bannerContent` | `ReactNode` | Not read by the section: the banner comes from the `SectionBanner` slot instead. |
+| `cancelSecondaryOperationById` | `(operation: string, operationId: string) => void` | Cancels one background operation by id. |
+| `cancelUpload` | `() => void` | Called by the progress button's cancel control while an upload is running. |
+| `canDisplay` | `boolean` | **The info panel is not rendered without this.** `isInfoPanelVisible` alone is not enough: both must be true. |
+| `chatFiles` | `(TFile \| TFolder)[]` | Not read. Nothing in the component destructures it. |
+| `chatPanelDropTargetLabel` | `string` | Overlay label shown while a drag started in the section body hovers the chat panel; leave unset the rest of the time. The host owns both the hit-testing (its list drag is mouse-based, not HTML5 DnD) and the wording — the panel only renders the affordance. |
+| `chatPanelWidth` | `number` | Current width of the docked chat panel in pixels. |
+| `clearDropPreviewLocation` | `() => void` | Clears that drop preview. |
+| `clearPrimaryProgressData` | `(operation?: string \| null) => void` | Clears a finished upload operation. |
+| `clearSecondaryProgressData` | `(operationId?: string \| null, operation?: string \| null, operationItem?: Operation) => void` | Clears a finished background operation. |
+| `currentDeviceType` | `DeviceType` | Which layout to render. It decides where the header and the filter go, whether the body scrolls itself, and whether the info panel is inline or a portal over the page. Nothing here measures the viewport. |
+| `displayFileExtension` | `boolean` | Not read. Nothing in the component destructures it. |
+| `dragging` | `boolean` | Whether a drag of the host's own items is in progress, which the progress button uses for its drop-preview state. |
+| `dropTargetPreview` | `string` | Name of the folder a dragged item would land in, shown by the progress button. |
+| `fullHeightBody` | `boolean` | Makes the body fill the section's height rather than its content's, for a chat-like page whose inner regions scroll instead. |
+| `getContextModel` | `() => ContextMenuModel[]` | Returns the model for the body's own right-click menu. Without it no menu is mounted; it is also suppressed while `isIndexEditingMode` is set. |
+| `getIcon` | `(size: number, fileExst: string) => string` | Not read. Nothing in the component destructures it. |
+| `inert` | `boolean` | Marks the section root (`#section`) and its whole subtree as inert — non-focusable and non-interactive. Used when the section is visually collapsed but kept mounted (e.g. behind the fullscreen AI chat panel). |
+| `infoPanelWithoutScroll` | `boolean` | Removes the info panel body's scroller and the aside's, for a body that scrolls its own regions. |
+| `isChatPanelAvailable` | `boolean` | Whether the AI chat region exists at all. It defaults to `false`. Default: `false`. |
+| `isChatPanelFullscreen` | `boolean` | Whether the host renders the chat panel fullscreen right now. |
+| `isChatPanelResizable` | `boolean` | Opt-in edge resizer for the docked chat panel (desktop only). Pass the width the host stores plus a setter; leave unset for a fixed-width panel. |
+| `isChatPanelVisible` | `boolean` | Whether the AI chat panel is open. |
+| `isDesktop` | `boolean` | Not read by the section: it is never forwarded to the body. |
+| `isEmptyPage` | `boolean` | Not read. Nothing in the component destructures it. |
+| `isHeaderVisible` | `boolean` | Not read. Nothing in the component destructures it. |
+| `isIndexEditingMode` | `boolean` | Suppresses the body's right-click menu while the listing is being reordered. |
+| `isInfoPanelAvailable` | `boolean` | Whether the info panel region exists at all. It defaults to `true`, so the panel's markup is mounted unless you turn it off. Default: `true`. |
+| `isInfoPanelScrollLocked` | `boolean` | Freezes the info panel's own scroller, for a drag or a menu that must not scroll the panel under it. |
+| `isInfoPanelVisible` | `boolean` | Whether the info panel is open. It narrows the section and is one of the two conditions for the panel being rendered at all — `canDisplay` is the other. |
+| `isMobileHidden` | `boolean` | Hides the info panel on anything narrower than a desktop, where it would otherwise cover the page. |
+| `isTabletView` | `boolean` | Not read. Nothing in the component destructures it. |
+| `isTrashFolder` | `boolean` | Not read. Nothing in the component destructures it. |
+| `mainBarVisible` | `boolean` | Not read. Nothing in the component destructures it. |
+| `mainButtonVisible` | `boolean` | Whether the main button is on screen, which moves the progress button clear of it. |
+| `maintenanceExist` | `boolean` | Not read. Nothing in the component destructures it. |
+| `needErrorChecking` | `boolean` | Makes the progress button check its operations for errors before reporting them complete. |
+| `onCancelOperation` | `(callback: () => void) => void` | Not read. Nothing in the component destructures it. |
+| `onClose` | `() => void` | Not read by the section: it is never forwarded to the info panel. |
+| `onDragLeaveEmpty` | `() => void` | Called when a drag leaves the body. |
+| `onDragOverEmpty` | `(isDragActive: boolean) => void` | Called on every drag-over of the body, with a drag-active flag that is one render behind. |
+| `onDrop` | `TOnDrop` | Called with the files dropped anywhere on the body, which is itself a drop target. Nothing is filtered and nothing is highlighted — see `DragAndDrop`. |
+| `onOpenUploadPanel` | `() => void` | Called when the operations button asks to open the upload panel. |
+| `pathname` | `string` | The current route. Changing it re-focuses the body on a desktop, which is how the portal restores keyboard scrolling after a navigation. |
+| `pluginOperations` | `Operation[]` | Operations contributed by plugins, merged into the background operations of the progress button. Default: `[]`. |
+| `pluginOperationsAlert` | `boolean` | Puts the progress button in its alert state for a failed plugin operation. |
+| `pluginOperationsCompleted` | `boolean` | Whether those plugin operations have finished. |
+| `pluginShowCancelButton` | `boolean` | Forces the progress button's cancel control on, whatever the operations say. |
+| `primaryOperationsAlert` | `boolean` | Puts the progress button in its alert state for a failed upload. |
+| `primaryOperationsArray` | `Operation[]` | Upload operations shown in the progress button's own panel. Default: `[]`. |
+| `primaryOperationsCanceled` | `boolean` | Whether the uploads were cancelled. |
+| `primaryOperationsCompleted` | `boolean` | Whether the panel operations — uploads — have finished. |
+| `progressBarDropDownContent` | `ReactNode` | Not read. Nothing in the component destructures it. |
+| `ref` | `RefObject<HTMLDivElement \| null>` | Not read by the section: it keeps its own ref on the container. |
+| `scrollableBanner` | `boolean` | When true, the banner is rendered inside the scrollable body (as its first element) instead of being pinned above the scroll container. Lets the banner scroll away under the sticky section header. Defaults to false to preserve the legacy pinned-banner behaviour. |
+| `secondaryActiveOperations` | `Operation[]` | Background operations shown in the progress button. Its length is one of the three that decide whether the button appears. Default: `[]`. |
+| `secondaryOperationsAlert` | `boolean` | Puts the progress button in its alert state for a failed background operation. |
+| `secondaryOperationsCompleted` | `boolean` | Whether the background operations have finished, for the progress button's completed state. |
+| `secondaryOperationsStopped` | `boolean` | Whether the background operations were stopped rather than finished. |
+| `setAiChatIsVisible` | `() => void` | Not read. Nothing in the component destructures it. |
+| `setChatPanelFullscreen` | `() => void` | Turns the chat panel fullscreen on. Called when the edge resizer is dragged past the widest docked width; leave unset to keep that drag clamped at the limit. |
+| `setChatPanelWidth` | `(value: number) => void` | Called once per resize drag, on mouse up, with the committed width. |
+| `setIsChatPanelVisible` | `(value: boolean) => void` | Called by the chat panel's own close control. |
+| `setIsInfoPanelVisible` | `(value: boolean) => void` | Called with `false` when the info panel closes itself — a click beside it, or the browser going back below the desktop breakpoint. |
+| `showText` | `boolean` | Not read. Nothing in the component destructures it. |
+| `snackbarExist` | `boolean` | Not read. Nothing in the component destructures it. |
+| `startDropPreview` | `() => void` | Its mere presence makes the progress button appear, even with no operations, so that a drag can show its drop preview. |
+| `stickyTableHeader` | `boolean` | When true, the desktop SectionFilter slot is rendered INSIDE the scroll body as a sticky element (below the optional scrollable banner) instead of the always-pinned `.section-sticky-container`, and the table header is switched from `position: fixed` to `position: sticky` so it pins below the in-body filter natively (no host JS to measure the header `top`). The host supplies the pin offset via the `--section-filter-bottom` CSS variable. Defaults to false (legacy fixed-header + sticky-container-filter). |
+| `topInfoPanel` | `boolean` | Not read by the section: it is never forwarded to the info panel. |
+| `unsetChatPanelFullscreen` | `() => void` | Turns the chat panel fullscreen off. Called when the resizer is dragged back inwards in fullscreen, which then continues as a normal resize. |
+| `uploadFiles` | `boolean` | Not read. Nothing in the body destructures it. |
+| `user` | `TUser` | Not read. Nothing in the component destructures it. |
+| `vectorizedFiles` | `TFile[]` | Not read. Nothing in the component destructures it. |
+| `viewAs` | `TViewAs` | Which listing the body holds. It changes the body's padding, and in `row` view it lets a click beside the info panel close it. |
+| `withoutFooter` | `boolean` | Drops both the footer slot and the spacer under the body. Default: `false`. |
+| `withoutScroll` | `boolean` | Not read at this level. The component passes `infoPanelWithoutScroll` here instead. |
+| `withTabs` | `boolean` | Tells the filter row that tabs sit above it, which removes its top margin. Honoured below the desktop breakpoint, where the filter lives inside the body. |
 
 </APITable>
 

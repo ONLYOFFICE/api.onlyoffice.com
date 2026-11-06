@@ -90,9 +90,9 @@ export function App() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `children`? | `ReactNode` |  |
-| `fallback`? | `((error: Error) => ReactNode) \| React.ReactNode` | What to render instead of the subtree after a throw. A function receives the error. Without it the kit's own `ErrorContainer` is shown, with the error's message and an untranslated English heading. |
-| `onError`? | `(error: Error, errorInfo: ErrorInfo) => void` | Called once with the error and React's component stack. Report it here; the boundary itself logs nothing. |
+| `children` | `ReactNode` |  |
+| `fallback` | `((error: Error) => ReactNode) \| React.ReactNode` | What to render instead of the subtree after a throw. A function receives the error. Without it the kit's own `ErrorContainer` is shown, with the error's message and an untranslated English heading. |
+| `onError` | `(error: Error, errorInfo: ErrorInfo) => void` | Called once with the error and React's component stack. Report it here; the boundary itself logs nothing. |
 
 </APITable>
 

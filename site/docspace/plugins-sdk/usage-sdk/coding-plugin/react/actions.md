@@ -237,7 +237,7 @@ open and switches to the tab.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `tab?` | `string` | The tab to show: one of the portal's own (`"info_details"`, `"info_members"`, `"info_history"`, `"info_share"`) or the key of an [info panel item](../interfaces/items/IInfoPanelItem.md) this plugin registered. Always pass it: left out, the portal stores an invalid view, opens the panel on its first tab and the user's remembered tab is lost. |
+| `tab` | `string` | The tab to show: one of the portal's own (`"info_details"`, `"info_members"`, `"info_history"`, `"info_share"`) or the key of an [info panel item](../interfaces/items/IInfoPanelItem.md) this plugin registered. Always pass it: left out, the portal stores an invalid view, opens the panel on its first tab and the user's remembered tab is lost. |
 
 #### Returns
 

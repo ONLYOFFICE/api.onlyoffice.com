@@ -254,7 +254,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onOutdatedVersion
 
-显示 [错误](../../more-information/troubleshooting.md#the-file-version-has-been-changed) 后调用的函数，当使用旧的 [document.key](./document/document.md#key) 值打开文档进行编辑时。该值用于编辑以前的文档版本并成功保存。调用此事件时，必须使用新的 `document.key` 重新初始化编辑器。
+显示[错误](../../more-information/troubleshooting.md#the-file-version-has-been-changed)后调用的函数，当使用旧的 [document.key](./document/document.md#key) 值打开文档进行编辑时。该值用于编辑以前的文档版本并成功保存。调用此事件时，必须使用新的 `document.key` 重新初始化编辑器。
 
 :::danger[Deprecated]
 自 8.3 版起已弃用，请改用 [onRequestRefreshFile](#onrequestrefreshfile)。
@@ -550,7 +550,7 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-其中 `changesUrl` 是 [JSON 对象](../callback-handler.md#changesurl) 中的 `changesUrl`。
+其中 `changesUrl` 是 [JSON 对象](../callback-handler.md#changesurl)中的 `changesUrl`。
 
  
 ## onRequestInsertImage

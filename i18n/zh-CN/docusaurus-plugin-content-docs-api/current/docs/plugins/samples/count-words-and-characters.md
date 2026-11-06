@@ -12,15 +12,15 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 - 页码。
 :::
 
-**插件类型：**可视化，非系统插件。
+**插件类型：** 可视化、非系统插件。
 
-**支持的编辑器：**文档编辑器。
+**支持的编辑器：** 文档编辑器。
 
 <YoutubeVideo videoId="b2vrRO6Us6g" />
 
 ## 安装方式
 
-该插件在 ONLYOFFICE 企业版和社区版（文档或协作空间）中默认提供。
+该插件在 ONLYOFFICE 企业版和社区版（文档 + 工作区）中默认提供。
 
 你也可以从 [ONLYOFFICE 插件市场](https://github.com/ONLYOFFICE/onlyoffice.github.io/releases/latest)下载此插件，并按照[桌面端](../development-workflow/installing-and-testing/desktop-editors-installation.md)或[云端](../development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明手动安装。
 

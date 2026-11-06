@@ -122,18 +122,18 @@ export function ChangeAvatar({ t }: { t: TTranslation }) {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `image` | `TImage` | The picture and its crop, held in your state. The body is empty until `uploadedFile` is set. |
-| `onChangeFile` | `(e: React.ChangeEvent<HTMLInputElement>) => void` | Called with the change event of the hidden file input when another picture is chosen. Read the file and put it in `image.uploadedFile` yourself. |
-| `onChangeImage` | `TChangeImage` | Called with a new `image` whenever the crop is dragged or the zoom changes. Apply it to your state or nothing moves. |
-| `onClose` | `() => void` | Called after the dialog has reset `image` to an empty, centred, unzoomed one — by the cancel button, the header cross, Escape and the backdrop alike. |
-| `onSave` | `(image: TImage, preview: string) => void \| Promise<void>` | Called with the cropped `image` and its `data:` URL preview when save is clicked. The dialog neither closes itself nor sets `isLoading`. |
-| `t` | `TTranslation` | Translation function. The dialog asks it for `Common:SaveButton`, `Common:CancelButton` and `Common:ChooseAnother`, so a portal translation context is required. |
-| `title` | `string` | Text of the dialog's header. It is not translated for you. |
-| `visible` | `boolean` | Whether the dialog is on screen. |
-| `dataTestId`? | `string` | Value of `data-testid` on the dialog. |
-| `editorBorderRadius`? | `number` | Corner radius of the crop window in pixels, on the editor's 648px canvas. Default: `110`. |
-| `isLoading`? | `boolean` | Puts the save button in its loading state and blocks the editor and the cancel button. It does not block the header cross, Escape or the backdrop. Default: `false`. |
-| `maxImageSize`? | `number` | **Deprecated.** Ignored. It is handed to the image editor, which does not read it either; check the file's size in `onChangeFile`. |
+| `image` | `TImage` | **Required.** The picture and its crop, held in your state. The body is empty until `uploadedFile` is set. |
+| `onChangeFile` | `(e: React.ChangeEvent<HTMLInputElement>) => void` | **Required.** Called with the change event of the hidden file input when another picture is chosen. Read the file and put it in `image.uploadedFile` yourself. |
+| `onChangeImage` | `TChangeImage` | **Required.** Called with a new `image` whenever the crop is dragged or the zoom changes. Apply it to your state or nothing moves. |
+| `onClose` | `() => void` | **Required.** Called after the dialog has reset `image` to an empty, centred, unzoomed one — by the cancel button, the header cross, Escape and the backdrop alike. |
+| `onSave` | `(image: TImage, preview: string) => void \| Promise<void>` | **Required.** Called with the cropped `image` and its `data:` URL preview when save is clicked. The dialog neither closes itself nor sets `isLoading`. |
+| `t` | `TTranslation` | **Required.** Translation function. The dialog asks it for `Common:SaveButton`, `Common:CancelButton` and `Common:ChooseAnother`, so a portal translation context is required. |
+| `title` | `string` | **Required.** Text of the dialog's header. It is not translated for you. |
+| `visible` | `boolean` | **Required.** Whether the dialog is on screen. |
+| `dataTestId` | `string` | Value of `data-testid` on the dialog. |
+| `editorBorderRadius` | `number` | Corner radius of the crop window in pixels, on the editor's 648px canvas. Default: `110`. |
+| `isLoading` | `boolean` | Puts the save button in its loading state and blocks the editor and the cancel button. It does not block the header cross, Escape or the backdrop. Default: `false`. |
+| `maxImageSize` | `number` | **Deprecated.** Ignored. It is handed to the image editor, which does not read it either; check the file's size in `onChangeFile`. |
 
 </APITable>
 

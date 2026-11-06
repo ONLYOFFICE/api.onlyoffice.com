@@ -101,21 +101,21 @@ export function TitlePlaceholder() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `animate`? | `boolean` | Whether the band sweeps at all. Turn it off for a static placeholder. Default: `true`. |
-| `backgroundColor`? | `string` | Colour of the skeleton at rest. Fixed black, not a theme colour. Default: `"#000"`. |
-| `backgroundOpacity`? | `number` | Opacity of `backgroundColor`. Default: `0.1`. |
-| `borderRadius`? | `string` | Corner radius of the rectangle, in user units. Default: `"3"`. |
-| `className`? | `string` | Applied to the `<svg>` element. |
-| `foregroundColor`? | `string` | Colour of the band that sweeps across the skeleton. Default: `"#000"`. |
-| `foregroundOpacity`? | `number` | Opacity of `foregroundColor`. Default: `0.15`. |
-| `height`? | `string` | Height of the `<svg>` element and of the rectangle inside it. Default: `"32px"`. |
-| `speed`? | `number` | Duration of one sweep, in seconds. Default: `2`. |
-| `style`? | `CSSProperties` | Applied to the `<svg>` element. |
-| `title`? | `string` | Accessible name of the skeleton, rendered as the SVG's `<title>`. It is empty by default, which leaves the `role="img"` element unnamed. Default: `""`. |
-| `uniqueKey`? | `string` | Optional stable id used as `uniqueKey` for the underlying react-content-loader. When omitted, a `useId()` value is used so SSR and client render the same SVG ids and no hydration mismatch is reported. |
-| `width`? | `string` | Width of the `<svg>` element and of the rectangle inside it. Any SVG length, so a percentage of the parent works. Default: `"100%"`. |
-| `x`? | `string` | Left edge of the rectangle inside the SVG, in user units. Default: `"0"`. |
-| `y`? | `string` | Top edge of the rectangle inside the SVG, in user units. Default: `"0"`. |
+| `animate` | `boolean` | Whether the band sweeps at all. Turn it off for a static placeholder. Default: `true`. |
+| `backgroundColor` | `string` | Colour of the skeleton at rest. Fixed black, not a theme colour. Default: `"#000"`. |
+| `backgroundOpacity` | `number` | Opacity of `backgroundColor`. Default: `0.1`. |
+| `borderRadius` | `string` | Corner radius of the rectangle, in user units. Default: `"3"`. |
+| `className` | `string` | Applied to the `<svg>` element. |
+| `foregroundColor` | `string` | Colour of the band that sweeps across the skeleton. Default: `"#000"`. |
+| `foregroundOpacity` | `number` | Opacity of `foregroundColor`. Default: `0.15`. |
+| `height` | `string` | Height of the `<svg>` element and of the rectangle inside it. Default: `"32px"`. |
+| `speed` | `number` | Duration of one sweep, in seconds. Default: `2`. |
+| `style` | `CSSProperties` | Applied to the `<svg>` element. |
+| `title` | `string` | Accessible name of the skeleton, rendered as the SVG's `<title>`. It is empty by default, which leaves the `role="img"` element unnamed. Default: `""`. |
+| `uniqueKey` | `string` | Optional stable id used as `uniqueKey` for the underlying react-content-loader. When omitted, a `useId()` value is used so SSR and client render the same SVG ids and no hydration mismatch is reported. |
+| `width` | `string` | Width of the `<svg>` element and of the rectangle inside it. Any SVG length, so a percentage of the parent works. Default: `"100%"`. |
+| `x` | `string` | Left edge of the rectangle inside the SVG, in user units. Default: `"0"`. |
+| `y` | `string` | Top edge of the rectangle inside the SVG, in user units. Default: `"0"`. |
 
 </APITable>
 

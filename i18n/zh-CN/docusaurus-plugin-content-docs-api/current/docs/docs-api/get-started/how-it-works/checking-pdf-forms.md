@@ -12,7 +12,7 @@ PDF 表单在表单元数据方面与标准 PDF 文件有所不同。这种元�
 为了区分标准 PDF 文件和 PDF 表单，可以使用检查函数。这些函数会读取文件的前 300 个字节，并检查其中是否存在`"ONLYOFFICEFORM"`。如果为`true`，那么这就是一个 PDF 表单。否则，它就是一个标准的 PDF 文件。
 
 :::note
-通过指定[document.isForm](../../usage-api/config/document/document.md#isform)参数，您可以加快文件的打开速度。
+通过指定 [document.isForm](../../usage-api/config/document/document.md#isform) 参数，您可以加快文件的打开速度。
 :::
 
 以下示例展示了不同编程语言的检查函数。

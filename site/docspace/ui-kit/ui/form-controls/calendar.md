@@ -99,21 +99,21 @@ export function DueDate() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `locale` | `string` | BCP 47 tag the month and weekday names are written in. Default: `"en"`. |
-| `selectedDate` | `DateTime<boolean>` | The highlighted day, as a Luxon `DateTime`. Its **time** is kept when another day is picked — only the date part is replaced. |
-| `className`? | `string` | Applied to the outermost element. |
-| `dataTestId`? | `string` | `data-testid` of the outermost element. Default: `"calendar"`. |
-| `forwardedRef`? | `RefObject<HTMLDivElement \| null>` | Ref to the outermost element. |
-| `id`? | `string` | Applied to the outermost element. |
-| `initialDate`? | `Date \| DateTime<boolean>` | Month the calendar opens on. Out-of-range values are moved to the nearer of `minDate` and `maxDate`, with a warning on the console. |
-| `isMobile`? | `boolean` | Whether the larger touch layout is used. |
-| `isScroll`? | `boolean` | Whether the grid is wrapped in a `Scrollbar` instead of sizing to its content. Default: `false`. |
-| `maxDate`? | `Date \| DateTime<boolean>` | Latest selectable day, with the same effect at the other end. |
-| `minDate`? | `Date \| DateTime<boolean>` | Earliest selectable day. Days before it are greyed and the header arrows stop at its month. |
-| `onChange`? | `(formattedDate: DateTime) => void` | Called with the newly picked day, after `setSelectedDate`. Both receive the same value; there is no separate "confirm" step. |
-| `setSelectedDate`? | `(formattedDate: DateTime) => void` | Called with the newly picked day, before `onChange`. |
-| `style`? | `CSSProperties` | Applied to the outermost element. |
-| `useMaxTime`? | `boolean` | Whether a picked day is reported at 23:59:59.999 rather than keeping the old time. |
+| `locale` | `string` | **Required.** BCP 47 tag the month and weekday names are written in. Default: `"en"`. |
+| `selectedDate` | `DateTime<boolean>` | **Required.** The highlighted day, as a Luxon `DateTime`. Its **time** is kept when another day is picked — only the date part is replaced. |
+| `className` | `string` | Applied to the outermost element. |
+| `dataTestId` | `string` | `data-testid` of the outermost element. Default: `"calendar"`. |
+| `forwardedRef` | `RefObject<HTMLDivElement \| null>` | Ref to the outermost element. |
+| `id` | `string` | Applied to the outermost element. |
+| `initialDate` | `Date \| DateTime<boolean>` | Month the calendar opens on. Out-of-range values are moved to the nearer of `minDate` and `maxDate`, with a warning on the console. |
+| `isMobile` | `boolean` | Whether the larger touch layout is used. |
+| `isScroll` | `boolean` | Whether the grid is wrapped in a `Scrollbar` instead of sizing to its content. Default: `false`. |
+| `maxDate` | `Date \| DateTime<boolean>` | Latest selectable day, with the same effect at the other end. |
+| `minDate` | `Date \| DateTime<boolean>` | Earliest selectable day. Days before it are greyed and the header arrows stop at its month. |
+| `onChange` | `(formattedDate: DateTime) => void` | Called with the newly picked day, after `setSelectedDate`. Both receive the same value; there is no separate "confirm" step. |
+| `setSelectedDate` | `(formattedDate: DateTime) => void` | Called with the newly picked day, before `onChange`. |
+| `style` | `CSSProperties` | Applied to the outermost element. |
+| `useMaxTime` | `boolean` | Whether a picked day is reported at 23:59:59.999 rather than keeping the old time. |
 
 </APITable>
 

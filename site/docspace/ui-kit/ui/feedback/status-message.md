@@ -101,8 +101,8 @@ export function SignInForm() {
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `message` | `ReactNode` | The text or nodes in the bar, and the switch that shows and hides it: an empty message fades the bar out and unmounts it. A new one is only painted once the fade of the previous one ends. |
-| `isWarning`? | `boolean` | Paints the bar in the warning colours instead of the error ones. It is read off the same ref as the message, so changing it alone does not repaint — change it together with `message`. |
+| `message` | `ReactNode` | **Required.** The text or nodes in the bar, and the switch that shows and hides it: an empty message fades the bar out and unmounts it. A new one is only painted once the fade of the previous one ends. |
+| `isWarning` | `boolean` | Paints the bar in the warning colours instead of the error ones. It is read off the same ref as the message, so changing it alone does not repaint — change it together with `message`. |
 
 </APITable>
 

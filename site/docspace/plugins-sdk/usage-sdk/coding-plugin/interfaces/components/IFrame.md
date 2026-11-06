@@ -55,12 +55,12 @@ import APITable from '@site/src/components/APITable/APITable';
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `src` | `string` | Defines the base URL to a modal window or the settings page. It is used to generate links |
-| `width?` | `string` | Defines the frame width measured in percent |
-| `height?` | `string` | Defines the frame height measured in percent |
-| `name?` | `string` | Defines the name of the object inserted into the page |
-| `sandbox?` | `string` | Defines the frame sandbox |
-| `id?` | `string` | Defines the element ID |
-| `style?` | \{ \[`key`: `string`\]: `string`; \} | Defines the frame style |
-| `className?` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
+| `width` | `string` | Defines the frame width measured in percent |
+| `height` | `string` | Defines the frame height measured in percent |
+| `name` | `string` | Defines the name of the object inserted into the page |
+| `sandbox` | `string` | Defines the frame sandbox |
+| `id` | `string` | Defines the element ID |
+| `style` | \{ \[`key`: `string`\]: `string`; \} | Defines the frame style |
+| `className` | `string` | Defines the CSS class for styling the component. Can be used to override or extend the default component styles. |
 
 </APITable>
