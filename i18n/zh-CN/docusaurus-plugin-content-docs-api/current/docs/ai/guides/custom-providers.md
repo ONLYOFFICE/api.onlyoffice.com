@@ -26,7 +26,7 @@ sidebar_position: 3
 如果提供商与 OpenAI API 兼容，则无需提供商文件。添加模型时，选择内置的 **OpenAI Compatible** 提供商，然后输入基础 URL 和 API 密钥即可。如果您需要具有自定义名称、预设基础 URL 或固定模型列表的提供商，或者提供商使用其他 API，请创建提供商文件。
 :::
 
-自定义提供商是一个声明了名为 `Provider` 的类的 JavaScript 文件。最简单的入手方式是使用模板：添加模型时，点击 **Import Custom Provider** 旁的信息图标，然后点击提示中的 **Download template**。该模板是一个完整的 OpenAI 兼容 API 提供商，文件开头的注释说明了所有方法及其参数。
+自定义提供商是一个声明了名为 `Provider` 的类的 JavaScript 文件。最简单的入手方式是使用模板：添加模型时，点击**导入自定义提供商**旁的信息图标，然后点击提示中的**下载模板**。该模板是一个完整的 OpenAI 兼容 API 提供商，文件开头的注释说明了所有方法及其参数。
 
 AI 工具在沙箱中运行该文件。无需 `import` 语句，文件也不需要返回任何内容。文件中已可直接使用以下对象：
 
@@ -45,7 +45,7 @@ AI 工具在沙箱中运行该文件。无需 `import` 语句，文件也不需�
 | `sendMessage(args)`                           | 是   | 发送聊天请求并以流式方式返回响应。这是一个异步生成器：在响应到达时产出助手消息的快照（`{ role, content }`），最后产出 `{ isEnd: true, responseMessage }`。 |
 | `sendMessageSync(args)`                       | 是   | 以非流式方式发送聊天请求。返回一个解析为响应文本的 Promise。 |
 | `imageGeneration(args)`                       | 否   | 生成图像。返回一个解析为图像 data URL 或远程 URL 的 Promise。 |
-| `static getName()`                            | 是   | 返回 **Provider** 列表中显示的提供商名称。 |
+| `static getName()`                            | 是   | 返回**提供商**列表中显示的提供商名称。 |
 | `static getBaseUrl()`                         | 是   | 返回用户添加模型时默认填写的基础 URL。 |
 | `static checkProvider({ baseUrl, apiKey })`   | 是   | 检查凭据。返回 `true` 或 `ProviderErrors` 中的某个错误。 |
 | `static getProviderModels({ baseUrl, apiKey })` | 是 | 返回模型列表：`{ id, name, provider, capabilities }` 对象。 |
@@ -309,14 +309,14 @@ function cloneSnapshot(acc, toolCallsByIndex) {
 
 要添加自定义提供商：
 
-1. 打开 **AI 工具**选项卡并点击**设置**，将打开 **AI Settings** 对话框。
+1. 打开 **AI 工具**选项卡并点击**设置**，将打开 **AI 设置**对话框。
 
     ![添加模型](/assets/images/plugins/add-model.png#gh-light-mode-only)![添加模型](/assets/images/plugins/add-model.dark.png#gh-dark-mode-only)
 
-2. 点击 **Add Model**，在 **Connect new AI Model** 表单中点击 **Import Custom Provider**，然后在系统文件选择器中选择提供商 JavaScript 文件。
+2. 点击**添加模型**，在**连接新 AI 模型**表单中点击**导入自定义提供商**，然后在系统文件选择器中选择提供商 JavaScript 文件。
 
     :::note
-    **Import Custom Provider** 旁的信息图标会打开一个包含 **Download template** 链接的提示。该模板的说明请参阅[步骤 1](#create-js-file)。下方截图以 Ollama 为例。
+    **导入自定义提供商**旁的信息图标会打开一个包含**下载模板**链接的提示。该模板的说明请参阅[步骤 1](#create-js-file)。下方截图以 Ollama 为例。
     :::
 
     <div className="side-by-side-images">
@@ -330,31 +330,31 @@ function cloneSnapshot(acc, toolCallsByIndex) {
         </div>
     </div>
 
-3. 导入后，该提供商会出现在 **Provider** 列表中。表单会根据导入的文件填写 **Provider** 和 **Base URL**，然后从端点加载 **Model** 并填写 **Profile name**。输入 **API key**，然后点击 **Add Model**。该模型将显示在 **AI Models** 选项卡的列表中。
+3. 导入后，该提供商会出现在**提供商**列表中。表单会根据导入的文件填写**提供商**和 **Base URL**，然后从端点加载**模型**并填写**配置文件名称**。输入 **API 密钥**，然后点击**添加模型**。该模型将显示在 **AI 模型**选项卡的列表中。
 
     :::note
-    导入后 **API key** 保持为空。请输入提供商提供的密钥。对于 Ollama 等本地服务器，任意值均可：服务器不会验证该密钥，但在填写该字段之前 **Add Model** 保持禁用状态。如果 **Model** 列表一直为空，说明端点阻止了请求。请参阅 [CORS 要求](#cors-requirements)或[配置 Ollama 的 CORS](./configuring-ollama-with-cors.md)。
+    导入后 **API 密钥**保持为空。请输入提供商提供的密钥。对于 Ollama 等本地服务器，任意值均可：服务器不会验证该密钥，但在填写该字段之前**添加模型**保持禁用状态。如果**模型**列表一直为空，说明端点阻止了请求。请参阅 [CORS 要求](#cors-requirements)或[配置 Ollama 的 CORS](./configuring-ollama-with-cors.md)。
     :::
 
-4. 在 **Model Assignment** 选项卡上，将自定义提供商的模型设为 **Default model** 或分配给特定任务。
+4. 在**模型分配**选项卡上，将自定义提供商的模型设为**默认模型**或分配给特定任务。
 
-    ![Model Assignment](/assets/images/plugins/model-assignment.png#gh-light-mode-only)![Model Assignment](/assets/images/plugins/model-assignment.dark.png#gh-dark-mode-only)
+    ![模型分配](/assets/images/plugins/model-assignment.png#gh-light-mode-only)![模型分配](/assets/images/plugins/model-assignment.dark.png#gh-dark-mode-only)
 
 AI 工具现已可以使用该自定义提供商。
 
 ### 管理自定义提供商 {#managing-custom-providers}
 
-如需编辑或删除已连接的模型，请在 **AI Models** 选项卡上打开其 **...** 菜单并选择 **Edit** 或 **Delete**。
+如需编辑或删除已连接的模型，请在 **AI 模型**选项卡上打开其 **...** 菜单并选择**编辑**或**删除**。
 
 ![编辑自定义提供商](/assets/images/plugins/custom-provider-edit.png#gh-light-mode-only)![编辑自定义提供商](/assets/images/plugins/custom-provider-edit.dark.png#gh-dark-mode-only)
 
 如需添加或删除提供商文件：
 
-1. 在 **AI Models** 选项卡上点击 **Custom Providers**。
+1. 在 **AI 模型**选项卡上点击**自定义提供商**。
 
     ![自定义提供商](/assets/images/plugins/add-custom-providers.png#gh-light-mode-only)![自定义提供商](/assets/images/plugins/add-custom-providers.dark.png#gh-dark-mode-only)
 
-2. 在 **Custom providers** 对话框中，点击 **Add** 上传其他提供商文件，或者选择一个提供商并点击 **Delete** 将其删除。然后点击 **Close**。
+2. 在**自定义提供商**对话框中，点击**添加**上传其他提供商文件，或者选择一个提供商并点击**删除**将其删除。然后点击**关闭**。
 
     ![自定义提供商对话框](/assets/images/plugins/add-custom-providers-dialog.png#gh-light-mode-only)![自定义提供商对话框](/assets/images/plugins/add-custom-providers-dialog.dark.png#gh-dark-mode-only)
 
