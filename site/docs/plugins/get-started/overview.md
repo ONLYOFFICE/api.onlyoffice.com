@@ -37,24 +37,24 @@ This sandboxing is intentional - it keeps the editor stable and secure regardles
 
 ## Comparing approaches
 
-Not sure which approach fits your use case? See how plugins compare to macros and custom AI tools.
+Not sure which approach fits your use case? See how plugins compare to macros.
 
 ![ONLYOFFICE API Scheme](/assets/images/plugins/api-scheme.svg#gh-light-mode-only)
 ![ONLYOFFICE API Scheme](/assets/images/plugins/api-scheme-dark.svg#gh-dark-mode-only)
 
-| Feature               | **Plugins**                        | **Macros**                   | **AI tools**                     |
-| --------------------- | ---------------------------------- | ---------------------------- | -------------------------------- |
-| **What is it?**       | HTML/CSS/JS app embedded in editor | JavaScript code in documents | Plugin + AI provider integration |
-| **Installation**      | Required (marketplace or manual)   | None (embedded in docs)      | Required (like plugins)          |
-| **User interface**    | ✅ Full custom UI                   | ❌ No UI                      | ✅ Full custom UI                 |
-| **External APIs**     | ✅ Yes (REST, GraphQL, etc.)        | ❌ No                         | ✅ Yes (AI services required)     |
-| **Offline use**       | ⚠️ Depends on features             | ✅ Fully offline              | ❌ Requires internet              |
-| **Skill level**       | Intermediate                       | Beginner                     | Advanced                         |
-| **Distribution**      | Marketplace, GitHub, private       | Copy-paste, templates        | Marketplace, private             |
-| **Best for**          | Reusable tools, integrations       | Personal automation          | AI-powered features              |
-| **Framework support** | ✅ Any (React, Vue, Angular, or plain HTML) | ❌ Plain JavaScript only      | ✅ Any (same as plugins)          |
+| Feature               | **Plugins**                        | **Macros**                   |
+| --------------------- | ---------------------------------- | ---------------------------- |
+| **What is it?**       | HTML/CSS/JS app embedded in editor | JavaScript code in documents |
+| **Installation**      | Required (marketplace or manual)   | None (embedded in docs)      |
+| **User interface**    | ✅ Full custom UI                   | ❌ No UI                      |
+| **External APIs**     | ✅ Yes (REST, GraphQL, etc.)        | ❌ No                         |
+| **Offline use**       | ⚠️ Depends on features             | ✅ Fully offline              |
+| **Skill level**       | Intermediate                       | Beginner                     |
+| **Distribution**      | Marketplace, GitHub, private       | Copy-paste, templates        |
+| **Best for**          | Reusable tools, integrations       | Personal automation          |
+| **Framework support** | ✅ Any (React, Vue, Angular, or plain HTML) | ❌ Plain JavaScript only      |
 
-Also available: [Macros](../../macros/get-started/overview.md) | [Custom AI tools](../../ai/get-started/overview.md)
+Also available: [Macros](../../macros/get-started/overview.md) | [AI Tools](../../ai/get-started/overview.md)
 
 ## Troubleshooting
 

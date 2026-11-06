@@ -8,7 +8,6 @@ import docsConnectorsData from '@site/src/data/docs-connectors-samples.json';
 import docspaceSamplesData from '@site/src/data/docspace-samples.json';
 import docspaceJsSdkData from '@site/src/data/docspace-jssdk-samples.json';
 import docspacePluginsData from '@site/src/data/docspace-plugins-samples.json';
-import docsAiSamplesData from '@site/src/data/docs-ai-samples.json';
 import docspaceAiSamplesData from '@site/src/data/docspace-ai-samples.json';
 
 function sortByTitle(items: SamplesGrid.Item[]): SamplesGrid.Item[] {
@@ -74,8 +73,5 @@ export function getDocspaceSamples(category: string): SamplesGrid.Item[] {
 }
 
 export function getAiSamples(category: string): SamplesGrid.Item[] {
-  return sortByTitle([
-    ...toItems(docsAiSamplesData, category),
-    ...toItems(docspaceAiSamplesData, category),
-  ]);
+  return sortByTitle(toItems(docspaceAiSamplesData, category));
 }
