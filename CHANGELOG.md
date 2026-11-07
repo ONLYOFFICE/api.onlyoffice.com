@@ -1,5 +1,50 @@
 # Change log
 
+## 10.2.0
+
+### New features
+
+#### Docs API
+
+* Added the Create App integration example, which generates a Next.js integration for ONLYOFFICE Docs with `@onlyoffice/create-app`
+
+#### Common
+
+* Published `robots.txt` with separate rules for each site mode
+
+### Improvements
+
+#### Docs API
+
+* Described the Share & collect button for PDF forms, the `filler` operation type in `onRequestUsers` and `setUsers`, and when `onStartFilling` receives the roles
+* Explained that `onRequestStartFilling` receives the form roles in `data` and that the handler calls `startFilling` to lock editing
+* Linked the ONLYOFFICE support contact form as the default for `feedback.url`
+* Updated the How it works, Usage API, Troubleshooting and Standard branding screenshots and UI names for 10.0
+
+#### AI
+
+* Removed the custom AI tools guide, the AI tools quick start and the AI tool samples, as AI Tools no longer supports adding custom tools
+* Rewrote the AI overview around setting up and using AI Tools
+* Documented the current custom provider file format, based on the template from the editor
+* Updated the AI Tools guides and screenshots for the new name and current editor UI
+
+#### Common
+
+* Wrapped long paths and URLs in inline code across all API table cells
+* Renamed the Support contact form footer link to Contact support and removed the Legacy version link
+* Removed the unused OpenAPI theme and plugin
+
+#### Localization
+
+* Translated the Create App integration example
+* Synced the zh-CN AI and plugin pages with English and used the zh-CN UI strings on the AI and Docs API pages
+
+### Fixes
+
+* Fixed the slug of the `ApiWorksheetFunction` INDEX method page
+* Fixed the build failing on a clean install because `glob` was missing
+* Fixed the translation of 提交 issue on the zh-CN plugin versioning page
+
 ## 10.1.0
 
 ### New features
