@@ -92,7 +92,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数                    | 类型             | 是否必填 | 描述                                                                                                                                                                                                                                                                     |
 | ----------------------- | ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options.c               | `string` | 必填 | 事件中的图像插入类型：`add`, `change`, `fill`, `watermark`, `slide`。默认值为 `"add"`。                                                                                                                                         |
+| options.c               | `string` | 非必填的 | 事件中的图像插入类型：`add`、`change`、`fill`、`watermark` 或 `slide`。默认值为 `"add"`。                                                                                                                                         |
 | options.fileType        | `string` | 必填 | 要插入文件的图像类型：`bmp`, `gif`, `jpe`, `jpeg`, `jpg`, `png`。自 7.0 版起已弃用，请改用 `options.images.fileType` 参数。                                                                                  |
 | options.images          | `object[]` | 必填 | 要插入的图像数组。                                                                                                                                                                                                                                      |
 | options.images.fileType | `string` | 必填 | 要插入文件的图像类型：`bmp`, `gif`, `jpe`, `jpeg`, `jpg`, `png`, `tif`, `tiff`。                                                                                                                                                     |
@@ -526,7 +526,7 @@ docEditor.insertImage({
 
 | 参数             | 类型   | 是否必填 | 描述                                                                                                                                                                                            |
 | ---------------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| options.c        | `string` | 必填 | 从事件中选择的文档类型：`compare`、`combine`、`insert-text`。默认值为 `"compare"`。                                                                   |
+| options.c        | `string` | 必填 | 从事件中选择的文档类型：`compare`、`combine` 或 `insert-text`。                                                                   |
 | options.fileType | `string` | 必填 | 要选择的文档类型：`doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fodt`, `odt`, `ott`, `rtf`, `wps`。                                                       |
 | options.token    | `string` | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setrequesteddocument)的形式添加到参数的加密签名。                                             |
 | options.url      | `string` | 必填 | 存储源文档的绝对 URL。使用本地链接时，请务必添加[令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
@@ -651,7 +651,7 @@ docEditor.insertImage({
 
 | 参数                | 类型             | 是否必填 | 描述                                                                                                                                                                                                      |
 | ------------------- | ---------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options.c           | `string` | 必填 | [onRequestUsers](./config/events.md#onrequestusers) 事件的操作类型：`mention`、`protect`、`info` 或 `filler`。默认值为 `mention`。|
+| options.c           | `string` | 非必填的 | [onRequestUsers](./config/events.md#onrequestusers) 事件的操作类型：`mention`、`protect`、`info` 或 `filler`。默认值为 `mention`。|
 | options.users       | `object[]` | 非必填的 | 用户列表。                                                                                                                                                                                   |
 | options.users.email | `string` | 非必填的 | 用户的电子邮件地址。当 `c` 参数为 `mention` 时，此字段是必需的。                                                                                                              |
 | options.users.id    | `string` | 非必填的 | 用户的 ID。当 `c` 参数为 `protect` 或 `filler` 时，此字段是必需的。                                                                                                              |
