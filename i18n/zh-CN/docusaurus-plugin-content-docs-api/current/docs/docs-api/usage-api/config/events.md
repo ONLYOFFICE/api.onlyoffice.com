@@ -371,7 +371,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 如果 [editorConfig.mode](./editor/editor.md#mode) 设置为 `view` 且 [document.permissions.edit](./document/permissions.md#edit) 设置为 `true`，则必须声明此事件才能显示*编辑当前文件*按钮。
 :::
 
-![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
+![onRequestEditRights](/assets/images/editor/onRequestEditRights.png#gh-light-mode-only)![onRequestEditRights](/assets/images/editor/onRequestEditRights.dark.png#gh-dark-mode-only)
 ![编辑 PDF 按钮](/assets/images/editor/edit-pdf.png#gh-light-mode-only)
 ![编辑 PDF 按钮](/assets/images/editor/edit-pdf.dark.png#gh-dark-mode-only)
 
@@ -610,10 +610,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestOpen
 
-当用户尝试通过单击*打开源*按钮打开外部链接时调用的函数。要在新选项卡中打开包含 `path` 或 `referenceData` 参数引用的外部文件的编辑器，请通过调用带有 `path` 和 `windowName` 参数的 [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) 方法来传递指向此选项卡的链接。
+当用户尝试通过单击*打开源文件*按钮打开外部链接时调用的函数。要在新选项卡中打开包含 `path` 或 `referenceData` 参数引用的外部文件的编辑器，请通过调用带有 `path` 和 `windowName` 参数的 [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) 方法来传递指向此选项卡的链接。
 
 :::note
-如果未声明此事件，则不会显示*打开源*按钮。
+如果未声明此事件，则不会显示*打开源文件*按钮。
 :::
 
 **参数**：
@@ -624,7 +624,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | event.data.referenceData | `object` | 来自源文件的唯一文件数据。         |
 | event.data.windowName    | `string` | 新浏览器选项卡名称。   |
 
-<img alt="打开源" src="/assets/images/editor/open-source.png" width="498px" />
+![打开源文件](/assets/images/editor/open-source.png#gh-light-mode-only)![打开源文件](/assets/images/editor/open-source.dark.png#gh-dark-mode-only)
 
 **示例**：
 
@@ -656,9 +656,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 - 要将数据发送给 `setReferenceData` 方法，建议先通过 `referenceData` 参数搜索文件。如果没有这样的字段或找不到文件，则使用 `path` 或 `link` 参数。
 :::
 
-<img alt="粘贴链接" src="/assets/images/editor/paste-link.png" width="400px" />
+![粘贴链接](/assets/images/editor/paste-link.png#gh-light-mode-only)![粘贴链接](/assets/images/editor/paste-link.dark.png#gh-dark-mode-only)
 
-<img alt="更新值" src="/assets/images/editor/update-values.png" width="400px" />
+![更新值](/assets/images/editor/update-values.png#gh-light-mode-only)![更新值](/assets/images/editor/update-values.dark.png#gh-dark-mode-only)
 
 **参数**：
 
@@ -701,10 +701,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestReferenceSource
 
-当用户尝试通过单击*更改源*按钮更改外部数据源时调用的函数。要更改来源，请调用 [setReferenceSource](../methods.md#setreferencesource) 方法。调用该方法时，必须添加 `token` 来验证参数。
+当用户尝试通过单击*更改来源*按钮更改外部数据源时调用的函数。要更改来源，请调用 [setReferenceSource](../methods.md#setreferencesource) 方法。调用该方法时，必须添加 `token` 来验证参数。
 
 :::note
-- 如果未声明此事件，则不会显示*更改源*按钮。
+- 如果未声明此事件，则不会显示*更改来源*按钮。
 - 要将数据发送到 `setReferenceSource` 方法，建议首先通过 `referenceData` 参数搜索文件。如果没有这样的字段或找不到文件，则使用 `path` 参数。
 :::
 
@@ -715,7 +715,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | event.data.referenceData | `object` | 来自源文件的唯一文件数据。   |
 | event.data.path          | `string` | 文件路径或名称。 |
 
-<img alt="更改源" src="/assets/images/editor/change-source.png" width="498px" />
+![更改来源](/assets/images/editor/change-source.png#gh-light-mode-only)![更改来源](/assets/images/editor/change-source.dark.png#gh-dark-mode-only)
 
 **示例**：
 
@@ -971,7 +971,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | ------------ | ------ | ------------------------------------------------- |
 | event.data.c | `”mailmerge”` | 电子表格选择的类型。 |
 
-![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.png)
+![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.png#gh-light-mode-only)![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.dark.png#gh-dark-mode-only)
 
 **示例**：
 
@@ -1114,9 +1114,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | event.data.c  | `"mention"` \| `"protect"` \| `"info"` \| `"filler"` | 操作类型。                           |
 | event.data.id | `string[]` | 与操作关联的用户 ID 列表。 |
 
-<img alt="onRequestUsers" src="/assets/images/editor/onRequestUsers.png" width="309px" />
+![onRequestUsers](/assets/images/editor/onRequestUsers.png#gh-light-mode-only)![onRequestUsers](/assets/images/editor/onRequestUsers.dark.png#gh-dark-mode-only)
 
-<img alt="保护范围" src="/assets/images/editor/protect-range.png" width="292px" />
+![保护范围](/assets/images/editor/protect-range.png#gh-light-mode-only)![保护范围](/assets/images/editor/protect-range.dark.png#gh-dark-mode-only)
 
 **示例**：
 
