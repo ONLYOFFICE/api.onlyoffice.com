@@ -39,8 +39,8 @@ This sandboxing is intentional - it keeps the editor stable and secure regardles
 
 Not sure which approach fits your use case? See how plugins compare to macros.
 
-![ONLYOFFICE API Scheme](/assets/images/plugins/api-scheme.svg#gh-light-mode-only)
-![ONLYOFFICE API Scheme](/assets/images/plugins/api-scheme-dark.svg#gh-dark-mode-only)
+![Choosing between a plugin and a macro](/assets/images/plugins/api-scheme.svg#gh-light-mode-only)
+![Choosing between a plugin and a macro](/assets/images/plugins/api-scheme-dark.svg#gh-dark-mode-only)
 
 | Feature               | **Plugins**                        | **Macros**                   |
 | --------------------- | ---------------------------------- | ---------------------------- |

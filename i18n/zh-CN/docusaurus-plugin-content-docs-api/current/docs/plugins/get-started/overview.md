@@ -39,8 +39,8 @@ ONLYOFFICE 插件是使用 HTML、CSS 和 JavaScript 构建的 Web 应用，运�
 
 不确定哪种方案适合您的使用场景？了解插件与宏的对比。
 
-![ONLYOFFICE API Scheme](/assets/images/plugins/api-scheme.svg#gh-light-mode-only)
-![ONLYOFFICE API Scheme](/assets/images/plugins/api-scheme-dark.svg#gh-dark-mode-only)
+![选择插件或宏](/assets/images/plugins/api-scheme.svg#gh-light-mode-only)
+![选择插件或宏](/assets/images/plugins/api-scheme-dark.svg#gh-dark-mode-only)
 
 | 功能           | **插件**                        | **宏**                   |
 | -------------- | ------------------------------- | ------------------------ |
