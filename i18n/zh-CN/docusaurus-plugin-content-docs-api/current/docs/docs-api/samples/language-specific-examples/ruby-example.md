@@ -14,7 +14,7 @@ Ruby 集成示例是一个小型 Ruby on Rails 应用程序，它可以列出文
 
 ## 先决条件
 
-- **ONLYOFFICE 文档**：[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/docs-registration?from=api)。
+- **ONLYOFFICE 文档**：[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/signup?from=api)。
 - **Ruby**：请参阅[官方网站](https://www.ruby-lang.org/zh_cn/downloads/)。
 - **GNU Make**：请参阅[官方网站](https://www.gnu.org/software/make/)。
 - **Git**：请参阅[官方网站](https://git-scm.com/downloads)。

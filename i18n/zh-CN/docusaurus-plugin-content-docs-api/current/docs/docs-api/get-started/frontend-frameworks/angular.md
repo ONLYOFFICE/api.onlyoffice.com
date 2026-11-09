@@ -118,7 +118,7 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
 
       编辑器会填满其渲染所在的元素，因此外层容器为其设置了明确的高度。
 
-      请将 `http://documentserver/` 替换为您的服务器的地址，该地址与 `.env.local` 中的 `DOCUMENT_SERVER_URL` 相同；您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+      请将 `http://documentserver/` 替换为您的服务器的地址，该地址与 `.env.local` 中的 `DOCUMENT_SERVER_URL` 相同；您可以[注册](https://www.onlyoffice.com/zh/signup?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
       ```html
       <div style="display: flex; height: 100svh">

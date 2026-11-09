@@ -14,7 +14,7 @@ This example is for testing only. It has no authentication, does not validate li
 
 ## Prerequisites
 
-- **ONLYOFFICE Docs**: [self-hosted](https://www.onlyoffice.com/download?from=api#docs-developer) or [cloud](https://www.onlyoffice.com/docs-registration?from=api).
+- **ONLYOFFICE Docs**: [self-hosted](https://www.onlyoffice.com/download?from=api#docs-developer) or [cloud](https://www.onlyoffice.com/signup?from=api).
 - **.NET Framework 4.8**: see the [official website](https://dotnet.microsoft.com/download/dotnet-framework/net48).
 - **Internet Information Services (IIS)**: see the [official website](https://learn.microsoft.com/iis/get-started/whats-new-in-iis-10/installing-iis-10).
 - **Visual Studio**: see the [official website](https://visualstudio.microsoft.com/downloads/).

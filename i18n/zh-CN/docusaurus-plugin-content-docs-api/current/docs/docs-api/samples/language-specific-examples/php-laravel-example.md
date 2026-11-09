@@ -16,7 +16,7 @@ PHP Laravel 集成示例是一个小型 Laravel 应用程序，它可以列出�
 
 - **Docker 和 Docker Compose**：请参阅[官方网站](https://docs.docker.com/get-started/get-docker/)。
 - **Git**：请参阅[官方网站](https://git-scm.com/downloads)。
-- **ONLYOFFICE 文档**：可选，因为 Docker 配置会启动自己的 ONLYOFFICE 文档。如需使用您自己的服务器，请获取[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/docs-registration?from=api)。
+- **ONLYOFFICE 文档**：可选，因为 Docker 配置会启动自己的 ONLYOFFICE 文档。如需使用您自己的服务器，请获取[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/signup?from=api)。
 
 ## 步骤 1. 下载示例
 

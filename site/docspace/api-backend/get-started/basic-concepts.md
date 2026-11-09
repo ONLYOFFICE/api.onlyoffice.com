@@ -4,7 +4,7 @@ sidebar_label: Introduction
 title: Introducing ONLYOFFICE Apps
 ---
 
-[ONLYOFFICE Apps](https://www.onlyoffice.com/docspace?from=api) is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, PDFs, and forms in customizable rooms. It provides the following features:
+[ONLYOFFICE Apps](https://www.onlyoffice.com/rooms?from=api) is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, PDFs, and forms in customizable rooms. It provides the following features:
 
 - creating and customizing [rooms](#step-3-create-a-room) for collaboration;
 - collecting data from PDF forms in [Form Filling Spaces](../usage-api/rooms/create-room.md);

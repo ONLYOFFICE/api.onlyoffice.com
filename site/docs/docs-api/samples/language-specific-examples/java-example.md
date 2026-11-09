@@ -14,7 +14,7 @@ This example is for testing only. It has no authentication, does not validate li
 
 ## Prerequisites
 
-- **ONLYOFFICE Docs**: [self-hosted](https://www.onlyoffice.com/download?from=api#docs-developer) or [cloud](https://www.onlyoffice.com/docs-registration?from=api).
+- **ONLYOFFICE Docs**: [self-hosted](https://www.onlyoffice.com/download?from=api#docs-developer) or [cloud](https://www.onlyoffice.com/signup?from=api).
 - **Docker**: see the [official website](https://docs.docker.com/get-started/get-docker/).
 - **Git**: see the [official website](https://git-scm.com/downloads).
 

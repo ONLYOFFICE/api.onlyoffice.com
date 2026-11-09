@@ -174,7 +174,7 @@ ONLYOFFICE 文档 Vue.js [组件](https://github.com/ONLYOFFICE/document-editor-
 
       您的 ONLYOFFICE 文档的地址及其密钥。`VITE_DOCUMENT_SERVER_URL` 带有 `VITE_` 前缀，因此 Vite 会将其内联到客户端包中，组件需要在其中使用该地址。`DOCUMENT_SERVER_SECRET` 没有前缀，因此密钥会保留在 Node.js 中，不会进入客户端包。该地址以斜杠结尾，因为接口会在其后追加 `dummyCallback`。
 
-      请将 `http://documentserver/` 替换为您的服务器的地址；您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。Create Vue Tool 会忽略 `*.local` 文件，因此密钥不会进入代码仓库。
+      请将 `http://documentserver/` 替换为您的服务器的地址；您可以[注册](https://www.onlyoffice.com/zh/signup?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。Create Vue Tool 会忽略 `*.local` 文件，因此密钥不会进入代码仓库。
 
       ```ini
       VITE_DOCUMENT_SERVER_URL=http://documentserver/

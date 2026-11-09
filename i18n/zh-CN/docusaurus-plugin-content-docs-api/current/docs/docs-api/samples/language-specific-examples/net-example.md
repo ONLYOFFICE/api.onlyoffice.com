@@ -14,7 +14,7 @@ tags: ["Docs", "Integration", "C#"]
 
 ## 先决条件
 
-- **ONLYOFFICE 文档**：[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/docs-registration?from=api)。
+- **ONLYOFFICE 文档**：[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/signup?from=api)。
 - **.NET Framework 4.8**：请参阅[官方网站](https://dotnet.microsoft.com/download/dotnet-framework/net48)。
 - **Internet Information Services (IIS)**：请参阅[官方网站](https://learn.microsoft.com/iis/get-started/whats-new-in-iis-10/installing-iis-10)。
 - **Visual Studio**：请参阅[官方网站](https://visualstudio.microsoft.com/downloads/)。

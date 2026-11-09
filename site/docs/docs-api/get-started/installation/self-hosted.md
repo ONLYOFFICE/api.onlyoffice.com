@@ -22,7 +22,7 @@ To install it on your local server:
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   Where **documentserver** is the name of the server with the ONLYOFFICE Docs installed. In this case, this is an address of your local server (`http://localhost`). You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+   Where **documentserver** is the name of the server with the ONLYOFFICE Docs installed. In this case, this is an address of your local server (`http://localhost`). You can [register](https://www.onlyoffice.com/signup?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
    `https://documentserver/web-apps/apps/api/documents/api.js` is the address where the API JavaScript file can normally be found.
 

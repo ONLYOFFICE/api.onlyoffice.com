@@ -14,7 +14,7 @@ This example is for testing only. It has no authentication, does not validate li
 
 ## Prerequisites
 
-- **ONLYOFFICE Docs**: [self-hosted](https://www.onlyoffice.com/download?from=api#docs-developer) or [cloud](https://www.onlyoffice.com/docs-registration?from=api).
+- **ONLYOFFICE Docs**: [self-hosted](https://www.onlyoffice.com/download?from=api#docs-developer) or [cloud](https://www.onlyoffice.com/signup?from=api).
 - **Ruby**: see the [official website](https://www.ruby-lang.org/en/downloads/).
 - **GNU Make**: see the [official website](https://www.gnu.org/software/make/).
 - **Git**: see the [official website](https://git-scm.com/downloads).

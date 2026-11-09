@@ -118,7 +118,7 @@ This procedure creates a basic Angular application and installs an ONLYOFFICE Do
 
       The editor fills the element it is rendered into, so the wrapper gives it an explicit height.
 
-      Replace `http://documentserver/` with the address of your server, the same address as `DOCUMENT_SERVER_URL` in `.env.local`. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+      Replace `http://documentserver/` with the address of your server, the same address as `DOCUMENT_SERVER_URL` in `.env.local`. You can [register](https://www.onlyoffice.com/signup?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
       ```html
       <div style="display: flex; height: 100svh">

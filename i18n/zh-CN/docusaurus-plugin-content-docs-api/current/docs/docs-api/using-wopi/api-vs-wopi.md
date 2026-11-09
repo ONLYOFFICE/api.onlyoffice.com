@@ -6,7 +6,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # API 与 WOPI
 
-您可以使用 API 或 WOPI 将 [ONLYOFFICE 文档](https://www.onlyoffice.com/office-suite?from=api)与任何云服务集成。
+您可以使用 API 或 WOPI 将 [ONLYOFFICE 文档](https://www.onlyoffice.com/docs?from=api)与任何云服务集成。
 
 下表将帮助您找出这些选项之间的区别。
 

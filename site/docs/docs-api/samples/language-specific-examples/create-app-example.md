@@ -27,7 +27,7 @@ This example is for testing only. It has no authentication, opens every file as 
 
 ## Prerequisites
 
-- **ONLYOFFICE Docs**: version 8.2 or later, [self-hosted](https://www.onlyoffice.com/download?from=api#docs-developer) or [cloud](https://www.onlyoffice.com/docs-registration?from=api). Create App does not install ONLYOFFICE Docs. ONLYOFFICE Docs must be able to reach the computer where the app runs.
+- **ONLYOFFICE Docs**: version 8.2 or later, [self-hosted](https://www.onlyoffice.com/download?from=api#docs-developer) or [cloud](https://www.onlyoffice.com/signup?from=api). Create App does not install ONLYOFFICE Docs. ONLYOFFICE Docs must be able to reach the computer where the app runs.
 - **Node.js**: version 20.12 or later, see the [official website](https://nodejs.org/en/download/).
 
 To try the app locally, you can start ONLYOFFICE Docs in [Docker](https://docs.docker.com/get-started/get-docker/):

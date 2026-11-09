@@ -169,7 +169,7 @@ This procedure creates a basic React application and installs an ONLYOFFICE Docs
 
       The address of your ONLYOFFICE Docs and its secret key. `VITE_DOCUMENT_SERVER_URL` carries the `VITE_` prefix, so Vite inlines it into the client bundle, where the component needs it. `DOCUMENT_SERVER_SECRET` has no prefix, so the key stays in Node.js and out of the bundle. The address ends with a slash, as the endpoint appends `dummyCallback` to it.
 
-      Replace `http://documentserver/` with the address of your server. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console. The Vite template ignores `*.local` files, so the secret key stays out of the repository.
+      Replace `http://documentserver/` with the address of your server. You can [register](https://www.onlyoffice.com/signup?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console. The Vite template ignores `*.local` files, so the secret key stays out of the repository.
 
       ```ini
       VITE_DOCUMENT_SERVER_URL=http://documentserver/
