@@ -9,7 +9,7 @@ import Video from '@site/src/components/Video/Video';
 
 连接 [Toast UI 图片编辑器](https://ui.toast.com/tui-image-editor)，可直接在文档中编辑图像：裁剪、调整大小、应用效果等。
 
-**插件类型：** 可视化、非系统插件。  
+**插件类型**：可视化、非系统插件。  
 
 **支持的编辑器**：文档、电子表格、演示文稿。
 

@@ -8,11 +8,11 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 插件无法访问摄像头和麦克风，因此无法录制语音和视频消息。同时，该插件在无痕模式下无法使用。
 :::
 
-**插件类型：** 可视化、非系统插件。
+**插件类型**：可视化、非系统插件。
 
 **支持的编辑器**：文档、电子表格、演示文稿。
 
-**类似插件：** [Rainbow](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/rainbow)、[Jitsi](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/jitsi)
+**类似插件**：[Rainbow](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/rainbow)、[Jitsi](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/jitsi)。
 
 <YoutubeVideo videoId="8nj6smmCLis" />
 
