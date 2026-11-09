@@ -54,7 +54,7 @@ Run the following command in a terminal:
 
 To open the terminal, press **Ctrl+Alt+T**:
 
-<img alt="Linux terminal" src="/assets/images/desktop/linux-terminal.png" width="536px" />
+![Linux terminal](/assets/images/desktop/linux-terminal.png)
 
   </TabItem>
   <TabItem value="macos" label="macOS">
@@ -71,11 +71,11 @@ To open the terminal:
 
 2. In the appeared **Spotlight** window, type `Terminal` in the search line.
 
-   <img alt="macOS Spotlight" src="/assets/images/desktop/macos-spotlight.png" width="536px" />
+   ![macOS Spotlight](/assets/images/desktop/macos-spotlight.png)
 
 3. Choose the **Terminal** option.
 
-   <img alt="macOS terminal" src="/assets/images/desktop/macos-terminal.png" width="536px" />
+   ![macOS terminal](/assets/images/desktop/macos-terminal.png)
 
   </TabItem>
 </Tabs>

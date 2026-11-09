@@ -54,7 +54,7 @@ import TabItem from '@theme/TabItem';
 
 按下 **Ctrl+Alt+T** 打开终端：
 
-<img alt="Linux 终端" src="/assets/images/desktop/linux-terminal.png" width="536px" />
+![Linux 终端](/assets/images/desktop/linux-terminal.png)
 
   </TabItem>
   <TabItem value="macos" label="macOS">
@@ -71,11 +71,11 @@ import TabItem from '@theme/TabItem';
 
 2. 在弹出的 **Spotlight** 窗口中，在搜索框中键入 `Terminal`。
 
-   <img alt="macOS Spotlight" src="/assets/images/desktop/macos-spotlight.png" width="536px" />
+   ![macOS Spotlight](/assets/images/desktop/macos-spotlight.png)
 
 3. 选择**终端**选项。
 
-   <img alt="macOS 终端" src="/assets/images/desktop/macos-terminal.png" width="536px" />
+   ![macOS 终端](/assets/images/desktop/macos-terminal.png)
 
   </TabItem>
 </Tabs>

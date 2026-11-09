@@ -12,13 +12,13 @@ When a user clicks the authorization link, any of these four scenarios can occur
 
 For users not yet authorized in the workspace, the authorization link opens an authorization form where they enter their email and password and sign in. On successful authorization, they are redirected to the pages described in scenarios 2 and 3.
 
-<img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.png#gh-light-mode-only" width="300px" /><img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.dark.png#gh-dark-mode-only" width="300px" />
+![Authorization flow](/assets/images/docspace/authorization-flow.png#gh-light-mode-only)![Authorization flow](/assets/images/docspace/authorization-flow.dark.png#gh-dark-mode-only)
 
 ## Scenario 2: Workspace selection
 
 If the user has more than one workspace with the entered personal data, they will be redirected to the page for choosing the necessary one.
 
-<img alt="Choose workspace" src="/assets/images/docspace/choose-portal.png#gh-light-mode-only" width="400px" /><img alt="Choose workspace" src="/assets/images/docspace/choose-portal.dark.png#gh-dark-mode-only" width="400px" />
+![Choose workspace](/assets/images/docspace/choose-portal.png#gh-light-mode-only)![Choose workspace](/assets/images/docspace/choose-portal.dark.png#gh-dark-mode-only)
 
 ## Scenario 3: Consent page
 

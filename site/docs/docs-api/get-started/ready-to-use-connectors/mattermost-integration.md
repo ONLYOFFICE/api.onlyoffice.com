@@ -97,7 +97,7 @@ You can also open the file via the file context menu in the message.
 
 ### Setting file access rights
 
-<img alt="Mattermost share" src="/assets/images/editor/mattermost-share.png" width="400px" />
+![Mattermost share](/assets/images/editor/mattermost-share.png)
 
 By default, the sender of a message has full editing access to the file, while all recipients are granted read-only access. Only the sender can modify user access rights through the context menu by selecting the **Change access rights** option.
 
@@ -115,7 +115,7 @@ ONLYOFFICE bot sends notifications about changes in the document specifying the 
 
 All change notifications can be found within the message's discussion thread. Simply click the arrow on the right edge of the message to open a panel on the right, where the full history of the message's discussion is displayed.
 
-<img alt="Mattermost bot" src="/assets/images/editor/mattermost-bot.png" width="300px" />
+![Mattermost bot](/assets/images/editor/mattermost-bot.png)
 
 ## How it works
 

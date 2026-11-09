@@ -93,7 +93,7 @@ Nesting is not supported. The number of icons and their sizes will depend on the
 
 - The default plugin type requires a [logo](config.md#image) image. It is equal to the *logo* parameter from the *package.json* file. The logo will be displayed in the list of plugins on the ONLYOFFICE Apps **Plugins** tab. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.
 
-  <img alt="Plugin logo" src="/assets/images/docspace/plugin-logo.png#gh-light-mode-only" width="300px" /><img alt="Plugin logo" src="/assets/images/docspace/plugin-logo.dark.png#gh-dark-mode-only" width="300px" />
+  ![Plugin logo](/assets/images/docspace/plugin-logo.png#gh-light-mode-only)![Plugin logo](/assets/images/docspace/plugin-logo.dark.png#gh-dark-mode-only)
 
 - The context menu plugin uses an [icon](coding-plugin/interfaces/items/IContextMenuItem.md#icon) for the context menu button. The required icon size is 16x16 px. Otherwise, it will be compressed to this size.
 
