@@ -641,7 +641,7 @@ docEditor.insertImage({
 
 ## setUsers
 
-设置用户列表、用来在评论中提及、授予编辑特定工作表范围的访问权限、设置用户头像，或在**发送以供签署**面板中为表单角色分配用户。此方法必须在 [onRequestUsers](./config/events.md#onrequestusers) 事件之后调用。
+设置用户列表，用于在评论中提及、授予编辑特定工作表范围的访问权限、设置用户头像，或在**发送以供签署**面板中为表单角色分配用户。此方法必须在 [onRequestUsers](./config/events.md#onrequestusers) 事件之后调用。
 
   ``` ts
   docEditor.setUsers(options);
@@ -651,10 +651,10 @@ docEditor.insertImage({
 
 | 参数                | 类型             | 是否必填 | 描述                                                                                                                                                                                                      |
 | ------------------- | ---------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options.c           | `string` | 必填 |  [onRequestUsers](./config/events.md#onrequestusers) 事件的操作类型：`mention`, `protect`, `info` 或 `filler`。默认值为 `mention`。|
+| options.c           | `string` | 必填 | [onRequestUsers](./config/events.md#onrequestusers) 事件的操作类型：`mention`、`protect`、`info` 或 `filler`。默认值为 `mention`。|
 | options.users       | `object[]` | 非必填的 | 用户列表。                                                                                                                                                                                   |
 | options.users.email | `string` | 非必填的 | 用户的电子邮件地址。当 `c` 参数为 `mention` 时，此字段是必需的。                                                                                                              |
-| options.users.id    | `string` | 非必填的 | 用户的身份。当 `c` 参数为 `protect` 时，此字段是必需的。                                                                                                              |
+| options.users.id    | `string` | 非必填的 | 用户的 ID。当 `c` 参数为 `protect` 时，此字段是必需的。                                                                                                              |
 | options.users.image | `string` | 非必填的 | 用户头像的路径。当 `c` 参数为 `info` 时，此字段是必需的。                                                                                                                  |
 | options.users.name  | `string` | 非必填的 | 用户的全名。                                                                                                                                                                               |
 
