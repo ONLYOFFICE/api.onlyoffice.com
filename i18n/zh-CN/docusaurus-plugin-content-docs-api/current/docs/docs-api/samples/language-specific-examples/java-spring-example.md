@@ -14,7 +14,7 @@ Java Spring 集成示例是一个 Spring Boot 应用程序，它可以列出文�
 
 ## 先决条件
 
-- **ONLYOFFICE 文档**：[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/signup?from=api)。
+- **ONLYOFFICE 文档**：[自托管版](https://www.onlyoffice.com/zh/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/signup?from=api)。
 - **Java**：版本 11，即示例的 `pom.xml` 所指定的版本。请参阅[官方网站](https://www.oracle.com/java/technologies/downloads/#java11)。
 - **Apache Maven**：请参阅[官方网站](https://maven.apache.org/download.cgi)。
 - **Git**：请参阅[官方网站](https://git-scm.com/downloads)。

@@ -14,7 +14,7 @@ Java 集成示例是一个运行在 Apache Tomcat 上的小型 Servlet 和 JSP �
 
 ## 先决条件
 
-- **ONLYOFFICE 文档**：[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/signup?from=api)。
+- **ONLYOFFICE 文档**：[自托管版](https://www.onlyoffice.com/zh/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/signup?from=api)。
 - **Docker**：请参阅[官方网站](https://docs.docker.com/get-started/get-docker/)。
 - **Git**：请参阅[官方网站](https://git-scm.com/downloads)。
 

@@ -27,7 +27,7 @@ import TabItem from '@theme/TabItem';
 
 ## 先决条件
 
-- **ONLYOFFICE 文档**：8.2 或更高版本，[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/signup?from=api)。Create App 不会安装 ONLYOFFICE 文档。ONLYOFFICE 文档必须能够访问运行应用程序的计算机。
+- **ONLYOFFICE 文档**：8.2 或更高版本，[自托管版](https://www.onlyoffice.com/zh/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/signup?from=api)。Create App 不会安装 ONLYOFFICE 文档。ONLYOFFICE 文档必须能够访问运行应用程序的计算机。
 - **Node.js**：20.12 或更高版本，请参阅[官方网站](https://nodejs.org/en/download/)。
 
 如需在本地试用此应用程序，您可以在 [Docker](https://docs.docker.com/get-started/get-docker/) 中启动 ONLYOFFICE 文档：

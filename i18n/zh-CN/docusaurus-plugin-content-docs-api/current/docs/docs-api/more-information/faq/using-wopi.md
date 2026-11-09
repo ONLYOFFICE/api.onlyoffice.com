@@ -120,6 +120,6 @@ ONLYOFFICE 文档使用以下 WOPI 操作：[CheckFileInfo](../../using-wopi/wop
 
 ## ONLYOFFICE 文档 API 和 WOPI 有什么区别？ {#what-are-the-difference-between-onlyoffice-docs-api-and-wopi}
 
-Y 您可以使用 API 或 WOPI 将 [ONLYOFFICE 文档](https://www.onlyoffice.com/docs?from=api)与任何云服务集成。
+Y 您可以使用 API 或 WOPI 将 [ONLYOFFICE 文档](https://www.onlyoffice.com/zh/docs?from=api)与任何云服务集成。
 
 [此页面上](../../using-wopi/api-vs-wopi.md)的表格将帮助您找出这些选项之间的区别。
