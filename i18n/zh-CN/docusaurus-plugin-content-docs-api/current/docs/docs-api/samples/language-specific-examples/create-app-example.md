@@ -142,7 +142,7 @@ npm start
 `GET /meta/formats` 请求从 ONLYOFFICE 文档 9.4 版本开始提供。对于更早的版本，应用程序使用 `src/lib/fallback-formats.json` 文件中的内置格式列表，该列表可能与您的服务器所支持的格式不同。
 :::
 
-应用程序根据文件名、文件大小和修改时间生成 [`document.key`](/docs/docs-api/usage-api/config/document/document.md#key)。只要文件未更改，该密钥就保持不变，因此所有打开该文件的用户都会共同编辑同一个文档；每次保存后，该密钥都会更改。这样，应用程序无需数据库。
+应用程序根据文件名、文件大小和修改时间生成 [`document.key`](/docs/docs-api/usage-api/config/document/document.md#key)。只要文件未更改，该标识符就保持不变，因此所有打开该文件的用户都会共同编辑同一个文档；每次保存后，该标识符都会更改。这样，应用程序无需数据库。
 
 集成代码位于以下文件中：
 
@@ -151,7 +151,7 @@ npm start
 | `src/app/api/editor-config/route.ts` | 向浏览器返回已签名的编辑器配置。 |
 | `src/lib/editor-config.ts` | 构建编辑器配置。 |
 | `src/lib/jwt.ts` | 签署和验证 JWT。 |
-| `src/lib/document-key.ts` | 生成文档密钥。 |
+| `src/lib/document-key.ts` | 生成文档标识符。 |
 | `src/lib/formats.ts` | 请求支持的格式，并决定以编辑还是查看方式打开文件。 |
 | `src/components/Editor.tsx` | 使用 React 组件打开编辑器。 |
 | `src/app/api/callback/route.ts` | 处理回调并保存编辑后的文件。 |
