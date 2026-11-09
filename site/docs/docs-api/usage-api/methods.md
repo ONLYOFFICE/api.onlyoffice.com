@@ -654,7 +654,7 @@ Set a list of users to mention in the comments, grant the access rights to edit 
 | options.c           | `string` | required | The operation type from the [onRequestUsers](./config/events.md#onrequestusers) event: `mention`, `protect`, `info`, or `filler`. The default value is `mention`. |
 | options.users       | `object[]` | optional | The list of the users.                                                                                                                                                                            |
 | options.users.email | `string` | optional | The email address of the user. This field is required when the `c` parameter is `mention`.                                                                                                        |
-| options.users.id    | `string` | optional | The identification of the user. This field is required when the `c` parameter is `protect`.                                                                                                       |
+| options.users.id    | `string` | optional | The identification of the user. This field is required when the `c` parameter is `protect` or `filler`.                                                                                                       |
 | options.users.image | `string` | optional | The path to the user's avatar. This field is required when the `c` parameter is `info`.                                                                                                           |
 | options.users.name  | `string` | optional | The full name of the user.                                                                                                                                                                        |
 
