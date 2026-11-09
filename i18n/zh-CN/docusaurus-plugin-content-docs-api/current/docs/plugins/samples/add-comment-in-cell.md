@@ -11,7 +11,7 @@ import Video from '@site/src/components/Video/Video';
 
 **插件类型：** 可视化、非系统插件。
 
-**支持的编辑器：** 电子表格。
+**支持的编辑器**：电子表格。
 
 <Video src="/assets/images/plugins/webm/add-comment-in-cell" />
 

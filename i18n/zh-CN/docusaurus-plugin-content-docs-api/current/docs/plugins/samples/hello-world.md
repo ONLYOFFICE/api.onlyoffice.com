@@ -11,7 +11,7 @@ import Video from '@site/src/components/Video/Video';
 
 **插件类型：** 非可视化、非系统插件。
 
-**支持的编辑器：** 文档。
+**支持的编辑器**：文档。
 
 <Video src="/assets/images/plugins/webm/hello-world" />
 
