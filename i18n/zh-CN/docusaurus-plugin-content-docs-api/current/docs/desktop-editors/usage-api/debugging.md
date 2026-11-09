@@ -41,7 +41,7 @@ import TabItem from '@theme/TabItem';
 4. 在**目标**字段中，在应用程序路径后输入一个空格，然后键入 `--ascdesktop-support-debug-info` 标志。
 5. 单击**应用**按钮。
 
-<img alt="Windows 快捷方式" src="/assets/images/desktop/windows-shortcut.png" width="416px" />
+![Windows 快捷方式](/assets/images/desktop/windows-shortcut.png)
 
   </TabItem>
   <TabItem value="linux" label="Linux">

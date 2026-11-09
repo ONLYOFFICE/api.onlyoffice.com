@@ -6,7 +6,7 @@ sidebar_position: -11
 
 以下参考图和步骤解释了在 ONLYOFFICE 文档中为匿名用户设置名称的过程。
 
-<img alt="Anonymous" src="/assets/images/editor/anonymous-user.png" width="720px" />
+![Anonymous](/assets/images/editor/anonymous-user.png)
 
 1. 匿名用户使用**文档管理器**打开文档进行查看或编辑。
 2. **文档管理器**使用包含空的[`user.id`](../../usage-api/config/editor/editor.md#user)且未指定用户名的[`config`](../../usage-api/config/config.md)初始化**文档编辑器**。

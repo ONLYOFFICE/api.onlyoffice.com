@@ -6,7 +6,7 @@ sidebar_position: -3
 
 下图和步骤说明了如何在 ONLYOFFICE 文档 中设置用户头像。
 
-<img alt="设置头像" src="/assets/images/editor/avatars.png" width="720px" />
+![设置头像](/assets/images/editor/avatars.png)
 
 1. 使用 [`editorConfig.user.image`](../../usage-api/config/editor/editor.md#user) 字段，在初始化时为**文档编辑器**设置当前用户的头像 URL。
 2. 当用户打开评论或共同编辑者列表时，**文档编辑器**触发 [`onRequestUsers`](../../usage-api/config/events.md#onrequestusers) 事件，请求其他用户的数据。

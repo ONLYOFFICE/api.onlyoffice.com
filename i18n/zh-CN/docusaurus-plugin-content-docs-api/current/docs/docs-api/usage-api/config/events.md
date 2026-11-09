@@ -429,8 +429,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 如果未声明此事件，则不会显示*版本历史*按钮。
 :::
 
-<img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png#gh-light-mode-only" width="282px" />
-<img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.dark.png#gh-dark-mode-only" width="282px" />
+![onRequestHistory](/assets/images/editor/onRequestHistory.png#gh-light-mode-only)
+![onRequestHistory](/assets/images/editor/onRequestHistory.dark.png#gh-dark-mode-only)
 
 **示例**：
 
@@ -799,8 +799,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | ---------- | ------ | ---------------- |
 | event.data | `string` | 新文档标题。     |
 
-<img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />   
-<img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
+![onRequestRename](/assets/images/editor/onRequestRename.png#gh-light-mode-only)
+![onRequestRename](/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only)
 
 **示例**：
 

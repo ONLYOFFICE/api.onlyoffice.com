@@ -6,7 +6,7 @@ sidebar_position: -14
 
 The steps below explain how to embed several ONLYOFFICE Docs editors on the same `.html` page.
 
-<img alt="Inline editors" src="/assets/images/editor/inlineEditors.png" width="720px" />
+![Inline editors](/assets/images/editor/inlineEditors.png)
 
 :::note
 Simultaneous work with several editors is available starting from version 5.5.

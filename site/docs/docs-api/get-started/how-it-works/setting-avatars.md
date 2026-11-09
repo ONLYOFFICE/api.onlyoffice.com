@@ -6,7 +6,7 @@ sidebar_position: -3
 
 The figure and steps below explain how user avatars are set in ONLYOFFICE Docs.
 
-<img alt="Setting avatars" src="/assets/images/editor/avatars.png" width="720px" />
+![Setting avatars](/assets/images/editor/avatars.png)
 
 1. The **document editor** is initialized with the current user's avatar URL in the [`editorConfig.user.image`](../../usage-api/config/editor/editor.md#user) field.
 2. When the user opens comments or the co-editors list, the **document editor** fires the [`onRequestUsers`](../../usage-api/config/events.md#onrequestusers) event to request the other users' data.

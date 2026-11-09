@@ -41,7 +41,7 @@ Run the following command in a terminal:
 4. In the **Target** field, after the path to the application, enter a space and then type the `--ascdesktop-support-debug-info` flag.
 5. Click the **Apply** button.
 
-<img alt="Windows shortcut" src="/assets/images/desktop/windows-shortcut.png" width="416px" />
+![Windows shortcut](/assets/images/desktop/windows-shortcut.png)
 
   </TabItem>
   <TabItem value="linux" label="Linux">

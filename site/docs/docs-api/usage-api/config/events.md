@@ -429,8 +429,8 @@ The function called when the user is trying to show the document version history
 If this event is not declared, the *Version History* button will not be displayed.
 :::
 
-<img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png#gh-light-mode-only" width="282px" />
-<img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.dark.png#gh-dark-mode-only" width="282px" />
+![onRequestHistory](/assets/images/editor/onRequestHistory.png#gh-light-mode-only)
+![onRequestHistory](/assets/images/editor/onRequestHistory.dark.png#gh-dark-mode-only)
 
 **Example**:
 
@@ -799,8 +799,8 @@ If this event is not declared, the *Rename...* button will not be displayed.
 | ---------- | ------ | ----------------------- |
 | event.data | `string` | The new document title. |
 
-<img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />   
-<img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
+![onRequestRename](/assets/images/editor/onRequestRename.png#gh-light-mode-only)
+![onRequestRename](/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only)
 
 **Example**:
 

@@ -26,7 +26,7 @@ Authorized users are redirected to a consent page that lists all the application
 
 Click **Allow** or **Deny** to finish the authorization flow.
 
-<img alt="Consent page" src="/assets/images/docspace/consent-page.png#gh-light-mode-only" width="400px" /><img alt="Consent page" src="/assets/images/docspace/consent-page.dark.png#gh-dark-mode-only" width="400px" />
+![Consent page](/assets/images/docspace/consent-page.png#gh-light-mode-only)![Consent page](/assets/images/docspace/consent-page.dark.png#gh-dark-mode-only)
 
 ## Scenario 4: Error page
 

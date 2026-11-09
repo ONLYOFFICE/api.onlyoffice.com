@@ -6,7 +6,7 @@ sidebar_position: -11
 
 The figure and steps below explain how an anonymous user’s name is set in ONLYOFFICE Docs.
 
-<img alt="Anonymous" src="/assets/images/editor/anonymous-user.png" width="720px" />
+![Anonymous](/assets/images/editor/anonymous-user.png)
 
 1. An anonymous user opens a document for viewing or editing through the **document manager**.
 2. The **document manager** initializes the **document editor** with a [`config`](../../usage-api/config/config.md) that has an empty [`user.id`](../../usage-api/config/editor/editor.md#user) and no user name.

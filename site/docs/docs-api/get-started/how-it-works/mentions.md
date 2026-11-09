@@ -6,7 +6,7 @@ sidebar_position: -17
 
 The figure and steps below explain how the mentions feature works in ONLYOFFICE Docs.
 
-<img alt="Create mentions" src="/assets/images/editor/mentions-create.png" width="720px" />
+![Create mentions](/assets/images/editor/mentions-create.png)
 
 1. The user types `+` or `@` in the comment field of the **document editor**.
 2. The **document editor** requests the list of users who can be mentioned from the **document manager**.
@@ -79,7 +79,7 @@ The figure and steps below explain how the mentions feature works in ONLYOFFICE 
 
 ## Opening the comment
 
-<img alt="Open action link" src="/assets/images/editor/actionLink-open.png" width="720px" />
+![Open action link](/assets/images/editor/actionLink-open.png)
 
 1. The mentioned user opens the link from a notification (for example, an email), which navigates to the **document manager**.
 2. The **document manager** initializes the **document editor** with the [`config`](../../usage-api/config/config.md) that includes the comment position data in the [`actionLink`](../../usage-api/config/editor/editor.md#actionlink) parameter.
