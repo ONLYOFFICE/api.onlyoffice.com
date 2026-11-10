@@ -31,6 +31,10 @@
 * Noted that the old AI plugin is no longer supported and can be installed only in 9.4
 * Linked the Plugins API instead of the AI Tools API on the AI playground page
 
+#### ONLYOFFICE Apps
+
+* Switched the Plugins SDK samples from the deprecated item `onClick` handler to `onItemClick`, which takes `string | number` ids
+
 #### Common
 
 * Wrapped long paths and URLs in inline code across all API table cells
@@ -54,6 +58,7 @@
 * Fixed the translation of 提交 issue on the zh-CN plugin versioning page
 * Fixed which `options.c` fields are optional and what they default to in `insertImage`, `setUsers` and `setRequestedDocument`
 * Fixed `setUsers` to require a user ID for the `filler` operation
+* Fixed the property anchors in the Plugins SDK samples, which pointed at `#onClick?` instead of `#onClick`
 
 ## 10.1.0
 
