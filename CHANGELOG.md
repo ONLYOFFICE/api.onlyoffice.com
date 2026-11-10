@@ -8,6 +8,10 @@
 
 * Added the Create App integration example, which generates a Next.js integration for ONLYOFFICE Docs with `@onlyoffice/create-app`
 
+#### Office API
+
+* Added the Working with tables guide, which shows how to create tables, move through their rows and cells, read cell text and change the table structure
+
 #### Common
 
 * Published `robots.txt` with separate rules for each site mode
@@ -58,7 +62,10 @@
 * Fixed the translation of 提交 issue on the zh-CN plugin versioning page
 * Fixed which `options.c` fields are optional and what they default to in `insertImage`, `setUsers` and `setRequestedDocument`
 * Fixed `setUsers` to require a user ID for the `filler` operation
-* Fixed the property anchors in the Plugins SDK samples, which pointed at `#onClick?` instead of `#onClick`
+* Fixed the property anchors in the Plugins SDK samples and on the plugin structure page, which pointed at `#onClick?` and `#fileRowIcon?` instead of `#onClick` and `#fileRowIcon`
+* Fixed the Paragraphs to table macro, which passed the column and row counts to `CreateTable` in the wrong order and copied list numbering into the cells
+* Fixed the Sort tables macro to compare cell text without the trailing cell and row separators or list numbering
+* Fixed the Remove empty tables macro deleting tables whose cells hold only images or other drawings
 
 ## 10.1.0
 
