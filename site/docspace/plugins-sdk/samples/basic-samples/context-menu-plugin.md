@@ -88,7 +88,7 @@ const contextMenuItem: IContextMenuItem = {
   key: "convert-file-item",
   label: "Do something",
   icon: "icon.svg",
-  onClick: (id: number) => {
+  onItemClick: (id: string | number) => {
     console.log("Context Menu works!")
   },
   fileType: [FilesType.file],
@@ -127,4 +127,4 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 
 - You can define multiple context items using different keys.
 - Use the [`fileType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#fileType), [`devices`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#devices), and [`usersTypes`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#usersTypes) fields to control visibility.
-- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#onClick) function receives the selected file's ID.
+- The [`onItemClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#onItemClick) function receives the selected file's ID.
