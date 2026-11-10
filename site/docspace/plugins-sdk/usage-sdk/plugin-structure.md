@@ -27,7 +27,7 @@ export default plugin
 ```
 
 :::note
-In SDK versions prior to 3.0.0, plugins were registered in the *window.Plugins.[pluginName]* scope. This is no longer required — the portal imports the plugin as an ES module and uses the default export.
+In SDK versions prior to 3.0.0, plugins were registered in the `window.Plugins.[pluginName]` scope. This is no longer required — the portal imports the plugin as an ES module and uses the default export.
 :::
 
 ### package.json
@@ -76,7 +76,7 @@ A TypeScript declaration file, conventionally placed at *src/vite-env.d.ts*. A p
 This single reference pulls in Vite's own ambient type declarations for CSS, CSS Modules, and common asset extensions (images, fonts, and more) — covering both cases above. It replaces the *custom.d.ts* file from the SDK 2.x, webpack-based template; that file is not part of the SDK 3.0.0 template.
 
 :::note
-Since the file lives under *src/*, it is picked up automatically by the *tsconfig.json* file's *include* array without any extra configuration — unlike the old *custom.d.ts*, which had to be added to *include* by hand.
+Since the file lives under *src/*, it is picked up automatically by the *tsconfig.json* file's `include` array without any extra configuration — unlike the old *custom.d.ts*, which had to be added to `include` by hand.
 :::
 
 For more information and examples, see [Styling plugin](styling-plugin.md).
@@ -91,7 +91,7 @@ A folder for storing plugin images. This folder is not created automatically by 
 
 Nesting is not supported. The number of icons and their sizes will depend on the plugin types you implement. **The number of plugin icons must not exceed 10 if the archive does not contain *plugin.css*, or 9 if it does** (the server allows up to 10 asset files plus 3 archive entries: *plugin.js*, *config.json*, and the *assets/* folder itself; *plugin.css*, when present, takes one of the 10 asset slots). The following formats are currently supported: *.jpg*, *.jpeg*, *.png*, *.svg*.
 
-- The default plugin type requires a [logo](config.md#image) image. It is equal to the *logo* parameter from the *package.json* file. The logo will be displayed in the list of plugins on the ONLYOFFICE Apps **Plugins** tab. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.
+- The default plugin type requires a [logo](config.md#image) image. It is equal to the `logo` parameter from the *package.json* file. The logo will be displayed in the list of plugins on the ONLYOFFICE Apps **Plugins** tab. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.
 
   ![Plugin logo](/assets/images/docspace/plugin-logo.png#gh-light-mode-only)![Plugin logo](/assets/images/docspace/plugin-logo.dark.png#gh-dark-mode-only)
 
@@ -103,11 +103,11 @@ Nesting is not supported. The number of icons and their sizes will depend on the
 
   ![Main button icon](/assets/images/docspace/main-button-icon.png#gh-light-mode-only)![Main button icon](/assets/images/docspace/main-button-icon.dark.png#gh-dark-mode-only)
 
-  The **Draw.io** plugin also uses the specific file icon near the *.drawio* files, which are created with the file plugin type. The preferred icon size for the [table format](coding-plugin/interfaces/items/IFileItem.md#fileRowIcon?) is 32x32 px.
+  The **Draw.io** plugin also uses the specific file icon near the *.drawio* files, which are created with the file plugin type. The preferred icon size for the [table format](coding-plugin/interfaces/items/IFileItem.md#fileRowIcon) is 32x32 px.
 
   ![File icon](/assets/images/docspace/file-icon.png#gh-light-mode-only)![File icon](/assets/images/docspace/file-icon.dark.png#gh-dark-mode-only)
 
-  It is recommended to add another icon of the 96x96 px size for the file [tile view](coding-plugin/interfaces/items/IFileItem.md#fileTileIcon?).
+  It is recommended to add another icon of the 96x96 px size for the file [tile view](coding-plugin/interfaces/items/IFileItem.md#fileTileIcon).
 
   ![File icon tile](/assets/images/docspace/file-icon-tile.png#gh-light-mode-only)![File icon tile](/assets/images/docspace/file-icon-tile.dark.png#gh-dark-mode-only)
 
