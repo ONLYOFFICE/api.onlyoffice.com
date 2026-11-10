@@ -19,7 +19,7 @@ Converts a list of numbered paragraphs into a table.
 
     for (let i = 0; i < paragraphs.length; i++) {
         let level = paragraphs[i].GetNumbering().GetLevelIndex();
-        let text = paragraphs[i].GetText().trim();
+        let text = paragraphs[i].GetText({ Numbering: false }).trim();
 
         if (level === 0) {
             if (currentRow.length > 0) {
@@ -42,7 +42,7 @@ Converts a list of numbered paragraphs into a table.
         }
     }
 
-    let table = Api.CreateTable(maxColumns, tableData.length);
+    let table = Api.CreateTable(tableData.length, maxColumns);
     doc.Push(table);
     for (let row = 0; row < tableData.length; row++) {
         for (let col = 0; col < tableData[row].length; col++) {

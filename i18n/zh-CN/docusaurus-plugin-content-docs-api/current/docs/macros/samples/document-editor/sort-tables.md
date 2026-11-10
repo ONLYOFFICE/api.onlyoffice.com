@@ -27,6 +27,11 @@ import Video from '@site/src/components/Video/Video';
     let selectedStart = selectedRange.GetStartPos();
     let selectedEnd = selectedRange.GetEndPos();
 
+    // 返回不含末尾单元格或行分隔符及列表编号的单元格文本
+    function getCellText(cell) {
+        return cell.GetContent().GetText({ TableCellSeparator: "", TableRowSeparator: "", Numbering: false });
+    }
+
     // 比较两个单元格值：如果都是数字则按数字排序，否则按字母排序
     function compareCells(a, b) {
         let numA = parseFloat(a);
@@ -44,7 +49,7 @@ import Video from '@site/src/components/Video/Video';
 
         for (let rowIndex = startRow; rowIndex < rowNum; rowIndex++) {
             let row = table.GetRow(rowIndex);
-            let cellVal = row.GetCell(colIndex).GetContent().GetText();
+            let cellVal = getCellText(row.GetCell(colIndex));
             rowsArr.push({ row, cellVal });
         }
         
@@ -89,7 +94,7 @@ import Video from '@site/src/components/Video/Video';
                     let newRow = table.AddRow();
 
                     for (let j = 0; j < colNum; j++) {
-                        let text = sortedRow.GetCell(j).GetContent().GetText().trim();
+                        let text = getCellText(sortedRow.GetCell(j));
                         newRow.GetCell(j).GetContent().GetElement(0).AddText(text);
                     }
                     table.GetRow(rowToRemove).Remove();

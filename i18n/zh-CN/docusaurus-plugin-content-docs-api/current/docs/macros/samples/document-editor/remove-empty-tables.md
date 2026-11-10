@@ -22,6 +22,10 @@ import Video from '@site/src/components/Video/Video';
     let removedCount = 0;
     let hasCellText = (cell) => {
         let content = cell.GetContent();
+        if (content.GetAllDrawingObjects().length > 0) {
+            return true;
+        }
+
         let paragraphs = content.GetAllParagraphs();
 
         for (let para of paragraphs) {
@@ -54,7 +58,7 @@ import Video from '@site/src/components/Video/Video';
 })();
 ```
 
-使用方法：[GetDocument](../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllTables](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllTables.md), [GetContent](../../../office-api/usage-api/document-api/ApiTableCell/Methods/GetContent.md), [GetAllParagraphs](../../../office-api/usage-api/document-api/ApiDocumentContent/Methods/GetAllParagraphs.md), [GetText](../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetText.md), [GetRowsCount](../../../office-api/usage-api/document-api/ApiTable/Methods/GetRowsCount.md), [GetRow](../../../office-api/usage-api/document-api/ApiTable/Methods/GetRow.md), [GetCellsCount](../../../office-api/usage-api/document-api/ApiTableRow/Methods/GetCellsCount.md), [GetCell](../../../office-api/usage-api/document-api/ApiTable/Methods/GetCell.md), [Delete](../../../office-api/usage-api/document-api/ApiTable/Methods/Delete.md)
+使用方法：[GetDocument](../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllTables](../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllTables.md), [GetContent](../../../office-api/usage-api/document-api/ApiTableCell/Methods/GetContent.md), [GetAllDrawingObjects](../../../office-api/usage-api/document-api/ApiDocumentContent/Methods/GetAllDrawingObjects.md), [GetAllParagraphs](../../../office-api/usage-api/document-api/ApiDocumentContent/Methods/GetAllParagraphs.md), [GetText](../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetText.md), [GetRowsCount](../../../office-api/usage-api/document-api/ApiTable/Methods/GetRowsCount.md), [GetRow](../../../office-api/usage-api/document-api/ApiTable/Methods/GetRow.md), [GetCellsCount](../../../office-api/usage-api/document-api/ApiTableRow/Methods/GetCellsCount.md), [GetCell](../../../office-api/usage-api/document-api/ApiTable/Methods/GetCell.md), [Delete](../../../office-api/usage-api/document-api/ApiTable/Methods/Delete.md)
 
 ## 结果
 
