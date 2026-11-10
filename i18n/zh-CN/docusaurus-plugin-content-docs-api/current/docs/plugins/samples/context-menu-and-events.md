@@ -9,9 +9,9 @@ import Video from '@site/src/components/Video/Video';
 
 跟踪右键菜单的调用事件及其选项的点击操作，同时还会跟踪光标位置的变化。
 
-**插件类型：** 非可视化、非系统插件。  
+**插件类型**：非可视化、非系统插件。  
 
-**支持的编辑器：** 文档。
+**支持的编辑器**：文档。
 
 <Video src="/assets/images/plugins/webm/context-menu-and-events" />
 

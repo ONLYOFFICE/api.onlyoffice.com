@@ -8,7 +8,7 @@ sidebar_label: Standard branding
 The customization section defines the editor customization parameters.
 
 :::info
-Most parameters on this page are available for all ONLYOFFICE Docs editions, including the open-source community version. Some parameters are available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api) and are marked accordingly. If you have an extended white label license, please visit the [White label page](customization-white-label.md) for additional customization options.
+Most parameters on this page are available for all ONLYOFFICE Docs editions, including the open-source community version. Some parameters are available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/pricing?from=api) and are marked accordingly. If you have an extended white label license, please visit the [White label page](customization-white-label.md) for additional customization options.
 :::
 
 :::note
@@ -37,7 +37,7 @@ To connect AI providers for all users in the Admin Panel, or to turn AI off for 
 
 **type**: `boolean` | **default**: `false`
 
-Whether to disable the AI features in the editor. If set to `true`, the **AI Tools** are hidden. This is a shortcut for adding the [AI plugin](../../../../../ai/guides/ai-plugin.md) identifier (`asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`) to the [editorConfig.plugins.disable](../plugins.md#disable) list.
+Whether to disable the AI features in the editor. If set to `true`, the **AI Tools** are hidden. This is a shortcut for adding the [AI Tools](../../../../../ai/guides/ai-plugin.md) identifier (`asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`) to the [`editorConfig.plugins.disable`](../plugins.md#disable) list.
 
 **Example**: `true`
 
@@ -52,7 +52,7 @@ Adds a request for the anonymous name.
 ```ts
 {
   request: true,
-  label: "Elizabeth",
+  label: "Guest",
 }
 ```
 
@@ -70,9 +70,11 @@ Whether the request is sent or not.
 
 **type**: `string` | **default**: `"Guest"`
 
-A postfix added to the user name.
+A postfix added in brackets to the name of an anonymous user. Other users see it next to the name, for example, in the chat user list: `Elizabeth (Guest)`.
 
-**Example**: `"Elizabeth"`
+**Example**: `"Guest"`
+
+![Anonymous label](/assets/images/editor/label.png#gh-light-mode-only)![Anonymous label](/assets/images/editor/label.dark.png#gh-dark-mode-only)
 
 ## autosave
 
@@ -186,7 +188,7 @@ Whether to use functionality only compatible with the OOXML format. For example,
 Contains the information which will be displayed in the editor **About** section and visible to all the editor users.
 
 :::info
-This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
+This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/pricing?from=api).
 :::
 
 **Example**:
@@ -319,7 +321,7 @@ Whether to display the tooltips about new editor features on first loading.
 Whether to enable the role settings in the pdf forms. If the parameter is equal to `false`, then the role manager is hidden and viewing the form on behalf of a specific role is disabled. In this case, the **Manage Roles** and **View Form** buttons on the **Forms** tab and a drop-down list for setting the field role in the right panel will not be displayed.
 
 :::info
-This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
+This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/pricing?from=api).
 :::
 
 **Example**: `true`
@@ -358,7 +360,13 @@ The background of the top toolbar tabs. Can be a string or an object. If set to 
 
 The background of the top toolbar tabs. If set to `header`, the tab background matches the header. If set to `toolbar`, the tab background matches the toolbar. This value is used when the editor is first opened.
 
+:::note
+The difference between the two values is visible only in the [themes](#uitheme) where the header and the toolbar have different colors. It is most noticeable in the themes with a colored header (`theme-light`, `theme-classic-light`) and less noticeable in the dark themes. In the `theme-white` and `theme-gray` themes, the header and the toolbar have the same or almost the same color, so both values look the same.
+:::
+
 **Example**: `"header"`
+
+![Tab background](/assets/images/editor/tab-background.png#gh-light-mode-only)![Tab background](/assets/images/editor/tab-background.dark.png#gh-dark-mode-only)
 
 ### features.tabBackground.change
 
@@ -368,7 +376,7 @@ Whether to display the tab background setting in the **File -> Advanced settings
 
 **Example**: `true`
 
-![Tab background](/assets/images/editor/tab-background.png#gh-light-mode-only)![Tab background](/assets/images/editor/tab-background.dark.png#gh-dark-mode-only)
+![Tab background setting](/assets/images/editor/tab-background-setting.png#gh-light-mode-only)![Tab background setting](/assets/images/editor/tab-background-setting.dark.png#gh-dark-mode-only)
 
 ### features.tabStyle
 
@@ -386,6 +394,8 @@ The style of the top toolbar tabs. If set to `fill`, the tabs are distinctly dis
 
 **Example**: `"fill"`
 
+![Tab style](/assets/images/editor/tab-style.png#gh-light-mode-only)![Tab style](/assets/images/editor/tab-style.dark.png#gh-dark-mode-only)
+
 ### features.tabStyle.change
 
 **type**: `boolean`
@@ -394,7 +404,7 @@ Whether to display the tab style setting in the **File -> Advanced settings**. T
 
 **Example**: `true`
 
-![Tab style](/assets/images/editor/tab-style.png#gh-light-mode-only)![Tab style](/assets/images/editor/tab-style.dark.png#gh-dark-mode-only)
+![Tab style setting](/assets/images/editor/tab-style-setting.png#gh-light-mode-only)![Tab style setting](/assets/images/editor/tab-style-setting.dark.png#gh-dark-mode-only)
 
 ## feedback
 
@@ -417,7 +427,7 @@ The settings for the **Feedback & Support** menu button. If set to `false`, the 
 
 **type**: `string`
 
-The absolute URL to the website which will be opened when clicking the **Feedback & Support** menu button.
+The absolute URL to the website which will be opened when clicking the **Feedback & Support** menu button. If not specified, the [ONLYOFFICE support contact form](https://www.onlyoffice.com/support-contact-form) is opened.
 
 **Example**: `"https://example.com"`
 
@@ -564,7 +574,7 @@ The mode of embedding editors into the web page. The `embed` value disables scro
 Changes the image file at the top left corner of the editor header. The recommended image height is 20 pixels.
 
 :::info
-This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
+This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/pricing?from=api).
 :::
 
 **Example**:
@@ -888,23 +898,23 @@ Starting from version 7.1, please use the [features.spellcheck](#featuresspellch
 
 **type**: `object`
 
-The *Start filling* button settings in PDF form editing mode.
+The settings of the *Share & collect* button in PDF form editing mode.
 
 **Example**:
 
 ```ts
 {
-  text: "Share & collect",
+  text: "Start filling",
 }
 ```
 
 ### startFillingForm.text
 
-**type**: `string` | **default**: `"Start filling"`
+**type**: `string` | **default**: `"Share & collect"`
 
-The caption of the *Start filling* button in PDF form editing mode.
+The caption of the *Share & collect* button in PDF form editing mode.
 
-**Example**: `"Share & collect"`
+**Example**: `"Start filling"`
 
 ## submitForm
 
@@ -1054,7 +1064,7 @@ const config = {
       },
       anonymous: {
         request: true,
-        label: "Elizabeth",
+        label: "Guest",
       },
       autosave: true,
       close: {

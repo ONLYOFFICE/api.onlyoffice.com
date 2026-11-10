@@ -6,7 +6,7 @@ sidebar_position: -14
 
 以下步骤解释了如何在同一个 `.html` 页面上嵌入多个 ONLYOFFICE 文档编辑器。
 
-<img alt="Inline editors" src="/assets/images/editor/inlineEditors.png" width="720px" />
+![Inline editors](/assets/images/editor/inlineEditors.png)
 
 :::note
 从 5.5 版本开始支持同时使用多个编辑器。
@@ -31,7 +31,7 @@ sidebar_position: -14
    其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器名称。`api.js` 脚本由**文档编辑服务**提供，它会加载**文档编辑器**并将其连接到该服务。
 
    :::tip
-   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 文档云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。您可以在云控制台的**实例**部分找到它们。
+   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/signup?from=api)一个免费的 ONLYOFFICE 文档云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。您可以在云控制台的**实例**部分找到它们。
    :::
 
 4. 添加脚本，使用要打开的文档配置为相应的 `<div>` 元素初始化每个**文档编辑器**：

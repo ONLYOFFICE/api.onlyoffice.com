@@ -33,7 +33,7 @@ function addTextFormToParagraph(paragraph, fontSize, key, placeholder, maxCharac
   });
   
   if (border) {
-    textForm.SetBorderColor(200, 200, 200);
+    textForm.SetBorderColor(Api.RGB(200, 200, 200));
   }
   
   paragraph.AddElement(textForm);
@@ -212,7 +212,7 @@ paragraph.SetBold(true);
 doc.Push(paragraph);
 
 let itemsTable = createFullWidthTable(8, 5, 100, 50);
-itemsTable.GetRow(0).SetBackgroundColor(230, 230, 230, false);
+itemsTable.GetRow(0).SetBackgroundColor(Api.RGB(230, 230, 230));
 
 // Header row
 let headerCells = ["Item #", "Description", "Qty", "Unit Price", "Total"];

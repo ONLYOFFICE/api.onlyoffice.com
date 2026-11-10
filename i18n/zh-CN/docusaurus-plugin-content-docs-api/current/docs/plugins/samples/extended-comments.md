@@ -9,9 +9,9 @@ import Video from '@site/src/components/Video/Video';
 
 在文档中插入、编辑和删除评论及回复（包含用户信息）。
 
-**插件类型：** 可视化、非系统插件。
+**插件类型**：可视化、非系统插件。
 
-**支持的编辑器：** 文档编辑器。
+**支持的编辑器**：文档。
 
 <Video src="/assets/images/plugins/webm/extended-comments" />
 

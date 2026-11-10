@@ -329,10 +329,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestCompareFile
 
-当用户尝试通过单击*存储中的文档*按钮来选择要进行比较的文档时调用的函数。
+当用户尝试通过单击*存储器中的文档*按钮来选择要进行比较的文档时调用的函数。
 
 :::note
-此事件仅适用于 [ONLYOFFICE 文档企业版](https://www.onlyoffice.com/docs-enterprise-prices?from=api)和 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
+此事件仅适用于 [ONLYOFFICE 文档企业版](https://www.onlyoffice.com/zh/pricing?from=api)和 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/zh/pricing?from=api)。
 :::
 :::danger[Deprecated]
 自版本 7.5 起已弃用，请改用 [onRequestSelectDocument](#onrequestselectdocument)。
@@ -371,7 +371,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 如果 [editorConfig.mode](./editor/editor.md#mode) 设置为 `view` 且 [document.permissions.edit](./document/permissions.md#edit) 设置为 `true`，则必须声明此事件才能显示*编辑当前文件*按钮。
 :::
 
-![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
+![onRequestEditRights](/assets/images/editor/onRequestEditRights.png#gh-light-mode-only)![onRequestEditRights](/assets/images/editor/onRequestEditRights.dark.png#gh-dark-mode-only)
 ![编辑 PDF 按钮](/assets/images/editor/edit-pdf.png#gh-light-mode-only)
 ![编辑 PDF 按钮](/assets/images/editor/edit-pdf.dark.png#gh-dark-mode-only)
 
@@ -429,8 +429,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 如果未声明此事件，则不会显示*版本历史*按钮。
 :::
 
-<img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png#gh-light-mode-only" width="282px" />
-<img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.dark.png#gh-dark-mode-only" width="282px" />
+![onRequestHistory](/assets/images/editor/onRequestHistory.png#gh-light-mode-only)
+![onRequestHistory](/assets/images/editor/onRequestHistory.dark.png#gh-dark-mode-only)
 
 **示例**：
 
@@ -516,7 +516,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数       | 类型    | 描述           |
 | ---------- | ------- | -------------- |
-| event.data | `number` | 文档版本号。   |
+| event.data | `number` \| `string` | 文档版本号，即传递给 [refreshHistory](../methods.md#refreshhistory) 方法的 `history.version` 值。 |
 
 ![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.png#gh-light-mode-only)![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.dark.png#gh-dark-mode-only)
 
@@ -555,10 +555,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
  
 ## onRequestInsertImage
 
-当用户尝试通过单击*从存储中获取图像*按钮插入图像时调用的函数。要插入图像，请使用指定的命令调用 [insertImage](../methods.md#insertimage) 方法。调用此方法时，必须添加令牌以验证参数。
+当用户尝试通过单击*来自存储的图像*按钮插入图像时调用的函数。要插入图像，请使用指定的命令调用 [insertImage](../methods.md#insertimage) 方法。调用此方法时，必须添加令牌以验证参数。
 
 :::note
-如果未声明此事件，则不会显示*从存储中获取图像*按钮。
+如果未声明此事件，则不会显示*来自存储的图像*按钮。
 :::
 
 **参数**：
@@ -610,10 +610,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestOpen
 
-当用户尝试通过单击*打开源*按钮打开外部链接时调用的函数。要在新选项卡中打开包含 `path` 或 `referenceData` 参数引用的外部文件的编辑器，请通过调用带有 `path` 和 `windowName` 参数的 [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) 方法来传递指向此选项卡的链接。
+当用户尝试通过单击*打开源文件*按钮打开外部链接时调用的函数。要在新选项卡中打开包含 `path` 或 `referenceData` 参数引用的外部文件的编辑器，请通过调用带有 `path` 和 `windowName` 参数的 [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) 方法来传递指向此选项卡的链接。
 
 :::note
-如果未声明此事件，则不会显示*打开源*按钮。
+如果未声明此事件，则不会显示*打开源文件*按钮。
 :::
 
 **参数**：
@@ -624,7 +624,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | event.data.referenceData | `object` | 来自源文件的唯一文件数据。         |
 | event.data.windowName    | `string` | 新浏览器选项卡名称。   |
 
-<img alt="打开源" src="/assets/images/editor/open-source.png" width="498px" />
+![打开源文件](/assets/images/editor/open-source.png#gh-light-mode-only)![打开源文件](/assets/images/editor/open-source.dark.png#gh-dark-mode-only)
 
 **示例**：
 
@@ -656,9 +656,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 - 要将数据发送给 `setReferenceData` 方法，建议先通过 `referenceData` 参数搜索文件。如果没有这样的字段或找不到文件，则使用 `path` 或 `link` 参数。
 :::
 
-<img alt="粘贴链接" src="/assets/images/editor/paste-link.png" width="400px" />
+![粘贴链接](/assets/images/editor/paste-link.png#gh-light-mode-only)![粘贴链接](/assets/images/editor/paste-link.dark.png#gh-dark-mode-only)
 
-<img alt="更新值" src="/assets/images/editor/update-values.png" width="400px" />
+![更新值](/assets/images/editor/update-values.png#gh-light-mode-only)![更新值](/assets/images/editor/update-values.dark.png#gh-dark-mode-only)
 
 **参数**：
 
@@ -701,10 +701,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestReferenceSource
 
-当用户尝试通过单击*更改源*按钮更改外部数据源时调用的函数。要更改来源，请调用 [setReferenceSource](../methods.md#setreferencesource) 方法。调用该方法时，必须添加 `token` 来验证参数。
+当用户尝试通过单击*更改来源*按钮更改外部数据源时调用的函数。要更改来源，请调用 [setReferenceSource](../methods.md#setreferencesource) 方法。调用该方法时，必须添加 `token` 来验证参数。
 
 :::note
-- 如果未声明此事件，则不会显示*更改源*按钮。
+- 如果未声明此事件，则不会显示*更改来源*按钮。
 - 要将数据发送到 `setReferenceSource` 方法，建议首先通过 `referenceData` 参数搜索文件。如果没有这样的字段或找不到文件，则使用 `path` 参数。
 :::
 
@@ -715,7 +715,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | event.data.referenceData | `object` | 来自源文件的唯一文件数据。   |
 | event.data.path          | `string` | 文件路径或名称。 |
 
-<img alt="更改源" src="/assets/images/editor/change-source.png" width="498px" />
+![更改来源](/assets/images/editor/change-source.png#gh-light-mode-only)![更改来源](/assets/images/editor/change-source.dark.png#gh-dark-mode-only)
 
 **示例**：
 
@@ -799,8 +799,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | ---------- | ------ | ---------------- |
 | event.data | `string` | 新文档标题。     |
 
-<img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />   
-<img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
+![onRequestRename](/assets/images/editor/onRequestRename.png#gh-light-mode-only)
+![onRequestRename](/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only)
 
 **示例**：
 
@@ -832,7 +832,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数                | 类型    | 描述                                                                                   |
 | ------------------- | ------- | -------------------------------------------------------------------------------------- |
-| event.data.version  | `number` | 文档版本号。                                                                           |
+| event.data.version  | `number` \| `string` | 文档版本号，即传递给 [refreshHistory](../methods.md#refreshhistory) 方法的 `history.version` 值。 |
 | event.data.url      | `string`  | 来自[历史对象](../callback-handler.md#history)的文档链接。在调用文档更改时发送。        |
 | event.data.fileType | `string`  | 由 `url` 链接指定的文档类型。                                                          |
 
@@ -971,7 +971,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | ------------ | ------ | ------------------------------------------------- |
 | event.data.c | `”mailmerge”` | 电子表格选择的类型。 |
 
-![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.png)
+![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.png#gh-light-mode-only)![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.dark.png#gh-dark-mode-only)
 
 **示例**：
 
@@ -1068,10 +1068,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestStartFilling
 
-当用户尝试通过单击 PDF 编辑模式下的*开始填写*按钮开始填写准备好的表单时调用的函数。当用户单击*开始填写*按钮时，将调用 [startFilling](../methods.md#startfilling) 方法来锁定 PDF 编辑（仅可查看 PDF）。调用 [requestRoles](../methods.md#requestroles) 方法后，也会调用此事件。
+当用户尝试通过单击 PDF 编辑模式下的*分享&收集*按钮开始填写准备好的表单时调用的函数（可以使用 [startFillingForm](./editor/customization/customization-standard-branding.md#startfillingform) 参数更改按钮标题）。表单角色数组通过 `data` 参数传递。要锁定 PDF 编辑（仅可查看 PDF），请在事件处理程序中调用 [startFilling](../methods.md#startfilling) 方法。调用 [requestRoles](../methods.md#requestroles) 方法后，也会调用此事件。
 
 :::note
-如果未声明此事件，则不会显示*开始填写*按钮。
+如果声明了此事件或 [onStartFilling](#onstartfilling) 事件，则会显示*分享&收集*按钮。如果仅声明了 `onStartFilling`，单击该按钮将打开内置的**发送以供签署**面板，用户可以在其中为表单角色分配用户并发送表单以供填写。此面板的用户列表通过 `c` 设置为 `"filler"` 的 [onRequestUsers](#onrequestusers) 事件请求。表单发送后，将调用 `onStartFilling` 事件。
 :::
 
 **参数**：
@@ -1105,18 +1105,18 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestUsers
 
-当用户可以选择其他用户在评论中提及、授予编辑特定工作表范围的访问权限或设置用户头像时调用的函数。要设置用户列表，您必须调用 [setUsers](../methods.md#setusers) 方法，该方法可以根据指定的操作类型采用不同的用户列表。当执行相应的操作时，每个 `c` 类型都会调用一次 `onRequestUsers` 事件。如果使用空列表调用 `setUsers`，则 `onRequestUsers` 事件将再次触发。
+当用户可以选择其他用户在评论中提及、授予编辑特定工作表范围的访问权限、设置用户头像或在**发送以供签署**面板中为表单角色分配用户时调用的函数。要设置用户列表，您必须调用 [setUsers](../methods.md#setusers) 方法，该方法可以根据指定的操作类型采用不同的用户列表。当执行相应的操作时，每个 `c` 类型都会调用一次 `onRequestUsers` 事件。如果使用空列表调用 `setUsers`，则 `onRequestUsers` 事件将再次触发。
 
 **参数**：
 
 | 参数          | 类型     | 描述                                                                                   |
 | ------------- | -------- | -------------------------------------------------------------------------------------- |
-| event.data.c  | `"mention"` \| `"protect"` \| `"info"` | 操作类型。                           |
+| event.data.c  | `"mention"` \| `"protect"` \| `"info"` \| `"filler"` | 操作类型。                           |
 | event.data.id | `string[]` | 与操作关联的用户 ID 列表。 |
 
-<img alt="onRequestUsers" src="/assets/images/editor/onRequestUsers.png" width="309px" />
+![onRequestUsers](/assets/images/editor/onRequestUsers.png#gh-light-mode-only)![onRequestUsers](/assets/images/editor/onRequestUsers.dark.png#gh-dark-mode-only)
 
-<img alt="保护范围" src="/assets/images/editor/protect-range.png" width="292px" />
+![保护范围](/assets/images/editor/protect-range.png#gh-light-mode-only)![保护范围](/assets/images/editor/protect-range.dark.png#gh-dark-mode-only)
 
 **示例**：
 
@@ -1184,7 +1184,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onStartFilling
 
-调用 [startFilling](../methods.md#startfilling) 方法且表单准备完成后，PDF 表单准备就绪可供填写时调用的函数。
+调用 [startFilling](../methods.md#startfilling) 方法或从内置的**发送以供签署**面板发送表单且表单准备完成后，PDF 表单准备就绪可供填写时调用的函数。
+
+:::note
+仅当从**发送以供签署**面板发送表单时，才会在 `event.data` 中传递角色数组。使用 [startFilling](../methods.md#startfilling) 方法开始填写时，`event.data` 为 `undefined`。
+:::
 
 **参数**：
 

@@ -42,7 +42,7 @@ class MainButtonDialog implements IPlugin, IMainButtonPlugin, IApiPlugin {
   status: PluginStatus = PluginStatus.active;
   mainButtonItems: Map<string, IMainButtonItem> = new Map();
 
-  currentFolderId: number | null = null;
+  currentFolderId: string | number | null = null;
 
   onLoadCallback = async () => {};
            
@@ -108,7 +108,7 @@ class MainButtonDialog implements IPlugin, IMainButtonPlugin, IApiPlugin {
     return { origin: this.origin, proxy: this.proxy, prefix: this.prefix };
   };
 
-  setCurrentFolderId = (id: number | null) => {
+  setCurrentFolderId = (id: string | number | null) => {
     this.currentFolderId = id;
   };
 }
@@ -219,7 +219,7 @@ const createItem: IMainButtonItem = {
   key: "main-button",
   label: "Create new file",
   icon: "icon.svg",
-  onClick: () => {}
+  onItemClick: () => {}
 }
 
 const mainButtonItem: IMainButtonItem = {
@@ -227,7 +227,7 @@ const mainButtonItem: IMainButtonItem = {
   label: "Create new file",
   icon: "icon.svg",
   items: [createItem],
-  onClick: (id: number) => {
+  onItemClick: (id: string | number) => {
     plugin.setCurrentFolderId(id)
     const message: IMessage = {
         actions: [Actions.showModal],
@@ -304,7 +304,7 @@ class MainButtonDialog implements IPlugin, IMainButtonPlugin, IApiPlugin {
   status: PluginStatus = PluginStatus.active;
   mainButtonItems: Map<string, IMainButtonItem> = new Map();
 
-  currentFolderId: number | null = null;
+  currentFolderId: string | number | null = null;
 
   onLoadCallback = async () => {};
            
@@ -370,7 +370,7 @@ class MainButtonDialog implements IPlugin, IMainButtonPlugin, IApiPlugin {
     return { origin: this.origin, proxy: this.proxy, prefix: this.prefix };
   };
 
-  setCurrentFolderId = (id: number | null) => {
+  setCurrentFolderId = (id: string | number | null) => {
     this.currentFolderId = id;
   };
 }
@@ -532,7 +532,7 @@ const createItem: IMainButtonItem = {
   key: "main-button",
   label: "Create new file",
   icon: "icon.svg",
-  onClick: () => {}
+  onItemClick: () => {}
 }
 
 const mainButtonItem: IMainButtonItem = {
@@ -540,7 +540,7 @@ const mainButtonItem: IMainButtonItem = {
   label: "Create new file",
   icon: "icon.svg",
   items: [createItem],
-  onClick: (id: number) => {
+  onItemClick: (id: string | number) => {
     plugin.setCurrentFolderId(id)
     const message: IMessage = {
         actions: [Actions.showModal],

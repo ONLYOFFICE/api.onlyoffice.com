@@ -58,7 +58,7 @@ ONLYOFFICE 文档和 Mattermost 可以安装在不同的计算机上，也可以
   https://<documentserver>:<port>/
   ```
 
-  其中，**documentserver** 是安装了 **ONLYOFFICE 文档**的服务器名称，**port** 是其端口号。该地址必须能被用户浏览器和 Mattermost 服务器访问。Mattermost 服务器地址也必须能被 **ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址可以在云控制台的**实例**部分找到。
+  其中，**documentserver** 是安装了 **ONLYOFFICE 文档**的服务器名称，**port** 是其端口号。该地址必须能被用户浏览器和 Mattermost 服务器访问。Mattermost 服务器地址也必须能被 **ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/signup?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址可以在云控制台的**实例**部分找到。
 
 - **文档服务器 JWT 密钥**：从 7.2 版本开始，JWT 默认启用，并且会自动生成密钥，用于限制对 ONLYOFFICE 文档的访问，保障安全性和数据完整性。在应用配置中指定您自己的密钥。在 ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
@@ -95,7 +95,7 @@ ONLYOFFICE 文档和 Mattermost 可以安装在不同的计算机上，也可以
 
 ### 设置文件访问权限
 
-<img alt="Mattermost 共享" src="/assets/images/editor/mattermost-share.png" width="400px" />
+![Mattermost 共享](/assets/images/editor/mattermost-share.png)
 
 默认情况下，消息发送者对文件拥有完整的编辑权限，而所有接收者仅获得只读权限。只有发送者可以通过上下文菜单中的**更改访问权限**选项来修改用户访问权限。
 
@@ -113,7 +113,7 @@ ONLYOFFICE 机器人会发送关于文档更改的通知，其中会指明做出
 
 所有更改通知均可在消息的讨论线程中找到。只需点击消息右侧边缘的箭头，即可打开右侧面板，其中显示该消息讨论的完整历史记录。
 
-<img alt="Mattermost 机器人" src="/assets/images/editor/mattermost-bot.png" width="300px" />
+![Mattermost 机器人](/assets/images/editor/mattermost-bot.png)
 
 ## 工作原理
 

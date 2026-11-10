@@ -133,7 +133,7 @@ const createItem: IMainButtonItem = {
   key: "test-main-button",
   label: "Show dialog",
   icon: "icon.svg",
-  onClick: () => {}
+  onItemClick: () => {}
 }
 
 const mainButtonItem: IMainButtonItem = {
@@ -141,7 +141,7 @@ const mainButtonItem: IMainButtonItem = {
   label: "Show dialog",
   icon: "icon.svg",
   items: [createItem],
-  onClick: () => {
+  onItemClick: () => {
     const message: IMessage = {
         actions: [Actions.showModal],
         modalDialogProps: modalDialogProps,
@@ -275,7 +275,7 @@ const createItem: IMainButtonItem = {
   key: "test-main-button",
   label: "Show dialog",
   icon: "icon.svg",
-  onClick: () => {}
+  onItemClick: () => {}
 };
 
 const mainButtonItem: IMainButtonItem = {
@@ -283,7 +283,7 @@ const mainButtonItem: IMainButtonItem = {
   label: "Show dialog",
   icon: "icon.svg",
   items: [createItem],
-  onClick: () => {}
+  onItemClick: () => {}
 };
 
 plugin.addMainButtonItem(mainButtonItem);
@@ -371,7 +371,7 @@ const modalDialogProps: IModalDialog = {
 
 ## Step 7: Append the modal dialog to the main button
 
-Update the main button's [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md#onClick?) function with the modal display behavior:
+Update the main button's [`onItemClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md#onItemClick) function with the modal display behavior:
 
 ```ts
 const mainButtonItem: IMainButtonItem = {
@@ -379,7 +379,7 @@ const mainButtonItem: IMainButtonItem = {
   label: "Show dialog",
   icon: "icon.svg",
   items: [createItem],
-  onClick: () => {
+  onItemClick: () => {
     const message: IMessage = {
         actions: [Actions.showModal],
         modalDialogProps: modalDialogProps,

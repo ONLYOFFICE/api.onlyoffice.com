@@ -15,7 +15,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 Create the [connector](./automation-api/connector-class.md) to interact with documents, spreadsheets, presentations, PDFs, and fillable forms from the outside.
 
 :::info
-This method is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
+This method is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/pricing?from=api).
 :::
 
 :::note
@@ -92,7 +92,7 @@ Insert an image into the file. Starting from version 7.0, this method allows a u
 
 | Parameter               | Type             | Presence | Description                                                                                                                                                                                                                                                      |
 | ----------------------- | ---------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options.c               | `string` | required | The type of image insertion from the event: `add`, `change`, `fill`, `watermark`, `slide`. The default value is `"add"`.                                                                                                                           |
+| options.c               | `string` | optional | The type of image insertion from the event: `add`, `change`, `fill`, `watermark`, or `slide`. The default value is `"add"`.                                                                                                                           |
 | options.fileType        | `string` | required | The type of the image to be inserted into the file: `bmp`, `gif`, `jpe`, `jpeg`, `jpg`, `png`. Deprecated since version 7.0, please use the `options.images.fileType` parameter instead.                                                           |
 | options.images          | `object[]` | required | The array of images to be inserted.                                                                                                                                                                                                                       |
 | options.images.fileType | `string` | required | The type of the image to be inserted into the file: `bmp`, `gif`, `jpe`, `jpeg`, `jpg`, `png`, `tif`, `tiff`.                                                                                                                                      |
@@ -179,7 +179,7 @@ Show the document version history. This method must be called after the [onReque
 
 | Parameter                     | Type    | Presence | Description                                                                                                                                       |
 | ----------------------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options.currentVersion        | `number` | required | The current document version number.                                                                                                      |
+| options.currentVersion        | `number` \| `string` | optional | The current document version number. If this parameter is not specified or does not match any version, the last version in the `history` array is selected. |
 | options.error                 | `string` | optional | The error message text.                                                                                                                   |
 | options.history               | `object[]` | required | The array with the document versions.                                                                                                     |
 | options.history.changes       | `object` | optional | The `changes` from [the history object](./callback-handler.md#history) returned after saving the document.                                |
@@ -189,7 +189,7 @@ Show the document version history. This method must be called after the [onReque
 | options.history.user          | `object` | optional | The user who is the author of the document version.                                                                                       |
 | options.history.user.id       | `string` | optional | The identifier of the user who is the author of the document version.                                                                     |
 | options.history.user.name     | `string` | optional | The name of the user who is the author of the document version.                                                                           |
-| options.history.version       | `number` | required | The document version number.                                                                                                              |
+| options.history.version       | `number` \| `string` | required | The document version number, e.g. `2` or `"1.2"`. The editor returns this value as is in the [onRequestHistoryData](./config/events.md#onrequesthistorydata) and [onRequestRestore](./config/events.md#onrequestrestore) events. |
 
 **Example:**
 
@@ -271,9 +271,9 @@ Request to close the editor. It is recommended to call this method before the [d
 
 ## requestRoles
 
-Request the roles of the PDF form that is being edited. In response, the editor calls the [onRequestStartFilling](./config/events.md#onrequeststartfilling) event and passes the array of form roles in its `data` parameter, the same as when the user clicks the *Start filling* button. Declare this event to receive the roles. If the document is not loaded yet, the event is called once loading is complete.
+Request the roles of the PDF form that is being edited. In response, the editor calls the [onRequestStartFilling](./config/events.md#onrequeststartfilling) event and passes the array of form roles in its `data` parameter, the same as when the user clicks the *Share & collect* button. Declare this event to receive the roles. If the document is not loaded yet, the event is called once loading is complete.
 
-This method can be used to get the form roles without waiting for the user to click the *Start filling* button.
+This method can be used to get the form roles without waiting for the user to click the *Share & collect* button.
 
   ``` ts
   docEditor.requestRoles();
@@ -343,7 +343,7 @@ Send the link to the document for viewing the version history. This method must 
 | options.previous.url      | `string` | required | The url address of the previous version of the document.                                                                                                                                                                                                                                                 |
 | options.token             | `string` | optional | The encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#sethistorydata).                                                                                                                                                                          |
 | options.url               | `string` | required | The url address of the current document version. Can be downloaded by the `url` link from [the JSON object](./callback-handler.md#url) returned after saving the document. Be sure to add a [token](../get-started/how-it-works/how-it-works.md) when using local links. Otherwise, an error will occur. |
-| options.version           | `number` | required | The document version number.                                                                                                                                                                                                                                                                             |
+| options.version           | `number` \| `string` | required | The document version number. It must match the `history.version` value passed to the [refreshHistory](#refreshhistory) method, including its type. |
 
 **Example:**
 
@@ -419,7 +419,7 @@ Starting from version 7.5, please use [setRequestedSpreadsheet](#setrequestedspr
 Refresh data by a link to a file which is specified with the `referenceData`, `path`, or `link` parameters. This method must be called after the [onRequestReferenceData](./config/events.md#onrequestreferencedata) event.
 
 :::info
-This method is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
+This method is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/pricing?from=api).
 :::
 
 :::note
@@ -526,7 +526,7 @@ Select a document for comparing, combining, or inserting text. This method is us
 
 | Parameter        | Type   | Presence | Description                                                                                                                                                                             |
 | ---------------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options.c        | `string` | required | The type of document selection from the event: `compare`, `combine`, or `insert-text`. The default value is `"compare"`.                                                    |
+| options.c        | `string` | required | The type of document selection from the event: `compare`, `combine`, or `insert-text`.                                                    |
 | options.fileType | `string` | required | The type of the document to be selected: `doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fodt`, `odt`, `ott`, `rtf`, `wps`.                                        |
 | options.token    | `string` | optional | The encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setrequesteddocument).                                           |
 | options.url      | `string` | required | The absolute URL where the source document is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
@@ -579,7 +579,7 @@ Starting from version 7.5, please use [setRequestedDocument](#setrequesteddocume
 :::
 
 :::info
-This method is available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
+This method is available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/pricing?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/pricing?from=api).
 :::
 
   ``` ts
@@ -641,7 +641,7 @@ Update the [information](./config/document/info.md#sharingsettings) about the se
 
 ## setUsers
 
-Set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. This method must be called after the [onRequestUsers](./config/events.md#onrequestusers) event.
+Set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, set the user avatars, or assign users to the form roles in the **Send for signing** panel. This method must be called after the [onRequestUsers](./config/events.md#onrequestusers) event.
 
   ``` ts
   docEditor.setUsers(options);
@@ -651,10 +651,10 @@ Set a list of users to mention in the comments, grant the access rights to edit 
 
 | Parameter           | Type             | Presence | Description                                                                                                                                                                                               |
 | ------------------- | ---------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options.c           | `string` | required | The operation type from the [onRequestUsers](./config/events.md#onrequestusers) event: `mention`, `protect`, or `info`. The default value is `mention`. |
+| options.c           | `string` | optional | The operation type from the [onRequestUsers](./config/events.md#onrequestusers) event: `mention`, `protect`, `info`, or `filler`. The default value is `mention`. |
 | options.users       | `object[]` | optional | The list of the users.                                                                                                                                                                            |
 | options.users.email | `string` | optional | The email address of the user. This field is required when the `c` parameter is `mention`.                                                                                                        |
-| options.users.id    | `string` | optional | The identification of the user. This field is required when the `c` parameter is `protect`.                                                                                                       |
+| options.users.id    | `string` | optional | The identification of the user. This field is required when the `c` parameter is `protect` or `filler`.                                                                                                       |
 | options.users.image | `string` | optional | The path to the user's avatar. This field is required when the `c` parameter is `info`.                                                                                                           |
 | options.users.name  | `string` | optional | The full name of the user.                                                                                                                                                                        |
 
@@ -715,7 +715,7 @@ Please note that displaying a tooltip with a message is not supported in the emb
 
 ## startFilling
 
-Start filling out the ready forms and lock the pdf editing (only pdf viewing becomes available). This method can be called only after the [onRequestStartFilling](./config/events.md#onrequeststartfilling) event. When the form preparation is complete, the [onStartFilling](./config/events.md#onstartfilling) event is called.
+Start filling out the ready forms and lock the PDF editing (only PDF viewing becomes available). This method can be called only after the [onRequestStartFilling](./config/events.md#onrequeststartfilling) event. When the form preparation is complete, the [onStartFilling](./config/events.md#onstartfilling) event is called.
 
 :::note
 This method works only if the [onStartFilling](./config/events.md#onstartfilling) event is declared. Otherwise, the call is ignored.

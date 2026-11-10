@@ -9,7 +9,7 @@ sidebar_position: -7
 以下选项可用于定制 ONLYOFFICE 文档版本（白标化），修改**关于**页面显示信息（所有编辑器用户可见）：
 
 :::note
-请注意，更改这些选项仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)用户。
+请注意，更改这些选项仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/zh/pricing?from=api)用户。
 :::
 
 - `editorConfig.customization.customer` 选项：
@@ -263,7 +263,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 :::note
-这些参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)的扩展白标许可证。
+这些参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/zh/pricing?from=api)的扩展白标许可证。
 :::
 
 有关界面字体自定义的更多信息，请参见[此页面](../../usage-api/config/editor/customization/customization-white-label.md#font)。
@@ -292,7 +292,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 :::note
-这些参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)的扩展白标许可证。
+这些参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/zh/pricing?from=api)的扩展白标许可证。
 :::
 
 有关编辑器标题栏设置的更多信息，请参见[此页面](../../usage-api/config/editor/customization/customization-white-label.md#layoutheader)。

@@ -32,14 +32,14 @@ mainTable.SetStyle(mainTableStyle);
 
 // Fill main table header row
 let headerRow = mainTable.GetRow(0);
-headerRow.SetBackgroundColor(75, 136, 209, false);
+headerRow.SetBackgroundColor(Api.RGB(75, 136, 209));
 
 // First column header
 let headerCell1 = headerRow.GetCell(0);
 let headerContent1 = headerCell1.GetContent();
 let headerPara1 = headerContent1.GetElement(0);
 headerPara1.AddText("Field");
-headerPara1.SetColor(255, 255, 255, false);
+headerPara1.SetColor(Api.RGB(255, 255, 255));
 headerPara1.SetBold(true);
 headerPara1.SetJc("center");
 
@@ -48,13 +48,13 @@ let headerCell2 = headerRow.GetCell(1);
 let headerContent2 = headerCell2.GetContent();
 let headerPara2 = headerContent2.GetElement(0);
 headerPara2.AddText("Value / Sub-table");
-headerPara2.SetColor(255, 255, 255, false);
+headerPara2.SetColor(Api.RGB(255, 255, 255));
 headerPara2.SetBold(true);
 headerPara2.SetJc("center");
 
 // Fill first data row - Order ID
 let row1 = mainTable.GetRow(1);
-row1.SetBackgroundColor(245, 245, 245, false);
+row1.SetBackgroundColor(Api.RGB(245, 245, 245));
 
 let cell1_1 = row1.GetCell(0);
 let content1_1 = cell1_1.GetContent();
@@ -69,7 +69,7 @@ para1_2.AddText("ORD-2025-0081");
 
 // Fill second data row - Date
 let row2 = mainTable.GetRow(2);
-row2.SetBackgroundColor(225, 225, 225, false);
+row2.SetBackgroundColor(Api.RGB(225, 225, 225));
 
 let cell2_1 = row2.GetCell(0);
 let content2_1 = cell2_1.GetContent();
@@ -85,7 +85,7 @@ para2_2.AddText("2025-06-21");
 // Add a new row for the nested table
 mainTable.AddRow();
 let row3 = mainTable.GetRow(3);
-row3.SetBackgroundColor(245, 245, 245, false);
+row3.SetBackgroundColor(Api.RGB(245, 245, 245));
 
 let cell3_1 = row3.GetCell(0);
 let content3_1 = cell3_1.GetContent();
@@ -109,7 +109,7 @@ nestedTable.SetStyle(nestedTableStyle);
 
 // Fill nested table headers
 let nestedHeaderRow = nestedTable.GetRow(0);
-nestedHeaderRow.SetBackgroundColor(100, 150, 200, false);
+nestedHeaderRow.SetBackgroundColor(Api.RGB(100, 150, 200));
 
 let nestedHeaders = ["Item", "Qty", "Price"];
 for (let i = 0; i < 3; i++) {
@@ -117,7 +117,7 @@ for (let i = 0; i < 3; i++) {
   let nestedHeaderContent = nestedHeaderCell.GetContent();
   let nestedHeaderPara = nestedHeaderContent.GetElement(0);
   nestedHeaderPara.AddText(nestedHeaders[i]);
-  nestedHeaderPara.SetColor(255, 255, 255, false);
+  nestedHeaderPara.SetColor(Api.RGB(255, 255, 255));
   nestedHeaderPara.SetBold(true);
   nestedHeaderPara.SetJc("center");
 }
@@ -143,7 +143,7 @@ for (let i = 0; i < 2; i++) {
     }
     if (j === 2) {
       nestedPara.SetBold(true);
-      nestedPara.SetColor(0, 100, 0, false);
+      nestedPara.SetColor(Api.RGB(0, 100, 0));
     }
   }
 }

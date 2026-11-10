@@ -6,7 +6,7 @@ sidebar_position: -18
 
 The figure and steps below explain how a shareable link to a bookmark position in a document is created in ONLYOFFICE Docs.
 
-<img alt="Action link" src="/assets/images/editor/actionLink-create.png" width="720px" />
+![Action link](/assets/images/editor/actionLink-create.png)
 
 1. The user clicks the **Get link** button in the bookmark editing menu of the **document editor**.
 2. The **document editor** fires the [onMakeActionLink](../../usage-api/config/events.md#onmakeactionlink) event, passing the bookmark data to the **document manager**.
@@ -41,7 +41,7 @@ The figure and steps below explain how a shareable link to a bookmark position i
 
 ## Opening the bookmark
 
-<img alt="Open action link" src="/assets/images/editor/actionLink-open.png" width="720px" />
+![Open action link](/assets/images/editor/actionLink-open.png)
 
 1. The user opens the action link in the browser, which navigates to the **document manager**.
 2. The **document manager** initializes the **document editor** with the [`config`](../../usage-api/config/config.md) that includes the bookmark data in the [`actionLink`](../../usage-api/config/editor/editor.md#actionlink) parameter.

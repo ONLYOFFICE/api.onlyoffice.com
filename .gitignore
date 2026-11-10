@@ -1,6 +1,5 @@
 # Dependencies
 /node_modules
-/openapi/docspace/node_modules
 
 # Production
 /build

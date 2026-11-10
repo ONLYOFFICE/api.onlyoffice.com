@@ -68,15 +68,15 @@ sidebar_position: -5
 
 ![Alternate rows](/assets/images/plugins/alternate-rows.png#gh-light-mode-only)![Alternate rows](/assets/images/plugins/alternate-rows.dark.png#gh-dark-mode-only)
 
-## 使用 AI 插件生成宏 {#generating-macros-using-ai-plugin}
+## 使用 AI 工具生成宏 {#generating-macros-using-ai-tools}
 
-如果您希望加快生成宏的过程，从 9.0 版本开始，可以使用 ONLYOFFICE 内置的 AI 插件，通过描述自动生成 ONLYOFFICE 宏：
+从 9.0 版本开始，您可以使用 AI 工具（原 AI 插件）根据描述自动生成 ONLYOFFICE 宏：
 
-1. [配置 AI 插件](../../ai/guides/ai-plugin.md#configuring)。
+1. 配置 AI 工具。详情请参见[配置 AI 工具](../../ai/guides/ai-plugin.md#configuring)。
 2. 打开**视图**选项卡，点击**宏**。
 3. 在**宏**窗口中点击 **AI** 图标，选择**根据描述创建**。
 
-    ![AI 插件](/assets/images/plugins/ai-plugin.png#gh-light-mode-only)![AI 插件](/assets/images/plugins/ai-plugin.dark.png#gh-dark-mode-only)
+    ![AI 工具](/assets/images/plugins/ai-plugin.png#gh-light-mode-only)![AI 工具](/assets/images/plugins/ai-plugin.dark.png#gh-dark-mode-only)
 
 4. 在**根据描述创建宏**窗口中输入描述，并点击**创建**。生成的宏示例将被插入到**宏**窗口中。
 
@@ -85,7 +85,7 @@ sidebar_position: -5
 5. 检查代码，如有必要可进行调整。
 
     :::warning
-    尽管 AI 插件可以生成完整且可运行的宏，但生成的宏并不总是完美的。请务必仔细检查输出内容，并进行测试，尤其是复杂的宏。
+    尽管 AI 工具可以生成完整且可运行的宏，但生成的宏并不总是完美的。请务必仔细检查输出内容，并进行测试，尤其是复杂的宏。
     :::
 
 6. 点击![播放图标](/assets/images/plugins/play.svg)测试脚本。

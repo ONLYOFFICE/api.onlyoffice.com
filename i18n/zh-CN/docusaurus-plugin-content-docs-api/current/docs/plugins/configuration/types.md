@@ -25,7 +25,7 @@ sidebar_position: -1
 
 如果插件是**内置**且为**后台**类型，它会立即启动（从版本 9.0.4 开始）。
 
-**示例**：[AI](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai)、[QR Code Generator](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/insertQR)
+**示例**：[QR Code Generator](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/insertQR)
 
 ## window
 
@@ -63,7 +63,7 @@ sidebar_position: -1
 任何类型的插件在运行过程中都可以创建窗口和选项卡。
 :::
 
-## Example
+## 示例 {#example}
 
 ```json
 {

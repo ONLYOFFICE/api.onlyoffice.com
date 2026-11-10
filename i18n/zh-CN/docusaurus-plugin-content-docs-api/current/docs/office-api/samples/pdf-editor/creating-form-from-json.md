@@ -230,7 +230,7 @@ function generateFormFromJSON(jsonData, formTitle) {
   paragraph.AddText(`从JSON自动生成（${Object.keys(jsonData).length}个字段）`);
   paragraph.SetFontSize(12 * 2);
   paragraph.SetJc("center");
-  paragraph.SetColor(128, 128, 128);
+  paragraph.SetColor(Api.RGB(128, 128, 128));
   doc.Push(paragraph);
 
   // 添加间距

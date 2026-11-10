@@ -9,7 +9,7 @@ Automation API enables interaction with office documents from external sources t
 :::info
 Automation API is available only for **ONLYOFFICE Docs Developer**.
 
-This is a premium feature available at an extra cost. See [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api) for pricing details, or contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote.
+This is a premium feature available at an extra cost. See [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/pricing?from=api) for pricing details, or contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote.
 :::
 
 ## What you can build

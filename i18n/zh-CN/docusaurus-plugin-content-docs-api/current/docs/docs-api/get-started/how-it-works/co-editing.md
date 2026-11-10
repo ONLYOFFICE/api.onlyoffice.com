@@ -35,7 +35,7 @@ sidebar_position: -20
    其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器名称。`api.js` 脚本由**文档编辑服务**提供；它加载**文档编辑器**并将其连接到该服务。
 
    :::tip
-   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)免费的 ONLYOFFICE 文档云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。您可以在云控制台的**实例**部分找到它们。
+   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/signup?from=api)免费的 ONLYOFFICE 文档云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。您可以在云控制台的**实例**部分找到它们。
    :::
 
 4. 添加初始化**文档编辑器**的脚本，配置要打开的文档：
@@ -267,6 +267,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 在**严格**模式下，每个用户在独立的会话中工作。其他用户的更改在您点击**保存**之前保持隐藏。当多个用户同时编辑时，他们的编辑区域会用不同颜色的虚线标记。
 
-点击**保存**后，其他用户会收到更新通知。要接受更新并发送您自己的更改，请点击工具栏左上角的 <img alt="Save updates" src="/assets/images/editor/save-updates.png" width="18px" /> 按钮。接受的更新将被高亮显示。
+点击**保存**后，其他用户会收到更新通知。要接受更新并发送您自己的更改，请点击工具栏左上角的 <img alt="保存更新" src="/assets/images/editor/save-updates.png#gh-light-mode-only" width="24px" /><img alt="保存更新" src="/assets/images/editor/save-updates.dark.png#gh-dark-mode-only" width="24px" /> 按钮。接受的更新将被高亮显示。
 
 ![严格模式](/assets/images/editor/strict-mode.png#gh-light-mode-only)![严格模式](/assets/images/editor/strict-mode.dark.png#gh-dark-mode-only)

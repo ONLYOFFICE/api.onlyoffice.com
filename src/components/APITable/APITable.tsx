@@ -1,6 +1,8 @@
 import React, { type ComponentProps, type ReactElement, type ReactNode, isValidElement, useRef, useEffect } from "react";
 import useBrokenLinks from "@docusaurus/useBrokenLinks";
 import { useHistory } from "@docusaurus/router";
+import CodeInline from "@theme/CodeInline";
+import MDXComponents from "@theme/MDXComponents";
 import styles from "./styles.module.css";
 
 interface Props {
@@ -20,26 +22,39 @@ function getRowName(node: ReactElement): string {
   return curNode as string;
 }
 
-// Split a string after each dot and insert <wbr> so long dotted parameter keys wrap.
-function softBreakString(text: string): ReactNode {
-  const tokens = text.split(/(\.)/).filter((t) => t !== "");
+// Break points: after dots in parameter keys; after dots and slashes in code values (paths, URLs).
+const KEY_BREAKS = /(\.)/;
+const VALUE_BREAKS = /([./])/;
+
+// Split a string after each separator and insert <wbr> so long unspaced tokens wrap.
+function softBreakString(text: string, separators: RegExp): ReactNode {
+  const tokens = text.split(separators).filter((t) => t !== "");
   if (tokens.length <= 1) return text;
   const out: ReactNode[] = [];
   tokens.forEach((tok, i) => {
     out.push(tok);
-    if (tok === ".") out.push(<wbr key={`wbr-${i}`} />);
+    if (tok.length === 1 && separators.test(tok)) out.push(<wbr key={`wbr-${i}`} />);
   });
   return out;
 }
 
-// Soft-break text nodes only; preserve React elements (e.g. <code>) and their keys.
-function insertSoftBreaks(node: ReactNode): ReactNode {
-  if (typeof node === "string") return softBreakString(node);
-  if (Array.isArray(node)) return React.Children.map(node, insertSoftBreaks);
+function isInlineCode(el: ReactElement): boolean {
+  return el.type === "code" || el.type === MDXComponents.code || el.type === CodeInline;
+}
+
+// Soft-break text nodes only (or only those inside inline code); preserve React elements and their keys.
+function insertSoftBreaks(node: ReactNode, separators: RegExp, codeOnly = false, inCode = false): ReactNode {
+  if (typeof node === "string") return codeOnly && !inCode ? node : softBreakString(node, separators);
+  if (Array.isArray(node)) return React.Children.map(node, (child) => insertSoftBreaks(child, separators, codeOnly, inCode));
   if (isValidElement(node)) {
     const el = node as ReactElement<{ children?: ReactNode }>;
     if (el.props.children === undefined) return node;
-    return React.cloneElement(el, undefined, insertSoftBreaks(el.props.children));
+    const isCode = isInlineCode(el);
+    const children = insertSoftBreaks(el.props.children, separators, codeOnly, inCode || isCode);
+    // Any code element (MDXCode, raw <code>, CodeInline) is rendered as CodeInline: with <wbr> among its children,
+    // MDXCode would switch to CodeBlock, since it renders inline only when every child is a newline-free string.
+    if (isCode) return <CodeInline {...el.props} key={el.key}>{children}</CodeInline>;
+    return React.cloneElement(el, undefined, children);
   }
   return node;
 }
@@ -61,14 +76,17 @@ function APITableRow({ name, children }: { name: string | undefined; children: R
     />
   );
 
-  // First cell: soft-break long keys, then append the hash link.
+  // First cell: soft-break long keys, then append the hash link. Other cells: soft-break inline code values.
   const cells = React.Children.toArray(children.props.children);
   const renderedCells = cells.map((cell, index) => {
-    if (index !== 0 || !isValidElement(cell)) {
+    if (!isValidElement(cell)) {
       return cell;
     }
-    const firstCell = cell as ReactElement<ComponentProps<"td">>;
-    return React.cloneElement(firstCell, {}, insertSoftBreaks(firstCell.props.children), hashLink);
+    const td = cell as ReactElement<ComponentProps<"td">>;
+    if (index === 0) {
+      return React.cloneElement(td, {}, insertSoftBreaks(td.props.children, KEY_BREAKS), hashLink);
+    }
+    return React.cloneElement(td, {}, insertSoftBreaks(td.props.children, VALUE_BREAKS, true));
   });
 
   return (

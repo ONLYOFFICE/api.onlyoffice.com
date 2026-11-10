@@ -15,7 +15,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 [connector](./automation-api/automation-api.md) 创建连接器以与外部的文本文档、电子表格、演示文稿和可填充表单交互。
 
 :::info
-此方法仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
+此方法仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/zh/pricing?from=api)。
 :::
 
 :::note
@@ -92,7 +92,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数                    | 类型             | 是否必填 | 描述                                                                                                                                                                                                                                                                     |
 | ----------------------- | ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options.c               | `string` | 必填 | 事件中的图像插入类型：`add`, `change`, `fill`, `watermark`, `slide`。默认值为 `"add"`。                                                                                                                                         |
+| options.c               | `string` | 非必填的 | 事件中的图像插入类型：`add`、`change`、`fill`、`watermark` 或 `slide`。默认值为 `"add"`。                                                                                                                                         |
 | options.fileType        | `string` | 必填 | 要插入文件的图像类型：`bmp`, `gif`, `jpe`, `jpeg`, `jpg`, `png`。自 7.0 版起已弃用，请改用 `options.images.fileType` 参数。                                                                                  |
 | options.images          | `object[]` | 必填 | 要插入的图像数组。                                                                                                                                                                                                                                      |
 | options.images.fileType | `string` | 必填 | 要插入文件的图像类型：`bmp`, `gif`, `jpe`, `jpeg`, `jpg`, `png`, `tif`, `tiff`。                                                                                                                                                     |
@@ -179,7 +179,7 @@ docEditor.insertImage({
 
 | 参数                         | 类型    | 是否必填 | 描述                                                                                                                                       |
 | ----------------------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options.currentVersion        | `number` | 必填 | 当前文档版本号。                                                                                                      |
+| options.currentVersion        | `number` \| `string` | 非必填的 | 当前文档版本号。如果未指定此参数或其与任何版本都不匹配，则选中 `history` 数组中的最后一个版本。 |
 | options.error                 | `string` | 非必填的 | 错误消息文本。                                                                                                                   |
 | options.history               | `object[]` | 必填 | 文档版本数组。                                                                                                    |
 | options.history.changes       | `object` | 非必填的 | 保存文档后返回的[历史对象](./callback-handler.md#history)的 `changes`。                      |
@@ -189,7 +189,7 @@ docEditor.insertImage({
 | options.history.user          | `object` | 非必填的 | 作为文档版本作者的用户。                                                                                      |
 | options.history.user.id       | `string` | 非必填的 | 作为文档版本作者的用户的标识符。                                                                    |
 | options.history.user.name     | `string` | 非必填的 | 作为文档版本作者的用户的名称                                                                          |
-| options.history.version       | `number` | 必填 | 文档版本号。                                                                                                              |
+| options.history.version       | `number` \| `string` | 必填 | 文档版本号，例如 `2` 或 `"1.2"`。编辑器会在 [onRequestHistoryData](./config/events.md#onrequesthistorydata) 和 [onRequestRestore](./config/events.md#onrequestrestore) 事件中原样返回此值。 |
 
 **示例**：
 
@@ -271,9 +271,9 @@ docEditor.insertImage({
 
 ## requestRoles
 
-请求正在编辑的 PDF 表单的角色。编辑器会调用 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件作为响应，并在其 `data` 参数中传递表单角色数组，与用户单击*开始填写*按钮时相同。需要声明此事件才能接收角色。如果文档尚未加载完成，则会在加载完成后调用该事件。
+请求正在编辑的 PDF 表单的角色。编辑器会调用 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件作为响应，并在其 `data` 参数中传递表单角色数组，与用户单击*分享&收集*按钮时相同。需要声明此事件才能接收角色。如果文档尚未加载完成，则会在加载完成后调用该事件。
 
-使用此方法可以获取表单角色，而无需等待用户单击*开始填写*按钮。
+使用此方法可以获取表单角色，而无需等待用户单击*分享&收集*按钮。
 
   ``` ts
   docEditor.requestRoles();
@@ -343,7 +343,7 @@ docEditor.insertImage({
 | options.previous.url      | `string` | 必填 | 上一版本文档的 url 地址。                                                                                                                                                                                                                                                            |
 | options.token             | `string` | 非必填的 | 以[令牌](../additional-api/signature/browser.md#sethistorydata)形式添加到参数的加密签名。                                                                                                                                                                        |
 | options.url               | `string` | 必填 | 当前文档版本的 url 地址。可以从保存文档后返回的 [JSON](./callback-handler.md#url) 对象中的 `url` 链接下载。使用本地链接时请务必添加[令牌](../get-started/how-it-works/how-it-works.md)。否则会出现错误。 |
-| options.version           | `number` | 必填 | 文档版本号。                                                                                                                                                                                                                                                                                        |
+| options.version           | `number` \| `string` | 必填 | 文档版本号。必须与传递给 [refreshHistory](#refreshhistory) 方法的 `history.version` 值一致，包括其类型。 |
 
 **示例**：
 
@@ -419,7 +419,7 @@ docEditor.insertImage({
 通过指向文件的链接刷新数据，该链接使用 `referenceData`、`path` 或 `link` 参数指定。此方法必须在 [onRequestReferenceData](./config/events.md#onrequestreferencedata) 事件之后调用。
 
 :::info
-此方法仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
+此方法仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/zh/pricing?from=api)。
 :::
 
 :::note
@@ -436,7 +436,7 @@ docEditor.insertImage({
 | --------------------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | options.error         | `string` | 非必填的 | 错误消息文本。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | options.fileType      | `string` | 非必填的 | 用 `url` 参数指定的文档的扩展名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| options.key           | `string` | 非必填的 | 服务用于从共同编辑会话获取数据的唯一文档标识符。如果发送已知密钥，将从缓存中获取文档。每次编辑并保存文档时，都必须重新生成密钥。文档 url 可以用作 `key`，但不能包含特殊字符，且长度限制为 128 个符号。                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| options.key           | `string` | 非必填的 | 服务用于从共同编辑会话获取数据的唯一文档标识符。如果发送已知标识符，将从缓存中获取文档。每次编辑并保存文档时，都必须重新生成标识符。文档 url 可以用作 `key`，但不能包含特殊字符，且长度限制为 128 个符号。                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | options.path          | `string` | 必填 | 公式编辑器的文件名或相对路径。它用于在执行 [onRequestReferenceData](./config/events.md#onrequestreferencedata) 事件时识别文件。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | options.referenceData | `object` | 非必填的 | 由集成商生成的对象，用于唯一标识其系统中的文件。此数据必须与 [document.referenceData](./config/document/document.md#referencedata) 配置参数中的相同。 |
 | options.token         | `string` | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setreferencedata)的形式添加到参数的加密签名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -484,7 +484,7 @@ docEditor.insertImage({
 | --------------------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | options.error         | `string` | 非必填的 | 错误消息文本。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | options.fileType      | `string` | 非必填的 | 用 `url` 参数指定的文档的扩展名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| options.key           | `string` | 非必填的 | 服务用于从共同编辑会话获取数据的唯一文档标识符。如果发送已知密钥，将从缓存中获取文档。每次编辑并保存文档时，都必须重新生成密钥。文档 url 可以用作 `key`，但不能包含特殊字符，且长度限制为 128 个符号。                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| options.key           | `string` | 非必填的 | 服务用于从共同编辑会话获取数据的唯一文档标识符。如果发送已知标识符，将从缓存中获取文档。每次编辑并保存文档时，都必须重新生成标识符。文档 url 可以用作 `key`，但不能包含特殊字符，且长度限制为 128 个符号。                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | options.path          | `string` | 必填 | 公式编辑器的文件名或相对路径。它用于在执行 [onRequestReferenceSource](./config/events.md#onrequestreferencesource) 事件时识别文件。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | options.referenceData | `object` | 非必填的 | 由集成商生成的对象，用于唯一标识其系统中的文件。此数据必须与 [document.referenceData](./config/document/document.md#referencedata) 配置参数中的相同。 |
 | options.token         | `string` | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setreferencesource)形式添加到参数的加密签名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -526,7 +526,7 @@ docEditor.insertImage({
 
 | 参数             | 类型   | 是否必填 | 描述                                                                                                                                                                                            |
 | ---------------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| options.c        | `string` | 必填 | 从事件中选择的文档类型：`compare`、`combine`、`insert-text`。默认值为 `"compare"`。                                                                   |
+| options.c        | `string` | 必填 | 从事件中选择的文档类型：`compare`、`combine` 或 `insert-text`。                                                                   |
 | options.fileType | `string` | 必填 | 要选择的文档类型：`doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fodt`, `odt`, `ott`, `rtf`, `wps`。                                                       |
 | options.token    | `string` | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setrequesteddocument)的形式添加到参数的加密签名。                                             |
 | options.url      | `string` | 必填 | 存储源文档的绝对 URL。使用本地链接时，请务必添加[令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
@@ -579,7 +579,7 @@ docEditor.insertImage({
 :::
 
 :::info
-此方法仅适用于 [ONLYOFFICE 文档企业版](https://www.onlyoffice.com/docs-enterprise-prices?from=api)和 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
+此方法仅适用于 [ONLYOFFICE 文档企业版](https://www.onlyoffice.com/zh/pricing?from=api)和 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/zh/pricing?from=api)。
 :::
 
   ``` ts
@@ -641,7 +641,7 @@ docEditor.insertImage({
 
 ## setUsers
 
-设置用户列表、用来在评论中提及、授予编辑特定工作表范围的访问权限，或设置用户头像。此方法必须在 [onRequestUsers](./config/events.md#onrequestusers) 事件之后调用。
+设置用户列表，用于在评论中提及、授予编辑特定工作表范围的访问权限、设置用户头像，或在**发送以供签署**面板中为表单角色分配用户。此方法必须在 [onRequestUsers](./config/events.md#onrequestusers) 事件之后调用。
 
   ``` ts
   docEditor.setUsers(options);
@@ -651,10 +651,10 @@ docEditor.insertImage({
 
 | 参数                | 类型             | 是否必填 | 描述                                                                                                                                                                                                      |
 | ------------------- | ---------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options.c           | `string` | 必填 |  [onRequestUsers](./config/events.md#onrequestusers) 事件的操作类型：`mention`, `protect` 或 `info`。默认值为 `mention`。|
+| options.c           | `string` | 非必填的 | [onRequestUsers](./config/events.md#onrequestusers) 事件的操作类型：`mention`、`protect`、`info` 或 `filler`。默认值为 `mention`。|
 | options.users       | `object[]` | 非必填的 | 用户列表。                                                                                                                                                                                   |
 | options.users.email | `string` | 非必填的 | 用户的电子邮件地址。当 `c` 参数为 `mention` 时，此字段是必需的。                                                                                                              |
-| options.users.id    | `string` | 非必填的 | 用户的身份。当 `c` 参数为 `protect` 时，此字段是必需的。                                                                                                              |
+| options.users.id    | `string` | 非必填的 | 用户的 ID。当 `c` 参数为 `protect` 或 `filler` 时，此字段是必需的。                                                                                                              |
 | options.users.image | `string` | 非必填的 | 用户头像的路径。当 `c` 参数为 `info` 时，此字段是必需的。                                                                                                                  |
 | options.users.name  | `string` | 非必填的 | 用户的全名。                                                                                                                                                                               |
 
@@ -715,7 +715,7 @@ docEditor.insertImage({
 
 ## startFilling
 
-开始填写准备好的表格并锁定 pdf 编辑（仅可查看 pdf）。仅在 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件之后才可调用此方法。表单准备完成后，将调用 [onStartFilling](./config/events.md#onstartfilling) 事件。
+开始填写准备好的表单并锁定 PDF 编辑（仅可查看 PDF）。仅在 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件之后才可调用此方法。表单准备完成后，将调用 [onStartFilling](./config/events.md#onstartfilling) 事件。
 
 :::note
 仅当声明了 [onStartFilling](./config/events.md#onstartfilling) 事件时，此方法才有效。否则，调用将被忽略。

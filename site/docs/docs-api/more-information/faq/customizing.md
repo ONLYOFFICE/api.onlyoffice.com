@@ -9,7 +9,7 @@ sidebar_position: -7
 The below options can be edited for whitelabeling your version of ONLYOFFICE Docs, changing the information which will be displayed at the **About** page and visible to all editor users.
 
 :::note
-Changing these options is only available to the [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api) users.
+Changing these options is only available to the [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/pricing?from=api) users.
 :::
 
 - `editorConfig.customization.customer` options:
@@ -263,7 +263,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 :::note
-These parameters are available only for the [extended white label license](https://www.onlyoffice.com/developer-edition-prices?from=api) of ONLYOFFICE Docs Developer.
+These parameters are available only for the [extended white label license](https://www.onlyoffice.com/pricing?from=api) of ONLYOFFICE Docs Developer.
 :::
 
 Further information about the interface font customization can be found [at this page](../../usage-api/config/editor/customization/customization-white-label.md#font).
@@ -292,7 +292,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 :::note
-These parameters are available only for the [extended white label license](https://www.onlyoffice.com/developer-edition-prices?from=api) of ONLYOFFICE Docs Developer.
+These parameters are available only for the [extended white label license](https://www.onlyoffice.com/pricing?from=api) of ONLYOFFICE Docs Developer.
 :::
 
 Further information about the editor header settings can be found [at this page](../../usage-api/config/editor/customization/customization-white-label.md#layoutheader).

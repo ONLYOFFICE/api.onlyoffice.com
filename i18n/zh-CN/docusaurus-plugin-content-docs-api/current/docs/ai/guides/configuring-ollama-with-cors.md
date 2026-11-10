@@ -115,7 +115,7 @@ docker run -d \
 
 - `http://*`：允许来自任何 HTTP 域的请求
 - `https://*`：允许来自任何 HTTPS 域的请求
-- `onlyoffice://*`：允许来自 ONLYOFFICE 桌面编辑器的请求，其中插件运行在 `onlyoffice://` 协议上（AI 插件的来源为 `onlyoffice://plugin`）
+- `onlyoffice://*`：允许来自 ONLYOFFICE 桌面编辑器的请求，其中插件运行在 `onlyoffice://` 协议上（AI 工具的来源为 `onlyoffice://plugin`）
 
 ### 验证 CORS 配置
 
@@ -148,7 +148,7 @@ curl -v http://localhost:11434/api/tags \
 
 ### 使用场景
 
-- ONLYOFFICE 桌面版配合 AI 插件
+- ONLYOFFICE 桌面版配合 AI 工具
 - 不同端口/主机上的本地 Web 应用程序
 - 与 Ollama API 交互的 Electron/React 应用程序
 
@@ -582,4 +582,4 @@ flowchart LR
 - Nginx 作为带有 CORS 处理的反向代理，将请求转发到 11434 端口上的本地 Ollama 实例
 - Nginx 提供 TLS 终止和访问控制
 - `OLLAMA_ORIGINS` 变量控制允许的请求来源
-- ONLYOFFICE AI 插件使用安全的 HTTPS 端点连接到语言模型
+- ONLYOFFICE AI 工具使用安全的 HTTPS 端点连接到语言模型

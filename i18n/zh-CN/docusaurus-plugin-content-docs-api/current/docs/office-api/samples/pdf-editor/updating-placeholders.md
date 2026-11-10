@@ -403,7 +403,7 @@ let updateResult = updatePlaceholdersForLanguage(detectedLanguage);
 paragraph = Api.CreateParagraph();
 paragraph.AddText(`✓ 已更新 ${updateResult.updatedCount} 个表单字段占位符`);
 paragraph.SetFontSize(12 * 2);
-paragraph.SetColor(0, 128, 0);
+paragraph.SetColor(Api.RGB(0, 128, 0));
 doc.Push(paragraph);
 
 // 显示示例翻译

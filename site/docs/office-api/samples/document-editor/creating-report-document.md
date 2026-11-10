@@ -78,10 +78,10 @@ for (let userName in commentsReport) {
       let value3;
       if (commentInfo["IsSolved"] === true) {
         value3 = "yes";
-        fillCell(curRow, 3, value3).Run.SetColor(0, 255, 0);
+        fillCell(curRow, 3, value3).Run.SetColor(Api.RGB(0, 255, 0));
       } else {
         value3 = "no";
-        fillCell(curRow, 3, value3).Run.SetColor(255, 0, 0);
+        fillCell(curRow, 3, value3).Run.SetColor(Api.RGB(255, 0, 0));
       }
     }
 

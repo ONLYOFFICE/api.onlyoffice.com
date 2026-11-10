@@ -4,11 +4,11 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 获取文档内容的 HTML 代码，对其进行修改后再粘贴回文档中。
 
-**插件类型：** 可视化、非系统插件。
+**插件类型**：可视化、非系统插件。
 
-**支持的编辑器：** 文档、表格、演示文稿编辑器。
+**支持的编辑器**：文档、电子表格、演示文稿。
 
-**类似插件：** [Doc2md](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/doc2md)。
+**类似插件**：[Doc2md](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/doc2md)。
 
 <YoutubeVideo videoId="ZoY0CMfcPyk"/>
 

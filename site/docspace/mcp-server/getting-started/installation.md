@@ -11,7 +11,7 @@ Before interacting with the ONLYOFFICE Apps MCP server, you need to install or c
 
 ## Before you start
 
-- Ensure you have an ONLYOFFICE Apps instance. [Sign up to ONLYOFFICE Apps](https://www.onlyoffice.com/docspace-registration?utm_source=api&utm_medium=article&utm_campaign=mcpserver) to access your instance and get an API key.
+- Ensure you have an ONLYOFFICE Apps instance. [Sign up to ONLYOFFICE Apps](https://www.onlyoffice.com/signup?utm_source=api&utm_medium=article&utm_campaign=mcpserver) to access your instance and get an API key.
 - Choose your desired client. You can build a custom client or [choose from the different MCP clients](clients.md) available based on your integration, features, user interface, or security needs.
 
 ## Access via a local ONLYOFFICE Apps MCP server

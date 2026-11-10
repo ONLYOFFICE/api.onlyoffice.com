@@ -35,7 +35,7 @@ The figure and steps below explain how a document is co-edited in ONLYOFFICE Doc
    Where `documentserver` is the name of the server where ONLYOFFICE Docs is installed. The `api.js` script is served by the **document editing service**; it loads the **document editor** and connects it to that same service.
 
    :::tip
-   Don't have a document server yet? [Register](https://www.onlyoffice.com/docs-registration?from=api) for a free ONLYOFFICE Docs Cloud and use the public IP address or public DNS name of your instance as `documentserver`. You can find them in the **Instances** section of the cloud console.
+   Don't have a document server yet? [Register](https://www.onlyoffice.com/signup?from=api) for a free ONLYOFFICE Docs Cloud and use the public IP address or public DNS name of your instance as `documentserver`. You can find them in the **Instances** section of the cloud console.
    :::
 
 4. Add the script that initializes the **document editor** for the `<div>` element, using the configuration for the document you want to open:
@@ -267,6 +267,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 In **Strict** mode, each user works in an isolated session. Changes made by others stay hidden until you click **Save**. While several users are editing simultaneously, their regions are marked with dashed lines of different colors.
 
-After you click **Save**, the other users receive a notification about updates. To accept them and send your own changes, click the <img alt="Save updates" src="/assets/images/editor/save-updates.png" width="18px" /> button in the top-left corner of the toolbar. The accepted updates are highlighted.
+After you click **Save**, the other users receive a notification about updates. To accept them and send your own changes, click the <img alt="Save updates" src="/assets/images/editor/save-updates.png#gh-light-mode-only" width="24px" /><img alt="Save updates" src="/assets/images/editor/save-updates.dark.png#gh-dark-mode-only" width="24px" /> button in the top-left corner of the toolbar. The accepted updates are highlighted.
 
 ![Strict mode](/assets/images/editor/strict-mode.png#gh-light-mode-only)![Strict mode](/assets/images/editor/strict-mode.dark.png#gh-dark-mode-only)

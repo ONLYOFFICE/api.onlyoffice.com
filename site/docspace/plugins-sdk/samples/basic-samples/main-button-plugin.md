@@ -83,7 +83,7 @@ const createItem: IMainButtonItem = {
   key: "test-main-button-item_create",
   label: "Create new",
   icon: "icon.svg",
-  onClick: (id: number) => {
+  onItemClick: (id: string | number) => {
     // Optional: use id to take action based on room/task/etc.
   },
 };
@@ -93,7 +93,7 @@ const mainButtonItem: IMainButtonItem = {
   label: "Do something",
   icon: "icon.svg",
   items: [createItem], // Optional nested submenu
-  onClick: () => {
+  onItemClick: () => {
     console.log("Main Button works!");
   },
 };
@@ -134,6 +134,6 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 
 ## Notes
 
-- You can create nested items using the [`items`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md#items?) array inside `IMainButtonItem`.
-- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md#onClick?) function can receive an entity context (e.g., room or file ID).
+- You can create nested items using the [`items`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md#items) array inside `IMainButtonItem`.
+- The [`onItemClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md#onItemClick) function can receive an entity context (e.g., room or file ID).
 - You can extend this plugin to support `Settings`, `ContextMenu`, or other scopes by updating `package.json` and logic.

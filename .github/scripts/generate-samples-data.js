@@ -9,9 +9,7 @@ const SOURCES = [
   { dir: 'site/docs/plugins/samples', routeBase: 'docs/plugins/samples', output: 'docs-plugins-samples.json' },
   { dir: 'site/docs/macros/samples', routeBase: 'docs/macros/samples', output: 'docs-macros-samples.json' },
   // docs-builder-samples.json is maintained manually
-  // AI - Docs
-  { dir: 'site/docs/ai/samples', routeBase: 'docs/ai/samples', output: 'docs-ai-samples.json' },
-  // AI - DocSpace
+  // AI
   { dir: 'site/docspace/mcp-server/use-cases', routeBase: 'docspace/mcp-server/use-cases', output: 'docspace-ai-samples.json' },
   // Docs - Connectors
   { dir: 'site/docs/docs-api/get-started/ready-to-use-connectors', routeBase: 'docs/docs-api/get-started/ready-to-use-connectors', output: 'docs-connectors-samples.json' },
@@ -58,7 +56,8 @@ for (const source of SOURCES) {
   }
 
   const patterns = source.include || ['**/*.md'];
-  const files = patterns.flatMap(p => glob.sync(p, { cwd: samplesDir }));
+  // glob 7 sorted its results; newer versions do not, so sort to keep the output order stable.
+  const files = patterns.flatMap(p => glob.sync(p, { cwd: samplesDir, posix: true }).sort());
 
   const items = files
     .filter(f => {

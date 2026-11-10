@@ -9,7 +9,7 @@
             "url"            : "index.html",
             "type"           : "system",
             "isViewer"       : true,
-            "EditorsSupport" : ["word", "cell", "slide"],
+            "EditorsSupport" : ["word", "cell", "slide", "pdf"],
             "initDataType"   : "none",
             "initData"       : "",
             "buttons"        : []

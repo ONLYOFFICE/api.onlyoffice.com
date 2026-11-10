@@ -33,7 +33,7 @@ noteParagraph.SetJc("left");
 
 // Set text color for the note
 let noteRun = noteParagraph.GetElement(0);
-noteRun.SetColor(0, 90, 158); // #005A9E color (0, 90, 158 in RGB)
+noteRun.SetColor(Api.RGB(0, 90, 158)); // #005A9E color (0, 90, 158 in RGB)
 
 doc.Push(noteParagraph);
 
@@ -55,7 +55,7 @@ noteParagraph2.SetJc("left");
 
 // Set text color for the second note
 let noteRun2 = noteParagraph2.GetElement(0);
-noteRun2.SetColor(0, 90, 158);
+noteRun2.SetColor(Api.RGB(0, 90, 158));
 
 doc.Push(noteParagraph2);
 

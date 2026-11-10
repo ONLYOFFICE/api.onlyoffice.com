@@ -6,7 +6,7 @@ sidebar_position: -17
 
 以下图示和步骤解释了 ONLYOFFICE 文档中提及功能的工作原理。
 
-<img alt="Create mentions" src="/assets/images/editor/mentions-create.png" width="720px" />
+![Create mentions](/assets/images/editor/mentions-create.png)
 
 1. 用户在**文档编辑器**的评论字段中输入 `+` 或 `@`。
 2. **文档编辑器**向**文档管理器**请求可以被提及的用户列表。
@@ -79,7 +79,7 @@ sidebar_position: -17
 
 ## 打开评论
 
-<img alt="Open action link" src="/assets/images/editor/actionLink-open.png" width="720px" />
+![Open action link](/assets/images/editor/actionLink-open.png)
 
 1. 被提及的用户通过通知中的链接（例如电子邮件）打开文档，导航到**文档管理器**。
 2. **文档管理器**使用包含评论位置数据的 [`actionLink`](../../usage-api/config/editor/editor.md#actionlink) 参数初始化**文档编辑器**的 [`config`](../../usage-api/config/config.md)。

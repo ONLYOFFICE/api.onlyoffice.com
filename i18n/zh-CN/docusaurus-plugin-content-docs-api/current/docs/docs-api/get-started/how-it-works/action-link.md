@@ -6,7 +6,7 @@ sidebar_position: -18
 
 以下图示和步骤说明了如何在 ONLYOFFICE 文档中创建指向文档书签位置的可共享链接。
 
-<img alt="Action link" src="/assets/images/editor/actionLink-create.png" width="720px" />
+![Action link](/assets/images/editor/actionLink-create.png)
 
 1. 用户在**文档编辑器**的书签编辑菜单中点击**获取链接**按钮。
 2. **文档编辑器**触发 [onMakeActionLink](../../usage-api/config/events.md#onmakeactionlink) 事件，将书签数据传递给**文档管理器**。
@@ -41,7 +41,7 @@ sidebar_position: -18
 
 ## 打开书签 {#opening-the-bookmark}
 
-<img alt="Open action link" src="/assets/images/editor/actionLink-open.png" width="720px" />
+![Open action link](/assets/images/editor/actionLink-open.png)
 
 1. 用户在浏览器中打开操作链接，导航到**文档管理器**。
 2. **文档管理器**使用包含书签数据的 [`config`](../../usage-api/config/config.md) 初始化**文档编辑器**，书签数据位于 [`actionLink`](../../usage-api/config/editor/editor.md#actionlink) 参数中。

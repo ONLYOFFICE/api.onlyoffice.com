@@ -4,9 +4,9 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 帮助用户快速输入文本。
 
-**插件类型：** 输入辅助、系统插件。
+**插件类型**：输入辅助、系统插件。
 
-**支持的编辑器：** 文档、电子表格、演示文稿。
+**支持的编辑器**：文档、电子表格、演示文稿。
 
 <YoutubeVideo videoId="DhyqzMsyirM"/>
 

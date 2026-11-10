@@ -6,7 +6,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # API vs WOPI
 
-You can integrate [ONLYOFFICE Docs](https://www.onlyoffice.com/office-suite?from=api) with any cloud service using either API or WOPI.
+You can integrate [ONLYOFFICE Docs](https://www.onlyoffice.com/docs?from=api) with any cloud service using either API or WOPI.
 
 The table below will help you find out the difference between these options.
 

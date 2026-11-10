@@ -232,7 +232,7 @@ function generateFormFromJSON(jsonData, formTitle) {
   paragraph.AddText(`Auto-generated from JSON (${Object.keys(jsonData).length} fields)`);
   paragraph.SetFontSize(12 * 2);
   paragraph.SetJc("center");
-  paragraph.SetColor(128, 128, 128);
+  paragraph.SetColor(Api.RGB(128, 128, 128));
   doc.Push(paragraph);
   
   // Add spacing

@@ -4,9 +4,9 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 连接 [TesseractJS-Core 库](https://tesseract.projectnaptha.com/)，用于从图像（*.png*、*.jpg*）中提取文本并将其插入文档。OCR 支持 60 多种语言。
 
-**插件类型：** 可视化、非系统插件。
+**插件类型**：可视化、非系统插件。
 
-**支持的编辑器：** 文档、表格、演示文稿。
+**支持的编辑器**：文档、电子表格、演示文稿。
 
 <YoutubeVideo videoId="SQE6HhgBylg"/>
 

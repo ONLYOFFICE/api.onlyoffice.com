@@ -9,9 +9,9 @@ import Video from '@site/src/components/Video/Video';
 
 将一个内容控件中的内容插入到另一个内容控件中。
 
-**插件类型：** 非可视化、非系统插件。
+**插件类型**：非可视化、非系统插件。
 
-**支持的编辑器：** 文档。
+**支持的编辑器**：文档。
 
 <Video src="/assets/images/plugins/webm/work-with-content-controls-content" />
 

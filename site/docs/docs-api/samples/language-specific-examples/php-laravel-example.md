@@ -16,7 +16,7 @@ This example is for testing only. It has no authentication, does not validate li
 
 - **Docker and Docker Compose**: see the [official website](https://docs.docker.com/get-started/get-docker/).
 - **Git**: see the [official website](https://git-scm.com/downloads).
-- **ONLYOFFICE Docs**: optional, because the Docker setup starts its own. To use your own server, get the [self-hosted](https://www.onlyoffice.com/download?from=api#docs-developer) or [cloud](https://www.onlyoffice.com/docs-registration?from=api) version.
+- **ONLYOFFICE Docs**: optional, because the Docker setup starts its own. To use your own server, get the [self-hosted](https://www.onlyoffice.com/download?from=api#docs-developer) or [cloud](https://www.onlyoffice.com/signup?from=api) version.
 
 ## Step 1. Download the example
 

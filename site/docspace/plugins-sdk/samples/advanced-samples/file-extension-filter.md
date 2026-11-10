@@ -86,7 +86,7 @@ const plugin = new ExtSearchPlugin();
 
 // Store current API base URL and selected room ID
 let apiBaseURL: string = plugin.getAPI().origin;
-let currentRoomId: number | null = null;
+let currentRoomId: string | number | null = null;
 
 // ComboBox configuration with extension filter options
 const extensionOptions: IComboBoxItem[] = [
@@ -247,7 +247,7 @@ const contextMenuItem: IContextMenuItem = {
   key: "extsearch-context-menu",
   label: "Ext Search",
   icon: "icon.svg",
-  onClick: (id: number) => {
+  onItemClick: (id: string | number) => {
     currentRoomId = id;
     modalBody.children = [
       { component: Components.comboBox, props: comboBox },
@@ -422,7 +422,7 @@ Define a dropdown to choose a file extension and a button to filter and render f
 ```ts
 // Store current API base URL and selected room ID
 let apiBaseURL: string = plugin.getAPI().origin;
-let currentRoomId: number | null = null;
+let currentRoomId: string | number | null = null;
 
 // ComboBox configuration with extension filter options
 const extensionOptions: IComboBoxItem[] = [
@@ -583,7 +583,7 @@ const contextMenuItem: IContextMenuItem = {
   key: "extsearch-context-menu",
   label: "Ext Search",
   icon: "icon.svg",
-  onClick: (id: number) => {
+  onItemClick: (id: string | number) => {
     currentRoomId = id;
     modalBody.children = [
       { component: Components.comboBox, props: comboBox },

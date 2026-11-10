@@ -32,7 +32,7 @@ table.SetStyle(tableStyle);
 
 // First row - main headers with merged cells
 let headerRow1 = table.GetRow(0);
-headerRow1.SetBackgroundColor(52, 73, 94, false);
+headerRow1.SetBackgroundColor(Api.RGB(52, 73, 94));
 
 // First cell: "Product"
 let cell00 = headerRow1.GetCell(0);
@@ -40,7 +40,7 @@ cell00.SetVerticalAlign("center");
 let content00 = cell00.GetContent();
 let paragraph00 = content00.GetElement(0);
 paragraph00.AddText("Product");
-paragraph00.SetColor(255, 255, 255, false);
+paragraph00.SetColor(Api.RGB(255, 255, 255));
 paragraph00.SetBold(true);
 paragraph00.SetJc("center");
 
@@ -53,13 +53,13 @@ mergedCell.SetVerticalAlign("center");
 let content01 = mergedCell.GetContent();
 let paragraph01 = content01.GetElement(0);
 paragraph01.AddText("2025");
-paragraph01.SetColor(255, 255, 255, false);
+paragraph01.SetColor(Api.RGB(255, 255, 255));
 paragraph01.SetBold(true);
 paragraph01.SetJc("center");
 
 // Second row - sub headers
 let headerRow2 = table.GetRow(1);
-headerRow2.SetBackgroundColor(93, 109, 126, false);
+headerRow2.SetBackgroundColor(Api.RGB(93, 109, 126));
 
 // Empty cell under "Product"
 let cell10 = headerRow2.GetCell(0);
@@ -76,7 +76,7 @@ for (let i = 0; i < 3; i++) {
   let content = cell.GetContent();
   let paragraph = content.GetElement(0);
   paragraph.AddText(quarters[i]);
-  paragraph.SetColor(255, 255, 255, false);
+  paragraph.SetColor(Api.RGB(255, 255, 255));
   paragraph.SetBold(true);
   paragraph.SetJc("center");
 }

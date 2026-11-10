@@ -16,7 +16,7 @@ This guide covers three new API methods and demonstrates their usage through a p
 
 ## Learning the new methods through plugin development
 
-Detailed instructions on using the plugin can be found [here](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai/scripts/text-annotations/custom-annotations).
+Detailed instructions on using the plugin can be found [here](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai/scripts/text-annotations/custom-annotations). The example is part of the old AI plugin, which is no longer supported and can be installed only in version 9.4.
 
 The plugin adds annotations to text, enabling users to create AI assistants that analyze content and highlight sections matching specific criteria defined in the assistant's prompt. There are three options:
 

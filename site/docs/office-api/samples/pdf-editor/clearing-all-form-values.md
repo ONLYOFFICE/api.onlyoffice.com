@@ -204,7 +204,7 @@ fillFormWithSampleData();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("✓ Sample data has been entered into all form fields");
 paragraph.SetFontSize(12 * 2);
-paragraph.SetColor(0, 128, 0);
+paragraph.SetColor(Api.RGB(0, 128, 0));
 doc.Push(paragraph);
 
 // Add spacing
@@ -224,7 +224,7 @@ let clearedCount = clearAllFormValues();
 paragraph = Api.CreateParagraph();
 paragraph.AddText(`✓ Reset completed - ${clearedCount} fields cleared`);
 paragraph.SetFontSize(12 * 2);
-paragraph.SetColor(0, 128, 0);
+paragraph.SetColor(Api.RGB(0, 128, 0));
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();

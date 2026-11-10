@@ -82,5 +82,5 @@ The document opens as a PDF. Your code calls `connector.callCommand()` to execut
 :::note
 Please note that the connector is available only for **ONLYOFFICE Docs Developer**.
 
-The connector is a premium feature available at an extra cost. See [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api) for pricing details, or contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote.
+The connector is a premium feature available at an extra cost. See [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/pricing?from=api) for pricing details, or contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote.
 :::

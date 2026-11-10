@@ -329,10 +329,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestCompareFile
 
-The function called when the user is trying to select a document for comparing by clicking the *Document from Storage* button.
+The function called when the user is trying to select a document for comparing by clicking the *Document from storage* button.
 
 :::note
-This event is available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api).
+This event is available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/pricing?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/pricing?from=api).
 :::
 :::danger[Deprecated]
 Starting from version 7.5, please use [onRequestSelectDocument](#onrequestselectdocument) instead.
@@ -429,8 +429,8 @@ The function called when the user is trying to show the document version history
 If this event is not declared, the *Version History* button will not be displayed.
 :::
 
-<img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png#gh-light-mode-only" width="282px" />
-<img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.dark.png#gh-dark-mode-only" width="282px" />
+![onRequestHistory](/assets/images/editor/onRequestHistory.png#gh-light-mode-only)
+![onRequestHistory](/assets/images/editor/onRequestHistory.dark.png#gh-dark-mode-only)
 
 **Example**:
 
@@ -516,7 +516,7 @@ This event is optional. If each version passed to [refreshHistory](../methods.md
 
 | Parameter  | Type    | Description                  |
 | ---------- | ------- | ---------------------------- |
-| event.data | `number` | The document version number. |
+| event.data | `number` \| `string` | The document version number, as passed in `history.version` to the [refreshHistory](../methods.md#refreshhistory) method. |
 
 ![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.png#gh-light-mode-only)![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.dark.png#gh-dark-mode-only)
 
@@ -555,10 +555,10 @@ Where the `changesUrl` is the `changesUrl` from [the JSON object](../callback-ha
 
 ## onRequestInsertImage
 
-The function called when the user is trying to insert an image by clicking the *Image from Storage* button. To insert an image, call the [insertImage](../methods.md#insertimage) method with the specified command. When calling this method, the token must be added to validate the parameters.
+The function called when the user is trying to insert an image by clicking the *Image from storage* button. To insert an image, call the [insertImage](../methods.md#insertimage) method with the specified command. When calling this method, the token must be added to validate the parameters.
 
 :::note
-If this event is not declared, the *Image from Storage* button will not be displayed.
+If this event is not declared, the *Image from storage* button will not be displayed.
 :::
 
 **Parameters**:
@@ -799,8 +799,8 @@ If this event is not declared, the *Rename...* button will not be displayed.
 | ---------- | ------ | ----------------------- |
 | event.data | `string` | The new document title. |
 
-<img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />   
-<img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
+![onRequestRename](/assets/images/editor/onRequestRename.png#gh-light-mode-only)
+![onRequestRename](/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only)
 
 **Example**:
 
@@ -832,7 +832,7 @@ If this event is not declared, the *Restore* button will not be displayed. The *
 
 | Parameter           | Type    | Description                                                                                                                   |
 | ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| event.data.version  | `number` | The document version number.                                                                                                  |
+| event.data.version  | `number` \| `string` | The document version number, as passed in `history.version` to the [refreshHistory](../methods.md#refreshhistory) method. |
 | event.data.url      | `string`  | The document link from the [history object](../callback-handler.md#history). Sent if called for the document changes.         |
 | event.data.fileType | `string`  | The type of the document specified with the `url` link.                                                                       |
 
@@ -1068,10 +1068,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestStartFilling
 
-The function called when the user is trying to start filling out ready forms by clicking the *Start filling* button in PDF editing mode. When the user clicks the *Start filling* button, the [startFilling](../methods.md#startfilling) method is called to lock PDF editing (only PDF viewing becomes available). This event is also called after the [requestRoles](../methods.md#requestroles) method is called.
+The function called when the user is trying to start filling out ready forms by clicking the *Share & collect* button in PDF editing mode (the button caption can be changed with the [startFillingForm](./editor/customization/customization-standard-branding.md#startfillingform) parameter). The array of form roles is passed in the `data` parameter. To lock PDF editing (only PDF viewing becomes available), call the [startFilling](../methods.md#startfilling) method in the event handler. This event is also called after the [requestRoles](../methods.md#requestroles) method is called.
 
 :::note
-If this event is not declared, the *Start filling* button will not be displayed.
+The *Share & collect* button is displayed if this event or the [onStartFilling](#onstartfilling) event is declared. If only `onStartFilling` is declared, clicking the button opens the built-in **Send for signing** panel, where the user assigns users to the form roles and sends the form for filling. The list of users for this panel is requested with the [onRequestUsers](#onrequestusers) event with `c` set to `"filler"`. After the form is sent, the `onStartFilling` event is called.
 :::
 
 **Parameters**:
@@ -1105,13 +1105,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestUsers
 
-The function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. To set a list of users, you must call the [setUsers](../methods.md#setusers) method which can take different lists of users depending on the specified operation type. The `onRequestUsers` event is called once for each `c` type when the corresponding operation is performed. If `setUsers` is called with an empty list, then the `onRequestUsers` event will fire again.
+The function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, set the user avatars, or assign users to the form roles in the **Send for signing** panel. To set a list of users, you must call the [setUsers](../methods.md#setusers) method which can take different lists of users depending on the specified operation type. The `onRequestUsers` event is called once for each `c` type when the corresponding operation is performed. If `setUsers` is called with an empty list, then the `onRequestUsers` event will fire again.
 
 **Parameters**:
 
 | Parameter    | Type     | Description                                                                                                       |
 | ------------ | -------- | ----------------------------------------------------------------------------------------------------------------- |
-| event.data.c | `"mention"` \| `"protect"` \| `"info"` | The operation type.                                                |
+| event.data.c | `"mention"` \| `"protect"` \| `"info"` \| `"filler"` | The operation type.                                                |
 | event.data.id | `string[]` | The list of user IDs associated with the operation. |
 
 ![onRequestUsers](/assets/images/editor/onRequestUsers.png#gh-light-mode-only)![onRequestUsers](/assets/images/editor/onRequestUsers.dark.png#gh-dark-mode-only)
@@ -1184,7 +1184,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onStartFilling
 
-The function called when the PDF form is ready for filling, i.e. after the [startFilling](../methods.md#startfilling) method is called and the form preparation is complete.
+The function called when the PDF form is ready for filling, i.e. after the [startFilling](../methods.md#startfilling) method is called or the form is sent from the built-in **Send for signing** panel, and the form preparation is complete.
+
+:::note
+The array of roles is passed in `event.data` only when the form is sent from the **Send for signing** panel. When the form is started with the [startFilling](../methods.md#startfilling) method, `event.data` is `undefined`.
+:::
 
 **Parameters**:
 

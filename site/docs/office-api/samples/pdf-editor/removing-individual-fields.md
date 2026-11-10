@@ -101,7 +101,7 @@ function createEmployeeEvaluationForm() {
   paragraph = Api.CreateParagraph();
   paragraph.AddText("Internal Notes (Admin Only): ");
   paragraph.SetFontSize(12 * 2);
-  paragraph.SetColor(255, 0, 0);
+  paragraph.SetColor(Api.RGB(255, 0, 0));
   let internalNotesForm = Api.CreateTextForm({
     key: "internal_notes",
     required: false,
@@ -117,7 +117,7 @@ function createEmployeeEvaluationForm() {
   paragraph = Api.CreateParagraph();
   paragraph.AddText("Salary Adjustment: ");
   paragraph.SetFontSize(12 * 2);
-  paragraph.SetColor(255, 0, 0);
+  paragraph.SetColor(Api.RGB(255, 0, 0));
   let salaryForm = Api.CreateTextForm({
     key: "salary_adjustment",
     required: false,
@@ -140,7 +140,7 @@ function createEmployeeEvaluationForm() {
   paragraph.AddElement(terminationCheckbox);
   paragraph.AddText(" At risk of termination (Admin Only)");
   paragraph.SetFontSize(12 * 2);
-  paragraph.SetColor(255, 0, 0);
+  paragraph.SetColor(Api.RGB(255, 0, 0));
   doc.Push(paragraph);
 
   // Promotion Candidate (admin only)
@@ -154,7 +154,7 @@ function createEmployeeEvaluationForm() {
   paragraph.AddElement(promotionCheckbox);
   paragraph.AddText(" Promotion candidate (Admin Only)");
   paragraph.SetFontSize(12 * 2);
-  paragraph.SetColor(255, 0, 0);
+  paragraph.SetColor(Api.RGB(255, 0, 0));
   doc.Push(paragraph);
 }
 
@@ -305,7 +305,7 @@ if (removedFields.length > 0) {
   paragraph = Api.CreateParagraph();
   paragraph.AddText(`✓ Removed ${removedFields.length} admin-only fields:`);
   paragraph.SetFontSize(12 * 2);
-  paragraph.SetColor(255, 0, 0);
+  paragraph.SetColor(Api.RGB(255, 0, 0));
   doc.Push(paragraph);
   
   for (let fieldKey of removedFields) {
@@ -318,7 +318,7 @@ if (removedFields.length > 0) {
   paragraph = Api.CreateParagraph();
   paragraph.AddText("✓ No fields removed - user has admin privileges");
   paragraph.SetFontSize(12 * 2);
-  paragraph.SetColor(0, 128, 0);
+  paragraph.SetColor(Api.RGB(0, 128, 0));
   doc.Push(paragraph);
 }
 

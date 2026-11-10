@@ -118,7 +118,7 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
 
       编辑器会填满其渲染所在的元素，因此外层容器为其设置了明确的高度。
 
-      请将 `http://documentserver/` 替换为您的服务器的地址，该地址与 `.env.local` 中的 `DOCUMENT_SERVER_URL` 相同；您可以[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+      请将 `http://documentserver/` 替换为您的服务器的地址，该地址与 `.env.local` 中的 `DOCUMENT_SERVER_URL` 相同；您可以[注册](https://www.onlyoffice.com/zh/signup?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
       ```html
       <div style="display: flex; height: 100svh">
@@ -447,7 +447,7 @@ ng serve --configuration production
 | `events_onRequestInsertImage`         | (event: object) => void                               | null    | 当用户尝试通过单击**来自存储的图像**按钮插入图像时调用的函数。                                              |
 | `events_onRequestSaveAs`              | (event: object) => void                               | null    | 当用户尝试通过单击**另存为...** 按钮来保存文件时调用的函数。                                                           |
 | `events_onRequestMailMergeRecipients` | (event: object) => void                               | null    | 自 7.5 版起已弃用，请改用 `events_onRequestSelectSpreadsheet`。当用户尝试通过单击**邮件合并**按钮来选择收件人数据时调用的函数。 |
-| `events_onRequestCompareFile`         | (event: object) => void                               | null    | 自 7.5 版起已弃用，请改用 `events_onRequestSelectDocument`。当用户尝试通过单击**存储中的文档**按钮来选择要比较的文档时调用的函数。 |
+| `events_onRequestCompareFile`         | (event: object) => void                               | null    | 自 7.5 版起已弃用，请改用 `events_onRequestSelectDocument`。当用户尝试通过单击**存储器中的文档**按钮来选择要比较的文档时调用的函数。 |
 | `events_onRequestEditRights`          | (event: object) => void                               | null    | 当用户尝试通过单击**编辑文档**按钮将文档从查看模式切换到编辑模式时调用的函数。        |
 | `events_onRequestHistory`             | (event: object) => void                               | null    | 当用户尝试通过单击**版本历史记录**按钮来显示文档版本历史记录时调用的函数。                               |
 | `events_onRequestHistoryClose`        | (event: object) => void                               | null    | 当用户试图通过单击**关闭历史记录**按钮从查看文档版本历史记录返回到文档时调用的函数。 |

@@ -4,83 +4,94 @@ sidebar_position: -2
 
 # 转换 VBA 宏
 
-ONLYOFFICE 宏与 Microsoft 宏有所不同，Microsoft 宏使用的是 Visual Basic for Applications（VBA）脚本语言，而 ONLYOFFICE 宏使用的 JavaScript 语言则更加灵活，可用于任何平台。因此，ONLYOFFICE 编辑器可以支持在 Windows，Linux 和 macOS 平台使用。
+ONLYOFFICE 宏与 Microsoft 宏不同，因为后者使用 Visual Basic for Applications（VBA）脚本语言。JavaScript 更加灵活，可在任何平台上使用（这一点很重要，因为 ONLYOFFICE 编辑器支持 Windows、Linux 和 macOS）。
 
-如果您此前在 Microsoft Office 中使用了宏功能，可能会遇到一些不便，因为这些宏与 ONLYOFFICE 不兼容。不过，您可以将之前使用的宏转换为适用于新编辑器的版本。
+这意味着在 Microsoft Office 中创建的宏与 ONLYOFFICE 宏不兼容。您可以通过以下两种方式将其转换以在 ONLYOFFICE 中使用：
 
-- [自动转换](#automatic-conversion-using-ai-plugin)：使用 ONLYOFFICE 的 AI 插件进行自动转换（推荐用于快速转换）。
+- [自动转换](#automatic-conversion-using-ai-tools)：使用 AI 工具（推荐用于快速转换）。
 
-- [手动转换](#manual-conversion-of-vba-macros)：使用 [ONLYOFFICE Office API](../../office-api/get-started/overview.md) 用 JavaScript 重写逻辑。
+- [手动转换](#manual-conversion-of-vba-macros)：使用 [ONLYOFFICE Office API](../../office-api/get-started/overview.md) 以 JavaScript 重写逻辑。
 
-## 使用 AI 插件进行自动转换 {#automatic-conversion-using-ai-plugin}
+## 使用 AI 工具自动转换 {#automatic-conversion-using-ai-tools}
 
-如果您希望加快转换过程，从 9.0 版本开始，您可以使用 ONLYOFFICE 内置的 AI 插件自动将 VBA 代码转换为与 ONLYOFFICE 宏兼容的 JavaScript：
+从 9.0 版本开始，您可以使用 AI 工具（原 AI 插件）自动将 VBA 代码转换为与 ONLYOFFICE 宏兼容的 JavaScript 代码：
 
-1. 配置 AI 插件。详细的配置步骤可以见于[此处](https://helpcenter.onlyoffice.com/zh/docs/userguides/ai/configuration.aspx)。
+1. 配置 AI 工具。详情请参见[配置 AI 工具](../../ai/guides/ai-plugin.md#configuring)。
 2. 打开**视图**选项卡，点击**宏**。
 3. 在**宏**窗口中点击 **AI** 图标，选择**从 VBA 转换**。
 
-    ![AI 插件](/assets/images/plugins/ai-plugin.png#gh-light-mode-only)![AI 插件](/assets/images/plugins/ai-plugin.dark.png#gh-dark-mode-only)
+    ![AI 工具](/assets/images/plugins/ai-plugin.png#gh-light-mode-only)![AI 工具](/assets/images/plugins/ai-plugin.dark.png#gh-dark-mode-only)
 
-4. 在**从 VBA 转换宏**窗口中插入 VBA 代码，然后点击**创建**。生成的宏示例将被插入到**宏**窗口中。
+4. 在**从 VBA 转换宏**窗口中插入 VBA 代码，点击**创建**。生成的宏示例将插入到**宏**窗口中。
 
-    ![转换 VBA](/assets/images/plugins/convert-vba.png#gh-light-mode-only)![转换 VBA](/assets/images/plugins/convert-vba.dark.png#gh-dark-mode-only)
+    ![Convert VBA](/assets/images/plugins/convert-vba.png#gh-light-mode-only)![Convert VBA](/assets/images/plugins/convert-vba.dark.png#gh-dark-mode-only)
 
-5. 审查代码，如有必要可进行调整。
+5. 检查代码，并根据需要进行调整。
 
     :::warning
-    尽管 AI 插件可以生成完整且可运行的宏，但它并不总是完美的。请务必仔细检查输出内容，并进行彻底测试，尤其是对于复杂的宏。
+    虽然 AI 工具可以生成完整且可运行的宏，但并不总是完美无误。请务必仔细检查输出结果并进行充分测试，尤其是对于复杂的宏。
     :::
 
-6. 点击 ![播放图标](/assets/images/plugins/play.svg)测试脚本。
+6. 点击 ![运行图标](/assets/images/plugins/play.svg)测试脚本。
 
-例如，您有一个简单的 VBA 宏，用于取消活动工作表中所有合并单元格的合并：
+例如，以下 VBA 宏可取消合并活动工作表中所有已合并的单元格：
 
-``` vba
+```vb
 Sub UnmergeAllCells()
     ActiveSheet.Cells.UnMerge
 End Sub
 ```
 
-您可以将此 VBA 代码粘贴到 AI 插件转换器中。插件将返回以下 JavaScript 宏：
+您可以将此 VBA 代码粘贴到 AI 工具转换器中。AI 工具将返回以下 JavaScript 宏：
 
 ```ts
 (function(){
-    // 此代码将取消活动工作表中所有合并单元格的合并
-    
-    // 获取当前工作表
-    var oWorksheet = Api.GetActiveSheet();
-    
-    // 通过获取工作表的已使用范围来获取工作表中的所有单元格
-    var oUsedRange = oWorksheet.GetUsedRange();
-    
-    // 检查是否有已使用范围
+    // This code will unmerge all the merged cells in the active worksheet
+
+    // Get the active sheet
+    const oWorksheet = Api.GetActiveSheet();
+
+    // Get all cells in the worksheet by getting the used range
+    const oUsedRange = oWorksheet.GetUsedRange();
+
+    // Check if there is any used range
     if (oUsedRange) {
-        // 取消已使用范围中所有单元格的合并
+        // Unmerge all cells in the used range
         oUsedRange.UnMerge();
     }
-    
-    // 替代方法：获取整个工作表范围并取消合并
-    // 这样可以确保所有可能的合并单元格都被取消合并
-    var oRange = oWorksheet.GetRange("A1:XFD1048576");
+
+    // Alternative approach: Get the entire sheet range and unmerge
+    // This ensures all possible merged cells are unmerged
+    const oRange = oWorksheet.GetRange("A1:XFD1048576");
     oRange.UnMerge();
 })();
 ```
 
-运行该宏，检查它是否成功取消了工作表中所有合并单元格的合并。
+运行此宏，验证它是否成功取消合并工作表中所有已合并的单元格。
+
+### 请求处理流程 {#how-the-request-is-processed}
+
+当 AI 工具处理 VBA 转换请求时，将按照以下执行流程进行：
+1. **VBA 输入分析：** 解析所提供的 VBA 代码，检测其逻辑（范围、公式、循环、条件和操作）。
+2. **Office API 映射：** 将 VBA 操作映射到等效的 ONLYOFFICE Office API 方法。
+3. **JavaScript 宏生成：** 生成与 ONLYOFFICE 宏兼容的 JavaScript 宏。
+4. **结果插入：** 将生成的脚本插入到**宏**窗口中供审查。
+5. **验证与调整：** 您对脚本进行审查、测试并根据需要进行调整，尤其是对于复杂或 VBA 特有的行为。
+
+如果 VBA 转换失败，AI 工具将输出错误信息，或生成一个带有注释说明失败原因的宏。
 
 ## 手动转换 VBA 宏 {#manual-conversion-of-vba-macros}
 
-如果 AI 生成的版本无法正常工作，或者您希望完全了解并管理宏，您可以手动转换 VBA 宏：
+如果 AI 生成的版本无法正常工作，或者您希望完全理解和控制宏的行为，可以手动转换 VBA 宏：
 
 1. 分析原始 VBA 宏的逻辑。
 2. 在 [ONLYOFFICE Office API](../../office-api/get-started/overview.md) 中查找等效的方法和事件。
 3. 用 JavaScript 重写宏。
 4. 直接在 ONLYOFFICE 编辑器中进行测试。
 
-过程并不复杂。请看以下示例：
+例如：
 
-``` vb
+```vb
 Sub Example()
     Dim myRange
     Dim result
@@ -100,9 +111,9 @@ Sub Example()
 End Sub
 ```
 
-该宏会对 **A** 列中三个单元格范围的数值进行求和，并将结果分别写入 **B** 列的三个单元格中。
+该宏计算 **A** 列三个单元格区域中的值之和，并将结果写入 **B** 列的三个单元格中。
 
-使用 ONLYOFFICE 宏也可以实现完全相同的功能。如果您了解 Visual Basic for Applications 和 JavaScript，会发现它们的代码几乎一致且易于理解：
+使用 ONLYOFFICE 宏可以实现相同的结果。如果您同时了解 VBA 和 JavaScript，代码几乎完全相同：
 
 ```ts
 (function()
@@ -127,4 +138,4 @@ End Sub
 })();
 ```
 
-同样地，任何其他 Visual Basic for Applications 脚本都可以转换为与 ONLYOFFICE 宏兼容的 JavaScript 代码。未来，我们希望在编辑器中添加一个转换工具，以便自动转换这些宏。
+同样的方法适用于任何其他 VBA 宏。

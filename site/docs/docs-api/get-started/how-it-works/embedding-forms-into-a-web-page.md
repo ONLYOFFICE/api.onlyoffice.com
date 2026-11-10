@@ -64,7 +64,15 @@ The complete HTML page:
                 "title": "Form Template.pdf",
                 "url": "https://example.com/url-to-example-form.pdf"
             },
-            "documentType": "pdf"
+            "documentType": "pdf",
+            "events": {
+                "onRequestStartFilling": function () {
+                    docEditor.startFilling();
+                },
+                "onStartFilling": function () {
+                    console.log("The form is ready for filling");
+                }
+            }
         };
 
         docEditor = new DocsAPI.DocEditor("placeholder", config);
@@ -72,7 +80,9 @@ The complete HTML page:
 </script>
 ```
 
-After editing, click **Start filling** to switch the form to filling mode.
+The **Share & collect** button appears only if the [`onStartFilling`](../../usage-api/config/events.md#onstartfilling) or [`onRequestStartFilling`](../../usage-api/config/events.md#onrequeststartfilling) event is declared. With `onStartFilling` alone, the button opens the built-in **Send for signing** panel, which gets its list of users from the [`onRequestUsers`](../../usage-api/config/events.md#onrequestusers) event. To handle the click with your own code instead, declare `onRequestStartFilling` and call the [`startFilling`](../../usage-api/methods.md#startfilling) method from its handler. That method works only if `onStartFilling` is also declared.
+
+In this example, click **Share & collect** after editing. The editor calls the page's `onRequestStartFilling` handler, which calls `startFilling`. The editor then locks the form against further editing, saves it, and calls `onStartFilling` when the save completes.
 
 ![Embed pdf form for editing](/assets/images/editor/embed-pdf-for-editing.png#gh-light-mode-only)![Embed pdf form for editing](/assets/images/editor/embed-pdf-for-editing.dark.png#gh-dark-mode-only)
 

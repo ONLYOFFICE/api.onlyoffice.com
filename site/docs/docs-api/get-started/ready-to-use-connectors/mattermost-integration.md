@@ -60,7 +60,7 @@ As a Mattermost administrator, configure the app via the **System Console**. Go 
   https://<documentserver>:<port>/
   ```
 
-  where **documentserver** is the name of the server and **port** is the port number with **ONLYOFFICE Docs** installed. The address must be accessible from both the user's browser and the Mattermost server. The Mattermost server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+  where **documentserver** is the name of the server and **port** is the port number with **ONLYOFFICE Docs** installed. The address must be accessible from both the user's browser and the Mattermost server. The Mattermost server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/signup?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 - **Document Server JWT Secret**. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own secret key in the app configuration. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
@@ -97,7 +97,7 @@ You can also open the file via the file context menu in the message.
 
 ### Setting file access rights
 
-<img alt="Mattermost share" src="/assets/images/editor/mattermost-share.png" width="400px" />
+![Mattermost share](/assets/images/editor/mattermost-share.png)
 
 By default, the sender of a message has full editing access to the file, while all recipients are granted read-only access. Only the sender can modify user access rights through the context menu by selecting the **Change access rights** option.
 
@@ -115,7 +115,7 @@ ONLYOFFICE bot sends notifications about changes in the document specifying the 
 
 All change notifications can be found within the message's discussion thread. Simply click the arrow on the right edge of the message to open a panel on the right, where the full history of the message's discussion is displayed.
 
-<img alt="Mattermost bot" src="/assets/images/editor/mattermost-bot.png" width="300px" />
+![Mattermost bot](/assets/images/editor/mattermost-bot.png)
 
 ## How it works
 

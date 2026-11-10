@@ -34,14 +34,14 @@ cellPr.SetCellMarginBottom(40);
 table.SetStyle(tableStyle);
 
 let headerRow = table.GetRow(0);
-headerRow.SetBackgroundColor(75, 136, 209, false);
+headerRow.SetBackgroundColor(Api.RGB(75, 136, 209));
 for (let i = 0; i < 6; ++i) {
   let cell = table.GetRow(0).GetCell(i);
   cell.SetVerticalAlign("center");
   let content = cell.GetContent();
   let paragraph = content.GetElement(0);
   paragraph.AddText(headers[i]);
-  paragraph.SetColor(255, 255, 255, false);
+  paragraph.SetColor(Api.RGB(255, 255, 255));
   paragraph.SetBold(true);
   paragraph.SetJc("center");
 }
@@ -64,9 +64,9 @@ for (let i = 1; i < 10; ++i) {
 function setTextColor(paragraph, value) {
   if (value.includes("%") !== -1) {
     if (value.includes("-") !== -1) {
-      paragraph.SetColor(173, 35, 28);
+      paragraph.SetColor(Api.RGB(173, 35, 28));
     } else {
-      paragraph.SetColor(28, 173, 52);
+      paragraph.SetColor(Api.RGB(28, 173, 52));
     }
   }
 }

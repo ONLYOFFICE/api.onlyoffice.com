@@ -14,7 +14,7 @@ You can use it as an [npm package](./quickstart.md#using-the-npm-package) for mo
 
 Before you begin, make sure you have the following:
 
-- A running ONLYOFFICE Apps instance, either [cloud](https://www.onlyoffice.com/docspace-registration?from=api) or [self-hosted](https://www.onlyoffice.com/download-developer?from=api#docspace-developer) — client version 4.0.0 or later (Embed SDK 2.2.0 requires ONLYOFFICE Apps 4.0.0).
+- A running ONLYOFFICE Apps instance, either [cloud](https://www.onlyoffice.com/signup?from=api) or [self-hosted](https://www.onlyoffice.com/download?from=api#docspace-developer) — client version 4.0.0 or later (Embed SDK 2.2.0 requires ONLYOFFICE Apps 4.0.0).
 - The origin of your embedding page added in ONLYOFFICE Apps **Developer Tools** → **Embed SDK**
 - A server environment to serve your embedding page from — opening it as a local HTML file directly in the browser will not work
 - A modern browser — Chrome, Firefox, Edge, or Safari (the SDK relies on `postMessage` and other standard web APIs)

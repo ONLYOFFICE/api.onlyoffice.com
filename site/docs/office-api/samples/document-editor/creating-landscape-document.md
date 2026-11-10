@@ -60,14 +60,14 @@ table.SetStyle(tableStyle);
 
 // Style header row
 let headerRow = table.GetRow(0);
-headerRow.SetBackgroundColor(47, 84, 150, false);
+headerRow.SetBackgroundColor(Api.RGB(47, 84, 150));
 for (let i = 0; i < 7; i++) {
   let cell = headerRow.GetCell(i);
   cell.SetVerticalAlign("center");
   let content = cell.GetContent();
   let paragraph = content.GetElement(0);
   paragraph.AddText(headers[i]);
-  paragraph.SetColor(255, 255, 255, false);
+  paragraph.SetColor(Api.RGB(255, 255, 255));
   paragraph.SetBold(true);
   paragraph.SetJc("center");
   paragraph.SetFontSize(22);
@@ -93,11 +93,11 @@ for (let i = 0; i < 4; i++) {
     if (j >= 1 && j <= 3 && data[i][j].includes("%")) {
       let value = parseInt(data[i][j]);
       if (value >= 90) {
-        paragraph.SetColor(0, 128, 0, false); // Green for excellent
+        paragraph.SetColor(Api.RGB(0, 128, 0)); // Green for excellent
       } else if (value >= 80) {
-        paragraph.SetColor(255, 165, 0, false); // Orange for good
+        paragraph.SetColor(Api.RGB(255, 165, 0)); // Orange for good
       } else {
-        paragraph.SetColor(255, 0, 0, false); // Red for needs improvement
+        paragraph.SetColor(Api.RGB(255, 0, 0)); // Red for needs improvement
       }
     }
     

@@ -16,7 +16,7 @@ ONLYOFFICE 9.2.0 引入了用于处理文本注释的 API 扩展——一种可�
 
 ## 通过插件开发学习新方法
 
-有关插件使用的详细说明，请参见[此处](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai/scripts/text-annotations/custom-annotations)。
+有关插件使用的详细说明，请参见[此处](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai/scripts/text-annotations/custom-annotations)。该示例来自旧版 AI 插件，该插件已不再受支持，仅可在 9.4 版本中安装。
 
 该插件为文本添加注释，使用户能够创建 AI 助手来分析内容，并高亮显示符合助手提示词中定义的特定条件的段落。共有三种选项：
 

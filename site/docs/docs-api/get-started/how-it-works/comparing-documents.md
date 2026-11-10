@@ -13,7 +13,7 @@ The figure and steps below explain the comparison flow.
 1. Using the **document manager** in the browser, the user opens a document to view or edit it.
 2. The **document manager** initializes the **document editor** with a [`config`](../../usage-api/config/config.md) that includes the [`onRequestSelectDocument`](../../usage-api/config/events.md#onrequestselectdocument) event handler.
 3. The file is [opened](./opening-file.md) for editing.
-4. The user clicks **Document from Storage** in the Compare menu. The **document editor** fires the [`onRequestSelectDocument`](../../usage-api/config/events.md#onrequestselectdocument) event with `data.c` set to `"compare"`.
+4. The user clicks **Document from storage** in the Compare menu. The **document editor** fires the [`onRequestSelectDocument`](../../usage-api/config/events.md#onrequestselectdocument) event with `data.c` set to `"compare"`.
 5. The **document manager** lets the user select a comparison document from storage.
 6. The **document manager** calls [`setRequestedDocument`](../../usage-api/methods.md#setrequesteddocument) with the selected document's URL and `c: "compare"` to pass it to the **document editor** for comparison.
 
@@ -21,7 +21,7 @@ The figure and steps below explain the comparison flow.
 
 1. Create an `.html` file to [open the document](./opening-file.md#how-this-can-be-done-in-practice).
 
-2. Add the [`onRequestSelectDocument`](../../usage-api/config/events.md#onrequestselectdocument) event handler to the editor config. When the user clicks **Document from Storage** in the Compare menu, this event fires with `data.c` set to `"compare"`. The handler calls [`setRequestedDocument`](../../usage-api/methods.md#setrequesteddocument) with the comparison document:
+2. Add the [`onRequestSelectDocument`](../../usage-api/config/events.md#onrequestselectdocument) event handler to the editor config. When the user clicks **Document from storage** in the Compare menu, this event fires with `data.c` set to `"compare"`. The handler calls [`setRequestedDocument`](../../usage-api/methods.md#setrequesteddocument) with the comparison document:
 
    ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png#gh-light-mode-only)![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.dark.png#gh-dark-mode-only)
 

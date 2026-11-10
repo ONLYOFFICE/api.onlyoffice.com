@@ -109,7 +109,7 @@ if (commentAdded) {
   paragraph = Api.CreateParagraph();
   paragraph.AddText("A review comment has been automatically added to the 'Very dissatisfied' selection.");
   paragraph.SetFontSize(11 * 2);
-  paragraph.SetColor(200, 100, 0);
+  paragraph.SetColor(Api.RGB(200, 100, 0));
   doc.Push(paragraph);
 
   paragraph = Api.CreateParagraph();
@@ -120,7 +120,7 @@ if (commentAdded) {
   paragraph = Api.CreateParagraph();
   paragraph.AddText("No review comment needed for the current selection.");
   paragraph.SetFontSize(11 * 2);
-  paragraph.SetColor(0, 128, 0);
+  paragraph.SetColor(Api.RGB(0, 128, 0));
   doc.Push(paragraph);
 }
 

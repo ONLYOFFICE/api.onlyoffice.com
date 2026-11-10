@@ -45,7 +45,7 @@ doc.Push(paragraph2);
 // Add a third example with more complex formatting
 let paragraph3 = Api.CreateParagraph();
 paragraph3.AddText("In programming notation: ");
-paragraph3.AddText("result = Math.round((x * n) / 2)").SetFontFamily("Courier New").SetColor(0, 100, 0);
+paragraph3.AddText("result = Math.round((x * n) / 2)").SetFontFamily("Courier New").SetColor(Api.RGB(0, 100, 0));
 paragraph3.AddLineBreak();
 paragraph3.AddText("Where ");
 paragraph3.AddText("x").SetItalic(true);

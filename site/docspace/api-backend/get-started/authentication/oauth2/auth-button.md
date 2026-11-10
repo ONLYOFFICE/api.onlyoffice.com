@@ -12,7 +12,7 @@ With your OAuth app configured, you can now embed the Auth button on your websit
 
 2. In the opened window, copy HTML, CSS, and JavaScript code blocks and use them to embed a button into your website.
 
-    <img alt="Preview" src="/assets/images/docspace/oauth-auth-button.png#gh-light-mode-only" width="400px" /><img alt="Preview" src="/assets/images/docspace/oauth-auth-button.dark.png#gh-dark-mode-only" width="400px" />
+    ![Preview](/assets/images/docspace/oauth-auth-button.png#gh-light-mode-only)![Preview](/assets/images/docspace/oauth-auth-button.dark.png#gh-dark-mode-only)
 
 3. Copy the **Authorize link** and assign it to the authorization button.
 
@@ -87,4 +87,4 @@ You can click the example button to go through the entire [authorization flow](a
 
 To initiate the OAuth 2.0 authorization flow, you can also send GET request to the [oauth2/authorize](../../../../../docspace/api-backend/usage-api/oauth-2-0/authorization/authorize-o-auth.md) address.
 
-<img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.png#gh-light-mode-only" width="300px" /><img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.dark.png#gh-dark-mode-only" width="300px" />
+![Authorization flow](/assets/images/docspace/authorization-flow.png#gh-light-mode-only)![Authorization flow](/assets/images/docspace/authorization-flow.dark.png#gh-dark-mode-only)

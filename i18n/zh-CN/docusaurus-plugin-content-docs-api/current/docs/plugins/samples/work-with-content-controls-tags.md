@@ -9,9 +9,9 @@ import Video from '@site/src/components/Video/Video';
 
 获取内容控件标签列表。
 
-**插件类型：** 可视化、非系统插件。
+**插件类型**：可视化、非系统插件。
 
-**支持编辑器：** 文档。
+**支持的编辑器**：文档。
 
 <Video src="/assets/images/plugins/webm/work-with-content-controls-tags" />
 

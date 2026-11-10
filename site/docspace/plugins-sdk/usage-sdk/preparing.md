@@ -12,7 +12,7 @@ Set up the following:
 
 - ONLYOFFICE Apps. Choose one of the following:
 
-  - **On-premises**: [get ONLYOFFICE Apps](https://www.onlyoffice.com/download-developer?from=api#docspace-developer) and follow the [installation instructions](https://helpcenter.onlyoffice.com/docspace/installation/developer?from=api) in ONLYOFFICE Help Center.
+  - **On-premises**: [get ONLYOFFICE Apps](https://www.onlyoffice.com/download?from=api#docspace-developer) and follow the [installation instructions](https://helpcenter.onlyoffice.com/docspace/installation/developer?from=api) in ONLYOFFICE Help Center.
   - **SaaS**: [register an ONLYOFFICE Apps SaaS account](https://onlyoffice.com/docspace-registration?from=api).
 
 - *@onlyoffice/docspace-plugin-sdk* npm package

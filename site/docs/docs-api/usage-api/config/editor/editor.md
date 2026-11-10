@@ -107,7 +107,7 @@ If not specified, the **Create** button will not be displayed. Instead of this p
 The URL of the file selection dialog opened in an iframe for inserting images, selecting documents for comparison, or choosing mail merge data sources. The URL can contain the `{documentType}` and `{fileExt}` placeholders, which will be replaced with the appropriate values (e.g., `ImagesOnly`, `DocumentsOnly`).
 
 :::note
-The `{documentType}` placeholder is required for the *Image from Storage* and *Document from Storage* buttons to appear.
+The `{documentType}` placeholder is required for the *Image from storage* and *Document from storage* buttons to appear.
 :::
 
 :::danger[Deprecated]

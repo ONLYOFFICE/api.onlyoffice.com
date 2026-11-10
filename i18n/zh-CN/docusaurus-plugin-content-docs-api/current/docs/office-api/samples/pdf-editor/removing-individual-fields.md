@@ -99,7 +99,7 @@ function createEmployeeEvaluationForm() {
   paragraph = Api.CreateParagraph();
   paragraph.AddText("内部备注（仅管理员）：");
   paragraph.SetFontSize(12 * 2);
-  paragraph.SetColor(255, 0, 0);
+  paragraph.SetColor(Api.RGB(255, 0, 0));
   let internalNotesForm = Api.CreateTextForm({
     key: "internal_notes",
     required: false,
@@ -115,7 +115,7 @@ function createEmployeeEvaluationForm() {
   paragraph = Api.CreateParagraph();
   paragraph.AddText("薪资调整：");
   paragraph.SetFontSize(12 * 2);
-  paragraph.SetColor(255, 0, 0);
+  paragraph.SetColor(Api.RGB(255, 0, 0));
   let salaryForm = Api.CreateTextForm({
     key: "salary_adjustment",
     required: false,
@@ -138,7 +138,7 @@ function createEmployeeEvaluationForm() {
   paragraph.AddElement(terminationCheckbox);
   paragraph.AddText(" 存在解雇风险（仅管理员）");
   paragraph.SetFontSize(12 * 2);
-  paragraph.SetColor(255, 0, 0);
+  paragraph.SetColor(Api.RGB(255, 0, 0));
   doc.Push(paragraph);
 
   // 晋升候选人（仅管理员可见）
@@ -152,7 +152,7 @@ function createEmployeeEvaluationForm() {
   paragraph.AddElement(promotionCheckbox);
   paragraph.AddText(" 晋升候选人（仅管理员）");
   paragraph.SetFontSize(12 * 2);
-  paragraph.SetColor(255, 0, 0);
+  paragraph.SetColor(Api.RGB(255, 0, 0));
   doc.Push(paragraph);
 }
 
@@ -303,7 +303,7 @@ if (removedFields.length > 0) {
   paragraph = Api.CreateParagraph();
   paragraph.AddText(`✓ 已删除 ${removedFields.length} 个仅管理员字段：`);
   paragraph.SetFontSize(12 * 2);
-  paragraph.SetColor(255, 0, 0);
+  paragraph.SetColor(Api.RGB(255, 0, 0));
   doc.Push(paragraph);
 
   for (let fieldKey of removedFields) {
@@ -316,7 +316,7 @@ if (removedFields.length > 0) {
   paragraph = Api.CreateParagraph();
   paragraph.AddText("✓ 未删除任何字段 - 用户具有管理员权限");
   paragraph.SetFontSize(12 * 2);
-  paragraph.SetColor(0, 128, 0);
+  paragraph.SetColor(Api.RGB(0, 128, 0));
   doc.Push(paragraph);
 }
 

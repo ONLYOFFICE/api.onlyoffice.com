@@ -14,7 +14,7 @@ Python 集成示例是一个小型 Django 应用程序，它可以列出文件�
 
 ## 先决条件
 
-- **ONLYOFFICE 文档**：[自托管版](https://www.onlyoffice.com/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/docs-registration?from=api)。
+- **ONLYOFFICE 文档**：[自托管版](https://www.onlyoffice.com/zh/download?from=api#docs-developer)或[云版](https://www.onlyoffice.com/zh/signup?from=api)。
 - **Python**：3.11.4 或更高版本，请参阅[官方网站](https://www.python.org/downloads/)。
 - **libmagic**：`python-magic` 包需要此库，请参阅其[安装说明](https://github.com/ahupp/python-magic#installation)。
 - **Git**：请参阅[官方网站](https://git-scm.com/downloads)。

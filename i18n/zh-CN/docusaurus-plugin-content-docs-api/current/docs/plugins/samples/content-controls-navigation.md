@@ -9,9 +9,9 @@ import Video from '@site/src/components/Video/Video';
 
 插入内容控件（自动或手动）、导航并选择内容控件，同时支持向内容控件粘贴文本。
 
-**插件类型：** 可视化、非系统插件。
+**插件类型**：可视化、非系统插件。
 
-**支持的编辑器：** 文档。
+**支持的编辑器**：文档。
 
 <Video src="/assets/images/plugins/webm/work-with-content-controls-navigation" />
 

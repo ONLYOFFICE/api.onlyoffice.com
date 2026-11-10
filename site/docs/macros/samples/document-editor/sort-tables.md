@@ -28,6 +28,11 @@ By default, the header row is excluded. Set `isFirstRowIncluded` to `true` in th
     let selectedStart = selectedRange.GetStartPos();
     let selectedEnd = selectedRange.GetEndPos();
 
+    // Returns the cell text without the trailing cell or row separator and list numbering
+    function getCellText(cell) {
+        return cell.GetContent().GetText({ TableCellSeparator: "", TableRowSeparator: "", Numbering: false });
+    }
+
     // Compares two cell values: numerically if both are numbers, alphabetically otherwise
     function compareCells(a, b) {
         let numA = parseFloat(a);
@@ -45,7 +50,7 @@ By default, the header row is excluded. Set `isFirstRowIncluded` to `true` in th
 
         for (let rowIndex = startRow; rowIndex < rowNum; rowIndex++) {
             let row = table.GetRow(rowIndex);
-            let cellVal = row.GetCell(colIndex).GetContent().GetText();
+            let cellVal = getCellText(row.GetCell(colIndex));
             rowsArr.push({ row, cellVal });
         }
         
@@ -90,7 +95,7 @@ By default, the header row is excluded. Set `isFirstRowIncluded` to `true` in th
                     let newRow = table.AddRow();
 
                     for (let j = 0; j < colNum; j++) {
-                        let text = sortedRow.GetCell(j).GetContent().GetText().trim();
+                        let text = getCellText(sortedRow.GetCell(j));
                         newRow.GetCell(j).GetContent().GetElement(0).AddText(text);
                     }
                     table.GetRow(rowToRemove).Remove();

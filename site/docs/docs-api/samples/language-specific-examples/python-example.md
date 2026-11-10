@@ -14,7 +14,7 @@ This example is for testing only. It has no authentication, does not validate li
 
 ## Prerequisites
 
-- **ONLYOFFICE Docs**: [self-hosted](https://www.onlyoffice.com/download?from=api#docs-developer) or [cloud](https://www.onlyoffice.com/docs-registration?from=api).
+- **ONLYOFFICE Docs**: [self-hosted](https://www.onlyoffice.com/download?from=api#docs-developer) or [cloud](https://www.onlyoffice.com/signup?from=api).
 - **Python**: version 3.11.4 or later, see the [official website](https://www.python.org/downloads/).
 - **libmagic**: required by the `python-magic` package, see its [installation instructions](https://github.com/ahupp/python-magic#installation).
 - **Git**: see the [official website](https://git-scm.com/downloads).

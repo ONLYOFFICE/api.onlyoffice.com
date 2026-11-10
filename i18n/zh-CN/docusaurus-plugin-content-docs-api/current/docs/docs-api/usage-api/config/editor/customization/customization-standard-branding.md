@@ -8,11 +8,11 @@ sidebar_label: Standard branding
 customization 部分定义编辑器自定义参数。
 
 :::info
-本页面上的大多数参数适用于所有 ONLYOFFICE 文档版本，包括开源社区版。部分参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)，并已相应标注。如果您拥有扩展的白标许可证，请访问[白标页面](customization-white-label.md)了解其他自定义选项。
+本页面上的大多数参数适用于所有 ONLYOFFICE 文档版本，包括开源社区版。部分参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/zh/pricing?from=api)，并已相应标注。如果您拥有扩展的白标许可证，请访问[白标页面](customization-white-label.md)了解其他自定义选项。
 :::
 
 :::note
-只有以下参数可用于移动编辑器：[close](#close)、[feedback](#feedback)、[goback](#goback)、[help](#help)、[logo](#logo)、[宏模式](#macrosmode)、[mobile](#mobile)、[toolbarHideFileName](#toolbarhidefilename)、[uiTheme](#uitheme)。
+只有以下参数可用于移动编辑器：[close](#close)、[feedback](#feedback)、[goback](#goback)、[help](#help)、[logo](#logo)、[macrosMode](#macrosmode)、[mobile](#mobile)、[toolbarHideFileName](#toolbarhidefilename)、[uiTheme](#uitheme)。
 :::
 
 ## ai
@@ -37,7 +37,7 @@ customization 部分定义编辑器自定义参数。
 
 **类型**：`boolean` | **默认值**：`false`
 
-是否禁用编辑器中的 AI 功能。如果设置为 `true`，则隐藏 **AI 工具**。这是将 [AI 插件](../../../../../ai/guides/ai-plugin.md)标识符（`asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`）添加到 [editorConfig.plugins.disable](../plugins.md#disable) 列表的快捷方式。
+是否禁用编辑器中的 AI 功能。如果设置为 `true`，则隐藏 **AI 工具**。这是将 [AI 工具](../../../../../ai/guides/ai-plugin.md)标识符（`asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`）添加到 [`editorConfig.plugins.disable`](../plugins.md#disable) 列表的快捷方式。
 
 **示例**：`true`
 
@@ -52,7 +52,7 @@ customization 部分定义编辑器自定义参数。
 ```ts
 {
   request: true,
-  label: "Elizabeth",
+  label: "Guest",
 }
 ```
 
@@ -70,9 +70,11 @@ customization 部分定义编辑器自定义参数。
 
 **类型**：`string` | **默认值**：`"Guest"`
 
-添加到用户名的后缀。
+以括号形式添加到匿名用户名称后的后缀。其他用户会在名称旁边看到它，例如在聊天用户列表中显示为 `Elizabeth (Guest)`。
 
-**示例**：`"Elizabeth"`
+**示例**：`"Guest"`
+
+![匿名用户后缀](/assets/images/editor/label.png#gh-light-mode-only)![匿名用户后缀](/assets/images/editor/label.dark.png#gh-dark-mode-only)
 
 ## 自动保存 {#autosave}
 
@@ -186,7 +188,7 @@ customization 部分定义编辑器自定义参数。
 包含将在编辑器**关于**部分中显示的信息，并对所有编辑器用户可见。
 
 :::info
-此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
+此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/zh/pricing?from=api)。
 :::
 
 **示例**：
@@ -319,7 +321,7 @@ customization 部分定义编辑器自定义参数。
 是否在 pdf 表单中禁用角色设置。如果该参数等于 `false`，则隐藏角色管理器，并禁用代表特定角色查看表单。在这种情况下，**表单**选项卡上的**管理角色**和**查看表单**按钮以及右侧面板中用于设置字段角色的下拉列表将不会显示。
 
 :::info
-此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
+此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/zh/pricing?from=api)。
 :::
 
 **示例**：`true`
@@ -358,7 +360,13 @@ customization 部分定义编辑器自定义参数。
 
 顶部工具栏选项卡的背景。如果设置为 `header`，选项卡背景与标题背景匹配。如果设置为 `toolbar`，选项卡背景与工具栏背景匹配。首次打开编辑器时使用此值。
 
+:::note
+只有在标题栏和工具栏颜色不同的[主题](#uitheme)中，才能看出这两个值的区别。在带有彩色标题栏的主题（`theme-light`、`theme-classic-light`）中区别最为明显，在深色主题中则不太明显。在 `theme-white` 和 `theme-gray` 主题中，标题栏和工具栏的颜色相同或几乎相同，因此两个值看起来一样。
+:::
+
 **示例**：`"header"`
+
+![选项卡背景](/assets/images/editor/tab-background.png#gh-light-mode-only)![选项卡背景](/assets/images/editor/tab-background.dark.png#gh-dark-mode-only)
 
 ### features.tabBackground.change
 
@@ -368,7 +376,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**：`true`
 
-![选项卡背景](/assets/images/editor/tab-background.png#gh-light-mode-only)![选项卡背景](/assets/images/editor/tab-background.dark.png#gh-dark-mode-only)
+![选项卡背景设置](/assets/images/editor/tab-background-setting.png#gh-light-mode-only)![选项卡背景设置](/assets/images/editor/tab-background-setting.dark.png#gh-dark-mode-only)
 
 ### features.tabStyle
 
@@ -386,6 +394,8 @@ customization 部分定义编辑器自定义参数。
 
 **示例**：`"fill"`
 
+![选项卡样式](/assets/images/editor/tab-style.png#gh-light-mode-only)![选项卡样式](/assets/images/editor/tab-style.dark.png#gh-dark-mode-only)
+
 ### features.tabStyle.change
 
 **类型**：`boolean`
@@ -394,7 +404,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**：`true`
 
-![选项卡样式](/assets/images/editor/tab-style.png#gh-light-mode-only)![选项卡样式](/assets/images/editor/tab-style.dark.png#gh-dark-mode-only)
+![选项卡样式设置](/assets/images/editor/tab-style-setting.png#gh-light-mode-only)![选项卡样式设置](/assets/images/editor/tab-style-setting.dark.png#gh-dark-mode-only)
 
 ## feedback
 
@@ -417,7 +427,7 @@ customization 部分定义编辑器自定义参数。
 
 **类型**：`string`
 
-单击**反馈和支持**菜单按钮时将打开的网站绝对 URL。
+单击**反馈和支持**菜单按钮时将打开的网站绝对 URL。如果未指定，将打开 [ONLYOFFICE 支持联系表单](https://www.onlyoffice.com/zh/support-contact-form)。
 
 **示例**：`"https://example.com"`
 
@@ -564,7 +574,7 @@ customization 部分定义编辑器自定义参数。
 更改编辑器标题左上角的图像文件。推荐的图像高度为 20 像素。
 
 :::info
-此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices?from=api)。
+此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/zh/pricing?from=api)。
 :::
 
 **示例**：
@@ -888,23 +898,23 @@ customization 部分定义编辑器自定义参数。
 
 **类型**：`object`
 
-PDF 表单编辑模式下*开始填写*按钮的设置。
+PDF 表单编辑模式下*分享&收集*按钮的设置。
 
 **示例**：
 
 ```ts
 {
-  text: "Share & collect",
+  text: "Start filling",
 }
 ```
 
 ### startFillingForm.text
 
-**类型**：`string` | **默认值**：`"Start filling"`
+**类型**：`string` | **默认值**：`"Share & collect"`
 
-PDF 表单编辑模式下*开始填写*按钮的标题。
+PDF 表单编辑模式下*分享&收集*按钮的标题。
 
-**示例**：`"Share & collect"`
+**示例**：`"Start filling"`
 
 ## submitForm
 
@@ -1054,7 +1064,7 @@ const config = {
       },
       anonymous: {
         request: true,
-        label: "Elizabeth",
+        label: "Guest",
       },
       autosave: true,
       close: {

@@ -57,7 +57,7 @@ function createEmployeeProfileForm() {
   paragraph.AddText("已预填您的当前信息 - 如需修改请直接编辑");
   paragraph.SetFontSize(12 * 2);
   paragraph.SetJc("center");
-  paragraph.SetColor(128, 128, 128);
+  paragraph.SetColor(Api.RGB(128, 128, 128));
   doc.Push(paragraph);
 
   // 添加间距
@@ -429,7 +429,7 @@ let populatedCount = populateFormWithDefaults(authenticatedUser, userPreferences
 paragraph = Api.CreateParagraph();
 paragraph.AddText(`✓ 已用默认值填充 ${populatedCount} 个表单字段`);
 paragraph.SetFontSize(12 * 2);
-paragraph.SetColor(0, 128, 0);
+paragraph.SetColor(Api.RGB(0, 128, 0));
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();

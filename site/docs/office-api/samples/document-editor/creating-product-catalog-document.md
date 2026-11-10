@@ -33,7 +33,7 @@ catalogTable.SetStyle(tableStyle);
 
 // Create header row
 let headerRow = catalogTable.GetRow(0);
-headerRow.SetBackgroundColor(75, 136, 209, false);
+headerRow.SetBackgroundColor(Api.RGB(75, 136, 209));
 
 let headers = ["Image", "Name", "Price", "Description"];
 for (let i = 0; i < 4; i++) {
@@ -42,7 +42,7 @@ for (let i = 0; i < 4; i++) {
   let headerContent = headerCell.GetContent();
   let headerPara = headerContent.GetElement(0);
   headerPara.AddText(headers[i]);
-  headerPara.SetColor(255, 255, 255, false);
+  headerPara.SetColor(Api.RGB(255, 255, 255));
   headerPara.SetBold(true);
   headerPara.SetJc("center");
 }
@@ -101,7 +101,7 @@ for (let i = 0; i < 3; i++) {
   pricePara.AddText(products[i].price);
   pricePara.SetBold(true);
   pricePara.SetFontSize(14 * 2);
-  pricePara.SetColor(0, 128, 0, false);
+  pricePara.SetColor(Api.RGB(0, 128, 0));
   pricePara.SetJc("center");
   
   // Description cell
