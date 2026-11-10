@@ -17,7 +17,7 @@
 #### Docs API
 
 * Described the Share & collect button for PDF forms, the `filler` operation type in `onRequestUsers` and `setUsers`, and when `onStartFilling` receives the roles
-* Explained that `onRequestStartFilling` receives the form roles in `data` and that the handler calls `startFilling` to lock editing
+* Explained that `onRequestStartFilling` receives the form roles in `data`, that the handler calls `startFilling` to lock editing, and that Share & collect needs it only when the page handles the click itself
 * Linked the ONLYOFFICE support contact form as the default for `feedback.url`
 * Updated the How it works, Usage API, Troubleshooting and Standard branding screenshots and UI names for 10.0
 
@@ -27,23 +27,33 @@
 * Rewrote the AI overview around setting up and using AI Tools
 * Documented the current custom provider file format, based on the template from the editor
 * Updated the AI Tools guides and screenshots for the new name and current editor UI
+* Renamed the AI plugin to AI Tools on the macro pages, in the VBA conversion guide and in `customization.ai`, and unified the AI Chat and inline agent terms
+* Noted that the old AI plugin is no longer supported and can be installed only in 9.4
+* Linked the Plugins API instead of the AI Tools API on the AI playground page
 
 #### Common
 
 * Wrapped long paths and URLs in inline code across all API table cells
 * Renamed the Support contact form footer link to Contact support and removed the Legacy version link
-* Removed the unused OpenAPI theme and plugin
+* Removed the unused OpenAPI theme, plugin and `openapi/` folder
+* Pointed the onlyoffice.com links that now redirect straight at the pages they lead to
+* Replaced fixed-width `<img>` tags with Markdown images, and cropped the plugin and macro diagram and gave it a descriptive alt text
 
 #### Localization
 
 * Translated the Create App integration example
 * Synced the zh-CN AI and plugin pages with English and used the zh-CN UI strings on the AI and Docs API pages
+* Linked zh-CN pages to the Chinese onlyoffice.com pages
+* Translated "document key" as 标识符 rather than 密钥, plus the image alt texts and the Stop button in the AI guides
+* Fixed the spacing, UI names and punctuation on the external data pages and in the plugin sample lines
 
 ### Fixes
 
 * Fixed the slug of the `ApiWorksheetFunction` INDEX method page
 * Fixed the build failing on a clean install because `glob` was missing
 * Fixed the translation of 提交 issue on the zh-CN plugin versioning page
+* Fixed which `options.c` fields are optional and what they default to in `insertImage`, `setUsers` and `setRequestedDocument`
+* Fixed `setUsers` to require a user ID for the `filler` operation
 
 ## 10.1.0
 
