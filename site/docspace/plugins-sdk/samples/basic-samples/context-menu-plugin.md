@@ -126,5 +126,5 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 ## Notes
 
 - You can define multiple context items using different keys.
-- Use the [`fileType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#fileType?), [`devices`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#devices?), and [`usersTypes`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#usersTypes?) fields to control visibility.
-- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#onClick?) function receives the selected file's ID.
+- Use the [`fileType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#fileType), [`devices`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#devices), and [`usersTypes`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#usersTypes) fields to control visibility.
+- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IContextMenuItem.md#onClick) function receives the selected file's ID.

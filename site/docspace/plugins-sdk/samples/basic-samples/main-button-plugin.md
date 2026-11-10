@@ -134,6 +134,6 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 
 ## Notes
 
-- You can create nested items using the [`items`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md#items?) array inside `IMainButtonItem`.
-- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md#onClick?) function can receive an entity context (e.g., room or file ID).
+- You can create nested items using the [`items`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md#items) array inside `IMainButtonItem`.
+- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md#onClick) function can receive an entity context (e.g., room or file ID).
 - You can extend this plugin to support `Settings`, `ContextMenu`, or other scopes by updating `package.json` and logic.

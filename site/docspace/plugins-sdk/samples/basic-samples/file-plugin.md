@@ -123,6 +123,6 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 ## Notes
 
 - The [`extension`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#extension) must match a file type used in your ONLYOFFICE Apps (e.g. `.md`).
-- You can customize both list and tile icons using [`fileRowIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#fileRowIcon?) and [`fileTileIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#fileTileIcon?).
+- You can customize both list and tile icons using [`fileRowIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#fileRowIcon) and [`fileTileIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#fileTileIcon).
 - Without this plugin, unknown file types simply download on click. This plugin runs your [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#onClick) logic instead.
-- You can control where the current file item is shown using [`devices`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#devices?) (for example, desktop, mobile, and tablet).
+- You can control where the current file item is shown using [`devices`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IFileItem.md#devices) (for example, desktop, mobile, and tablet).

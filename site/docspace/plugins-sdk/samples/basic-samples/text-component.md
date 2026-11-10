@@ -331,7 +331,7 @@ const modalDialogProps: IModalDialog = {
 
 ## Step 7: Append the modal dialog to the main button
 
-Update the main button's [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md#onClick?) function with the modal display behavior:
+Update the main button's [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/interfaces/items/IMainButtonItem.md#onClick) function with the modal display behavior:
 
 ```ts
 const mainButtonItem: IMainButtonItem = {
