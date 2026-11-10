@@ -34,13 +34,13 @@ table.SetWidth("percent", 100);
 
 // Populate the table
 let headerRow = table.GetRow(0);
-headerRow.SetBackgroundColor(75, 136, 209, false);
+headerRow.SetBackgroundColor(Api.RGB(75, 136, 209));
 for (let i = 0; i < colsCount; i++) {
   let cell = headerRow.GetCell(i);
   let content = cell.GetContent();
   let paragraph = content.GetElement(0);
   paragraph.AddText(headers[i]);
-  paragraph.SetColor(255, 255, 255, false);
+  paragraph.SetColor(Api.RGB(255, 255, 255));
   paragraph.SetBold(true);
   paragraph.SetJc("center");
 }
