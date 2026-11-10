@@ -11,6 +11,7 @@
 #### Office API
 
 * Added the Working with tables guide, which shows how to create tables, move through their rows and cells, read cell text and change the table structure
+* Added the Converting table to text sample, which turns table rows into formatted text paragraphs
 
 #### Common
 
@@ -24,6 +25,7 @@
 * Explained that `onRequestStartFilling` receives the form roles in `data`, that the handler calls `startFilling` to lock editing, and that Share & collect needs it only when the page handles the click itself
 * Linked the ONLYOFFICE support contact form as the default for `feedback.url`
 * Updated the How it works, Usage API, Troubleshooting and Standard branding screenshots and UI names for 10.0
+* Allowed string version numbers such as `"1.2"` in `refreshHistory`, `setHistoryData`, `onRequestHistoryData` and `onRequestRestore`, and made `currentVersion` optional in `refreshHistory`
 
 #### AI
 
