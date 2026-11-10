@@ -12,6 +12,7 @@
 
 * Added the Working with tables guide, which shows how to create tables, move through their rows and cells, read cell text and change the table structure
 * Added the Converting table to text sample, which turns table rows into formatted text paragraphs
+* Added the Copying cell style sample, which copies the formatting of one cell to other cells with `Copy` and `PasteSpecial`
 
 #### Common
 
