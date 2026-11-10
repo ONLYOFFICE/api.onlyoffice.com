@@ -41,6 +41,7 @@
 #### ONLYOFFICE Apps
 
 * Switched the Plugins SDK samples from the deprecated item `onClick` handler to `onItemClick`, which takes `string | number` ids
+* Retook the plugin logo screenshots on the plugin structure page as a matching light and dark pair
 
 #### Common
 
@@ -57,6 +58,7 @@
 * Linked zh-CN pages to the Chinese onlyoffice.com pages
 * Translated "document key" as 标识符 rather than 密钥, plus the image alt texts and the Stop button in the AI guides
 * Fixed the spacing, UI names and punctuation on the external data pages and in the plugin sample lines
+* Pointed the zh-CN cloud installation signup link at the onlyoffice.com signup page, as on the English page
 
 ### Fixes
 
