@@ -95,8 +95,8 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 - Added the ability to access [cell address information](../../macros/guides/adding-custom-functions.md#accessing-cell-addresses) inside custom functions.
 - Added the ability to add [asynchronous custom functions](../../macros/guides/adding-custom-functions.md#asynchronous-functions) to the spreadsheets using the **Macros** plugin.
-- Added the ability to [automatically convert](../../macros/guides/converting-vba-macros.md#automatic-conversion-using-ai-tools) VBA code into ONLYOFFICE macros using AI plugin.
-- Added the ability to [automatically generate](../../macros/guides/writing-macros.md#generating-macros-using-ai-tools) ONLYOFFICE macros using AI plugin.
+- Added the ability to [automatically convert](../../macros/guides/converting-vba-macros.md#automatic-conversion-using-ai-tools) VBA code into ONLYOFFICE macros using the AI plugin.
+- Added the ability to [automatically generate](../../macros/guides/writing-macros.md#generating-macros-using-ai-tools) ONLYOFFICE macros using the AI plugin.
 - Added the ability to add custom [buttons to content controls](../customization/content-control-buttons.md) using a plugin.
 - Added the [GetCurrentBookmark](../interacting-with-editors/document-api/Methods/GetCurrentBookmark.md) method for Document API.
 - Added the [GoToSlide](../interacting-with-editors/presentation-api/Methods/GoToSlide.md) method for Presentation API.
