@@ -516,7 +516,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数       | 类型    | 描述           |
 | ---------- | ------- | -------------- |
-| event.data | `number` | 文档版本号。   |
+| event.data | `number` \| `string` | 文档版本号，即传递给 [refreshHistory](../methods.md#refreshhistory) 方法的 `history.version` 值。 |
 
 ![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.png#gh-light-mode-only)![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.dark.png#gh-dark-mode-only)
 
@@ -832,7 +832,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数                | 类型    | 描述                                                                                   |
 | ------------------- | ------- | -------------------------------------------------------------------------------------- |
-| event.data.version  | `number` | 文档版本号。                                                                           |
+| event.data.version  | `number` \| `string` | 文档版本号，即传递给 [refreshHistory](../methods.md#refreshhistory) 方法的 `history.version` 值。 |
 | event.data.url      | `string`  | 来自[历史对象](../callback-handler.md#history)的文档链接。在调用文档更改时发送。        |
 | event.data.fileType | `string`  | 由 `url` 链接指定的文档类型。                                                          |
 

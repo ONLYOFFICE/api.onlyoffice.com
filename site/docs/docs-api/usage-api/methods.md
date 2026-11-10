@@ -179,7 +179,7 @@ Show the document version history. This method must be called after the [onReque
 
 | Parameter                     | Type    | Presence | Description                                                                                                                                       |
 | ----------------------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options.currentVersion        | `number` | required | The current document version number.                                                                                                      |
+| options.currentVersion        | `number` \| `string` | optional | The current document version number. If this parameter is not specified or does not match any version, the last version in the `history` array is selected. |
 | options.error                 | `string` | optional | The error message text.                                                                                                                   |
 | options.history               | `object[]` | required | The array with the document versions.                                                                                                     |
 | options.history.changes       | `object` | optional | The `changes` from [the history object](./callback-handler.md#history) returned after saving the document.                                |
@@ -189,7 +189,7 @@ Show the document version history. This method must be called after the [onReque
 | options.history.user          | `object` | optional | The user who is the author of the document version.                                                                                       |
 | options.history.user.id       | `string` | optional | The identifier of the user who is the author of the document version.                                                                     |
 | options.history.user.name     | `string` | optional | The name of the user who is the author of the document version.                                                                           |
-| options.history.version       | `number` | required | The document version number.                                                                                                              |
+| options.history.version       | `number` \| `string` | required | The document version number, e.g. `2` or `"1.2"`. The editor returns this value as is in the [onRequestHistoryData](./config/events.md#onrequesthistorydata) and [onRequestRestore](./config/events.md#onrequestrestore) events. |
 
 **Example:**
 
@@ -343,7 +343,7 @@ Send the link to the document for viewing the version history. This method must 
 | options.previous.url      | `string` | required | The url address of the previous version of the document.                                                                                                                                                                                                                                                 |
 | options.token             | `string` | optional | The encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#sethistorydata).                                                                                                                                                                          |
 | options.url               | `string` | required | The url address of the current document version. Can be downloaded by the `url` link from [the JSON object](./callback-handler.md#url) returned after saving the document. Be sure to add a [token](../get-started/how-it-works/how-it-works.md) when using local links. Otherwise, an error will occur. |
-| options.version           | `number` | required | The document version number.                                                                                                                                                                                                                                                                             |
+| options.version           | `number` \| `string` | required | The document version number. It must match the `history.version` value passed to the [refreshHistory](#refreshhistory) method, including its type. |
 
 **Example:**
 

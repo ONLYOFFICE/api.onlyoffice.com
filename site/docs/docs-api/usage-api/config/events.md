@@ -516,7 +516,7 @@ This event is optional. If each version passed to [refreshHistory](../methods.md
 
 | Parameter  | Type    | Description                  |
 | ---------- | ------- | ---------------------------- |
-| event.data | `number` | The document version number. |
+| event.data | `number` \| `string` | The document version number, as passed in `history.version` to the [refreshHistory](../methods.md#refreshhistory) method. |
 
 ![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.png#gh-light-mode-only)![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.dark.png#gh-dark-mode-only)
 
@@ -832,7 +832,7 @@ If this event is not declared, the *Restore* button will not be displayed. The *
 
 | Parameter           | Type    | Description                                                                                                                   |
 | ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| event.data.version  | `number` | The document version number.                                                                                                  |
+| event.data.version  | `number` \| `string` | The document version number, as passed in `history.version` to the [refreshHistory](../methods.md#refreshhistory) method. |
 | event.data.url      | `string`  | The document link from the [history object](../callback-handler.md#history). Sent if called for the document changes.         |
 | event.data.fileType | `string`  | The type of the document specified with the `url` link.                                                                       |
 

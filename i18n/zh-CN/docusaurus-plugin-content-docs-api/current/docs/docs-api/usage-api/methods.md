@@ -179,7 +179,7 @@ docEditor.insertImage({
 
 | 参数                         | 类型    | 是否必填 | 描述                                                                                                                                       |
 | ----------------------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options.currentVersion        | `number` | 必填 | 当前文档版本号。                                                                                                      |
+| options.currentVersion        | `number` \| `string` | 非必填的 | 当前文档版本号。如果未指定此参数或其与任何版本都不匹配，则选中 `history` 数组中的最后一个版本。 |
 | options.error                 | `string` | 非必填的 | 错误消息文本。                                                                                                                   |
 | options.history               | `object[]` | 必填 | 文档版本数组。                                                                                                    |
 | options.history.changes       | `object` | 非必填的 | 保存文档后返回的[历史对象](./callback-handler.md#history)的 `changes`。                      |
@@ -189,7 +189,7 @@ docEditor.insertImage({
 | options.history.user          | `object` | 非必填的 | 作为文档版本作者的用户。                                                                                      |
 | options.history.user.id       | `string` | 非必填的 | 作为文档版本作者的用户的标识符。                                                                    |
 | options.history.user.name     | `string` | 非必填的 | 作为文档版本作者的用户的名称                                                                          |
-| options.history.version       | `number` | 必填 | 文档版本号。                                                                                                              |
+| options.history.version       | `number` \| `string` | 必填 | 文档版本号，例如 `2` 或 `"1.2"`。编辑器会在 [onRequestHistoryData](./config/events.md#onrequesthistorydata) 和 [onRequestRestore](./config/events.md#onrequestrestore) 事件中原样返回此值。 |
 
 **示例**：
 
@@ -343,7 +343,7 @@ docEditor.insertImage({
 | options.previous.url      | `string` | 必填 | 上一版本文档的 url 地址。                                                                                                                                                                                                                                                            |
 | options.token             | `string` | 非必填的 | 以[令牌](../additional-api/signature/browser.md#sethistorydata)形式添加到参数的加密签名。                                                                                                                                                                        |
 | options.url               | `string` | 必填 | 当前文档版本的 url 地址。可以从保存文档后返回的 [JSON](./callback-handler.md#url) 对象中的 `url` 链接下载。使用本地链接时请务必添加[令牌](../get-started/how-it-works/how-it-works.md)。否则会出现错误。 |
-| options.version           | `number` | 必填 | 文档版本号。                                                                                                                                                                                                                                                                                        |
+| options.version           | `number` \| `string` | 必填 | 文档版本号。必须与传递给 [refreshHistory](#refreshhistory) 方法的 `history.version` 值一致，包括其类型。 |
 
 **示例**：
 
