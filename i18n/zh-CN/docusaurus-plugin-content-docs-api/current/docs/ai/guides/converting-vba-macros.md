@@ -8,11 +8,11 @@ ONLYOFFICE 宏与 Microsoft 宏不同，因为后者使用 Visual Basic for Appl
 
 这意味着在 Microsoft Office 中创建的宏与 ONLYOFFICE 宏不兼容。您可以通过以下两种方式将其转换以在 ONLYOFFICE 中使用：
 
-- [自动转换](#automatic-conversion-using-ai-plugin)：使用 AI 工具（推荐用于快速转换）。
+- [自动转换](#automatic-conversion-using-ai-tools)：使用 AI 工具（推荐用于快速转换）。
 
 - [手动转换](#manual-conversion-of-vba-macros)：使用 [ONLYOFFICE Office API](../../office-api/get-started/overview.md) 以 JavaScript 重写逻辑。
 
-## 使用 AI 工具自动转换 {#automatic-conversion-using-ai-plugin}
+## 使用 AI 工具自动转换 {#automatic-conversion-using-ai-tools}
 
 从 9.0 版本开始，您可以使用 AI 工具（原 AI 插件）自动将 VBA 代码转换为与 ONLYOFFICE 宏兼容的 JavaScript 代码：
 
