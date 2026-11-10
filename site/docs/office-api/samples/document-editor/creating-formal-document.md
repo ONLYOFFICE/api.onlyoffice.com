@@ -47,7 +47,7 @@ paraPr = normalStyle.GetParaPr();
 paraPr.SetSpacingLine(240, "auto");
 paraPr.SetJc("both");
 textPr = normalStyle.GetTextPr();
-textPr.SetColor(0x26, 0x26, 0x26, false);
+textPr.SetColor(Api.RGB(0x26, 0x26, 0x26));
 
 const heading1Style = doc.CreateStyle("Heading 1", "paragraph");
 paraPr = heading1Style.GetParaPr();
@@ -55,7 +55,7 @@ paraPr.SetKeepNext(true);
 paraPr.SetKeepLines(true);
 paraPr.SetSpacingAfter(240);
 textPr = heading1Style.GetTextPr();
-textPr.SetColor(0x29, 0x33, 0x4F, false);
+textPr.SetColor(Api.RGB(0x29, 0x33, 0x4F));
 textPr.SetFontSize(40);
 textPr.SetFontFamily("Calibri Light");
 
@@ -64,7 +64,7 @@ paraPr = subtitleStyle.GetParaPr();
 paraPr.SetSpacingAfter(0);
 paraPr.SetSpacingBefore(240);
 textPr = subtitleStyle.GetTextPr();
-textPr.SetColor(0x29, 0x33, 0x4F, false);
+textPr.SetColor(Api.RGB(0x29, 0x33, 0x4F));
 textPr.SetFontSize(32);
 textPr.SetFontFamily("Calibri Light");
 
@@ -100,7 +100,7 @@ paraPr.SetTabs([4680, 9360], ["center", "right"]);
 paraPr.SetSpacingAfter(0);
 paraPr.SetJc("left");
 textPr = footerStyle.GetTextPr();
-textPr.SetColor(0, 0, 0, true);
+textPr.SetColor(Api.AutoColor());
 textPr.SetFontSize(22);
 
 paragraph = Api.CreateParagraph();
@@ -108,7 +108,7 @@ paragraph.SetSpacingLine(276, "auto");
 paragraph.SetJc("left");
 const paraMark = paragraph.GetParagraphMarkTextPr();
 paraMark.SetFontSize(52);
-paraMark.SetColor(0x14, 0x14, 0x14, false);
+paraMark.SetColor(Api.RGB(0x14, 0x14, 0x14));
 paraMark.SetSpacing(5);
 paragraph.AddPageBreak();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(61, 74, 107));
@@ -128,7 +128,7 @@ run2.AddLineBreak();
 run2.AddText("Document Builder");
 run2.SetFontSize(64);
 run2.SetCaps(true);
-run2.SetColor(255, 255, 255);
+run2.SetColor(Api.RGB(255, 255, 255));
 run2.SetFontFamily("Calibri Light");
 paragraph2.SetBottomBorder("single", 1, 0, 151, 192, 60);
 docContent.Push(paragraph2);
@@ -136,7 +136,7 @@ paragraph2 = Api.CreateParagraph();
 paragraph2.SetJc("right");
 run2 = paragraph2.AddText("Product Launch Revenue Plan");
 run2.SetFontSize(44);
-run2.SetColor(255, 255, 255);
+run2.SetColor(Api.RGB(255, 255, 255));
 run2.SetFontFamily("Calibri Light");
 docContent.Push(paragraph2);
 paragraph2 = Api.CreateParagraph();
@@ -152,14 +152,14 @@ paragraph2 = Api.CreateParagraph();
 paragraph2.SetJc("right");
 run2 = paragraph2.AddText("Confidential");
 run2.SetFontSize(28);
-run2.SetColor(255, 255, 255);
+run2.SetColor(Api.RGB(255, 255, 255));
 run2.SetFontFamily("Calibri Light");
 docContent.Push(paragraph2);
 paragraph2 = Api.CreateParagraph();
 paragraph2.SetJc("right");
 run2 = paragraph2.AddText("July 2016");
 run2.SetFontSize(28);
-run2.SetColor(255, 255, 255);
+run2.SetColor(Api.RGB(255, 255, 255));
 run2.SetFontFamily("Calibri Light");
 docContent.Push(paragraph2);
 paragraph2 = Api.CreateParagraph();
@@ -199,7 +199,7 @@ paragraph2 = Api.CreateParagraph();
 paragraph2.SetJc("left");
 run2 = paragraph2.AddText("Product Launch Revenue Plan");
 run2.SetFontSize(36);
-run2.SetColor(0, 0, 0);
+run2.SetColor(Api.RGB(0, 0, 0));
 run2.SetFontFamily("Calibri Light");
 docContent.AddElement(0, paragraph2);
 
@@ -248,12 +248,12 @@ paragraph2.SetSpacingAfter(160);
 run2 = paragraph2.AddText("Phase 1");
 run2.SetFontSize(20);
 run2.SetBold(true);
-run2.SetColor(0, 0, 0);
+run2.SetColor(Api.RGB(0, 0, 0));
 run2.SetFontFamily("Calibri");
 
 run2 = paragraph2.AddText(": Review market tests, marketing plans, and expected sales goals.");
 run2.SetFontSize(20);
-run2.SetColor(0, 0, 0);
+run2.SetColor(Api.RGB(0, 0, 0));
 run2.SetFontFamily("Calibri");
 
 docContent.Push(paragraph2);
@@ -264,12 +264,12 @@ paragraph2.SetSpacingAfter(160);
 run2 = paragraph2.AddText("Phase 2");
 run2.SetFontSize(20);
 run2.SetBold(true);
-run2.SetColor(0, 0, 0);
+run2.SetColor(Api.RGB(0, 0, 0));
 run2.SetFontFamily("Calibri");
 
 run2 = paragraph2.AddText(": Developers complete final build of the solution.");
 run2.SetFontSize(20);
-run2.SetColor(0, 0, 0);
+run2.SetColor(Api.RGB(0, 0, 0));
 run2.SetFontFamily("Calibri");
 docContent.Push(paragraph2);
 
@@ -279,12 +279,12 @@ paragraph2.SetSpacingAfter(160);
 run2 = paragraph2.AddText("Phase 3");
 run2.SetFontSize(20);
 run2.SetBold(true);
-run2.SetColor(0, 0, 0);
+run2.SetColor(Api.RGB(0, 0, 0));
 run2.SetFontFamily("Calibri");
 
 run2 = paragraph2.AddText(": The launch phase.");
 run2.SetFontSize(20);
-run2.SetColor(0, 0, 0);
+run2.SetColor(Api.RGB(0, 0, 0));
 run2.SetFontFamily("Calibri");
 docContent.Push(paragraph2);
 
@@ -367,7 +367,7 @@ paragraph2.SetJc("left");
 run2 = paragraph2.AddText("Innovation. Profit.");
 run2.SetFontSize(20);
 run2.SetBold(true);
-run2.SetColor(0, 0, 0);
+run2.SetColor(Api.RGB(0, 0, 0));
 run2.SetFontFamily("Calibri");
 content.AddElement(0, paragraph2);
 
@@ -376,7 +376,7 @@ paragraph2.SetJc("left");
 run2 = paragraph2.AddText("After years of market research and focused creative effort we are in a position to take our 'ONLYOFFICE Document Builder' to market.");
 run2.SetFontSize(18);
 run2.SetItalic(true);
-run2.SetColor(0, 0, 0);
+run2.SetColor(Api.RGB(0, 0, 0));
 run2.SetFontFamily("Calibri");
 content.AddElement(1, paragraph2);
 
@@ -478,7 +478,7 @@ if (row) {
   paragraph.SetJc("center");
   run = paragraph.AddText("2016");
   run.SetBold(true);
-  run.SetColor(0, 0, 0, false);
+  run.SetColor(Api.RGB(0, 0, 0));
 
   cell = row.GetCell(1);
   cell.SetWidth("twips", 2674);
@@ -489,7 +489,7 @@ if (row) {
   paragraph.SetJc("center");
   run = paragraph.AddText("2017");
   run.SetBold(true);
-  run.SetColor(0, 0, 0, false);
+  run.SetColor(Api.RGB(0, 0, 0));
 }
 row = table.GetRow(1);
 if (row) {
@@ -607,7 +607,7 @@ if (row) {
 paragraph = Api.CreateParagraph();
 doc.Push(paragraph);
 textPr = paragraph.GetParagraphMarkTextPr();
-textPr.SetColor(0xFF, 0x00, 0x00);
+textPr.SetColor(Api.RGB(0xFF, 0x00, 0x00));
 textPr.SetFontFamily("Segoe UI");
 
 section1.SetTitlePage(true);
@@ -646,9 +646,9 @@ if (row) {
     paragraph = cellContent.GetElement(0);
     paragraph.SetStyle("Header");
     paragraph.SetJc("center");
-    paragraph.GetParagraphMarkTextPr().SetColor(0xFF, 0xFF, 0xFF);
+    paragraph.GetParagraphMarkTextPr().SetColor(Api.RGB(0xFF, 0xFF, 0xFF));
     run = paragraph.AddPageNumber();
-    run.SetColor(0xFF, 0xFF, 0xFF);
+    run.SetColor(Api.RGB(0xFF, 0xFF, 0xFF));
   }
 }
 

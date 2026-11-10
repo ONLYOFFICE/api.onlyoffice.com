@@ -146,15 +146,15 @@ for (let i = 0; i < searchExamples.length; i++) {
     
     if (fieldInfo.found) {
         resultParagraph.AddText("✓ Found: " + searchTag + " = \"" + fieldInfo.value + "\" (type: " + fieldInfo.type + ")");
-        resultParagraph.SetColor(0, 128, 0);
+        resultParagraph.SetColor(Api.RGB(0, 128, 0));
         
         // Highlight found field with light blue background
         if (fieldInfo.control) {
-            fieldInfo.control.SetBackgroundColor(173, 216, 230, false);
+            fieldInfo.control.SetBackgroundColor(Api.RGB(173, 216, 230));
         }
     } else {
         resultParagraph.AddText("✗ Not found: " + searchTag + " - " + fieldInfo.error);
-        resultParagraph.SetColor(255, 0, 0);
+        resultParagraph.SetColor(Api.RGB(255, 0, 0));
     }
     
     resultParagraph.SetSpacingBefore(100);
@@ -172,7 +172,7 @@ let logicResultParagraph = Api.CreateParagraph();
 
 if (agreementInfo.found && (agreementInfo.value === "Yes" || agreementInfo.value === "true")) {
     logicResultParagraph.AddText("✓ Agreement accepted - Processing can continue");
-    logicResultParagraph.SetColor(0, 128, 0);
+    logicResultParagraph.SetColor(Api.RGB(0, 128, 0));
     
     // Additional processing based on agreement
     let supportInfo = getFieldInfo("include_support");
@@ -180,12 +180,12 @@ if (agreementInfo.found && (agreementInfo.value === "Yes" || agreementInfo.value
         let supportParagraph = Api.CreateParagraph();
         supportParagraph.AddText("→ Support package will be included");
         supportParagraph.SetSpacingBefore(100);
-        supportParagraph.SetColor(0, 100, 200);
+        supportParagraph.SetColor(Api.RGB(0, 100, 200));
         doc.Push(supportParagraph);
     }
 } else {
     logicResultParagraph.AddText("✗ Agreement not accepted - Processing blocked");
-    logicResultParagraph.SetColor(255, 0, 0);
+    logicResultParagraph.SetColor(Api.RGB(255, 0, 0));
 }
 
 logicResultParagraph.SetSpacingBefore(200);

@@ -38,7 +38,7 @@ let paragraph4 = Api.CreateParagraph();
 paragraph4.AddText("Important note: ").SetBold(true);
 paragraph4.AddText("This text continues on the same line but is not bold.");
 paragraph4.AddLineBreak();
-paragraph4.AddText("Another important point: ").SetBold(true).SetColor(255, 0, 0);
-paragraph4.AddText("This text is normal but follows red bold text.").SetColor(0, 0, 0);
+paragraph4.AddText("Another important point: ").SetBold(true).SetColor(Api.RGB(255, 0, 0));
+paragraph4.AddText("This text is normal but follows red bold text.").SetColor(Api.RGB(0, 0, 0));
 doc.Push(paragraph4);
 ```

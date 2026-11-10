@@ -140,14 +140,14 @@ doc.Push(para);
 let itemsTable = createTable(6, 4, 100);
 
 // 设置表头行样式
-itemsTable.GetRow(0).SetBackgroundColor(70, 130, 180, false);
+itemsTable.GetRow(0).SetBackgroundColor(Api.RGB(70, 130, 180));
 
 // 表头行
 let headers = ["数量", "描述", "单价", "金额"];
 for (let i = 0; i < headers.length; i++) {
   para = getCellParagraph(itemsTable, 0, i);
   addText(para, headers[i], 11 * 2, true, "center");
-  para.SetColor(255, 255, 255);
+  para.SetColor(Api.RGB(255, 255, 255));
 }
 
 // 设置列宽
@@ -196,7 +196,7 @@ para = getCellParagraph(totalsTable, 2, 0);
 addText(para, "总计：", 12 * 2, true, "right");
 para = getCellParagraph(totalsTable, 2, 1);
 addTextForm(para, "total", "¥0.00", 12, 12 * 2, "right");
-totalsTable.GetRow(2).SetBackgroundColor(240, 240, 240, false);
+totalsTable.GetRow(2).SetBackgroundColor(Api.RGB(240, 240, 240));
 
 doc.Push(totalsTable);
 

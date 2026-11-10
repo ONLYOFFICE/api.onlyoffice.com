@@ -202,7 +202,7 @@ fillFormWithSampleData();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("✓ 示例数据已输入到所有表单字段");
 paragraph.SetFontSize(12 * 2);
-paragraph.SetColor(0, 128, 0);
+paragraph.SetColor(Api.RGB(0, 128, 0));
 doc.Push(paragraph);
 
 // 添加间距
@@ -222,7 +222,7 @@ let clearedCount = clearAllFormValues();
 paragraph = Api.CreateParagraph();
 paragraph.AddText(`✓ 重置完成 - 已清除 ${clearedCount} 个字段`);
 paragraph.SetFontSize(12 * 2);
-paragraph.SetColor(0, 128, 0);
+paragraph.SetColor(Api.RGB(0, 128, 0));
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();

@@ -43,7 +43,7 @@ addressParagraph.AddLineBreak();
 addressParagraph.AddText("New York, NY 10001");
 addressParagraph.SetJc("left");
 addressParagraph.SetFontSize(9 * 2); // 9pt font size
-addressParagraph.SetColor(100, 100, 100, false); // Gray color
+addressParagraph.SetColor(Api.RGB(100, 100, 100)); // Gray color
 
 // Configure second cell - License (center aligned)
 let licenseCell = row.GetCell(1);
@@ -54,7 +54,7 @@ licenseParagraph.AddLineBreak();
 licenseParagraph.AddText("#LIC-2025-88");
 licenseParagraph.SetJc("center");
 licenseParagraph.SetFontSize(9 * 2); // 9pt font size
-licenseParagraph.SetColor(100, 100, 100, false); // Gray color
+licenseParagraph.SetColor(Api.RGB(100, 100, 100)); // Gray color
 
 // Configure third cell - Contact (right aligned)
 let contactCell = row.GetCell(2);
@@ -65,7 +65,7 @@ contactParagraph.AddLineBreak();
 contactParagraph.AddText("support@example.com");
 contactParagraph.SetJc("right");
 contactParagraph.SetFontSize(9 * 2); // 9pt font size
-contactParagraph.SetColor(100, 100, 100, false); // Gray color
+contactParagraph.SetColor(Api.RGB(100, 100, 100)); // Gray color
 
 // Add the table to the footer
 footer.AddElement(0, footerTable);

@@ -405,7 +405,7 @@ let updateResult = updatePlaceholdersForLanguage(detectedLanguage);
 paragraph = Api.CreateParagraph();
 paragraph.AddText(`✓ Updated ${updateResult.updatedCount} form field placeholders`);
 paragraph.SetFontSize(12 * 2);
-paragraph.SetColor(0, 128, 0);
+paragraph.SetColor(Api.RGB(0, 128, 0));
 doc.Push(paragraph);
 
 // Show sample translations

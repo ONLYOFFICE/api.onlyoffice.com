@@ -142,14 +142,14 @@ doc.Push(para);
 let itemsTable = createTable(6, 4, 100);
 
 // Style header row
-itemsTable.GetRow(0).SetBackgroundColor(70, 130, 180, false);
+itemsTable.GetRow(0).SetBackgroundColor(Api.RGB(70, 130, 180));
 
 // Header row
 let headers = ["Qty", "Description", "Unit Price", "Amount"];
 for (let i = 0; i < headers.length; i++) {
   para = getCellParagraph(itemsTable, 0, i);
   addText(para, headers[i], 11 * 2, true, "center");
-  para.SetColor(255, 255, 255);
+  para.SetColor(Api.RGB(255, 255, 255));
 }
 
 // Set column widths
@@ -198,7 +198,7 @@ para = getCellParagraph(totalsTable, 2, 0);
 addText(para, "Total:", 12 * 2, true, "right");
 para = getCellParagraph(totalsTable, 2, 1);
 addTextForm(para, "total", "$0.00", 12, 12 * 2, "right");
-totalsTable.GetRow(2).SetBackgroundColor(240, 240, 240, false);
+totalsTable.GetRow(2).SetBackgroundColor(Api.RGB(240, 240, 240));
 
 doc.Push(totalsTable);
 

@@ -220,9 +220,9 @@ for (let detail of examResults.details) {
   paragraph.SetFontSize(10 * 2);
   paragraph.SetSpacingBefore(100);
   if (detail.isCorrect) {
-    paragraph.SetColor(0, 128, 0);
+    paragraph.SetColor(Api.RGB(0, 128, 0));
   } else {
-    paragraph.SetColor(200, 0, 0);
+    paragraph.SetColor(Api.RGB(200, 0, 0));
   }
   doc.Push(paragraph);
 }

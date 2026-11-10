@@ -104,7 +104,7 @@ paragraph.SetSpacingBefore(300);
 doc.Push(paragraph);
 
 let infoTable = createTable(4, 4, 100, 100, 100);
-infoTable.GetRow(0).SetBackgroundColor(240, 240, 240, false);
+infoTable.GetRow(0).SetBackgroundColor(Api.RGB(240, 240, 240));
 
 // 第0行：表头
 paragraph = getCellParagraph(infoTable, 0, 0, 1500);
@@ -167,21 +167,21 @@ paragraph.SetSpacingBefore(300);
 doc.Push(paragraph);
 
 let docsTable = createTable(9, 4, 50, 100, 150);
-docsTable.GetRow(0).SetBackgroundColor(50, 100, 150, false);
+docsTable.GetRow(0).SetBackgroundColor(Api.RGB(50, 100, 150));
 
 // 表头行
 paragraph = getCellParagraph(docsTable, 0, 0, 4000);
 addText(paragraph, "文档", 11 * 2, true, "left");
-paragraph.SetColor(255, 255, 255);
+paragraph.SetColor(Api.RGB(255, 255, 255));
 paragraph = getCellParagraph(docsTable, 0, 1, 1200);
 addText(paragraph, "已签署", 11 * 2, true, "center");
-paragraph.SetColor(255, 255, 255);
+paragraph.SetColor(Api.RGB(255, 255, 255));
 paragraph = getCellParagraph(docsTable, 0, 2, 1200);
 addText(paragraph, "已收到", 11 * 2, true, "center");
-paragraph.SetColor(255, 255, 255);
+paragraph.SetColor(Api.RGB(255, 255, 255));
 paragraph = getCellParagraph(docsTable, 0, 3, 2000);
 addText(paragraph, "日期", 11 * 2, true, "center");
-paragraph.SetColor(255, 255, 255);
+paragraph.SetColor(Api.RGB(255, 255, 255));
 
 // 文档行
 let documents = [
@@ -200,7 +200,7 @@ for (let i = 0; i < documents.length; i++) {
 
   // 交替行颜色
   if (i % 2 === 1) {
-    docsTable.GetRow(rowIndex).SetBackgroundColor(245, 248, 250, false);
+    docsTable.GetRow(rowIndex).SetBackgroundColor(Api.RGB(245, 248, 250));
   }
 
   // 文档名称
@@ -235,18 +235,18 @@ paragraph.SetSpacingBefore(300);
 doc.Push(paragraph);
 
 let orientationTable = createTable(8, 3, 100, 150, 50);
-orientationTable.GetRow(0).SetBackgroundColor(100, 150, 50, false);
+orientationTable.GetRow(0).SetBackgroundColor(Api.RGB(100, 150, 50));
 
 // 表头行
 paragraph = getCellParagraph(orientationTable, 0, 0, 4500);
 addText(paragraph, "任务", 11 * 2, true, "left");
-paragraph.SetColor(255, 255, 255);
+paragraph.SetColor(Api.RGB(255, 255, 255));
 paragraph = getCellParagraph(orientationTable, 0, 1, 1200);
 addText(paragraph, "已完成", 11 * 2, true, "center");
-paragraph.SetColor(255, 255, 255);
+paragraph.SetColor(Api.RGB(255, 255, 255));
 paragraph = getCellParagraph(orientationTable, 0, 2, 2500);
 addText(paragraph, "备注", 11 * 2, true, "center");
-paragraph.SetColor(255, 255, 255);
+paragraph.SetColor(Api.RGB(255, 255, 255));
 
 // 入职培训任务
 let orientationTasks = [
@@ -264,7 +264,7 @@ for (let i = 0; i < orientationTasks.length; i++) {
 
   // 交替行颜色
   if (i % 2 === 1) {
-    orientationTable.GetRow(rowIndex).SetBackgroundColor(248, 252, 245, false);
+    orientationTable.GetRow(rowIndex).SetBackgroundColor(Api.RGB(248, 252, 245));
   }
 
   // 任务名称

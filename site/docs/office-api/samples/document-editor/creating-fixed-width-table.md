@@ -52,7 +52,7 @@ let dataRows = [
 
 // Format header row (first row)
 let headerRow = table.GetRow(0);
-headerRow.SetBackgroundColor(240, 240, 240, false);
+headerRow.SetBackgroundColor(Api.RGB(240, 240, 240));
 
 for (let j = 0; j < 3; j++) {
   let headerCell = headerRow.GetCell(j);

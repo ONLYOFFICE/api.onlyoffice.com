@@ -36,34 +36,34 @@ doc.Push(paragraph3);
 // Copyright and trademark symbols
 let paragraph4 = Api.CreateParagraph();
 paragraph4.AddText("• Copyright: ");
-paragraph4.AddText("©").SetBold(true).SetColor(0, 100, 200);
+paragraph4.AddText("©").SetBold(true).SetColor(Api.RGB(0, 100, 200));
 paragraph4.AddText(" (\\u00A9)");
 paragraph4.AddLineBreak();
 paragraph4.AddText("• Registered trademark: ");
-paragraph4.AddText("®").SetBold(true).SetColor(0, 100, 200);
+paragraph4.AddText("®").SetBold(true).SetColor(Api.RGB(0, 100, 200));
 paragraph4.AddText(" (\\u00AE)");
 paragraph4.AddLineBreak();
 paragraph4.AddText("• Trademark: ");
-paragraph4.AddText("™").SetBold(true).SetColor(0, 100, 200);
+paragraph4.AddText("™").SetBold(true).SetColor(Api.RGB(0, 100, 200));
 paragraph4.AddText(" (\\u2122)");
 doc.Push(paragraph4);
 
 // Currency and mathematical symbols
 let paragraph5 = Api.CreateParagraph();
 paragraph5.AddText("• Euro: ");
-paragraph5.AddText("€").SetBold(true).SetColor(0, 150, 0);
+paragraph5.AddText("€").SetBold(true).SetColor(Api.RGB(0, 150, 0));
 paragraph5.AddText(" (\\u20AC)");
 paragraph5.AddLineBreak();
 paragraph5.AddText("• Section: ");
-paragraph5.AddText("§").SetBold(true).SetColor(150, 0, 150);
+paragraph5.AddText("§").SetBold(true).SetColor(Api.RGB(150, 0, 150));
 paragraph5.AddText(" (\\u00A7)");
 paragraph5.AddLineBreak();
 paragraph5.AddText("• Plus-minus: ");
-paragraph5.AddText("±").SetBold(true).SetColor(200, 100, 0);
+paragraph5.AddText("±").SetBold(true).SetColor(Api.RGB(200, 100, 0));
 paragraph5.AddText(" (\\u00B1)");
 paragraph5.AddLineBreak();
 paragraph5.AddText("• Infinity: ");
-paragraph5.AddText("∞").SetBold(true).SetColor(100, 0, 200);
+paragraph5.AddText("∞").SetBold(true).SetColor(Api.RGB(100, 0, 200));
 paragraph5.AddText(" (\\u221E)");
 doc.Push(paragraph5);
 

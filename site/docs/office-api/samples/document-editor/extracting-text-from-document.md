@@ -28,7 +28,7 @@ doc.Push(paragraph3);
 
 // Add a formatted paragraph to show that formatting is ignored during text extraction
 let paragraph4 = Api.CreateParagraph();
-paragraph4.AddText("Important: ").SetBold(true).SetColor(255, 0, 0);
+paragraph4.AddText("Important: ").SetBold(true).SetColor(Api.RGB(255, 0, 0));
 paragraph4.AddText("All employees must follow the safety guidelines outlined in Section 5.");
 doc.Push(paragraph4);
 

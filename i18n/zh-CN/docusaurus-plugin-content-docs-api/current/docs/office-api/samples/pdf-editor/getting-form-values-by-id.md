@@ -106,15 +106,15 @@ function validateFormById() {
 
     if (!emailValue || emailValue.trim() === "") {
       // 如果为空，将字段高亮为红色
-      emailForms[0].SetBorderColor(255, 0, 0);
+      emailForms[0].SetBorderColor(Api.RGB(255, 0, 0));
       isFormValid = false;
     } else if (!emailValue.includes("@")) {
       // 如果格式无效，将字段高亮为橙色
-      emailForms[0].SetBorderColor(255, 165, 0);
+      emailForms[0].SetBorderColor(Api.RGB(255, 165, 0));
       isFormValid = false;
     } else {
       // 如果有效，设置绿色边框
-      emailForms[0].SetBorderColor(0, 255, 0);
+      emailForms[0].SetBorderColor(Api.RGB(0, 255, 0));
     }
   }
 
@@ -125,7 +125,7 @@ function validateFormById() {
     validationResults.full_name = nameValue;
 
     if (nameValue && nameValue.trim() !== "") {
-      nameForms[0].SetBorderColor(0, 255, 0);
+      nameForms[0].SetBorderColor(Api.RGB(0, 255, 0));
     }
   }
 
@@ -136,7 +136,7 @@ function validateFormById() {
     validationResults.age_group = ageValue;
 
     if (ageValue && ageValue.trim() !== "") {
-      ageForms[0].SetBorderColor(0, 255, 0);
+      ageForms[0].SetBorderColor(Api.RGB(0, 255, 0));
     }
   }
 
@@ -148,11 +148,11 @@ function validateFormById() {
 
     if (!termsChecked) {
       // 如果未勾选，将复选框高亮为红色
-      termsForms[0].SetBorderColor(255, 0, 0);
+      termsForms[0].SetBorderColor(Api.RGB(255, 0, 0));
       isFormValid = false;
     } else {
       // 如果已勾选，设置绿色边框
-      termsForms[0].SetBorderColor(0, 255, 0);
+      termsForms[0].SetBorderColor(Api.RGB(0, 255, 0));
     }
   }
 
@@ -163,7 +163,7 @@ function validateFormById() {
     validationResults.newsletter_subscription = newsletterChecked;
 
     // 可选字段始终显示绿色边框
-    newsletterForms[0].SetBorderColor(0, 255, 0);
+    newsletterForms[0].SetBorderColor(Api.RGB(0, 255, 0));
   }
 
   return { isValid: isFormValid, data: validationResults };
@@ -190,10 +190,10 @@ let validation = validateFormById();
 paragraph = Api.CreateParagraph();
 if (validation.isValid) {
   paragraph.AddText("✓ 表单有效，可以提交");
-  paragraph.SetColor(0, 128, 0);
+  paragraph.SetColor(Api.RGB(0, 128, 0));
 } else {
   paragraph.AddText("✗ 表单存在验证错误（请检查高亮显示的字段）");
-  paragraph.SetColor(255, 0, 0);
+  paragraph.SetColor(Api.RGB(255, 0, 0));
 }
 paragraph.SetFontSize(14 * 2);
 doc.Push(paragraph);

@@ -70,7 +70,7 @@ for (let i = 0; i < formFields.length; i++) {
     fieldControl.AddText(field.sampleData);
     
     // Set background color to indicate filled status
-    fieldControl.SetBackgroundColor(230, 255, 230, false); // Light green for filled
+    fieldControl.SetBackgroundColor(Api.RGB(230, 255, 230)); // Light green for filled
     
     doc.Push(fieldControl);
 }
@@ -118,13 +118,13 @@ doc.Push(beforeStatsParagraph);
 let beforeFilledParagraph = Api.CreateParagraph();
 beforeFilledParagraph.AddText("• Filled fields: " + filledFieldsCount);
 beforeFilledParagraph.SetSpacingBefore(100);
-beforeFilledParagraph.SetColor(0, 128, 0);
+beforeFilledParagraph.SetColor(Api.RGB(0, 128, 0));
 doc.Push(beforeFilledParagraph);
 
 let beforeEmptyParagraph = Api.CreateParagraph();
 beforeEmptyParagraph.AddText("• Empty fields: " + emptyFieldsCount);
 beforeEmptyParagraph.SetSpacingBefore(100);
-beforeEmptyParagraph.SetColor(255, 140, 0);
+beforeEmptyParagraph.SetColor(Api.RGB(255, 140, 0));
 doc.Push(beforeEmptyParagraph);
 
 // Function to clear all content controls
@@ -147,7 +147,7 @@ function clearAllContentControls() {
             control.RemoveAllElements();
             
             // Change background color to indicate cleared status
-            control.SetBackgroundColor(255, 240, 240, false); // Light red for cleared
+            control.SetBackgroundColor(Api.RGB(255, 240, 240)); // Light red for cleared
             
             clearingResults.push({
                 tag: tag || "unnamed",
@@ -200,14 +200,14 @@ doc.Push(totalProcessedParagraph);
 let clearedCountParagraph = Api.CreateParagraph();
 clearedCountParagraph.AddText("• Successfully cleared: " + clearingOperation.clearedCount);
 clearedCountParagraph.SetSpacingBefore(100);
-clearedCountParagraph.SetColor(0, 128, 0);
+clearedCountParagraph.SetColor(Api.RGB(0, 128, 0));
 doc.Push(clearedCountParagraph);
 
 if (clearingOperation.errorCount > 0) {
     let errorCountParagraph = Api.CreateParagraph();
     errorCountParagraph.AddText("• Errors encountered: " + clearingOperation.errorCount);
     errorCountParagraph.SetSpacingBefore(100);
-    errorCountParagraph.SetColor(255, 0, 0);
+    errorCountParagraph.SetColor(Api.RGB(255, 0, 0));
     doc.Push(errorCountParagraph);
 }
 
@@ -226,10 +226,10 @@ for (let i = 0; i < Math.min(clearingOperation.results.length, 10); i++) {
                           result.previousValue.substring(0, 30) + "..." : 
                           result.previousValue;
         resultParagraph.AddText("✓ " + result.tag + ": \"" + displayValue + "\" → [CLEARED]");
-        resultParagraph.SetColor(0, 128, 0);
+        resultParagraph.SetColor(Api.RGB(0, 128, 0));
     } else {
         resultParagraph.AddText("✗ " + result.tag + ": " + result.error);
-        resultParagraph.SetColor(255, 0, 0);
+        resultParagraph.SetColor(Api.RGB(255, 0, 0));
     }
     
     resultParagraph.SetSpacingBefore(100);
@@ -273,26 +273,26 @@ let afterStatsParagraph = Api.CreateParagraph();
 afterStatsParagraph.AddText("• Filled fields remaining: " + afterFilledCount);
 afterStatsParagraph.SetSpacingBefore(100);
 if (afterFilledCount === 0) {
-    afterStatsParagraph.SetColor(0, 128, 0);
+    afterStatsParagraph.SetColor(Api.RGB(0, 128, 0));
 } else {
-    afterStatsParagraph.SetColor(255, 140, 0);
+    afterStatsParagraph.SetColor(Api.RGB(255, 140, 0));
 }
 doc.Push(afterStatsParagraph);
 
 let afterEmptyStatsParagraph = Api.CreateParagraph();
 afterEmptyStatsParagraph.AddText("• Empty fields: " + afterEmptyCount);
 afterEmptyStatsParagraph.SetSpacingBefore(100);
-afterEmptyStatsParagraph.SetColor(0, 128, 0);
+afterEmptyStatsParagraph.SetColor(Api.RGB(0, 128, 0));
 doc.Push(afterEmptyStatsParagraph);
 
 // Success confirmation
 let successParagraph = Api.CreateParagraph();
 if (afterFilledCount === 0) {
     successParagraph.AddText("✓ SUCCESS: All fields have been cleared. Template is ready for reuse.").SetBold(true);
-    successParagraph.SetColor(0, 128, 0);
+    successParagraph.SetColor(Api.RGB(0, 128, 0));
 } else {
     successParagraph.AddText("⚠ WARNING: " + afterFilledCount + " field(s) still contain data.").SetBold(true);
-    successParagraph.SetColor(255, 140, 0);
+    successParagraph.SetColor(Api.RGB(255, 140, 0));
 }
 successParagraph.SetSpacingBefore(300);
 doc.Push(successParagraph);

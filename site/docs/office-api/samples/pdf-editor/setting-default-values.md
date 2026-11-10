@@ -59,7 +59,7 @@ function createEmployeeProfileForm() {
   paragraph.AddText("Pre-filled with your current information - modify as needed");
   paragraph.SetFontSize(12 * 2);
   paragraph.SetJc("center");
-  paragraph.SetColor(128, 128, 128);
+  paragraph.SetColor(Api.RGB(128, 128, 128));
   doc.Push(paragraph);
 
   // Add spacing
@@ -431,7 +431,7 @@ let populatedCount = populateFormWithDefaults(authenticatedUser, userPreferences
 paragraph = Api.CreateParagraph();
 paragraph.AddText(`✓ Populated ${populatedCount} form fields with default values`);
 paragraph.SetFontSize(12 * 2);
-paragraph.SetColor(0, 128, 0);
+paragraph.SetColor(Api.RGB(0, 128, 0));
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();

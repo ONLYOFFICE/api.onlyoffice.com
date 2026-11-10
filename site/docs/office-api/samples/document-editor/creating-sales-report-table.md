@@ -40,7 +40,7 @@ table.SetStyle(tableStyle);
 // Row 1: Merged header cell
 let headerRow = table.GetRow(0);
 headerRow.MergeCells();
-headerRow.SetBackgroundColor(240, 240, 240, false);
+headerRow.SetBackgroundColor(Api.RGB(240, 240, 240));
 let headerCell = headerRow.GetCell(0);
 let headerContent = headerCell.GetContent();
 let headerParagraph = headerContent.GetElement(0);
@@ -74,7 +74,7 @@ salesData.forEach((rowData, rowIndex) => {
 // Row 5: Total row (merged)
 let totalRow = table.GetRow(4);
 totalRow.MergeCells();
-totalRow.SetBackgroundColor(240, 240, 240, false);
+totalRow.SetBackgroundColor(Api.RGB(240, 240, 240));
 let totalCell = totalRow.GetCell(0);
 let totalContent = totalCell.GetContent();
 let totalParagraph = totalContent.GetElement(0);

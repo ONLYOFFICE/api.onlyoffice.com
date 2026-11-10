@@ -61,7 +61,7 @@ table.SetStyle(tableStyle);
 
 // Format header row
 let headerRow = table.GetRow(0);
-headerRow.SetBackgroundColor(240, 240, 240, false);
+headerRow.SetBackgroundColor(Api.RGB(240, 240, 240));
 
 for (let i = 0; i < columnCount; i++) {
   let headerCell = headerRow.GetCell(i);
@@ -94,9 +94,9 @@ for (let rowIndex = 0; rowIndex < jsonData.length; rowIndex++) {
     // Apply conditional formatting for status column
     if (headers[colIndex] === "status") {
       if (cellValue === "Active") {
-        paragraph.SetColor(0, 128, 0, false); // Green for active
+        paragraph.SetColor(Api.RGB(0, 128, 0)); // Green for active
       } else if (cellValue === "On Leave") {
-        paragraph.SetColor(255, 140, 0, false); // Orange for on leave
+        paragraph.SetColor(Api.RGB(255, 140, 0)); // Orange for on leave
       }
     }
   }

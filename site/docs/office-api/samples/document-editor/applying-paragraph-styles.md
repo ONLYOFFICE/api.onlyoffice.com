@@ -18,7 +18,7 @@ let doc = Api.GetDocument();
 let referenceParagraph = doc.GetElement(0);
 referenceParagraph.AddText("Project Overview");
 referenceParagraph.SetBold(true);
-referenceParagraph.SetColor(30, 79, 121, false); // Dark blue color (#1E4F79)
+referenceParagraph.SetColor(Api.RGB(30, 79, 121)); // Dark blue color (#1E4F79)
 referenceParagraph.SetFontSize(28); // 14pt = 28 half-points
 referenceParagraph.SetJc("left");
 referenceParagraph.SetSpacingBefore(400); // 20pt = 400 twentieths of a point
@@ -29,7 +29,7 @@ let customStyle = doc.CreateStyle("CustomHeadingStyle", "paragraph");
 customStyle.GetParaPr().SetJc("left");
 customStyle.GetParaPr().SetSpacingBefore(400);
 customStyle.GetTextPr().SetBold(true);
-customStyle.GetTextPr().SetColor(30, 79, 121, false);
+customStyle.GetTextPr().SetColor(Api.RGB(30, 79, 121));
 customStyle.GetTextPr().SetFontSize(28);
 
 // Apply the custom style to the reference paragraph

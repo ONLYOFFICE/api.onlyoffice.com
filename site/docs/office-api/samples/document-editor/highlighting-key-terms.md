@@ -47,7 +47,7 @@ for (let i = 0; i < aWords.length; i++) {
     if (bIsKeyTerm) {
         // Apply highlighting: bold + color #007ACC
         oRun.SetBold(true);
-        oRun.SetColor(0, 122, 204); // #007ACC in RGB
+        oRun.SetColor(Api.RGB(0, 122, 204)); // #007ACC in RGB
     }
     
     oParagraph.AddElement(oRun);

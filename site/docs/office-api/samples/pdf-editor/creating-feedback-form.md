@@ -50,7 +50,7 @@ function createRatingTable(questionText, radioGroupName) {
   table.SetTableCellMarginBottom(80);
 
   // Style header row
-  table.GetRow(0).SetBackgroundColor(240, 240, 240, false);
+  table.GetRow(0).SetBackgroundColor(Api.RGB(240, 240, 240));
 
   // Add rating labels to header row
   for (let i = 0; i < ratingLabels.length; i++) {

@@ -112,9 +112,9 @@ for (let i = 0; i < allContentControls.length; i++) {
             
             // Highlight unfilled required fields with yellow background
             if (fieldInfo.required) {
-                control.SetBackgroundColor(255, 255, 0, false); // Yellow background
+                control.SetBackgroundColor(Api.RGB(255, 255, 0)); // Yellow background
             } else {
-                control.SetBackgroundColor(255, 240, 200, false); // Light orange for optional
+                control.SetBackgroundColor(Api.RGB(255, 240, 200)); // Light orange for optional
             }
         } else {
             // Field is filled
@@ -126,7 +126,7 @@ for (let i = 0; i < allContentControls.length; i++) {
             });
             
             // Set green background for filled fields
-            control.SetBackgroundColor(200, 255, 200, false); // Light green background
+            control.SetBackgroundColor(Api.RGB(200, 255, 200)); // Light green background
         }
     }
 }
@@ -165,9 +165,9 @@ doc.Push(unfilledStatsParagraph);
 // Validation status
 let validationStatusParagraph = Api.CreateParagraph();
 if (unfilledRequired.length === 0) {
-    validationStatusParagraph.AddText("✓ VALIDATION PASSED - All required fields are filled").SetBold(true).SetColor(0, 128, 0);
+    validationStatusParagraph.AddText("✓ VALIDATION PASSED - All required fields are filled").SetBold(true).SetColor(Api.RGB(0, 128, 0));
 } else {
-    validationStatusParagraph.AddText("✗ VALIDATION FAILED - " + unfilledRequired.length + " required field(s) missing").SetBold(true).SetColor(255, 0, 0);
+    validationStatusParagraph.AddText("✗ VALIDATION FAILED - " + unfilledRequired.length + " required field(s) missing").SetBold(true).SetColor(Api.RGB(255, 0, 0));
 }
 validationStatusParagraph.SetSpacingBefore(200);
 doc.Push(validationStatusParagraph);
@@ -175,7 +175,7 @@ doc.Push(validationStatusParagraph);
 // List unfilled required fields
 if (unfilledRequired.length > 0) {
     let requiredFieldsParagraph = Api.CreateParagraph();
-    requiredFieldsParagraph.AddText("Missing Required Fields:").SetBold(true).SetColor(255, 0, 0);
+    requiredFieldsParagraph.AddText("Missing Required Fields:").SetBold(true).SetColor(Api.RGB(255, 0, 0));
     requiredFieldsParagraph.SetSpacingBefore(300);
     doc.Push(requiredFieldsParagraph);
     
@@ -184,7 +184,7 @@ if (unfilledRequired.length > 0) {
         let fieldParagraph = Api.CreateParagraph();
         fieldParagraph.AddText("• " + field.tag + " (" + field.label.replace(" (*):", "") + ")");
         fieldParagraph.SetSpacingBefore(100);
-        fieldParagraph.SetColor(255, 0, 0);
+        fieldParagraph.SetColor(Api.RGB(255, 0, 0));
         doc.Push(fieldParagraph);
     }
 }
@@ -192,7 +192,7 @@ if (unfilledRequired.length > 0) {
 // List unfilled optional fields
 if (unfilledOptional.length > 0) {
     let optionalFieldsParagraph = Api.CreateParagraph();
-    optionalFieldsParagraph.AddText("Unfilled Optional Fields:").SetBold(true).SetColor(255, 140, 0);
+    optionalFieldsParagraph.AddText("Unfilled Optional Fields:").SetBold(true).SetColor(Api.RGB(255, 140, 0));
     optionalFieldsParagraph.SetSpacingBefore(300);
     doc.Push(optionalFieldsParagraph);
     
@@ -201,14 +201,14 @@ if (unfilledOptional.length > 0) {
         let fieldParagraph = Api.CreateParagraph();
         fieldParagraph.AddText("• " + field.tag + " (" + field.label.replace(":", "") + ")");
         fieldParagraph.SetSpacingBefore(100);
-        fieldParagraph.SetColor(255, 140, 0);
+        fieldParagraph.SetColor(Api.RGB(255, 140, 0));
         doc.Push(fieldParagraph);
     }
 }
 
 // List filled fields
 let filledFieldsParagraph = Api.CreateParagraph();
-filledFieldsParagraph.AddText("Successfully Filled Fields:").SetBold(true).SetColor(0, 128, 0);
+filledFieldsParagraph.AddText("Successfully Filled Fields:").SetBold(true).SetColor(Api.RGB(0, 128, 0));
 filledFieldsParagraph.SetSpacingBefore(300);
 doc.Push(filledFieldsParagraph);
 
@@ -217,7 +217,7 @@ for (let i = 0; i < filledFields.length; i++) {
     let fieldParagraph = Api.CreateParagraph();
     fieldParagraph.AddText("• " + field.tag + ": \"" + field.value + "\"" + (field.required ? " (required)" : " (optional)"));
     fieldParagraph.SetSpacingBefore(100);
-    fieldParagraph.SetColor(0, 128, 0);
+    fieldParagraph.SetColor(Api.RGB(0, 128, 0));
     doc.Push(fieldParagraph);
 }
 

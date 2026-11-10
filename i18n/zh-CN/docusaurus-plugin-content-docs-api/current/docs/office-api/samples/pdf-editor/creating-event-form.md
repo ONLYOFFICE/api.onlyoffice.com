@@ -59,7 +59,7 @@ titlePara.SetSpacingAfter(200);
 let titleRun = titlePara.AddText("IT未来大会 " + currentYear);
 titleRun.SetFontSize(28 * 2);
 titleRun.SetBold(true);
-titleRun.SetColor(128, 0, 255);
+titleRun.SetColor(Api.RGB(128, 0, 255));
 titleRun.SetFontFamily("Arial");
 shapeContent.Push(titlePara);
 
@@ -69,7 +69,7 @@ subtitlePara.SetJc("center");
 subtitlePara.SetSpacingAfter(400);
 let subtitleRun = subtitlePara.AddText("注册表单");
 subtitleRun.SetFontSize(18 * 2);
-subtitleRun.SetColor(100, 100, 100);
+subtitleRun.SetColor(Api.RGB(100, 100, 100));
 subtitleRun.SetFontFamily("Arial");
 shapeContent.Push(subtitlePara);
 
@@ -100,7 +100,7 @@ function createFormRow(labelText, formKey, placeholder, maxChars, required, mult
   let labelRun = rowPara.AddText(labelText + "：");
   labelRun.SetFontSize(11 * 2);
   labelRun.SetBold(true);
-  labelRun.SetColor(80, 80, 80);
+  labelRun.SetColor(Api.RGB(80, 80, 80));
   labelRun.SetFontFamily("Arial");
 
   let textForm = Api.CreateTextForm({
@@ -111,9 +111,9 @@ function createFormRow(labelText, formKey, placeholder, maxChars, required, mult
     multiLine: multiLine || false,
     autoFit: true,
   });
-  textForm.SetBorderColor(128, 0, 255);
+  textForm.SetBorderColor(Api.RGB(128, 0, 255));
   let textPr = Api.CreateTextPr();
-  textPr.SetColor(0, 0, 0);
+  textPr.SetColor(Api.RGB(0, 0, 0));
   textForm.SetTextPr(textPr);
   rowPara.AddElement(textForm);
 
@@ -128,7 +128,7 @@ sectionPara.SetIndLeft(400);
 let sectionRun = sectionPara.AddText("个人信息");
 sectionRun.SetFontSize(14 * 2);
 sectionRun.SetBold(true);
-sectionRun.SetColor(128, 0, 255);
+sectionRun.SetColor(Api.RGB(128, 0, 255));
 sectionRun.SetFontFamily("Arial");
 shapeContent.Push(sectionPara);
 
@@ -147,7 +147,7 @@ sectionPara.SetIndLeft(400);
 sectionRun = sectionPara.AddText("会议偏好");
 sectionRun.SetFontSize(14 * 2);
 sectionRun.SetBold(true);
-sectionRun.SetColor(128, 0, 255);
+sectionRun.SetColor(Api.RGB(128, 0, 255));
 sectionRun.SetFontFamily("Arial");
 shapeContent.Push(sectionPara);
 
@@ -161,7 +161,7 @@ interestsPara.SetIndRight(400);
 let interestsLabel = interestsPara.AddText("感兴趣的主题：");
 interestsLabel.SetFontSize(11 * 2);
 interestsLabel.SetBold(true);
-interestsLabel.SetColor(80, 80, 80);
+interestsLabel.SetColor(Api.RGB(80, 80, 80));
 interestsLabel.SetFontFamily("Arial");
 
 let interestsForm = Api.CreateTextForm({
@@ -172,9 +172,9 @@ let interestsForm = Api.CreateTextForm({
   multiLine: true,
   autoFit: false,
 });
-interestsForm.SetBorderColor(128, 0, 255);
+interestsForm.SetBorderColor(Api.RGB(128, 0, 255));
 let interestsTextPr = Api.CreateTextPr();
-interestsTextPr.SetColor(0, 0, 0);
+interestsTextPr.SetColor(Api.RGB(0, 0, 0));
 interestsForm.SetTextPr(interestsTextPr);
 interestsPara.AddElement(interestsForm);
 shapeContent.Push(interestsPara);
@@ -190,7 +190,7 @@ sectionPara.SetIndLeft(400);
 sectionRun = sectionPara.AddText("同意声明");
 sectionRun.SetFontSize(14 * 2);
 sectionRun.SetBold(true);
-sectionRun.SetColor(128, 0, 255);
+sectionRun.SetColor(Api.RGB(128, 0, 255));
 sectionRun.SetFontFamily("Arial");
 shapeContent.Push(sectionPara);
 
@@ -210,7 +210,7 @@ consentPara.AddElement(consentCheckbox);
 
 let consentText = consentPara.AddText(" 我同意为会议注册目的处理我的个人数据。");
 consentText.SetFontSize(10 * 2);
-consentText.SetColor(80, 80, 80);
+consentText.SetColor(Api.RGB(80, 80, 80));
 consentText.SetFontFamily("Arial");
 shapeContent.Push(consentPara);
 
@@ -230,7 +230,7 @@ photoConsentPara.AddElement(photoConsentCheckbox);
 
 let photoConsentText = photoConsentPara.AddText(" 我同意在活动期间被拍照/录像。");
 photoConsentText.SetFontSize(10 * 2);
-photoConsentText.SetColor(80, 80, 80);
+photoConsentText.SetColor(Api.RGB(80, 80, 80));
 photoConsentText.SetFontFamily("Arial");
 shapeContent.Push(photoConsentPara);
 
@@ -250,7 +250,7 @@ newsletterPara.AddElement(newsletterCheckbox);
 
 let newsletterText = newsletterPara.AddText(" 订阅IT未来大会通讯以获取最新资讯。");
 newsletterText.SetFontSize(10 * 2);
-newsletterText.SetColor(80, 80, 80);
+newsletterText.SetColor(Api.RGB(80, 80, 80));
 newsletterText.SetFontFamily("Arial");
 shapeContent.Push(newsletterPara);
 
@@ -260,7 +260,7 @@ footerPara.SetJc("center");
 footerPara.SetSpacingBefore(400);
 let footerRun = footerPara.AddText("www.itfutureconference.com | contact@itfutureconference.com");
 footerRun.SetFontSize(9 * 2);
-footerRun.SetColor(128, 0, 255);
+footerRun.SetColor(Api.RGB(128, 0, 255));
 footerRun.SetFontFamily("Arial");
 shapeContent.Push(footerPara);
 

@@ -108,15 +108,15 @@ function validateFormById() {
     
     if (!emailValue || emailValue.trim() === "") {
       // Highlight field in red if empty
-      emailForms[0].SetBorderColor(255, 0, 0);
+      emailForms[0].SetBorderColor(Api.RGB(255, 0, 0));
       isFormValid = false;
     } else if (!emailValue.includes("@")) {
       // Highlight field in orange if invalid format
-      emailForms[0].SetBorderColor(255, 165, 0);
+      emailForms[0].SetBorderColor(Api.RGB(255, 165, 0));
       isFormValid = false;
     } else {
       // Set green border if valid
-      emailForms[0].SetBorderColor(0, 255, 0);
+      emailForms[0].SetBorderColor(Api.RGB(0, 255, 0));
     }
   }
 
@@ -127,7 +127,7 @@ function validateFormById() {
     validationResults.full_name = nameValue;
     
     if (nameValue && nameValue.trim() !== "") {
-      nameForms[0].SetBorderColor(0, 255, 0);
+      nameForms[0].SetBorderColor(Api.RGB(0, 255, 0));
     }
   }
 
@@ -138,7 +138,7 @@ function validateFormById() {
     validationResults.age_group = ageValue;
     
     if (ageValue && ageValue.trim() !== "") {
-      ageForms[0].SetBorderColor(0, 255, 0);
+      ageForms[0].SetBorderColor(Api.RGB(0, 255, 0));
     }
   }
 
@@ -150,11 +150,11 @@ function validateFormById() {
     
     if (!termsChecked) {
       // Highlight checkbox in red if not checked
-      termsForms[0].SetBorderColor(255, 0, 0);
+      termsForms[0].SetBorderColor(Api.RGB(255, 0, 0));
       isFormValid = false;
     } else {
       // Set green border if checked
-      termsForms[0].SetBorderColor(0, 255, 0);
+      termsForms[0].SetBorderColor(Api.RGB(0, 255, 0));
     }
   }
 
@@ -165,7 +165,7 @@ function validateFormById() {
     validationResults.newsletter_subscription = newsletterChecked;
     
     // Always green border for optional field
-    newsletterForms[0].SetBorderColor(0, 255, 0);
+    newsletterForms[0].SetBorderColor(Api.RGB(0, 255, 0));
   }
 
   return { isValid: isFormValid, data: validationResults };
@@ -192,10 +192,10 @@ let validation = validateFormById();
 paragraph = Api.CreateParagraph();
 if (validation.isValid) {
   paragraph.AddText("✓ Form is valid and ready for submission");
-  paragraph.SetColor(0, 128, 0);
+  paragraph.SetColor(Api.RGB(0, 128, 0));
 } else {
   paragraph.AddText("✗ Form has validation errors (check highlighted fields)");
-  paragraph.SetColor(255, 0, 0);
+  paragraph.SetColor(Api.RGB(255, 0, 0));
 }
 paragraph.SetFontSize(14 * 2);
 doc.Push(paragraph);

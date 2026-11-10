@@ -23,7 +23,7 @@ watermarkSettings.SetText("Confidential");
 let textPr = watermarkSettings.GetTextPr();
 textPr.SetFontSize(120);
 textPr.SetFontFamily("Arial");
-textPr.SetColor(255, 0, 0, false);
+textPr.SetColor(Api.RGB(255, 0, 0));
 watermarkSettings.SetTextPr(textPr);
 watermarkSettings.SetDirection("diagonal");
 watermarkSettings.SetOpacity(100);

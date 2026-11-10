@@ -37,7 +37,7 @@ const titleTextPr = titleStyle.GetTextPr();
 titleTextPr.SetFontSize(32);
 titleTextPr.SetBold(true);
 titleTextPr.SetFontFamily("Calibri");
-titleTextPr.SetColor(0x2E, 0x75, 0xB6, false); // Blue color
+titleTextPr.SetColor(Api.RGB(0x2E, 0x75, 0xB6)); // Blue color
 
 const eventStyle = doc.CreateStyle("EventDetails", "paragraph");
 const eventParaPr = eventStyle.GetParaPr();
@@ -46,7 +46,7 @@ eventParaPr.SetSpacingAfter(150);
 const eventTextPr = eventStyle.GetTextPr();
 eventTextPr.SetFontSize(20);
 eventTextPr.SetFontFamily("Calibri");
-eventTextPr.SetColor(0x1F, 0x1F, 0x1F, false);
+eventTextPr.SetColor(Api.RGB(0x1F, 0x1F, 0x1F));
 
 const contactStyle = doc.CreateStyle("ContactInfo", "paragraph");
 const contactParaPr = contactStyle.GetParaPr();
@@ -55,7 +55,7 @@ contactParaPr.SetSpacingAfter(100);
 const contactTextPr = contactStyle.GetTextPr();
 contactTextPr.SetFontSize(16);
 contactTextPr.SetFontFamily("Calibri");
-contactTextPr.SetColor(0x70, 0x70, 0x70, false);
+contactTextPr.SetColor(Api.RGB(0x70, 0x70, 0x70));
 
 // Remove default paragraph
 doc.RemoveAllElements();

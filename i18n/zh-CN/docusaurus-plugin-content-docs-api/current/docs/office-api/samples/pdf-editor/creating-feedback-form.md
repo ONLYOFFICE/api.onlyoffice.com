@@ -48,7 +48,7 @@ function createRatingTable(questionText, radioGroupName) {
   table.SetTableCellMarginBottom(80);
 
   // 设置表头行样式
-  table.GetRow(0).SetBackgroundColor(240, 240, 240, false);
+  table.GetRow(0).SetBackgroundColor(Api.RGB(240, 240, 240));
 
   // 在表头行添加评分标签
   for (let i = 0; i < ratingLabels.length; i++) {

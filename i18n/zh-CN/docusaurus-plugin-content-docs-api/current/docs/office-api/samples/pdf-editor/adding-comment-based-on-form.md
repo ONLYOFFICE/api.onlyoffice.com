@@ -107,7 +107,7 @@ if (commentAdded) {
   paragraph = Api.CreateParagraph();
   paragraph.AddText("已自动为'非常不满意'选项添加审核批注。");
   paragraph.SetFontSize(11 * 2);
-  paragraph.SetColor(200, 100, 0);
+  paragraph.SetColor(Api.RGB(200, 100, 0));
   doc.Push(paragraph);
 
   paragraph = Api.CreateParagraph();
@@ -118,7 +118,7 @@ if (commentAdded) {
   paragraph = Api.CreateParagraph();
   paragraph.AddText("当前选择无需添加审核批注。");
   paragraph.SetFontSize(11 * 2);
-  paragraph.SetColor(0, 128, 0);
+  paragraph.SetColor(Api.RGB(0, 128, 0));
   doc.Push(paragraph);
 }
 
