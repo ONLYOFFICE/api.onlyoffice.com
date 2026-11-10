@@ -11,7 +11,7 @@ import Video from '@site/src/components/Video/Video';
 Changes the selected cell value.
 
 :::note
-This macro was converted from VBA code using the [AI plugin](../../guides/converting-vba-macros.md#automatic-conversion-using-ai-tools).
+This macro was converted from VBA code using [AI Tools](../../guides/converting-vba-macros.md#automatic-conversion-using-ai-tools).
 :::
 
 ```ts

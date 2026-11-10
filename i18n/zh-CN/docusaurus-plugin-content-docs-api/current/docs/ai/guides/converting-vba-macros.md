@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # 转换 VBA 宏
 
-ONLYOFFICE 宏与 Microsoft 宏不同，因为后者使用 Visual Basic for Applications (VBA) 脚本语言。JavaScript 更加灵活，可在任何平台上使用（这一点很重要，因为 ONLYOFFICE 编辑器支持 Windows、Linux 和 macOS）。
+ONLYOFFICE 宏与 Microsoft 宏不同，因为后者使用 Visual Basic for Applications（VBA）脚本语言。JavaScript 更加灵活，可在任何平台上使用（这一点很重要，因为 ONLYOFFICE 编辑器支持 Windows、Linux 和 macOS）。
 
 这意味着在 Microsoft Office 中创建的宏与 ONLYOFFICE 宏不兼容。您可以通过以下两种方式将其转换以在 ONLYOFFICE 中使用：
 

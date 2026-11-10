@@ -96,7 +96,7 @@ ONLYOFFICE 插件与宏 API 的变更列表。
 - 添加了在自定义函数中访问[单元格地址信息](../../macros/guides/adding-custom-functions.md#accessing-cell-addresses)的功能。
 - 添加了使用**宏**插件为电子表格添加[异步自定义函数](../../macros/guides/adding-custom-functions.md#asynchronous-functions)的功能。
 - 添加了使用 AI 插件将 VBA 代码[自动转换](../../macros/guides/converting-vba-macros.md#automatic-conversion-using-ai-tools)为 ONLYOFFICE 宏的功能。
-- 添加了使用 AI 插件[自动生成](../../macros/guides/writing-macros.md#generating-macros-using-ai-plugin) ONLYOFFICE 宏的功能。
+- 添加了使用 AI 插件[自动生成](../../macros/guides/writing-macros.md#generating-macros-using-ai-tools) ONLYOFFICE 宏的功能。
 - 添加了使用插件为内容控件添加自定义[按钮](../customization/content-control-buttons.md)的功能。
 - 为 Document API 添加了 [GetCurrentBookmark](../interacting-with-editors/document-api/Methods/GetCurrentBookmark.md) 方法。
 - 为 Presentation API 添加了 [GoToSlide](../interacting-with-editors/presentation-api/Methods/GoToSlide.md) 方法。
