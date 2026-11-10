@@ -6,7 +6,7 @@ sidebar_position: 4
 
 The AI agent was introduced in version 2.4.2 of the AI plugin, which is now AI Tools.
 
-The AI inline agent is a contextual assistant integrated into ONLYOFFICE editors. It is accessed via a floating panel and is currently available as a beta feature of AI Tools.
+The inline AI agent is a contextual assistant integrated into ONLYOFFICE editors. It is accessed via a floating panel and is currently available as a beta feature of AI Tools.
 
 The AI agent:
 
