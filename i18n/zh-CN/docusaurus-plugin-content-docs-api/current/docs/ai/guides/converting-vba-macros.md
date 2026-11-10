@@ -24,7 +24,7 @@ ONLYOFFICE 宏与 Microsoft 宏不同，因为后者使用 Visual Basic for Appl
 
 4. 在**从 VBA 转换宏**窗口中插入 VBA 代码，点击**创建**。生成的宏示例将插入到**宏**窗口中。
 
-    ![Convert VBA](/assets/images/plugins/convert-vba.png#gh-light-mode-only)![Convert VBA](/assets/images/plugins/convert-vba.dark.png#gh-dark-mode-only)
+    ![从 VBA 转换宏](/assets/images/plugins/convert-vba.png#gh-light-mode-only)![从 VBA 转换宏](/assets/images/plugins/convert-vba.dark.png#gh-dark-mode-only)
 
 5. 检查代码，并根据需要进行调整。
 

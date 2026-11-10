@@ -120,7 +120,7 @@ Optimize the text to improve clarity, readability, and conciseness. Reduce redun
 2. 选择要优化的文本。
 3. 点击**文本优化器**按钮。
 
-   ![Text Optimizer](/assets/images/plugins/create-ai-assistant-example.png#gh-light-mode-only)![Text Optimizer](/assets/images/plugins/create-ai-assistant-example.dark.png#gh-dark-mode-only)
+   ![文本优化器](/assets/images/plugins/create-ai-assistant-example.png#gh-light-mode-only)![文本优化器](/assets/images/plugins/create-ai-assistant-example.dark.png#gh-dark-mode-only)
 
 4. 您可以在以下任一位置查看建议：
    - 在左侧的 **AI 助手**面板中，逐条接受或忽略建议，或者点击**全部接受**或**全部忽略**。

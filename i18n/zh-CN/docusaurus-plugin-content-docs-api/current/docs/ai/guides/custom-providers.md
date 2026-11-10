@@ -62,7 +62,7 @@ AI 工具在沙箱中运行该文件。无需 `import` 语句，文件也不需�
 在实例方法中请遵循以下规则：
 
 - 通过 AI 工具在 `this.creds.fetch` 中传入的传输方式发送请求，未传入时回退到全局 `fetch`（参见下方示例中的 `fetchFor()`）。这样 AI 工具可以在需要时通过代理转发请求。
-- 将 `args.signal` 传给每个请求，并在读取流时检查 `signal.aborted`。否则，**AI 聊天**中的 **Stop** 按钮将无法取消请求。
+- 将 `args.signal` 传给每个请求，并在读取流时检查 `signal.aborted`。否则，**AI 聊天**中的**停止**按钮将无法取消请求。
 
 ### 模型能力 {#model-capabilities}
 
