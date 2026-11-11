@@ -48,8 +48,16 @@ sidebar_position: -6
 
 下载并解压用于将 ONLYOFFICE 文档与您的网站集成的示例后，您需要打开源代码并将 **https\://documentserver/** 字符串的所有实例替换为您安装的 ONLYOFFICE 文档的实际地址。
 
-## 通过本地和公共网络将 ONLYOFFICE 连接到 ownClowd/Nextcloud 时应该使用哪些设置？ {#what-settings-should-be-used-when-connecting-onlyoffice-to-ownclowdnextcloud-via-a-local-and-public-network}
+## 通过本地和公共网络将 ONLYOFFICE 连接到 ownCloud/Nextcloud 时应该使用哪些设置？ {#what-settings-should-be-used-when-connecting-onlyoffice-to-owncloudnextcloud-via-a-local-and-public-network}
 
 将 ownCloud/Nextcloud 安装连接到 ONLYOFFICE 文档时，您需要确保 Internet 浏览器和 ownCloud/Nextcloud 安装都可以访问安装了 ONLYOFFICE 文档的服务器，即一台可以向它发送请求，也可以接受来自它的响应的安装了 ONLYOFFICE 文档的计算机。
 
-ownCloud 安装和 ONLYOFFICE 文档之间的交互方案可在[此处](../../get-started/ready-to-use-connectors/owncloud-integration.md#configuring-owncloud-onlyoffice-integration-app)获得。如果您使用 Nextcloud，请访问[此页面](../../get-started/ready-to-use-connectors/nextcloud-integration.md#configuring-nextcloud-onlyoffice-integration-app)以了解如何正确设置服务器。
+ownCloud 安装和 ONLYOFFICE 文档之间的交互方案可在[此处](../../get-started/ready-to-use-connectors/owncloud-integration.md#how-it-works)获得。如果您使用 Nextcloud，请访问[此页面](../../get-started/ready-to-use-connectors/nextcloud-integration.md#configuring-onlyoffice-app-for-nextcloud)以了解如何正确设置服务器。
+
+## ONLYOFFICE 文档无法从使用自签名证书的服务器下载文件，我该怎么办？ {#onlyoffice-docs-cannot-download-a-file-from-my-server-that-uses-a-self-signed-certificate-what-should-i-do}
+
+默认情况下，ONLYOFFICE 文档会验证其下载文件的服务器的证书，因此会拒绝自签名证书。这适用于任何集成。如需测试，您可以关闭验证：在 ONLYOFFICE 文档的 *local.json* 配置文件中将 [`services.CoAuthoring.requestDefaults.rejectUnauthorized`](../../get-started/configuration/server-config/server-config.md#services.CoAuthoring.requestDefaults.rejectUnauthorized) 参数设置为 `false`，然后重启 ONLYOFFICE 文档服务。
+
+此设置不安全，仅适用于测试。在生产环境中，请更换为由受信任的证书颁发机构颁发的证书，并将 `rejectUnauthorized` 恢复为 `true`。
+
+如果 ONLYOFFICE 文档本身使用自签名证书，集成方也必须接受该证书。对于 ownCloud 和 Nextcloud，请参阅 [ownCloud](../../get-started/ready-to-use-connectors/owncloud-integration.md#self-signed-certificates) 和 [Nextcloud](../../get-started/ready-to-use-connectors/nextcloud-integration.md#self-signed-certificates) 的自签名证书说明。

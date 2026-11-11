@@ -11,9 +11,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="33w03FcPWTo"/>
 
-This [app](https://github.com/ONLYOFFICE/onlyoffice-owncloud) enables users to edit office documents from [ownCloud](https://owncloud.com) using ONLYOFFICE Docs.
-
-The latest app signed versions are available in the official store for [ownCloud](https://marketplace.owncloud.com/apps/onlyoffice).
+The ONLYOFFICE app for ownCloud enables users to edit office documents from [ownCloud](https://owncloud.com) using ONLYOFFICE Docs. Its source code is available on [GitHub](https://github.com/ONLYOFFICE/onlyoffice-owncloud), and the latest signed versions are in the [ownCloud Marketplace](https://marketplace.owncloud.com/apps/onlyoffice).
 
 ## Features
 
@@ -38,7 +36,7 @@ The ownCloud administrator can install the integration app from the in-built app
 
 If the server with the ownCloud installed does not have the Internet access, or if you need it for some other reason, the administrator can install the application manually. To start using ONLYOFFICE Docs with ownCloud, the following steps must be performed:
 
-1. Go to the ownCloud server *apps/* directory (or some other directory [used](https://doc.owncloud.org/server/admin_manual/installation/apps_management_installation.html#using-custom-app-directories) to connect applications):
+1. Go to the ownCloud server *apps/* directory (or some other directory [used](https://doc.owncloud.com/server/11.1/admin_manual/configuration/server/config_sample_php_parameters.html#define-alternative-app-directories) to connect applications):
 
    ``` sh
    cd apps/
@@ -100,6 +98,47 @@ occ onlyoffice:documentserver --check
 
 You will see a text either with information about the successful connection or the cause of the error.
 
+### Self-signed certificates
+
+If you are using a self-signed certificate for your ONLYOFFICE Docs, ownCloud will not validate such a certificate and will not allow connections to or from ONLYOFFICE Docs. You can turn off the certificate verification in one of two ways:
+
+1. Check the **Disable certificate verification (insecure)** box on the ONLYOFFICE administration page, **Server settings** section, within your ownCloud.
+2. Change the ownCloud config file manually. Locate the ownCloud config file (*/owncloud/config/config.php*) and open it. Add the following entry to the `$CONFIG` array (if the array already has an `onlyoffice` entry, add the key to it):
+
+   ```php
+   'onlyoffice' => array (
+       'verify_peer_off' => true,
+   ),
+   ```
+
+   ownCloud reads this entry only as long as `verify_peer_off` has never been set in the UI or with an `occ` command. Once the server settings are saved, the **Disable certificate verification (insecure)** box takes precedence.
+
+This will disable the certificate verification and allow ownCloud to establish connection with ONLYOFFICE Docs. The setting applies only to the requests from ownCloud to ONLYOFFICE Docs, not to the requests between ownCloud instances connected through **Federated Cloud Sharing**.
+
+If ownCloud also uses a self-signed certificate, ONLYOFFICE Docs will not be able to download files from ownCloud either. To disable the certificate verification on the ONLYOFFICE Docs side, set the [`services.CoAuthoring.requestDefaults.rejectUnauthorized`](../configuration/server-config/server-config.md#services.CoAuthoring.requestDefaults.rejectUnauthorized) parameter to `false` in the ONLYOFFICE Docs *local.json* configuration file and restart the ONLYOFFICE Docs services.
+
+:::note
+Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with one issued by a trusted CA. Once you do that, do not forget to uncheck the **Disable certificate verification (insecure)** box (or remove the `config.php` entry if `verify_peer_off` was never set in the UI or with `occ`), and set `rejectUnauthorized` back to `true`.
+:::
+
+### Background connection check
+
+If the editors don't open or save documents after a period of proper functioning, the reason can be a problem in changing network settings or disabling any relevant services, or issues with the SSL certificate.
+
+To detect this, the ONLYOFFICE app runs a background task on the server that checks the connection between your **ownCloud instance** and **ONLYOFFICE Docs**, namely the availability of the server addresses and the validity of the JWT secret. The check is skipped if the ownCloud address that ONLYOFFICE Docs uses is `localhost` or `127.0.0.1`. In this case, specify the **Server address for internal requests from ONLYOFFICE Docs** in the **Advanced server settings**.
+
+If any issue is detected, the ONLYOFFICE actions are removed, so files can no longer be created or opened in ONLYOFFICE. Members of the `admin` group get a notification, and also an e-mail if the **Enable e-mail notifications** box is checked (the default). While the error is stored, the check does not run again, so the actions do not come back on their own. Fix the cause, then save the server settings on the administration page or run `occ onlyoffice:documentserver --check`. Once the connection succeeds, the actions return.
+
+By default, this background task runs once a day (`86400` seconds). If necessary, you can change the frequency. To do so, open the ownCloud config file (*/owncloud/config/config.php*) and add the `editors_check_interval` entry to the `$CONFIG` array with the required value in seconds. For example, to run the check hourly:
+
+```php
+'onlyoffice' => array (
+    'editors_check_interval' => 3600,
+),
+```
+
+To turn the check off, uncheck the **Enable background connection check to the editors** box on the administration page, or set `editors_check_interval` to `0`.
+
 ## Enabling editing for ownCloud Web
 
 To enable work within **ownCloud Web**, register the app in the ownCloud Web *config.json*:
@@ -156,61 +195,40 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 12. ownCloud downloads a new version of the document, replacing the old one.
 
+## Converting files
+
+ONLYOFFICE Docs uses Office Open XML format as a basis when opening and editing files. If the file format is different from OOXML, it will still be converted to the corresponding OOXML for the ONLYOFFICE Docs proper work and faster performance. When the file is saved to its original format, it is converted back from OOXML. As the formats are fundamentally different, some data (such as charts, tables, autoshapes or images) and formatting can be lost due to the simple reason that some formats (*csv*, *txt*, etc.) do not support them or treat them differently than OOXML standard does.
+
+That is why the ONLYOFFICE app treats formats differently:
+
+- OOXML files and *pdf* open for editing.
+- Formats that can be edited with a risk of losing data, such as *odt*, *ods*, *odp*, *rtf*, *txt*, *csv*, *tsv*, *epub* or *html*, open for viewing only by default. To open them for editing, check them in the **Open the file for editing (due to format restrictions, the data might be lost when saving to the formats from the list below)** list in the settings. *txt* and *csv* are checked by default.
+- Other formats, such as *doc*, *xls*, *ppt*, *md* or *hwp*, open for viewing only and cannot be edited.
+
+For *doc*, *xls*, *ppt* and similar formats, as well as for *odt*, *ods*, *odp*, *rtf* and other ones from the list above (but not *txt*, *csv* or *tsv*), the file context menu has the **Convert with ONLYOFFICE** option. It creates an OOXML copy of the file in the same folder.
+
 ## Known issues
 
-- **Connecting external storages**. Adding the storage using the **External storages** app has issues with the co-editing in some cases. If the connection is made using the same authorization keys (the *Username and password* or *Global credentials* authentication type is selected), then the co-editing is available for the users. If different authorization keys are used (*Log-in credentials, save in database* or *User entered, store in database* authentication options), the co-editing is not available. When the *Log-in credentials, save in session* authentication type is used, the files cannot be opened in the editor.
+If you run into a problem that is not listed here, report it in the app's [GitHub issue tracker](https://github.com/ONLYOFFICE/onlyoffice-owncloud/issues).
 
-- **Encrypting file storage**. ownCloud provides an option to encrypt the file storage. But if the encryption with the *per-user encryption keys* (used by default in ownCloud **Default encryption module** app) is enabled, ONLYOFFICE Docs cannot open the encrypted files for editing and save them after the editing. The ONLYOFFICE section of the administrative settings page will display a notification about it. However, if you set the encryption with the *master key*, ONLYOFFICE application will work as intended. The instruction on enabling *master key* based encryption is available in the official documentation on [ownCloud](https://doc.owncloud.org/server/admin_manual/configuration/files/encryption/encryption_configuration.html#enabling-master-key-based-encryption-from-the-command-line) websites.
+### Connecting external storages
 
-  :::note
-  ownCloud recommends using *master encryption key* only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of *per-user encryption keys* **might be lost forever** after you enable *master key* based encryption on them.
-  :::
+Adding the storage using the **External storages** app has issues with the co-editing in some cases. If the connection is made using the same authorization keys (the *Username and password* or *Global credentials* authentication type is selected), then the co-editing is available for the users. If different authorization keys are used (*Log-in credentials, save in database* or *User entered, store in database* authentication options), the co-editing is not available. When the *Log-in credentials, save in session* authentication type is used, the files cannot be opened in the editor.
 
-- **Validating certificate**. If you are using a self-signed certificate for your ONLYOFFICE Docs, ownCloud will not validate such a certificate and will not allow connection to/from ONLYOFFICE Docs. This issue can be solved in two ways:
+### Encrypting file storage
 
-  1. Check the **Disable certificate verification (insecure)** box on the ONLYOFFICE administration page, Server settings section, within your ownCloud.
-  2. Change the ownCloud config file manually. Locate the ownCloud config file (*/owncloud/config/config.php*) and open it. Insert the following section to it:
+ownCloud provides an option to encrypt the file storage. But if the encryption with the *per-user encryption keys* (used by default in ownCloud **Default encryption module** app) is enabled, ONLYOFFICE Docs cannot download the encrypted files and save them after the editing. The ONLYOFFICE app does not prevent opening such files: the editor opens, but the document fails to load. The ONLYOFFICE section of the administrative settings page will display a notification about it. However, if you set the encryption with the *master key*, ONLYOFFICE application will work as intended, except that **Keep intermediate versions when editing (forcesave)** is not available with any encryption enabled. The instructions on enabling *master key* based encryption are available in the [ownCloud documentation](https://doc.owncloud.com/server/11.1/admin_manual/configuration/files/encryption/encryption_configuration.html#enabling-master-key-based-encryption-from-the-command-line).
 
-  ``` php
-  <?php
-  'onlyoffice' => array (
-      'verify_peer_off' => true
-  )
-  ?>
-  ```
+:::note
+ownCloud recommends using *master encryption key* only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of *per-user encryption keys* **might be lost forever** after you enable *master key* based encryption on them.
+:::
 
-  This will disable the certificate verification and allow ownCloud to establish connection with ONLYOFFICE Docs.
+### Federated Cloud Sharing
 
-  :::note
-  Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the ownCloud config file.
-  :::
+If the document is shared using the **Federated Cloud Sharing** app, the co-editing between the ownCloud instances connected to different ONLYOFFICE servers will not be available. Users connected to the same ONLYOFFICE Docs server can co-edit the document, but users connected to two (or more) different ONLYOFFICE Docs servers will not be able to collaborate on the same document in real time. Co-editing also requires the ONLYOFFICE app on the remote instance, since the document key is requested from it. Without the app, the file still opens, but the users of the two instances edit it in separate sessions.
 
-- **Background task**. If the editors don't open or save documents after a period of proper functioning, the reason can be a problem in changing network settings or disabling any relevant services, or issues with the SSL certificate.
+### Files shared without download permission
 
-  To solve this, we added an asynchronous background task which runs on the server to check availability of the editors. It allows testing the connection between your **ownCloud instance** and **ONLYOFFICE Docs**, namely availability of server addresses and the validity of the JWT secret are being checked.
+ONLYOFFICE Docs downloads the file from ownCloud to open it. For a file shared without download permission, ownCloud allows this download only if the **Secret key** is specified in the ONLYOFFICE settings. Without the secret key, such files do not open in the editor.
 
-  If any issue is detected, the ONLYOFFICE app (consequently, the ability to create and open files) will be disabled. As an ownCloud admin, you will get the corresponding notification.
-
-  This option allows you to avoid issues when the server settings become incorrect and require changes.
-
-  By default, this background task runs once a day. If necessary, you can change the frequency. To do so, open the ownCloud config file (*\_/owncloud/config/config.php\_*). Insert the following section and enter the required value in minutes:
-
-  ``` php
-  <?php
-  "onlyoffice" => array (
-      "editors_check_interval" => 3624
-  )
-  ?>
-  ```
-
-  To disable this check running, enter 0 value.
-
-- **Federated Cloud Sharing**. If the document is shared using the **Federated Cloud Sharing** app, the co-editing between the ownCloud instances connected to different ONLYOFFICE servers will not be available. The users from one and the same Document Server can edit the document in the co-editing mode, but the users from two (or more) different Document Servers will not be able to collaborate on the same document in real time.
-
-- **Converting files**. ONLYOFFICE Docs uses Office Open XML format as a basis when opening and editing files. If the file format is different from OOXML, it will still be converted to the corresponding OOXML for the ONLYOFFICE Docs proper work and faster performance. After that you can edit the file, making any changes available for the base OOXML format and save the file to this base OOXML format.
-
-  In case the source ownCloud file format was different from the base one, and you still want to save it to the original format, the file will be converted to this format from OOXML. As the formats are fundamentally different, some data (such as charts, tables, autoshapes or images) and formatting can be lost due to the simple reason that some formats (*csv*, *txt*, etc.) do not support them or treat them differently than OOXML standard does. That is why all the non-OOXML files by default are opened for viewing only, although there is an option to convert the file in the context menu. If you realise the data/formatting loss risks after the conversion, but still want to open non-OOXML files for editing, you can check them in the list in the settings. Editing for *csv* and *txt* files is available by default.
-
-- When accessing a document without download permission, file printing and using the system clipboard are not available. Copying and pasting within the editor is available via buttons in the editor toolbar and in the context menu.
-
-Download the ONLYOFFICE app for ownCloud [here](https://github.com/ONLYOFFICE/onlyoffice-owncloud).
+When accessing a document without download permission, file printing and using the system clipboard are not available. Copying and pasting within the editor is available via buttons in the editor toolbar and in the context menu.

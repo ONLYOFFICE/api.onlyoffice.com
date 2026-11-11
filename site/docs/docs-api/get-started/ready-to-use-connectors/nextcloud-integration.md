@@ -11,9 +11,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="vN9v9sJ0HVw"/>
 
-This [app](https://github.com/ONLYOFFICE/onlyoffice-nextcloud) enables users to edit office documents from [Nextcloud](https://nextcloud.com) using ONLYOFFICE Docs.
-
-The latest app signed versions are available in the official store for [Nextcloud](https://apps.nextcloud.com/apps/onlyoffice).
+The ONLYOFFICE app for Nextcloud enables users to edit office documents from [Nextcloud](https://nextcloud.com) using ONLYOFFICE Docs. Its source code is available on [GitHub](https://github.com/ONLYOFFICE/onlyoffice-nextcloud), and the latest signed versions are in the [Nextcloud App Store](https://apps.nextcloud.com/apps/onlyoffice).
 
 ## Features
 
@@ -230,7 +228,48 @@ occ onlyoffice:documentserver --check
 
 You will see a text either with information about the successful connection or the cause of the error.
 
-## Advanced document permissions 
+### Self-signed certificates
+
+If you are using a self-signed certificate for your ONLYOFFICE Docs, Nextcloud will not validate such a certificate and will not allow connections to or from ONLYOFFICE Docs. You can turn off the certificate verification in one of two ways:
+
+1. Check the **Disable certificate verification (insecure)** box on the ONLYOFFICE administration page, **Server settings** section, within your Nextcloud.
+2. Change the Nextcloud config file manually. Locate the Nextcloud config file (*/nextcloud/config/config.php*) and open it. Add the following entry to the `$CONFIG` array (if the array already has an `onlyoffice` entry, add the key to it):
+
+   ```php
+   'onlyoffice' => array (
+       'verify_peer_off' => true,
+   ),
+   ```
+
+   Nextcloud reads this entry only as long as `verify_peer_off` has never been set in the UI or with an `occ` command (see the [configuration parameters](#basic-configuration-ui--occ)). Once the server settings are saved, the **Disable certificate verification (insecure)** box takes precedence.
+
+This will disable the certificate verification and allow Nextcloud to establish connection with ONLYOFFICE Docs. The setting applies only to the requests from Nextcloud to ONLYOFFICE Docs, not to the requests between Nextcloud instances connected through **Federated Cloud Sharing**.
+
+If Nextcloud also uses a self-signed certificate, ONLYOFFICE Docs will not be able to download files from Nextcloud either. To disable the certificate verification on the ONLYOFFICE Docs side, set the [`services.CoAuthoring.requestDefaults.rejectUnauthorized`](../configuration/server-config/server-config.md#services.CoAuthoring.requestDefaults.rejectUnauthorized) parameter to `false` in the ONLYOFFICE Docs *local.json* configuration file and restart the ONLYOFFICE Docs services.
+
+:::note
+Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with one issued by a trusted CA. Once you do that, do not forget to uncheck the **Disable certificate verification (insecure)** box (or remove the `config.php` entry if `verify_peer_off` was never set in the UI or with `occ`), and set `rejectUnauthorized` back to `true`.
+:::
+
+### Background connection check
+
+If the editors don't open or save documents after a period of proper functioning, the reason can be a problem in changing network settings or disabling any relevant services, or issues with the SSL certificate.
+
+To detect this, the ONLYOFFICE app runs a background task on the server that checks the connection between your **Nextcloud instance** and **ONLYOFFICE Docs**, namely the availability of the server addresses and the validity of the JWT secret. The check is skipped if the Nextcloud address that ONLYOFFICE Docs uses is `localhost` or `127.0.0.1`. In this case, specify the **Server address for internal requests from ONLYOFFICE Docs** in the **Advanced server settings**.
+
+If any issue is detected, the ONLYOFFICE editors are no longer registered, so files can no longer be created or opened in ONLYOFFICE. Members of the `admin` group get a notification, and also an e-mail if the **Enable e-mail notifications** box is checked (the default). While the error is stored, the check does not run again, so the editors do not come back on their own. Fix the cause, then save the server settings on the administration page or run `occ onlyoffice:documentserver --check`. Once the connection succeeds, the editors return.
+
+By default, this background task runs once a day (`86400` seconds). If necessary, you can change the frequency with the `editors_check_interval` parameter (see the [advanced configuration](#advanced-configuration-configconfigphp)). To do so, open the Nextcloud config file (*/nextcloud/config/config.php*) and add the entry to the `$CONFIG` array with the required value in seconds. For example, to run the check hourly:
+
+```php
+'onlyoffice' => array (
+    'editors_check_interval' => 3600,
+),
+```
+
+To turn the check off, uncheck the **Enable background connection check to the editors** box on the administration page (the `cronChecker` parameter in the [basic configuration](#basic-configuration-ui--occ)), or set `editors_check_interval` to `0`.
+
+## Advanced document permissions
 
 The Advanced tab allows you to grant additional access rights only to those users specified in the Sharing tab without the ability to re-share the file. Depending on the chosen Custom permission option and the file type (docx, pptx, xlsx), you can grant different additional rights.
 
@@ -272,57 +311,36 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 12. Nextcloud downloads a new version of the document, replacing the old one.
 
+## Converting files
+
+ONLYOFFICE Docs uses Office Open XML format as a basis when opening and editing files. If the file format is different from OOXML, it will still be converted to the corresponding OOXML for the ONLYOFFICE Docs proper work and faster performance. When the file is saved to its original format, it is converted back from OOXML. As the formats are fundamentally different, some data (such as charts, tables, autoshapes or images) and formatting can be lost due to the simple reason that some formats (*csv*, *txt*, etc.) do not support them or treat them differently than OOXML standard does.
+
+That is why the ONLYOFFICE app treats formats differently:
+
+- OOXML files and *pdf* open for editing.
+- Formats that can be edited with a risk of losing data, such as *odt*, *ods*, *odp*, *rtf*, *txt*, *csv*, *tsv*, *epub* or *html*, open for viewing only by default. To open them for editing, check them in the **Open the file for editing (due to format restrictions, the data might be lost when saving to the formats from the list below)** list in the settings. *txt* and *csv* are checked by default.
+- Other formats, such as *doc*, *xls*, *ppt*, *md* or *hwp*, open for viewing only and cannot be edited.
+
+For *doc*, *xls*, *ppt* and similar formats, as well as for *odt*, *ods*, *odp*, *rtf* and other ones from the list above (but not *txt*, *csv* or *tsv*), the file context menu has the **Convert with ONLYOFFICE** option. It creates an OOXML copy of the file in the same folder.
+
 ## Known issues
 
-- **Connecting external storages**. Adding the storage using the **External storages** app has issues with the co-editing in some cases. If the connection is made using the same authorization keys (the *Username and password* or *Global credentials* authentication type is selected), then the co-editing is available for the users. If different authorization keys are used (*Log-in credentials, save in database* or *User entered, store in database* authentication options), the co-editing is not available. When the *Log-in credentials, save in session* authentication type is used, the files cannot be opened in the editor.
+If you run into a problem that is not listed here, report it in the app's [GitHub issue tracker](https://github.com/ONLYOFFICE/onlyoffice-nextcloud/issues).
 
-- **Validating certificate**. If you are using a self-signed certificate for your ONLYOFFICE Docs, Nextcloud will not validate such a certificate and will not allow connection to/from ONLYOFFICE Docs. This issue can be solved in two ways:
+### Connecting external storages
 
-  1. Check the **Disable certificate verification (insecure)** box on the ONLYOFFICE administration page, Server settings section, within your Nextcloud.
-  2. Change the Nextcloud config file manually. Locate the Nextcloud config file (*/nextcloud/config/config.php*) and open it. Insert the following section to it:
+Adding the storage using the **External storages** app has issues with the co-editing in some cases. If the connection is made using the same authorization keys (the *Username and password* or *Global credentials* authentication type is selected), then the co-editing is available for the users. If different authorization keys are used (*Log-in credentials, save in database* or *User entered, store in database* authentication options), the co-editing is not available. When the *Log-in credentials, save in session* authentication type is used, the files cannot be opened in the editor. To block opening files from external storages in ONLYOFFICE completely, use the `restrictExternalStorage` parameter (see the [basic configuration](#basic-configuration-ui--occ)).
 
-  ``` php
-  <?php
-  'onlyoffice' => array (
-      'verify_peer_off' => true
-  )
-  ?>
-  ```
+### Federated Cloud Sharing
 
-  This will disable the certificate verification and allow Nextcloud to establish connection with ONLYOFFICE Docs.
+If the document is shared using the **Federated Cloud Sharing** app, the co-editing between the Nextcloud instances connected to different ONLYOFFICE servers will not be available. Users connected to the same ONLYOFFICE Docs server can co-edit the document, but users connected to two (or more) different ONLYOFFICE Docs servers will not be able to collaborate on the same document in real time. Co-editing also requires the ONLYOFFICE app on the remote instance, since the document key is requested from it. Without the app, the file still opens, but the users of the two instances edit it in separate sessions.
 
-  :::note
-  Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the Nextcloud config file.
-  :::
+### Files shared without download permission
 
-- **Background task**. If the editors don't open or save documents after a period of proper functioning, the reason can be a problem in changing network settings or disabling any relevant services, or issues with the SSL certificate.
+ONLYOFFICE Docs downloads the file from Nextcloud to open it. For a file shared without download permission, Nextcloud allows this download only if the **Secret key** is specified in the ONLYOFFICE settings. Without the secret key, such files do not open in the editor.
 
-  To solve this, we added an asynchronous background task which runs on the server to check availability of the editors. It allows testing the connection between your **Nextcloud instance** and **ONLYOFFICE Docs**, namely availability of server addresses and the validity of the JWT secret are being checked.
+When accessing a document without download permission, file printing and using the system clipboard are not available. Copying and pasting within the editor is available via buttons in the editor toolbar and in the context menu. The `disable_download` parameter (see the [advanced configuration](#advanced-configuration-configconfigphp)) has the same effect in the editor for all users and files.
 
-  If any issue is detected, the ONLYOFFICE app (consequently, the ability to create and open files) will be disabled. As a Nextcloud admin, you will get the corresponding notification.
+### Editing in other tools at the same time
 
-  This option allows you to avoid issues when the server settings become incorrect and require changes.
-
-  By default, this background task runs once a day (`86400` seconds). If necessary, you can change the frequency. To do so, open the Nextcloud config file (*\_/nextcloud/config/config.php\_*). Insert the following section and enter the required value in seconds. For example, to run the check hourly:
-
-  ``` php
-  <?php
-  "onlyoffice" => array (
-      "editors_check_interval" => 3600
-  )
-  ?>
-  ```
-
-  To disable this check running, enter 0 value.
-
-- **Federated Cloud Sharing**. If the document is shared using the **Federated Cloud Sharing** app, the co-editing between the Nextcloud instances connected to different ONLYOFFICE servers will not be available. The users from one and the same Document Server can edit the document in the co-editing mode, but the users from two (or more) different Document Servers will not be able to collaborate on the same document in real time.
-
-- **Converting files**. ONLYOFFICE Docs uses Office Open XML format as a basis when opening and editing files. If the file format is different from OOXML, it will still be converted to the corresponding OOXML for the ONLYOFFICE Docs proper work and faster performance. After that you can edit the file, making any changes available for the base OOXML format and save the file to this base OOXML format.
-
-  In case the source Nextcloud file format was different from the base one, and you still want to save it to the original format, the file will be converted to this format from OOXML. As the formats are fundamentally different, some data (such as charts, tables, autoshapes or images) and formatting can be lost due to the simple reason that some formats (*csv*, *txt*, etc.) do not support them or treat them differently than OOXML standard does. That is why all the non-OOXML files by default are opened for viewing only, although there is an option to convert the file in the context menu. If you realise the data/formatting loss risks after the conversion, but still want to open non-OOXML files for editing, you can check them in the list in the settings. Editing for *csv* and *txt* files is available by default.
-
-- When accessing a document without download permission, file printing and using the system clipboard are not available. Copying and pasting within the editor is available via buttons in the editor toolbar and in the context menu.
-
-- When a file is opened for editing in ONLYOFFICE while being simultaneously edited in other tools, changes may be overwritten or lost. To avoid conflicts and ensure smooth collaboration, we recommend using the Temporary File Lock application: https://apps.nextcloud.com/apps/files_lock. This helps prevent parallel editing and safeguards your work.
-
-Download the ONLYOFFICE app for Nextcloud [here](https://github.com/ONLYOFFICE/onlyoffice-nextcloud).
+If a lock provider, such as the [Temporary File Lock](https://apps.nextcloud.com/apps/files_lock) app, is installed, the ONLYOFFICE app uses Nextcloud file locking: it locks the file while it is being edited in ONLYOFFICE and opens a file locked by another user or app for viewing only. Without a lock provider, nothing prevents a file from being edited in ONLYOFFICE and in other tools at the same time, and changes may be overwritten or lost.

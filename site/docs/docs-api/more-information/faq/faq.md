@@ -78,7 +78,8 @@ The questions concerning integrating ONLYOFFICE Docs with your own website and s
 
 - [Where can I find integration examples for ONLYOFFICE Docs?](integrating.md#where-can-i-find-integration-examples-for-onlyoffice-docs)
 - [Which paths should I specify when integrating ONLYOFFICE Docs with my website?](integrating.md#which-paths-should-i-specify-when-integrating-onlyoffice-docs-with-my-website)
-- [What settings should be used when connecting ONLYOFFICE to ownClowd/Nextcloud via a local and public network?](integrating.md#what-settings-should-be-used-when-connecting-onlyoffice-to-ownclowdnextcloud-via-a-local-and-public-network)
+- [What settings should be used when connecting ONLYOFFICE to ownCloud/Nextcloud via a local and public network?](integrating.md#what-settings-should-be-used-when-connecting-onlyoffice-to-owncloudnextcloud-via-a-local-and-public-network)
+- [ONLYOFFICE Docs cannot download a file from my server that uses a self-signed certificate. What should I do?](integrating.md#onlyoffice-docs-cannot-download-a-file-from-my-server-that-uses-a-self-signed-certificate-what-should-i-do)
 
 [More](integrating.md)
 
