@@ -116,6 +116,11 @@
   height: auto !important;
 }
 
+.theme-announcement-bar .announcement-icon {
+  margin-right: 0.4em;
+  vertical-align: -0.15em;
+}
+
 .theme-announcement-bar .close svg {
   width: 10px;
   height: 10px;
