@@ -209,7 +209,8 @@ const config: Config = {
         ],
       },
     ],
-    // Production keeps crawlers off tracking-parameter duplicates and names the sitemap;
+    // Production keeps crawlers off tracking-parameter duplicates and names the sitemap
+    // and llms.txt;
     // development is closed to crawlers on top of noIndex. Testing gets no robots.txt until
     // Google drops the api.teamlab.info pages it indexed before noIndex: a `Disallow: /`
     // would stop it re-crawling them and seeing the noindex tag. Then give it `['/']` too.
@@ -221,6 +222,7 @@ const config: Config = {
             ? {
                 disallow: ['/*?_ga=', '/*?from=', '/*?sa=', '/*?spm=', '/*?utm_source='],
                 sitemap: true,
+                llmsTxt: true,
               }
             : {disallow: ['/']},
         ],
@@ -412,6 +414,12 @@ const config: Config = {
             {
               label: 'Contact support',
               href: 'https://www.onlyoffice.com/support-contact-form?from=api',
+            },
+            {
+              // A static file, not a route: `pathname://` keeps the link checker off it and
+              // still prepends the locale's baseUrl, so zh-CN gets /zh-CN/llms.txt.
+              label: 'llms.txt',
+              to: 'pathname:///llms.txt',
             },
           ],
         },
