@@ -1,5 +1,29 @@
 # Change log
 
+## 10.3.0
+
+### New features
+
+#### Docs API
+
+* Added an FAQ entry on using ONLYOFFICE Docs with a self-signed certificate in any integration
+
+### Improvements
+
+#### Docs API
+
+* Restructured the ownCloud and Nextcloud known issues: self-signed certificates and the background connection check now sit under Checking the connection, file conversion has its own section, and each remaining issue has a heading
+* Covered the ONLYOFFICE Docs side of self-signed certificates (`rejectUnauthorized`), files shared without download permission and file locking on the ownCloud and Nextcloud pages
+* Used the connectors' current UI names and added explicit heading anchors on the ownCloud and Nextcloud pages
+
+#### Localization
+
+* Synced the zh-CN ownCloud, Nextcloud and FAQ pages with English
+
+### Fixes
+
+* Fixed the "ownClowd" typo in the FAQ
+
 ## 10.2.0
 
 ### New features
