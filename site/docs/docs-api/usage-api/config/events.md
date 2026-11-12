@@ -649,7 +649,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestReferenceData
 
-The function called when the user is trying to refresh data inserted from the external file by clicking the *Update values* button in the *External links* dialog box of the *Data* tab. To refresh data, call the [setReferenceData](../methods.md#setreferencedata) method. When calling this method, the `token` must be added to validate the parameters. This event also fires when the user runs the [IMPORTRANGE](https://helpcenter.onlyoffice.com/onlyoffice-editors/onlyoffice-spreadsheet-editor/Functions/importrange.aspx?from=api) function.
+The function called when the user is trying to refresh data inserted from the external file by clicking the *Update values* button in the *External links* dialog box of the *Data* tab. To refresh data, call the [setReferenceData](../methods.md#setreferencedata) method. When calling this method, the `token` must be added to validate the parameters. This event also fires when the user runs the [IMPORTRANGE](https://helpcenter.onlyoffice.com/docs/userguides/spreadsheet-editor/functions/text-and-data/IMPORTRANGE) function.
 
 :::note
 - If this event is not declared, the *Paste link* and *Update values* buttons will not be displayed.

@@ -1,6 +1,6 @@
 # Token in body
 
-Starting from version 5.2, it is possible to use the token in body parameters with ONLYOFFICE Docs. To enable it, set the [services.CoAuthoring.token.inbox.inBody](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-token-inbox-inBody) and [services.CoAuthoring.token.outbox.inBody](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-token-outbox-inBody) in configuration file to `true`.
+Starting from version 5.2, it is possible to use the token in body parameters with ONLYOFFICE Docs. To enable it, set the [services.CoAuthoring.token.inbox.inBody](../../../get-started/configuration/server-config/server-config.md#services.CoAuthoring.token.inbox.inBody) and [services.CoAuthoring.token.outbox.inBody](../../../get-started/configuration/server-config/server-config.md#services.CoAuthoring.token.outbox.inBody) in configuration file to `true`.
 
 ## Configuration parameters
 

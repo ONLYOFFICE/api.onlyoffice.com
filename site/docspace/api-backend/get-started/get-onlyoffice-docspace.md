@@ -14,7 +14,7 @@ This method requires no installation. [Sign up to ONLYOFFICE Apps](https://www.o
 
 [ONLYOFFICE Apps](https://www.onlyoffice.com/download?from=api#docspace-developer) is available for Windows, Linux, Docker, and Amazon AWS. Follow the instructions in **ONLYOFFICE Help Center** to install on your local server:
 
-- [Get ONLYOFFICE Apps for Windows](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-windows.aspx?from=api)
-- [Get ONLYOFFICE Apps for Linux](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-script.aspx?from=api)
-- [Get ONLYOFFICE Apps for Docker](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-script.aspx?from=api)
-- [Get ONLYOFFICE Apps for Amazon AWS](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-amazon.aspx?from=api)
+- [Get ONLYOFFICE Apps for Windows](https://helpcenter.onlyoffice.com/docspace/installation/developer/windows-version/docspace-install-windows)
+- [Get ONLYOFFICE Apps for Linux](https://helpcenter.onlyoffice.com/docspace/installation/developer/one-click-install-for-linux/docspace-install-script)
+- [Get ONLYOFFICE Apps for Docker](https://helpcenter.onlyoffice.com/docspace/installation/developer/one-click-install-for-linux/docspace-install-script)
+- [Get ONLYOFFICE Apps for Amazon AWS](https://helpcenter.onlyoffice.com/docspace/installation/developer/hosted-solutions/docspace-install-amazon)

@@ -198,7 +198,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 The `comment` field is optional because the commenting is disabled anyway with the `fillForms` parameter enabled and `edit` and `review` parameters disabled.
 
-With the configuration above the document will be opened with the form filling mode enabled and all the other modes disabled, giving the users who have access to it only the possibility to fill the fields in the special [content controls](https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/ONLYOFFICE-Document-Editor/UsageInstructions/InsertContentControls.aspx?from=api).
+With the configuration above the document will be opened with the form filling mode enabled and all the other modes disabled, giving the users who have access to it only the possibility to fill the fields in the special [content controls](https://helpcenter.onlyoffice.com/docs/userguides/document-editor/operations-on-objects/insert-content-controls).
 
 It is then up to you to decide what is done next: either the changes to the editable fields will be saved to the same document or a new document will be created each time the original one is accessed and altered by a new user.
 

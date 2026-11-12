@@ -38,7 +38,7 @@ The plugin is available in the official [Redmine Plugins Directory](https://www.
 
 Before you proceed to the plugin installation, make sure you have an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Redmine and any end clients. Additionally, ensure that ONLYOFFICE Docs can directly POST to Redmine.
 
-We recommend using [Docker](https://github.com/onlyoffice/Docker-DocumentServer) to install ONLYOFFICE Docs. Alternatively, you can follow [these instructions](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx) for Debian, Ubuntu, or derivatives.
+We recommend using [Docker](https://github.com/onlyoffice/Docker-DocumentServer) to install ONLYOFFICE Docs. Alternatively, you can follow [these instructions](https://helpcenter.onlyoffice.com/docs/installation/community/linux/installing/install-ubuntu) for Debian, Ubuntu, or derivatives.
 
 ## Installing ONLYOFFICE plugin for Redmine
 

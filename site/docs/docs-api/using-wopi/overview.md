@@ -24,7 +24,7 @@ This documentation describes:
 
 For further information on the WOPI protocol, please read the [WOPI documentation](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/).
 
-All the necessary [WOPI settings](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#WOPI) you can find and change in the configuration file which can be found (or created) at the following path:
+All the necessary [WOPI settings](../get-started/configuration/server-config/server-config.md#wopi) you can find and change in the configuration file which can be found (or created) at the following path:
 
 <Tabs>
   <TabItem value="windows" label="Windows">
@@ -45,7 +45,7 @@ The default values are available in the *default.json* configuration file, which
 
 ## Enabling WOPI
 
-To enable WOPI, set the [wopi.enable](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable) parameter in the ONLYOFFICE Docs config to **true**:
+To enable WOPI, set the [wopi.enable](../get-started/configuration/server-config/server-config.md#wopi.enable) parameter in the ONLYOFFICE Docs config to **true**:
 
 ### Parameters
 
@@ -67,7 +67,7 @@ To enable WOPI, set the [wopi.enable](https://helpcenter.onlyoffice.com/installa
 
 ONLYOFFICE Docs must work only with trusted WOPI hosts. This is the same idea as the [WOPI domain allow list](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list) in the WOPI documentation. Allow your WOPI host in the IP filter rules and deny all the other hosts.
 
-Follow the steps below to configure the ONLYOFFICE Docs [IP filter](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter):
+Follow the steps below to configure the ONLYOFFICE Docs [IP filter](../get-started/configuration/server-config/server-config.md#ip-filter):
 
 1. Open the */etc/onlyoffice/documentserver/local.json* file using any available text editor:
 

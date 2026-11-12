@@ -1,6 +1,6 @@
 # 请求体中的令牌
 
-从 5.2 版本开始，可以在 ONLYOFFICE 文档的请求体参数中使用令牌。要启用它，请将配置文件中的 [services.CoAuthoring.token.inbox.inBody](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-token-inbox-inBody) 和 [services.CoAuthoring.token.outbox.inBody](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-token-outbox-inBody) 设置为 `true`。
+从 5.2 版本开始，可以在 ONLYOFFICE 文档的请求体参数中使用令牌。要启用它，请将配置文件中的 [services.CoAuthoring.token.inbox.inBody](../../../get-started/configuration/server-config/server-config.md#services.CoAuthoring.token.inbox.inBody) 和 [services.CoAuthoring.token.outbox.inBody](../../../get-started/configuration/server-config/server-config.md#services.CoAuthoring.token.outbox.inBody) 设置为 `true`。
 
 ## 配置参数
 

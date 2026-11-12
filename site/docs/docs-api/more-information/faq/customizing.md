@@ -61,7 +61,7 @@ Further information about the customization can be found [at this page](../../us
 
 ## How to change the default language of the ONLYOFFICE Docs interface?
 
-If the interface language is present in the [list of available ONLYOFFICE Docs languages](https://helpcenter.onlyoffice.com/docs/docs-available-languages.aspx?from=api), you can simply use the `editorConfig.lang` property in the configuration file to set it to the necessary locale, like this:
+If the interface language is present in the [list of available ONLYOFFICE Docs languages](https://helpcenter.onlyoffice.com/docs/available-languages), you can simply use the `editorConfig.lang` property in the configuration file to set it to the necessary locale, like this:
 
 ```ts
 const config = {
@@ -75,7 +75,7 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-If the language is not available and you want to translate it or have already translated it to your own language, please see [this article](https://helpcenter.onlyoffice.com/docs/installation/docs-community-add-language-docker.aspx?from=api) to find out how to install it to your ONLYOFFICE Docs.
+If the language is not available and you want to translate it or have already translated it to your own language, please see [this article](https://helpcenter.onlyoffice.com/docs/configuration/community/docker/add-language) to find out how to install it to your ONLYOFFICE Docs.
 
 Further information about the language settings can be found [at this page](../../usage-api/config/editor/editor.md).
 

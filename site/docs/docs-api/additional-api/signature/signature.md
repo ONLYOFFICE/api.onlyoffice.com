@@ -9,7 +9,7 @@ ONLYOFFICE Docs [uses](../../get-started/how-it-works/security.md) tokens genera
 This feature is used in ONLYOFFICE Docs starting with version 4.2.
 :::
 
-For the validation setup, it is necessary to edit the [secret key](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#SecretKey) and [token](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#Token) parameters in the configuration file, which can be found (or created) at the following path:
+For the validation setup, it is necessary to edit the [secret key](../../get-started/configuration/server-config/server-config.md#secret-key) and [token](../../get-started/configuration/server-config/server-config.md#token) parameters in the configuration file, which can be found (or created) at the following path:
 
 <Tabs>
   <TabItem value="linux" label="Linux">

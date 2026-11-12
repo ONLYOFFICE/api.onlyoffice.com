@@ -24,9 +24,9 @@ The ONLYOFFICE app for ownCloud enables users to edit office documents from [own
 
 ## Installing ONLYOFFICE Docs
 
-You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from ownCloud and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to ownCloud directly.
+You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from ownCloud and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/docs/installation/community/linux/installing/install-ubuntu). ONLYOFFICE Docs must also be able to POST to ownCloud directly.
 
-ONLYOFFICE Docs and ownCloud can be installed either on different computers, or on the same machine. In case you select the latter variant, you will need to set up a custom port for Document Server as by default both ONLYOFFICE Docs and ownCloud work on port 80. Or you can use ONLYOFFICE Docs behind a proxy, please refer to [this article](https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx) to learn how you can configure it.
+ONLYOFFICE Docs and ownCloud can be installed either on different computers, or on the same machine. In case you select the latter variant, you will need to set up a custom port for Document Server as by default both ONLYOFFICE Docs and ownCloud work on port 80. Or you can use ONLYOFFICE Docs behind a proxy, please refer to [this article](https://helpcenter.onlyoffice.com/docs/configuration/community/docker/proxy) to learn how you can configure it.
 
 You can also use our [Docker installation](https://github.com/ONLYOFFICE/docker-onlyoffice-owncloud) to get installed and configured ONLYOFFICE Docs and ownCloud installation with a couple of commands.
 

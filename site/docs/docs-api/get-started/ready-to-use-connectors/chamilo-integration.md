@@ -21,7 +21,7 @@ This [plugin](https://github.com/ONLYOFFICE/onlyoffice-chamilo) enables users to
 
 ## Installing ONLYOFFICE Docs
 
-You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Chamilo and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to Chamilo directly.
+You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Chamilo and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/docs/installation/community/linux/installing/install-ubuntu). ONLYOFFICE Docs must also be able to POST to Chamilo directly.
 
 ONLYOFFICE Docs and Chamilo can be installed either on different computers, or on the same machine. If you use one machine, set up a custom port for Document Server as by default both ONLYOFFICE Docs and Chamilo work on port 80.
 

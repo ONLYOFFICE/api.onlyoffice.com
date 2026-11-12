@@ -57,7 +57,7 @@ sidebar_position: -11
 
 ## 限制对编辑器或实时查看器的访问
 
-要限制匿名用户对编辑器或实时查看器的访问，请将服务器配置文件中的[`services.CoAuthoring.server.isAnonymousSupport`](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-isAnonymousSupport)参数设置为`false`。当匿名用户尝试打开编辑器时，将显示警告：
+要限制匿名用户对编辑器或实时查看器的访问，请将服务器配置文件中的[`services.CoAuthoring.server.isAnonymousSupport`](../configuration/server-config/server-config.md#services.CoAuthoring.server.isAnonymousSupport)参数设置为`false`。当匿名用户尝试打开编辑器时，将显示警告：
 
 ![Anonymous user warning](/assets/images/editor/anonymous-warning.png#gh-light-mode-only)![Anonymous user warning](/assets/images/editor/anonymous-warning.dark.png#gh-dark-mode-only)
 

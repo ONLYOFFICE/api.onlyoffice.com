@@ -57,7 +57,7 @@ The figure and steps below explain how an anonymous user’s name is set in ONLY
 
 ## Restricting access to the editor or live viewer
 
-To restrict anonymous user access to the editor or live viewer, set the [`services.CoAuthoring.server.isAnonymousSupport`](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-isAnonymousSupport) parameter in the server configuration file to `false`. When an anonymous user tries to open the editor, a warning is shown:
+To restrict anonymous user access to the editor or live viewer, set the [`services.CoAuthoring.server.isAnonymousSupport`](../configuration/server-config/server-config.md#services.CoAuthoring.server.isAnonymousSupport) parameter in the server configuration file to `false`. When an anonymous user tries to open the editor, a warning is shown:
 
 ![Anonymous user warning](/assets/images/editor/anonymous-warning.png#gh-light-mode-only)![Anonymous user warning](/assets/images/editor/anonymous-warning.dark.png#gh-dark-mode-only)
 

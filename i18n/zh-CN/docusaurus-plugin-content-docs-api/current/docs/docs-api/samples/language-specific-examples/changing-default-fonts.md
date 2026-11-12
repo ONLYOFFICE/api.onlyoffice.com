@@ -32,4 +32,4 @@ sidebar_position: -1
 - **默认字体支持**：ONLYOFFICE 文档自带一组默认的开源字体。
 - **字体替换机制**：如果文档包含专有字体（例如，使用第三方编辑器创建的字体），ONLYOFFICE 文档会自动选择最接近的可用字体进行替代。
 
-为避免字体替换导致的布局问题，请在上传使用外部软件创建的模板之前，先在文档服务器上安装自定义字体。请遵循 [Windows](https://helpcenter.onlyoffice.com/docs/installation/docs-community-install-fonts-windows.aspx)、[Linux](https://helpcenter.onlyoffice.com/docs/installation/docs-community-install-fonts-linux.aspx) 或 [Docker](https://helpcenter.onlyoffice.com/docs/installation/docs-install-fonts-docker.aspx) 的官方说明。
+为避免字体替换导致的布局问题，请在上传使用外部软件创建的模板之前，先在文档服务器上安装自定义字体。请遵循 [Windows](https://helpcenter.onlyoffice.com/docs/configuration/community/windows/install-fonts)、[Linux](https://helpcenter.onlyoffice.com/docs/configuration/community/linux/install-fonts) 或 [Docker](https://helpcenter.onlyoffice.com/docs/configuration/community/docker/install-fonts) 的官方说明。

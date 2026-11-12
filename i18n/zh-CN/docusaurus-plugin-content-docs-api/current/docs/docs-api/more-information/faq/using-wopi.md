@@ -6,7 +6,7 @@ sidebar_position: -1
 
 ## 如何启用 WOPI？ {#how-to-enable-wopi}
 
-要启用 WOPI，请将 ONLYOFFICE 文档配置中的 [wopi.enable](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable) 参数设置为 `true`。
+要启用 WOPI，请将 ONLYOFFICE 文档配置中的 [wopi.enable](../../get-started/configuration/server-config/server-config.md#wopi.enable) 参数设置为 `true`。
 
 参数：
 

@@ -17,7 +17,7 @@ This [app](https://github.com/ONLYOFFICE/onlyoffice-mattermost) enables users to
 
 ## Installing ONLYOFFICE Docs
 
-You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Mattermost and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to Mattermost directly.
+You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Mattermost and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/docs/installation/community/linux/installing/install-ubuntu). ONLYOFFICE Docs must also be able to POST to Mattermost directly.
 
 ONLYOFFICE Docs and Mattermost can be installed either on different computers, or on the same machine. If you use one machine, set up a custom port for ONLYOFFICE Docs.
 
