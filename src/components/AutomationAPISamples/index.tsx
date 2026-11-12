@@ -56,6 +56,12 @@ const AutomationAPISamples = [
     url: 'automation-api/changing-text-in-pdf',
     description: 'This example shows how to find and replace text in a PDF by recognizing page content and iterating through objects.',
   },
+  {
+    name: 'Working with watermark',
+    image: require('@site/static/assets/images/editor/working-with-watermark.png').default,
+    url: 'automation-api/working-with-watermark',
+    description: 'This example shows how to set and change the watermark over the document pages from an external source.',
+  },
 ];
 
 interface Props {

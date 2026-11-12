@@ -4,6 +4,10 @@ export type code = {
     key?: string;
     title?: string;
     url?: string;
+    options?: {
+      watermark?: object | string;
+      watermark_on_draw?: object | string;
+    };
     permissions?: {
       edit?: boolean;
       modifyFilter?: boolean;
