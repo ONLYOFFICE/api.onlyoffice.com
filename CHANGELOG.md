@@ -6,7 +6,9 @@
 
 #### Docs API
 
-* Added the `document.options.watermark` parameter: the watermark object, the `%user_name%` placeholder, opacity, watermarks in PDF and image downloads, and why a watermark is not access control
+* Added the `document.options.watermark` and `document.options.watermark_on_draw` parameters: the watermark object, the `%user_name%` placeholder, opacity, watermarks in PDF and image downloads, and why a watermark is not access control
+* Added the Data retention page: what ONLYOFFICE Docs keeps while documents are edited, where and for how long, who can access the cache, and how to delete it
+* Added the Working with watermark Automation API sample, which changes the on-screen watermark from an external panel
 
 #### Common
 
@@ -22,6 +24,10 @@
 #### Localization
 
 * Synced the zh-CN document config and conversion request pages with English
+
+### Fixes
+
+* Fixed the old help center `.aspx` links in the Docs API pages and connector guides
 
 ## 10.3.0
 
