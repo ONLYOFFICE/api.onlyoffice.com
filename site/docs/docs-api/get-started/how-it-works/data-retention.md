@@ -10,7 +10,7 @@ ONLYOFFICE Docs does not store documents permanently: they stay in the **documen
 
 | Data | Where it is stored | How long it is kept |
 | ---- | ------------------ | ------------------- |
-| Document cache (working copy, images, saved result) | The [cache storage](#where-the-cache-is-stored) | At least 24 hours after the document was last opened |
+| Document cache (working copy, images, saved result) | The [cache storage](#where-the-cache-is-stored) | At least 24 hours after the document was last opened. In the Community edition, folders created before a restart are kept until the document is opened again |
 | Temporary conversion files | The temporary folder of the operating system | Deleted when the conversion finishes |
 | Document changes | The [database](../configuration/server-config/server-config.md#sql) in the Enterprise and Developer editions, in memory in the Community edition | Deleted once the document is saved and the **document storage service** returns `{"error":0}` to the [callback](../../usage-api/callback-handler.md#response-from-the-document-storage-service) |
 | Document record (status, callback address) | Same as document changes | Deleted together with the document cache |
@@ -20,7 +20,7 @@ ONLYOFFICE Docs does not store documents permanently: they stay in the **documen
 
 The cache is cleaned up every hour. A document that is still open, or whose changes have not been saved yet, is not deleted, even when the retention time has passed. The retention time counts from the moment the document was last opened, not from the end of editing.
 
-In the Community edition, document changes and records are kept in memory. Starting from version 10.0, unsaved changes are saved as forgotten files when ONLYOFFICE Docs shuts down normally. After an unexpected restart, such as a server reboot or a process crash, they are lost. Cache folders created before a restart are no longer deleted automatically: a folder is cleaned up only if the same document is opened again.
+In the Community edition, document changes and records are kept in memory. Starting from version 10.0, unsaved changes are saved as forgotten files when ONLYOFFICE Docs shuts down normally. After an unexpected restart, such as a server reboot or a process crash, they are lost. Cache folders created before any restart are not deleted by the automatic cleanup, because their records are lost: a folder is cleaned up only if the same document is opened again. In the Enterprise and Developer editions, the records are kept in the database, so the cleanup deletes these folders as usual.
 
 ## Default times
 
