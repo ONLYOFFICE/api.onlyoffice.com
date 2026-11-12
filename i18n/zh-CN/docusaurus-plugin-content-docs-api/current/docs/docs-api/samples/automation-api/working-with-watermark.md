@@ -53,7 +53,7 @@ import { WatermarkExternalToolbar } from '@site/src/components/BrowserWindow';
    };
    ```
 
-2. 当用户单击自定义界面中的 **Apply** 按钮时，将执行 [SetProperties](/docs/plugins/interacting-with-editors/document-api/Methods/SetProperties.md) 方法，并在 `watermark_on_draw` 参数中传入新的[水印属性](/docs/plugins/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md)。该值为包含水印对象 JSON 的字符串：
+2. 当用户单击自定义界面中的 **Apply** 按钮或在文本框中按 Enter 键时，将执行 [SetProperties](/docs/plugins/interacting-with-editors/document-api/Methods/SetProperties.md) 方法，并在 `watermark_on_draw` 参数中传入新的[水印属性](/docs/plugins/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md)。该值为包含水印对象 JSON 的字符串：
 
    ``` ts
    document.getElementById("applyWatermark").addEventListener("click", () => {

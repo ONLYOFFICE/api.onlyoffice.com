@@ -41,9 +41,17 @@
   border-color: #ff6f3d;
 }
 
+.text-input:focus-visible,
+.select:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid #ff6f3d;
+  outline-offset: 1px;
+}
+
 .btn {
   cursor: pointer;
-  padding: 8px 16px;
+  height: 34px;
+  padding: 0 16px;
 
   text-decoration: none !important;
   font: inherit;
@@ -57,10 +65,10 @@
   background-color: transparent;
 }
 
-.btn.disabled {
+.btn:disabled {
+  cursor: default;
   color: var(--watermark-btn-disabled-color);
   border-color: var(--watermark-btn-disabled-border-color);
-  pointer-events: none;
 }
 
 :root {
@@ -88,7 +96,7 @@ html[data-theme="dark"] {
 }
 
 @media (hover: hover) {
-  .btn:hover {
+  .btn:hover:not(:disabled) {
     color: #ff6f3d;
     border: 1px solid #ff6f3d;
   }

@@ -55,7 +55,7 @@ The document opens with a watermark set in the editor config. Your code calls `c
    };
    ```
 
-2. When the user clicks the **Apply** button in the custom interface, the [SetProperties](/docs/plugins/interacting-with-editors/document-api/Methods/SetProperties.md) method is executed with the new [watermark properties](/docs/plugins/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md) in the `watermark_on_draw` parameter. The value is a string with the watermark object in JSON:
+2. When the user clicks the **Apply** button in the custom interface or presses Enter in the text field, the [SetProperties](/docs/plugins/interacting-with-editors/document-api/Methods/SetProperties.md) method is executed with the new [watermark properties](/docs/plugins/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md) in the `watermark_on_draw` parameter. The value is a string with the watermark object in JSON:
 
    ``` ts
    document.getElementById("applyWatermark").addEventListener("click", () => {
