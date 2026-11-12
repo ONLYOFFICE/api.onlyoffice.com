@@ -1,5 +1,28 @@
 # Change log
 
+## 10.4.0
+
+### New features
+
+#### Docs API
+
+* Added the `document.options.watermark` parameter: the watermark object, the `%user_name%` placeholder, opacity, watermarks in PDF and image downloads, and why a watermark is not access control
+
+#### Common
+
+* Added an llms.txt link to the footer and named `/llms.txt` in the production robots.txt
+* Added a megaphone icon to the announcement bar
+
+### Improvements
+
+#### Docs API
+
+* Replaced the duplicated watermark rows in the conversion request table with a link to the watermark object
+
+#### Localization
+
+* Synced the zh-CN document config and conversion request pages with English
+
 ## 10.3.0
 
 ### New features
