@@ -52,11 +52,17 @@
 
 **类型**：`object` | `string`
 
-在编辑器中打开文档时，绘制在文档每一页上的水印。该值为一个对象，或包含该对象 JSON 的字符串。该对象包含[水印属性](../../../../plugins/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md)。转换请求的 [`watermark`](../../../additional-api/conversion-api/request.md#watermark) 参数接受相同的对象。`transparent` 属性设置水印的不透明度：`0` 为不可见，`1` 为完全不透明。默认值为 `0.3`。
+用户从编辑器中将文档下载为 PDF 或图像时，添加到下载文件中的水印。它不会绘制在编辑器的页面上；如需同时在屏幕上显示水印，请使用 [`options.watermark_on_draw`](#optionswatermark_on_draw)。该值的格式与 `options.watermark_on_draw` 相同。
+
+### options.watermark_on_draw
+
+**类型**：`object` | `string`
+
+在编辑器中打开文档时，绘制在文档每一页上的水印。当用户将文档下载为 PDF 或图像时，水印也会添加到下载的文件中。以其他格式下载时不包含水印，水印也不会保存到文档本身。
+
+该值为一个对象，或包含该对象 JSON 的字符串。该对象包含[水印属性](../../../../plugins/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md)。转换请求的 [`watermark`](../../../additional-api/conversion-api/request.md#watermark) 参数接受相同的对象。`transparent` 属性设置水印的不透明度：`0` 为不可见，`1` 为完全不透明。默认值为 `0.3`。
 
 `%user_name%` 占位符会被替换为打开文档的用户的名称，因此每个用户看到的都是自己的名称。占位符在对象中的任何位置都会被替换，而不仅限于 run 文本。名称在插入时不会转义，因此如果名称包含 `"` 或 `\`，对象将无法解析，水印也不会显示。
-
-当用户将文档下载为 PDF 或图像时，水印会添加到下载的文件中。以其他格式下载时不包含水印，水印也不会保存到文档本身。
 
 :::warning
 水印由浏览器中的编辑器绘制。用户可以使用浏览器开发者工具将其移除，因此请勿使用它来限制对文档的访问。为防止用户获取不带水印的文档，还应在文档权限中将 [`download`](permissions.md#download)、[`print`](permissions.md#print) 和 [`copy`](permissions.md#copy) 设置为 `false`。要在服务器上将水印插入文件，请[转换带水印的文档](../../../additional-api/conversion-api/request.md#将-docx-转换为带水印的-pdf)。
@@ -160,7 +166,7 @@ const config = {
     isForm: true,
     key: "Khirz6zTPdfd7",
     options: {
-      watermark: {
+      watermark_on_draw: {
         // ...
       },
     },
