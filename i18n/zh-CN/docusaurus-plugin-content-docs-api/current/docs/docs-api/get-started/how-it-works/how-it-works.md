@@ -26,3 +26,28 @@ sidebar_position: -5
 :::note
 ONLYOFFICE 文档包括**文档编辑器**、**文档编辑服务**、**文档命令服务**、**文档转换服务**和**文档构建服务**。**文档管理器**和**文档存储服务**必须由集成商提供。可以是 **ONLYOFFICE Apps**、您在自己服务器上的实现，或 ONLYOFFICE 文档附带的 **Node.js 测试示例**（仅用于测试，参见 [Node.js 示例](../../samples/language-specific-examples/nodejs-example.md)）。
 :::
+
+## 服务器组件
+
+ONLYOFFICE 文档的服务器端使用 [Node.js](https://nodejs.org/) 编写，以三个进程运行：
+
+| 进程 | 服务 | 作用 |
+| ---- | ---- | ---- |
+| DocService | **文档编辑服务**、**文档命令服务**、**文档转换服务**和**文档构建服务**的入口 | 与**文档编辑器**保持 WebSocket（[Socket.IO](../configuration/server-config/server-config.md#socket-io)）连接，并在协作编辑者之间传递更改。提供 HTTP API：对[回调处理程序](../../usage-api/callback-handler.md)的请求、[命令服务](../../additional-api/command-service/command-service.md)、[转换 API](../../additional-api/conversion-api/conversion-api.md)、[Document Builder API](../../additional-api/document-builder-api.md) 和 [WOPI](../../using-wopi/overview.md)。检查[令牌](./security.md)并删除过期的[文档缓存](./data-retention.md)。 |
+| FileConverter | **文档转换服务**、**文档构建服务** | 从消息队列中获取任务，下载源文件，并运行原生 C++ 引擎：`x2t` 用于转换文件，`docbuilder` 用于运行 Document Builder 脚本。将结果上传到缓存。 |
+| Metrics | — | 一个 [StatsD](../configuration/server-config/server-config.md#statsd) 服务器，接收来自 DocService 和 FileConverter 的指标，并将其转发到后端，例如 Graphite。指标默认处于禁用状态。 |
+
+DocService 和 FileConverter 使用以下外部服务：
+
+- **数据库**：默认为 PostgreSQL，也可以是 MySQL、MariaDB、MS SQL Server、Oracle 或 Dameng。参见 [SQL](../configuration/server-config/server-config.md#sql)。
+- **消息代理**：默认为 RabbitMQ，也可以是 ActiveMQ。它将转换任务从 DocService 传递给 FileConverter。参见[队列](../configuration/server-config/server-config.md#queues)。
+- **Redis**（如已配置）。参见 [Redis](../configuration/server-config/server-config.md#redis)。
+- **缓存存储**：本地文件系统、Amazon S3 或 Azure Blob Storage。参见[文档存储服务](../configuration/server-config/server-config.md#document-storage-service)。
+
+管理面板和 [Node.js 测试示例](../../samples/language-specific-examples/nodejs-example.md)是独立的 Node.js 应用程序。
+
+Node.js 不运行**文档编辑器**，也不执行转换本身。**文档编辑器**是在用户浏览器中运行的 JavaScript，文件由原生 `x2t` 和 `docbuilder` 引擎进行转换和构建。
+
+### Node.js 运行时
+
+在 Linux 和 Windows 安装包以及 Docker 镜像中，每个进程都使用 [pkg](https://github.com/yao-pkg/pkg) 编译为包含 Node.js 运行时的独立可执行文件。服务器上无需安装 Node.js，其版本随 ONLYOFFICE 文档一起更新。从 10.0.2 版本开始，可执行文件包含 Node.js 24。从源代码构建 ONLYOFFICE 文档需要 Node.js 24 或更高版本。
