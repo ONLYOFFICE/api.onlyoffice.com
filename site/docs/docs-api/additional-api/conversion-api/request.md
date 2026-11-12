@@ -75,29 +75,6 @@ Starting from version 10.0, you can also send the file itself in the request ins
 | token | string | required by configuration | The encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../signature/request/token-in-body.md#convert-document). |
 | url | string | required | The absolute URL to the document to be converted. Be sure to add a [token](../../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
 | watermark | object | optional | A JSON object containing the [properties](../../../plugins/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md) of a watermark which is inserted into the pdf and image files during conversion. |
-| watermark.align | integer | optional | The vertical text align in the watermark shape: **0** - bottom, **1** - center, **4** - top. |
-| watermark.fill | integer[] \| string | optional | The watermark fill color in the RGB format, or the URL to image (base64 support: *data:image/png;...*). The empty array \[] means that the watermark has no fill. |
-| watermark.height | integer | optional | The watermark height measured in millimeters. |
-| watermark.margins | integer[] | optional | The text margins measured in millimeters in the watermark shape. |
-| watermark.paragraphs | object[] | optional | The array with paragraphs from the current watermark with their properties. |
-| watermark.paragraphs.align | integer | optional | The horizontal text align in the current paragraph: **0** - right, **1** - left, **2** - center, **3** - justify. |
-| watermark.paragraphs.fill | integer[] | optional | The paragraph highlight in the RGB format. The empty array \[] means that the paragraph is not highlighted. |
-| watermark.paragraphs.linespacing | integer | optional | The text linespacing in the current paragraph. |
-| watermark.paragraphs.runs | object[] | optional | The array with runs from the current paragraph with their properties. |
-| watermark.paragraphs.runs.bold | boolean | optional | Whether the current text is displayed bold or not. |
-| watermark.paragraphs.runs.fill | integer[] | optional | The text highlight in the RGB format. The empty array \[] means that the text is not highlighted. |
-| watermark.paragraphs.runs.font-family | string | optional | The text font family. |
-| watermark.paragraphs.runs.font-size | string | optional | The text font size measured in points (pt). |
-| watermark.paragraphs.runs.italic | boolean | optional | Whether the current text is displayed italic or not. |
-| watermark.paragraphs.runs.strikeout | boolean | optional | Whether the current text is displayed struck through or not. |
-| watermark.paragraphs.runs.text | string | optional | The run text. |
-| watermark.paragraphs.runs.underline | boolean | optional | Whether the current text is displayed underlined or not. |
-| watermark.rotate | integer | optional | The watermark rotation angle measured in degrees. |
-| watermark.stroke | integer[] | optional | The watermark stroke color in the RGB format. The empty array \[] means that the watermark stroke has no fill. |
-| watermark.stroke-width | integer | optional | The watermark stroke width measured in millimeters. |
-| watermark.transparent | float | optional | The watermark transparency degree. |
-| watermark.type | string | optional | The [shape type](../../../office-api/usage-api/document-api/Enumeration/ShapeType.md) which specifies the preset shape geometry for the current watermark. |
-| watermark.width | integer | optional | The watermark width measured in millimeters. |
 
 </APITable>
 
