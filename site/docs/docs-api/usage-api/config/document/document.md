@@ -42,6 +42,61 @@ The key characters can be used: `0-9`, `a-z`, `A-Z`, `-.\_=`. The maximal key le
 
 **Example**: `"Khirz6zTPdfd7"`
 
+## options
+
+**type**: `object`
+
+The additional options for opening the document.
+
+### options.watermark
+
+**type**: `object` | `string`
+
+The watermark added to the files that the user downloads from the editor as PDF or as an image. It is not drawn on the pages in the editor; to show the watermark on screen as well, use [`options.watermark_on_draw`](#optionswatermark_on_draw). The value has the same format as `options.watermark_on_draw`.
+
+### options.watermark_on_draw
+
+**type**: `object` | `string`
+
+The watermark drawn over every page of the document while it is open in the editor. It is also added to the files that the user downloads as PDF or as an image. Other formats are downloaded without it, and the watermark is never saved to the document itself.
+
+The value is an object, or a string with this object in JSON, with the [watermark properties](../../../../plugins/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md). The conversion request takes the same object in its [`watermark`](../../../additional-api/conversion-api/request.md#watermark) parameter. The `transparent` property sets the watermark opacity: `0` is invisible, `1` is opaque. The default value is `0.3`.
+
+The `%user_name%` placeholder is replaced with the name of the user who opened the document, so each user sees their own name. The placeholder is replaced anywhere in the object, not only in the run text. The name is inserted without escaping, so if it contains `"` or `\`, the object cannot be parsed and the watermark is not shown.
+
+:::warning
+The watermark is drawn by the editor in the browser. The user can remove it with the browser developer tools, so do not use it to restrict access to the document. To stop users from getting the document without the watermark, also set [`download`](permissions.md#download), [`print`](permissions.md#print) and [`copy`](permissions.md#copy) to `false` in the document permissions. To insert a watermark into the file on the server, [convert the document with a watermark](../../../additional-api/conversion-api/request.md#converting-docx-to-pdf-with-watermark).
+:::
+
+**Example**:
+
+```json
+{
+  "type": "rect",
+  "width": 150,
+  "height": 50,
+  "rotate": -45,
+  "transparent": 0.3,
+  "fill": [],
+  "stroke": [],
+  "align": 1,
+  "paragraphs": [
+    {
+      "align": 2,
+      "runs": [
+        {
+          "text": "Confidential: %user_name%",
+          "fill": [128, 128, 128],
+          "font-family": "Arial",
+          "font-size": 24,
+          "bold": true
+        }
+      ]
+    }
+  ]
+}
+```
+
 ## referenceData
 
 **type**: `object`
@@ -110,6 +165,11 @@ const config = {
     fileType: "pdf",
     isForm: true,
     key: "Khirz6zTPdfd7",
+    options: {
+      watermark_on_draw: {
+        // ...
+      },
+    },
     referenceData: {
       fileKey: "BCFA2CED",
       instanceId: "https://example.com",

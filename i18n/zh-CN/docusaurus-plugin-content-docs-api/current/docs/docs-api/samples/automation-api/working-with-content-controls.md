@@ -1,6 +1,8 @@
 ---
 sidebar_position: 0
 hide_table_of_contents: true
+description: 通过自动化 API 从外部 UI 添加和查看内容控件。
+tags: ["Docs", "Integration", "External access", "Automation API"]
 ---
 
 import { ContentControlsExternalToolbar } from '@site/src/components/BrowserWindow';

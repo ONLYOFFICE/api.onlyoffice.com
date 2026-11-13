@@ -22,6 +22,7 @@ Explore interactive examples showing real-world use cases:
 | [Managing review changes](../../samples/automation-api/working-with-review-changes.md) | Control the review process externally — accept or reject tracked changes and navigate between revisions from a custom panel. |
 | [Filling out forms](../../samples/automation-api/filling-out-the-form.md) | Auto-populate form fields with external data. Sync form values between your interface and the document in real-time. |
 | [Working with content controls](../../samples/automation-api/working-with-content-controls.md) | Add different types of content controls and inspect their properties from an external UI. |
+| [Working with watermark](../../samples/automation-api/working-with-watermark.md) | Change the watermark drawn over the document pages from a custom panel: text, color, opacity and angle. |
 
 ## Getting started
 

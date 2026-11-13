@@ -1,0 +1,243 @@
+.launcher {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background-color: var(--dialog-launcher-bg);
+}
+
+.launcherLabel {
+  margin-right: 6px;
+  font-size: 14px;
+  color: var(--dialog-muted-color);
+}
+
+.btn {
+  cursor: pointer;
+  height: 34px;
+  padding: 0 16px;
+
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1em;
+
+  color: var(--dialog-btn-color);
+  border: 1px solid var(--dialog-btn-border-color);
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.btn:hover {
+  border-color: #ff6f3d;
+}
+
+.btn:focus-visible,
+.iconBtn:focus-visible {
+  outline: 2px solid #ff6f3d;
+  outline-offset: 1px;
+}
+
+/* The dialog's padding is the frame: its top edge moves the dialog, the rest resizes it. */
+.dialog {
+  display: none;
+  flex-direction: column;
+  inset: auto;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 6px;
+  overflow: visible;
+  color: var(--dialog-text-color);
+  border: none;
+  border-radius: 8px;
+  background-color: var(--dialog-frame-color);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.dialog[open] {
+  display: flex;
+}
+
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dialog:has(.handle:hover),
+.dragging {
+  background-color: var(--dialog-frame-active-color);
+}
+
+.dialog:has(.top:focus-visible) {
+  outline: 2px solid #ff6f3d;
+  outline-offset: 2px;
+}
+
+/* The iframe would take the pointer whenever the cursor gets ahead of the dialog. */
+.dragging iframe {
+  pointer-events: none;
+}
+
+.editor {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: var(--dialog-bg);
+}
+
+/* Each handle covers the 6px frame and 4px outside it, so it is easier to hit than it looks. */
+.handle {
+  position: absolute;
+  padding: 0;
+  touch-action: none;
+  user-select: none;
+  border: none;
+  background: transparent;
+}
+
+.handle:focus-visible {
+  outline: none;
+}
+
+.top,
+.bottom {
+  left: 12px;
+  right: 12px;
+  height: 10px;
+}
+
+.left,
+.right {
+  top: 12px;
+  bottom: 12px;
+  width: 10px;
+}
+
+.topLeft,
+.topRight,
+.bottomLeft,
+.bottomRight {
+  width: 16px;
+  height: 16px;
+}
+
+.top {
+  top: -4px;
+  cursor: move;
+}
+
+.bottom {
+  bottom: -4px;
+  cursor: ns-resize;
+}
+
+.left {
+  left: -4px;
+  cursor: ew-resize;
+}
+
+.right {
+  right: -4px;
+  cursor: ew-resize;
+}
+
+.topLeft {
+  top: -4px;
+  left: -4px;
+  cursor: nwse-resize;
+}
+
+.topRight {
+  top: -4px;
+  right: -4px;
+  cursor: nesw-resize;
+}
+
+.bottomLeft {
+  bottom: -4px;
+  left: -4px;
+  cursor: nesw-resize;
+}
+
+.bottomRight {
+  bottom: -4px;
+  right: -4px;
+  cursor: nwse-resize;
+}
+
+.error {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 4px 4px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dialog-error-color);
+  border: 1px solid var(--dialog-frame-color);
+  border-radius: 6px;
+  background-color: var(--dialog-bg);
+}
+
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  cursor: pointer;
+  color: var(--dialog-muted-color);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.iconBtn:hover {
+  color: var(--dialog-text-color);
+  background-color: var(--dialog-hover-bg);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+:root {
+  --dialog-launcher-bg: #f5f5f0;
+  --dialog-bg: #ffffff;
+  --dialog-frame-color: #d0d0cb;
+  --dialog-frame-active-color: #b5b5b0;
+  --dialog-text-color: #333333;
+  --dialog-muted-color: #666666;
+  --dialog-hover-bg: #e5e5e0;
+  --dialog-btn-color: #444444;
+  --dialog-btn-border-color: #aaaaaa;
+  --dialog-error-color: #cb0000;
+}
+
+html[data-theme="dark"] {
+  --dialog-launcher-bg: #2a2a2a;
+  --dialog-bg: #222222;
+  --dialog-frame-color: #474747;
+  --dialog-frame-active-color: #5e5e5e;
+  --dialog-text-color: #e0e0e0;
+  --dialog-muted-color: #aaaaaa;
+  --dialog-hover-bg: #3a3a3a;
+  --dialog-btn-color: #d4d4d4;
+  --dialog-btn-border-color: #cecece;
+  --dialog-error-color: #ff6b6b;
+}

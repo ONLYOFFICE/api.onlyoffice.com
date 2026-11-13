@@ -33,7 +33,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 安装 ONLYOFFICE 文档
 
-您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Alfresco 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Alfresco 发送 POST 请求。
+您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Alfresco 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/zh/docs/installation/community/linux/installing/install-ubuntu)。ONLYOFFICE 文档还必须能够直接向 Alfresco 发送 POST 请求。
 
 使用 [Docker](https://github.com/onlyoffice/Docker-DocumentServer) 是启动 ONLYOFFICE 文档实例的最简单方法。
 

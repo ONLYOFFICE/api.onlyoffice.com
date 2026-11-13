@@ -1,5 +1,7 @@
 ---
 sidebar_position: -2
+description: 使用 Java SDK 将 ONLYOFFICE 文档集成到您的应用程序中。
+tags: ["Docs", "Integration", "Java"]
 ---
 
 # Java SDK 集成

@@ -11,9 +11,9 @@ To install it on your local server:
 
 1. [Download](https://www.onlyoffice.com/download?from=api#docs-developer) ONLYOFFICE Docs Developer and install it on your local server following the instructions in ONLYOFFICE Help Center:
 
-   - [Install ONLYOFFICE Docs on Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api)
-   - [Install ONLYOFFICE Docs on Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api)
-   - [Install ONLYOFFICE Docs using Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api)
+   - [Install ONLYOFFICE Docs on Windows](https://helpcenter.onlyoffice.com/docs/installation/developer/windows/install)
+   - [Install ONLYOFFICE Docs on Linux](https://helpcenter.onlyoffice.com/docs/installation/developer/linux/installing/install-ubuntu)
+   - [Install ONLYOFFICE Docs using Docker](https://helpcenter.onlyoffice.com/docs/installation/developer/docker/installing/install)
 
 2. In the target HTML file where the editors are to be embedded, specify a placeholder `div` tag, where all the information about the editor parameters will be passed:
 
@@ -64,10 +64,10 @@ To install it on your local server:
 
 Before working with ONLYOFFICE Docs API documentation, it is recommended to make the following settings if necessary:
 
-- open additional [ports](https://helpcenter.onlyoffice.com/installation/docs-developer-open-ports.aspx?from=api);
+- open additional [ports](https://helpcenter.onlyoffice.com/docs/configuration/developer/docker/open-ports);
 - configure [ONLYOFFICE Docs server settings](/docs/docs-api/get-started/configuration/server-config) in ONLYOFFICE Docs configuration file;
-- switch ONLYOFFICE Docs to the HTTPS protocol for secure connection using [SSL Certificates](https://helpcenter.onlyoffice.com/installation/docs-community-https-linux.aspx?from=api);
-- add additional [fonts](https://helpcenter.onlyoffice.com/installation/docs-community-install-fonts-linux.aspx?from=api) to ONLYOFFICE Docs to enhance the work with the editors;
+- switch ONLYOFFICE Docs to the HTTPS protocol for secure connection using [SSL Certificates](https://helpcenter.onlyoffice.com/docs/configuration/community/linux/https);
+- add additional [fonts](https://helpcenter.onlyoffice.com/docs/configuration/community/linux/install-fonts) to ONLYOFFICE Docs to enhance the work with the editors;
 - add your own [color themes](../how-it-works/customizing-themes.md) for the application interface.
 
 ## Health check

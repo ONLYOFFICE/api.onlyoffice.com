@@ -22,6 +22,7 @@ sidebar_position: -2
 | [管理审阅修订](../../samples/automation-api/working-with-review-changes.md) | 从外部控制审阅流程——从自定义面板接受或拒绝修订并在修订之间导航。 |
 | [填写表单](../../samples/automation-api/filling-out-the-form.md) | 使用外部数据自动填充表单字段。在您的界面和文档之间实时同步表单值。 |
 | [使用内容控件](../../samples/automation-api/working-with-content-controls.md) | 添加不同类型的内容控件，并从外部 UI 查看其属性。 |
+| [处理水印](../../samples/automation-api/working-with-watermark.md) | 从自定义面板更改绘制在文档页面上的水印：文本、颜色、不透明度和角度。 |
 
 ## 快速入门
 

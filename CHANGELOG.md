@@ -1,5 +1,46 @@
 # Change log
 
+## 10.3.0
+
+### New features
+
+#### Docs API
+
+* Added the `document.options.watermark` and `document.options.watermark_on_draw` parameters: the watermark object, the `%user_name%` placeholder, opacity, watermarks in PDF and image downloads, and why a watermark is not access control
+* Added the Data retention page: what ONLYOFFICE Docs keeps while documents are edited, where and for how long, who can access the cache, and how to delete it
+* Added the Server components section to How it works: the DocService, FileConverter and Metrics processes, the external services they use, and the Node.js runtime bundled into the executables
+* Added an FAQ entry on what to do when ONLYOFFICE Docs cannot download files from a server with a self-signed certificate, in any integration
+* Added the Working with watermark Automation API sample, which changes the on-screen watermark from an external panel
+* Added the Opening the editor in a dialog sample: the editor in a dialog the user moves, resizes and closes with the editor's own button
+
+#### Common
+
+* Added an llms.txt link to the footer and named `/llms.txt` in the production robots.txt
+* Added a megaphone icon to the announcement bar
+
+### Improvements
+
+#### Docs API
+
+* Restructured the ownCloud and Nextcloud known issues: self-signed certificates and the background connection check now sit under Checking the connection, file conversion has its own section, and each remaining issue has a heading
+* Covered the ONLYOFFICE Docs side of self-signed certificates (`rejectUnauthorized`) and files shared without download permission on the ownCloud and Nextcloud pages, and file locking on the Nextcloud page
+* Used the connectors' current UI names on the ownCloud and Nextcloud pages
+* Removed the duplicated `watermark.*` rows from the conversion request table, which already links to the watermark object
+
+#### Localization
+
+* Synced the zh-CN ownCloud, Nextcloud, FAQ, document config, conversion request and How it works pages with English, and gave the zh-CN ownCloud, Nextcloud and How it works headings English anchors
+* Translated the Data retention page and the Working with watermark and Opening the editor in a dialog samples
+
+### Fixes
+
+* Fixed the "ownClowd" typo in the FAQ
+* Fixed the old help center `.aspx` links in the Docs API pages, connector guides, ONLYOFFICE Apps API backend pages and the plugin on-premises installation page
+* Fixed editor samples that never opened when they mounted while the Docs API script was still loading
+* Fixed the zh-CN help center links on the self-hosted, connector, FAQ, font sample and events pages, which led to the English help center instead of `/zh/docs/` and `/zh/integration/`
+* Fixed the broken link text on the zh-CN customizing FAQ
+* Fixed the missing description and tags on zh-CN Docs API sample pages
+
 ## 10.2.0
 
 ### New features
@@ -31,6 +72,7 @@
 #### AI
 
 * Removed the custom AI tools guide, the AI tools quick start and the AI tool samples, as AI Tools no longer supports adding custom tools
+* Removed the unlisted AI plugin sample page and redirected it to the AI Tools guide
 * Rewrote the AI overview around setting up and using AI Tools
 * Documented the current custom provider file format, based on the template from the editor
 * Updated the AI Tools guides and screenshots for the new name and current editor UI
@@ -71,6 +113,8 @@
 * Fixed the Paragraphs to table macro, which passed the column and row counts to `CreateTable` in the wrong order and copied list numbering into the cells
 * Fixed the Sort tables macro to compare cell text without the trailing cell and row separators or list numbering
 * Fixed the Remove empty tables macro deleting tables whose cells hold only images or other drawings
+* Fixed the Office API document and PDF editor samples that passed RGB values straight to `SetColor`, `SetBackgroundColor` and `SetBorderColor` instead of an `ApiColor` from `Api.RGB`
+* Fixed the playground plugin not being available in the PDF editor
 
 ## 10.1.0
 

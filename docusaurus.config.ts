@@ -20,7 +20,9 @@ function localize(translations: Record<string, string>): string {
   return translations[locale] ?? translations.en;
 }
 
-const announcementBarContent = localize({
+const announcementIcon = `<svg class="announcement-icon" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.7208 9.36632L9.06551 3.03521L4.38778 8.53469L5.6617 10.7412L12.7208 9.36632ZM4.5377 11.1928L3.4376 9.28738L2.74411 9.68777L3.8442 11.5932L4.5377 11.1928ZM3.26798 7.99944L8.24371 2.15087C8.7364 1.57179 9.6536 1.65536 10.0338 2.31381L13.8292 8.88765C14.2064 9.54151 13.8283 10.3723 13.0874 10.5169L5.56778 11.9828L4.35755 12.6816C3.83143 12.9853 3.15921 12.8052 2.85545 12.2791L1.65526 10.2003C1.35177 9.6742 1.53173 9.00187 2.05774 8.69817L3.26798 7.99944Z" fill="currentColor"/><path d="M8.59781 15.0259C8.11951 15.302 7.50792 15.1382 7.23178 14.6599L6.05563 12.6227C6.02026 12.5615 6.05795 12.4838 6.12798 12.4737L8.57983 12.1205C8.62031 12.1147 8.66025 12.1341 8.6807 12.1695L9.39685 13.4099C9.67299 13.8882 9.50911 14.4998 9.03082 14.7759L8.59781 15.0259Z" fill="currentColor"/></svg>`;
+
+const announcementBarContent = announcementIcon + localize({
   en: `<a target="_blank" href="https://www.onlyoffice.com/blog/category/onlyoffice_10_0?from=api"><b>Meet ONLYOFFICE Docs 10.0</b></a>: modular apps and AI tools, 50+ new features, 1,000 bug fixes, 35 fixed vulnerabilities, and more.`,
   'zh-CN': `<a target="_blank" href="https://www.onlyoffice.com/blog/zh-hans/category/onlyoffice_10_0-zh-hans?from=api"><b>了解 ONLYOFFICE 文档 10.0</b></a>：模块化应用与 AI 工具，50+ 新功能、1000 项错误修复、35 个漏洞修复等。`,
 });
@@ -207,7 +209,8 @@ const config: Config = {
         ],
       },
     ],
-    // Production keeps crawlers off tracking-parameter duplicates and names the sitemap;
+    // Production keeps crawlers off tracking-parameter duplicates and names the sitemap
+    // and llms.txt;
     // development is closed to crawlers on top of noIndex. Testing gets no robots.txt until
     // Google drops the api.teamlab.info pages it indexed before noIndex: a `Disallow: /`
     // would stop it re-crawling them and seeing the noindex tag. Then give it `['/']` too.
@@ -219,6 +222,7 @@ const config: Config = {
             ? {
                 disallow: ['/*?_ga=', '/*?from=', '/*?sa=', '/*?spm=', '/*?utm_source='],
                 sitemap: true,
+                llmsTxt: true,
               }
             : {disallow: ['/']},
         ],
@@ -410,6 +414,12 @@ const config: Config = {
             {
               label: 'Contact support',
               href: 'https://www.onlyoffice.com/support-contact-form?from=api',
+            },
+            {
+              // A static file, not a route: `pathname://` keeps the link checker off it and
+              // still prepends the locale's baseUrl, so zh-CN gets /zh-CN/llms.txt.
+              label: 'llms.txt',
+              to: 'pathname:///llms.txt',
             },
           ],
         },

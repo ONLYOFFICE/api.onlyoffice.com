@@ -198,7 +198,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 `comment` 字段是可选的，因为只要启用了 `fillForms` 参数并禁用了 `edit` 和 `review` 参数，注释都被禁用了。
 
-通过上面的配置，文档将在启用表单填写模式并禁用所有其他模式的情况下打开，从而使有权访问它的用户只能填写特殊[内容控件](https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/ONLYOFFICE-Document-Editor/UsageInstructions/InsertContentControls.aspx?from=api)中的字段。
+通过上面的配置，文档将在启用表单填写模式并禁用所有其他模式的情况下打开，从而使有权访问它的用户只能填写特殊[内容控件](https://helpcenter.onlyoffice.com/zh/docs/userguides/document-editor/operations-on-objects/insert-content-controls)中的字段。
 
 然后由您决定下一步做什么：对可编辑字段的更改将保存到同一个文档中，或者每次新用户访问和更改原始文档时都将创建一个新文档。
 

@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
 
 有关 WOPI 协议的更多信息，请阅读 [WOPI 文档](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/)。
 
-您可以在配置文件中查找和更改所有必要的 [WOPI 设置](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#WOPI) ，该文件可以在以下路径中找到（或创建）：
+您可以在配置文件中查找和更改所有必要的 [WOPI 设置](../get-started/configuration/server-config/server-config.md#wopi) ，该文件可以在以下路径中找到（或创建）：
 
 <Tabs>
   <TabItem value="windows" label="Windows">
@@ -45,7 +45,7 @@ import TabItem from '@theme/TabItem';
 
 ## 启用 WOPI {#enabling-wopi}
 
-要启用 WOPI，请将 ONLYOFFICE 文档配置中的 [wopi.enable](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable) 参数设置为 **true**:
+要启用 WOPI，请将 ONLYOFFICE 文档配置中的 [wopi.enable](../get-started/configuration/server-config/server-config.md#wopi.enable) 参数设置为 **true**:
 
 ### 参数
 
@@ -67,7 +67,7 @@ import TabItem from '@theme/TabItem';
 
 ONLYOFFICE 文档只能与受信任的 WOPI 主机配合使用。这与 WOPI 文档中的 [WOPI 域允许列表](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list)是同一理念。请在 IP 过滤器规则中允许您的 WOPI 主机，并拒绝所有其他主机。
 
-按照以下步骤配置 ONLYOFFICE 文档 [IP 过滤器](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter)：
+按照以下步骤配置 ONLYOFFICE 文档 [IP 过滤器](../get-started/configuration/server-config/server-config.md#ip-filter)：
 
 1. 使用任何可用的文本编辑器打开 */etc/onlyoffice/documentserver/local.json* 文件：
 

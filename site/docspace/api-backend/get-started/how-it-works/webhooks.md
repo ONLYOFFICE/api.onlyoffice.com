@@ -11,7 +11,7 @@ Webhooks are HTTP/HTTPS callbacks triggered by events (triggers) related to port
 
 The triggers for a particular webhook are activated only if the webhook owner has access rights to the entity being modified. ONLYOFFICE Apps users can view only their own webhooks, while ONLYOFFICE Apps administrators can see all webhooks on the portal.
 
-Instructions for creating and configuring webhooks can be found [here](https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx).
+Instructions for creating and configuring webhooks can be found [here](https://helpcenter.onlyoffice.com/docspace/configuration/configuring-workspace-settings/docspace-webhooks).
 
 API methods for working with webhooks are detailed [in this section](../../../../docspace/api-backend/usage-api/settings/webhooks/get-tenant-webhooks.md).
 
@@ -90,7 +90,7 @@ On each retry, additional information is added to the request body, including er
 - `lastFailureContent` - error information from the last failed attempt;
 - `lastSuccessOn` - time of the last successful request for the current webhook.
 
-SSL verification is set during the webhook configuration. See the [instructions for creating webhooks](https://helpcenter.onlyoffice.com/docspace/configuration/docspace-webhooks.aspx).
+SSL verification is set during the webhook configuration. See the [instructions for creating webhooks](https://helpcenter.onlyoffice.com/docspace/configuration/configuring-workspace-settings/docspace-webhooks).
 
 If the response contains a [410 Gone](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/410) status, the webhook is removed from the portal.
 

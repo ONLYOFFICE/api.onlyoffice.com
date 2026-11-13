@@ -23,3 +23,8 @@ yarn-error.log*
 
 # IDE's
 /.idea
+
+# Claude Code
+/.claude/
+/CLAUDE.md
+/TODO.md

@@ -9,34 +9,32 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="vN9v9sJ0HVw"/>
 
-这个[应用程序](https://github.com/ONLYOFFICE/onlyoffice-nextcloud)允许用户借助 ONLYOFFICE 文档在 [Nextcloud](https://nextcloud.com) 中编辑办公文档。
+适用于 Nextcloud 的 ONLYOFFICE 应用允许用户借助 ONLYOFFICE 文档在 [Nextcloud](https://nextcloud.com) 中编辑办公文档。其源代码托管在 [GitHub](https://github.com/ONLYOFFICE/onlyoffice-nextcloud) 上，最新的已签名版本可在 [Nextcloud 应用商店](https://apps.nextcloud.com/apps/onlyoffice)获取。
 
-最新的已签名连接器版本可在 [Nextcloud 应用商店](https://apps.nextcloud.com/apps/onlyoffice)获取。
-
-## 功能特性
+## 功能特性 {#features}
 
 - 目前，使用该应用程序可打开并编辑以下文档格式：DOCM、DOCX、DOTM、DOTX、PDF、POTM、POTX、PPSM、PPSX、PPTM、PPTX、XLSB、XLSM、XLSX、XLTM、XLTX。
 - 仅支持查看的文档格式为：CSV、DJVU、DOC、DOT、DPS、DPT、EPUB、ET、ETT、FB2、FODP、FODS、FODT、HTM、HTML、HWP、HWPX、KEY、MD、MHT、MHTML、NUMBERS、ODG、ODP、ODS、ODT、OTP、OTS、OTT、OXPS、PAGES、POT、PPS、PPT、RTF、STW、SXC、SXI、SXW、TSV、TXT、VSDM、VSDX、VSSM、VSSX、VSTM、VSTX、WPS、WPT、XLS、XLT、XML、XPS。
 - 以下格式可转换为 OOXML 格式：DOC、DOCM、DOT、DOTX、EPUB、HTM、HTML、ODP、ODT、POT、POTM、POTX、PPS、PPSM、PPSX、PPT、PPTM、RTF、XLS、XLSM、XLT、XLTM、XLTX。
 - 该应用程序会在**新建（+）**菜单中创建用于创建**文档**、**电子表格**、**演示文稿**、**PDF** 的选项。它还会在文档库中为 Office 文档创建一个新的**在 ONLYOFFICE 中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回 Nextcloud。连接到同一文档服务器的多个联合 Nextcloud 实例之间也支持协同编辑。
 
-## 安装 ONLYOFFICE 文档
+## 安装 ONLYOFFICE 文档 {#installing-onlyoffice-docs}
 
-您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Nextcloud 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向 Nextcloud 发送 POST 请求。
+您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Nextcloud 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/zh/docs/installation/community/linux/installing/install-ubuntu)。ONLYOFFICE 文档还必须能够直接向 Nextcloud 发送 POST 请求。
 
-ONLYOFFICE 文档和 Nextcloud 可以安装在不同的计算机上，也可以安装在同一台机器上。如果选择后者，您需要为文档服务器设置一个自定义端口，因为默认情况下 ONLYOFFICE 文档和 Nextcloud 都使用 80 端口。或者您可以在代理服务器后使用 ONLYOFFICE 文档，有关配置方法，请参考[这篇文章](https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx)。
+ONLYOFFICE 文档和 Nextcloud 可以安装在不同的计算机上，也可以安装在同一台机器上。如果选择后者，您需要为文档服务器设置一个自定义端口，因为默认情况下 ONLYOFFICE 文档和 Nextcloud 都使用 80 端口。或者您可以在代理服务器后使用 ONLYOFFICE 文档，有关配置方法，请参考[这篇文章](https://helpcenter.onlyoffice.com/zh/docs/configuration/community/docker/proxy)。
 
 使用 [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer) 是启动 ONLYOFFICE 文档实例的最简单方法。
 
 您也可以使用我们的 [Docker 安装方式](https://github.com/ONLYOFFICE/docker-onlyoffice-nextcloud)，通过几条命令就能完成 ONLYOFFICE 文档和 Nextcloud 的安装与配置。
 
-## 安装 Nextcloud ONLYOFFICE 集成应用程序
+## 安装 Nextcloud ONLYOFFICE 集成应用程序 {#installing-onlyoffice-app-for-nextcloud}
 
 Nextcloud 管理员可以从内置应用市场安装集成应用程序。为此，点击用户名并选择**应用**。然后，在可用应用列表中找到 **ONLYOFFICE** 并进行安装。
 
 如果安装 Nextcloud 的服务器没有互联网访问权限，或者由于其他原因需要手动安装，管理员可以按以下步骤手动安装该应用程序。要在 Nextcloud 中使用 ONLYOFFICE 文档，必须执行以下步骤：
 
-1. 进入 Nextcloud 服务器的*apps/*目录（或[用于](https://docs.nextcloud.com/server/stable/admin_manual/apps_management.html#using-custom-app-directories)连接应用程序的其他目录）:
+1. 进入 Nextcloud 服务器的 *apps/* 目录（或[用于](https://docs.nextcloud.com/server/stable/admin_manual/apps_management.html#using-custom-app-directories)连接应用程序的其他目录）：
 
    ``` sh
    cd apps/
@@ -76,11 +74,11 @@ Nextcloud 管理员可以从内置应用市场安装集成应用程序。为此�
     chown -R www-data:www-data onlyoffice
     ```
 
-6. 在 Nextcloud 中，管理员打开包含**未启用**应用的*\~/settings/apps/disabled*页面，并为 **ONLYOFFICE** 应用点击**启用**。
+6. 在 Nextcloud 中，管理员打开包含**未启用**应用的 *\~/settings/apps/disabled* 页面，并为 **ONLYOFFICE** 应用点击**启用**。
 
-## 配置 Nextcloud ONLYOFFICE 集成应用程序 {#configuring-nextcloud-onlyoffice-integration-app}
+## 配置 Nextcloud ONLYOFFICE 集成应用程序 {#configuring-onlyoffice-app-for-nextcloud}
 
-在 Nextcloud 中，打开包含 **ONLYOFFICE** 部分管理设置的*\~/settings/admin/onlyoffice*页面。输入以下地址来连接 ONLYOFFICE 文档：
+在 Nextcloud 中，打开包含 **ONLYOFFICE** 部分管理设置的 *\~/settings/admin/onlyoffice* 页面。输入以下地址来连接 ONLYOFFICE 文档：
 
 ```sh
 https://<文档服务器地址>/
@@ -90,7 +88,7 @@ https://<文档服务器地址>/
 
 ![本地的](/assets/images/editor/nextcloud-local.jpg)
 
-有时，网络配置可能会导致已安装的 Nextcloud 和 ONLYOFFICE 文档之间无法通过公共地址进行请求。**高级服务器设置**允许设置 Nextcloud 服务器内部请求的 ONLYOFFICE 文档地址，以及 ONLYOFFICE 文档内部请求的返回 Nextcloud 地址。您需要在相应字段中输入这些地址。
+有时，网络配置可能会导致已安装的 Nextcloud 和 ONLYOFFICE 文档之间无法通过公共地址进行请求。**更多设置**允许设置 Nextcloud 服务器内部请求的 ONLYOFFICE 文档地址，以及 ONLYOFFICE 文档内部请求的返回 Nextcloud 地址。您需要在相应字段中输入这些地址。
 
 ![公共](/assets/images/editor/nextcloud-public.jpg)
 
@@ -100,7 +98,7 @@ https://<文档服务器地址>/
 
 **在 ONLYOFFICE 中打开**操作将添加到文件上下文菜单中。您可以将此操作设置为默认操作，这样在点击选定文件类型的文件名时，就会使用该操作。
 
-### ONLYOFFICE Nextcloud 连接器：配置参数
+### ONLYOFFICE Nextcloud 连接器：配置参数 {#onlyoffice-connector-for-nextcloud-configuration-parameters}
 
 以下是 ONLYOFFICE Nextcloud 集成应用程序的所有可用配置参数，分为以下三个表格：
 
@@ -110,7 +108,7 @@ https://<文档服务器地址>/
 
 部分参数（例如`DocumentServerUrl`、`jwt_secret`、`jwt_header`、`verify_peer_off`）两种方式均可设置，因此它们会同时出现在基本配置和高级配置表格中。对于这些参数，仅当未通过界面或`occ`命令设置值时，连接器才会从`config/config.php`中读取。
 
-#### 基本配置（UI / `occ`）
+#### 基本配置（UI / `occ`） {#basic-configuration-ui--occ}
 
 这些设置可通过 Nextcloud 管理界面或`occ`命令进行配置。
 
@@ -156,7 +154,7 @@ php occ config:app:set onlyoffice customizationChat --value=false
 ```
 :::
 
-#### 水印设置
+#### 水印设置 {#watermark-settings}
 
 水印设置（`watermark_*`键）存储在`files`应用下，而非`onlyoffice`。使用`files`作为应用 ID 通过`occ`进行设置：
 
@@ -182,7 +180,7 @@ php occ config:app:set files {watermark_setting_key} --value={setting_value}
 | `watermark_linkTags`      | 在带有`watermark_linkTagsList`中所列系统标签的链接共享中显示水印。                                    | `no`                 |
 | `watermark_linkTagsList`  | 以逗号分隔的系统标签 ID 列表，其链接共享将显示水印。示例：`3,7`。                                        | 空                   |
 
-#### 高级配置（`config/config.php`）
+#### 高级配置（`config/config.php`） {#advanced-configuration-configconfigphp}
 
 您可以在`config/config.php`文件中定义以下参数来自定义 ONLYOFFICE 连接器的行为：
 
@@ -218,7 +216,7 @@ php occ config:app:set files {watermark_setting_key} --value={setting_value}
 ?>
 ```
 
-## 检查连接
+## 检查连接 {#checking-the-connection}
 
 您可以使用以下 `occ` 命令检查与 ONLYOFFICE 文档的连接：
 
@@ -228,7 +226,48 @@ occ onlyoffice:documentserver --check
 
 您将看到一段文本，内容要么是连接成功的信息，要么是错误原因。
 
-## 高级文档权限
+### 自签名证书 {#self-signed-certificates}
+
+如果您正在为您的 ONLYOFFICE 文档使用自签名证书，Nextcloud 将不会验证此类证书，并且不允许与 ONLYOFFICE 文档进行连接。您可以通过以下两种方式之一关闭证书验证：
+
+1. 在 Nextcloud 的 ONLYOFFICE 管理页面**服务器设置**部分，勾选**关闭证书校验（不安全）**复选框。
+2. 手动更改 Nextcloud 配置文件。找到 Nextcloud 配置文件（*/nextcloud/config/config.php*）并打开它。在 `$CONFIG` 数组中添加以下条目（如果数组中已有 `onlyoffice` 条目，请将该键添加到其中）：
+
+   ```php
+   'onlyoffice' => array (
+       'verify_peer_off' => true,
+   ),
+   ```
+
+   只有在从未通过界面或 `occ` 命令设置过 `verify_peer_off` 时，Nextcloud 才会读取此条目（参见[基本配置](#basic-configuration-ui--occ)）。保存服务器设置后，以**关闭证书校验（不安全）**复选框为准。
+
+这将禁用证书验证，允许 Nextcloud 与 ONLYOFFICE 文档建立连接。此设置仅适用于 Nextcloud 向 ONLYOFFICE 文档发出的请求，不适用于通过**联合云共享**连接的 Nextcloud 实例之间的请求。
+
+如果 Nextcloud 也使用自签名证书，ONLYOFFICE 文档同样无法从 Nextcloud 下载文件。要在 ONLYOFFICE 文档一侧禁用证书验证，请在 ONLYOFFICE 文档的 *local.json* 配置文件中将 [`services.CoAuthoring.requestDefaults.rejectUnauthorized`](../configuration/server-config/server-config.md#services.CoAuthoring.requestDefaults.rejectUnauthorized) 参数设置为 `false`，然后重启 ONLYOFFICE 文档服务。
+
+:::note
+请记住，这是一个临时的不安全解决方案，我们强烈建议您更换为由受信任的证书颁发机构颁发的证书。完成更换后，不要忘记取消勾选**关闭证书校验（不安全）**复选框（如果从未通过界面或 `occ` 命令设置过 `verify_peer_off`，则从 `config.php` 中删除上述条目），并将 `rejectUnauthorized` 恢复为 `true`。
+:::
+
+### 后台连接检查 {#background-connection-check}
+
+如果编辑器在正常运行一段时间后无法打开或保存文档，原因可能是网络设置更改、相关服务被禁用或 SSL 证书存在问题。
+
+为了发现这类问题，ONLYOFFICE 应用会在服务器上运行一个后台任务，检查您的 **Nextcloud 实例**和 **ONLYOFFICE 文档**之间的连接，即检查服务器地址的可用性和 JWT 密钥的有效性。如果 ONLYOFFICE 文档使用的 Nextcloud 地址是 `localhost` 或 `127.0.0.1`，则会跳过此检查。在这种情况下，请在**更多设置**中指定 **ONLYOFFICE Docs 内部请求服务器的地址**。
+
+如果检测到任何问题，ONLYOFFICE 编辑器将不再注册，因此无法再在 ONLYOFFICE 中创建或打开文件。`admin` 组的成员将收到通知；如果勾选了**启用电子邮件通知**复选框（默认勾选），还会收到电子邮件。在错误存在期间，检查不会再次运行，因此编辑器不会自动恢复。请排除问题，然后在管理页面上保存服务器设置，或运行 `occ onlyoffice:documentserver --check`。连接成功后，编辑器将恢复。
+
+默认情况下，此后台任务每天运行一次（`86400` 秒）。如有必要，您可以使用 `editors_check_interval` 参数更改运行频率（参见[高级配置](#advanced-configuration-configconfigphp)）。为此，打开 Nextcloud 配置文件（*/nextcloud/config/config.php*），在 `$CONFIG` 数组中添加该条目，并输入所需的秒数。例如，若要每小时检查一次：
+
+```php
+'onlyoffice' => array (
+    'editors_check_interval' => 3600,
+),
+```
+
+要关闭此检查，请在管理页面上取消勾选**启用编辑器后台连接检查**复选框（即[基本配置](#basic-configuration-ui--occ)中的 `cronChecker` 参数），或将 `editors_check_interval` 设置为 `0`。
+
+## 高级文档权限 {#advanced-document-permissions}
 
 高级标签页允许您仅向共享标签页中指定的用户授予额外的访问权限，而不允许他们重新共享文件。根据所选的自定义权限选项和文件类型（docx、pptx、xlsx），您可以授予不同的额外权限。
 
@@ -237,90 +276,69 @@ occ onlyoffice:documentserver --check
 - 如果 **PPTX** 文件在共享标签页中以自定义权限（启用编辑，禁用共享）方式共享，您可以在高级标签页中将权限设置为仅评论（**仅评论**）。
 - 如果 **PDF** 文件在共享标签页中以自定义权限（启用编辑，禁用共享）方式共享，您可以在高级标签页中将权限设置为仅填写（**表单填写**）。
 
-## 工作原理
+## 工作原理 {#how-it-works}
 
 ONLYOFFICE 集成遵循此处记录的 API 规范：[此处](../basic-concepts.md)。
 
 1. 创建新文件时，用户在 Nextcloud 中导航到文档文件夹，然后点击**新建（+）**菜单中的**文档**、**电子表格**或**演示文稿**选项。
 
-2. 浏览器调用*/lib/Controller/editorController.php*控制器中的*create*方法。此方法会将*assets*文件夹中的文件副本添加到用户当前所在的文件夹中。
+2. 浏览器调用 */lib/Controller/editorController.php* 控制器中的 *create* 方法。此方法会将 *assets* 文件夹中的文件副本添加到用户当前所在的文件夹中。
 
 3. 打开现有文件时，用户在 Nextcloud 中找到该文件，并选择**在 ONLYOFFICE 中打开**菜单项。
 
-4. 会打开一个新的浏览器标签页，并调用*/lib/Controller/editorController.php*控制器中的*index*方法。
+4. 会打开一个新的浏览器标签页，并调用 */lib/Controller/editorController.php* 控制器中的 *index* 方法。
 
 5. 应用程序准备一个包含以下属性的 JSON 对象：
 
    - **url**：ONLYOFFICE 文档用于下载文档的 URL；
    - **callbackUrl**：ONLYOFFICE 文档用于通知文档编辑状态的 URL；
    - **documentServerUrl**：客户端需要响应给 ONLYOFFICE 文档的 URL（可在管理设置页面中设置）；
-   - **key**：由*UUID+ 修改时间戳*组成，用于指示 ONLYOFFICE 文档是否需要重新下载文档。
+   - **key**：由 *UUID+ 修改时间戳* 组成，用于指示 ONLYOFFICE 文档是否需要重新下载文档。
 
-6. Nextcloud 获取该对象，并从*templates/editor.php*模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。
+6. Nextcloud 获取该对象，并从 *templates/editor.php* 模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。
 
 7. 客户端浏览器向 ONLYOFFICE 文档的 JavaScript 库发出请求，并将包含上述属性的 DocEditor 配置发送给 ONLYOFFICE 文档。
 
 8. 然后，ONLYOFFICE 文档从 Nextcloud 下载文档，用户开始编辑。
 
-9. ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，通知 Nextcloud 有用户正在编辑文档。
+9. ONLYOFFICE 文档向 *callbackUrl* 发送 POST 请求，通知 Nextcloud 有用户正在编辑文档。
 
 10. 当所有用户和客户端浏览器完成编辑后，他们关闭编辑窗口。
 
-11. 在[10 秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向*callbackUrl*发送 POST 请求，告知 Nextcloud 客户端已完成文档编辑并关闭了它。
+11. 在 [10 秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向 *callbackUrl* 发送 POST 请求，告知 Nextcloud 客户端已完成文档编辑并关闭了它。
 
 12. Nextcloud 下载文档的新版本，替换旧版本。
 
-## 已知问题
+## 文件转换 {#converting-files}
 
-- **连接外部存储**：在某些情况下，使用**外部存储**应用添加存储时，协同编辑会出现问题。如果使用相同的授权密钥进行连接（选择*用户名和密码*或*全局凭证*身份验证类型），则用户可以进行协同编辑。如果使用不同的授权密钥（*登录凭据，保存到数据库*或*用户输入，存储到数据库*身份验证选项），则无法进行协同编辑。当使用*登录凭据，保存到会话*身份验证类型时，文件无法在编辑器中打开。
+ONLYOFFICE 文档在打开和编辑文件时以 Office Open XML 格式为基础。如果文件格式与 OOXML 不同，为了使 ONLYOFFICE 文档能够正常工作并提高性能，文件仍将转换为相应的 OOXML 格式。将文件保存为原始格式时，文件将从 OOXML 转换回该格式。由于这些格式在根本上存在差异，一些数据（如图表、表格、自选图形或图像）和格式可能会丢失，这是因为一些格式（*csv*、*txt* 等）不支持这些内容，或者对它们的处理方式与 OOXML 标准不同。
 
-- **证书验证**：如果文档服务器使用自签名证书，Nextcloud 将不会验证此类证书，并且不允许与 ONLYOFFICE 文档进行连接。这个问题可以通过两种方式解决：
+因此，ONLYOFFICE 应用对不同格式的处理方式不同：
 
-  1. 在 Nextcloud 的 ONLYOFFICE 管理页面服务器设置部分，勾选**禁用证书验证（不安全）** 复选框。
-  2. 手动更改 Nextcloud 配置文件。找到 Nextcloud 配置文件（*/Nextcloud/config/config.php*）并打开它。在其中插入以下部分：
+- OOXML 文件和 *pdf* 文件以编辑模式打开。
+- 可以编辑但可能丢失数据的格式，例如 *odt*、*ods*、*odp*、*rtf*、*txt*、*csv*、*tsv*、*epub* 或 *html*，默认仅支持查看。要以编辑模式打开这些格式，请在设置中的**默认的文件编辑器（由于文件格式限制，保存为下列格式时，数据可能会缺失）**列表中勾选它们。*txt* 和 *csv* 默认已勾选。
+- 其他格式，例如 *doc*、*xls*、*ppt*、*md* 或 *hwp*，仅支持查看，无法编辑。
 
-  ``` php
-  <?php
-  'onlyoffice' => array (
-      'verify_peer_off' => true
-  )
-  ?>
-  ```
+对于 *doc*、*xls*、*ppt* 等格式，以及上述列表中的 *odt*、*ods*、*odp*、*rtf* 等格式（*txt*、*csv* 和 *tsv* 除外），文件上下文菜单中提供**用 ONLYOFFICE 转换**选项。该选项会在同一文件夹中创建文件的 OOXML 副本。
 
-  这将禁用证书验证，允许 Nextcloud 与 ONLYOFFICE 文档建立连接。
+## 已知问题 {#known-issues}
 
-  :::note
-  请记住，这是一个临时的不安全解决方案，我们强烈建议您更换为由某些证书颁发机构颁发的证书。完成更换后，不要忘记取消勾选相应的设置框或从 Nextcloud 配置文件中删除上述部分内容。
-  :::
+如果您遇到此处未列出的问题，请在该应用的 [GitHub 问题跟踪器](https://github.com/ONLYOFFICE/onlyoffice-nextcloud/issues)中报告。
 
--  **后台任务**：如果编辑器在正常运行一段时间后无法打开或保存文档，原因可能是网络设置更改、相关服务被禁用或 SSL 证书存在问题。
+### 连接外部存储 {#connecting-external-storages}
 
- 为了解决这个问题，我们添加了一个在服务器上运行的异步后台任务，用于检查编辑器的可用性。它可以测试您的 **Nextcloud 实例**和 **ONLYOFFICE 文档**之间的连接，即检查服务器地址的可用性和 JWT 密钥的有效性。
+在某些情况下，使用**外部存储**应用添加存储时，协同编辑会出现问题。如果使用相同的授权密钥进行连接（选择*用户名和密码*或*全局凭证*身份验证类型），则用户可以进行协同编辑。如果使用不同的授权密钥（*登录凭据，保存到数据库*或*用户输入，存储到数据库*身份验证选项），则无法进行协同编辑。当使用*登录凭据，保存到会话*身份验证类型时，文件无法在编辑器中打开。要完全禁止在 ONLYOFFICE 中打开外部存储中的文件，请使用 `restrictExternalStorage` 参数（参见[基本配置](#basic-configuration-ui--occ)）。
 
- 如果检测到任何问题，ONLYOFFICE 集成连接器（以及创建和打开文件的功能）将被禁用。作为 Nextcloud 管理员，您将收到相应的通知。
+### 联合云共享 {#federated-cloud-sharing}
 
- 此选项可帮助您避免因服务器设置不正确而需要更改设置时出现的问题。
+如果使用**联合云共享**应用共享文档，连接到不同 ONLYOFFICE 服务器的 Nextcloud 实例之间将无法进行协同编辑。连接到同一 ONLYOFFICE 文档服务器的用户可以协同编辑文档，但连接到两个（或更多）不同 ONLYOFFICE 文档服务器的用户将无法实时协作处理同一文档。协同编辑还要求远程实例上安装 ONLYOFFICE 应用，因为文档标识符需要从远程实例获取。如果没有该应用，文件仍可打开，但两个实例的用户将在不同的会话中编辑文件。
 
- 默认情况下，此后台任务每天运行一次（`86400`秒）。如有必要，您可以更改运行频率。为此，打开 Nextcloud 配置文件（*\_/Nextcloud/config/config.php\_*）。插入以下部分并输入所需的秒数。例如，若要每小时检查一次：
+### 无下载权限共享的文件 {#files-shared-without-download-permission}
 
-  ``` php
-  <?php
-  "onlyoffice" => array (
-      "editors_check_interval" => 3600
-  )
-  ?>
-  ```
+ONLYOFFICE 文档需要从 Nextcloud 下载文件才能将其打开。对于在没有下载权限的情况下共享的文件，只有在 ONLYOFFICE 设置中指定了**秘钥**时，Nextcloud 才允许此下载。如果未指定秘钥，此类文件将无法在编辑器中打开。
 
-  要禁用此检查，请输入值 0。
+当用户访问没有下载权限的文档时，文件打印和使用系统剪贴板的功能不可用。不过，可以通过编辑器工具栏和上下文菜单中的按钮在编辑器内进行复制和粘贴操作。`disable_download` 参数（参见[高级配置](#advanced-configuration-configconfigphp)）在编辑器中对所有用户和文件具有相同的效果。
 
-- **联合云共享**：如果使用**联合云共享**应用共享文档，连接到不同 ONLYOFFICE 服务器的 Nextcloud 实例之间将无法进行协同编辑。来自同一文档服务器的用户可以在协同编辑模式下编辑文档，但来自两个（或更多）不同文档服务器的用户将无法实时协作处理同一文档。
+### 在其他工具中同时编辑 {#editing-in-other-tools-at-the-same-time}
 
-- **文件转换**：ONLYOFFICE 文档在打开和编辑文件时以 Office Open XML 格式为基础。如果文件格式与 OOXML 不同，为了使 ONLYOFFICE 文档能够正常工作并提高性能，文件仍将转换为相应的 OOXML 格式。之后您可以编辑文件，对基础 OOXML 格式进行任何更改，并将文件保存为该基础 OOXML 格式。
-
-  如果原始 Nextcloud 文件格式与基础格式不同，而您仍想将其保存为原始格式，文件将从 OOXML 转换回该格式。由于这些格式在根本上存在差异，一些数据（如图表、表格、自选图形或图像）和格式可能会丢失，这是因为一些格式（*csv*、*txt* 等）不支持这些内容，或者对它们的处理方式与 OOXML 标准不同。这就是为什么默认情况下所有非 OOXML 文件仅支持查看，尽管在上下文菜单中有转换文件的选项。如果您了解转换后可能会丢失数据/格式，但仍想打开非 OOXML 文件进行编辑，可以在设置列表中勾选这些文件。默认情况下，*csv*和*txt*文件支持编辑。
-
-- 当用户访问没有下载权限的文档时，文件打印和使用系统剪贴板的功能不可用。不过，可以通过编辑器工具栏和上下文菜单中的按钮在编辑器内进行复制和粘贴操作。
-
-- 当文件在 ONLYOFFICE 中打开编辑的同时，也在其他工具中被编辑时，更改可能会被覆盖或丢失。为避免冲突并确保顺畅协作，我们建议使用临时文件锁定应用程序：https://apps.nextcloud.com/apps/files_lock。这有助于防止并行编辑并保护您的工作。
-
-在此处下载 Nextcloud ONLYOFFICE 集成应用程序：[此处](https://github.com/ONLYOFFICE/onlyoffice-nextcloud)。
+如果安装了锁提供程序，例如 [Temporary File Lock](https://apps.nextcloud.com/apps/files_lock) 应用，ONLYOFFICE 应用将使用 Nextcloud 文件锁定：在 ONLYOFFICE 中编辑文件时锁定该文件，并以仅查看模式打开被其他用户或应用锁定的文件。如果没有锁提供程序，则无法阻止文件同时在 ONLYOFFICE 和其他工具中被编辑，更改可能会被覆盖或丢失。

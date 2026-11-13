@@ -21,7 +21,7 @@ This [app](https://github.com/ONLYOFFICE/onlyoffice-odoo) enables users to edit 
 
 ## Installing ONLYOFFICE Docs
 
-You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Odoo and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to Odoo directly.
+You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Odoo and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/docs/installation/community/linux/installing/install-ubuntu). ONLYOFFICE Docs must also be able to POST to Odoo directly.
 
 The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer).
 
@@ -92,7 +92,7 @@ You can create, upload, and use fillable form templates within the **ONLYOFFICE 
 - The **ONLYOFFICE Templates** module in Odoo (automatically installs the main ONLYOFFICE module).
 
 :::info
-For Odoo integration specifics, see the [ONLYOFFICE Odoo connector guide](https://helpcenter.onlyoffice.com/integration/odoo.aspx).
+For Odoo integration specifics, see the [ONLYOFFICE Odoo connector guide](https://helpcenter.onlyoffice.com/integration/docs/odoo).
 :::
 
 :::note

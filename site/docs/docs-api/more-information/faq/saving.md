@@ -95,7 +95,7 @@ Normally the document is not physically saved to the computer hard disk drive in
 
 After that the **document editing service** informs the **document storage service** that the file is ready and can be downloaded.
 
-The time between the end of the editing and the conversion start is set in the **default.json** configuration file with the [services.CoAuthoring.server.savetimeoutdelay](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay) parameter (5000 milliseconds or 5 seconds by default) and can be changed:
+The time between the end of the editing and the conversion start is set in the **default.json** configuration file with the [services.CoAuthoring.server.savetimeoutdelay](../../get-started/configuration/server-config/server-config.md#services.CoAuthoring.server.savetimeoutdelay) parameter (5000 milliseconds or 5 seconds by default) and can be changed:
 
   ``` json
   {

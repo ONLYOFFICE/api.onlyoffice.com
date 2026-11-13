@@ -75,7 +75,8 @@
 
 - [在哪里可以找到 ONLYOFFICE 文档的集成示例？](integrating.md#where-can-i-find-integration-examples-for-onlyoffice-docs)
 - [在将 ONLYOFFICE 文档与我的网站集成时，我应该指定哪些路径？](integrating.md#which-paths-should-i-specify-when-integrating-onlyoffice-docs-with-my-website)
-- [通过本地和公共网络将 ONLYOFFICE 连接到 ownClowd/Nextcloud 时应该使用哪些设置？](integrating.md#what-settings-should-be-used-when-connecting-onlyoffice-to-ownclowdnextcloud-via-a-local-and-public-network)
+- [通过本地和公共网络将 ONLYOFFICE 连接到 ownCloud/Nextcloud 时应该使用哪些设置？](integrating.md#what-settings-should-be-used-when-connecting-onlyoffice-to-owncloudnextcloud-via-a-local-and-public-network)
+- [ONLYOFFICE 文档无法从使用自签名证书的服务器下载文件，我该怎么办？](integrating.md#onlyoffice-docs-cannot-download-a-file-from-my-server-that-uses-a-self-signed-certificate-what-should-i-do)
 
 [更多](integrating.md)
 

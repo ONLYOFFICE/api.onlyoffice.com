@@ -1,0 +1,103 @@
+.demo-section {
+  margin-bottom: 12px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background-color: var(--watermark-demo-bg);
+}
+
+.controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.controls-label {
+  font-size: 14px;
+  color: var(--watermark-controls-label-color);
+  margin-right: 6px;
+}
+
+.text-input,
+.select {
+  height: 34px;
+  padding: 0 5px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--watermark-input-color);
+  border: 1px solid var(--watermark-input-border-color);
+  border-radius: 3px;
+  background-color: var(--watermark-input-bg);
+}
+
+.text-input {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+.text-input:focus,
+.select:focus {
+  outline: none;
+  border-color: #ff6f3d;
+}
+
+.text-input:focus-visible,
+.select:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid #ff6f3d;
+  outline-offset: 1px;
+}
+
+.btn {
+  cursor: pointer;
+  height: 34px;
+  padding: 0 16px;
+
+  text-decoration: none !important;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1em;
+
+  color: var(--watermark-btn-color);
+  border: 1px solid var(--watermark-btn-border-color);
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.btn:disabled {
+  cursor: default;
+  color: var(--watermark-btn-disabled-color);
+  border-color: var(--watermark-btn-disabled-border-color);
+}
+
+:root {
+  --watermark-demo-bg: #f5f5f0;
+  --watermark-controls-label-color: #666666;
+  --watermark-input-color: #333333;
+  --watermark-input-border-color: #aaaaaa;
+  --watermark-input-bg: #ffffff;
+  --watermark-btn-color: #444444;
+  --watermark-btn-border-color: #aaaaaa;
+  --watermark-btn-disabled-color: #cccccc;
+  --watermark-btn-disabled-border-color: #cccccc;
+}
+
+html[data-theme="dark"] {
+  --watermark-demo-bg: #2a2a2a;
+  --watermark-controls-label-color: #aaaaaa;
+  --watermark-input-color: #d4d4d4;
+  --watermark-input-border-color: #747474;
+  --watermark-input-bg: #333333;
+  --watermark-btn-color: #d4d4d4;
+  --watermark-btn-border-color: #cecece;
+  --watermark-btn-disabled-color: #6b6b6b;
+  --watermark-btn-disabled-border-color: #747474;
+}
+
+@media (hover: hover) {
+  .btn:hover:not(:disabled) {
+    color: #ff6f3d;
+    border: 1px solid #ff6f3d;
+  }
+}

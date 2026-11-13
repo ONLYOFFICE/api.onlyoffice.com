@@ -30,7 +30,7 @@ When ONLYOFFICE Apps sends a webhook to your backend, the receiver:
 
 ## Webhook configuration
 
-This example relies on ONLYOFFICE Apps webhooks. To register and manage webhooks on your portal, see [Webhooks](/docspace/api-backend/get-started/how-it-works/webhooks.md) and the Help Center instructions: https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx.
+This example relies on ONLYOFFICE Apps webhooks. To register and manage webhooks on your portal, see [Webhooks](/docspace/api-backend/get-started/how-it-works/webhooks.md) and the Help Center instructions: https://helpcenter.onlyoffice.com/docspace/configuration/configuring-workspace-settings/docspace-webhooks.
 
 - Register a webhook and enable the triggers used in this example.
 - Set the payload URL to your backend endpoint.

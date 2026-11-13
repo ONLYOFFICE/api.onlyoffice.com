@@ -15,7 +15,7 @@ sidebar_custom_props:
 
 ## 安装 ONLYOFFICE 文档
 
-您需要部署一个 ONLYOFFICE 文档（文档服务器）实例，确保 WordPress 和任意终端客户端都能解析并连接到它。若无法实现连接，请参考官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。此外，ONLYOFFICE 文档还需具备直接向 WordPress 发送 POST 请求的能力。
+您需要部署一个 ONLYOFFICE 文档（文档服务器）实例，确保 WordPress 和任意终端客户端都能解析并连接到它。若无法实现连接，请参考官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/zh/docs/installation/community/linux/installing/install-ubuntu)。此外，ONLYOFFICE 文档还需具备直接向 WordPress 发送 POST 请求的能力。
 
 使用 [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer) 是安装 ONLYOFFICE 文档实例，最简单的方式。
 

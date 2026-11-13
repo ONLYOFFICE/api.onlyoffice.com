@@ -1,6 +1,8 @@
 ---
 sidebar_position: -1
 hide_table_of_contents: true
+description: 从外部 UI 填写表单字段，并支持双向同步。
+tags: ["Docs", "Integration", "External access", "Automation API"]
 ---
 
 import { FormExternalToolbar } from '@site/src/components/BrowserWindow';

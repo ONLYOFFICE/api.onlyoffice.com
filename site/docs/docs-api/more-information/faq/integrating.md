@@ -48,8 +48,16 @@ Most of the connectors are available from the corresponding service application 
 
 After you download and unpack the examples for integration ONLYOFFICE Docs with your website, you need to open the source codes and replace all the instances of the **https\://documentserver/** string with the actual address of your installed ONLYOFFICE Docs.
 
-## What settings should be used when connecting ONLYOFFICE to ownClowd/Nextcloud via a local and public network?
+## What settings should be used when connecting ONLYOFFICE to ownCloud/Nextcloud via a local and public network?
 
 When connecting your ownCloud/Nextcloud installation to ONLYOFFICE Docs, you need to make sure that the server with ONLYOFFICE Docs installed is accessible both for the internet browsers and ownCloud/Nextcloud installations, i.e. the requests can be sent to and the responses can be accepted from the computer with ONLYOFFICE Docs installed.
 
-The interaction scheme between ownCloud installation and ONLYOFFICE Docs is available [here](../../get-started/ready-to-use-connectors/owncloud-integration.md#configuring-onlyoffice-app-for-owncloud). If you use Nextcloud, visit [this page](../../get-started/ready-to-use-connectors/nextcloud-integration.md#configuring-onlyoffice-app-for-nextcloud) to see how you can properly set up your server.
+The interaction scheme between ownCloud installation and ONLYOFFICE Docs is available [here](../../get-started/ready-to-use-connectors/owncloud-integration.md#how-it-works). If you use Nextcloud, visit [this page](../../get-started/ready-to-use-connectors/nextcloud-integration.md#configuring-onlyoffice-app-for-nextcloud) to see how you can properly set up your server.
+
+## ONLYOFFICE Docs cannot download a file from my server that uses a self-signed certificate. What should I do?
+
+By default, ONLYOFFICE Docs verifies the certificate of the server it downloads files from, so a self-signed certificate is rejected. This applies to any integration. For testing, you can turn the verification off: set the [`services.CoAuthoring.requestDefaults.rejectUnauthorized`](../../get-started/configuration/server-config/server-config.md#services.CoAuthoring.requestDefaults.rejectUnauthorized) parameter to `false` in the ONLYOFFICE Docs *local.json* configuration file and restart the ONLYOFFICE Docs services.
+
+This setting is insecure and is meant for testing only. For production, replace the certificate with one issued by a trusted CA and set `rejectUnauthorized` back to `true`.
+
+If ONLYOFFICE Docs itself uses a self-signed certificate, the integration has to accept it as well. For ownCloud and Nextcloud, see the self-signed certificate instructions for [ownCloud](../../get-started/ready-to-use-connectors/owncloud-integration.md#self-signed-certificates) and [Nextcloud](../../get-started/ready-to-use-connectors/nextcloud-integration.md#self-signed-certificates).

@@ -35,7 +35,7 @@ Starting from version 7.4, the **pluginsmanager** utility can be used to manage 
 The `--directory` parameter specifies the plugin folder location. The paths in the examples are default values, please modify them if necessary.
 :::
 
-A full list of server commands can be found [here](https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/editors-User-Guides/AllEditors/Plugin-manager.aspx#servercommands).
+A full list of server commands can be found [here](https://helpcenter.onlyoffice.com/docs/userguides/plugins/plugin-manager#servercommandsforpluginmanagerinthedocumentserver_block).
 
 ## Adding plugins through the plugin manager for a single user
 
