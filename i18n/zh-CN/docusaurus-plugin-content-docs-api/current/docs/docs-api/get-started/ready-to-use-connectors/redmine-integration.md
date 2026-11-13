@@ -36,7 +36,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 在安装插件之前，请确保您拥有一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Redmine 和任何终端客户端解析并连接。此外，要确保 ONLYOFFICE 文档能够直接向 Redmine 发送 POST 请求。
 
-我们建议使用 [Docker](https://github.com/onlyoffice/Docker-DocumentServer) 来安装 ONLYOFFICE 文档。或者，您也可以按照[这些说明](https://helpcenter.onlyoffice.com/docs/installation/community/linux/installing/install-ubuntu)，在 Debian、Ubuntu 或其衍生系统上进行安装。
+我们建议使用 [Docker](https://github.com/onlyoffice/Docker-DocumentServer) 来安装 ONLYOFFICE 文档。或者，您也可以按照[这些说明](https://helpcenter.onlyoffice.com/zh/docs/installation/community/linux/installing/install-ubuntu)，在 Debian、Ubuntu 或其衍生系统上进行安装。
 
 ## 安装 Redmine ONLYOFFICE 集成插件
 

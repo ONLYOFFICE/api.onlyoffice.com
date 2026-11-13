@@ -649,7 +649,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestReferenceData
 
-当用户尝试通过单击*数据*选项卡的*外部链接*对话框中的*更新值*按钮来刷新从外部文件插入的数据时调用的函数。要刷新数据，请调用 [setReferenceData](../methods.md#setreferencedata) 方法。调用该方法时，必须添加 `token` 来验证参数。当用户运行 [IMPORTRANGE](https://helpcenter.onlyoffice.com/docs/userguides/spreadsheet-editor/functions/text-and-data/IMPORTRANGE) 函数时，也会触发此事件。
+当用户尝试通过单击*数据*选项卡的*外部链接*对话框中的*更新值*按钮来刷新从外部文件插入的数据时调用的函数。要刷新数据，请调用 [setReferenceData](../methods.md#setreferencedata) 方法。调用该方法时，必须添加 `token` 来验证参数。当用户运行 [IMPORTRANGE](https://helpcenter.onlyoffice.com/zh/docs/userguides/spreadsheet-editor/functions/text-and-data/IMPORTRANGE) 函数时，也会触发此事件。
 
 :::note
 - 如果未声明此事件，则不会显示*粘贴链接*和*更新值*按钮。

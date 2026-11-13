@@ -11,9 +11,9 @@ ONLYOFFICE 文档支持在 Windows、Linux 和 Docker 环境部署。
 
 1. 从官网[下载](https://www.onlyoffice.com/zh/download?from=api#docs-developer) ONLYOFFICE 文档开发者版，并根据帮助中心指引进行安装：
 
-   - [在 Windows 上安装 ONLYOFFICE 文档](https://helpcenter.onlyoffice.com/docs/installation/developer/windows/install)
-   - [在 Linux 上安装 ONLYOFFICE 文档](https://helpcenter.onlyoffice.com/docs/installation/developer/linux/installing/install-ubuntu)
-   - [使用 Docker 安装 ONLYOFFICE 文档](https://helpcenter.onlyoffice.com/docs/installation/developer/docker/installing/install)
+   - [在 Windows 上安装 ONLYOFFICE 文档](https://helpcenter.onlyoffice.com/zh/docs/installation/developer/windows/install)
+   - [在 Linux 上安装 ONLYOFFICE 文档](https://helpcenter.onlyoffice.com/zh/docs/installation/developer/linux/installing/install-ubuntu)
+   - [使用 Docker 安装 ONLYOFFICE 文档](https://helpcenter.onlyoffice.com/zh/docs/installation/developer/docker/installing/install)
 
 2. 在需要嵌入编辑器的目标 HTML 文件中，定义占位符 `div` 标签用于传递编辑器参数：
 
@@ -65,10 +65,10 @@ ONLYOFFICE 文档支持在 Windows、Linux 和 Docker 环境部署。
 
 在使用 ONLYOFFICE 文档 API 前，建议根据需求完成以下配置：
 
-- 开放必要[端口](https://helpcenter.onlyoffice.com/docs/configuration/developer/docker/open-ports)；
+- 开放必要[端口](https://helpcenter.onlyoffice.com/zh/docs/configuration/developer/docker/open-ports)；
 - 在 ONLYOFFICE 文档的配置文件中调整 [ONLYOFFICE 文档服务器设置](/docs/docs-api/get-started/configuration/server-config)；
-- 使用 [SSL 证书](https://helpcenter.onlyoffice.com/docs/configuration/community/linux/https)将 ONLYOFFICE 文档切换至 HTTPS 协议；
-- 添加额外[字体](https://helpcenter.onlyoffice.com/docs/configuration/community/linux/install-fonts)到 ONLYOFFICE 文档以增强编辑器兼容性；
+- 使用 [SSL 证书](https://helpcenter.onlyoffice.com/zh/docs/configuration/community/linux/https)将 ONLYOFFICE 文档切换至 HTTPS 协议；
+- 添加额外[字体](https://helpcenter.onlyoffice.com/zh/docs/configuration/community/linux/install-fonts)到 ONLYOFFICE 文档以增强编辑器兼容性；
 - 自定义编辑器界面[主题配色](../how-it-works/customizing-themes.md)。
 
 ## 健康检查

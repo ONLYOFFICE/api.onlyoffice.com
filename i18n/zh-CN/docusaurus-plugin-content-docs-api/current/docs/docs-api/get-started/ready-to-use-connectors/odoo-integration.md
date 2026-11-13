@@ -19,7 +19,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 安装 ONLYOFFICE 文档
 
-您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Odoo 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/docs/installation/community/linux/installing/install-ubuntu)。ONLYOFFICE 文档还必须能够直接向 Odoo 发送 POST 请求。
+您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Odoo 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/zh/docs/installation/community/linux/installing/install-ubuntu)。ONLYOFFICE 文档还必须能够直接向 Odoo 发送 POST 请求。
 
 使用 [Docker](https://github.com/onlyoffice/Docker-DocumentServer) 是启动 ONLYOFFICE 文档实例的最简单方法。
 
@@ -90,7 +90,7 @@ ONLYOFFICE 集成遵循[此处](../basic-concepts.md)记录的 API 规范。
 - Odoo 中的 **ONLYOFFICE 模板**模块（会自动安装主 ONLYOFFICE 模块）。
 
 :::info
-有关 Odoo 集成的详细信息，请参阅 [ONLYOFFICE Odoo 连接器指南](https://helpcenter.onlyoffice.com/integration/docs/odoo)。
+有关 Odoo 集成的详细信息，请参阅 [ONLYOFFICE Odoo 连接器指南](https://helpcenter.onlyoffice.com/zh/integration/docs/odoo)。
 :::
 
 :::note

@@ -15,7 +15,7 @@ sidebar_custom_props:
 
 ## 安装 ONLYOFFICE 文档
 
-您需要有一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Mattermost 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/docs/installation/community/linux/installing/install-ubuntu)。ONLYOFFICE 文档还必须能够直接向 Mattermost 发送 POST 请求。
+您需要有一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Mattermost 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/zh/docs/installation/community/linux/installing/install-ubuntu)。ONLYOFFICE 文档还必须能够直接向 Mattermost 发送 POST 请求。
 
 ONLYOFFICE 文档和 Mattermost 可以安装在不同的计算机上，也可以安装在同一台机器上。如果使用同一台机器，需要为 ONLYOFFICE 文档设置一个自定义端口。
 

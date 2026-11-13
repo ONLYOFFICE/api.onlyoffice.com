@@ -24,7 +24,7 @@ ONLYOFFICE 文档不会永久存储文档：文档始终保存在**文档存储�
 
 ## 默认时间 {#default-times}
 
-以下所有设置均在服务器配置的[过期](../configuration/server-config/server-config.md#expiration)和[文档存储服务](../configuration/server-config/server-config.md#document-storage-service)部分中进行了说明。其中大部分设置也可以在[管理面板](https://helpcenter.onlyoffice.com/docs/configuration/enterprise/docker/admin-panel)中更改，无需重启。
+以下所有设置均在服务器配置的[过期](../configuration/server-config/server-config.md#expiration)和[文档存储服务](../configuration/server-config/server-config.md#document-storage-service)部分中进行了说明。其中大部分设置也可以在[管理面板](https://helpcenter.onlyoffice.com/zh/docs/configuration/enterprise/docker/admin-panel)中更改，无需重启。
 
 | 内容 | 默认值 | 设置 |
 | ---- | ------ | ---- |
@@ -71,11 +71,11 @@ ONLYOFFICE 文档不会永久存储文档：文档始终保存在**文档存储�
 - Linux 和 Windows 安装包以及 Docker 镜像：[`SECURE_LINK_SECRET`](https://github.com/ONLYOFFICE/Docker-DocumentServer#available-configuration-parameters) 环境变量；
 - 适用于 Kubernetes 的 Helm chart（从 chart 4.5.0 版本开始）：[`proxy.secureLinkSecret` 或 `proxy.secureLinkExistingSecret`](https://github.com/ONLYOFFICE/Kubernetes-Docs#4-parameters)。生成的密钥在升级后保持不变。
 
-有关保护安装的其他方法，请参阅[安全检查清单](https://helpcenter.onlyoffice.com/docs/configuration/securityguide)。
+有关保护安装的其他方法，请参阅[安全指南](https://helpcenter.onlyoffice.com/zh/docs/configuration/securityguide)。
 
 ## 日志 {#logs}
 
-ONLYOFFICE 文档在 Linux 上将日志写入 `/var/log/onlyoffice/documentserver/`，在 Windows 上写入 `C:\Program Files\ONLYOFFICE\DocumentServer\Log\`。有关各个日志文件的位置，请参阅 [Linux](https://helpcenter.onlyoffice.com/docs/installation/community/linux/troubleshooting)、[Windows](https://helpcenter.onlyoffice.com/docs/installation/community/windows/troubleshooting) 和 [Docker](https://helpcenter.onlyoffice.com/docs/installation/enterprise/docker/troubleshooting) 的故障排除指南。
+ONLYOFFICE 文档在 Linux 上将日志写入 `/var/log/onlyoffice/documentserver/`，在 Windows 上写入 `C:\Program Files\ONLYOFFICE\DocumentServer\Log\`。有关各个日志文件的位置，请参阅 [Linux](https://helpcenter.onlyoffice.com/zh/docs/installation/community/linux/troubleshooting)、[Windows](https://helpcenter.onlyoffice.com/zh/docs/installation/community/windows/troubleshooting) 和 [Docker](https://helpcenter.onlyoffice.com/zh/docs/installation/enterprise/docker/troubleshooting) 的故障排除指南。
 
 - Linux 安装包每天轮转日志，并保留 30 个压缩文件。
 - Windows 安装包会添加一个每日计划任务，删除超过 30 天的日志文件。
