@@ -9,7 +9,7 @@
 * Added the `document.options.watermark` and `document.options.watermark_on_draw` parameters: the watermark object, the `%user_name%` placeholder, opacity, watermarks in PDF and image downloads, and why a watermark is not access control
 * Added the Data retention page: what ONLYOFFICE Docs keeps while documents are edited, where and for how long, who can access the cache, and how to delete it
 * Added the Server components section to How it works: the DocService, FileConverter and Metrics processes, the external services they use, and the Node.js runtime bundled into the executables
-* Added an FAQ entry on using ONLYOFFICE Docs with a self-signed certificate in any integration
+* Added an FAQ entry on what to do when ONLYOFFICE Docs cannot download files from a server with a self-signed certificate, in any integration
 * Added the Working with watermark Automation API sample, which changes the on-screen watermark from an external panel
 * Added the Opening the editor in a dialog sample: the editor in a dialog the user moves, resizes and closes with the editor's own button
 
@@ -25,7 +25,7 @@
 * Restructured the ownCloud and Nextcloud known issues: self-signed certificates and the background connection check now sit under Checking the connection, file conversion has its own section, and each remaining issue has a heading
 * Covered the ONLYOFFICE Docs side of self-signed certificates (`rejectUnauthorized`) and files shared without download permission on the ownCloud and Nextcloud pages, and file locking on the Nextcloud page
 * Used the connectors' current UI names on the ownCloud and Nextcloud pages
-* Replaced the duplicated watermark rows in the conversion request table with a link to the watermark object
+* Removed the duplicated `watermark.*` rows from the conversion request table, which already links to the watermark object
 
 #### Localization
 
