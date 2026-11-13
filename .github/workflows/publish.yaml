@@ -205,98 +205,58 @@ jobs:
         echo "AWS_BUCKET_URL=s3://${TARGET}" >> "$GITHUB_ENV"
         echo "TARGET_BUCKET=${TARGET}" >> "$GITHUB_ENV"
 
+    - name: Install s5cmd
+      run: |
+        case "$(uname -m)" in
+          aarch64|arm64) ARCH=arm64 ;;
+          *) ARCH=64bit ;;
+        esac
+        curl -fsSL "https://github.com/peak/s5cmd/releases/download/v2.3.0/s5cmd_2.3.0_Linux-${ARCH}.tar.gz" | sudo tar -xz -C /usr/local/bin s5cmd
+        s5cmd version
+
     - name: Sync AWS Bucket
       id: sync
       working-directory: build
       run: |
-          # Define all possible languages
-          # EN all time build by default and not specifyed in this array
-          ALL_LANGS=("zh-CN")
+          # Output folder of the Chinese locale.
+          # A build without it must not --delete it from the bucket.
+          EXCLUDES=()
+          if [[ "$CN" != "true" ]]; then
+            EXCLUDES+=(--exclude "zh-CN/*")
+          fi
 
-          # Languages that were actually built
-          BUILT_LANGS=("en")  # Modify this dynamically
-          # Add dynamically built languages
-          [[ "$CN" == "true" ]] && BUILT_LANGS+=("zh-CN")
+          # s5cmd sync uploads in parallel; --include alone limits a step to the matching files,
+          # --exclude wins over --include.
+          sync() { s5cmd --numworkers 256 sync --delete "$@" "${EXCLUDES[@]}" ./ "${AWS_BUCKET_URL}/"; }
 
-          # Generate exclusion flags
-          EXCLUDE_FLAGS=()
-          for lang in "${ALL_LANGS[@]}"; do
-            should_exclude=true
-            for lg in "${BUILT_LANGS[@]}"; do
-              if [[ "$lang" == "$lg" ]]; then
-                should_exclude=false
-                break  # Stop checking once we find a match
-              fi
-            done
+          echo "Step 1: Sync HTML files with short cache"
+          sync --include "*.html" \
+               --cache-control "public, max-age=0, must-revalidate" \
+               --content-type "text/html; charset=utf-8"
 
-            if [[ "$should_exclude" == true ]]; then
-              EXCLUDE_FLAGS+=("--exclude \"${lang}/*\"")
-            fi
-          done
+          echo "Step 2: Sync hashed assets (JS/CSS) with long cache"
+          sync --include "*.js" --include "*.css" \
+               --cache-control "public, max-age=31536000, immutable"
 
-          # Convert array to string
-          EXCLUDE_STR=$(IFS=" " ; echo "${EXCLUDE_FLAGS[*]}")
+          echo "Step 3: Sync markdown twins of the doc pages"
+          sync --include "*.md" \
+               --cache-control "public, max-age=0, must-revalidate" \
+               --content-type "text/markdown; charset=utf-8"
 
-          # Increase S3 transfer concurrency (default is 10)
-          aws configure set default.s3.max_concurrent_requests 50
+          echo "Step 4: Sync stable-URL text files with short cache"
+          sync --include "*.txt" \
+               --cache-control "public, max-age=0, must-revalidate" \
+               --content-type "text/plain; charset=utf-8"
 
-           echo "Step 1: Sync HTML files with short cache"
-           eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} \
-                --exclude \"*\" \
-                --include \"*.html\" \
-                --cache-control \"public, max-age=0, must-revalidate\" \
-                --content-type \"text/html; charset=utf-8\" \
-                --delete \
-                $EXCLUDE_STR"
+          echo "Step 5: Sync XML files with short cache"
+          sync --include "*.xml" \
+               --cache-control "public, max-age=0, must-revalidate" \
+               --content-type "application/xml; charset=utf-8"
 
-           echo "Step 2: Sync hashed assets (JS/CSS) with long cache"
-           eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} \
-                --exclude \"*\" \
-                --include \"*.js\" \
-                --include \"*.css\" \
-                --cache-control \"public, max-age=31536000, immutable\" \
-                --delete \
-                $EXCLUDE_STR"
-
-           echo "Step 3: Sync markdown twins of the doc pages"
-           eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} \
-                --exclude \"*\" \
-                --include \"*.md\" \
-                --cache-control \"public, max-age=0, must-revalidate\" \
-                --content-type \"text/markdown; charset=utf-8\" \
-                --delete \
-                $EXCLUDE_STR"
-
-           echo "Step 4: Sync stable-URL text files with short cache"
-           eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} \
-                --exclude \"*\" \
-                --include \"*.txt\" \
-                --cache-control \"public, max-age=0, must-revalidate\" \
-                --content-type \"text/plain; charset=utf-8\" \
-                --delete \
-                $EXCLUDE_STR"
-
-           echo "Step 5: Sync XML files with short cache"
-           eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} \
-                --exclude \"*\" \
-                --include \"*.xml\" \
-                --cache-control \"public, max-age=0, must-revalidate\" \
-                --content-type \"application/xml; charset=utf-8\" \
-                --delete \
-                $EXCLUDE_STR"
-
-           echo "Step 6: Sync all other files"
-           eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} \
-                --include \"*\" \
-                --exclude \"*.html\" \
-                --exclude \"*.js\" \
-                --exclude \"*.css\" \
-                --exclude \"*.md\" \
-                --exclude \"*.txt\" \
-                --exclude \"*.xml\" \
-                --cache-control \"public, max-age=86400\" \
-                --delete \
-                $EXCLUDE_STR"
+          echo "Step 6: Sync all other files"
+          sync --exclude "*.html" --exclude "*.js" --exclude "*.css" \
+               --exclude "*.md" --exclude "*.txt" --exclude "*.xml" \
+               --cache-control "public, max-age=86400"
 
           # Compress files more than 10mb manually
           echo "Find and compress files larger than 10MB"
