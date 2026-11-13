@@ -58,7 +58,7 @@ ONLYOFFICE 文档不会永久存储文档：文档始终保存在**文档存储�
 - `forgotten/<key>`：被遗忘的文件；
 - `<errorfiles>/<format>/<key>`：错误文件（如果已启用）。`<errorfiles>` 是 `FileConverter.converter.errorfiles` 的值，`<format>` 是输入文件的扩展名。
 
-`<key>` 是编辑器配置中的[文档密钥](../../usage-api/config/document/document.md#key)。如果配置了持久存储，被遗忘的文件和错误文件将以相同的名称存储在持久存储中。
+`<key>` 是编辑器配置中的[文档标识符](../../usage-api/config/document/document.md#key)。如果配置了持久存储，被遗忘的文件和错误文件将以相同的名称存储在持久存储中。
 
 ## 谁可以访问缓存 {#who-can-access-the-cache}
 
@@ -96,13 +96,13 @@ ONLYOFFICE 文档在 Linux 上将日志写入 `/var/log/onlyoffice/documentserve
 2. 使用 [deleteForgotten](../../additional-api/command-service/deleteforgotten.md) 命令删除被遗忘的文件。
 3. 从缓存存储中删除 `data/<key>` 和 `data/<key>~*` 文件夹，或等待自动清理。
 4. 删除该文档的错误文件（如果已启用）。
-5. 在企业版和开发者版中，从 `task_result` 和 `doc_changes` 表中删除该文档的行：即该文档所属租户中 `id` 等于密钥或以 `<key>~` 开头的行。
+5. 在企业版和开发者版中，从 `task_result` 和 `doc_changes` 表中删除该文档的行：即该文档所属租户中 `id` 等于文档标识符或以 `<key>~` 开头的行。
 
    :::warning
    请先备份数据库，并且只在第 1 步完成后再删除这些行。
    :::
 
-日志行包含文档密钥和用户 ID。无法针对单个文档清理日志；日志轮转会在 30 天后将其删除。
+日志行包含文档标识符和用户 ID。无法针对单个文档清理日志；日志轮转会在 30 天后将其删除。
 
 ## 停用服务器时删除所有数据 {#deleting-all-data-when-decommissioning-a-server}
 
