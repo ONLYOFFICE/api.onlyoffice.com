@@ -37,7 +37,7 @@
 * Fixed the "ownClowd" typo in the FAQ
 * Fixed the old help center `.aspx` links in the Docs API pages, connector guides, ONLYOFFICE Apps API backend pages and the plugin on-premises installation page
 * Fixed editor samples that never opened when they mounted while the Docs API script was still loading
-* Fixed the zh-CN help center links on the data retention, self-hosted, connector, FAQ, font sample and events pages, which led to the English help center instead of `/zh/docs/` and `/zh/integration/`
+* Fixed the zh-CN help center links on the self-hosted, connector, FAQ, font sample and events pages, which led to the English help center instead of `/zh/docs/` and `/zh/integration/`
 * Fixed the broken link text on the zh-CN customizing FAQ
 * Fixed the missing description and tags on zh-CN Docs API sample pages
 
