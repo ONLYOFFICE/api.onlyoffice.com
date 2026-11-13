@@ -96,6 +96,9 @@ jobs:
           rm -rf api.onlyoffice.com/site/docspace/api-backend/usage-api
           cp -r $SPEC_DIR/usage-api api.onlyoffice.com/site/docspace/api-backend/
 
+          rm -rf api.onlyoffice.com/site/docspace/api-backend/webhooks
+          cp -r $SPEC_DIR/webhooks api.onlyoffice.com/site/docspace/api-backend/
+
           cd api.onlyoffice.com
           if [ -n "$(git status --porcelain)" ]; then
               git add .
