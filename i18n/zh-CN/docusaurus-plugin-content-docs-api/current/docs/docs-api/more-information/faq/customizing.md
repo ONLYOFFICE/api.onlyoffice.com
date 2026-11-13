@@ -75,7 +75,7 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-若当前语言未包含在可用选项中，且您需要自行翻译或已完成自定义语言翻译，请参阅[此文档[此文](https://helpcenter.onlyoffice.com/zh/docs/configuration/community/docker/add-language)了解如何将其安装到 ONLYOFFICE 文档中。
+若当前语言未包含在可用选项中，且您需要自行翻译或已完成自定义语言翻译，请参阅[此文](https://helpcenter.onlyoffice.com/zh/docs/configuration/community/docker/add-language)了解如何将其安装到 ONLYOFFICE 文档中。
 
 有关语言设置的更多信息，请参见[此页](../../usage-api/config/editor/editor.md)。
 
