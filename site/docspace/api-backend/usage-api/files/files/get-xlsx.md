@@ -6,7 +6,7 @@
 
 Get form report generation status
 
-Reports how far the spreadsheet of submitted form answers has got, the one queued by `POST api/2.0/files/file/{fileId}/xlsx`. A run is kept per portal, per caller and per form, so this reports the caller's own run and not one started by another member of the room; address it with the id of the original form rather than with the id of the produced spreadsheet. The answer carries the completion flag, the progress percentage, the error text when the run failed, and the id, name and address of the produced file once it is there. Nothing at all comes back when no run is on record for this caller and form, which is the normal answer before the first run and not an error. The call only reads and is meant to be polled until completion is reported. Any authenticated caller may ask; whether the report may be built is decided when the run is queued, not here.
+Returns the state of the form answers spreadsheet that `POST api/2.0/files/file/{fileId}/xlsx` queued. Pass the id of the original form, not of the spreadsheet. The portal keeps one run per portal, caller, and form. So the call returns only the own run of the caller. The response has the completion flag, the progress, and the error text of a failed run. Once the file exists, it also has its id, name, and URL. If no run exists for this caller and form, the response is empty. This is normal before the first run. Any signed-in user can call it. The portal checks access when it queues the run, not here. The call is read-only. This is the call to poll. Repeat it until `isCompleted` is true.
 
 ## Parameters
 

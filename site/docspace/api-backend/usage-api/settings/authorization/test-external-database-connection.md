@@ -6,7 +6,7 @@
 
 Test external database connection
 
-Probes connectivity to an external database using the settings supplied in the request, without saving them or affecting the portal's own configuration. Requires Owner or DocSpaceAdmin (the EditPortalSettings permission). SQLite is only accepted as a target on a Standalone (self-hosted) installation; requesting it on SaaS is reported as a failed connection rather than an error. This is a read-only call, safe to retry. A failed connection is not an HTTP error: the response always comes back as a normal success with `success=false` and an `error` message describing what went wrong.
+Tests a connection to an external database with the settings of the body. The call saves nothing. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. A failed connection is not an HTTP error. The call returns 200 with `success` false and the reason in `error`. On SaaS, an SQLite database always fails this way.
 
 ## Parameters
 

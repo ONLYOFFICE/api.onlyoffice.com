@@ -6,7 +6,7 @@
 
 Deactivate a portal
 
-Deactivates this portal: its status becomes suspended and its users can no longer work in it, while all of its rooms, files and accounts stay untouched. It is reached only with the deactivation link that `POST api/2.0/portal/suspend` mails to the portal owner - that link authorizes the call instead of an authentication token - and the owner is checked again here, so a link issued for another account is refused. On a server installation the last remaining space cannot be deactivated. The call is mutating and idempotent: it sets the status, records the deactivation in the audit trail and refreshes the portal's base domain, and repeating it leaves the portal suspended. Nothing is returned in the body; the new state is read from `status` in `GET api/2.0/portal`. Bring the portal back with `PUT api/2.0/portal/continue`, using the second link from the same letter. To remove the portal and its content for good, use `DELETE api/2.0/portal/delete` instead - that cannot be undone.
+Deactivates the portal. Its users can no longer work in it, and its rooms, files, and accounts stay. Sign the request with the confirmation token from the first link of the email that `POST api/2.0/portal/suspend` sends. The call also checks that the token belongs to the portal owner. Other callers get 403, including an ordinary sign-in token. The call changes data. After it, the portal returns 404 for most calls, and a repeated call also returns 404. To make the portal active again, use `PUT api/2.0/portal/continue` with the second link of the email. To delete the portal for good, use `DELETE api/2.0/portal/delete`. On a server installation, you cannot deactivate the last space. Spaces with limited access do not count.
 
 ## Parameters
 This endpoint does not need any parameter.
@@ -17,9 +17,9 @@ This endpoint does not need any parameter.
 |------------- | ------------- | ------------- | -------------|
 | **200** | The portal is now suspended, its users can no longer work in it and its content is kept; the response carries no content | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | The account the confirmation link was issued for is not the portal owner | - | - |
-| **500** | On a server installation every other space has limited access, so the last remaining space cannot be deactivated | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

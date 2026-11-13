@@ -6,7 +6,7 @@
 
 Create a chat thread
 
-Creates a chat thread with a title supplied by the caller and returns it. A scoped thread requires that `entityId` names a room the caller can open, and a model has to resolve for the scope - an explicit `profileId`, or the room's `Chat` assignment - otherwise there is nothing to run the thread against and the call answers 404. In an agent room the agent's own assignment overrides any `profileId` sent with the request, so a thread there always starts on the agent's model. Use `POST api/2.0/ai/threads/open-or-create` instead when the title should be generated from the first user message.
+Creates a chat thread with a title supplied by the caller and returns it. `entityId`, when sent, is the AI project the chat runs in and has to name one the caller can chat in; threads themselves are one list per user. A model has to resolve - an explicit `profileId`, the project's model, or the `Chat` assignment - otherwise there is nothing to run the thread against and the call answers 404. Use `POST api/2.0/ai/threads/open-or-create` instead when the title should be generated from the first user message.
 
 ## Parameters
 

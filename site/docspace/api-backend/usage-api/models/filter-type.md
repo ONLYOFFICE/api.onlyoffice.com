@@ -23,3 +23,6 @@ Possible values:
 - `24` - Virtual data rooms (`VirtualDataRooms`)
 - `25` - Diagrams only (`DiagramsOnly`)
 - `26` - Ai rooms (`AiRooms`)
+- `27` - Instructions rooms (`InstructionsRooms`)
+- `28` - Knowledge rooms (`KnowledgeRooms`)
+- `29` - AI project rooms (`AiProjectRooms`)

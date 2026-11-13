@@ -6,7 +6,7 @@
 
 Get the room access rights
 
-Returns one page of the access list of a room: the owner first, then the managers, the groups, the ordinary members, the guests and finally the invitations nobody has accepted yet, with the total in the response headers. `filterType` selects what is listed and defaults to accounts and groups, which leaves the sharing links of the room out; those are read with `GET api/2.0/files/rooms/{id}/links`. `filterValue` matches the displayed name of the subject, and an invitation that is still pending is listed under the email address it was sent to. Paging is done with `count` and `startIndex`, and the order is stable between calls. Any member who can read the room sees the accounts and the groups, so the list is not limited to the managers, and portal administrators can read the list of a room they were never invited to; somebody who is not in the room at all is refused. Asking for the link entries instead needs the right to see the links of the room, and a member without it gets an empty page rather than an error.
+Returns one page of the members of a room with their access. The list starts with the owner, then room managers, groups, other members, guests, and pending invitations. Use `filterType` to select what the call lists. By default, it lists accounts and groups, without links. To read the links, use `GET api/2.0/files/rooms/{id}/links`. Use `filterValue` to match the display name. A pending invitation matches by its email. Requires read access to the room. Other callers get 403. A DocSpace admin can read the list of any room. The call is read-only. Use `startIndex` and `count` to page through the list. The order stays the same between calls. The response headers carry the total. To list links here, the caller needs the right to see the links. Without it, the call returns an empty page. A `count` out of range returns 400. If the room does not exist, the call returns 404.
 
 ## Parameters
 
@@ -26,9 +26,9 @@ Returns one page of the access list of a room: the owner first, then the manager
 | **400** | A parameter has the wrong type, the `count` is outside its allowed range, or a third-party identifier refers to a storage account that is not connected | - | - |
 | **403** | The caller may not read the room | - | - |
 | **404** | The room does not exist, or the id is neither a 32-bit number nor a third-party identifier of a known storage type | - | - |
-| **500** | A third-party identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

@@ -6,7 +6,7 @@
 
 Get the default template setting
 
-Returns the blank document the portal creates for each format: one entry per extension the built-in template set covers, with the file that has been chosen as the blank for it, if any. An entry whose `selectedFile` is null means no custom template has been set and the built-in blank is used; the remaining fields - title, size, modification moment and view address - are filled only for a custom one. The list is assembled from the portal's built-in template set on every call, so an extension the set no longer covers disappears from it. Entries come in the order the interface shows them: the text document, spreadsheet, presentation and PDF formats first, the rest by extension. Reading the setting requires the portal settings permission, so only the portal owner and a DocSpace administrator may call it. Use `PUT api/2.0/files/settings/defaulttemplate` to choose an existing file and the matching POST to upload one.
+Returns the blank documents that the portal uses for new files, one entry per extension. The list has every extension of the built-in template set. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. If `selectedFile` is null, the portal uses its built-in blank. The other file fields are filled only for a custom blank. The list starts with `.docx`, `.xlsx`, `.pptx`, and `.pdf`, and the rest follow by extension. To set a portal file as a blank, use `PUT api/2.0/files/settings/defaulttemplate`. To upload one, use `POST api/2.0/files/settings/defaulttemplate`.
 
 ## Parameters
 This endpoint does not need any parameter.

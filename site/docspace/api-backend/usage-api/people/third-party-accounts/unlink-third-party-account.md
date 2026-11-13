@@ -6,7 +6,7 @@
 
 Unlink a third-party account
 
-Removes the link between the calling profile and the named third-party provider, so that the account can no longer sign in through it. It acts on the authenticated account only and takes the provider name in the query, using the same lowercase values `GET api/2.0/people/thirdparty/providers` returns, such as `google` or `microsoft`. The call returns no body and is idempotent: unlinking a provider that is not linked answers 200 and changes nothing. The portal profile itself is kept, together with its password, so the account stays usable through the ordinary sign-in; only the third-party route is removed. Link the provider again through `PUT api/2.0/people/thirdparty/linkaccount`.
+Deletes the link between the account of the caller and a third-party provider. A later sign-in through that provider links the account again if the provider returns its email. The account itself stays, with its password. Any signed-in user can call it. The call changes data and returns no body. If the provider is not linked, the call changes nothing and returns 200. So you can repeat it. To link the provider again, use `PUT api/2.0/people/thirdparty/linkaccount`.
 
 ## Parameters
 

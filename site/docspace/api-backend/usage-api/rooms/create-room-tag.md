@@ -6,7 +6,7 @@
 
 Create a room tag
 
-Adds a custom tag to the portal-wide catalog of room tags and answers with the stored name. Tags are shared by the whole portal instead of belonging to the caller: once the tag exists, every room manager can attach it to their own rooms with `PUT api/2.0/files/rooms/{id}/tags`, and that call also creates a tag it does not find. Creating a name that is already in the catalog returns the existing tag unchanged rather than a duplicate or an error, so repeating the call after a timeout is safe. A blank name, or one longer than the published limit, is rejected as an invalid request. Only a room manager or a portal administrator may create a tag, and a user or a guest is refused. The answer is the name as stored, and that name is the value to send in the `tags` filter of `GET api/2.0/files/rooms` and in the room tag calls. The catalog itself is read with `GET api/2.0/files/tags`.
+Creates a custom room tag in the portal catalog and returns its name. The tag belongs to the portal, not to the caller. Requires a DocSpace admin or a room admin. Other callers get 403. The call changes data. If a tag with this name exists, the call returns that tag and creates nothing. So you can repeat it with the same body. Use the returned name in the `tags` filter of `GET api/2.0/files/rooms` and in the room tag calls. To attach the tag to a room, use `PUT api/2.0/files/rooms/{id}/tags`. That call also creates a missing tag. To read the catalog, use `GET api/2.0/files/tags`. The call returns 400 if the name is missing, empty, has only spaces, or is too long.
 
 ## Parameters
 

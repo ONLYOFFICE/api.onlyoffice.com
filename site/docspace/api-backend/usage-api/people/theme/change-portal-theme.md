@@ -6,7 +6,7 @@
 
 Change the portal theme
 
-Sets the interface theme of the calling account to `Base` for the light theme, `Dark` for the dark one, or `System` to follow whatever the operating system asks for. The setting belongs to the account and not to the portal, despite the name of the route, so it changes nothing for anybody else and cannot be set on another account. It needs no permission, takes effect at once and is idempotent - sending the theme that is already in use changes nothing. The answer echoes the theme that was stored, which is the value the request asked for. The same value is reported as `theme` by `GET api/2.0/people/@self`.
+Changes the interface theme of the caller to `Base`, `Dark`, or `System`. The theme belongs to the account, not to the portal. Any signed-in user can call it, including a guest. The call changes data. You can repeat it with the same body. It returns the saved theme. If the body has no `theme`, the call returns 400. The `theme` field of `GET api/2.0/people/@self` has the same value.
 
 ## Parameters
 

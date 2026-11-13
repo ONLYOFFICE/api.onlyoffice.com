@@ -6,7 +6,7 @@
 
 Save a file as PDF
 
-Converts a file into a PDF, stores that PDF as a new file in the folder named in the body, and answers with the file that was created. The source is left untouched, so the two files then live side by side. `title` names the result without an extension - the `.pdf` extension is added to it - and an empty title reuses the name of the source with its extension replaced. The conversion is done by the document service while the request waits, so the call takes as long as the document needs and answers with the finished file rather than with a queue entry. The caller needs read access to the source file and the right to create files in the destination folder, and is otherwise refused; a source file or a destination folder that does not exist is answered with 404. The call is mutating and not idempotent: each call adds another PDF, its title made unique when one of that name is already there. The result is marked as new for the room, and for a form the portal recognises it is stored as a PDF form. To convert in place instead use `PUT api/2.0/files/file/{fileId}/checkconversion`.
+Converts a file to PDF and saves the PDF as a new file in the folder from the body. It returns the created file, and the source stays as it is. The call adds `.pdf` to `title`. An empty `title` uses the name of the source. The document service converts the file within the request, so the call takes as long as the conversion. Requires read access to the source file and the right to create files in the destination folder. Other callers get 403. The call changes data. Do not repeat it. Each call adds another PDF with the same title. In a third-party storage, each PDF gets a unique title instead. The call marks the result as new in the room. It saves the result as a PDF form if the portal recognizes the source as a form. If the body has no `folderId` or `title`, the call returns 400. If the file or the folder does not exist, the call returns 404. If the PDF exceeds the storage quota, the call returns 402. To convert the file itself, use `PUT api/2.0/files/file/{fileId}/checkconversion`.  Raises the `file.created` webhook.
 
 ## Parameters
 
@@ -24,9 +24,9 @@ Converts a file into a PDF, stores that PDF as a new file in the folder named in
 | **402** | The PDF does not fit into the storage quota of the portal, the room or the user | - | - |
 | **403** | The caller cannot read the source file or may not create files in the destination folder | - | - |
 | **404** | The source file or the destination folder does not exist | - | - |
-| **500** | The document service fails to convert the file to PDF, or the converted file cannot be downloaded | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

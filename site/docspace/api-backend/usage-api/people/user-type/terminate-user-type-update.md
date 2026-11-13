@@ -6,7 +6,7 @@
 
 Terminate updating user type
 
-Cancels the user type change queued for the user with the ID specified in the request. The caller needs the permission to add and remove users. The operation is idempotent: when nothing is queued for that user it answers 200 with an empty body, and repeating it on an already cancelled job changes nothing. Cancelling removes the job from the queue and does not undo the type change or the transfers it has already made, and a cancelled job cannot be resumed - start a new one through `POST api/2.0/people/type`. The returned progress reports `status` as `Canceled` and `isCompleted` as true.
+Cancels the type change job of an account. Requires a DocSpace admin. Other callers get 403. The call changes data, and you can repeat it. If no job exists for the account, the call returns 200 with an empty body. Cancelling does not undo the type change or the moves that the job already made. You cannot resume a cancelled job. To try again, start a new job with `POST api/2.0/people/type`. The response has `status` set to `Canceled` and `isCompleted` set to true. If `userId` is missing, the call returns 400.
 
 ## Parameters
 

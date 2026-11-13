@@ -6,7 +6,7 @@
 
 Get the recommended quota
 
-Recommends the cheapest quota this portal could run on and still fit: the lowest-priced quota that is not billed yearly, whose user allowance is above the number of active accounts and whose storage allowance is above the space already used. The caller needs the portal-settings right and gets 403 without it. The call is read-only, idempotent and buys nothing - it only picks one quota out of those the portal may switch to, comparing them with the figures that `GET api/2.0/portal/userscount` and `GET api/2.0/portal/usedspace` report. The answer is a single quota in the same shape as `GET api/2.0/portal/quota`, with sizes in bytes; when no quota is large enough the answer is an empty body with 200 and not an error, so handle the empty result as nothing to recommend. Yearly quotas are left out by design, so the recommendation is always a monthly one - the full list to choose from comes from `GET api/2.0/portal/payment/quotas`, and the purchase itself is started with `PUT api/2.0/portal/payment/url`.
+Returns the cheapest quota that is not yearly and allows more users than the portal has active accounts. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only and buys nothing. The answer has the shape of `GET api/2.0/portal/quota`, with sizes in bytes. If no quota fits, the call returns 200 with no quota. To list all quotas, use `GET api/2.0/portal/payment/quotas`. To buy one, use `PUT api/2.0/portal/payment/url`.
 
 ## Parameters
 This endpoint does not need any parameter.

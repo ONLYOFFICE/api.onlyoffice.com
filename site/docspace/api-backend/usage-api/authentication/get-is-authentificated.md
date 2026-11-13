@@ -6,7 +6,7 @@
 
 Check authentication
 
-Reports whether the credentials that came with this very request identify a signed-in user of the current portal - the authentication cookie, or the token in the `Authorization` header. Nothing has to be called first: the operation is open to unauthenticated callers, who simply get `false`, it is read-only and idempotent, and it answers even while the portal's payment has lapsed. The result is a bare boolean that carries no reason, so `false` covers a missing, malformed, expired and revoked token alike; the way to recover from it is to sign in again with `POST api/2.0/authentication`. It says nothing about who the caller is or how long the session still lasts - read `GET api/2.0/people/@self` for the profile behind the token.
+Returns whether the request carries a valid sign-in to the current portal. The call checks the authentication cookie or the token in the `Authorization` header. Anyone can call it without signing in. It is read-only and also works while the portal is unpaid. It returns `true` for a signed-in user and `false` in every other case. A `false` result gives no reason. The token may be missing, malformed, expired, or revoked. To sign in again, use `POST api/2.0/authentication`. To learn who the caller is, use `GET api/2.0/people/@self`.
 
 ## Parameters
 This endpoint does not need any parameter.

@@ -6,7 +6,7 @@
 
 Delete the backup history
 
-Deletes every backup of the current portal, both the history records and the archives themselves, and leaves the backup schedule alone. `dump` clears the backups of the whole server instead and requires the space access permission. The records are walked one by one and a failure on any of them is swallowed, so the result is always true even when some archives could not be deleted: it does not mean the history is now empty. Call `GET api/2.0/backup/getbackuphistory` afterwards to see what is left. Each record is removed before its archive, so an archive whose deletion fails stays in the storage with nothing pointing at it.
+Deletes all backups of the portal, both the history records and the archives. The call keeps the backup schedule. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. With `dump`, a caller without the space access permission also gets 403. The call changes data and cannot be undone. If an archive fails to delete, the call goes on, and the archive stays in the storage without a record. It always returns `true`, so you can repeat it. To check what is left, use `GET api/2.0/backup/getbackuphistory`. If the portal subscription has expired or is not paid, the call returns 402.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Start the Docs Connect trial
 
-Activates the free Docs Connect trial subscription for the current portal, and, once a Docs Connect server is assigned to the portal, allows the address of that server in the Content Security Policy settings. The portal tariff must be in the trial or paid state (not delayed and not unpaid), and the portal must not already hold a Docs Connect trial, Docs Connect or Docs Connect Dev Pack subscription: the quotas of the current tariff are listed by `GET api/2.0/portal/tariff`. The caller must be a portal administrator allowed to edit the portal settings, on an installation where the billing service is configured. The operation changes the portal subscription and is not idempotent: repeating it after a successful activation fails with 400. It returns `true` when the trial has been granted, and `false` when the billing service declines it (for example, when this portal has already used its trial), in which case nothing is changed. It never buys a paid plan: an existing paid Docs Connect subscription is moved to Docs Connect Dev Pack by `POST api/2.0/settings/docscloud/switchtodevpack` instead.
+Starts the free Docs Connect trial for the current portal. If the trial is granted, the call adds the assigned Docs Connect server to the Content Security Policy settings. To check the subscriptions and the tariff state first, use `GET api/2.0/portal/tariff`. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call changes data, and a repeated call returns 400. It returns `true` if the trial is granted. It returns `false` if the billing service declines it, for example after an earlier trial. Then nothing changes. It also returns `false` if the billing service does not answer, or the portal cannot read its answer. Then the trial may be granted. So check `GET api/2.0/portal/tariff` with `refresh=true` before you call again. The call never buys a paid plan. To move a paid Docs Connect subscription to Docs Connect Dev Pack, use `POST api/2.0/settings/docscloud/switchtodevpack`. The call returns 400 if the portal already has a Docs Connect trial, Docs Connect, or Docs Connect Dev Pack. It returns 402 if the tariff is delayed or not paid. It returns 403 if the billing service is not configured. If the installation has no Docs Connect trial quota, the call returns 404. After a granted trial, the call returns 403 if the server address makes the Content Security Policy header too long. The trial then stays granted.
 
 ## Parameters
 This endpoint does not need any parameter.
@@ -15,14 +15,14 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | Boolean value: true if the trial subscription is activated, false if the billing service declines it | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | Boolean value: true if the trial subscription is activated, false if the billing service declines it or its answer could not be read | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The portal already has a Docs Connect trial, Docs Connect or Docs Connect Dev Pack subscription | - | - |
 | **402** | The portal tariff is delayed or not paid, so the trial cannot be started | - | - |
 | **403** | The caller has no portal-settings right, the billing service is not configured, or the trial was granted but the address of the assigned Docs Connect server would push the Content Security Policy header over its size limit | - | - |
 | **404** | The Docs Connect trial quota is not available on this installation | - | - |
-| **500** | The trial was granted, but reading the Docs Connect tenant afterwards failed: the Docs Connect service is not configured on this installation, has no tenant for the portal yet, is unreachable, or answered with an error | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

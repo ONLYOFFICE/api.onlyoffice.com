@@ -6,7 +6,7 @@
 
 Get the space usage statistics
 
-Returns the storage space used by one portal module, broken down per data category the module tracks (for example per room type), together with a human-readable size and whether the category is disabled. Requires Owner or DocSpaceAdmin (the EditPortalSettings permission). `id` identifies the module by the same GUID the portal's module catalog uses; a module that does not exist, or one that does not report space usage at all, returns an empty list rather than an error. This is a read-only, idempotent call, and the list is not paginated. Sizes are already formatted as display strings (for example `1.5 GB`), not raw byte counts.
+Returns the storage space that one module of the portal uses, per category of its data. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. It returns the whole list without paging. Sizes are display texts, such as `1.5 GB`, not byte counts. If no module has this `id`, or the module does not count space, the call returns an empty list.
 
 ## Parameters
 

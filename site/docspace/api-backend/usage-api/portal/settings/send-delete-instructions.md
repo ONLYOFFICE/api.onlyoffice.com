@@ -6,7 +6,7 @@
 
 Send removal instructions
 
-Mails the portal owner the confirmation link that removes this portal; nothing about the portal changes until that link is used. The caller has to be the portal owner and hold the portal-settings right, and on a server installation the last remaining space cannot be removed - the call is refused when every other space has limited access. The letter goes to the owner's own address whoever asked for it, and it warns about the subscription that will stop renewing when the portal is on a paid plan. The operation keeps working while the portal's payment has lapsed, is mutating only in that it sends a message, and is rate-limited to five requests per fifteen minutes per user and path by default, answering 429 above that. Nothing is returned in the body. The link in the letter authorizes `DELETE api/2.0/portal/delete`, which deletes the portal with all of its rooms, files and accounts and cannot be undone. To pause the portal instead of deleting it, send the deactivation letter with `POST api/2.0/portal/suspend`.
+Sends the portal owner an email with the link that deletes the portal. This call does not change the portal. Only the portal owner can call it. Other callers get 403, including a DocSpace admin. The call also works while the portal is unpaid. By default, a repeated call within 10 minutes of the email sends nothing and returns 200. A later call sends a new email, and the links of earlier emails keep working for 7 days by default. If the portal has payments and is not on trial, the email also warns that the subscription stops renewing. The link signs `DELETE api/2.0/portal/delete`, which deletes the portal and cannot be undone. To deactivate the portal instead, use `POST api/2.0/portal/suspend`. On a server installation, you cannot delete the last space. Spaces with limited access do not count.
 
 ## Parameters
 This endpoint does not need any parameter.
@@ -15,11 +15,11 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The removal letter has been handed to the mail service; nothing about the portal has changed yet and the response carries no content | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The request is accepted, and the removal letter is queued unless one already went out within the repeat period; nothing about the portal has changed yet and the response carries no content | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | The caller is not the portal owner or has no portal-settings right | - | - |
-| **500** | On a server installation every other space has limited access, so the last remaining space cannot be removed | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

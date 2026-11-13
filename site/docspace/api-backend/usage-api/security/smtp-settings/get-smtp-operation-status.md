@@ -6,7 +6,7 @@
 
 Get SMTP test status
 
-Returns the state of the test message that `GET api/2.0/smtpsettings/smtp/test` queued for this portal, and is the operation to poll while that test runs. A test has to be queued first; the caller needs the portal-settings right of a DocSpace administrator, and the SMTP settings section has to be enabled for the portal, otherwise the call is answered with 402. The call changes no settings, but it is not free of consequence: the first answer that reports `completed` true also discards the finished job, so a later call no longer knows about it - take `error` from that answer and keep it. An empty answer means the portal has no test on record, either because none was queued or because its result has already been read. While the job runs, `percents` climbs to 100 and `status` names the step reached, such as `Connect to host` or `Send test message`; `error` is empty until something fails and stays empty when the relay accepted the message. `id` identifies the queued job, of which a portal only ever has one.
+Returns the state of the SMTP test email that `GET api/2.0/smtpsettings/smtp/test` started for the portal. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. If the SMTP settings section is turned off for the portal, the call returns 402. This is the call to poll. Repeat it until `completed` is true. The call changes data only once. The first answer with `completed` true deletes the finished job. So keep `error` from that answer. If `error` is empty, the mail server accepted the email. An empty answer means that no test was started, or its result was already returned.
 
 ## Parameters
 This endpoint does not need any parameter.

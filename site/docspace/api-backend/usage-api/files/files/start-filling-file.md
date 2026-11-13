@@ -6,7 +6,7 @@
 
 Start filling a form
 
-Marks a PDF form in a form-filling room as open for filling out and answers with the form file. The portal stores the filling properties on it - the room it belongs to, its title, the account that started it and the id it keeps as the original form - so that later submissions are collected against this form. The file has to be a PDF whose parent folder is a form-filling room; anything else is answered unchanged and nothing is stored. Access follows room membership rather than portal role: a member holding only form-filling access on the room may not start filling, and a caller with no access to the room at all is refused with 403 unless they can manage it, which the room owner, a room administrator and a DocSpace administrator can. The call is mutating and safe to repeat, since a repeat rewrites the same properties. Once a form is started, the answers submitted for it can be collected into a spreadsheet with `POST api/2.0/files/file/{fileId}/xlsx`.
+Starts filling of a PDF form in a form-filling room and returns the form. The portal saves the room, the title, the starting account, and the original form id on the file. The portal then collects later submissions for this form. For any other file, the call changes nothing and returns the file. A caller who cannot read the file gets 403, whatever the file is. Requires a role in the room other than `FillForms`, or the right to edit the room. Other callers get 403. The call changes data, and you can repeat it. A repeated call makes the caller the starting account and takes the title from the current file name. The call also returns 403 for an encrypted file. If the file does not exist, the call returns 404. To build a spreadsheet of the submitted answers, use `POST api/2.0/files/file/{fileId}/xlsx`.
 
 ## Parameters
 
@@ -19,7 +19,7 @@ Marks a PDF form in a form-filling room as open for filling out and answers with
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The form file, with the filling properties now stored on it | [**FileWrapper**](../../models/file-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | The caller holds only form-filling access on the room, or no access to it at all | - | - |
+| **403** | The caller cannot read the file, or holds only form-filling access on the room, or no access to it at all | - | - |
 | **404** | The file id resolves to nothing | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |

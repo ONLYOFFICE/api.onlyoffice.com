@@ -6,7 +6,7 @@
 
 Delete a room group
 
-Deletes one of the caller's own room groups. Only the collection goes away: the rooms it gathered, their content and the shares on them are left exactly as they were, and a room that was in no other group simply stops being grouped. Deleting a group of another account is refused, and an identifier that names nothing - because it never existed, or because the group has already been deleted - is answered as missing, so repeating the call after a successful delete does not report success a second time. The operation is destructive and cannot be undone: there is no trash for groups, and rebuilding one means calling `POST api/2.0/files/group` again with the same name, icon and rooms, which gives it a new identifier. Nothing is returned in the body. The `includeMembers` parameter is accepted here because the route shares its contract with `GET api/2.0/files/group/{id}`, and has no effect on what is deleted. Read the group first when the rooms it gathers still have to be recorded somewhere.
+Deletes a room group of the caller. The rooms of the group, their content, and their shares stay unchanged. Any signed-in user can call it, including a guest. If the group belongs to another account, the call returns 403, even for a DocSpace admin. The call cannot be undone, and a repeated call returns 404. If the group does not exist, the call returns 404. The response body is empty. The call ignores `includeMembers`. To keep the list of rooms, read the group first with `GET api/2.0/files/group/{id}`.
 
 ## Parameters
 

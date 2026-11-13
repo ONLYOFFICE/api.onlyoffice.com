@@ -6,7 +6,7 @@
 
 Get a guest sharing link
 
-Builds a link that lets another member of the portal take over the caller's guest, so that the guest becomes visible to them as well. The account in the route has to exist and be a guest - any other type is rejected with 400 - and the caller has to be able to see it and must not be a guest itself. The call is read-only: it only mints the link and changes nothing, and it can be repeated as often as needed. The answer is a shortened confirmation URL as plain text; hand it to the person who should get the guest, and their client completes the hand-over with `POST api/2.0/people/guests/share/approve`. The link carries a confirmation token and therefore expires, so mint it when it is about to be used rather than storing it.
+Returns a link that lets another admin add a guest of the caller to their own guest list. Any signed-in user can call it, except a guest. A guest gets 403. If the caller cannot see the account, the call also returns 403. If the account is not a guest, the call returns 400. If no account has the ID, the call returns 404. The call is read-only. It returns a short confirmation link. Give it to the room admin or DocSpace admin who should get the guest. They accept it with `POST api/2.0/people/guests/share/approve`. The link has a token that expires, so create it right before use.
 
 ## Parameters
 

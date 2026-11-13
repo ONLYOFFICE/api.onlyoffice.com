@@ -6,7 +6,7 @@
 
 Get the Docs Connect tenant information
 
-Returns the Docs Connect license of the current portal, the Docs Connect server serving it, the user limits of that license and the editor and viewer usage counted against them for the current period. The portal must have an activated Docs Connect tenant, granted by `POST api/2.0/settings/docscloud/trial` or by a Docs Connect purchase: an empty result from `GET api/2.0/settings/docscloud/tenant` means there is none and this call fails with 400. The caller must be a portal administrator allowed to edit the portal settings, on an installation where the Docs Connect service is configured. The call is read-only, idempotent and cached for a minute, so pass `refresh=true` right after a subscription change to read the current state from Docs Connect. In the result, `license.valid` is when the license expires and `license.trial` is reported as `false` once the portal holds a paid Docs Connect or Docs Connect Dev Pack subscription, even when the license itself still says trial; `usersLimit` caps the editors and the viewers allowed, `stats` counts the active, internal, external and remaining users of each of those two kinds over the last `stats.periodDay` days, and the dates are in UTC. The editing settings, the per-user quota lists and the address of the assigned server live in `.../tenant/config`, `.../tenant/quota` and `.../tenant`, while `.../tenant/usage` gives one active-user total instead of this per-role breakdown.
+Returns the Docs Connect license of the current portal, its server, and the user limits of the license. It also returns the editor and viewer usage of the current period. The portal needs a Docs Connect tenant from `POST api/2.0/settings/docscloud/trial` or a Docs Connect purchase. Without one, the call returns 400, and `GET api/2.0/settings/docscloud/tenant` returns an empty result. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. The portal caches the answer for a minute. So after a subscription change, pass `refresh=true` to read the current state from Docs Connect. If the portal has a paid Docs Connect or Docs Connect Dev Pack subscription, `license.trial` is `false`. This holds even when the license itself is a trial. The dates in the result are in UTC. For one total of active users without the split by role, use `GET api/2.0/settings/docscloud/tenant/usage`. To read the configuration, the users counted, or the server address, use `GET api/2.0/settings/docscloud/tenant/config`, `GET api/2.0/settings/docscloud/tenant/quota`, or `GET api/2.0/settings/docscloud/tenant`.
 
 ## Parameters
 
@@ -21,9 +21,9 @@ Returns the Docs Connect license of the current portal, the Docs Connect server 
 | **200** | The Docs Connect license and server information of the portal, with the user limits of the license and the usage statistics for the current period | [**DocsCloudTenantInfoWrapper**](../../models/docs-cloud-tenant-info-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The portal has no activated Docs Connect tenant, so there is no license information to return | - | - |
 | **403** | The caller has no portal-settings right | - | - |
-| **500** | The Docs Connect service is not configured on this installation, is unreachable, or answered with an error other than not found | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

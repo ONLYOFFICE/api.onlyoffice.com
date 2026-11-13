@@ -6,7 +6,7 @@
 
 Remove group members
 
-Removes the listed accounts from a group, leaving the rest of its members in place. The caller needs the permissions to edit groups and to add and remove users, and the ID has to belong to a group that has not been deleted, otherwise the operation answers 404. The accounts themselves are kept; only their membership in this group ends, together with the access they had through it. The call is idempotent and forgiving: an ID that is not a member, and one that matches no account at all, are both skipped without an error, and an empty list simply changes nothing. The answer is the group with the members that remain. Emptying a group cannot be done through `POST api/2.0/group/{id}/members`, which needs at least one valid account, so list every member here, or move them away with `PUT api/2.0/group/{fromId}/members/{toId}`.
+Removes the listed accounts from a group and keeps the other members. The accounts stay, but they lose the access they had through the group. Requires a DocSpace admin. Other callers get 403. A room admin can read groups but also gets 403 here. The call changes data. You can repeat it with the same body. The call skips an ID that is not a member or matches no account. If the list includes the manager, the group is left without one. An empty list changes nothing. The response is the group with the remaining members. If no group has this ID, the call returns 404. To remove all members, list them all here.  Raises the `group.updated` webhook only when the call removes a member, without `user.*` webhooks for it.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Get supported languages
 
-Returns the two- or four-letter language codes of every culture currently enabled on the portal (for example `en-US`), used to populate a language picker before or after login. No permission is required; anonymous callers can read it too. This is a read-only, idempotent call, and the list is not paginated. The response supports conditional requests: an unchanged result is signaled instead of resending the same list. The set of enabled cultures is a portal-wide configuration value, not a per-user preference.
+Returns the codes of the languages that the installation supports, such as `en-US`. Anyone can call it without signing in, even when the portal is unpaid. The call is read-only. It returns the whole list without paging. It supports `If-None-Match` with the `ETag` of the last answer. If the list did not change, it returns 304 with an empty body.
 
 ## Parameters
 This endpoint does not need any parameter.

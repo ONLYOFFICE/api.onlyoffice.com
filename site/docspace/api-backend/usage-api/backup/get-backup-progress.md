@@ -6,7 +6,7 @@
 
 Get the backup progress
 
-Reports the state of the backup job of the current portal, and is the operation to poll after `POST api/2.0/backup/startbackup`. The queue holds one job per portal, so no job ID is passed in; `dump` asks for the state of the server-wide job instead and requires the space access permission. When there is no such job - none was ever started, or the finished one has already been dropped from the queue - the call still answers 200, but the body carries no `response` member at all, so a client has to treat the payload as optional rather than expect an empty object. While the job runs, `isCompleted` is false, `error` and `link` are empty strings and `progress` grows from 0 to 100. Once it stops, `isCompleted` turns true and `status` says how it ended: a non-empty `error` is the only report of a failure, `warning` is set when the archive was written but some files could not be read or when the job was cancelled, and `link` becomes the download link to the stored archive.
+Returns the state of the backup job of the portal. A portal has at most one backup job. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. With `dump`, a caller without the space access permission also gets 403. The call is read-only. This is the call to poll after `POST api/2.0/backup/startbackup`. Repeat it until `isCompleted` is true. If there is no job, the call returns 200 without the `response` field.
 
 ## Parameters
 

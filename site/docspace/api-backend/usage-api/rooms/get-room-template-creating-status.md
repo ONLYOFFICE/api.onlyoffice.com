@@ -6,7 +6,7 @@
 
 Get room template creation status
 
-Reports the state of the room template creation the caller started with `POST api/2.0/files/roomtemplate`. The record is private to the account that started the job: work started by another member is never reported, and a caller who has started none gets an empty response instead of an object. Poll until `isCompleted` turns true, then take the identifier of the finished template from `templateId`; a non-empty `error` means the job failed and no template was kept. Treat `isCompleted` as the completion signal rather than `progress`, which the background job only sets to 100 once the work is over. The record outlives the job, so a finished operation can be read again and keeps returning the same identifier until the caller starts another template creation, which replaces it. The call only reads state and needs no access to the source room or to the template, but it does require an authenticated caller.
+Returns the state of the room template job that the caller started with `POST api/2.0/files/roomtemplate`. Any signed-in user can call it. The call is read-only and reports only the jobs of the caller. If the caller has started none, the call returns no status object. This is the call to poll. Repeat it until `isCompleted` is true, then read `templateId`. Use `isCompleted`, not `progress`, as the end signal. After the job ends, the call returns the same state until the caller starts another job.
 
 ## Parameters
 This endpoint does not need any parameter.

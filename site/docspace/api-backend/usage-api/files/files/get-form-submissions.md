@@ -6,7 +6,7 @@
 
 Get form submission results
 
-Returns everything that has been submitted against one PDF form: `metadata` describes the fields of the form, in the order they are laid out, and `submissions` carries one record per completed copy, each of them holding the values that were entered. It is the data behind the results table a client shows for a form, and the same data the spreadsheet report of `POST api/2.0/files/file/{fileId}/xlsx` is built from. Only the submissions of the version that is currently being filled are reported. The form has to be a PDF form whose filling has been started and which is still the original form of its room; a form that was never started, a copy of a form and a form whose room has been moved away are all refused. Read access to the form is enough, so every member of the room can read the results, while a caller without access to it is refused with 403. The operation is read-only. The list of roles and whose turn it is comes from `GET api/2.0/files/file/{fileId}/formroles` instead.
+Returns all submissions of a PDF form. The field `metadata` describes the form fields in layout order, and `submissions` has one record per completed copy. The call returns only the submissions of the version that is being filled now. The spreadsheet report of `POST api/2.0/files/file/{fileId}/xlsx` covers every version, one sheet per group of versions with the same fields. Requires read access to the form. Other callers get 403. The call is read-only. The call also returns 403 if the file does not exist or is not a PDF form. It returns 403 if the filling never started, the file is a filled copy, or the form left its room. To read the roles and whose turn it is, use `GET api/2.0/files/file/{fileId}/formroles`.
 
 ## Parameters
 

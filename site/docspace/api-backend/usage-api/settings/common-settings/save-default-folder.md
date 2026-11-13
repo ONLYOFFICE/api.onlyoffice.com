@@ -6,7 +6,7 @@
 
 Set the default folder
 
-Sets which folder the current user's account opens into by default, such as My Documents, the rooms list, or favorites. Requires an authenticated session; every role may set its own default, and the change never affects any other user. Only folder types the client actually offers as a landing page are accepted; picking My Documents (`USER`) as a Guest is rejected too, since guests have no personal storage. This is a mutating, idempotent call. It returns the saved setting.
+Sets the section that opens first for the calling user, such as My documents, rooms, or favorites. Any signed-in user can call it, including a guest. It does not change the setting of other users. The call changes data. You can repeat it with the same body. It returns the saved setting. The call returns 400 for a missing or unsupported type, or for My documents chosen by a guest.
 
 ## Parameters
 

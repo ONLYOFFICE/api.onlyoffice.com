@@ -6,7 +6,7 @@
 
 Delete the personal folder
 
-Queues an asynchronous job that empties the personal folder of the authenticated account. The operation takes no parameters and always acts on the caller, so it cannot be used to empty the folder of another user. Only an account whose type is `Guest` may call it; every other type is rejected, because only a guest has a personal folder that can be emptied this way. The job does not finish within this call: poll `GET api/2.0/people/delete/personal/progress` until `isCompleted` is true. The job deletes the files permanently and cannot be undone or cancelled - there is no terminate operation for this flow, unlike the user data deletion.
+Starts a job that deletes the personal folder of the caller. Only a guest can call it. Other callers get 403. If the guest has no personal folder, the call also returns 403. Files and folders that the caller shared from the folder move to a new folder of another member. That member last changed the personal folder. If that member is a guest, the portal owner gets the new folder. The call queues work, and the deletion cannot be undone. You cannot cancel the job. Repeat `GET api/2.0/people/delete/personal/progress` until `isCompleted` is true. While the job runs, a repeated call returns that job. After the job succeeds, a repeated call returns 403. If the job fails and the folder remains, a repeated call starts a new job.  Raises the `folder.created` webhook when the job moves shared files of the caller to a new folder of another member.
 
 ## Parameters
 This endpoint does not need any parameter.

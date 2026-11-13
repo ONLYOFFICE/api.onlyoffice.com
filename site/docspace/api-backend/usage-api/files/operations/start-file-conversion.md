@@ -6,7 +6,7 @@
 
 Start file conversion
 
-Queues the conversion of a file into the portal's own editable format and answers with the conversion entry the caller is to poll. The whole body may be omitted, in which case the defaults apply. `outputType` names the target format and, left empty, the portal's default for that kind of document is used; `password` unlocks a protected source file; `version` converts an older version instead of the current one. `createNewIfExist` decides where the result goes: with `true` a new file is created beside the source, while with `false`, the default, the converted file that already exists is replaced. `sync=true` converts inside the request and answers with the finished result instead of a queue entry, which is only sensible for small documents. Otherwise poll `GET api/2.0/files/file/{fileId}/checkconversion` until `progress` reaches 100 and take the converted file from `file`. Only formats the portal has to convert are accepted; anything already editable, and anything it cannot convert, is answered without work being queued or rejected as an invalid request. The caller needs read access to the file. The call is mutating and not idempotent.
+Starts the conversion of a file into an editable format and returns the conversion entry to poll. You can omit the whole body. If `outputType` is empty, the call uses the default format for the type of the file. With `createNewIfExist=true`, the call creates a new file beside the source. With `false`, the default, it replaces the converted file that already exists. With `sync=true`, the call converts within the request and returns the finished result. Use it only for small documents. Requires the right to convert the file, which a room manager and a content creator have. Other callers get 403. Without `sync`, the call queues work. While a queued conversion runs, a repeated call without `sync` queues nothing. Otherwise, each call converts the file again. After this call, repeat `GET api/2.0/files/file/{fileId}/checkconversion` until `progress` is 100. Then read the converted file from `file`. If the format needs no conversion, the call queues nothing and returns the current status. For a file that needs conversion, an `outputType` it cannot convert to returns 400. To save a PDF copy in another folder, use `POST api/2.0/files/file/{id}/saveaspdf`.
 
 ## Parameters
 
@@ -20,10 +20,11 @@ Queues the conversion of a file into the portal's own editable format and answer
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The conversion entry to poll, or the finished result when the conversion is synchronous | [**ConversationResultArrayWrapper**](../../models/conversation-result-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | `outputType` names a format the portal cannot convert this file to | - | - |
+| **403** | The caller may not convert the file | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

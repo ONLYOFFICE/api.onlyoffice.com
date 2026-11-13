@@ -6,7 +6,7 @@
 
 Get the AI access settings
 
-Returns whether AI functionality (chat, agents, vectorization) is currently available on the portal at all; AI is enabled by default. Requires an authenticated session; every role can read it. This is a read-only, idempotent call. When the setting is disabled, every AI-specific endpoint and folder is unavailable regardless of the caller's own permissions; this call only reports the portal-wide switch, not any per-user entitlement.
+Returns whether AI features are turned on for the portal: chat, agents, and vectorization. They are on by default. Any signed-in user can call it, including a guest. The call is read-only. If AI is turned off, all AI operations and folders are unavailable to every user.
 
 ## Parameters
 This endpoint does not need any parameter.

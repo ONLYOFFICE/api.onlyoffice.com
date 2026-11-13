@@ -6,7 +6,7 @@
 
 Get app settings
 
-Returns only the settings document of one portal application, such as `ai-rooms` or `docs-cloud`: the JSON that the current portal has saved for it through `PUT api/2.0/apps/{id}/settings`, with no wrapper around it. The identifier must be an application declared in the installation configuration, as listed by `GET api/2.0/apps`. Any authenticated portal member may read it. The call is read-only and idempotent. The document comes back exactly as it was saved: its shape is defined by the application itself and is not validated by the portal, and an empty result means that the portal has never saved settings for this application, so the application uses its own defaults. The enabled state is not part of the answer: read it from `GET api/2.0/apps/{id}`.
+Returns only the settings of one portal application on the current portal. The answer is the saved JSON value itself, not an application object. Take the identifier from `GET api/2.0/apps`. It is case-sensitive. Any signed-in user can call it. The call is read-only. The portal returns the value as it was saved and never checks its shape. An empty result means that the portal has no saved settings for the application. Then the application uses its own defaults. To read the enabled state, use `GET api/2.0/apps/{id}`. If the installation has no application with this identifier, the call returns 404.
 
 ## Parameters
 

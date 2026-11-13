@@ -6,7 +6,7 @@
 
 Get the room creation progress
 
-Returns the progress of the room-from-template job started by the calling account with `POST api/2.0/files/rooms/fromtemplate`. The record is private to the account that started the job: jobs of other members are never reported, and only one record is kept per account. The body is empty when the account has no such record, and it is also empty when the job queue cannot be read, so an empty answer is not proof that nothing was started. `progress` is a percentage, `isCompleted` marks the end of the job whether it succeeded or failed, `error` carries the failure message and is empty on success, and `roomId` is meaningful only once the room exists. The record survives the end of the job and is dropped when the next creation starts, so polling after completion keeps returning the same answer. Poll this operation until `isCompleted` is true and then read the room itself with `GET api/2.0/files/rooms/{id}`. The call changes nothing and is safe to repeat.
+Returns the progress of the job that `POST api/2.0/files/rooms/fromtemplate` started for your account. Any signed-in user can call it. The call shows only the job of your own account. The call is read-only. This is the call to poll. Repeat it until `isCompleted` is true. Then pass `roomId` to `GET api/2.0/files/rooms/{id}` to read the room. The record stays after the job ends, until you start the next job. The body is empty if your account has no record. It is also empty if the portal cannot read the job queue. So an empty body does not prove that no job was started.
 
 ## Parameters
 This endpoint does not need any parameter.

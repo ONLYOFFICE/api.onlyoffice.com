@@ -6,7 +6,7 @@
 
 Get the service prices from the accounting service
 
-Returns the price list of one wallet service as the accounting service keeps it: every price record with its time unit, cost and resulting price, volume threshold, validity period, status and discount category. Take the service name from the `serviceName` field of `GET api/2.0/portal/payment/walletservices`. The caller must be a DocSpace administrator, and the server must have the billing and accounting services configured; otherwise the call fails with 403. The call is read-only and can be repeated safely. By default the list also holds retired and not yet started records; `active=true` keeps only the prices in force now. A service with no prices comes back as an empty list. Amounts are in the currency of the service, which the records do not name. The list is cached for all portals for up to an hour, so a change in the accounting service can take that long to appear. For the current price of every plan and wallet service as the customer sees it, use `GET api/2.0/portal/payment/quotas`. An unknown service name fails with 500, as does an unreachable accounting service.
+Returns the price list of one wallet service as the accounting service keeps it. Requires a DocSpace admin. Other callers get 403. It also returns 403 if the installation has no billing or accounting service. The call is read-only. By default, the list also has retired prices and prices that have not started yet. With `active=true`, the list has only the prices in force now. A service without prices returns an empty list. The amounts are in the currency of the service, which the records do not name. The installation caches the list for all portals for up to an hour. So a change in the accounting service can take an hour to appear. To read the current prices that the customer sees, use `GET api/2.0/portal/payment/quotas`. If `serviceName` is too long, the call returns 400.
 
 ## Parameters
 
@@ -22,9 +22,9 @@ Returns the price list of one wallet service as the accounting service keeps it:
 | **200** | The list of the service prices | [**ServicePriceArrayWrapper**](../../models/service-price-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The `serviceName` is longer than 255 characters | - | - |
 | **403** | The caller is not a DocSpace administrator, or the billing and accounting services are not configured on the server | - | - |
-| **500** | The accounting service does not know the service name, answers the price request with an error or cannot be reached | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

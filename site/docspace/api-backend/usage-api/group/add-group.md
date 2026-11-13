@@ -6,7 +6,7 @@
 
 Add a new group
 
-Creates a group with the given name and, optionally, a manager and a first set of members. The caller needs the permissions to edit groups and to add and remove users. The name is required and cannot be blank, and unlike the operations that add members later, this one checks every listed account upfront and rejects the whole call with 400 if any of them is unusable - a guest, a disabled account or an ID that matches nobody. The call is not idempotent: names are not unique, so repeating it creates a second group with the same name. Creating a group raises a `GroupCreated` webhook, and the answer holds the new group with its members included. Members can be changed afterwards through `PUT api/2.0/group/{id}` or the dedicated member operations.
+Creates a group with a name and, optionally, a manager and members. The manager also becomes a member. Requires a DocSpace admin. Other callers get 403. A room admin can read groups but also gets 403 here. The call changes data. Do not repeat it. Group names are not unique, so each call creates another group. The response is the new group with its members. The call returns 400 if the name is missing, blank, or too long. It also returns 400 if the manager or any member is a guest, a disabled account, or an unknown ID. In that case, the call creates nothing.  Raises the `group.created` webhook once for the new group, without `user.*` webhooks for its members.
 
 ## Parameters
 

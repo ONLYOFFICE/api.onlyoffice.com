@@ -6,7 +6,7 @@
 
 Get the customer information
 
-Returns the billing customer behind the portal: the e-mail its billing account is registered to, whether a payment method is stored for it, and the portal user who is the payer of that account. Only a DocSpace administrator may read it, and the call is read-only. The answer is empty in two ordinary cases - the installation has no billing service configured at all, and the portal has never been a customer - so an empty body is not an error. `payer` is filled in only when the billing e-mail belongs to a portal user; when it does not, the e-mail is still shown but the field stays empty, and that is what makes every payer-only operation of this group unreachable for everybody. `refresh=true` re-reads the customer from the billing provider instead of the cache, which is worth doing right after a payment method has been attached.
+Returns the billing customer of the portal. It has the billing email, whether a payment method is stored, and the payer. The payer is the portal user whose email is the billing email. Requires a DocSpace admin. Other callers get 403. The call is read-only. The call returns an empty result if the installation has no billing service. It also returns an empty result if the portal has no billing customer. If no portal user has the billing email, `payer` is empty. Then nobody can call the operations that only the payer can call. By default, the call reads the customer from the cache. With `refresh=true`, it reads the customer from the billing provider. Use it right after a payment method is attached.
 
 ## Parameters
 

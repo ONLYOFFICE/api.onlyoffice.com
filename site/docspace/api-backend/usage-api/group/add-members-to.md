@@ -6,7 +6,7 @@
 
 Add group members
 
-Adds the listed accounts to a group, keeping the members it already has. The caller needs the permissions to edit groups and to add and remove users, and the ID has to belong to a group that has not been deleted, otherwise the operation answers 404. Accounts that cannot be group members - a guest, a disabled account or an ID that matches nobody - are silently skipped instead of failing the call, so compare the members in the answer with what was sent to see what was actually applied. The call is idempotent for an account that is already a member, and it does not change who manages the group; use `PUT api/2.0/group/{id}/manager` for that. The answer is the group with its members after the addition. To replace the whole list instead of extending it, use `POST api/2.0/group/{id}/members`.
+Adds the listed accounts to a group and keeps its current members. Requires a DocSpace admin. Other callers get 403. A room admin can read groups but also gets 403 here. The call changes data. You can repeat it with the same body. The call skips a guest, a disabled account, an unknown ID, and a current member. An empty list changes nothing. The response is the group with its members after the call. If no group has this ID, the call returns 404. This call does not change the manager. To set the manager, use `PUT api/2.0/group/{id}/manager`. To replace all members, use `POST api/2.0/group/{id}/members`.  Raises the `group.updated` webhook only when the call adds an account, without `user.*` webhooks for it.
 
 ## Parameters
 

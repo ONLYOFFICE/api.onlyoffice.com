@@ -6,7 +6,7 @@
 
 Set restricted AI models
 
-Replaces the whole set of AI chat models barred on this portal: the body is the complete set that is to hold, so adding one restriction means sending the new model together with the ones already restricted, lifting one means leaving it out, and an empty set lifts them all. Read the current set from `GET api/2.0/portal/payment/ai-model/restrictions` and the model identifiers from `GET api/2.0/portal/payment/ai-prices` before calling. The installation needs a billing service and the AI gateway configured, the portal needs a billing customer and the AI tools wallet service switched on with `POST api/2.0/portal/payment/servicestate`, and the caller needs the permission to edit the portal settings as well as DocSpace administrator rights. The call is mutating and idempotent - sending the same set twice leaves the same state - and it is written to the portal audit trail. It takes effect on the next AI request, so a conversation already open on a model that has just been barred cannot go on with it. The stored set comes back in the answer. While AI tools is off the call is refused with 403 instead of being stored, because the read reports an empty set then and nothing written could be read back.
+Replaces the whole set of AI chat models that are barred on the portal. To bar one more model, send it together with the models already barred. To lift a restriction, leave the model out. An empty set lifts all restrictions. First, read the current set from `GET api/2.0/portal/payment/ai-model/restrictions`. Take the model IDs from `GET api/2.0/portal/payment/ai-prices`. If the portal has no billing customer, the call returns 404. AI tools must be on, and you turn it on with `POST api/2.0/portal/payment/servicestate`. While AI tools is off, the call returns 403. Requires a DocSpace admin. Other callers get 403. It also returns 403 if the installation has no billing service or no AI gateway. The call changes data, and you can repeat it with the same body. The set applies from the next AI request. The AI gateway applies the new set from the next AI request, also in open conversations. The call returns the stored set. If `models` is missing or has a null entry, the call returns 400.
 
 ## Parameters
 
@@ -22,9 +22,9 @@ Replaces the whole set of AI chat models barred on this portal: the body is the 
 | **400** | The request body cannot be read, or `models` is missing, `null` or holds a `null` entry | - | - |
 | **403** | The caller has no portal-settings right or is not a DocSpace administrator, the installation has no billing service or no AI gateway configured, or the AI tools wallet service is off for the portal | - | - |
 | **404** | This portal has no billing customer yet | - | - |
-| **500** | The AI gateway answers with an error or cannot be reached | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

@@ -6,7 +6,7 @@
 
 Get the backup history
 
-Lists the backups of the current portal whose archive is still present in the storage it was written to. The records come back in no particular order, so sort them by `createdOn` if the newest one is wanted. `dump` lists the backups of the whole server instead and requires the space access permission. Despite being a read operation, this prunes the history as it goes: a record whose archive is no longer in its storage is deleted outright, so the list can shrink between two calls without anybody deleting anything. A record whose storage can no longer be reached at all - a disconnected third-party account, for instance - is neither returned nor deleted, so it stays invisible while still occupying the history. The `id` of a record is the same value as the `taskId` that `POST api/2.0/backup/startbackup` returned for it, and it is what `DELETE api/2.0/backup/deletebackup/{id}` and the `backupId` of `POST api/2.0/backup/startrestore` expect.
+Returns the backups of the portal whose archive is still in its storage. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. With `dump`, a caller without the space access permission also gets 403. The call changes data. It deletes the record of each backup whose archive is gone, in the Trash, or unreadable. It skips a backup only when its storage cannot be opened, and keeps its record. You can repeat the call. The list has no set order, so sort it by `createdOn`. If the portal subscription has expired or is not paid, the call returns 402.
 
 ## Parameters
 

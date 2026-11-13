@@ -17,19 +17,6 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**aiSendWithStream**](ai/ai-send-with-stream.md) | **POST** /api/2.0/ai/ai/send-with-stream | Send with stream |
 | [**aiSendWithStreamOpenAI**](ai/ai-send-with-stream-open-ai.md) | **POST** /api/2.0/ai/ai/send-with-stream-openai | Stream a chat in OpenAI format |
 
-## Agents
-
-| Method | HTTP request | Description |
-|------------ | ------------- | -------------|
-| [**aiAgentsCreate**](agents/ai-agents-create.md) | **POST** /api/2.0/ai/agents | Create an agent |
-| [**aiAgentsDelete**](agents/ai-agents-delete.md) | **DELETE** /api/2.0/ai/agents/\{id\} | Delete an agent |
-| [**aiAgentsGet**](agents/ai-agents-get.md) | **GET** /api/2.0/ai/agents/\{id\} | Get an agent |
-| [**aiAgentsList**](agents/ai-agents-list.md) | **GET** /api/2.0/ai/agents | List agents |
-| [**aiAgentsNews**](agents/ai-agents-news.md) | **GET** /api/2.0/ai/agents/news | List agent news items |
-| [**aiAgentsResetQuota**](agents/ai-agents-reset-quota.md) | **PUT** /api/2.0/ai/agents/resetquota | Reset agents' quota |
-| [**aiAgentsUpdate**](agents/ai-agents-update.md) | **PUT** /api/2.0/ai/agents/\{id\} | Update an agent |
-| [**aiAgentsUpdateQuota**](agents/ai-agents-update-quota.md) | **PUT** /api/2.0/ai/agents/agentquota | Update agents' quota |
-
 ## Assignments
 
 | Method | HTTP request | Description |
@@ -56,11 +43,21 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**aiAttachmentsSaveFile**](attachments/ai-attachments-save-file.md) | **POST** /api/2.0/ai/attachments/save-file | Save file |
 | [**aiAttachmentsSaveFilesMany**](attachments/ai-attachments-save-files-many.md) | **POST** /api/2.0/ai/attachments/save-files-many | Save files many |
 
+## BYOK
+
+| Method | HTTP request | Description |
+|------------ | ------------- | -------------|
+| [**aiByokKeysDelete**](byok/ai-byok-keys-delete.md) | **DELETE** /api/2.0/ai/byok/\{id\} | Delete a BYOK key |
+| [**aiByokKeysList**](byok/ai-byok-keys-list.md) | **GET** /api/2.0/ai/byok | List BYOK keys |
+| [**aiByokKeysSet**](byok/ai-byok-keys-set.md) | **PUT** /api/2.0/ai/byok/\{id\} | Set a BYOK key |
+| [**aiByokProviders**](byok/ai-byok-providers.md) | **GET** /api/2.0/ai/byok/providers | List BYOK providers |
+
 ## Context
 
 | Method | HTTP request | Description |
 |------------ | ------------- | -------------|
 | [**aiContextGetContextFolders**](context/ai-context-get-context-folders.md) | **GET** /api/2.0/ai/context/get-context-folders | Get context folders |
+| [**aiContextGetKnowledgeFolders**](context/ai-context-get-knowledge-folders.md) | **GET** /api/2.0/ai/context/get-knowledge-folders | Get knowledge folders |
 | [**aiContextGetRoomSkill**](context/ai-context-get-room-skill.md) | **GET** /api/2.0/ai/context/get-room-skill | Get room skill |
 | [**aiContextGetRoomSkills**](context/ai-context-get-room-skills.md) | **GET** /api/2.0/ai/context/get-room-skills | Get room skills |
 
@@ -76,6 +73,13 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | Method | HTTP request | Description |
 |------------ | ------------- | -------------|
 | [**aiExportTextToDocx**](export/ai-export-text-to-docx.md) | **POST** /api/2.0/ai/text-to-docx | Start markdown export |
+
+## Metadata
+
+| Method | HTTP request | Description |
+|------------ | ------------- | -------------|
+| [**aiMetaFill**](metadata/ai-meta-fill.md) | **POST** /api/2.0/ai/meta/fill | Fill metadata values |
+| [**aiMetaGenerate**](metadata/ai-meta-generate.md) | **POST** /api/2.0/ai/meta/generate | Generate metadata fields |
 
 ## OpenAI passthrough
 
@@ -133,12 +137,21 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | Method | HTTP request | Description |
 |------------ | ------------- | -------------|
 | [**aiSettingsGet**](settings/ai-settings-get.md) | **GET** /api/2.0/ai/config | Get AI settings |
+| [**aiSettingsGetDocumentAgent**](settings/ai-settings-get-document-agent.md) | **GET** /api/2.0/ai/document-agent/settings | Get the document agent settings |
 | [**aiSettingsGetToolMode**](settings/ai-settings-get-tool-mode.md) | **GET** /api/2.0/ai/config/tool-mode | Get the tool permission mode |
 | [**aiSettingsGetUser**](settings/ai-settings-get-user.md) | **GET** /api/2.0/ai/config/user | Get user AI settings |
 | [**aiSettingsGetVectorization**](settings/ai-settings-get-vectorization.md) | **GET** /api/2.0/ai/config/vectorization | Get vectorization settings |
+| [**aiSettingsSetDocumentAgent**](settings/ai-settings-set-document-agent.md) | **PUT** /api/2.0/ai/document-agent/settings | Set the document agent settings |
 | [**aiSettingsSetToolMode**](settings/ai-settings-set-tool-mode.md) | **PUT** /api/2.0/ai/config/tool-mode | Set the tool permission mode |
 | [**aiSettingsSetUser**](settings/ai-settings-set-user.md) | **PUT** /api/2.0/ai/config/user | Update user AI settings |
 | [**aiSettingsSetVectorization**](settings/ai-settings-set-vectorization.md) | **PUT** /api/2.0/ai/config/vectorization | Update vectorization settings |
+
+## Skills
+
+| Method | HTTP request | Description |
+|------------ | ------------- | -------------|
+| [**aiSkillsCreate**](skills/ai-skills-create.md) | **POST** /api/2.0/ai/skills/create | Create a skill from the template |
+| [**aiSkillsGenerate**](skills/ai-skills-generate.md) | **POST** /api/2.0/ai/skills/generate | Generate a skill |
 
 ## Threads
 

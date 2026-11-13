@@ -13,3 +13,4 @@ Possible values:
 - `OCR`
 - `Vision`
 - `FormAnalysis`
+- `GenerateMeta`

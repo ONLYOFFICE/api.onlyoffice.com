@@ -6,7 +6,7 @@
 
 Show the Recent section
 
-Stores whether the Recent section is offered to the calling account, and returns the value that is now stored. The setting belongs to that account alone: every authenticated role down to a guest may change its own copy, and an unauthenticated caller is refused. Hiding the section removes it from the list of section roots returned by `GET api/2.0/files/@root`, and the document editor stops offering the recent-files entry; the section itself keeps being maintained, and `GET api/2.0/files/recent` still returns its contents. Pass `set=true` to show it again. The same value is published as `recentSection` by `GET api/2.0/files/settings`, which is the only way to read it back. Repeating the call with the same value writes it again and is safe. A new account starts with the section shown. Hiding it neither clears the recent history nor stops it being recorded, so showing the section again brings the same entries back.
+Shows or hides the Recent section for the calling account. It returns `true` if the section is shown. Any signed-in user can call it. The call changes data, and you can repeat it with the same body. A hidden section no longer appears in `GET api/2.0/files/@root` and in the document editor. The portal still records recent files, and `GET api/2.0/files/recent` still returns them. To read the value, use the `recentSection` field of `GET api/2.0/files/settings`.
 
 ## Parameters
 
@@ -19,7 +19,6 @@ Stores whether the Recent section is offered to the calling account, and returns
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | true if the Recent section is offered to the caller | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | The caller is not allowed to change this setting | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

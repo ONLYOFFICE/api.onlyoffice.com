@@ -6,7 +6,7 @@
 
 Get the active wallet services
 
-Lists the wallet services the portal is running right now: the add-ons its plan pays for that are in the active state, plus the ones an administrator switched on by hand in the wallet service settings; the Docs Connect trial is listed as well, although it is not paid from the wallet. Only a DocSpace administrator may call it, no billing customer is needed for it, and the call is read-only. Every item names the service, its title and the unit it is measured in, and says whether it is a subscription; a subscribed service also carries the limit it grants and how much of it is used where that number is known - the editor seats and the editors currently active for Docs Connect, the purchased units and the units already consumed for disk storage. A service listed with no limit is one whose usage is not counted this way, not one without a limit. The catalogue of what could be switched on is `GET api/2.0/portal/payment/walletservices`, and switching one is `POST api/2.0/portal/payment/servicestate`.
+Returns the wallet services that run on the portal now. The list has the active add-ons of the plan and the services that an admin turned on by hand. It also has the Docs Connect trial, which the wallet does not pay for. Requires a DocSpace admin. Other callers get 403. The call also returns 403 if the installation has no billing service. The portal does not need a billing customer. The call is read-only. A subscription service can have its limit and its usage. For Docs Connect, these are the editor seats and the active editors. For disk storage, these are the bought units and the used units. An item without a limit is a service whose usage is not counted this way. The call returns 400 if the Docs Connect service does not know the active Docs Connect subscription. To read all services that the portal can buy, use `GET api/2.0/portal/payment/walletservices`. To turn a service on or off, use `POST api/2.0/portal/payment/servicestate`.
 
 ## Parameters
 This endpoint does not need any parameter.
@@ -18,9 +18,9 @@ This endpoint does not need any parameter.
 | **200** | The wallet services active on the portal, with their limits and usage where those are known | [**ActiveServiceArrayWrapper**](../../models/active-service-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The portal has an active Docs Connect subscription that the Docs Connect service does not know | - | - |
 | **403** | The caller is not a DocSpace administrator, or the portal has no billing service configured | - | - |
-| **500** | The portal has an active Docs Connect subscription, and the Docs Connect service answers with an error or cannot be reached | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

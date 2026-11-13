@@ -6,7 +6,7 @@
 
 Get API key permissions
 
-Returns every scope value the portal accepts in the `permissions` array of an API key. Read it before `POST api/2.0/keys` or `PUT api/2.0/keys/{keyId}`, because any other value is rejected with 400. Any portal member except a guest may call it, and the call is read-only. The answer is a flat list sorted alphabetically, holding the per-area scopes such as `accounts:read`, `files:write` and `rooms:write`, the portal-wide `*:read` and `*:write`, and `*` which stands for a key without scope restrictions. The list is fixed for the portal and identical for every caller, so it can be cached by the client.
+Returns every scope that the `permissions` array of an API key accepts. Use these values in `POST api/2.0/keys` and `PUT api/2.0/keys/{keyId}`. Those calls accept no other value. Any signed-in user can call it, except a guest. A guest gets 403. The call is read-only. The list is in alphabetical order and the same for every caller. Besides the scopes of each area, it has `*:read`, `*:write`, and `*`. The value `*` means a key without scope restrictions.
 
 ## Parameters
 This endpoint does not need any parameter.

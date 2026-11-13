@@ -6,7 +6,7 @@
 
 Rename a room tag
 
-Renames a custom room tag in the portal catalog. The rename follows the tag everywhere it is used: every room that carries it keeps it and shows the new name, so nothing has to be re-attached afterwards. Only a portal administrator may rename a tag, and a room manager who is allowed to create tags is still refused here. The old name is matched exactly as it is stored rather than searched for, and a name that is not in the catalog is answered as missing. A new name that another tag already occupies is rejected as an invalid request, because tag names are unique across the portal; both names must be non-blank and within the published length limit. The answer is the new name. Stored queries are not updated for the caller: a `tags` filter of `GET api/2.0/files/rooms` that still names the old value stops matching anything. The catalog is read with `GET api/2.0/files/tags`.
+Renames a custom room tag of the portal. Every room with this tag then shows the new name. Use the old name exactly as `GET api/2.0/files/tags` returns it. Requires a DocSpace admin. Other callers get 403. A room admin can create tags but also gets 403 here. The call changes data, and a repeated call returns 404. It returns the new name. After the rename, a `tags` filter of `GET api/2.0/files/rooms` with the old name finds no rooms. If no tag has the old name, the call returns 404. The call returns 400 if a name is empty, has only spaces, or is too long. It also returns 400 if any tag already has the new name, even this tag. So you cannot merge two tags.
 
 ## Parameters
 

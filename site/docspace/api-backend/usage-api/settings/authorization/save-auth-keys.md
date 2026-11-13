@@ -6,7 +6,7 @@
 
 Save the authorization keys
 
-Saves the authorization keys for one third-party storage or authorization provider, identified by name, or clears them when every submitted key is left empty. Requires Owner or DocSpaceAdmin (the EditPortalSettings permission); a provider that does not allow its keys to be changed from the API rejects the call outright. A provider that is only available on a paid plan additionally requires the portal's tariff to include third-party storage, or Standalone licensing, before the call is accepted. Keys that fail the provider's own validation are cleared and the call is rejected rather than left partially applied. This is a mutating, idempotent call: resaving identical keys succeeds and reports no change. It returns whether the keys actually changed, not the keys themselves; connecting Telegram or an external database through this call also triggers the matching real-time connection update.
+Saves the keys of one third-party provider, or clears them if every value is empty. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. It also returns 403 for an unknown provider, or one whose keys you cannot set. The call returns 402 if the installation hides third-party authorization. It also returns 402 for a paid provider that the plan lacks, except on a Standalone installation. The call changes data. You can repeat it with the same body. It returns true if any key changed, and false if all keys were the same. Clearing the keys always returns true. If the provider rejects the keys, the call clears all its keys and returns 400. It also returns 400 if `name` or `props` is missing. A key with no name, no value, or a too long value also returns 400.
 
 ## Parameters
 

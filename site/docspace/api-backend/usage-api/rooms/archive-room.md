@@ -6,7 +6,7 @@
 
 Archive a room
 
-Queues a background job that moves one room from the Rooms section to the Archive section, and returns the operation record of that job. An archived room stays readable to its members and becomes read only: files cannot be created, renamed or edited in it, and its settings, tags, logo and links can no longer be changed, which is why many other room operations answer an archived room with a refusal. The caller must be a manager of the room; administrators of the portal cannot archive a room they were not invited to, and a room template cannot be archived at all and is answered as missing. The room is not archived when the response arrives: poll `GET api/2.0/files/fileops` until `finished` is true. Archiving an already archived room is harmless. `deleteAfter` decides only how long the finished record survives, not what happens to the room. Use `PUT api/2.0/files/rooms/{id}/unarchive` to bring the room back.
+Starts a background job that moves a room to the Archive section, and returns the job record. Members can still read an archived room. Only deleting or unarchiving the room changes it. No one can create, rename, or edit files in it, or change its settings, tags, logo, or links. Requires the room manager role in the room. Other callers get 403. A DocSpace admin without an invitation also gets 403. The call queues work. Repeat `GET api/2.0/files/fileops` until `finished` is true. You can repeat the call on an archived room. The `deleteAfter` field sets only how long the finished record stays. Instructions and Knowledge rooms cannot be archived and return 403. To remove one, use `DELETE api/2.0/files/rooms/{id}`. A folder that is not a room also returns 403. A room with a file that is locked or being edited also returns 403. If the room does not exist or is a room template, the call returns 404. If a string `id` points to a storage account that is not connected, the call returns 400. To restore the room, use `PUT api/2.0/files/rooms/{id}/unarchive`.  Raises the `room.archived` webhook once the queued operation moves the room to the archive, for an AI agent as well.
 
 ## Parameters
 
@@ -20,12 +20,12 @@ Queues a background job that moves one room from the Rooms section to the Archiv
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The queued archive operation to poll | [**FileOperationWrapper**](../models/file-operation-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | A third-party identifier refers to a storage account that is not connected | - | - |
-| **403** | The caller may not read or archive this room, the id names a folder that is not a room, or a file in the room is locked or being edited | - | - |
+| **400** | The request body cannot be read, or a third-party identifier refers to a storage account that is not connected | - | - |
+| **403** | The caller may not read or archive this room, the id names a folder that is not a room, the room is an Instructions or Knowledge room, which is never archived, or a file in the room is locked or being edited | - | - |
 | **404** | The room does not exist or is a room template, or the id is neither a 32-bit number nor a third-party identifier of a known storage type | - | - |
-| **500** | A third-party identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

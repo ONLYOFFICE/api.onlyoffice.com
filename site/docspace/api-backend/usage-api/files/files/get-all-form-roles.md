@@ -6,7 +6,7 @@
 
 Get form roles
 
-Returns the roles of a PDF form together with the state each of them is in, which is how a client shows who is expected to fill the form next. Every entry carries the name of the role, the account holding it, the sequence number that decides the turn and a status: the roles of earlier turns are reported as complete, those of later turns as waiting, and the role whose turn it is as either yours to fill or already in progress, depending on whether that person has opened the form; when the filling has been stopped, the role it was interrupted at is reported as stopped instead. A form whose filling was never started answers with an empty list. The file has to be a PDF form, or the completed copy of one, and anything else is refused. Read access to the form is enough, so every member of the room sees the roles, while a caller without access to the room and a guest outside it are refused with 403 and an unknown file is answered with 404. The operation is read-only. The assignment itself is written by `POST api/2.0/files/file/{fileId}/formrolemapping`.
+Returns the roles of a PDF form with the state of each. The roles of earlier turns are complete, and the roles of later turns are waiting. The role of the current turn is yours to fill, or in progress if its user opened the form. After a stop, the role where the filling stopped shows as stopped. A form whose filling never started returns an empty list. Requires read access to the form. Other callers get 403. The call is read-only. The file must be a PDF form or a filled copy of one, and another file returns 403. If no file has this id, the call returns 404. To assign the roles, use `POST api/2.0/files/file/{fileId}/formrolemapping`.
 
 ## Parameters
 

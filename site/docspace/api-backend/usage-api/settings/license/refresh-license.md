@@ -6,7 +6,7 @@
 
 Refresh the license
 
-Re-reads the license file of this self-hosted Enterprise installation and rewrites the portal-wide quota and tariff from it, so a file replaced on disk or a renewal issued by the vendor takes effect without a restart. A license staged by `POST api/2.0/settings/license` is promoted to the active one here as well, but the usual first-time order is upload and then `POST api/2.0/settings/license/accept`; this operation is for later refreshes. The caller only has to be signed in - no administrator right is checked. Despite the `GET`, the call rewrites stored data, and it is idempotent: repeating it applies the same license again. The editing service is asked to confirm the license as part of the check, and the license it reports must match the file. The answer is `true` when the license was applied and `false` on an installation with no license path configured at all, such as a SaaS or open-source portal, where nothing is read and nothing changes. A missing or unreadable file, a mismatched customer or edition, and an editing service that rejects the license all fail the call instead of answering `false`. The operation stays reachable while the portal is unpaid.
+Re-reads the license file of this Enterprise installation and applies its quota and tariff to the portal. So a replaced file or a renewed license takes effect without a restart. If a file was staged by `POST api/2.0/settings/license`, the call activates it. For the first activation, use `POST api/2.0/settings/license/accept` instead. Any signed-in user can call it. Despite the `GET`, the call changes data. You can repeat it, and each call applies the same license again. The call returns `true` when it applied the license. It returns `false` and changes nothing on a SaaS or open-source installation, which has no license path. The call returns 402 if the file is missing, cannot be read, or has no customer id or signature. It also returns 402 if the editing service does not confirm the license or reports another one. If the license starts later, the call returns 400. The call works while the portal is unpaid.
 
 ## Parameters
 This endpoint does not need any parameter.
@@ -17,7 +17,7 @@ This endpoint does not need any parameter.
 |------------- | ------------- | ------------- | -------------|
 | **200** | `true` when the license file was re-read and the portal quota and tariff rewritten from it, `false` on an installation that has no license path configured | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The license file does not start until a later date | - | - |
-| **402** | No license file is on disk, the file cannot be read as a license or carries no customer id or signature, it was issued for the other edition, or the editing service does not confirm it | - | - |
+| **402** | No license file is on disk, the file cannot be read as a license or carries no customer id or signature, or the editing service does not confirm it | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |

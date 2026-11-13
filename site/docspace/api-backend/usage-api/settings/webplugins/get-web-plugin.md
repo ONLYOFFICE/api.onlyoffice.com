@@ -6,7 +6,7 @@
 
 Get a web plugin by name
 
-Returns one web plugin of the current portal by its manifest name, looked up over the same set as `GET api/2.0/settings/webplugins`: the installation-wide plugins plus the portal's own. The `name` is the manifest name published in the `name` field of that list, matched without regard to case; it is neither the localized display name nor the JavaScript object name in `pluginName`, so it cannot be taken from the title shown in the interface. Any authenticated portal member may call it, no settings permission needed, and the installation has to have web plugins enabled in its configuration. The call is read-only and idempotent. The response carries the manifest data along with the state the portal stored for that plugin: `enabled`, the `settings` string, `system`, and the `url` and `cssUrl` a client loads it from. A name that is not installed is rejected as not found, and 403 means web plugins are switched off for the installation. Change the state of the plugin with `PUT api/2.0/settings/webplugins/{name}`.
+Returns one web plugin of the portal by its manifest name. The call searches the same plugins as `GET api/2.0/settings/webplugins`, including the installation-wide ones. Take the name from the `name` field of that list. The call ignores the case of the name. Any signed-in user can call it. If the installation turns off web plugins, the call returns 403. The call is read-only. The response includes the `enabled` state and the `settings` that the portal stored for the plugin. If no plugin has this name, the call returns 404. To change the state of the plugin, use `PUT api/2.0/settings/webplugins/{name}`.
 
 ## Parameters
 

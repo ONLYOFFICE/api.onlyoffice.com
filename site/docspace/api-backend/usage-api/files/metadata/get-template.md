@@ -6,7 +6,7 @@
 
 Get a metadata template
 
-Returns one metadata template with its fields, in their display order, and the options of its choice fields. Any member of the portal can read a template, the call is read-only. Use it to resolve the template identifiers a file or a folder reports in `assignedMetadataTemplates` into names and fields. A template that does not exist is answered with 404.
+Returns one metadata template with its fields and the options of its choice fields. The fields come in display order. Any signed-in user can call it. The call is read-only. Use it to get the names and fields of the IDs in `assignedMetadataTemplates` of a file or a folder. If no template has this ID, the call returns 404.
 
 ## Parameters
 

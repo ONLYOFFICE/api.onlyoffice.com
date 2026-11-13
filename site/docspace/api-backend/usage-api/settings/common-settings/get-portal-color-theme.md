@@ -6,7 +6,7 @@
 
 Get a color theme
 
-Returns the portal's color theme configuration: every saved custom theme, which one is currently selected, and how many custom themes the plan still allows. No permission is required; anonymous callers can read it too. This is a read-only, idempotent call. The response supports conditional requests: send the standard If-Modified-Since header with the previous `lastModified` value, and an unchanged response comes back empty instead of resending the same settings. A `limit` of `0` means the plan does not cap the number of custom themes.
+Returns the color themes of the portal, the selected theme, and the limit on their number. Anyone can call it without signing in, even when the portal is unpaid, suspended, or blocked. The call is read-only. It supports `If-Modified-Since` with the `Last-Modified` value of the last answer. If nothing changed, it returns 304 with an empty body.
 
 ## Parameters
 This endpoint does not need any parameter.

@@ -6,7 +6,7 @@
 
 Complete the Wizard settings
 
-Finishes the initial portal setup wizard: sets the owner's password and locale, applies the supplied license if one is required, and marks the wizard as completed so it is not shown again. This call is not for a normal logged-in session: it requires a confirmation link bearing the Wizard claim, of the kind issued when a new portal is created, and the link is consumed as part of authenticating the request; the caller must also hold the EditPortalSettings permission. An empty password or a malformed email address is rejected without completing the wizard, and so is a missing, invalid, or expired license, or a license whose user quota does not cover the portal. This call is meant to run once per portal; running it again is accepted but has no further effect once the wizard is already completed. It returns the resulting wizard settings, including the completed flag.
+Completes the first setup of the portal. It sets the email and password of the portal owner, the language, and the time zone. It also applies the license if the installation needs one. Sign the request with the confirmation token of the setup wizard. Its account also needs the EditPortalSettings permission. Otherwise, the call returns 403. Take the token from `wizardToken` of `GET api/2.0/settings` before setup is complete. The call changes data. Do not repeat it. If the email changes, the owner must confirm the new address. It returns the wizard settings with `completed` set. The call returns 400 if `email` or `passwordHash` is missing, the email is malformed, or the license starts later.
 
 ## Parameters
 
@@ -21,9 +21,9 @@ Finishes the initial portal setup wizard: sets the owner's password and locale, 
 | **200** | Resulting wizard settings, including the completed flag | [**WizardSettingsWrapper**](../../models/wizard-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request body cannot be read or has no `email` or `passwordHash`, the email address is empty or malformed, or the license's start date is in the future | - | - |
 | **403** | The account the confirmation link was issued for has no portal-settings right | - | - |
-| **500** | The wizard is already completed, the AMI instance ID does not match, the email address fails the portal's check, the password is empty, or the license is missing, unreadable, rejected by validation or of the wrong type | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

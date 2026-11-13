@@ -6,7 +6,7 @@
 
 Unarchive a room
 
-Queues a background job that moves one room from the Archive section back to the Rooms section, and returns the operation record of that job. The room becomes writable again with the membership, tags, logo and links it had before, while the pinned state of its members is not restored and has to be set again with `PUT api/2.0/files/rooms/{id}/pin`. The caller must be a manager of the room; a member who was only invited to it is refused, a room template is answered as missing, and a room that was never archived simply stays where it is. The room is not moved when the response arrives: poll `GET api/2.0/files/fileops` until `finished` is true, and expect a room that is still archived until then. `deleteAfter` decides only how long the finished record survives. Calling the operation twice in a row does not corrupt the room, and a deleted or unknown room id is reported as missing.
+Starts a background job that moves a room from the Archive section back to Rooms, and returns the job record. The room becomes writable again with its members, tags, logo, and links. The job does not restore the pins of the members. To pin the room again, use `PUT api/2.0/files/rooms/{id}/pin`. Requires the room manager role in the room. Other callers get 403. The call queues work. Repeat `GET api/2.0/files/fileops` until `finished` is true. The room may leave the archive before `finished` becomes true. You can repeat the call. A room that is not archived stays where it is. The `deleteAfter` field sets only how long the finished record stays. A folder that is not a room returns 403. A room with a file that is locked or being edited also returns 403. The call returns 404 if the room does not exist, was deleted, or is a room template. If a string `id` points to a storage account that is not connected, the call returns 400.  Raises the `room.restored` webhook once the queued operation moves the room out of the archive, for AI agents too.
 
 ## Parameters
 
@@ -20,12 +20,12 @@ Queues a background job that moves one room from the Archive section back to the
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The queued unarchive operation to poll | [**FileOperationWrapper**](../models/file-operation-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | A third-party identifier refers to a storage account that is not connected | - | - |
+| **400** | The request body cannot be read, or a third-party identifier refers to a storage account that is not connected | - | - |
 | **403** | The caller may not read or unarchive this room, the id names a folder that is not a room, or a file in the room is locked or being edited | - | - |
 | **404** | The room does not exist or is a room template, or the id is neither a 32-bit number nor a third-party identifier of a known storage type | - | - |
-| **500** | A third-party identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

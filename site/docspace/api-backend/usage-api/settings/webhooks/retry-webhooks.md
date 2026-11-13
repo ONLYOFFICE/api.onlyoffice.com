@@ -6,7 +6,7 @@
 
 Retry webhook deliveries
 
-Sends a batch of past webhook deliveries again. `ids` holds the identifiers of delivery records from `GET api/2.0/settings/webhooks/log`; each of them is sent once more to the subscription it belongs to as a fresh delivery record, queued for asynchronous delivery, and the response lists those new records with `status` and `delivery` not filled in yet. Records that do not exist, and records of another member's subscription when the caller is not a `DocSpaceAdmin`, are skipped in silence instead of failing the call, so a response shorter than `ids` is the only sign that something was left out: compare the counts rather than assuming everything was queued. An empty `ids` list is accepted and queues nothing. Read the outcomes from `GET api/2.0/settings/webhooks/log`, matching the returned identifiers with `eventId`. Every call queues another round of attempts, and the original records stay as they are. A `Guest` is refused. The operation is rate limited, so a burst of calls is answered with 429. For a single record `PUT api/2.0/settings/webhook/{id}/retry` reports a missing or forbidden record instead of skipping it.
+Sends several past webhook deliveries again. The body lists delivery records from `GET api/2.0/settings/webhooks/log` in `ids`. Any signed-in user can call it, except a guest. A guest gets 403. If the portal restricts the developer tools, only DocSpace admins can call it. Other callers then get 403. The call queues work. For each record, it queues a new delivery of the same event and returns the new record. Each new record has its own `id`, the old `eventId`, and the caller in `retriedBy`. Each call also stops the deliveries queued earlier for these events. The call retries each event once and skips other records of the same event. It also skips unknown records and records that it cannot queue now. Users who are not DocSpace admins can retry only records of their own subscriptions. The call skips other records for them. So compare the response with `ids`. An empty `ids` queues nothing. Each receiver gets the same event ID in a body that the portal signs again. To learn the outcome, poll `GET api/2.0/settings/webhooks/log` with `eventId` set to each returned `id`. Repeat it until `nextAttemptOn` is empty. Then a set `delivery` means success, and an empty one means that the portal gave up. The call is rate limited. More calls return 429. If `ids` has more than 100 records, the call returns 400. To learn why the call skipped a record, use `PUT api/2.0/settings/webhook/{id}/retry`.
 
 ## Parameters
 
@@ -18,12 +18,12 @@ Sends a batch of past webhook deliveries again. `ids` holds the identifiers of d
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The newly queued delivery records, one for every identifier that could be retried | [**WebhooksLogArrayWrapper**](../../models/webhooks-log-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The new delivery records, one for every event that could be retried, each with its own identifier | [**WebhooksLogArrayWrapper**](../../models/webhooks-log-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request body cannot be read, or `ids` holds more than 100 identifiers | - | - |
 | **403** | The caller is a `Guest`, or a non-admin caller while the developer tools are restricted | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

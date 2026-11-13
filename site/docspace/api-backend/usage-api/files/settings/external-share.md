@@ -6,7 +6,7 @@
 
 Change the external sharing ability
 
-Turns external (public) links on or off for the whole portal and returns the value that is now stored. Only the portal owner and a DocSpace administrator may change it: a room administrator, a member or a guest is refused, and so is an unauthenticated caller. Turning it off also turns sharing on social networks off, so a following read of `externalShareSocialMedia` reports false without a separate call. This operation sets one flag; to write the whole external-sharing policy in one request - the default link type, the sections the restriction applies to and whether existing links are blocked at once - use `PUT api/2.0/files/settings/externalsharingsettings`. The value is published as `externalShare` by `GET api/2.0/files/settings`. Sending the same value again is safe. The response is the value read back from the portal rather than a success flag. External links are allowed in a new portal. Turning them off does not delete the links that already exist - whether those stop working at once is decided by the `blockExistingLinksOnRestrict` field of the settings operation named above.
+Turns external links on or off for the whole portal. It returns the value that is now stored. Requires a DocSpace admin. Other callers get 403. The call changes data, and you can repeat it with the same body. Turning external links off also turns off sharing on social networks. The call does not delete existing links. The `blockExistingLinksOnRestrict` field decides if they keep working. To set it and the rest of the sharing policy, use `PUT api/2.0/files/settings/externalsharingsettings`.
 
 ## Parameters
 

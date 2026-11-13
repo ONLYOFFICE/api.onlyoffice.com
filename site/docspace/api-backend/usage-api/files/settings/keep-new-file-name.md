@@ -6,7 +6,7 @@
 
 Keep the default file name
 
-Stores whether the caller wants new documents created with the default name instead of being asked for one, and returns the value that is now stored. It is a preference of the calling account: every authenticated role down to a guest may change its own copy, one member's choice never affects another, and an unauthenticated caller is refused. The portal only keeps the value and reports it - the creation operations, `POST api/2.0/files/{folderId}/file` among them, always use the title they are given, so this setting changes what an interface asks for rather than what the server does. Writing a value that is already stored is accepted and leaves the setting and the audit trail untouched. The value is published as `keepNewFileName` by `GET api/2.0/files/settings`, which is the only way to read it back. A new account starts with the prompt in place. The title a created document actually gets, and how a clash with an existing title is resolved, are decided by the creation request rather than here.
+Changes whether new documents get the default name without asking the user. The setting is for the calling account and only guides the app. It returns the value that is now stored. Any signed-in user can call it. The call changes data, and you can repeat it with the same body. Calls that create files, such as `POST api/2.0/files/{folderId}/file`, never pick a default name, but may change the extension. To read the value, use the `keepNewFileName` field of `GET api/2.0/files/settings`.
 
 ## Parameters
 

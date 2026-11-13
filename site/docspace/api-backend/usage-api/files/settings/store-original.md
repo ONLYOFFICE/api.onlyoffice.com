@@ -6,7 +6,7 @@
 
 Change the ability to upload original formats
 
-Stores whether the caller's uploads keep the original file when the portal converts them into an editable format, and returns the value that is now stored. With `set=true` the converted document is saved as a new file next to the upload, so both the original and the converted copy stay in the folder; with `set=false` the conversion replaces the uploaded file with a new version of it whenever the caller may edit that file. The setting belongs to the calling account alone: every authenticated role down to a guest may change its own copy, and an unauthenticated caller is refused. It applies to conversion on upload and to `PUT api/2.0/files/file/{fileId}/checkconversion`, not to files already stored. The value is published as `storeOriginalFiles` by `GET api/2.0/files/settings`, which is the only way to read it back. The change is recorded in the portal audit trail.
+Changes whether a conversion on upload keeps the original file for the calling account. It returns the value that is now stored. If `set` is true, the portal saves the converted file next to the original. If it is false, the converted file replaces the upload as its new version. This happens only when the caller can edit the file. Any signed-in user can call it. The call changes data, and you can repeat it with the same body. The setting also applies to `PUT api/2.0/files/file/{fileId}/checkconversion`. To read it, use the `storeOriginalFiles` field of `GET api/2.0/files/settings`.
 
 ## Parameters
 

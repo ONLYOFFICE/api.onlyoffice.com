@@ -6,7 +6,7 @@
 
 Set the banners visibility
 
-Sets whether the portal's promotional banners are hidden for every user. Available only on an Enterprise license; every other plan is refused regardless of the caller's role. Requires Owner or DocSpaceAdmin (the EditPortalSettings permission). The flag only takes effect on a Standalone (self-hosted) installation; on SaaS, banners are always shown no matter what is saved here. This is a mutating, idempotent, portal-wide call: it applies to every user on the tenant immediately. It returns the saved setting; read the current value at any time from `GET api/2.0/settings/banner`.
+Sets whether the portal hides its promotional banners from all users. The flag works only on a Standalone installation, and SaaS portals always show the banners. If the installation has no Enterprise license, the call returns 402. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call changes data. You can repeat it with the same body. It returns the saved setting.
 
 ## Parameters
 

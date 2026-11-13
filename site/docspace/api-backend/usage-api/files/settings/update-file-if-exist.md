@@ -6,7 +6,7 @@
 
 Update a file version if it exists
 
-Reports that uploading a file under a name that already exists does not update the existing file. The operation is a stub kept for compatibility: the request body is read but ignored, nothing is stored, and the answer is always false, so calling it changes no behaviour and repeating it changes nothing. What actually decides the outcome of a name clash is the parameter of the upload itself - see the `createNewIfExist` and conflict-resolution parameters of the operations under `api/2.0/files/{folderId}/upload` and of `PUT api/2.0/files/fileops/copy`. Any authenticated role down to a guest may call it; an unauthenticated caller is refused. Because the value is a constant, there is nothing to read back afterwards, and `GET api/2.0/files/settings` does not publish it. To add a version to a document that is already stored, address the file directly through the update operations under `api/2.0/files/file/{fileId}` instead of uploading under the same name and relying on this setting.
+Changes nothing and always returns `false`. The call is kept for compatibility and ignores the body. Any signed-in user can call it. You can repeat it. The call does not make an upload update a file with the same name. The parameters of the upload call decide what happens on a name clash. To add a version to a file, use the update calls under `api/2.0/files/file/{fileId}`.
 
 ## Parameters
 

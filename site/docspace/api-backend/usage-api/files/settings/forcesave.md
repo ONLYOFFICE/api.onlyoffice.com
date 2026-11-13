@@ -6,7 +6,7 @@
 
 Change the forcesaving ability
 
-Reports that forcesaving is on for this portal. The operation is a stub kept for compatibility: it takes no request body, stores nothing and always answers true, so calling it neither turns forcesaving on nor off and repeating it changes nothing. Forcesaving itself - the editor writing the document back to storage while the session is still open - is on for every portal and cannot be switched off through the API. Any authenticated role down to a guest may call it; an unauthenticated caller is refused. The same constant is published as `forcesave` by `GET api/2.0/files/settings`, which is the cheaper way to read it together with the rest of the settings. A companion stub, `PUT api/2.0/files/storeforcesave`, answers for the storing of forcesaved versions in the same way. Nothing in this call reaches a document: to have the current state of an editing session written to storage, drive the document through the editor operations of the file itself rather than through this setting.
+Changes nothing and always returns `true`. Forcesaving is on in every portal, and the API cannot turn it off. With forcesaving, the editor saves a document to storage while it is still open. The call is kept for compatibility and takes no body. Any signed-in user can call it. You can repeat it. The `forcesave` field of `GET api/2.0/files/settings` returns the same value.
 
 ## Parameters
 This endpoint does not need any parameter.

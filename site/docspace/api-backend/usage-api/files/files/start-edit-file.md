@@ -6,7 +6,7 @@
 
 Open an editing session
 
-Opens an editing session on the file and answers with the document key that identifies it, the value an editor client passes to the document service in order to join the co-editing session for that exact revision. The file is marked as being edited for as long as the session lasts, which keeps it from being deleted or moved. With `editingAlone=false` the portal builds the editor configuration, requires write mode plus at least one of the edit, review, comment, form-filling or filter permissions, and asks the document service to start tracking the document. With `editingAlone=true` the caller claims the file for itself, and the call is refused with 403 when anybody is already editing it. The caller needs edit access: a member with read access, a guest and an anonymous caller whose external link does not grant editing are all refused. The call is mutating and not idempotent. Keep the session alive with `GET api/2.0/files/file/{fileId}/trackeditfile`, and end it by calling that operation with `isFinish=true`.
+Opens an editing session on the file and returns its document key. An editor app passes this key to the document service to join co-editing of this revision. While the session lasts, nobody can delete or move the file. With `editingAlone` false, the portal asks the document service to track the document. The caller then needs the right to edit, review, comment, fill forms, or edit filters. With `editingAlone` true, the caller claims the file alone. If anybody already edits the file, the call returns 403. Requires editing access to the file. Other callers get 403. With `editingAlone` true, an anonymous caller without editing access gets 401. The call changes data, but not the document. While the session lasts, a repeated call with `editingAlone` true returns 403. That call also deletes the portal's record of every editing session of the file. With `editingAlone` false, each call returns the same key until the file gets a new version. A version from an autosave keeps the key. The call also returns 403 if the file is locked or in Trash, or if the document service rejects tracking. If the file does not exist, it returns 404. With `editingAlone` false, a format that the editors cannot open returns 415. To keep the session alive, call `GET api/2.0/files/file/{fileId}/trackeditfile`. To end it, call that operation with `isFinish` true.
 
 ## Parameters
 
@@ -24,8 +24,8 @@ Opens an editing session on the file and answers with the document key that iden
 | **403** | The caller cannot edit the file, the file is locked or in Trash, somebody is already editing it and the session was claimed alone, or the document service did not accept the tracking request | - | - |
 | **404** | The file id resolves to nothing | - | - |
 | **415** | The file is in a format the editors can neither edit nor open for viewing | - | - |
-| **500** | The file lies in a third-party storage that cannot deliver it, or, with `editingAlone=true`, the file is locked by somebody else or lies in Trash | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

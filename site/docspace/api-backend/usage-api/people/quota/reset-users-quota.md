@@ -6,7 +6,7 @@
 
 Reset a user quota limit
 
-Drops the personal storage limit of the listed accounts, so that each of them follows the portal default again. The caller needs the permission to edit the portal settings, which in practice means a DocSpace administrator or the portal owner. On a hosted portal the tariff has to include the storage statistics feature, otherwise the operation answers 402; a standalone installation has no such condition. It takes only `userIds` - the `quota` field of the request body is not read here - and system accounts are dropped from the list without an error. The accounts are processed one by one and the answer holds the ones that were reached, each already showing the portal default as its limit. Nothing is deleted and no space is freed; only the limit that applies changes. Use `PUT api/2.0/people/userquota` to give an account its own limit instead.
+Resets the storage limit of the listed accounts to the portal default. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. On a hosted portal, the tariff must include storage statistics. Otherwise the call returns 402. The call reads only `userIds` from the body. It skips system accounts without an error. The call changes data. You can repeat it with the same body. It returns the accounts with the portal default as their limit. The call deletes nothing and frees no space. To set a limit for an account, use `PUT api/2.0/people/userquota`.
 
 ## Parameters
 

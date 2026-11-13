@@ -6,7 +6,7 @@
 
 Get new items in a room
 
-Returns what is new for the calling account in one room, grouped by the day the entry was last changed, with the newest day first and the entries inside a day ordered from the most recent. Only files are reported: a folder somebody else created is not an entry of its own, while a file created inside it is, however deep it lies. What the caller changed is never new for the caller, and a file that was deleted afterwards disappears from the answer. Reading this list leaves the badges alone, which is what makes it the operation to call before `GET api/2.0/files/rooms/{id}`, since opening the room clears them. An empty array therefore means that there is nothing new, not that the badges were already read. The caller needs access to the room; somebody who is not a member is refused, and an unknown or deleted room is answered as missing. Use `GET api/2.0/files/rooms/news` for the same report across every room at once.
+Returns the files of a room that are new for the caller, grouped by the day of the last change. The newest day comes first, and in each day the newest file comes first. The list has only files, including files in subfolders at any depth. A new folder is not an entry. Changes of the caller are never new for the caller. A deleted file leaves the list. Requires read access to the room. Other callers get 403. The call is read-only and keeps the new-item marks. Opening the room with `GET api/2.0/files/rooms/{id}` clears them, so call this one first. An empty array means that nothing is new. A folder in Trash returns 403. If the room does not exist or was deleted, the call returns 404. If a string `id` points to a storage account that is not connected, the call returns 400. To read the new items of all rooms, use `GET api/2.0/files/rooms/news`.
 
 ## Parameters
 
@@ -22,9 +22,9 @@ Returns what is new for the calling account in one room, grouped by the day the 
 | **400** | A third-party identifier refers to a storage account that is not connected | - | - |
 | **403** | The caller cannot read this room, or the id names a folder in the Trash | - | - |
 | **404** | No room with this ID exists, or the id is neither a 32-bit number nor a third-party identifier of a known storage type | - | - |
-| **500** | A third-party identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

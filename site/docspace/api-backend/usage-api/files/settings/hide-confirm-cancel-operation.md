@@ -6,7 +6,7 @@
 
 Hide confirmation dialog when canceling operations
 
-Stores whether the caller is asked to confirm cancelling a running file operation, and returns the value that is now stored. The setting belongs to the calling account alone: every authenticated role down to a guest may change its own copy, and an unauthenticated caller is refused. Unlike the conversion prompt of `PUT api/2.0/files/hideconfirmconvert`, this one works in both directions - `set=true` hides the confirmation, `set=false` brings it back. It is a hint for the interface only: cancelling an operation through the API is unaffected, and the operations themselves keep being reported by `GET api/2.0/files/fileops`. The value is published as `hideConfirmCancelOperation` by `GET api/2.0/files/settings`, which is the only way to read it back. Writing a value that is already stored is accepted and leaves the setting untouched. A new account starts with the confirmation shown. The prompt it hides is the one raised when a running copy, move or download is about to be abandoned, not the one raised before a deletion - that one is `PUT api/2.0/files/changedeleteconfrim`.
+Hides or shows the confirmation that the app asks before it cancels a running file operation. The setting is for the calling account. If `set` is true, the app hides the confirmation. If it is false, the app shows it again. Any signed-in user can call it. The call changes data, and you can repeat it with the same body. It returns the value that is now stored. The setting does not change how the API cancels operations. To read it, use the `hideConfirmCancelOperation` field of `GET api/2.0/files/settings`.
 
 ## Parameters
 

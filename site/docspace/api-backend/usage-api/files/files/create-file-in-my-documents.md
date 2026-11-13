@@ -6,7 +6,7 @@
 
 Create a file in My documents
 
-Creates a file in the caller's own My documents section and answers with the stored file. The extension in the title decides the format: an extension of a known text, spreadsheet or presentation format is rewritten to the portal's own DOCX, XLSX or PPTX, a title with no extension at all gets DOCX added, while an unknown extension and the few formats the portal keeps as they are stay untouched; `enableExternalExt=true` stores the title verbatim and skips that rewriting. The content comes from one of three sources, tried in this order: `formId` copies a ready form out of the form gallery, `templateId` copies an existing file the caller can read - a number for a file in the portal, a string for one in a connected third-party storage - and with neither of them the portal's blank template for that format and the caller's language is used. The call is mutating and not idempotent: each call adds another file. A guest has no My documents section of their own, so a guest cannot use this operation at all, and a template the caller cannot read is refused. To create a file in a room or any other folder use `POST api/2.0/files/{folderId}/file`.
+Creates a file in the My documents section of the caller and returns it. The extension in the title sets the format. The portal changes a known text, spreadsheet, or presentation extension to DOCX, XLSX, or PPTX. A title without an extension gets DOCX. The portal keeps an unknown extension and a few other formats. If `enableExternalExt` is true, the portal keeps the extension of the title in lower case. If `templateId` is set, the portal copies that file and ignores `formId`. Otherwise, a nonzero `formId` makes the portal copy that form from the form gallery. If neither is set, the portal uses its blank template for the format and the language of the caller. If there is no such template, or `enableExternalExt` is true, the file is empty. Any signed-in user can call it, except a guest. A guest who has My documents gets 403. The call changes data. Do not repeat it. Each call creates another file. The returned title shows the extension that the portal stored. To create a file in a room or another folder, use `POST api/2.0/files/{folderId}/file`. The call returns 400 if `title` is missing, empty, or too long. It returns 402 if the file does not fit into a storage quota. It returns 403 if the template does not exist or the caller cannot read it. It returns 404 for an unknown `formId` or a gallery form without a file of the format of the title. If a string `templateId` is not a file of a connected third-party storage, the call also returns 404.  Raises the `file.created` webhook.
 
 ## Parameters
 
@@ -21,11 +21,11 @@ Creates a file in the caller's own My documents section and answers with the sto
 | **200** | The file created in My documents: its id and the title the portal actually stored, whose extension may differ from the requested one; `thumbnailStatus` says whether the preview is already built | [**FileWrapper**](../../models/file-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request body cannot be read or has no `title`, or the title is empty or longer than 165 characters | - | - |
 | **402** | The new file does not fit into the storage quota of the portal, the room or the user | - | - |
-| **403** | The template does not exist or cannot be read, or the form gallery has no file of the title's format | - | - |
-| **404** | `templateId` is a string that is not the id of a file in a known third-party storage | - | - |
-| **500** | `templateId` is a fraction, a number outside the 32-bit range or a numeric string, the form gallery does not know `formId` or cannot be reached, or the caller is a guest, who has no My documents | - | - |
+| **403** | The caller is a guest whose My documents still exists, or the template does not exist or cannot be read | - | - |
+| **404** | `templateId` is a string that is not the id of a file in a known third-party storage, or the form gallery has no form with this `formId` or no file of the title's format for it | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

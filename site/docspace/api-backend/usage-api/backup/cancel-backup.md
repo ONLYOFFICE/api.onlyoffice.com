@@ -6,7 +6,7 @@
 
 Cancel the running backup
 
-Drops the backup job of the current portal from the queue, which cancels it if it is still running. The caller needs the portal settings permission. It answers false, not an error, when there is nothing to cancel, so the result says whether a job was actually dropped rather than whether the call succeeded. This affects backup jobs only: a restoring job cannot be cancelled through the API. The cancelled job leaves the queue, so a following `GET api/2.0/backup/getbackupprogress` reports no job at all rather than a job with the `Canceled` status.
+Cancels the backup job of the portal and removes it from the queue. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call changes data. It returns `true` if it removed a job and `false` if there was none. A repeated call returns `false`. After this call, `GET api/2.0/backup/getbackupprogress` returns no job, not a job with the `Canceled` status. The call cannot cancel a restore.
 
 ## Parameters
 This endpoint does not need any parameter.

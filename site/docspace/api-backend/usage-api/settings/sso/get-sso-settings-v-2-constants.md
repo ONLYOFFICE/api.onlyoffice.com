@@ -6,7 +6,7 @@
 
 Get the SSO settings constants
 
-Returns every literal value the SAML fields of the SSO configuration accept, grouped by the field it belongs to: name ID formats, request bindings, signing and encryption algorithms, and what a service provider or identity provider certificate can be used for. The values are the SAML URNs and algorithm URIs themselves, so they can be written into the configuration exactly as they come back; picking one from the matching group is the point, because `POST api/2.0/settings/ssov2` stores these fields as they are given and a misspelled value therefore surfaces only later, as a failing sign-in. The list is a fixed part of the product: it is the same for every portal, does not depend on the saved settings and does not change between calls within a release, so it can be cached. The operation only reads, is safe to repeat and needs nothing beyond an authenticated caller. Use it together with `GET api/2.0/settings/ssov2/default`, which already has the usual values set.
+Returns every value that the SAML fields of the SSO configuration accept, grouped by field. The groups are name ID formats, bindings, signing and encryption algorithms, and certificate uses. Any signed-in user can call it. The call is read-only. The values are SAML URNs and algorithm URIs, so copy them into the configuration as they are. The save call `POST api/2.0/settings/ssov2` stores these fields without checks. So a misspelled value fails only later, at sign-in. The list is the same for every portal and changes only with a new release, so you can cache it. For a configuration with the usual values, use `GET api/2.0/settings/ssov2/default`.
 
 ## Parameters
 This endpoint does not need any parameter.

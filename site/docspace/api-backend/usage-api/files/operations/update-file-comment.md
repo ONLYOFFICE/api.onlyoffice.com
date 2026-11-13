@@ -6,7 +6,7 @@
 
 Update a comment
 
-Replaces the comment stored on one version of a file - the note that explains what changed in it - and answers with the comment as it was stored, which is the text cut to the length the portal keeps. `version` names the version and has to be an existing one: a version that does not exist is rejected as an invalid request, while a file that does not exist at all is answered as not found. Sending an empty comment clears the note. The caller needs the right to edit the history of the file, which the room admin, a DocSpace admin acting as room manager and a member with content-creator rights have; a member with editing access to somebody else's file, read-only access, a guest and an anonymous caller are all refused. A file that is locked by somebody else or lies in Trash is refused as well. The call is mutating and idempotent - repeating it with the same text leaves the same comment. The comments of all versions come back with `GET api/2.0/files/file/{fileId}/edit/history`.
+Changes the comment of one version of a file and returns the stored comment. An empty comment clears it. Requires the right to change the version history, which a room manager and a content creator have. Other callers get 403, including an editor of another user's file. The call changes data, and you can repeat it with the same body. If the version does not exist, the call returns 400. If no file has this id, the call returns 404. A file that another user locked or a file in the trash also returns 403. To read the comments of all versions, use `GET api/2.0/files/file/{fileId}/edit/history`.  Raises the `file.updated` webhook.
 
 ## Parameters
 

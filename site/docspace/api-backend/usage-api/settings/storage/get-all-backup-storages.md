@@ -6,7 +6,7 @@
 
 Get the backup storages
 
-Returns the storages that can hold portal backups, with the one the saved backup schedule writes to marked as `current` and its parameters filled in from that schedule; when no schedule is saved, or when the schedule stores backups somewhere else than a third-party provider, none of the entries is current. Each entry has the same shape as in `GET api/2.0/settings/storage`: identifier, title, the authentication keys the provider expects, and `isSet` telling whether those keys are filled in on the server. Pass `dump=true` to read the schedule of the whole server instead of the one of the current portal, which only makes sense on a server installation. The caller needs the permission to edit portal settings, which in practice means the portal owner or a DocSpace admin, and on an installation that is not a server one the call is also refused unless backup is available there. Nothing is written and the call is safe to repeat. This operation says nothing about where the portal data itself lives; the backup schedule is configured through the backup API, and the storage of the documents through `PUT api/2.0/settings/storage`.
+Returns the storages that can keep portal backups. The storage of the saved backup schedule is `current`, with its keys from the schedule. If no schedule exists or it uses no third-party storage, no entry is `current`. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. If the installation is not self-hosted and offers no backup, the call also returns 403. The call is read-only. It does not show where the portal keeps its data. To change that storage, use `PUT api/2.0/settings/storage`.
 
 ## Parameters
 

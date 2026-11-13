@@ -6,13 +6,13 @@
 
 Get the folder history report generation status
 
-Reports how far the history report of a folder has got, and is the operation to poll after `POST api/2.0/files/folder/{folderId}/log/report` has queued one. `percentage` climbs to 100, `isCompleted` turns true when the job is over however it ended, `error` carries the reason when it failed, and `resultFileId`, `resultFileName` and `resultFileUrl` name the file that was saved in the caller's My documents. An empty answer means there is no report for this folder and caller, either because none was started or because a finished one has already been picked up by an earlier poll. The caller needs read access to the folder and may not be a guest; a caller who fails the access rule is answered with 403, a folder that does not exist with 404, and a portal with the login history and audit trail section turned off with 402. The call is read-only, and each caller sees only their own report.
+Returns the state of the history report that the caller started for a folder. Each caller sees only their own report. Any user with read access to the folder can call it, except a guest. Other callers get 403. The call is read-only. This is the call to poll after `POST api/2.0/files/folder/{folderId}/log/report`. Repeat it until `isCompleted` is true. It becomes true however the job ends. If the job fails, `error` gives the reason. After a success, `resultFileId`, `resultFileName`, and `resultFileUrl` name the file in My documents. If the caller has no report for this folder, the response is empty. If the folder does not exist, the call returns 404. It returns 402 if the login history and audit trail section is turned off for the portal.
 
 ## Parameters
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **folderId** | path | **Integer** (int32) | The folder whose history report is being polled. It is the folder that was             passed to the operation that started the report. | [required] |
+| **folderId** | path | **Integer** (int32) | The ID of the folder that was passed to             `POST api/2.0/files/folder/{folderId}/log/report`. | [required] |
 
 ## Responses
 

@@ -6,7 +6,7 @@
 
 Get the authorization services
 
-Returns the catalogue of third-party storage and authorization providers DocSpace can integrate with (for example Amazon S3, Dropbox, Google, or Telegram), including whichever keys were last saved for each one that currently has any configured. Requires Owner or DocSpaceAdmin (the EditPortalSettings permission). This is a read-only, idempotent call, and the list is not paginated; entries are ordered by the provider's configured display order. Only providers that expose at least one manageable key are included, so a provider with nothing to configure is omitted entirely. Save or change a provider's keys with `POST api/2.0/settings/authservice`.
+Returns the third-party providers that the portal can connect, such as Amazon S3, Dropbox, Google, or Telegram. Each entry includes its keys with their saved values. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. It returns the whole list without paging, in the display order of the providers. The list skips providers that have no keys to set. To save keys, use `POST api/2.0/settings/authservice`.
 
 ## Parameters
 This endpoint does not need any parameter.

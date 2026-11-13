@@ -6,7 +6,7 @@
 
 Update a webhook
 
-Replaces the stored parameters of one webhook subscription, which is addressed by `id` in the body rather than in the path. Every field of the request overwrites the stored one, so a payload that leaves out `enabled`, `ssl`, `triggers` or `targetId` resets them to off, all events and no target: read the current values with `GET api/2.0/settings/webhook` first and send back whatever should stay. `secretKey` is the one exception, an empty value keeping the existing secret and a new one having to satisfy the portal password rules. The new target is validated exactly as on creation, that is it must sit outside the installation's own network and answer a HEAD request, and trigger flags the caller's role may not use are rejected. That validation runs before the subscription is looked up, so an unusable payload is refused with 400 even when no subscription with this `id` exists. A `DocSpaceAdmin` may update any subscription in the portal, anyone else only their own, and a `Guest` is refused. Sending the same payload twice leaves the same state. Use `PUT api/2.0/settings/webhook/enable` to switch a subscription on or off without touching anything else.
+Changes all parameters of a webhook subscription that the body names by `id`. The call overwrites every stored field with the body. So a left-out `enabled`, `triggers`, or `targetId` becomes `false`, 0, or empty. First read the current values with `GET api/2.0/settings/webhook`. Then send back the values that must stay. Two fields are exceptions. An empty `secretKey` keeps the stored secret. A left-out `ssl` keeps the stored setting. So pass `ssl` when you move the target between `http` and `https`. Any signed-in user can call it, except a guest. A guest gets 403. The portal owner and DocSpace admins can change any subscription. Other users can change only the subscriptions they created and get 403 for others. If the portal restricts the developer tools, users who are not DocSpace admins get 403 too. The call changes data. You can repeat it with the same body. A missing `name` or `uri` returns 400 before any other check. If no subscription has this `id`, the call returns 404 before the access check. Then the call checks the body as `POST api/2.0/settings/webhook` does. It checks the triggers against the role of the subscription's creator, not of the caller. If a check fails, the call returns 400. To turn a subscription on or off only, use `PUT api/2.0/settings/webhook/enable`.
 
 ## Parameters
 
@@ -19,12 +19,12 @@ Replaces the stored parameters of one webhook subscription, which is addressed b
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The updated webhook subscription, without its secret key | [**WebhooksConfigWrapper**](../../models/webhooks-config-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The request body cannot be read or has no `id`, `name` or `uri` is missing or empty, `name` or `secretKey` is longer than 50 characters or `targetId` longer than 255, the target URL is unusable or answers the HEAD request with a non-success code, or the secret key or a trigger flag was rejected | - | - |
+| **400** | The request body cannot be read or has no `id`, `name` or `uri` is missing or empty, `name` or `secretKey` is longer than 50 characters or `targetId` longer than 255, the target URL is unusable or answers the HEAD request with a non-success code, or the secret key, a trigger flag or the `targetId` of user or group events was rejected: no user or group the subscription's creator may see has that ID | - | - |
 | **403** | The subscription belongs to another member, or the caller may not use webhooks at all | - | - |
 | **404** | No webhook subscription with this ID exists in the portal | - | - |
-| **500** | The target URL gives no answer to the HEAD request: the connection fails or times out, or the certificate is not valid while `ssl` is `true` | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

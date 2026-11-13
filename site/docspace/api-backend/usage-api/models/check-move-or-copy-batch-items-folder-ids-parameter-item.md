@@ -1,1 +1,0 @@
-# checkMoveOrCopyBatchItems.folderIds.parameter item

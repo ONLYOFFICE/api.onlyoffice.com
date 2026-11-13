@@ -6,7 +6,7 @@
 
 Open document in the same browser tab
 
-Stores whether the caller wants documents opened in the current browser tab instead of a new one, and returns the value that is now stored. It is a preference of the calling account: every authenticated role down to a guest may change its own copy, and an unauthenticated caller is refused. The portal only keeps the value - the editor addresses returned by the file operations are the same either way, so this setting changes how a client opens them rather than what it receives. Writing a value that is already stored is accepted and leaves the setting untouched. The value is published as `openEditorInSameTab` by `GET api/2.0/files/settings`, which is the only way to read it back. A new account starts with documents opening in a new tab. Nothing about the document changes with it: the editing session, the access rights that apply and the addresses handed out are the same whichever tab a client uses.
+Changes whether documents open in the current browser tab for the calling account. It returns the value that is now stored. Any signed-in user can call it. The call changes data, and you can repeat it with the same body. The setting only guides the app. The editor URLs that the API returns are the same either way. To read the value, use the `openEditorInSameTab` field of `GET api/2.0/files/settings`.
 
 ## Parameters
 

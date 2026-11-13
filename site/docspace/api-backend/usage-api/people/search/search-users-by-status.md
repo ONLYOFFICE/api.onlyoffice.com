@@ -6,7 +6,7 @@
 
 Search users by status filter
 
-Searches the accounts that are in one particular state - the status is taken from the route - and whose name, user name, email or contacts contain the search term. Only a DocSpace administrator may call it; every other account, including a room admin, gets 403. The call is read-only and is not paged: it matches in memory over every account of that status and streams all of them, so it is meant for administrative lookups rather than for a user-facing list - use `GET api/2.0/people/filter` when a page and a total are needed. The term is matched as a case-insensitive substring and is required; `filterBy` set to `group` turns `text` into a group ID and keeps only the members of that group, so `text` then has to be a valid identifier. The answer holds full profiles, in no particular order.
+Searches the accounts with the status from the route. The term in `query` must be in the name, user name, email, or contacts. Requires a DocSpace admin. Other callers get 403, including a room admin. The call is read-only. It matches the term as a substring and ignores case. If `query` is missing, the call returns 400. With `filterBy` set to `group`, `filterValue` is a group ID. The call then keeps only the members of that group. The list has no paging, no total, and no fixed order. For a page with a total, use `GET api/2.0/people/filter`.
 
 ## Parameters
 
@@ -24,9 +24,9 @@ Searches the accounts that are in one particular state - the status is taken fro
 | **200** | The full profiles of the matching accounts | [**EmployeeFullArrayWrapper**](../../models/employee-full-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | A parameter has the wrong type, or `query` is missing | - | - |
 | **403** | The caller is not a DocSpace administrator | - | - |
-| **500** | The `filterBy` is `group` and the `filterValue` is not a GUID | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

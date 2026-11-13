@@ -6,7 +6,7 @@
 
 Get a portal user
 
-Returns one user of this portal, addressed by ID, in the shape the portal stores the account: display name, e-mail, contacts, role and status flags, and the dates of the profile. Nothing has to be called first, and the call is read-only and idempotent. Who may be read is decided per pair of accounts: a caller always reads their own profile, a DocSpace administrator reads anyone, a room administrator reads anyone except a guest they have no relation with, and a user or a guest reads nobody but themselves - a pair that is not allowed is refused. An ID that belongs to no account of this portal and an ID of a system account are both answered as not found, so a 404 does not tell the two apart. `userId` in the path has to be a GUID; the calling user's own profile is easier to fetch with `GET api/2.0/people/@self`. This operation hands back the internal user record - use `GET api/2.0/people/{userId}` for the same user in the People format, with the group, quota and access information a client usually needs.
+Returns an account of the current portal by its ID, in the internal user format. Any signed-in user can read their own profile. A DocSpace admin can read any account. A room admin can read any account except a guest they have no relation with. A user or a guest can read only their own profile. Other callers get 403, even for an ID that does not exist. The call is read-only. It returns 404 for an unknown ID or a system account. To read your own profile, use `GET api/2.0/people/@self`. To get the account in the People format, with groups, quota, and access data, use `GET api/2.0/people/{userId}`.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Get a group
 
-Returns one group by its ID, with its name, its manager and - when asked for - the accounts that belong to it. The caller needs the permission to read groups, and the ID has to belong to a group that has not been deleted, otherwise the operation answers 404. The call is read-only, and the member list is left out unless `includeMembers` is set to true, so ask for it only when the members are actually needed. Use `GET api/2.0/group` to look a group up by name or to page through them all.
+Returns one group by its ID, with its name, its manager, and its members. Requires a DocSpace admin or a room admin. Other callers get 403. The call is read-only. Set `includeMembers` to false to leave out the members of a large group. If no group has this ID or the group is deleted, the call returns 404. To find a group by name, use `GET api/2.0/group`.
 
 ## Parameters
 

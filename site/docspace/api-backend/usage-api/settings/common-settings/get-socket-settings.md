@@ -6,7 +6,7 @@
 
 Get the socket settings
 
-Returns the base URL of the portal's real-time notification hub (Socket.IO), which the client connects to for live updates such as file changes, presence, or quota alerts. Requires an authenticated session; every role can read it. This is a read-only, idempotent call. The value comes from server-side configuration and cannot be changed through this API; an empty `url` means the portal has no notification hub configured and the client should not attempt to connect.
+Returns the base URL of the real-time notification hub of the portal. Apps connect to it to get live updates. Any signed-in user can call it, including a guest. The call is read-only. The value comes from the server configuration, and no API operation changes it. An empty `url` means that the portal has no hub, so do not connect.
 
 ## Parameters
 This endpoint does not need any parameter.

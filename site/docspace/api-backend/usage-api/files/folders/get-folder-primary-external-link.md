@@ -6,7 +6,7 @@
 
 Get the folder primary external link
 
-Answers with the primary external link of a folder or a room - the one the Copy link action of a client hands out - with its address in `sharedTo.shareLink`, its rights in `access`, and its title, expiration date, password flag and download restriction beside them. The link is created on the first read if the folder has none, with read rights, no password and no expiry, so this operation mutates on that first call and is a plain read afterwards; repeated calls answer with the same link identifier. The caller needs the right to manage the links of the room the folder belongs to, which its manager and a portal administrator acting as room manager have; a member with read access alone is refused with 403 and an anonymous caller is rejected, while a link that was deliberately revoked is answered with 404 rather than being recreated. The paging parameters are accepted for compatibility and leave the single link answered here unchanged. Every external link of the same folder is listed by `GET api/2.0/files/folder/{id}/links`.
+Returns the primary external link of a folder or a room, and creates it if the folder has none. A new link gives read access, with no password and no expiry. Read the address from `sharedTo.shareLink`. Requires the right to manage the links of the folder. Other callers get 403. The room manager has this right, but a user with read access does not. A caller who is not signed in and has no external link gets 401. The first call can change data. Later calls are read-only and return the same link. If the primary link was revoked, the call returns 404 and creates no new one. If the folder does not exist, the call also returns 404. If a string `id` points to a storage account that is not connected, the call returns 400. To list all external links of the folder, use `GET api/2.0/files/folder/{id}/links`.
 
 ## Parameters
 
@@ -21,7 +21,7 @@ Answers with the primary external link of a folder or a room - the one the Copy 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The primary external link of the folder | [**FileShareWrapper**](../../models/file-share-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | A parameter has the wrong type, or the `count` is outside its allowed range | - | - |
+| **400** | A parameter has the wrong type, the `count` is outside its allowed range, or a third-party identifier refers to a storage account that is not connected | - | - |
 | **401** | An anonymous caller has no external link | - | - |
 | **403** | The caller may not manage the links of this folder | - | - |
 | **404** | The folder does not exist, or its primary link was revoked | - | - |

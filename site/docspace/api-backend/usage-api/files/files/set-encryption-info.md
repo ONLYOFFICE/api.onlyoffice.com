@@ -1,12 +1,12 @@
 # setEncryptionInfo
 
-> setEncryptionInfo(fileId, AccessRequestKeyDto)
+> FileKeysWrittenWrapper setEncryptionInfo(fileId, AccessRequestKeyDto)
 
 `PUT /api/2.0/files/{fileId}/access`
 
 Set file encryption information
 
-Issues the file keys that let the named people open one file of an end-to-end encrypted private room. Each entry of the body names the account the key is for, the public key it was encrypted with and the encrypted key itself, so the plain key never reaches the portal: the client encrypts it once per recipient with the public key that `GET api/2.0/files/file/{fileId}/publickeys` reports for them. The keys of the accounts named in the request are replaced, and the keys of everybody else are left as they are, which makes the call idempotent for a given set of recipients while remaining a mutating one; sending no entry for a person does not revoke that person's key. The file has to lie in a private room, and every account named in the request has to have read access to it. The caller needs read access to the file and the right to create content in that room, which its members with editing rights and its admins have; a caller without those rights, a file outside a private room and a file that does not exist are all refused with 403. Read the result back with `GET api/2.0/files/{fileId}/access`.
+Stores the file keys that let the named users open a file of an end-to-end encrypted private room. Each entry names the account, the public key, and the key encrypted with it. So the portal never gets the plain key. Before the call, encrypt the key for each recipient with the public key from `GET api/2.0/files/file/{fileId}/publickeys`. The call replaces the keys of the named accounts and keeps all other keys. Requires read access to the file and the right to create content in the room. Other callers get 403. The call changes data. You can repeat it with the same body. If the file does not exist or is not in a private room, the call also returns 403. If `fileId` is neither a number nor the id of a third-party file, the call returns 404. The call skips recipients without read access to the file. It returns them in `skippedUserIds`. To read the keys, use `GET api/2.0/files/{fileId}/access`.
 
 ## Parameters
 
@@ -19,9 +19,9 @@ Issues the file keys that let the named people open one file of an end-to-end en
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The file keys were stored | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | The file does not exist, the caller may not issue keys for it, the file is not in a private room, or a recipient has no read access to it | - | - |
-| **404** | The file does not exist | - | - |
+| **200** | The file keys of the recipients who can read the file were stored; the others are listed in `skippedUserIds` | [**FileKeysWrittenWrapper**](../../models/file-keys-written-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **403** | The file does not exist, the caller may not issue keys for it, or the file is not in a private room | - | - |
+| **404** | The file id is neither a number nor the id of a file in a known third-party storage | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
@@ -31,7 +31,7 @@ Issues the file keys that let the named people open one file of an end-to-end en
 
 ## Return type
 
-null (empty response body)
+[**FileKeysWrittenWrapper**](../../models/file-keys-written-wrapper.md)
 
 ## Third-party storage
 

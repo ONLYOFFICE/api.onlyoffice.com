@@ -6,7 +6,7 @@
 
 Check whether an email is taken
 
-Reports whether an email address already belongs to a portal profile, and in what state that profile is. It is meant for the invitation and sign-up screens, which is why it accepts a confirmation token as well as an ordinary session, and why it is available on an unpaid portal. Pass the address either in plain text as `email` or, when it arrived inside an invitation link, encrypted as `encemail`; one of the two is required and a malformed or overlong address answers 400. The call is read-only, and the answer carries `exists` plus the `status` of the profile - `Active`, `Terminated` or `Pending` - which is left out entirely when nothing matches, so a pending invitation can be told apart from a working account and from a free address. It reveals only that an address is taken and not who owns it - read `GET api/2.0/people/email` for the profile itself, which needs the right to see that account.
+Returns whether an email address belongs to an account, and the status of that account. Pass the address in `email`, or encrypted in `encemail` as an invitation link has it. If both are missing, the call returns 400. It also returns 400 for a malformed address or one over 255 characters. Any signed-in user can call it, including a guest. The token of an invitation link or a guest sharing link also works. The call is read-only and works on an unpaid portal. If no account has the address, the response has no `status`. The call does not say who owns the address. For the profile, use `GET api/2.0/people/email`.
 
 ## Parameters
 

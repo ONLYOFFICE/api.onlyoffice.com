@@ -6,7 +6,7 @@
 
 Get a number of portal users
 
-Returns how many accounts this portal currently has in the active state, whatever their role, so a client can show the seat usage next to the allowance. Accounts that were invited but have not joined yet and accounts that were disabled or removed are not counted. The caller needs the portal-settings right and is refused without it; the call is read-only and idempotent, and the number moves as soon as an account joins, is disabled or is deleted. The answer is a plain number, not an object. Compare it with `countUser` and `countPaidUser` from `GET api/2.0/portal/quota` to see how much of the allowance is left, and with `GET api/2.0/portal/quota/right` for the smallest quota that would still hold everyone. When the accounts themselves are needed, and not only how many there are, list them with the People API instead - this operation cannot filter by role, group or status.
+Returns how many accounts of the portal have the active status, of every user type. Disabled and deleted accounts are not counted. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. The answer is a number, not an object. To compare it with the allowance, use `countUser` and `countPaidUser` of `GET api/2.0/portal/quota`. To list the accounts or filter them by type, group, or status, use `GET api/2.0/people/filter`.
 
 ## Parameters
 This endpoint does not need any parameter.

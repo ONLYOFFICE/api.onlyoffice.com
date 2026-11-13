@@ -6,7 +6,7 @@
 
 Generate the TFA setup code
 
-Issues the secret the current user has to enter in an authenticator application before the authenticator-application method can be used, both as a scannable QR-code image and as a key for manual entry. The call is reachable only with a confirmation token carrying the `TfaActivation` role, obtained from `GET api/2.0/settings/tfaapp/confirm` or from the login flow; an ordinary bearer token is refused. The authenticator method has to be enabled on the portal and be its current policy, and the account must have no application linked yet: for an already-linked account the call answers 405, so reset the credential first with `PUT api/2.0/settings/tfaappnewapp`. Repeating the call is safe and hands back the same secret for the account, so the QR code and the manual key always describe one and the same credential. `qrCodeSetupImageUrl` is a base64 `data:` URL of a PNG image, and `account` is the label the application will show. Finish the setup by sending a code from the application to `POST api/2.0/settings/tfaapp/validate`.
+Returns the secret that the current user enters in an authenticator app, as a QR code and a key. Sign the request with the confirmation token of a `TfaActivation` link. With an ordinary sign-in token, the call returns 403. The sign-in flow or `GET api/2.0/settings/tfaapp/confirm` issues that link. The authenticator method must be the current portal policy, and the account must have no app linked. Otherwise, the call returns 405. To replace a linked app, first unlink it with `PUT api/2.0/settings/tfaappnewapp`. The first call changes data and creates the secret. Later calls return the same secret until the app is unlinked. To finish the setup, send a code from the app to `POST api/2.0/settings/tfaapp/validate`. The call works even when the portal payment is overdue.
 
 ## Parameters
 This endpoint does not need any parameter.
@@ -16,6 +16,7 @@ This endpoint does not need any parameter.
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The account label, the manual entry key and the QR-code image for linking an authenticator application | [**TfaSetupCodeWrapper**](../../models/tfa-setup-code-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **403** | The request is signed with an ordinary sign-in token, not with the confirmation token of a TfaActivation link | - | - |
 | **405** | The authenticator method is not enabled on this portal, or the account already has an application linked | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |

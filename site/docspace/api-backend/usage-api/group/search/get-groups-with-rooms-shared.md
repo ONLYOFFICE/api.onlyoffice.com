@@ -6,7 +6,7 @@
 
 Search groups for a room
 
-Returns the groups that can be given access to the room with the ID given in the route, and reports for each of them whether it already has access to that room. The caller has to be allowed to manage the access of that room, and the ID has to belong to an existing room, so the operation answers 403 for a room the caller cannot share and 404 for an ID that matches nothing. The call is read-only and, unlike the account search, works without a filter: leaving `filterValue` empty returns every group instead of nothing, and a value narrows the result by group name. The result is paged by `count` and `startIndex`, with the number of matching groups in the total count of the response. Pass `excludeShared` to keep only the groups that have no access to the room yet, which is the set to offer when adding new ones; without it every matching group comes back and `shared` tells them apart. To search users and groups together, use `GET api/2.0/accounts/room/{id}/search`.
+Returns the portal groups for sharing the room. The `shared` field tells whether a group already has access. The list also has the system group Everyone. Requires the right to change access to the room. Other callers get 403. If no room has the ID, the call returns 404. The call is read-only. It sorts the groups by name and pages them by `count` and `startIndex`, with a total count. An empty `filterValue` returns every group. Otherwise, the call keeps the groups whose name contains the value, in any case. With `excludeShared`, the call returns only the groups without access. The call returns 400 if `count` is outside 1 to 100. To search users and groups together, use `GET api/2.0/accounts/room/{id}/search`.
 
 ## Parameters
 

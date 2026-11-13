@@ -6,7 +6,7 @@
 
 Get own encryption keys
 
-Returns every encryption key pair the calling user holds, the encrypted private half included, which is the material a client needs in order to decrypt content in a private room. The set is personal and there is no parameter for another user's keys: an authenticated caller reads only their own, and a guest, who cannot own key material at all, always reads an empty set. The call is read-only. An empty answer, whether an empty list or none at all, means no key has been created yet, and until `POST api/2.0/privacyroom/keys` creates one the user cannot be invited to a private room. Each entry carries the pair's `id`, its owner in `userId`, the moment the material was stored in `date`, the public half, the private half encrypted with the user's password, and the portal-wide crypto engine in `cryptoEngineId`. For the keys that open a whole private room use `GET api/2.0/privacyroom/{roomId}/access`, and for the keys a single file is shared with use `GET api/2.0/files/file/{fileId}/publickeys`; this operation is about the caller alone.
+Returns every encryption key pair of the calling user, including the encrypted private half. Any signed-in user can call it. The call is read-only. If the caller has no key yet, the answer is an empty list or has no body. A guest cannot create keys, so a guest gets this empty answer unless they had keys before. A user without a key cannot be invited to a private room. To create a key, use `POST api/2.0/privacyroom/keys`. To get the keys of a private room, use `GET api/2.0/privacyroom/{roomId}/access`. To get the keys of one file, use `GET api/2.0/files/file/{fileId}/publickeys`.
 
 ## Parameters
 This endpoint does not need any parameter.

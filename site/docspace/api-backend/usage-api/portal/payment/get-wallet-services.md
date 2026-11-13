@@ -6,7 +6,7 @@
 
 Get wallet services
 
-Lists every service the portal may pay for out of its wallet - extra administrators, disk storage, backup, AI tools, AI search and Docs Connect - with the price of a unit, the unit it is sold in and whether the portal has it switched on. Nothing has to be called first, the caller needs the permission to edit the portal settings, and the call is read-only. Services that are variants of one another are folded together: the visible one carries the rest in its `innerServices`, so a client renders one card per group. The AI services are left out entirely when AI is not enabled for the portal. This is the catalogue and not the state of the portal - what is actually running is `GET api/2.0/portal/payment/activeservices`, one service on its own is `GET api/2.0/portal/payment/walletservice`, and switching one on or off is `POST api/2.0/portal/payment/servicestate`.
+Returns every service that the portal can pay for from its wallet. The services are extra admins, disk storage, backup, AI tools, AI search, and Docs Connect. Each item has the price of a unit, the unit, and whether the service is turned on. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. Variants of one service form a group. The visible variant holds the others in `innerServices`. If AI is turned off for the portal, the list has no AI services. To read the services that run on the portal, use `GET api/2.0/portal/payment/activeservices`. To read one service, use `GET api/2.0/portal/payment/walletservice`. To turn a service on or off, use `POST api/2.0/portal/payment/servicestate`.
 
 ## Parameters
 This endpoint does not need any parameter.

@@ -6,7 +6,7 @@
 
 Get file history
 
-Returns the activity log of a single file - who renamed, moved, shared, converted, locked or edited it, and when - as the portal recorded it in its audit trail. Entries arrive newest first, and the events that belong to one action are folded into a single entry whose `related` list carries the rest of them. `fromDate` and `toDate` are read in the portal's time zone and narrow the range; `startIndex` and `count` page through the result, and the number of matching entries is reported in the response headers rather than in the body. The caller needs read access to the file, so a member of the room it lies in, the admin of that room and a DocSpace admin all see the same log, while a caller without access to the room is refused with 403 and an unknown id is answered with 404. The operation is read-only. Only files stored in the portal itself have a log here - a file kept in a connected third-party storage has none. For the log of a folder or a room use `GET api/2.0/files/folder/{folderId}/log`.
+Returns the activity log of one file from the portal audit trail. The log shows who renamed, moved, shared, converted, locked, or edited the file, and when. Requires read access to the file. Other callers get 403. The call is read-only. Entries come newest first. The call merges the events of one action into one entry, and its `related` list holds the others. The response headers carry the total number of entries, not the body. If no file has this id, the call returns 404. The call returns 400 if `fromDate` or `toDate` has no `Z` or UTC offset. To read the log of a folder or a room, use `GET api/2.0/files/folder/{folderId}/log`.
 
 ## Parameters
 

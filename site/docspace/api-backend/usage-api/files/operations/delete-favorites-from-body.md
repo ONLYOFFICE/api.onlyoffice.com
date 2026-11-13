@@ -6,7 +6,7 @@
 
 Delete favorite files and folders
 
-Removes the favorite mark from the listed files and folders for the calling account. Nothing is deleted from storage: the entries keep their place, their content and their sharing, and only disappear from `GET api/2.0/files/@favorites`; to delete the entries themselves call `PUT api/2.0/files/fileops/delete` instead. Marks of other members are untouched, and read access to each item is enough to call it. The ids go into the JSON body documented here; the same route also accepts them as repeated `fileIds` and `folderIds` query parameters, but only in a request that carries no JSON body at all. Numeric ids address entries stored in the portal itself, string ids entries on a connected third-party account. The answer is `true` whenever the request was understood, which an empty request, an id that does not exist and an item that was never marked all achieve, so it does not report how many marks were dropped. `returnSingleOperation` arrives with the shared body and does nothing here. Repeating the call is safe. Use `POST api/2.0/files/favorites` to mark entries again.
+Deletes the favorite marks of the calling account from files and folders. The entries themselves stay unchanged and no longer appear in `GET api/2.0/files/@favorites`. Marks of other users stay. Any signed-in user can call it. The call skips items without read access. The call changes data. You can repeat it with the same body. It returns `true` even when it deletes nothing. The call reads only `fileIds` and `folderIds` from the body. The route also accepts them as repeated query parameters, but only in a request without a body. To delete the entries themselves, use `PUT api/2.0/files/fileops/delete`. To mark entries again, use `POST api/2.0/files/favorites`. If a string id points to a storage account that is not connected, the call returns 400. If it names an unknown storage type, the call returns 404.
 
 ## Parameters
 
@@ -21,9 +21,9 @@ Removes the favorite mark from the listed files and folders for the calling acco
 | **200** | Always true: the marks named in the request are gone or were never there | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request body cannot be read, or a third-party identifier refers to a storage account that is not connected | - | - |
 | **404** | A third-party identifier names a storage type the portal does not know | - | - |
-| **500** | An id is a number that is not a 32-bit integer, or a third-party identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

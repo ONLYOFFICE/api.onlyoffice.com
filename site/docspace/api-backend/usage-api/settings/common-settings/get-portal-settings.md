@@ -6,7 +6,7 @@
 
 Get the portal settings
 
-Returns the current portal's general configuration: branding, culture, feature flags, and DocSpace/Standalone mode, everything the client needs to render its shell before or after login. No permission is required, but the response shape depends on the caller's identity. An anonymous caller receives only the public subset (culture, branding, DocSpace/Standalone flags, deep link data, setup-wizard and join-by-domain hints); once authenticated, the response also includes tenant-specific fields such as the owner ID, time zone, invitation limit, AI/banner/dev-tools flags, and, for a DocSpace administrator, the tenant wallet's low-balance flag. This is a read-only, idempotent call. Pass `withPassword=true` to also receive the parameters (`salt`, iteration count, hash size) used to hash the password client-side before it is sent to the authentication endpoints; these are only added for an anonymous caller or when explicitly requested, never as part of the default authenticated response.
+Returns the general portal settings: culture, branding, feature flags, and installation type. Anyone can call it without signing in, even when the portal is unpaid, suspended, or blocked. The call is read-only. The fields depend on the caller. An anonymous caller gets only public fields, such as culture, branding, and setup and join hints. A signed-in caller also gets the owner ID, time zone, invitation limit, and feature flags. A DocSpace admin also gets the low wallet balance flag. Password hashing parameters come back to an anonymous caller, or if `withPassword` is true. Use them to hash a password for the sign-in operations.
 
 ## Parameters
 

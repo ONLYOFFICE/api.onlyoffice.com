@@ -6,7 +6,7 @@
 
 Display a file extension
 
-Stores whether file titles are shown to the caller with their extension, and returns the value that is now stored. It is a preference of the calling account: every authenticated role down to a guest may change its own copy, and an unauthenticated caller is refused. Only the presentation changes - the titles kept by the portal always include the extension, and the listing and file operations keep returning them in full, so a client that trims the extension for display must add it back before it renames or searches for anything. Writing a value that is already stored is accepted and leaves the setting untouched. The value is published as `displayFileExtension` by `GET api/2.0/files/settings`, which is the only way to read it back. A new account starts with extensions hidden. This governs display alone: which extensions may be uploaded, viewed or edited at all is published by the same settings operation as separate format lists.
+Changes whether the calling account sees file names with their extension. It returns the value that is now stored. Any signed-in user can call it. The call changes data, and you can repeat it with the same body. The setting only guides the app. File titles in the API always include the extension. So send the full title when you rename or search. To read the value, use the `displayFileExtension` field of `GET api/2.0/files/settings`.
 
 ## Parameters
 

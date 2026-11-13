@@ -6,7 +6,7 @@
 
 Search users by query
 
-Searches the active accounts of the portal by a term passed in the query string, and is the same search as `GET api/2.0/people/@search/{query}`, which takes the term in the path instead. Only a DocSpace administrator may call it; every other account, including a room admin, gets 403. Only accounts with the `Active` status are searched, so a pending invitation and a disabled account are never found - use `GET api/2.0/people/filter` to search across states. The call is read-only and is not paged: every match is streamed, without a total. It takes the search term and nothing else - the group filter of `GET api/2.0/people/@search/{query}` is not reachable here, because the handler forwards only `query` - so use that operation when the result has to be narrowed to one group. The answer holds full profiles, because the handler passes the request on to the operation that builds the complete profile.
+Searches the active accounts of the portal by the term in `query`. Requires a DocSpace admin. Other callers get 403, including a room admin. The call skips pending and disabled accounts. The call is read-only. It returns all matches with full profiles, without paging or a total. It has no group filter. To filter by group, use `GET api/2.0/people/@search/{query}`. To search in all states, use `GET api/2.0/people/filter`.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Get file operations by type
 
-Returns the background file operations of the caller that are of one kind, named by the number in the route: `1` for a copy, `2` for a deletion, `3` for a download, `4` for a mark-as-read, `7` for a duplication and `8` for a document builder run. The answer carries the same records as `GET api/2.0/files/fileops`, with the same rule that a finished operation is reported once and then dropped, and `id` narrows it further to a single operation. Moves, kind `0`, cannot be read through this route: the address `api/2.0/files/fileops/move` belongs to another operation, so read moves from `GET api/2.0/files/fileops` and pick the records whose `operation` is `0`. A kind that has no queue of its own — `5` for an import, `6` for a conversion — is accepted and answers with an empty array, while a number outside the operation type is rejected as an invalid request. The call changes nothing and never shows another account's operations.
+Returns the background file operations of the caller of one kind, named by `operationType`. Anyone can call it without signing in. Each caller sees only their own operations. As in `GET api/2.0/files/fileops`, a finished operation appears in one answer and then leaves the list. A kind without a queue of its own, such as an import or a conversion, returns an empty list. To read moves, use `GET api/2.0/files/fileops` and pick the move records. The path `api/2.0/files/fileops/move` belongs to another operation. If `operationType` is not a known kind, the call returns 400.
 
 ## Parameters
 

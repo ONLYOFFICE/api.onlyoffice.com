@@ -6,7 +6,7 @@
 
 Get file settings
 
-Returns the whole Files configuration in one object: the caller's own preferences (trash auto-clearing, default sharing rights, hidden confirmation dialogs, archive format, section visibility), the portal-wide switches an administrator controls (third-party storages, external sharing), and the static tables a client needs to work with documents - which extensions can be viewed, edited, converted or uploaded, the URL templates for the viewer, editor and thumbnails, and the upload limits. This is the read side of the setting operations in this section: each of those answers with the one value it wrote, and only the trash auto-clearing and default-template settings have a GET of their own. Marked as allowing anonymous access because the external-link pages read the extension tables before signing in, but a caller with neither a session nor a valid link key is still rejected. The result is not filtered by role and is not paginated; fetch it once per session rather than before each file action.
+Returns the Files settings of the caller and the portal in one object. The object has the caller's preferences, the portal switches, the format tables, the editor URLs, and the upload limits. Any signed-in user can call it. A visitor with an external link can also call it without signing in. Other callers get 401. The call is read-only. Most setting calls of this section return only the value they changed. Read the other values here.
 
 ## Parameters
 This endpoint does not need any parameter.

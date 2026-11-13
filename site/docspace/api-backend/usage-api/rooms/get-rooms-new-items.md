@@ -6,7 +6,7 @@
 
 Get new items in all rooms
 
-Collects everything that is marked as new for the caller across the active rooms into one answer, grouped first by the day an entry changed and then by the room it belongs to. An entry becomes new when somebody else creates or changes it in a room the caller has already opened, so the caller's own work never shows up here, and neither does anything from a room they have never visited. Only files are listed: a new subfolder is not an item, although files created inside it are, at any depth. The days come newest first, and inside a day the rooms and their files follow the same order by change time. The archive is out of scope, only rooms of the active section are covered. Reading the list clears nothing: the marks stay until the room itself is opened with `GET api/2.0/files/rooms/{id}`. An empty array means that this account has nothing new. For one room, use `GET api/2.0/files/rooms/{id}/news`.
+Returns the items marked as new for the caller in all active rooms. The list is grouped by the day of the change, then by room. Any signed-in user can call it. An item is new when another user creates or changes it in a room that the caller has opened. So the list never has the caller's own changes. The list has only files, including files in subfolders at any depth. A new subfolder is not an item. Days come newest first. Inside a day, rooms and files follow the same order by change time. The call is read-only and does not clear the marks. Opening the room with `GET api/2.0/files/rooms/{id}` clears them. An empty array means that the caller has nothing new. To get the new items of one room, use `GET api/2.0/files/rooms/{id}/news`.
 
 ## Parameters
 This endpoint does not need any parameter.

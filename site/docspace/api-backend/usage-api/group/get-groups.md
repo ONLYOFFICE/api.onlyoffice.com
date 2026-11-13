@@ -6,7 +6,7 @@
 
 Get groups
 
-Returns the groups of the portal, one page at a time, with the summary information about each of them - the ID, the name and the manager - but without the member list. The caller needs the permission to read groups. The call is read-only, and the number of groups that match the filters is reported in the total count of the response, so a client can page through them with `count` and `startIndex`. Narrow the result with `filterValue` on the group name, with `userId` to keep only the groups that account belongs to, and with `manager` set to true to keep only the groups it manages; order it with `sortBy` and `sortOrder`, and an unknown `sortBy` falls back to sorting by title. The entries carry no members - read `GET api/2.0/group/{id}` with `includeMembers` for one group, or `GET api/2.0/group/user/{userId}` to find the groups of a single account.
+Returns the groups of the portal, one page at a time. Each entry has the ID, the name, and the manager, but no members. Requires a DocSpace admin or a room admin. Other callers get 403. The call is read-only. The response reports the total number of matching groups, so you can page with `count` and `startIndex`. The call matches `filterValue` against any part of the group name and ignores case. With `userId`, it keeps only the groups of that account. With `manager` set to true, it keeps only the groups that account manages. An unknown `sortBy` value orders the groups by title. The call returns 400 if `count` is out of range or a parameter has the wrong type. To read the members of one group, use `GET api/2.0/group/{id}`.
 
 ## Parameters
 

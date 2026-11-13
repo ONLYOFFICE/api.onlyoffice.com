@@ -6,7 +6,7 @@
 
 Get the room links
 
-Returns the sharing links of a room, with the invitation and the external links mixed together unless `type` narrows it to one kind. Each entry carries the link address, its title, access level, expiration, the flag that marks the primary external link of the room and, for invitation links, how many times it may still be used. Public and form filling rooms come with an external link created for them, so an empty answer there means that the link was revoked rather than that the room is private; rooms of the other kinds start with no links at all and only gain one when somebody creates it, which for a collaboration room and a virtual data room can be an invitation link alone. The caller needs access to the room and the right to see its links: a member invited without that right gets an empty list rather than an error, while somebody who is not in the room at all is refused. Paging parameters are not honoured here: the first hundred links are returned and the reported count is the number of entries actually sent.
+Returns the links of a room. If `type` is set, the list has only links of this type. Otherwise, it has invitation and external links together. Each entry has the address, title, access, expiration, and the flag of the primary external link. Invitation links also show how many uses are left. Public and form-filling rooms get an external link when they are created. So an empty list there means that the link was revoked. Other rooms start with no links. Collaboration and virtual data rooms can have only an invitation link. Requires read access to the room. Other callers get 403. A member without the right to see the links gets an empty list. The call is read-only. It returns at most the first 100 links and ignores paging parameters. The count in the response is the number of entries sent. If the room does not exist, the call returns 404. If a string `id` points to a storage account that is not connected, the call returns 400.
 
 ## Parameters
 
@@ -23,9 +23,9 @@ Returns the sharing links of a room, with the invitation and the external links 
 | **400** | A parameter has the wrong type, or a third-party identifier refers to a storage account that is not connected | - | - |
 | **403** | The caller may not read the room | - | - |
 | **404** | The room does not exist, or the id is neither a 32-bit number nor a third-party identifier of a known storage type | - | - |
-| **500** | A third-party identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

@@ -6,7 +6,7 @@
 
 Register a push device
 
-Registers one mobile device of the calling user for the push notifications of the Documents application, by storing the Firebase token that device was issued together with the initial `isSubscribed` state. The token is handed out by Firebase to the mobile client, so obtain it there before calling: nothing here checks it, and it is kept as an opaque string of up to 255 characters. Every signed-in member registers its own devices, whatever its role - owner, administrator, user or guest - and a registration is bound to the caller and the current portal, so another member's devices cannot be touched. The call is safe to repeat, but it is not an update: a token already registered comes back as it stands and `isSubscribed` from the request is ignored, so switch an existing registration on or off with `PUT api/2.0/settings/push/docsubscribe` instead. What comes back is the stored registration, with `application` always `doc` and `isSubscribed` as stored. Only a subscribed device is sent the room activity messages, such as an invitation to a room, a role change, an archived room or a new document in a room, and only while the installation itself is configured with Firebase credentials.
+Registers a mobile device of the calling user for push notifications of the Documents app. First get the device's Firebase token on the device. The call stores the token with the initial `isSubscribed` state. Any signed-in user can call it, including a guest. Each registration belongs to the caller and the current portal. The call changes data, and you can repeat it with the same body. If the token is already registered, the call returns the stored registration unchanged. It then ignores `isSubscribed`. To turn an existing registration on or off, use `PUT api/2.0/settings/push/docsubscribe`. In the response, `application` is always `doc`. Only a subscribed device gets room activity messages, such as an invitation to a room or a new document. The installation also needs Firebase credentials to send them. Send a token of at most 255 characters.
 
 ## Parameters
 
@@ -19,9 +19,9 @@ Registers one mobile device of the calling user for the push notifications of th
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The stored device registration of the calling user, with the Firebase token, the `doc` application and the subscription state as they are kept | [**FirebaseDeviceWrapper**](../../models/firebase-device-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **500** | The Firebase token is longer than 255 characters and the database refuses to store it, as PostgreSQL and MySQL in strict mode do | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

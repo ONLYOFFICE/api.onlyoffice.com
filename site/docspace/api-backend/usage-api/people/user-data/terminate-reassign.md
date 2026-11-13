@@ -6,7 +6,7 @@
 
 Terminate the data reassignment
 
-Cancels the data reassignment queued for the user with the ID specified in the request. The caller needs the permission to edit users, and only the portal owner may cancel a reassignment whose source user is a DocSpace administrator. The operation is idempotent: when nothing is queued for that user it answers 200 with an empty body, and repeating it on an already cancelled job changes nothing. Cancelling removes the job from the queue and does not undo the transfers it has already made, and a cancelled job cannot be resumed - start a new one through `POST api/2.0/people/reassign/start`. The returned progress reports `status` as `Canceled` and `isCompleted` as true.
+Cancels the job that moves the data of a user to another user. Requires a DocSpace admin. Other callers get 403. Only the portal owner can cancel the job of a source user who is a DocSpace admin. Other DocSpace admins get 403 for it. The call changes data. It removes the job from the queue. It does not undo the moves that the job already made. You cannot resume the job. To start again, use `POST api/2.0/people/reassign/start`. The returned progress has `status` `Canceled` and `isCompleted` true, even for a job that already finished. If no job exists for the user, the response has no progress object. So you can repeat the call. The call returns 400 if the body has no `userId`.
 
 ## Parameters
 

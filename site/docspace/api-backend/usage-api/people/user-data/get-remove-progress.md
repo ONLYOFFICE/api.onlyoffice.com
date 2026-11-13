@@ -6,7 +6,7 @@
 
 Get the deletion progress
 
-Returns the current state of the data deletion queued for the user with the ID specified in the request. A deletion must have been queued by `POST api/2.0/people/remove/start` first: when nothing is queued for that user the operation answers 200 with an empty body. The caller needs the permission to edit users. The call is read-only and is the polling operation of the deletion flow - repeat it until `isCompleted` is true, reading `percentage` for the 0 to 100 progress and `error` for the message left by a failed job. Use `PUT api/2.0/people/remove/terminate` to cancel a job that is still running.
+Returns the progress of the job that deletes the data of a user. To start the job, use `POST api/2.0/people/remove/start`. Requires a DocSpace admin. Other callers get 403. The call is read-only. This is the call to poll. Repeat it until `isCompleted` is true. If no job exists for the user, the response has no progress object. If the job fails, `error` holds the reason. To cancel a running job, use `PUT api/2.0/people/remove/terminate`.
 
 ## Parameters
 

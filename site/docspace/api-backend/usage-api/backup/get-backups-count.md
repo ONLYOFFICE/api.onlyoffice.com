@@ -6,7 +6,7 @@
 
 Get the number of backups
 
-Counts the backups of the current portal that were created within a period, and `paid` chooses which kind is counted: false, the default, counts the ones covered by the free monthly allowance, and true counts the ones charged to the portal wallet. The period defaults to the current calendar month - `from` becomes the first day of the month at 00:00 UTC and `to` becomes the moment of the call. Both bounds are UTC and inclusive, and a `from` later than `to` is rejected. Called with no parameters at all, this returns exactly the figure the free monthly allowance is measured against. The count is over history records rather than over stored archives, so it includes backups that have already been deleted; use `GET api/2.0/backup/getbackuphistory` to see what can still be restored.
+Returns how many free backups the portal created in a period, or paid ones if `paid` is true. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. With no parameters, it returns the count that the free monthly allowance is checked against. The count includes deleted backups. To list the stored backups, use `GET api/2.0/backup/getbackuphistory`. The call returns 400 if `from` is later than `to` or a value cannot be parsed.
 
 ## Parameters
 

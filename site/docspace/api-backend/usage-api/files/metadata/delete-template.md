@@ -6,7 +6,7 @@
 
 Delete a metadata template
 
-Deletes a metadata template together with its fields, its assignments and every value written for its fields on any file, folder or room of the portal. Only a DocSpace admin can delete templates. The deletion is irreversible and there is no confirmation: the affected entries lose the template at once, their search documents are rebuilt and the clients viewing them are told to refresh. A template that does not exist, or was already deleted, is answered with 404. To take the template off a single entry and keep it for the others use `DELETE api/2.0/files/metadata/file/{fileId}/templates/{templateId}` instead.
+Deletes a metadata template with its fields, assignments, and the values of its fields on all files, folders, and rooms. Requires a DocSpace admin. Other callers get 403. The deletion cannot be undone, and the call asks for no confirmation. All entries lose the template immediately. The call returns 404 for an unknown ID, so a repeated call also returns 404. To remove the template from one entry only, use `DELETE api/2.0/files/metadata/file/{fileId}/templates/{templateId}` or `DELETE api/2.0/files/metadata/folder/{folderId}/templates/{templateId}`.
 
 ## Parameters
 

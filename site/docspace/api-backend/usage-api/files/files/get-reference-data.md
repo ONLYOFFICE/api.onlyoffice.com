@@ -6,7 +6,7 @@
 
 Resolve a spreadsheet reference
 
-Resolves a reference that a formula in one spreadsheet makes to another document, and answers with the descriptor the document service needs in order to read it: the title, the download address, the file type, the document key of the co-editing session, the web editor link and the signature token. Three ways of naming the target are tried in order, and the first that resolves wins: `fileKey` as a file id inside the portal named by `instanceId`, then `path` looked up among the files sitting next to `sourceFileId`, then `link`, short links included, from which the file id is read out. A link that points outside this portal is not resolved at all and comes back unchanged as the address to follow. The caller needs read access to the source file and to its folder, otherwise the call is refused. The call only reads. A reference that resolves to nothing is still answered with 200, with the error text filled in and the rest of the descriptor empty, so read the error before using any other field.
+Resolves a reference from a formula in one spreadsheet to another document. It returns the data that the document service needs to read that document. The data has the title, download URL, file type, document key, editor link, and signature token. First, the call looks up `fileKey` as a file id in the portal that `instanceId` names. Then, it looks for `path` among the files in the folder of `sourceFileId`. Then, it reads the file id from `link`, including short links. The first match wins. The call does not resolve a link outside this portal and returns it as the URL. Requires read access to the referenced file. Other callers get 403. For a `path` lookup, the call also checks read access to the source file and its folder. It also returns 403 for an encrypted file or a file in a private room. The call is read-only. If nothing resolves, the call returns 200 with `error` set and the other fields empty. So read `error` before you use other fields. The call returns 400 if the body has no `fileKey` or `instanceId`.
 
 ## Parameters
 
@@ -21,9 +21,9 @@ Resolves a reference that a formula in one spreadsheet makes to another document
 | **200** | The reference descriptor, or the same object with the error text set when nothing resolved | [**FileReferenceWrapper**](../../models/file-reference-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request body cannot be read or has no `fileKey` or `instanceId` | - | - |
 | **403** | The caller cannot read the source file, its folder or the referenced file | - | - |
-| **500** | `fileKey` is empty or not a number while `instanceId` names this portal | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

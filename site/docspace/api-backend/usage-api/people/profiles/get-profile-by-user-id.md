@@ -6,7 +6,7 @@
 
 Get a profile by user ID
 
-Returns the profile of one account, looked up by its user name first and by its ID if the name matches nothing, so both forms work in the route. The caller has to be allowed to see that account - a guest, for instance, only sees the accounts it is related to - and a value that matches neither a name nor an ID answers 404. A request authenticated with an invitation link is treated differently: it skips that visibility check and gets a reduced profile with the identifying fields only, which is what an invitation page needs. The call is read-only and is available on an unpaid portal. To read the calling account use `GET api/2.0/people/@self`, and to look an account up by address use `GET api/2.0/people/email`.
+Returns the profile of an account by its user name or ID. The call looks for a user name first, then for an ID. Any signed-in user can call it. If the caller cannot see the account, the call returns 403. A guest, for example, sees only the accounts related to it. If nothing matches, the call returns 404. A request with the token of an invitation link skips the visibility check. It gets a short profile with only the identifying fields. The call is read-only and works on an unpaid portal. For the profile of the caller, use `GET api/2.0/people/@self`.
 
 ## Parameters
 

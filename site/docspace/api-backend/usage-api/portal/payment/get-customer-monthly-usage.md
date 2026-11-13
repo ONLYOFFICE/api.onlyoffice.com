@@ -6,7 +6,7 @@
 
 Get the customer monthly usage
 
-Returns what the portal spent from its wallet added up per calendar month, so a client can draw a spending chart without paging through every movement. Only a DocSpace administrator may read it, a portal with no billing customer answers with an empty result, and the call is read-only. `startDate` and `endDate` bound the period, both inclusive, and default to the portal creation date and the present moment; the months are cut in the portal time zone, so a movement at the edge of a month falls where the portal sees it and not where UTC does. Each item names its year and month, the total charged in it with the currency, and how many operations that total came from. The movements behind a month are in `GET api/2.0/portal/payment/customer/operations`, and the same figures as a file come from `POST api/2.0/portal/payment/customer/usage/monthly/report`.
+Returns the spending of the portal wallet, added up per calendar month. Use it to draw a spending chart. Requires a DocSpace admin. Other callers get 403. The call also returns 403 if the installation has no billing service. If the portal has no billing customer, the call returns an empty result. The call is read-only. The call cuts the months in the portal time zone. Months without spending are not listed. To list the movements of a month, use `GET api/2.0/portal/payment/customer/operations`. To get the same figures as a file, use `POST api/2.0/portal/payment/customer/usage/monthly/report`.
 
 ## Parameters
 

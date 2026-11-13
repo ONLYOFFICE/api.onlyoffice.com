@@ -6,7 +6,7 @@
 
 Get folder form filter
 
-Lists the fields the completed forms of a form-filling room carry, each of them a key and the kind of value behind it, so that a client can offer them as filters. Feed a pair from this list back as `formsItemKey` and `formsItemType` of `GET api/2.0/files/{folderId}` to keep only the completed forms whose field of that name holds a value. The fields are read from the search index of one of the forms already gathered, so they appear once indexing has caught up with the first submission. Only the Complete folder of a form-filling room carries such fields: for any other folder, for a folder that does not exist and for one that has been deleted the answer is an empty list rather than a refusal, and the same holds while nothing has been submitted yet. The operation reads the index alone, changes nothing and needs no authorization.
+Returns the fields of the completed forms in the Complete folder of a form-filling room. Each field has a key and a value type. To filter by a field, pass a pair as `formsItemKey` and `formsItemType` of `GET api/2.0/files/{folderId}`. That call then keeps only the completed forms whose field has a value. Anyone can call it without signing in. The call is read-only. It reads the fields from the search index of one completed form. So the list fills only after the portal indexes the first submitted form. For any other folder, an unknown folder, or a folder without completed forms, the call returns an empty list.
 
 ## Parameters
 

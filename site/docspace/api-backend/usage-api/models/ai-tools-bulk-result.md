@@ -1,5 +1,5 @@
 # AiToolsBulkResult
-Outcome of `ToolsEngine.replaceAllCustomServers` — either every entry persisted, or no entries persisted plus a per-key error report.
+The outcome of replacing the custom MCP servers: either every entry was stored, or none was and the errors are reported per server.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|

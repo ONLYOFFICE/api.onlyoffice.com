@@ -6,7 +6,7 @@
 
 Get the third-party backup folder
 
-Returns the folder of the third-party storage account the portal keeps for backups, so a caller can check where scheduled and manual backups are written. There is at most one such account per portal, connected by an administrator through `POST api/2.0/files/thirdparty/backup`, and it is deliberately kept out of the personal list of `GET api/2.0/files/thirdparty`. Any authenticated member may ask, and the call is read-only. The body is `null`, with a successful status, in two situations the answer does not distinguish: no backup account has been connected, and the caller has no read access to the folder of the one that is. When a folder does come back, its `id` is the string ID of a third-party folder and can be used with the folder operations that accept one, and its `title` is the title the account was saved under. Connecting a different account through the backup operation replaces this one rather than adding a second, and `DELETE api/2.0/files/thirdparty/{providerId}` removes it.
+Returns the root folder of the third-party storage account where the portal saves scheduled and manual backups. A portal has at most one such account. A DocSpace admin connects it with `POST api/2.0/files/thirdparty/backup`. Any signed-in user can call it. The call is read-only. The body is `null` with status 200 if no backup account is connected or the caller cannot read its folder. The answer does not tell these cases apart. The folder operations accept the returned `id`. The `title` is the title of the account. The list of `GET api/2.0/files/thirdparty` does not have this account. To remove it, use `DELETE api/2.0/files/thirdparty/{providerId}`.
 
 ## Parameters
 This endpoint does not need any parameter.

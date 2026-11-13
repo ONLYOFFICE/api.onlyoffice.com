@@ -6,7 +6,7 @@
 
 Reset the room quota limit
 
-Returns every listed room to the default room quota of the portal and streams the updated rooms back in the order they were given. This is not the same as removing the limit: the room stops carrying its own value and starts following the portal default, which a portal administrator can change at any time. The per-room quota feature has to be on, the caller must be a manager of each listed room, and an archived room or a room in the trash is refused. The list is not transactional, so rooms processed before a failing one keep the default and the rest keep what they had. Only numeric room ids are processed, which means ids of rooms stored in a connected third-party account are silently skipped. Use `PUT api/2.0/files/rooms/roomquota` to set an explicit value, and a quota of -1 in `PUT api/2.0/files/rooms/{id}` to leave the room with no custom limit at all.
+Restores the default room quota of the portal on each listed room. It returns the updated rooms in the order of `roomIds`. This does not remove the limit. The room then follows the portal default, which a DocSpace admin can change at any time. Requires the room manager role in each room. Other callers get 403. The call changes data, and you can repeat it with the same body. The call skips unknown rooms and rooms in third-party storage. The call is not atomic. If a room fails, the rooms before it keep the default, and the rest keep their limit. It returns 403 if the room quota feature is off, or a room is in Trash or the archive. For AI agents, it checks the agent quota feature instead. To give the rooms their own value, use `PUT api/2.0/files/rooms/roomquota`. To remove the custom limit, send a `quota` of `-1` to `PUT api/2.0/files/rooms/{id}`.  Raises the `room.updated` webhook for every listed room, even when its quota does not change. Raises the `agent.updated` webhook instead for a listed AI agent. Raises the `folder.updated` webhook instead for a listed ID that is a folder, not a room.
 
 ## Parameters
 
@@ -20,9 +20,9 @@ Returns every listed room to the default room quota of the portal and streams th
 |------------- | ------------- | ------------- | -------------|
 | **200** | The rooms as they are after the default limit was restored | [**FolderArrayWrapper**](../../models/folder-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | The storage quota for rooms (for an AI agent, for agents) is turned off, or the caller may not edit a listed room or it lies in Trash or in the archive | - | - |
-| **500** | An id is a number that is not a 32-bit integer | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

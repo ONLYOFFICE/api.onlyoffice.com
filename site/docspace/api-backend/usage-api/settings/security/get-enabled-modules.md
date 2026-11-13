@@ -6,7 +6,7 @@
 
 Get enabled modules
 
-Lists the portal modules the calling user can currently open, each as an `id` holding the module's product class name and a `title` holding its display name, both HTML-encoded. Any signed-in member may call this; anonymous callers are not admitted. The operation is read-only and takes no parameters, and the list is specific to the caller: modules hidden for this portal, and modules whose access rules exclude the caller, are left out, and sub-modules nested under another module are never listed. Entries follow the portal's own module order rather than an alphabetical one. An empty list means the installation registers no such modules at all - the case on DocSpace, where the classic modules do not exist - and is not a failure. The identifiers here are display-oriented class names, not the GUIDs the access-settings operations work with, so do not feed them to `GET api/2.0/settings/security/{id}`, which expects a module GUID.
+Returns the portal modules that the calling user can open now. Each entry has the product class name in `id` and the display name in `title`. Both values are HTML-encoded. Any signed-in user can call it. The call is read-only and takes no parameters. The list depends on the caller. It leaves out hidden modules, modules whose access rules exclude the caller, and nested sub-modules. Entries follow the portal's own module order, not the alphabet. An empty list means the installation registers no such modules. This is the normal case on DocSpace, not an error. The `id` values are class names, not module GUIDs. Do not pass them to `GET api/2.0/settings/security/{id}`.
 
 ## Parameters
 This endpoint does not need any parameter.

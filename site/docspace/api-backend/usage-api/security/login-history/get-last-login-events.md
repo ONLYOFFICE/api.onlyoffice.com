@@ -6,7 +6,7 @@
 
 Get recent login events
 
-Returns the twenty most recent login events of the whole portal - successful sign-ins, sign-outs and failed attempts alike - as the short summary a settings page shows before anyone asks for the full history. The caller needs the portal-settings right of a DocSpace administrator, and in a cloud installation the login history and audit trail section must be enabled for the portal, otherwise the call is answered with 402. The operation is read-only and takes no parameters: the number of events is fixed at twenty, nothing can be filtered, and events are ordered newest first. `date` is given in the portal time zone, `actionText` is the readable sentence describing the event with every substituted value shortened to fifty characters here, and `country` and `city` are resolved from the IP address and stay empty when it cannot be located. An empty list means the portal has recorded no login events yet. Use `GET api/2.0/security/audit/login/filter` to filter by user, action or period and to page through the whole history.
+Returns the 20 most recent login events of the portal, newest first. The list includes successful sign-ins, sign-outs, and failed attempts. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. In a cloud installation, the call returns 402 if the login history and audit trail section is turned off. The call is read-only. In `actionText`, the call cuts every inserted value to 50 characters. An empty list means the portal has recorded no login events. To filter by user, action, or period, or to page through the history, use `GET api/2.0/security/audit/login/filter`.
 
 ## Parameters
 This endpoint does not need any parameter.

@@ -6,7 +6,7 @@
 
 Get external DB sync status
 
-Returns the record of the external database export job of a form filling room, or an empty body when the room has no job at all. The room must be a form filling room and the caller must be able to edit it, otherwise the call is refused; an unknown room is answered with 404. This is the polling target of `POST api/2.0/files/rooms/{id}/externaldbsync`: repeat it until `isCompleted` is true, and then read `forms`, which lists one entry per original form with its own `success` and `error` and is empty while the job is still running. `percentage` advances as forms are processed, `status` distinguishes a job that is queued, running, finished or failed, and `error` carries the message of a job that stopped as a whole. The record belongs to the room rather than to the account that started the job, so any member who can edit the room sees the same answer. The call changes nothing and is safe to repeat.
+Returns the record of the job that exports form data of a form filling room to the external database. Requires editing access to a form filling room. Other callers get 403. Any other room also returns 403. The call is read-only. This is the call to poll after `POST api/2.0/files/rooms/{id}/externaldbsync`. Repeat it until `isCompleted` is true. Then read the result of each form in `forms`. The body is empty if the room has no job. The record belongs to the room, so every member with editing access sees the same job. If the room does not exist, the call returns 404.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Get file encryption information
 
-Returns what the caller needs in order to decrypt one file of an end-to-end encrypted private room: `userKeys` holds the key pairs of the calling account, the private half of each of them encrypted with that person's own password, and `fileKeys` holds the file keys that were issued to this account for this file, each naming the public key it was encrypted for. Only the keys of the calling account are ever returned, never those of the other people in the room. An account that holds no key pair yet, and a file no key was issued for, answer with empty lists rather than with an error, so an empty `fileKeys` means the caller cannot open that file rather than that the file is unencrypted. The caller needs read access to the file; a caller without it, and a file that does not exist, are both refused with 403. The operation is read-only. Keys are issued by `PUT api/2.0/files/{fileId}/access`, and the personal key pairs are managed under `api/2.0/privacyroom/keys`.
+Returns the keys that the caller needs to decrypt a file of an end-to-end encrypted private room. The field `userKeys` holds the key pairs of the caller, and `fileKeys` the file keys issued to the caller. The call never returns the keys of other users. Requires read access to the file. Other callers get 403. If the file does not exist, the call also returns 403. The call is read-only. Without a key pair, `userKeys` is null. An empty `fileKeys` means that no key was issued to the caller, whether or not the file is encrypted. A file in a third-party storage also returns an empty `fileKeys`. If `fileId` is neither a number nor the id of a third-party file, the call returns 404. To issue keys, use `PUT api/2.0/files/{fileId}/access`. To manage your own key pairs, use `api/2.0/privacyroom/keys`.
 
 ## Parameters
 
@@ -19,12 +19,12 @@ Returns what the caller needs in order to decrypt one file of an end-to-end encr
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The key pairs of the caller and the file keys issued to them | [**FileEncryptionInfoWrapper**](../../models/file-encryption-info-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The file cannot carry encryption keys | - | - |
 | **403** | The file does not exist, or the caller has no read access to it | - | - |
-| **404** | The file does not exist | - | - |
+| **404** | The file id is neither a number nor the id of a file in a known third-party storage | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
+| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

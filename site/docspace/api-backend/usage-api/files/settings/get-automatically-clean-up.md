@@ -6,7 +6,7 @@
 
 Get the trash bin auto-clearing setting
 
-Returns the trash auto-clearing setting of the calling account: whether it is on, and after which interval an item that sits in the trash is removed for good. The setting belongs to that account alone, so every authenticated role down to a guest reads its own value and an unauthenticated caller is refused. The first call for an account is not read-only: when nothing has been stored yet the portal writes the default - clearing on, thirty days - and returns it, so the answer never comes back empty and a following call reports the same pair. The interval is the age of an entry in the trash, not a schedule; each trashed entry also reports the moment it is due to disappear in its own `autoDelete` field. Use `PUT api/2.0/files/settings/autocleanup` to change the pair, or read it together with the rest of the configuration from `GET api/2.0/files/settings`.
+Returns the trash auto-clearing setting of the calling account. Any signed-in user can call it. If the account has no setting yet, the call stores the default and returns it. The default turns clearing on with an interval of thirty days. After this, the call is read-only. Each entry in the trash shows in its `autoDelete` field when the portal deletes it. To change the setting, use `PUT api/2.0/files/settings/autocleanup`.
 
 ## Parameters
 This endpoint does not need any parameter.

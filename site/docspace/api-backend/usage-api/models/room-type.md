@@ -8,3 +8,6 @@ Possible values:
 - `6` - Public room (`PublicRoom`)
 - `8` - Virtual data room (`VirtualDataRoom`)
 - `9` - AI Room (`AiRoom`)
+- `10` - Instructions room (`InstructionsRoom`)
+- `11` - Knowledge room (`KnowledgeRoom`)
+- `12` - AI project room (`AiProjectRoom`)

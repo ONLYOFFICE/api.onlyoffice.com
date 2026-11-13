@@ -6,7 +6,7 @@
 
 Terminate the monthly usage report
 
-Stops the `xlsx` monthly usage report this user has running and drops its task, for a report that was started for the wrong period or is no longer wanted. The portal needs a billing customer and the caller has to be a DocSpace administrator. The stop is asked of the worker that builds the file rather than done here, so `GET api/2.0/portal/payment/customer/usage/monthly/report` can still answer for a moment afterwards. The call is safe to repeat and does nothing at all when this user has no such report running: there is no response body, and status 200 says the stop was requested, not that a report was really stopped. It leaves the operations and service usage reports alone, and a report that had already finished keeps its file in My documents.
+Stops the `xlsx` monthly usage report that the caller has running and removes its job. Use it for a report with wrong filters or a report that is no longer needed. If the portal has no billing customer, the call returns 404. Requires a DocSpace admin. Other callers get 403. The call also returns 403 if the installation has no billing service. The call queues a stop request for the worker that builds the file. So `GET api/2.0/portal/payment/customer/usage/monthly/report` can still return the job for a short time. You can repeat the call. It also deletes a finished report job. Without a job, it does nothing. The response has no body. A 200 response means that the stop was requested, not that a report was stopped. The call does not stop the operations or service usage reports. A finished report keeps its file in My documents.
 
 ## Parameters
 This endpoint does not need any parameter.

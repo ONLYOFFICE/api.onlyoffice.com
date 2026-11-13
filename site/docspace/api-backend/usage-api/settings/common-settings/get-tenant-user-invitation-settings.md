@@ -6,7 +6,7 @@
 
 Get the user invitation settings
 
-Returns whether the portal currently allows inviting new members and new guests at all. No permission is required; anonymous callers can read it too, since the invitation flow itself may run before the caller has signed in. This is a read-only, idempotent call. The response supports conditional requests: send the standard If-Modified-Since header with the previous `lastModified` value, and an unchanged response comes back empty instead of resending the same settings.
+Returns whether the portal allows invitations of new members and of guests. Anyone can call it without signing in. The call is read-only. It supports `If-Modified-Since` with the `Last-Modified` value of the last answer. If nothing changed, it returns 304 with an empty body.
 
 ## Parameters
 This endpoint does not need any parameter.

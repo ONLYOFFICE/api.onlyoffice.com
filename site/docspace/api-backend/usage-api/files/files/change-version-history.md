@@ -6,7 +6,7 @@
 
 Change version history
 
-Closes or reopens a revision group in the version history of a file and answers with every stored version of that file, newest first. With `continueVersion=false` the named version is completed: its content is stored again as a fresh version that opens a new revision group, so the editing that follows no longer extends the previous one. With `continueVersion=true` the last revision group is folded back into the group before it, so the next save continues that revision instead of becoming a version of its own; a file that has only one group is left as it is. A `version` of 0 means the current version. The caller needs the right to edit the history of the file, which the room admin, a DocSpace admin acting as room manager and a member with content-creator rights have; plain editing access is refused with 403, as are a guest and a member without access to the room. The call is mutating and not idempotent. A file that is locked, lies in Trash, is open in an editing session or is kept in a connected third-party storage is refused.
+Closes or reopens a revision group in the version history of a file. It returns every stored version of the file, newest first. A `version` of 0 means the current version. With `continueVersion=false`, the call copies the current version as a new version. That version starts a new revision group, so later edits no longer extend the previous one. For an older `version`, or while someone edits the file, it changes nothing. With `continueVersion=true`, the call merges the revision group after `version` into the group of `version`. If no group follows it, nothing changes. Requires the right to change the version history, which a room manager and a content creator have. Other callers get 403, including an editor. The call changes data. Do not repeat it. With `continueVersion=false`, a repeat adds another version only if `version` is 0. With `continueVersion=true`, each call merges the next revision group, if any, into the group of `version`. If the body has no `version`, the call returns 400. If the file or the version does not exist, the call returns 404. If copying the current version exceeds the room or user storage quota, the call returns 402. A file that another user locked also returns 403. The call does not work for a file in the trash or on a third-party storage.
 
 ## Parameters
 
@@ -22,11 +22,11 @@ Closes or reopens a revision group in the version history of a file and answers 
 | **200** | The versions of the file after the change | [**FileArrayWrapper**](../../models/file-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request body cannot be read or has no `version` | - | - |
 | **402** | Completing the current version needs more space than the room or user storage quota leaves | - | - |
-| **403** | The caller may not change the version history of the file | - | - |
+| **403** | The caller may not change the version history of the file, or the file is locked by somebody else | - | - |
 | **404** | The file id, or the requested version of it, resolves to nothing | - | - |
-| **500** | The file is locked by somebody else, or, when the current version is completed, the file is encrypted, another update of it is in progress, or storing the new version fails | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

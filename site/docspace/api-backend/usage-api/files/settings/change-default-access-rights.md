@@ -6,7 +6,7 @@
 
 Change the default access rights
 
-Stores the access rights the sharing dialog offers the calling account by default, and returns the set that was actually stored. The body is a bare array of access-right values, not an object. The portal normalises the array instead of keeping it as sent: it keeps the fill-forms, custom-filter and review entries, then adds read-and-write or comment - whichever is present, in that order - and stops there, and it falls back to read alone when nothing else applies, so the response can be shorter than the request and its order can differ. An empty array clears the setting, after which read alone is reported. A value outside the published list is rejected as an invalid request. The set belongs to the calling account alone: every authenticated role down to a guest may store its own, and an unauthenticated caller is refused. Nothing already shared is changed. The stored set is published as `defaultSharingAccessRights` by `GET api/2.0/files/settings`.
+Changes the access rights that the sharing dialog offers the calling account by default. The body is an array of access rights, not an object. Any signed-in user can call it. The call changes data, and you can repeat it with the same body. The portal keeps `FillForms`, `CustomFilter`, and `Review` from the array. Then it adds `ReadWrite` or `Comment`, the first one the array has. If the array has neither, it adds `Read`. So the response can be shorter than the request and have another order. An empty array clears the setting, and the call then returns `Read` alone. If a value is not an access right, the call returns 400. Existing shares do not change.
 
 ## Parameters
 

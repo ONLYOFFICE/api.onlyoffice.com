@@ -6,7 +6,7 @@
 
 Get a portal logo
 
-Returns the absolute URL of the portal's current logo image, already resolved against the active white-label branding. Requires an authenticated session; every role, including Guest, can read it. This is a read-only, idempotent call. The response supports conditional requests: send the standard If-Modified-Since header with the previous `lastModified` value, and an unchanged response comes back empty instead of resending the same URL. The URL points at whatever image is currently configured, including the default DocSpace logo when no custom branding has been set.
+Returns the absolute URL of the current logo of the portal. If the portal has no custom logo, the URL points to the default DocSpace logo. Any signed-in user can call it, including a guest. The call is read-only. It supports `If-Modified-Since` with the `Last-Modified` value of the last answer. If nothing changed, it returns 304 with an empty body.
 
 ## Parameters
 This endpoint does not need any parameter.

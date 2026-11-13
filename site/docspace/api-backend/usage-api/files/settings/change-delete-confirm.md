@@ -6,7 +6,7 @@
 
 Ask for delete confirmation
 
-Stores whether the caller wants to be asked for confirmation before files and folders are deleted, and returns the value that is now stored. The setting belongs to the calling account alone: every authenticated role down to a guest may change its own copy, one member's choice never affects another, and an unauthenticated caller is refused. It is a hint for the interface, not a server-side guard: the delete operations under `api/2.0/files/fileops` remove whatever they are given regardless of this value, so a client that skips its own prompt loses nothing but the prompt. Pass `set=true` to be asked again, `set=false` to delete without a prompt. The same value is published as `confirmDelete` by `GET api/2.0/files/settings`, which is the only way to read it back. Repeating the call with the same value writes it again and is safe. A new account starts with the confirmation switched on, and the value says nothing about where deleted items land: they go to the trash and are cleared from there according to `GET api/2.0/files/settings/autocleanup`.
+Changes whether the calling account is asked to confirm a deletion of files and folders. It returns the value that is now stored. Any signed-in user can call it. The call changes data, and you can repeat it with the same body. The setting only guides the app. The delete operations under `api/2.0/files/fileops` ignore it. To read the value, use the `confirmDelete` field of `GET api/2.0/files/settings`.
 
 ## Parameters
 

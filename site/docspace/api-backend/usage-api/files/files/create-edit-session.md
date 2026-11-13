@@ -6,7 +6,7 @@
 
 Create the editing session
 
-Opens a chunked session that replaces the content of an existing file, which is how WebDAV clients save over a document. The answer carries the session id the later calls quote, the address of the standalone chunk handler, the expiry and the reserved size, and nothing is written until the parts reach `POST api/2.0/files/{folderId}/session/{sessionId}/upload` and the session is closed with `PUT api/2.0/files/{folderId}/session/{sessionId}/finalize`, where `folderId` is the folder the file lives in. Unlike an upload into a folder, the finished content does not become a new version: it overwrites the current one, and the file loses its encrypted flag and its stored conversion result in the process. The caller must be allowed to edit the file, as the owner, a room manager and a member invited with editing rights are; a reader and a guest get 403. A file that does not exist is answered as missing, and a payload above the portal limit for chunked uploads is refused before the session is created.
+Opens a chunked upload session that replaces the content of an existing file. WebDAV apps save over a document this way. No content is stored yet. Send the parts to `POST api/2.0/files/{folderId}/session/{sessionId}/upload`, with the folder of the file as `folderId`. Then store the content with `PUT api/2.0/files/{folderId}/session/{sessionId}/finalize`. The new content replaces the current version and adds no version. The file also loses its encrypted state and its converted copy. Requires editing access to the file. Other callers get 403. A guest also gets 403. The call changes data. A repeated call opens another session. A `fileSize` of -1 means the size is unknown, as for a WebDAV body without Content-Length. If the file does not exist, the call returns 404. The call returns 400 if `fileSize` is below -1. It returns 402 if `fileSize` is over the portal limit for chunked uploads. It also returns 403 if the file is locked, open in the editor, in the trash, or encrypted.
 
 ## Parameters
 
@@ -20,13 +20,13 @@ Opens a chunked session that replaces the content of an existing file, which is 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The created editing session, wrapped in the success envelope | [**ChunkedUploadSessionResultWrapper**](../../models/chunked-upload-session-result-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | `fileSize` is below -1 | - | - |
 | **402** | The declared `fileSize` exceeds the portal limit for chunked uploads | - | - |
 | **403** | The caller cannot edit this file, or the file is locked, open in the editor, in the trash or encrypted | - | - |
 | **404** | No file with the specified ID | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

@@ -6,7 +6,7 @@
 
 Delete an API key
 
-Deletes the API key with the ID given in the route, so that it stops authenticating requests immediately. The caller may delete a key they created themselves, and a DocSpace administrator may delete any key of the portal. The removal is permanent and cannot be undone: the secret was only ever readable at creation time, so a deleted key cannot be restored and a new one has to be issued through `POST api/2.0/keys`. To stop a key temporarily instead, set `isActive` to false through `PUT api/2.0/keys/{keyId}`. The answer is a plain boolean reporting whether the key was removed. An ID that matches no key of the portal, including a key that has already been deleted, is rejected with 404.
+Deletes an API key. The key stops authenticating requests immediately. Requires the creator of the key or a DocSpace admin. Other callers get 403. The call cannot be undone, and a repeated call returns 404. It always returns `true`. To stop a key for a time, set `isActive` to false with `PUT api/2.0/keys/{keyId}`. To get a new key, use `POST api/2.0/keys`. If no key has this ID, the call returns 404.
 
 ## Parameters
 

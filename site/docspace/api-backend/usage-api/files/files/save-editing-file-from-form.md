@@ -6,7 +6,7 @@
 
 Save edited file content
 
-Replaces the content of an existing file with an edited copy and answers with the file as it now stands. The content is the `File` part of a `multipart/form-data` body, and when no such part is sent the raw request body is saved instead, so an empty body empties the file. The `DownloadUri` query parameter does not supply content here; it is only read for the extension when `FileExtension` is empty. `fileExtension` names the format of the content being sent, and when it differs from the stored format the portal converts the content, or keeps it under a renamed copy when a third-party storage cannot convert it. The caller needs edit access to the file. The call is mutating and not idempotent: an ordinary call adds a version to the file history, while `forcesave=true` records an editor autosave, which overwrites the previous autosave revision instead of adding another version and leaves a running editing session in place. It is refused with 403 when the file is locked, lies in Trash, or is open in an editing session started by somebody else, and an unknown file id is reported as missing. For content too large to post in one request use `POST api/2.0/files/file/{fileId}/edit_session`.
+Replaces the content of a file with an edited copy and returns the file. Send the content as the `File` part of a `multipart/form-data` body. Without that part, the call saves the raw request body. An empty body then empties the file. The call does not download content from `downloadUri`. It reads only the extension from it, when `fileExtension` is empty. If `fileExtension` differs from the stored format, the portal converts the content. If a third-party storage cannot convert it, the portal saves a renamed copy. Requires editing access to the file. Other callers get 403. The call changes data. Do not repeat it. Each call adds a version. If the last save of the file was an autosave, the call replaces that version instead. With `forcesave` true, the call saves an autosave and keeps the editing session open. Without it, the call closes a session opened with `editingAlone` true. The call returns 403 if the file is locked by another user, is in Trash, or is encrypted. It also returns 403 for a file in a private room. Without `forcesave`, it also returns 403 while the file is open for co-editing. If the file does not exist, the call returns 404. If a string `fileId` points to a storage account that is not connected, the call returns 400. If the content exceeds the storage quota, it returns 402. For large content, use `POST api/2.0/files/file/{fileId}/edit_session`.  Raises the `file.updated` webhook for the saved file, also for a renamed copy in third-party storage, never `file.created`.
 
 ## Parameters
 
@@ -23,13 +23,13 @@ Replaces the content of an existing file with an edited copy and answers with th
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The file is saved and the stored version is returned | [**FileWrapper**](../../models/file-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The file id cannot be resolved to a storage that could accept the content | - | - |
+| **400** | A form field has the wrong type, or a third-party file identifier refers to a storage account that is not connected | - | - |
 | **402** | The content does not fit into the portal's storage quota, even with the overshoot allowed for editor saves | - | - |
 | **403** | The caller cannot edit the file, or it is locked, in Trash, or open in somebody else's editing session | - | - |
 | **404** | The file id resolves to nothing | - | - |
-| **500** | The file lies in a third-party storage in another format and the document service fails to convert the content | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

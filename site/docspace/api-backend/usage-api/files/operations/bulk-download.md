@@ -6,7 +6,7 @@
 
 Bulk download
 
-Queues a background job that packs the requested files and folders into a single archive, and answers with the caller's download operations, including the one just started. The archive is not ready when the response arrives: poll `GET api/2.0/files/fileops` until the operation reports `finished`, then take the address of the archive from its `url`. Items listed in `fileConvertIds` are converted to the format named there before they are packed, while the items of `fileIds` are packed as they are. Read access to every listed item is required: an item the caller may not read fails the whole call with 403, and an id that resolves to nothing is answered as missing, so filter the selection beforehand. Only one download at a time is allowed per caller, and a second call made while the first is still running is refused with 403 as well. An empty selection queues nothing and simply answers with the operations that are already there. An anonymous caller may use the call for the items covered by the external link they hold.
+Starts a background job that packs files and folders into one archive. The call converts the files of `fileConvertIds` before it packs them. Requires the right to download the listed items. If the caller can download none of them, the call returns 403. A room that forbids downloads denies this right to the Read role. The settings of an external link can deny it too. The call checks the portal's own items and the items on third-party storage as two separate groups. Each group with listed items needs one item the caller can download. The archive skips the items the caller cannot download and the ids that do not exist. A caller who is not signed in needs an external link to the items. Without one, the call returns 401. The call queues work. Repeat `GET api/2.0/files/fileops` until `finished` is true. Then take the archive address from `url`. Do not repeat the call while the job runs. Until it ends, each call of the same caller returns 403, even with an empty selection. At other times, an empty selection queues nothing and returns the existing operations. The call returns the download operations of the caller, including the new one. If no listed item of a group exists, the call returns 404. The call returns 400 if the body cannot be read or an item of `fileConvertIds` has no `key` or `value`.  Raises the `folder.downloaded` webhook for each listed folder or room when the job packs it, not for the folders inside. Raises the `file.downloaded` webhook for each listed file when the job packs it, not for the files inside listed folders.
 
 ## Parameters
 
@@ -21,10 +21,10 @@ Queues a background job that packs the requested files and folders into a single
 | **200** | The download operations of the caller, the one just queued included | [**FileOperationArrayWrapper**](../../models/file-operation-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request body cannot be read, or an item of `fileConvertIds` has no `key` or `value` | - | - |
 | **401** | The caller is not signed in and holds no external link | - | - |
-| **403** | None of the listed items that exist can be read by the caller, or another download of theirs is still running | - | - |
+| **403** | The caller can download none of the listed items that exist, counted separately for the portal's own items and for those on third-party accounts, or another download of theirs is still queued or running | - | - |
 | **404** | None of the listed items exists, counted separately for the portal's own items and for those on third-party accounts | - | - |
-| **500** | An id is a number that is not a 32-bit integer | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

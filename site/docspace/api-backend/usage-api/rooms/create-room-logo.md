@@ -6,7 +6,7 @@
 
 Set the room logo
 
-Turns an image already uploaded to the portal into the logo of a room and returns the room with the addresses of the four logo sizes. This is the second half of a two-step flow: upload the picture with `POST api/2.0/files/logos` first and pass the path it returns as `tmpFile`, because the image itself is never sent here. The temporary file belongs to the account that uploaded it and is consumed by this call, so it cannot be reused for a second room and a path somebody else uploaded is refused. `x`, `y`, `width` and `height` crop the picture; sending a position without a size is rejected as an invalid request, while a size without a position is accepted. An empty `tmpFile` leaves the room as it is. A logo replaces the cover in the interface without erasing it, and removing the logo brings the cover back. The caller must be a manager of the room, an archived room is refused, and an unknown room is answered with 404.
+Sets an uploaded image as the room logo, and returns the room with the URLs of four logo sizes. First, upload the image with `POST api/2.0/files/logos`. Then pass the returned path in `tmpFile`. An empty `tmpFile` changes nothing. Use `x`, `y`, `width`, and `height` to crop the image. A position without a size returns 400, but a size without a position works. The logo hides the cover of the room. If you delete the logo, the room shows the cover again. Requires the room manager role in the room. Other callers get 403. An archived room also returns 403. The call changes data. The portal deletes the uploaded image after this call, so a repeated call returns 404. A path that another account uploaded returns 403. The call returns 400 for a crop outside the image or a value out of range. If the logo does not fit the portal storage quota, the call returns 402. If the room does not exist, the call returns 404.  Raises the `room.updated` webhook when a logo is given in `tmpFile`. Raises the `agent.updated` webhook instead when the room is an AI agent.
 
 ## Parameters
 
@@ -24,9 +24,9 @@ Turns an image already uploaded to the portal into the logo of a room and return
 | **402** | The logo does not fit into the portal storage quota | - | - |
 | **403** | The caller may not edit this room, the room is archived, or `tmpFile` is not a picture the caller uploaded | - | - |
 | **404** | No room with this ID exists, `tmpFile` names no uploaded picture or one already used, or the id is neither a 32-bit number nor a third-party identifier of a known storage type | - | - |
-| **500** | `width` or `height` is larger than 2147483647, or a third-party identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

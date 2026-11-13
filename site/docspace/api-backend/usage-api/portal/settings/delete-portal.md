@@ -6,7 +6,7 @@
 
 Delete a portal
 
-Removes this portal for good: its rooms, files, accounts, settings and OAuth clients go with it and its domain stops serving the portal. It is reached only with the removal link that `POST api/2.0/portal/delete` mails to the portal owner - that link authorizes the call instead of an authentication token - and the owner is checked again here; on a server installation the last remaining space cannot be removed. The call is destructive and cannot be undone, and there is no restore operation, so take a backup with `POST api/2.0/backup/startbackup` first when the content still matters. It keeps working while the portal's payment has lapsed. Along the way the portal is dropped from the hosting cache, the owner is mailed a confirmation, the removal is written to the audit trail and, for a portal that was paying, the support team is notified as well. The answer is the absolute URL of the feedback form to send the departing owner to. To pause the portal instead of erasing it, use `PUT api/2.0/portal/suspend`.
+Deletes the portal with its rooms, files, accounts, settings, and OAuth apps. Its domain then stops serving the portal. Sign the request with the confirmation token from the email that `POST api/2.0/portal/delete` sends. The call also checks that the token belongs to the portal owner. Other callers get 403, including an ordinary sign-in token. The call cannot be undone, and no operation restores the portal. To keep the content, first start a backup with `POST api/2.0/backup/startbackup`. The call also works while the portal is unpaid. Do not repeat it. The portal emails the owner a confirmation. The call returns the absolute URL of a feedback form to send the owner to. To deactivate the portal instead, use `POST api/2.0/portal/suspend`. On a server installation, you cannot delete the last space. Spaces with limited access do not count.
 
 ## Parameters
 This endpoint does not need any parameter.
@@ -17,9 +17,9 @@ This endpoint does not need any parameter.
 |------------- | ------------- | ------------- | -------------|
 | **200** | The absolute URL of the feedback form to send the owner of the removed portal to | [**StringWrapper**](../../models/string-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | The account the confirmation link was issued for is not the portal owner | - | - |
-| **500** | On a server installation every other space has limited access, so the last remaining space cannot be removed | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

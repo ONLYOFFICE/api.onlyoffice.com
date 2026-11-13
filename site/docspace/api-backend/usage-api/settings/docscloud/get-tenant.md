@@ -6,7 +6,7 @@
 
 Get the Docs Connect tenant
 
-Returns the Docs Connect tenant of the current portal: the Docs Connect server assigned to the portal, with its address, the date the tenant subscription ends and the payment the tenant was created for. A tenant exists only after a Docs Connect subscription has been granted, by `POST api/2.0/settings/docscloud/trial` or by a Docs Connect purchase, and only on an installation where the Docs Connect service is configured. The caller must be a portal administrator allowed to edit the portal settings. The call is read-only and idempotent, and it is served from a cache that keeps the tenant for an hour and the absence of a tenant for a minute, so pass `refresh=true` right after a subscription change to read the current state from Docs Connect instead. In the result, `address` is the absolute URL of the assigned server, `isActive` tells whether `endDate` is still in the future, and the dates are in UTC. An empty result means the portal has no Docs Connect tenant yet, which is the normal state before a subscription and not an error, so this is the operation to call to find out whether Docs Connect is activated at all. The license and server details, the editing settings, the user quota and the usage statistics are not part of it: they live in `GET api/2.0/settings/docscloud/tenant/info`, `.../tenant/config`, `.../tenant/quota` and `.../tenant/usage`, each of which fails with 400 while the portal has no activated tenant.
+Returns the Docs Connect tenant of the current portal. It describes the Docs Connect server assigned to the portal. It also gives the subscription end date and the payment. A tenant exists only after a Docs Connect trial from `POST api/2.0/settings/docscloud/trial` or a Docs Connect purchase. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. The portal caches the tenant for an hour, and the absence of a tenant for a minute. So after a subscription change, pass `refresh=true` to read the current state from Docs Connect. The `address` field is the full address of the server. The dates in the result are in UTC. An empty result means that the portal has no Docs Connect tenant yet. This is a normal state, not an error. So use this call to check if Docs Connect is active. To read the license, the configuration, the user quota, or the usage, use `GET api/2.0/settings/docscloud/tenant/info`, `GET api/2.0/settings/docscloud/tenant/config`, `GET api/2.0/settings/docscloud/tenant/quota`, or `GET api/2.0/settings/docscloud/tenant/usage`. Each of them returns 400 while the portal has no tenant.
 
 ## Parameters
 
@@ -20,9 +20,9 @@ Returns the Docs Connect tenant of the current portal: the Docs Connect server a
 |------------- | ------------- | ------------- | -------------|
 | **200** | The Docs Connect tenant of the portal, or an empty result if no Docs Connect tenant is assigned to it | [**DocsCloudTenantWrapper**](../../models/docs-cloud-tenant-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | The caller has no portal-settings right | - | - |
-| **500** | The Docs Connect service is not configured on this installation, is unreachable, or answered with an error other than not found | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

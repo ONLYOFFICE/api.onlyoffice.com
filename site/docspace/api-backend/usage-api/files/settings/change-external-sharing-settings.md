@@ -6,7 +6,7 @@
 
 Configure external sharing
 
-Writes the portal's whole external-sharing policy in one request and returns the set that is now in force. Only the portal owner and a DocSpace administrator may call it; everyone else is refused, including an unauthenticated caller. Every field of the request is applied, so send the complete set rather than the field being changed - an omitted boolean is read as false. The portal keeps the set consistent: with `externalShare` false the default link type is forced to users of this portal only and sharing on social networks is turned off, and the three restriction fields only matter while external sharing is off. `blockExistingLinksOnRestrict` decides what happens to links that already exist, so it is the field that changes access to data already shared. The new set is pushed to the connected clients of the portal as well, and is published field by field by `GET api/2.0/files/settings`. Sending the same set again is safe.
+Changes the whole external sharing policy of the portal. It returns the policy that is now in force. Requires a DocSpace admin. Other callers get 403. The call changes data, and you can repeat it with the same body. The call writes every field, so an omitted field becomes false. Send the whole policy, not only the changed field. If `externalShare` is false, the portal sets `defaultShareLinkInternal` to true. It also turns off sharing on social networks. The `blockExistingLinksOnRestrict` field decides if existing links keep working while external sharing is off.
 
 ## Parameters
 

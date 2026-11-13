@@ -6,7 +6,7 @@
 
 Update a user culture
 
-Changes the interface language of a profile, which decides the language of the portal for that account and of the emails it receives. The culture has to be one the portal has enabled, otherwise the operation answers 400; read the enabled list from the portal settings rather than guessing a code. A caller may only change their own language - the ID in the route has to be the calling account, and an administrator gets 403 for anybody else - and the account must be allowed to edit its own profile. The change takes effect immediately, raises a `UserUpdated` webhook, and answers with the profile carrying the new `cultureName`. Other profile fields are not touched here; use `PUT api/2.0/people/{userId}` for those.
+Changes the interface language of the caller. The language applies to the portal and to the emails of the account. The ID in the route must be the ID of the caller. Any signed-in user can call it for their own account. For another account, the call returns 403, even for an admin. The culture must be enabled on the portal. Otherwise the call returns 400. If no account has the ID, the call returns 404. The call changes data. You can repeat it with the same body. It returns the profile with the new `cultureName`. To change other fields, use `PUT api/2.0/people/{userId}`.  Raises the `user.updated` webhook even when the culture does not change.
 
 ## Parameters
 

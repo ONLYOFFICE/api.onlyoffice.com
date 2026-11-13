@@ -6,7 +6,7 @@
 
 Get the portal used space
 
-Returns how much space the content of this portal occupies, in gigabytes rounded to two decimals, so a client can show the storage bar next to the allowance. The caller needs the portal-settings right and is refused without it; the call is read-only and idempotent. The number is added up from the storage counters the portal keeps per owner, which means content that belongs to no account - system data - is not part of it, and it is a plain number, not an object. The counters are maintained as files are written and removed, so the value is current but may lag a large operation that is still running. The allowance to compare it with is `maxTotalSize` from `GET api/2.0/portal/quota`, in bytes rather than gigabytes, and the smallest quota that would still fit the portal is suggested by `GET api/2.0/portal/quota/right`. This operation says nothing about which room or user the space belongs to - the per-user figures come from the People API.
+Returns the space that the content of the portal uses, in gigabytes rounded to two decimals. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. The answer is a number, not an object. The portal adds up the storage counters of its accounts. So system data that belongs to no account is not counted. To compare the result with the allowance, use `maxTotalSize` of `GET api/2.0/portal/quota`, which is in bytes. The call does not split the space by room or user.
 
 ## Parameters
 This endpoint does not need any parameter.

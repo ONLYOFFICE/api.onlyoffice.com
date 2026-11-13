@@ -6,7 +6,7 @@
 
 Finish migration
 
-Closes a completed import: it can send every user the import created the activation email they need before they can sign in, and it then discards the job and the data uploaded for it. Call it once `GET api/2.0/migration/status` reports `isCompleted` for the import; a DocSpace administrator is required, and with `isSendWelcomeEmail` set to true the job must still be in the queue, so do not clear it first. That flag decides what happens to the imported people: true mails the activation link to each of them who has not activated their account yet and skips the ones that are already active, false ends the import quietly and leaves inviting them for later. The call writes to the portal and is not idempotent - the emails go out again on every call - while its second half repeats what `POST api/2.0/migration/clear` does, removing the finished job and the uploaded backup and leaving everything already imported in place. It answers with an empty body, after which `GET api/2.0/migration/status` returns an empty result and `GET api/2.0/migration/logs` answers 404, so download the log first.
+Closes a finished import and can email the imported users their activation links. Call it after `GET api/2.0/migration/status` reports `isCompleted` for the import. Requires a DocSpace admin. Other callers get 403. If `isSendWelcomeEmail` is true, the call emails each imported user who is not active yet. With `false`, it sends nothing, and you can invite these users later. Then it queues the same clean-up as `POST api/2.0/migration/clear`. The clean-up deletes the job and the uploaded backup, and the imported data stays. The call returns an empty body. After it, `GET api/2.0/migration/status` returns an empty result. Also, `GET api/2.0/migration/logs` returns 404, so download the log first. You can repeat the call with `false`. With `true`, do not repeat it. A repeat can send the emails again. It returns 400 if the body has no `isSendWelcomeEmail`.
 
 ## Parameters
 
@@ -21,9 +21,9 @@ Closes a completed import: it can send every user the import created the activat
 | **200** | The activation emails have been sent if they were asked for and the clean-up has been queued. The response carries no content | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request body cannot be read or has no `isSendWelcomeEmail` | - | - |
 | **403** | The caller is not a DocSpace administrator | - | - |
-| **500** | `isSendWelcomeEmail` is true and the portal holds no import that has reached the user step: no job at all, only a parse pass, or an import still running or stopped before that step | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

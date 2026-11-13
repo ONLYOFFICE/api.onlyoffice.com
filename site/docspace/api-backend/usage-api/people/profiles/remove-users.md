@@ -6,7 +6,7 @@
 
 Delete users
 
-Deletes several portal profiles in one call and queues the erasure of the data behind each of them. Every listed account has to be disabled already - set the `Terminated` status through `PUT api/2.0/people/status/{status}` first, because a single account that is still active rejects the whole call with 403 - and the caller needs the permission to add and remove users. System and LDAP accounts are dropped from the list without an error, and so are the accounts the caller may not delete: a room admin when the caller is not a DocSpace admin, and a DocSpace admin when the caller is not the portal owner. The answer lists every account that was asked for, including the ones that were skipped, so it is not proof that an account was deleted - read `GET api/2.0/people/{userId}` for that, which then answers 404. The removal is permanent and cannot be undone, and each deleted account raises a `UserDeleted` webhook while its data is erased by a queued job that can be watched through `GET api/2.0/people/remove/progress/{userId}`. Hand the rooms and the shared files over first through `POST api/2.0/people/reassign/start` - an account with an unfinished reassignment cannot be deleted.
+Deletes several accounts and queues the deletion of their data. First disable each account with the `Terminated` status of `PUT api/2.0/people/status/{status}`. If any listed account is still active, the call returns 403 and deletes nothing. Requires a DocSpace admin. Other callers get 403. Only the portal owner can delete a DocSpace admin. The call skips the others without an error. It ignores system and LDAP accounts and leaves them out of the response. It does the same with the IDs of deleted and unknown accounts. The call cannot be undone. A repeat deletes nothing more and returns only the listed accounts that still exist. The call returns the listed accounts, including the skipped DocSpace admins. To check a deletion, read the account with `GET api/2.0/people/{userId}`. A queued job deletes the data of each account. To track it, use `GET api/2.0/people/remove/progress/{userId}`. If an account shared files from its own section, the job moves them to a new folder of the caller. To move rooms and shared files to another user first, use `POST api/2.0/people/reassign/start`. If `userIds` is missing, the call returns 400.  Raises the `user.deleted` webhook for every account it deletes, not for a skipped one. Raises the `folder.created` webhook for every deleted account that shared files, once the job creates a folder for them.
 
 ## Parameters
 
@@ -18,12 +18,12 @@ Deletes several portal profiles in one call and queues the erasure of the data b
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | Every account that was asked for, including the ones that were skipped | [**EmployeeFullArrayWrapper**](../../models/employee-full-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The listed accounts, including the skipped DocSpace admins; system, LDAP, deleted and unknown accounts are left out | [**EmployeeFullArrayWrapper**](../../models/employee-full-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The userIds field is missing | - | - |
 | **403** | No permissions to perform this action, one of the listed accounts is not disabled, or the OAuth service refused to remove the OAuth clients of an account | - | - |
-| **500** | A reassignment of the data of one of the listed accounts has not finished yet, or the OAuth service cannot be reached | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

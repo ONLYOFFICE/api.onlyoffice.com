@@ -6,7 +6,7 @@
 
 Get file information
 
-Returns one file as the portal stores it, together with the state it has for the caller: the title, the folder it lies in, the size, the current version and revision group, the addresses for viewing and editing it, the actions the caller is allowed to perform on it, the sharing rights it was reached through, and the thumbnail state. `version` picks an older version instead of the current one; the default of -1 means the current version. When the file belongs to another person's own section and the caller cannot read the folder holding it, the answer reports the Shared with me section as its folder, so that a client can show it in a place the caller can actually open. The caller needs read access to the file, which any member of the room it lies in has; a caller without access to the room is refused and an anonymous caller without an external share link is rejected. The operation is read-only. For every version at once use `GET api/2.0/files/file/{fileId}/history`.
+Returns a file with its state for the caller. The state includes the actions that the caller may perform and the sharing rights that give access. A `version` of -1 means the current version. Requires read access to the file. Other callers get 403. An anonymous caller without an external link gets 401. The call is read-only. Some files lie in another person's section, in a folder that the caller cannot read. For them, the answer names the Shared with me section as the folder. If the file or the version does not exist, the call returns 404. For a caller who may only fill forms, a form whose filling has not started also returns 404. To read every version, use `GET api/2.0/files/file/{fileId}/history`.
 
 ## Parameters
 

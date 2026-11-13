@@ -6,7 +6,7 @@
 
 Get the purchasable quotas
 
-Lists the quotas the portal can be put on - the paid plans and the wallet services - each with its price, its features and the limits it grants, which is what a pricing page is built from. Nothing has to be called first, the caller needs the permission to edit the portal settings, and the call is read-only. Only quotas marked visible are listed, newest first, and the two optional filters narrow that: `wallet` selects the wallet services (`true`) or the subscription plans (`false`), `additional` selects the add-ons to a plan (`true`) or the plans themselves (`false`), and an omitted filter keeps both kinds. A portal on a non-profit quota is a special case - asking for `additional=false` returns that single quota and nothing else, because no other plan may be bought for it. The quota the portal is actually on is not marked here; read it from `GET api/2.0/portal/payment/quota`.
+Returns the quotas that the portal can buy: the paid plans and the wallet services. Each quota has its price, features, and limits, so you can build a pricing page from the list. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. The list has only the visible quotas, the newest first. The filters `wallet` and `additional` narrow the list, and an omitted filter keeps both kinds. If the portal is on a non-profit quota, `additional=false` returns only that quota. The list does not mark the current quota of the portal. To read it, use `GET api/2.0/portal/payment/quota`.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Get file external links
 
-Lists the external links of a file, each with its identifier, title, address, rights, expiration date and download restriction. `startIndex` and `count` page through the list, and the total number of links is reported in the response headers rather than in the body. A file that has never been shared by link answers with an empty list; the primary link is part of this list once it exists, and it is the only one that is created on demand, by `GET api/2.0/files/file/{id}/link`. For a PDF form kept in a form-filling room the link of the room is appended to the answer, because that is the address through which the form is filled out. The caller needs the right to share the file, which its creator, the room admin and a DocSpace admin acting as room manager have; a caller without access to the file is refused and an anonymous caller is rejected. The operation is read-only. Take an identifier from here to `PUT api/2.0/files/file/{id}/links` to change or remove that link.
+Returns the external links of a file. Requires read access to the file. Other callers get 403. A caller who cannot share the file gets no links, except in a public room, where reading links is enough. The call is read-only. The response headers carry the total number of links, not the body. A file without links returns an empty list. The list includes the primary link after `GET api/2.0/files/file/{id}/link` creates it. For a PDF form in a form-filling room, the call adds the link of the room at the end. If no file has this id, the call returns 404. If `count` is outside its allowed range, the call returns 400. To change or revoke a link, use `PUT api/2.0/files/file/{id}/links` with its id.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Update the user invitation settings
 
-Sets whether the portal allows inviting new members and new guests. Requires Owner or DocSpaceAdmin (the EditPortalSettings permission). Disabling member or guest invitations only blocks creating new invitations going forward; it does not revoke links already issued or remove members already invited. This is a mutating, idempotent, portal-wide call. It returns the saved setting; read the current value at any time, including anonymously, from `GET api/2.0/settings/invitationsettings`.
+Sets whether the portal allows invitations of new members and of guests. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call changes data. You can repeat it with the same body. Turning invitations off blocks only new ones. Links already sent keep working, and invited people stay. It returns the saved setting.
 
 ## Parameters
 

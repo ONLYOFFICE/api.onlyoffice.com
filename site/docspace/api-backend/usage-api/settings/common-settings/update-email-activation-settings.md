@@ -6,7 +6,7 @@
 
 Update the email activation settings
 
-Updates the current user's own preference for whether the email confirmation prompt is displayed on their account. Requires an authenticated session; every role may change its own setting, and the change never affects any other user. This is a mutating, idempotent call. It returns the settings exactly as submitted, without validating them against the account's actual email confirmation state, so `show` can be set to `true` even after the address is already confirmed.
+Sets whether the calling user sees the reminder to confirm their email address. Any signed-in user can call it. It does not change the setting of other users. The call changes data. You can repeat it with the same body. The call does not check whether the address is already confirmed. It returns the saved setting.
 
 ## Parameters
 

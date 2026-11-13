@@ -6,7 +6,7 @@
 
 Update a metadata template
 
-Renames a metadata template or changes whether it is shown in the pickers. Only a DocSpace admin can change templates. The request is partial: a property left out keeps its value, the fields are not touched here and are changed with `PUT api/2.0/files/metadata/templates/{templateId}/fields/{fieldId}`. The new name follows the rules of the creation: unique on the portal regardless of case and at most 255 characters. The answer is the whole template with its fields. A template that does not exist is answered with 404, a name already in use or too long with 400.
+Renames a metadata template or changes whether it is shown in the pickers. Requires a DocSpace admin. Other callers get 403. The call changes data, and you can repeat it with the same body. A property left out keeps its value. This call does not change the fields. To change a field, use `PUT api/2.0/files/metadata/templates/{templateId}/fields/{fieldId}`. With `visible` false, the template keeps its assignments and values. Its fields leave the pickers, the filling, and the default text search. An entry with the template then has `hasMetadataFields` false if no other visible template or custom field gives it fields. With `visible` true, the call reverses this. The response is the whole template with its fields. If no template has this ID, the call returns 404. The call returns 400 if another template has the new name in any case. It also returns 400 for a name over 255 characters.
 
 ## Parameters
 

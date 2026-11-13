@@ -6,7 +6,7 @@
 
 Get room group info
 
-Returns one room group of the calling account together with the rooms it gathers. Groups are personal: an identifier that belongs to another member is answered the same way as one that was never created or has already been deleted, and a portal administrator is no exception to that rule. Take the identifier from `GET api/2.0/files/group`, which lists the groups the caller owns. Set `includeMembers` to false to get the group without the `rooms` array, which is the cheaper form when only the name, the icon and the number of rooms are needed; `totalRooms` is filled either way. A room moved to the archive is left out of both `rooms` and `totalRooms` while its membership survives, so taking the room out of the archive brings it back into the group. A room the caller can no longer open is left out the same way, and comes back if access to it is granted again. Rooms stored in the portal are listed before rooms on connected third-party accounts. The call is read-only and changes nothing about the group or the rooms it refers to.
+Returns one room group of the caller with its rooms. Any signed-in user can call it, including a guest. A missing group or a group of another account returns 404, even for a DocSpace admin. The call is read-only. With `includeMembers` set to false, `rooms` is null, but `totalRooms` is still filled. The `rooms` list skips archived rooms, rooms of the other section, and rooms the caller can no longer read. The `totalRooms` count uses the same rule. A skipped room returns after it leaves the archive or the caller gets access again. Rooms stored in the portal come before rooms of third-party storages.
 
 ## Parameters
 

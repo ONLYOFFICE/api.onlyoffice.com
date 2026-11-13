@@ -6,7 +6,7 @@
 
 Set folder order
 
-Puts a folder at a given position among the entries of its parent and answers with the folder, its `order` reporting where it now stands. Positions count from 1, and the entry that held the wanted position, together with everything after it, is shifted to make room, so the numbering of the parent stays without gaps; a position beyond the end places the folder last. The value may also be sent as a dotted path, as in 1.2.3, in which case only its last segment is read. Ordering is what the manual arrangement of a room is built on, and it only means something in rooms whose contents are indexed - elsewhere the value is stored and ignored. The caller needs edit access to the folder, which room managers and content creators have, and a member without it is refused, while a folder that does not exist is answered as not found. The call is mutating and idempotent. To move several entries in one go use `PUT api/2.0/files/order`.
+Moves a folder to a position among the entries of its parent folder. Requires editing access to the folder. Other callers get 403. The room manager and content creators have this access. The call changes data. You can repeat it with the same body. The entry at that position and all entries after it move down by one. A position after the end puts the folder last. The order matters only in rooms with indexing turned on. Elsewhere the call saves it, but nothing uses it. The response has the new position in `order`. The call returns 400 if `order` is below 1 or has a wrong format. If the folder does not exist, the call returns 404. To move several entries in one call, use `PUT api/2.0/files/order`.  Raises the `folder.updated` webhook when the order changes.
 
 ## Parameters
 

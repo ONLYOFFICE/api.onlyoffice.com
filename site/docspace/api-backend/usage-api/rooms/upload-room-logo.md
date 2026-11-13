@@ -6,7 +6,7 @@
 
 Upload a room logo image
 
-Stores an image in temporary storage and answers with the path to it, which is the first half of setting a room logo. No room changes here: pass the returned path as `tmpFile` to `POST api/2.0/files/rooms/{id}/logo`, together with the crop rectangle, to make the image the logo of a room. The image travels as multipart form data, and the first file part of the request is the one that is used while any other part is ignored. It is re-encoded to PNG and scaled down to fit 1280 by 1280 pixels, so a larger picture is accepted and shrunk, while a part that is not a readable image, or one over the portal limit for uploaded images, is refused with 400. Only a room manager or a portal administrator may upload, and everyone else gets 403. Every call produces a new path, and an image that is never used stays in temporary storage until it is cleaned up, so uploading twice is harmless.
+Saves an image in temporary storage and returns its path. This is the first step of setting a room logo, and no room changes. Then pass the path as `tmpFile` to `POST api/2.0/files/rooms/{id}/logo` with the crop area. Requires a DocSpace admin or a room admin. Other callers get 403. The call changes data in temporary storage only, and each call creates a new path. So you can repeat it. Send the image as multipart form data. The call uses the first file and ignores other parts. It converts the image to PNG and scales it down to fit 1280 by 1280 pixels. The call returns 400 if the request is not a multipart form or has no file. It also returns 400 if the image is empty, over the size limit, or not a readable PNG or JPEG.
 
 ## Parameters
 

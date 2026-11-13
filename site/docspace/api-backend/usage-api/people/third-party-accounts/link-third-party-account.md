@@ -6,7 +6,7 @@
 
 Link a third-party account
 
-Connects a third-party identity to the calling profile, so that the account can afterwards sign in through that provider. The profile has to come from a completed provider authorization: pass the serialized `LoginProfile` the login flow started from `GET api/2.0/people/thirdparty/providers` handed back, not a hand-written object. It acts on the authenticated account only, and the portal has to be a standalone installation or have a tariff that includes third-party authorization, otherwise the operation answers 403. The call returns no body and is not idempotent: one third-party identity can be linked to a single portal profile, so repeating it, or linking an identity somebody else already uses, answers 400. A profile whose authorization was cancelled by the user is accepted and ignored, so a cancelled login also answers 200 and links nothing - read `GET api/2.0/people/thirdparty/providers` afterwards and check `linked` to find out whether the link exists. Use `DELETE api/2.0/people/thirdparty/unlinkaccount` to remove a link.
+Links a third-party identity to the account of the caller. After this call, the account can sign in through that provider. First, complete the sign-in that a URL of `GET api/2.0/people/thirdparty/providers` starts. Then pass the `serializedProfile` that this sign-in returns. Any signed-in user can call it. If the portal tariff does not include third-party sign-in, the call returns 403. A standalone installation always includes it. The call changes data and returns no body. The call returns 400 if `serializedProfile` is empty, comes from another portal, or is already linked to an account. So a repeated call returns 400. If the user cancelled the sign-in at the provider, the call returns 200 and links nothing. To check the link, read `linked` in `GET api/2.0/people/thirdparty/providers`. To delete a link, use `DELETE api/2.0/people/thirdparty/unlinkaccount`.
 
 ## Parameters
 
@@ -21,9 +21,9 @@ Connects a third-party identity to the calling profile, so that the account can 
 | **200** | The third-party identity is linked to the calling profile. No content is returned | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The third-party identity is already linked to a portal profile, or `serializedProfile` is missing, empty or was issued by another portal | - | - |
 | **403** | The portal tariff does not include third-party authorization | - | - |
-| **500** | The `serializedProfile` value is not one the login flow produced, or the provider authorization ended with an error other than a cancellation | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

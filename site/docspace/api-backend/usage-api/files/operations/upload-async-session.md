@@ -6,7 +6,7 @@
 
 Upload a numbered chunk
 
-Stores one part of a file under the number given in `chunkNumber`, which is what the ordinary chunked flow uses: parts are kept by their number rather than by arrival, so a part that failed can be resent under the same number without restarting the session. Numbering starts at 1, and leaving the number out makes the server count the parts itself. The answer is always the session, never the file, and this call never completes the upload: the file appears only after `PUT api/2.0/files/{folderId}/session/{sessionId}/finalize`. Use `POST api/2.0/files/{folderId}/session/{sessionId}` instead when the parts go strictly in order and the upload should complete by itself. A part bigger than `chunkUploadSize` from `GET api/2.0/files/settings` is refused, so that value is also the size to split the payload by. The first part of a PDF is inspected, and a PDF that is not a fillable form is refused when the session targets a form-filling room. The session is found by its id alone.
+Uploads one part of a file to a chunked upload session under the number in `chunkNumber`. The session keeps parts by number. So you can resend a failed part with the same number. Without `chunkNumber`, the call numbers parts in the order they arrive. Split the file into parts of at most `chunkUploadSize` from `GET api/2.0/files/settings`. Any signed-in user with the session ID can call it. The call ignores the folder in the path. It changes data. With `chunkNumber`, a repeated part replaces the part with that number. Without it, the session stores a repeated part as the next part. Then the file has that part twice, or the session never stores the file. The call returns the session, not the file. After the last part, store the file with `PUT api/2.0/files/{folderId}/session/{sessionId}/finalize`. A session below `chunkUploadSize` stores the file on this call but still needs that call. In such a session, each repeated call stores the file again and adds a version. A session from `POST api/2.0/files/file/{fileId}/edit_session` keeps the version instead. To store the file with the last part, use `POST api/2.0/files/{folderId}/session/{sessionId}`. The call returns 400 if the request has no `File` part, or `chunkNumber` is below 1. It returns 402 if the part is over `chunkUploadSize`, or the file is over a quota or size limit. If the session does not exist, is finalized, or has expired, the call returns 404. If the file is not a PDF and the room is a form-filling room, the call returns 403.
 
 ## Parameters
 
@@ -22,12 +22,13 @@ Stores one part of a file under the number given in `chunkNumber`, which is what
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The session with its progress after the part was stored | [**ChunkedUploadSessionWrapper**](../../models/chunked-upload-session-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **400** | The request has no `File` part, or `chunkNumber` is 0 or negative | - | - |
 | **402** | The part is larger than `chunkUploadSize`, or a session below that size would exceed a storage quota or size limit when storing the file | - | - |
-| **404** | No open session with the specified ID: it never existed, was finalized or aborted, or has expired | - | - |
-| **500** | The request has no `File` part, or a session below `chunkUploadSize` stores a file that is not a PDF in a form-filling room | - | - |
+| **403** | A session below `chunkUploadSize` stores a file that is not a PDF in a form-filling room | - | - |
+| **404** | No open session with the specified ID in this folder: it never existed, was finalized or aborted, has expired, or belongs to another folder | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

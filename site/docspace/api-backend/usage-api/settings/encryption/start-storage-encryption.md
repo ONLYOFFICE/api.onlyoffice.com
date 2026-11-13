@@ -6,7 +6,7 @@
 
 Start the storage encryption
 
-Queues encryption of everything the installation keeps in its local storage, or decryption of it when the data is already encrypted: the saved encryption state decides the direction, so the same call encrypts a decrypted installation and decrypts an encrypted one. It covers the whole server, not one portal, and only a server installation with the feature switched on can run it, with neither the portal storage nor the CDN pointing at a third-party provider: reset those first with `DELETE api/2.0/settings/storage` and `DELETE api/2.0/settings/storage/cdn`. No backup may be running, and the backup schedules of all portals are dropped as part of starting. The caller needs the permission to edit portal settings, that is the portal owner or a DocSpace admin, and an unrestricted access space. This is a long, disruptive operation: every portal is put into the encryption state and stays unavailable until it ends, so do not repeat the call while it runs, and follow it with `GET api/2.0/settings/encryption/progress` instead. The password is generated on the server and never returned by the API. Pass `notifyUsers=true` to mail every user before the portals go down. The response is true once the job is queued, and false where encryption is switched off, nothing being started then.
+Starts encryption of the local storage of the installation, or decryption if the data is already encrypted. The saved encryption state sets the direction. The run covers all portals of the installation. First, reset a third-party storage with `DELETE api/2.0/settings/storage` and a CDN with `DELETE api/2.0/settings/storage/cdn`. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call also returns 403 if the installation is not self-hosted or limits the access space. The call queues work and deletes the backup schedules of all portals. Every portal stays unavailable until the run ends. Repeat `GET api/2.0/settings/encryption/progress` until it returns 100. During a run, a repeated call returns 403. After the run, a repeated call starts the opposite run. The server generates the password and never returns it. To email every user before the portals go down, set `notifyUsers` to true. The call returns `true` when the run is queued. In a custom build, it returns `false` and starts nothing. The call returns 415 if the installation does not offer encryption. It also returns 415 if the current portal uses a third-party storage or CDN. Start it only when no portal runs a backup. If the portal is not paid, the call returns 402.
 
 ## Parameters
 
@@ -22,9 +22,9 @@ Queues encryption of everything the installation keeps in its local storage, or 
 | **402** | The portal pricing plan does not include storage encryption | - | - |
 | **403** | The caller may not edit portal settings, or this installation does not allow storage encryption | - | - |
 | **415** | Storage encryption is not available on this installation, or the storage or the CDN of the current portal is a third-party provider | - | - |
-| **500** | A backup of one of the portals is still running | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

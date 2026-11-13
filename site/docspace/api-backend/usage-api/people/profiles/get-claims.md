@@ -6,7 +6,7 @@
 
 Get user claims
 
-Returns the identity the current request was authenticated with, as the portal sees it: the account name and the full list of claims attached to the token or the cookie. It is a diagnostics operation meant for working out why a call is rejected - which account a token really belongs to, and which scopes and roles it carries - rather than a source of profile data. It needs no permission of its own and reports on the caller only, so it cannot be used to inspect another account. The call is read-only, and every claim comes back as a single `type:value` string, in the order the authentication produced them. An account name of `Unknown Name` means the identity carries no name claim, not that the request is unauthenticated. For the profile behind the identity, read `GET api/2.0/people/@self`.
+Returns the account name and all claims of the token or cookie that authenticated the current request. Use it to find out which account a token belongs to and which scopes and roles it has. Any signed-in user can call it, including a guest. It reports only on the caller. The call is read-only. Each claim comes as one `type:value` string, in the order of authentication. The name `Unknown Name` means that the identity has no name claim. To read the profile of the caller, use `GET api/2.0/people/@self`.
 
 ## Parameters
 This endpoint does not need any parameter.

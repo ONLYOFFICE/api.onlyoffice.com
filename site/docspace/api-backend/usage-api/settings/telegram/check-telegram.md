@@ -6,7 +6,7 @@
 
 Check the Telegram connection
 
-Reports whether the current user's account is linked to the portal's Telegram bot, and under which Telegram username. The bot keys must be configured for the portal beforehand with `POST api/2.0/settings/authservice`; until a bot is configured, linking cannot be completed and the status never reaches the linked state. Any authenticated user may call it, and only for their own account: there is no way to read another member's Telegram status. This is a read-only, idempotent call. The returned `status` is published as a number, where `0` means the account is not linked, `1` means it is linked, and `2` means a registration link has been issued and the portal is still waiting for the user to open it in Telegram. The `username` field is filled in only in state `1` and comes back empty in the other two. Start or resume linking with `GET api/2.0/settings/telegram/link`, and drop an established link with `DELETE api/2.0/settings/telegram/link`.
+Returns whether the current user's account is linked to the portal's Telegram bot. Linking needs a bot that `POST api/2.0/settings/authservice` configures for the portal. Any signed-in user can call it, including a guest. The call is read-only and covers only the caller's own account. The `status` field is `unlinked`, `linked`, or `linking`. The value `linking` means the user got a registration link but has not opened it in Telegram yet. This state ends when the user opens the link or the link expires. The `username` field is filled only when `status` is `linked`. To start linking, use `GET api/2.0/settings/telegram/link`. To remove a link, use `DELETE api/2.0/settings/telegram/link`.
 
 ## Parameters
 This endpoint does not need any parameter.

@@ -6,7 +6,7 @@
 
 Set a group manager
 
-Makes an account the manager of a group, replacing whoever managed it before. The caller needs the permissions to edit groups and to add and remove users. Both the group and the account have to exist: the operation answers 404 when the ID in the route matches no live group and also when `userId` matches no account, so the message of the error says which of the two was not found. The account is added to the group at the same time, so a manager does not have to be a member beforehand, and the previous manager stays in the group as an ordinary member. A group has one manager, which makes the call idempotent when it names the account that manages it already. The answer is the group with its new manager. To change the members rather than the manager, use `PUT api/2.0/group/{id}/members`.
+Makes an account the manager of a group and replaces the previous manager. The account also becomes a member. The previous manager stays a member. Requires a DocSpace admin. Other callers get 403. A room admin can read groups but also gets 403 here. The call changes data. You can repeat it with the same body. If the account is a guest or disabled, the call changes nothing. The response is the group with its manager. The call returns 404 if no group has this ID or no account has `userId`. It also returns 400 if `userId` is missing. To change the members, use `PUT api/2.0/group/{id}/members`.  Raises the `group.updated` webhook only when the manager or the members change, without `user.*` webhooks for them.
 
 ## Parameters
 

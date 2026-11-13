@@ -6,7 +6,7 @@
 
 Duplicate files and folders
 
-Queues a background job that copies each requested file and folder next to itself, into the folder where it already is, and answers with the caller's duplicate operations, including the one just started. Poll `GET api/2.0/files/fileops` until the operation reports `finished`. The copies keep the name of the original with a numeric suffix, so nothing is overwritten and every repetition adds one more copy; duplicating a folder duplicates its content as well. No destination is taken — to place a copy somewhere else use `PUT api/2.0/files/fileops/copy`. The caller needs the rights that creating an item in that folder would need, which inside a room means room manager or content-creator rights: read or editing rights, and an item the caller has no access to at all, are refused with 403. An empty selection queues nothing and answers with the operations that are already there.
+Starts a background job that copies each listed file and folder into the folder that holds it. A copy gets the name of the original with a number added. The call copies a folder with its content. Requires the right to create content in the folder that holds each item. Other callers get 403. In a room, a member with the Editing or Read role also gets 403. The call queues work. Repeat `GET api/2.0/files/fileops` until `finished` is true. Do not repeat the call. Each call adds one more copy of every item. The call returns the duplicate operations of the caller, including the new one. An empty selection queues nothing and returns the existing operations. To copy items to another folder, use `PUT api/2.0/files/fileops/copy`. The call also returns 403 for an item in an archived room or in the Trash. If a listed file or folder does not exist, the call returns 404. The call returns 415 for a file format the portal does not accept for upload.  Raises the `folder.copied` webhook for every duplicated folder, the folders inside it included. Raises the `room.copied` webhook for every listed room, an AI agent included. Raises the `file.copied` webhook for every duplicated file, including the files inside duplicated folders and rooms.
 
 ## Parameters
 
@@ -22,9 +22,9 @@ Queues a background job that copies each requested file and folder next to itsel
 | **403** | The caller cannot create items in the folder that holds one of the listed items, or cannot copy that item | - | - |
 | **404** | A listed file or folder does not exist | - | - |
 | **415** | A listed file has a format the portal does not accept for upload | - | - |
-| **500** | An id is a number that is not a 32-bit integer | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

@@ -6,7 +6,7 @@
 
 Delete a user
 
-Deletes a portal profile and queues the erasure of the data behind it. The account has to be disabled first - set the `Terminated` status through `PUT api/2.0/people/status/{status}`, otherwise the operation answers 403 - and it must not be a system account or one imported from LDAP. The caller needs the permission to add and remove users, and has to be the portal owner to delete a DocSpace administrator. The profile disappears at once, together with its avatar, its group memberships, its file shares and its OAuth clients, while the data it owned is erased by a queued job afterwards, which can be watched through `GET api/2.0/people/remove/progress/{userId}`. The removal is permanent and cannot be undone, so hand the rooms and the shared files over first through `POST api/2.0/people/reassign/start` - an account whose reassignment has not finished cannot be deleted. The call raises a `UserDeleted` webhook and answers with the profile as it was just before it was removed. To delete several accounts at once use `PUT api/2.0/people/delete`.
+Deletes an account and queues the deletion of its data. First disable the account with the `Terminated` status of `PUT api/2.0/people/status/{status}`. Otherwise the call returns 403. Requires a DocSpace admin. Other callers get 403. Only the portal owner can delete a DocSpace admin. The call also returns 403 for a system account or an LDAP account. If no account has the ID, the call returns 404. The call cannot be undone, and a repeated call returns 404. The account disappears immediately, with its avatar, group memberships, file shares, and OAuth apps. A queued job then deletes its data. To track the job, use `GET api/2.0/people/remove/progress/{userId}`. If the account shared files from its own section, the job moves them to a new folder of the caller. To move rooms and shared files to another user first, use `POST api/2.0/people/reassign/start`. The call returns the profile as it was before the deletion. To delete several accounts, use `PUT api/2.0/people/delete`.  Raises the `user.deleted` webhook. Raises the `folder.created` webhook once the data deletion job creates a folder for the files that the account shared.
 
 ## Parameters
 
@@ -21,9 +21,9 @@ Deletes a portal profile and queues the erasure of the data behind it. The accou
 | **200** | The profile as it was just before it was deleted | [**EmployeeFullWrapper**](../../models/employee-full-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | The account is not disabled, is a system or an LDAP account, the caller may not delete a DocSpace administrator, or the OAuth service refused to remove the OAuth clients of the account | - | - |
 | **404** | No user has the specified ID | - | - |
-| **500** | A reassignment of the data of the account has not finished yet, or the OAuth service cannot be reached | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

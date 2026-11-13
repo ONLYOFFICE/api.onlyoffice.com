@@ -4,16 +4,16 @@
 
 `GET /api/2.0/files/rooms/{id}/ai`
 
-Get the .ai folder of a room
+Get the skills folder of an Instructions room
 
-Returns one page of the contents of the .ai folder that lies in the root of a room, in the same shape as `GET api/2.0/files/{folderId}` returns for any other folder. The rooms that hold such a folder are listed with `GET api/2.0/files/rooms?withAiFolder=true`. Any member who can read the room may call it; somebody who cannot is refused, and a room that does not exist is answered as not found. A room that holds no .ai folder is answered with an empty page: no files and folders, a zero `total`, no `current` folder and empty `pathParts`.
+Returns one page of the root folder of an Instructions room. Its Markdown files are the skills of the AI chat. The response has the same shape as `GET api/2.0/files/{folderId}`. Requires read access to the room. Other callers get 403. The call is read-only. To find Instructions rooms, use the `withAiFolder` filter of `GET api/2.0/files/rooms`. The call returns 404 if the room does not exist or is not an Instructions room. It returns 400 if `count` is out of range or `startIndex` is negative.
 
 ## Parameters
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **id** | path | **Integer** (int32) | The room whose .ai folder is listed, named by the identifier that `GET api/2.0/files/rooms` reports for it. | [required] [example: `1`] |
-| **filterType** | query | **FilterType** | Narrows the listing to a single kind of entry, such as documents, spreadsheets or images. Omit it to list every kind the folder holds. | [optional] [example: `1`] [enum: `0`, `1`, `2`, `3`, `4`, `5`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `17`, `20`, `22`, `23`, `24`, `25`, `26`] |
+| **id** | path | **Integer** (int32) | The Instructions room whose skills are listed, named by the identifier that `GET api/2.0/files/rooms` reports for it. | [required] [example: `1`] |
+| **filterType** | query | **FilterType** | Narrows the listing to a single kind of entry, such as documents, spreadsheets or images. Omit it to list every kind the folder holds. | [optional] [example: `1`] [enum: `0`, `1`, `2`, `3`, `4`, `5`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `17`, `20`, `22`, `23`, `24`, `25`, `26`, `27`, `28`, `29`] |
 | **count** | query | **Integer** (int32) | The size of one page of the listing. Pair it with `startIndex` to walk through the result, and compare the two with `total` in the response to see when the last page has been read. | [optional] [example: `25`] [min: 1] [max: 100] |
 | **startIndex** | query | **Integer** (int32) | The number of matching entries to skip before the returned page begins; add `count` to it to ask for the next page. | [optional] [example: `0`] |
 | **sortBy** | query | **String** | The name of the field the entries are ordered by, matched case-insensitively against the file sort fields, such as `DateAndTime`, `AZ`, `Size` or `Type`. | [optional] [example: `DateAndTime`] |
@@ -24,10 +24,10 @@ Returns one page of the contents of the .ai folder that lies in the root of a ro
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | One page of the .ai folder contents, with the folder itself and the chain of its parents, or an empty page without `current` when the room holds no .ai folder | [**FolderContentWrapper**](../models/folder-content-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | One page of the Instructions room root, with the room itself and the chain of its parents | [**FolderContentWrapper**](../models/folder-content-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | A parameter has the wrong type, the `count` is outside its allowed range, or the `startIndex` is negative | - | - |
 | **403** | The caller may not read this room | - | - |
-| **404** | The room does not exist | - | - |
+| **404** | The room does not exist or is not an Instructions room | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |

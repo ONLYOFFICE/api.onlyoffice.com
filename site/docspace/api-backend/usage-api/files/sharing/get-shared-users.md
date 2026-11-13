@@ -6,7 +6,7 @@
 
 Get users to mention in a file
 
-Lists the portal members who can read the file, which is what an editor client offers when somebody types a mention. The set holds the readers of the file plus everyone who reads it by role rather than by share - the portal owner, the DocSpace administrators and the author of the file - while the caller themselves, the subjects standing behind external links and deactivated accounts are left out. It is ordered by display name as the portal renders it. A guest receives a single entry, the owner of the file, because a guest is not a portal member and may not learn who else works on the document. The caller needs read access to the file, and an unknown file id is reported as missing. The call only reads. A caller who reached the file through an external link instead of an account is answered with nothing at all. For the users to offer when protecting a document use `GET api/2.0/files/file/{fileId}/protectusers`.
+Returns the portal members who can read the file, for mentions in the editor. The list has the readers of the file, the portal owner, the DocSpace admins, and the file author. It excludes the caller, external links, and deactivated accounts. The list is sorted by display name. A guest gets only the file owner. Requires read access to the file. Other callers get 403. The call is read-only. A caller who opened the file through an external link without an account gets an empty response. If the file does not exist, the call returns 404. To get the users for document protection, use `GET api/2.0/files/file/{fileId}/protectusers`.
 
 ## Parameters
 

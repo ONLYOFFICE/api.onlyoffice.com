@@ -6,7 +6,7 @@
 
 Get profiles by status
 
-Returns a page of the accounts that are in one particular state - the status is taken from the route - with the full profile of each of them. The caller has to be a room admin, a DocSpace admin or a People module admin; a member or a guest gets 403. The call is read-only, paged by `count` and `startIndex`, ordered by `sortBy` and `sortOrder`, and reports the number of matches in the total count of the response. Narrow it with `filterValue` on the name and the email; setting `filterBy` to `group` makes the same `filterValue` the ID of the group to keep the members of, and because the value is then applied as the text filter as well, that combination normally matches nothing - use `GET api/2.0/people/filter` with `groupId` to filter by group. `GET api/2.0/people` is the same operation fixed to the `Active` status.
+Returns a page of the accounts with the status from the route, with full profiles. Requires a room admin, a DocSpace admin, or an admin of the People module. Other callers get 403. The call is read-only. The response has the total number of matches. If `count` is out of range, the call returns 400. The call filters the accounts by name and email with `filterValue`. With `filterBy` set to `group`, `filterValue` is also a group ID. The call then matches that ID against names and emails too, so it usually finds nothing. To filter by group, use `GET api/2.0/people/filter` with `groupId`. For active accounts only, the same call is `GET api/2.0/people`.
 
 ## Parameters
 
@@ -28,9 +28,9 @@ Returns a page of the accounts that are in one particular state - the status is 
 | **200** | A page of accounts in the requested state, with their full profiles | [**EmployeeFullArrayWrapper**](../../models/employee-full-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | A parameter has the wrong type, or the `count` is outside its allowed range | - | - |
 | **403** | The caller is a member or a guest | - | - |
-| **500** | The `filterBy` is `group` and the `filterValue` is not a GUID | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

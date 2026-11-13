@@ -3,6 +3,6 @@ Versioned, self-contained bundle of every saved prompt and folder. Stable wire f
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **version** | **BigDecimal** | The bundle format version, so an import can migrate an older export. | [required] [example: `1`] [enum: `1`] |
+| **version** | **Integer** | The bundle format version, so an import can migrate an older export. | [required] [example: `1`] [min: 1] [max: 1] |
 | **folders** | [**List**](ai-prompt-folder.md) | Every exported prompt folder. | [required] [example: `[]`] |
 | **prompts** | [**List**](ai-prompt.md) | Every exported prompt. | [required] [example: `[]`] |

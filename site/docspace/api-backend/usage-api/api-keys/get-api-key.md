@@ -6,7 +6,7 @@
 
 Get the current API key
 
-Returns the API key that authenticated this very request, letting the holder of a key find out what it is allowed to do without knowing its ID. The key is identified by the `Authorization` header of the call itself, so the request has to be sent as `Bearer sk-...`; a session authenticated in any other way, by a cookie or by a user token, has no key to report and is rejected with 400. The call is read-only and returns one entry, with the same fields as `GET api/2.0/keys` and without the secret - read `permissions` for the granted scopes, `expiresAt` for the expiry and `isActive` for the state. To look at a key other than the one in use, call `GET api/2.0/keys` instead.
+Returns the API key that authenticated this request. So a key holder can read its scopes, expiry, and state without knowing its ID. Send the key in the `Authorization` header as `Bearer sk-...`. Any key can call it, whatever its scopes. If the request uses a cookie or a user token, the call returns 400. The call is read-only. To read other keys, use `GET api/2.0/keys`.
 
 ## Parameters
 This endpoint does not need any parameter.

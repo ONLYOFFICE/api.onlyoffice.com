@@ -6,7 +6,7 @@
 
 Upload a file
 
-Stores a file in the folder named by the path in a single multipart request, taking its name from the uploaded part; use `POST api/2.0/files/{folderId}/insert` when the name has to be given separately or the content is sent as a raw body. The answer is a list that always holds exactly one file. `createNewIfExist` settles the clash: false adds a new version to the file that already carries the name, true keeps both by giving the new one a numeric suffix. `storeOriginalFile` reaches further than this call, because it saves the setting on the calling account, the same one `PUT api/2.0/files/storeoriginal` writes, and it stays in force for later uploads. The caller needs the right to add content to the folder, so a reader, an editor and a guest get 403, a section root and an archived room are refused as well, and an unknown folder gives 404. A request without a file is rejected as invalid, and a payload above the portal upload limit is refused.
+Uploads a file to the folder in one multipart request and names it by the uploaded part. To give the name separately or send a raw body, use `POST api/2.0/files/{folderId}/insert`. Requires the right to create content in the folder. Other callers get 403. In a room, its owner, room managers, and content creators have it. A guest has it there only as a content creator. In My documents, the owner and anyone with read and write access to the folder have it. A section root, an archived or private room, and an AI agent or AI project root also return 403. The call changes data. If the folder has a file with this name, `createNewIfExist` true stores a copy with a numeric suffix. With false, the call adds a new version to that file if the caller can edit it. Otherwise, it stores a second file with the same name. A guest never adds a version this way. So a repeated call adds another version or another file. The response is a list with exactly one file. The call saves `storeOriginalFile` as a setting of the caller, like `PUT api/2.0/files/storeoriginal`. It saves the setting even when the upload then fails. Later uploads use it too. The call returns 400 if the request has no file part. A missing folder returns 404. It returns 402 if the file is over the upload limit or a storage quota. If the installation does not allow uploads with this extension, the call returns 415. If the file is not a PDF and the room is a form-filling room, the call returns 403.  Raises the `file.created` and `file.uploaded` webhooks for a new file and for a new version of an existing file.
 
 ## Parameters
 
@@ -25,12 +25,12 @@ Stores a file in the folder named by the path in a single multipart request, tak
 | **200** | The stored file, as a list with one element | [**FileArrayWrapper**](../../models/file-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request has no file part | - | - |
 | **402** | The file exceeds the single-request upload limit, or storing it would exceed a storage quota or size limit | - | - |
-| **403** | The caller cannot add content to this folder | - | - |
+| **403** | The caller cannot add content to this folder, the folder is a section root or in a private room, or a file that is not a PDF is stored in a form-filling room | - | - |
 | **404** | No folder with the specified ID | - | - |
 | **415** | The installation restricts uploadable formats and the file extension is not among them | - | - |
-| **500** | A file that is not a PDF is stored in a form-filling room | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

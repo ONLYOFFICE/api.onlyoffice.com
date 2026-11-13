@@ -6,7 +6,7 @@
 
 Get the billing currencies
 
-Tells a client which currency the portal is billed in: the default currency of the portal region always comes first, followed by the currency resolved for the current request when that one differs, so the answer holds one or two items. Nothing has to be called first, the caller needs the permission to edit the portal settings, and the call is read-only. Each item carries the country code of the region, the currency symbol and the native name of the currency; the first item is the currency the amounts from `GET api/2.0/portal/payment/prices` are expressed in. These are the currencies of the subscription prices, and they are not the accounting currencies the wallet is topped up in - those come with the balance in `GET api/2.0/portal/payment/customer/balance`.
+Returns the currencies of the plan prices for the portal. The first item is always the default currency, USD. The second item, if any, is the currency of the region of the request. The call finds that region from the IP address of the caller or the language of the portal owner. If no product has a price in the currency of that region, the list has only the first item. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. The wallet uses other currencies, the accounting currencies. To read them with the balance, use `GET api/2.0/portal/payment/customer/balance`.
 
 ## Parameters
 This endpoint does not need any parameter.

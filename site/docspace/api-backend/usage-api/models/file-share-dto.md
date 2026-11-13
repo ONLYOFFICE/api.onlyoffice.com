@@ -15,4 +15,4 @@ One access entry on a file, a folder or a room: who holds it, at which level, an
 | **canEditDenyDownload** | **Boolean** | Whether the caller may forbid downloading through this link. Only a link of a virtual data room reports true, and only while the room itself still allows downloads. | [required] [example: `true`] |
 | **canEditExpirationDate** | **Boolean** | Whether the caller may move the moment this link stops working. | [required] [example: `true`] |
 | **canRevoke** | **Boolean** | Whether the caller may take this entry away altogether, which for a link means deleting the link. | [required] [example: `true`] |
-| **subjectType** | [**SubjectType**](subject-type.md) | What the entry was given to, which tells which of the three subject fields is filled in: an account, a group, or one of the kinds of link. | [required] [enum: `0`, `1`, `2`, `3`, `4`] |
+| **subjectType** | [**SubjectType**](subject-type.md) | What the entry was given to, which tells which of the three subject fields is filled in: an account, a group, or one of the kinds of link. | [required] [enum: `0`, `1`, `2`, `3`, `4`, `5`] |

@@ -6,7 +6,7 @@
 
 Get the Docs Connect tenant usage
 
-Returns the Docs Connect usage of the current portal: the number of users who have been active in Docs Connect in the current period, and the moment that period is counted from. The portal must have an activated Docs Connect tenant, granted by `POST api/2.0/settings/docscloud/trial` or by a Docs Connect purchase: an empty result from `GET api/2.0/settings/docscloud/tenant` means there is none and this call fails with 400. The caller must be a portal administrator allowed to edit the portal settings, on an installation where the Docs Connect service is configured. The call is read-only, idempotent and cached for a minute, so pass `refresh=true` to read the current state from Docs Connect. In the result, `activeCount` counts the users seen since `since`, which is in UTC, and it is one total for the whole tenant, with no split by role and no limit to compare it against. For the editor and viewer breakdown with the license limits use `GET api/2.0/settings/docscloud/tenant/info`, and for the users counted one by one `GET api/2.0/settings/docscloud/tenant/quota`.
+Returns the number of active Docs Connect users of the current portal in the current period. The `since` field is the start of that period, in UTC. The portal needs a Docs Connect tenant from `POST api/2.0/settings/docscloud/trial` or a Docs Connect purchase. Without one, the call returns 400, and `GET api/2.0/settings/docscloud/tenant` returns an empty result. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. The portal caches the answer for a minute. To read the current state from Docs Connect, pass `refresh=true`. The `activeCount` field is one total for the whole tenant, with no split by role and no limit. For the editor and viewer split with the license limits, use `GET api/2.0/settings/docscloud/tenant/info`. To list the counted users one by one, use `GET api/2.0/settings/docscloud/tenant/quota`.
 
 ## Parameters
 
@@ -21,9 +21,9 @@ Returns the Docs Connect usage of the current portal: the number of users who ha
 | **200** | The number of active Docs Connect users of the portal and the date the count starts from | [**DocsCloudUsageWrapper**](../../models/docs-cloud-usage-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The portal has no activated Docs Connect tenant, so there is no usage information to return | - | - |
 | **403** | The caller has no portal-settings right | - | - |
-| **500** | The Docs Connect service is not configured on this installation, is unreachable, or answered with an error other than not found | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

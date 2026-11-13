@@ -6,7 +6,7 @@
 
 Get all third-party providers
 
-Lists the third-party storage services this portal can connect, with everything a connection form needs: the display name, the key to send as `providerKey`, whether the service authenticates through OAuth 2.0, the OAuth client ID and redirect URL where it does, and whether the caller has to supply the server address. Several WebDAV presets share the key `WebDav` and are told apart by their names, so keep the name the caller chose next to the key when building the request. Pass `excludewebdav=true` to drop the whole WebDAV family, including the kDrive and Yandex presets, and keep only the OAuth services. The call is read-only. An empty array is a normal answer: it is what a guest gets, and what everyone gets while the portal-wide third-party switch is off (`PUT api/2.0/files/thirdparty`). The `connected` flag of an element says the service is available on this portal, not that an account of it exists - the caller's own accounts are listed by `GET api/2.0/files/thirdparty`.
+Returns the third-party storage services that the portal configuration lists, with the data of a connection form. With `excludewebdav=true`, the list has only the OAuth services. Any signed-in user can call it. A guest gets an empty array instead of an error. The call is read-only. The array is also empty while third-party storage is turned off for the portal. To turn it on, use `PUT api/2.0/files/thirdparty`. The list also has OAuth services whose app is not set up, with `connected` false. To list the accounts of the caller, use `GET api/2.0/files/thirdparty`.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Get the storage encryption progress
 
-Returns how far the running encryption or decryption of the installation storage has got, as a percentage from 0 to 100. It reports the run started by `POST api/2.0/settings/encryption/start`, whose direction, encryption or decryption, is told by `GET api/2.0/settings/encryption/settings`. An empty response means no run is in flight and no recent result is remembered: the value of a finished run is kept for one minute after it completes and then dropped, so poll often enough not to miss the end of the operation. A value of -1 means the build does not offer storage encryption at all, and on an installation that is not a server one the call is refused rather than answered. Unlike the other encryption operations, this one asks for no portal-settings permission: any authenticated member of the portal may read the progress, which is intentional, because the portals are unavailable while the run is on and their users need to see when it ends. Nothing is written and the call is safe to repeat.
+Returns the progress of the encryption or decryption run of the installation storage, as a percentage from 0 to 100. To start a run, use `POST api/2.0/settings/encryption/start`. To see its direction, use `GET api/2.0/settings/encryption/settings`. Any signed-in user can call it. The call is read-only. This is the call to poll. Repeat it until the value reaches 100. The server keeps the final value for one minute after the run ends. After that, and when no run exists, the response is empty. So poll at least once a minute. In a custom build, the call returns -1. The call returns 415 if the installation does not offer encryption or is not self-hosted.
 
 ## Parameters
 This endpoint does not need any parameter.

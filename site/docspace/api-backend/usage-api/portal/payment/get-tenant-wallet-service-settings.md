@@ -6,7 +6,7 @@
 
 Get the wallet service settings
 
-Returns which wallet services an administrator has switched on for this portal by hand, as opposed to the ones its plan pays for. Only a DocSpace administrator may read it, an installation without a billing service answers 403, no billing customer is needed, and the call is read-only. `enabledServices` holds the names of those services and is empty when none was switched on. This is the stored setting and not the state of the portal: a service the plan brings with it is active without appearing here, so the honest answer to what is running is `GET api/2.0/portal/payment/activeservices`. One entry is changed with `POST api/2.0/portal/payment/servicestate`.
+Returns the wallet services that an admin turned on for the portal by hand. The services that the plan pays for are not listed. Requires a DocSpace admin. Other callers get 403. The call also returns 403 if the installation has no billing service. The portal does not need a billing customer. The call is read-only. If no service was turned on, `enabledServices` is empty. To read the services that run on the portal, use `GET api/2.0/portal/payment/activeservices`. To change one entry, use `POST api/2.0/portal/payment/servicestate`.
 
 ## Parameters
 This endpoint does not need any parameter.

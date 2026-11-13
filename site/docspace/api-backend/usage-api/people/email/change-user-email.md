@@ -6,7 +6,7 @@
 
 Change a user email
 
-Sets a new email address on an account, which is the step that completes an email change. The request has to carry the confirmation token from the emailed link rather than an ordinary session, and an expired or already used token is answered with 401. The account has to exist and be `Active`, and only the portal owner may change the owner's own address. Pass the address either in plain text as `email` or, as it arrives inside the confirmation link, encrypted as `encEmail`; an empty or malformed address answers 400. An address equal to the current one is accepted and changes nothing, while a new one is stored in lowercase and marks the account `Activated`, because following the link proves the address works. The answer is the profile with its new address. The change is requested through `POST api/2.0/people/email`, which is what sends the link.
+Sets a new email address for an account. This is the last step of an email change. Sign the request with the confirmation token from the emailed link. An expired token, or the token of an earlier link, returns 401. The account must be `Active`. Otherwise the call returns 403. Only the portal owner can change the address of the portal owner. If no account has the ID, the call returns 404. Pass the address in `email`, or encrypted in `encEmail` as the link has it. The call returns 400 if the address is empty or malformed. The call changes data. You can repeat it with the same body and token. It saves a new address in lowercase and marks the account `Activated`. An address equal to the current one changes nothing. To send the link, use `POST api/2.0/people/email`.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Create a text file in My documents
 
-Creates a text file in the caller's own My documents section out of the text passed as the content, and answers with the stored file. The extension follows the content rather than the request: `.txt` normally, but `.html` as soon as the text contains something shaped like an HTML tag, so a snippet of markup sent here ends up as an HTML file; the extension is added to the title unless the title already ends with it. A request carrying no content is rejected as invalid. `createNewIfExist` acts the other way round than its name reads: with `true` the file that already carries this title is updated and a version appears in its history, while with `false`, which is also the default, another file is created and its title made unique, as in Notes (1).txt. A file that is locked, open in an editing session, encrypted or in Trash is not updated - a new file appears beside it instead. The call is mutating. A guest has no My documents section and is refused. To create the file in a room or another folder use `POST api/2.0/files/{folderId}/text`.
+Creates a text file in the My documents section of the caller, or updates one with the same title. The call saves `content` as the file content and returns the file. The portal uses the `.txt` extension. If `content` has a tag with attributes, it uses `.html` instead. A tag without a space inside, such as a bare `p` tag, does not count. The portal adds the extension to a title without it. If `createNewIfExist` is true, the portal adds a version to the file with this title. If there is no such file, it creates one. If `createNewIfExist` is false, the default, the portal creates another file with a unique title, such as `Notes (1).txt`. The portal does not update a file that is locked, open for editing, or encrypted. It creates another file with the same title instead. Any signed-in user can call it, except a guest. A guest who has My documents gets 403. Other guests get 404. The call changes data. A repeat with `createNewIfExist` true adds a version. A repeat with false adds a numbered copy. To create the file in a room or another folder, use `POST api/2.0/files/{folderId}/text`. The call returns 400 if `title` or `content` is missing, or if `title` is blank or too long. It returns 402 if the content is too large for an upload or for a storage quota.  Raises the `file.created` webhook for a new file and for a new version of an existing file.
 
 ## Parameters
 
@@ -21,7 +21,7 @@ Creates a text file in the caller's own My documents section out of the text pas
 | **200** | The created or updated text file | [**FileWrapper**](../../models/file-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request body cannot be read or has no `title` or `content`, or the title is empty, blank or longer than 165 characters | - | - |
 | **402** | The content exceeds the maximum upload size, or the file does not fit into the storage quota of the portal, the room or the user | - | - |
-| **403** | The caller may not create a file in this section | - | - |
+| **403** | The caller is a guest whose My documents still exists, where a guest may not create files | - | - |
 | **404** | The caller is a guest, who has no My documents | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |

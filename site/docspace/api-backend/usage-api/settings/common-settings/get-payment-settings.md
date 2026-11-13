@@ -6,7 +6,7 @@
 
 Get the payment settings
 
-Returns the portal's payment-related configuration: the sales contact email, the URL to buy or extend a subscription, whether the portal is Standalone, the current license's trial status and expiration date, and the maximum quota quantity that can be purchased at once. Requires Owner or DocSpaceAdmin (the EditPortalSettings permission). This is a read-only, idempotent call. It remains reachable even while the portal's own subscription payment is overdue, since this is how the caller finds the link to resolve it.
+Returns the payment settings of the portal: sales email, purchase URL, license state, and purchase limit. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. It works even when the portal is unpaid, so the caller can find the link to pay.
 
 ## Parameters
 This endpoint does not need any parameter.

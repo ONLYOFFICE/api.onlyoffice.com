@@ -6,7 +6,7 @@
 
 Get the room primary external link
 
-Returns the primary external link of a room, which is the one address meant to be handed out to people outside the portal. A public room and a form filling room get such a link when they are created, and asking for it again returns the same link rather than a new one, so the answer is stable. In a room that has no primary link yet this call creates one instead of reporting nothing, which needs the right to manage the links of the room: a member invited with a lower level is refused with 403, and so is anybody who is not in the room at all. A link that was explicitly revoked stays revoked and is reported as missing rather than recreated, and an unknown room is answered with 404 as well. An archived public room still reports its link. The answer is the same entry that `GET api/2.0/files/rooms/{id}/links` returns with the primary flag set, including the request token that has to travel with the address.
+Returns the primary external link of a room, the address for people outside the portal. Public and form-filling rooms get this link when they are created. If the room has no primary link yet, the call creates one. Requires read access to the room. Other callers get 403. To create the link, the caller also needs the right to manage the links of the room. Without it, the call returns 403. The call is read-only, except when it creates the link. A repeated call returns the same link. An archived public room still returns its link to room managers. Other members get 403. The entry is the same as in `GET api/2.0/files/rooms/{id}/links`, with the primary flag set. It includes the request token that must go with the address. The call also returns 403 if the room type takes no external links. An admin rule that allows external links only in public rooms also returns 403. If the link was revoked, the call returns 404 and creates no new link. If the room does not exist, the call also returns 404. If a string `id` points to a storage account that is not connected, the call returns 400.
 
 ## Parameters
 
@@ -22,9 +22,9 @@ Returns the primary external link of a room, which is the one address meant to b
 | **400** | A third-party identifier refers to a storage account that is not connected | - | - |
 | **403** | The caller may not read the room, or the room has no primary link yet and the caller may not manage its links, its type takes no external links, or the admin restricts external links to public rooms | - | - |
 | **404** | The room does not exist or its primary link was revoked, or the id is neither a 32-bit number nor a third-party identifier of a known storage type | - | - |
-| **500** | A third-party identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

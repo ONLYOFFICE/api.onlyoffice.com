@@ -6,7 +6,7 @@
 
 Assign templates to a file
 
-Assigns one or more metadata templates to a file, so its fields can be filled with `PUT api/2.0/files/metadata/file/{fileId}/values`. The caller needs the right to edit the file. The assignment writes no values and is idempotent: a template the file already carries is skipped, the others are added, an empty list changes nothing. The call finishes in the request, nothing runs in the background. A template a cascading folder above the file already provides stays inherited. A file the caller cannot edit is answered with 403; a file, or a template, that does not exist with 404. To take a template off the file use `DELETE api/2.0/files/metadata/file/{fileId}/templates/{templateId}`.
+Assigns metadata templates to a file. After this call, fill their fields with `PUT api/2.0/files/metadata/file/{fileId}/values`. Requires editing access to the file. Other callers get 403. The call changes data but writes no values. You can repeat it with the same body. The call skips templates that the file already has, and an empty list changes nothing. If the file or any template does not exist, the call returns 404 and assigns nothing. The call returns 400 if the body has no `templateIds`. To remove a template, use `DELETE api/2.0/files/metadata/file/{fileId}/templates/{templateId}`.
 
 ## Parameters
 

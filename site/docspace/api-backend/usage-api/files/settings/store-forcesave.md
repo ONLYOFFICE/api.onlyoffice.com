@@ -6,7 +6,7 @@
 
 Change the ability to store the forcesaved files
 
-Reports that forcesaved versions are not kept as separate file versions in this portal. The operation is a stub kept for compatibility: it takes no request body, stores nothing and always answers false, so it neither turns the behaviour on nor off and repeating it changes nothing. What it describes is what happens to the intermediate saves the editor makes while a document is still open - they update the current version instead of piling up as new ones in `GET api/2.0/files/file/{fileId}/history`. Any authenticated role down to a guest may call it; an unauthenticated caller is refused. The same constant is published as `storeForcesave` by `GET api/2.0/files/settings`, which is the cheaper way to read it. Its companion stub `PUT api/2.0/files/forcesave` answers for forcesaving itself in the same way. Version history is not affected by this call either: the versions a document really has are the ones the file history operation lists, and a new one appears when the editing session is closed.
+Changes nothing and always returns `false`. The value means that the portal does not keep forcesaved states as separate file versions. The call is kept for compatibility and takes no body. Any signed-in user can call it. You can repeat it. The `storeForcesave` field of `GET api/2.0/files/settings` returns the same value.
 
 ## Parameters
 This endpoint does not need any parameter.

@@ -11,6 +11,12 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 |------------ | ------------- | -------------|
 | [**getGuestSharingLink**](guests/get-guest-sharing-link.md) | **GET** /api/2.0/people/guests/\{userId\}/share | Get a guest sharing link |
 
+## Module events
+
+| Method | HTTP request | Description |
+|------------ | ------------- | -------------|
+| [**sendModuleEvent**](module-events/send-module-event.md) | **POST** /api/2.0/portal/moduleevents | Send a module event |
+
 ## Payment
 
 | Method | HTTP request | Description |
@@ -20,11 +26,15 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**createCustomerMonthlyUsageReport**](payment/create-customer-monthly-usage-report.md) | **POST** /api/2.0/portal/payment/customer/usage/monthly/report | Start the monthly usage report |
 | [**createCustomerOperationsReport**](payment/create-customer-operations-report.md) | **POST** /api/2.0/portal/payment/customer/operationsreport | Start the operations report |
 | [**createCustomerServiceUsageReport**](payment/create-customer-service-usage-report.md) | **POST** /api/2.0/portal/payment/customer/usage/report | Start the service usage report |
+| [**createServiceLimit**](payment/create-service-limit.md) | **POST** /api/2.0/portal/payment/servicelimit | Create a service limit |
+| [**deleteServiceLimit**](payment/delete-service-limit.md) | **DELETE** /api/2.0/portal/payment/servicelimit/\{id\} | Delete a service limit |
+| [**disableParticipantServiceLimits**](payment/disable-participant-service-limits.md) | **PUT** /api/2.0/portal/payment/servicelimit/participants/disable | Disable the user service limits |
 | [**getAccountingServicePrices**](payment/get-accounting-service-prices.md) | **GET** /api/2.0/portal/payment/accounting/prices/\{serviceName\} | Get the service prices from the accounting service |
 | [**getActiveServices**](payment/get-active-services.md) | **GET** /api/2.0/portal/payment/activeservices | Get the active wallet services |
 | [**getAiPrices**](payment/get-ai-prices.md) | **GET** /api/2.0/portal/payment/ai-prices | Get AI model prices |
 | [**getCheckoutSetupUrl**](payment/get-checkout-setup-url.md) | **GET** /api/2.0/portal/payment/checkoutsetupurl | Get the checkout setup page URL |
 | [**getCustomerBalance**](payment/get-customer-balance.md) | **GET** /api/2.0/portal/payment/customer/balance | Get the customer balance |
+| [**getCustomerDeposits**](payment/get-customer-deposits.md) | **GET** /api/2.0/portal/payment/customer/deposits | Get the wallet top-ups |
 | [**getCustomerInfo**](payment/get-customer-info.md) | **GET** /api/2.0/portal/payment/customerinfo | Get the customer information |
 | [**getCustomerMonthlyUsage**](payment/get-customer-monthly-usage.md) | **GET** /api/2.0/portal/payment/customer/usage/monthly | Get the customer monthly usage |
 | [**getCustomerMonthlyUsageReport**](payment/get-customer-monthly-usage-report.md) | **GET** /api/2.0/portal/payment/customer/usage/monthly/report | Get the monthly usage report status |
@@ -32,6 +42,9 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**getCustomerOperationsReport**](payment/get-customer-operations-report.md) | **GET** /api/2.0/portal/payment/customer/operationsreport | Get the operations report status |
 | [**getCustomerServiceUsage**](payment/get-customer-service-usage.md) | **GET** /api/2.0/portal/payment/customer/usage | Get the customer service usage |
 | [**getCustomerServiceUsageReport**](payment/get-customer-service-usage-report.md) | **GET** /api/2.0/portal/payment/customer/usage/report | Get the service usage report status |
+| [**getDepositInvoice**](payment/get-deposit-invoice.md) | **GET** /api/2.0/portal/payment/customer/deposits/\{id\}/invoice | Get the top-up invoice |
+| [**getGlobalServiceLimit**](payment/get-global-service-limit.md) | **GET** /api/2.0/portal/payment/servicelimit/global | Get the global service limit |
+| [**getParticipantServiceLimits**](payment/get-participant-service-limits.md) | **GET** /api/2.0/portal/payment/servicelimit/participants | Get the user service limits |
 | [**getPaymentAccount**](payment/get-payment-account.md) | **GET** /api/2.0/portal/payment/account | Get the billing account page |
 | [**getPaymentCurrencies**](payment/get-payment-currencies.md) | **GET** /api/2.0/portal/payment/currencies | Get the billing currencies |
 | [**getPaymentQuotas**](payment/get-payment-quotas.md) | **GET** /api/2.0/portal/payment/quotas | Get the purchasable quotas |
@@ -39,13 +52,16 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**getPortalPrices**](payment/get-portal-prices.md) | **GET** /api/2.0/portal/payment/prices | Get the product prices |
 | [**getQuotaPaymentInformation**](payment/get-quota-payment-information.md) | **GET** /api/2.0/portal/payment/quota | Get the current plan and limits |
 | [**getRestrictedAiModels**](payment/get-restricted-ai-models.md) | **GET** /api/2.0/portal/payment/ai-model/restrictions | Get restricted AI models |
+| [**getServiceLimit**](payment/get-service-limit.md) | **GET** /api/2.0/portal/payment/servicelimit/\{id\} | Get a service limit |
 | [**getSubscriptionBalanceInfo**](payment/get-subscription-balance-info.md) | **GET** /api/2.0/portal/payment/subscription/balance | Get the subscription balance information |
 | [**getTenantWalletServiceSettings**](payment/get-tenant-wallet-service-settings.md) | **GET** /api/2.0/portal/payment/servicessettings | Get the wallet service settings |
 | [**getTenantWalletSettings**](payment/get-tenant-wallet-settings.md) | **GET** /api/2.0/portal/payment/topupsettings | Get the auto top-up settings |
+| [**getTotalServiceLimit**](payment/get-total-service-limit.md) | **GET** /api/2.0/portal/payment/servicelimit/total | Get the portal service limit |
 | [**getWalletService**](payment/get-wallet-service.md) | **GET** /api/2.0/portal/payment/walletservice | Get a wallet service |
 | [**getWalletServices**](payment/get-wallet-services.md) | **GET** /api/2.0/portal/payment/walletservices | Get wallet services |
 | [**moveSubscriptionToWallet**](payment/move-subscription-to-wallet.md) | **POST** /api/2.0/portal/payment/subscription/movetowallet | Move the subscription to the wallet |
 | [**sendPaymentRequest**](payment/send-payment-request.md) | **POST** /api/2.0/portal/payment/request | Contact the sales team |
+| [**setParticipantServiceLimits**](payment/set-participant-service-limits.md) | **PUT** /api/2.0/portal/payment/servicelimit/participants | Set the user service limits |
 | [**setRestrictedAiModels**](payment/set-restricted-ai-models.md) | **PUT** /api/2.0/portal/payment/ai-model/restrictions | Set restricted AI models |
 | [**setTenantWalletSettings**](payment/set-tenant-wallet-settings.md) | **POST** /api/2.0/portal/payment/topupsettings | Set the auto top-up settings |
 | [**terminateCustomerMonthlyUsageReport**](payment/terminate-customer-monthly-usage-report.md) | **DELETE** /api/2.0/portal/payment/customer/usage/monthly/report | Terminate the monthly usage report |
@@ -53,6 +69,7 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**terminateCustomerServiceUsageReport**](payment/terminate-customer-service-usage-report.md) | **DELETE** /api/2.0/portal/payment/customer/usage/report | Terminate the service usage report |
 | [**topUpDeposit**](payment/top-up-deposit.md) | **POST** /api/2.0/portal/payment/deposit | Top up the wallet |
 | [**updatePayment**](payment/update-payment.md) | **PUT** /api/2.0/portal/payment/update | Change the subscription quantity |
+| [**updateServiceLimit**](payment/update-service-limit.md) | **PUT** /api/2.0/portal/payment/servicelimit | Update a service limit |
 | [**updateWalletPayment**](payment/update-wallet-payment.md) | **PUT** /api/2.0/portal/payment/updatewallet | Change a wallet service quantity |
 
 ## Quota

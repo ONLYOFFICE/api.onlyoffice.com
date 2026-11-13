@@ -6,7 +6,7 @@
 
 Remove sharing rights in batch
 
-Revokes the access of every account and group on the files and folders listed in the request, and clears the entries from the caller's own favorites, recent and unread marks. The owner's own record is kept, since removing it would take the entry away from the account that owns it, and external links survive untouched - remove those through the link operations of the entry. The caller must be allowed to change the access of each entry, which means the creator of the room, a portal administrator, or a member with the rights to manage it; a caller whose only access came through an external link may use this call to drop the entry from its own list, while a directly invited member or an unrelated account is refused. The answer is always `true` and identifiers that match nothing are skipped silently, so a successful answer is not proof that anything was revoked - read the rights back with `POST api/2.0/files/share`. The call is destructive and safe to repeat. To take the rights of one account away instead of all of them, call `PUT api/2.0/files/share` with that account's access set to `None`.
+Deletes all sharing rights on the listed files and folders, or removes them from the caller's own list. The owner's record and external links stay. To delete external links, use the link operations of the entry. Requires read access to each entry. Other callers get 403. Only a caller who may manage access, or a DocSpace admin outside a private room, deletes the rights. Any other caller only removes the entry from their own list. For a room member, this means leaving the room. The call changes data, and you can repeat it. It stops at the first entry it may not change, and earlier entries stay changed. In both modes, it clears the caller's favorite, recent, and new marks on the entry. In a private room, every account that loses access also loses its file keys. The call always returns `true` and skips IDs that match nothing. To check the result, use `POST api/2.0/files/share`. To delete the rights of one account, use `PUT api/2.0/files/share` with the access `None`.
 
 ## Parameters
 
@@ -19,10 +19,10 @@ Revokes the access of every account and group on the files and folders listed in
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Always true: the accounts and groups that had access to the listed entries no longer have it | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **403** | The caller may not change the access of a listed entry and may not drop it from their own list either, because it was shared with them directly or they cannot read it | - | - |
-| **500** | An id is a number that is not a 32-bit integer | - | - |
+| **403** | The caller may not change the access of a listed entry and cannot read it either, so it cannot be dropped from their own list. A portal administrator outside a private room gets this as well | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

@@ -6,7 +6,7 @@
 
 Search users
 
-Searches the active accounts of the portal by a term taken from the path, and is the same search as `GET api/2.0/people/search`, which takes the term in the query string instead. Only a DocSpace administrator may call it; every other account, including a room admin, gets 403. Only accounts with the `Active` status are searched, so a pending invitation and a disabled account are never found - use `GET api/2.0/people/filter` to search across states. The call is read-only and is not paged: every match is streamed, without a total. `filterBy` set to `group` turns `text` into a group ID and keeps only the members of that group, so `text` then has to be a valid identifier. The answer holds full profiles.
+Searches the active accounts of the portal by the term in the path. Requires a DocSpace admin. Other callers get 403, including a room admin. The call skips pending and disabled accounts. The call is read-only. It returns all matches with full profiles, without paging or a total. With `filterBy` set to `group`, `filterValue` is a group ID. The call then keeps only the members of that group. To search in all states, use `GET api/2.0/people/filter`.
 
 ## Parameters
 

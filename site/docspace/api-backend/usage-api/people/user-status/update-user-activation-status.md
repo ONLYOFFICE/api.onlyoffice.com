@@ -6,7 +6,7 @@
 
 Set my activation status
 
-Sets the activation state of the calling account, which is how a person finishes confirming their email address after following the link they were sent. The request has to carry the confirmation token from that link rather than an ordinary session, and the account must be allowed to edit its own profile. Despite taking a list, it accepts exactly one ID and that ID has to be the calling account: an empty list, more than one entry, or somebody else's ID is answered with 400, so it cannot be used to activate other people. Setting `Activated` on the portal owner sends the administrator welcome email, once per portal. The change raises a `UserUpdated` webhook, and the answer holds the profile in its new state - or nothing at all when the account has meanwhile disappeared, which is skipped without an error. The account status is a different thing and is changed through `PUT api/2.0/people/status/{status}`.
+Sets the activation status of the account of the caller. A person uses it to confirm their email after following the emailed link. Sign the request with the confirmation token from that link. An invalid or expired token returns 401. A signed-in caller without this token gets 403. A token from another kind of link also returns 403. The `userIds` list must hold only the ID of the caller. Otherwise the call returns 400. The call changes data. With the activation link of a new account, a repeated call returns 401. With a link that confirms an email address, you can repeat it with the same body. If the portal owner gets `Activated`, the call sends the admin welcome email once per portal. If the account no longer exists or is disabled, the call returns 401. To enable or disable an account, use `PUT api/2.0/people/status/{status}`.  Raises the `user.updated` webhook for the caller's account, even when the status does not change.
 
 ## Parameters
 
@@ -21,8 +21,8 @@ Sets the activation state of the calling account, which is how a person finishes
 |------------- | ------------- | ------------- | -------------|
 | **200** | The profile of the caller in its new activation state | [**EmployeeFullArrayWrapper**](../../models/employee-full-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The list is empty, holds more than one ID, or names an account other than the caller | - | - |
-| **403** | The account may not edit its own profile | - | - |
-| **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
+| **401** | The link is invalid or expired, or the account no longer exists or is disabled | - | - |
+| **403** | The caller is signed in but sent no activation link token, or sent a valid confirmation token of another link type | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

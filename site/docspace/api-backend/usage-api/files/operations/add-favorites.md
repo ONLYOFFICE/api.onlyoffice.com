@@ -6,7 +6,7 @@
 
 Add favorite files and folders
 
-Marks the listed files and folders as favorites for the calling account. The favorite list is personal: nothing changes for other members, and the entries stay where they are stored. Read access to each item is enough, so a room member with view-only rights and a guest may call it. Items the caller cannot read, ids that do not exist and encrypted files of a private room are skipped without a word, and the answer is `true` even when nothing was marked, so read the outcome back from `GET api/2.0/files/@favorites` instead of trusting it. Numeric ids address entries stored in the portal itself, string ids entries on a connected third-party account, and both kinds may be sent in one request. The call is mutating but safe to repeat: an item already marked stays listed once. An entry moved to the Trash keeps its mark and is left out of the listing until it is restored. `returnSingleOperation` arrives with the shared body and does nothing here. Use `DELETE api/2.0/files/favorites` to undo, or `GET api/2.0/files/favorites/{fileId}` for a single file.
+Marks files and folders as favorites of the calling account. Other users do not see the mark, and the entries stay where they are. Any signed-in user can call it. The call skips items without read access, unknown ids, and encrypted files of a private room. The call changes data. You can repeat it with the same body, and a marked item stays listed once. It returns `true` even when it marks nothing. To see the result, use `GET api/2.0/files/@favorites`. A marked entry in the trash is not listed there until it is restored. The call reads only `fileIds` and `folderIds` from the body. To delete marks, use `DELETE api/2.0/files/favorites`. To mark one file, use `GET api/2.0/files/favorites/{fileId}`. If a string id points to a storage account that is not connected, the call returns 400. If it names an unknown storage type, the call returns 404.
 
 ## Parameters
 
@@ -20,11 +20,10 @@ Marks the listed files and folders as favorites for the calling account. The fav
 |------------- | ------------- | ------------- | -------------|
 | **200** | Always true: the request was understood, which does not mean that anything was marked | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request body cannot be read, or a third-party identifier refers to a storage account that is not connected | - | - |
-| **403** | Marking favorites is refused for the caller | - | - |
 | **404** | A third-party identifier names a storage type the portal does not know | - | - |
-| **500** | An id is a number that is not a 32-bit integer, or a third-party identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

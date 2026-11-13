@@ -6,7 +6,7 @@
 
 Get sharing rights in batch
 
-Returns who has access to the files and folders listed in the request, merged into one list of subjects, and is the batch counterpart of `GET api/2.0/files/file/{id}/share` and `GET api/2.0/files/rooms/{id}/share`. Identifiers come from any listing operation, such as `GET api/2.0/files/{folderId}`. The caller needs read access to every listed entry: a single entry it cannot read makes the whole call fail instead of dropping that entry, so the list has to be filtered beforehand. Identifiers that match nothing are skipped without an error, and an empty list of identifiers gives an empty answer. The call is read-only. Each account or group appears once: the caller's own record comes first, the owner's record second, and the rest are ordered by display name. When the same subject holds different rights on the listed entries, its access is reported as the `Varies` value instead of a real level, which means the entries have to be inspected one by one to see the difference. Records that describe external links are included only for a caller that is allowed to read the links of the entry.
+Returns who has access to the listed files and folders, merged into one list. Each account or group appears once. To read the rights of one entry, use `GET api/2.0/files/file/{id}/share` or `GET api/2.0/files/rooms/{id}/share`. Requires read access to every listed entry. If the caller cannot read one entry, the whole call returns 403, so filter the list first. The call is read-only. It skips IDs that match nothing, and an empty list gives an empty answer. The caller's own record comes first, then the owner's record, then the rest by display name. If a subject has different rights on the entries, or none on some, its access is `Varies`. To see the difference, read the entries one by one. It shows external links only to a caller who may read them.
 
 ## Parameters
 
@@ -20,9 +20,9 @@ Returns who has access to the files and folders listed in the request, merged in
 |------------- | ------------- | ------------- | -------------|
 | **200** | The merged sharing rights of the listed files and folders, one record per account or group | [**FileShareArrayWrapper**](../../models/file-share-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | The caller may not read one of the listed files or folders | - | - |
-| **500** | An id is a number that is not a 32-bit integer | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

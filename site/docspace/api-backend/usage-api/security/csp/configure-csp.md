@@ -6,7 +6,7 @@
 
 Configure CSP settings
 
-Replaces the list of external domains the portal's Content Security Policy trusts and returns the policy header the portal serves to browsers from that moment on. The list in `domains` replaces the stored one, so an omitted or empty list falls back to the portal's built-in policy, and every entry that is sent becomes an allowed source for scripts, styles, images, fonts, frames, media and connections at once. An entry may be a host, a host with a scheme, or a wildcard host such as `*.example.com`; it has to form a valid absolute address and may contain ASCII characters only, and an entry that does not is refused with 400 before anything is saved. The caller needs the portal-settings right of a DocSpace administrator, and the request is also refused with 403 when the header built from the list grows past the size configured for the installation, 15 KB by default. The change applies to the whole portal at once and is idempotent. Read the current state with `GET api/2.0/security/csp`.
+Replaces the list of external domains that the Content Security Policy of the portal trusts. It returns the stored list and the policy header that browsers now get. Send the complete list in `domains`. An empty or omitted list restores the built-in policy of the portal. Every domain becomes an allowed source for scripts, styles, images, fonts, frames, media, and connections. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call changes data for the whole portal, and you can repeat it with the same body. The call returns 400 for an unreadable body, an invalid address, or an entry with non-ASCII characters. It then saves nothing. It also returns 403 if the built header is larger than the installation allows, 15 KB by default. To read the current policy, use `GET api/2.0/security/csp`.
 
 ## Parameters
 
@@ -21,9 +21,9 @@ Replaces the list of external domains the portal's Content Security Policy trust
 | **200** | The stored domains and the policy header the portal now serves | [**CspWrapper**](../../models/csp-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request body cannot be read, or an entry of `domains` is not a valid address or holds non-ASCII characters | - | - |
 | **403** | The caller does not have the portal-settings right of a DocSpace administrator, or the built policy header exceeds the size allowed for the installation | - | - |
-| **500** | An entry of `domains` is `null` | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

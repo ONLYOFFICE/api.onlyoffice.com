@@ -6,7 +6,7 @@
 
 Terminate the room index export
 
-Cancels the room index export of the calling account and drops its job record. No room is named because there is at most one export per account, so the call always acts on the caller's own job and never on somebody else's: an account with nothing running gets a successful answer that changes nothing, which makes the call safe to repeat and makes it useless as a way of stopping an export somebody else started. Afterwards `GET api/2.0/files/rooms/indexexport` answers with an empty body until a new export is started with `POST api/2.0/files/rooms/{id}/indexexport`. The cancellation is asynchronous: the background job stops at its next checkpoint, so one that is already saving the file may still finish, and a report that was written before the cancellation stays in the My documents section of the caller and has to be deleted as an ordinary file. The answer carries no body and says nothing about whether an export was running.
+Cancels the room index export job of the caller and deletes the job. Any signed-in user can call it. The call acts only on the caller's own job, so you cannot stop the job of another account. The call changes data. If the caller has no job, the call changes nothing, so you can repeat it. The cancellation is asynchronous. A job that is already saving the file may still finish. A spreadsheet saved before the cancellation stays in the My documents section of the caller. After this call, `GET api/2.0/files/rooms/indexexport` returns an empty body until a new export starts. The response has no body and does not say whether a job was running.
 
 ## Parameters
 This endpoint does not need any parameter.

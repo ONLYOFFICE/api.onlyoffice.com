@@ -6,7 +6,7 @@
 
 Delete the backup schedule
 
-Deletes the backup schedule of the current portal, which stops the scheduled backups; `dump` deletes the schedule of the whole server instead and requires the space access permission. The archives the schedule has already produced are kept and stay listed by `GET api/2.0/backup/getbackuphistory` - delete them through `DELETE api/2.0/backup/deletebackup/{id}` if they are no longer wanted. The result is always true, including when there was no schedule to delete, so it confirms that the portal now has none rather than that anything was removed. The deletion is written to the audit trail either way.
+Deletes the backup schedule of the portal, so scheduled backups stop. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. With `dump`, a caller without the space access permission also gets 403. The call changes data. It always returns `true`, even if there was no schedule, so you can repeat it. The call keeps the backups that the schedule created. To delete them, use `DELETE api/2.0/backup/deletebackup/{id}`. If the portal subscription has expired or is not paid, the call returns 402.
 
 ## Parameters
 

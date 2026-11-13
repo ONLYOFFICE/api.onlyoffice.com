@@ -6,7 +6,7 @@
 
 Terminate the data deletion
 
-Cancels the data deletion queued for the user with the ID specified in the request. The caller needs the permission to edit users. The operation is idempotent and returns no body: it drops the job from the queue, and doing so when nothing is queued, or when the job has already finished, changes nothing and still answers 200. Cancelling does not restore the data the job has already erased, and a cancelled job cannot be resumed - start a new one through `POST api/2.0/people/remove/start`. To find out whether the job is still running, read `GET api/2.0/people/remove/progress/{userId}` before and after this call.
+Cancels the job that deletes the data of a user. Requires a DocSpace admin. Other callers get 403. The call changes data. It removes the job from the queue and returns no body. It does not restore the data that the job already deleted. You cannot resume the job. To start again, use `POST api/2.0/people/remove/start`. If no job exists for the user, nothing changes. So you can repeat the call. To check whether the job still runs, use `GET api/2.0/people/remove/progress/{userId}`. The call returns 400 if the body has no `userId`.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Get time zones
 
-Returns every time zone known to the host machine, each with its IANA identifier and a human-readable display name, ordered from the most negative to the most positive UTC offset. This call is not for a normal logged-in session: it requires a confirmation link bearing the Wizard or Administrators claim, of the kind generated during initial portal setup or issued by an administrator, and the link is consumed as part of authenticating the request. This is a read-only, idempotent call, and the list is not paginated. Use the returned `id` values wherever the portal expects a time zone identifier; an unrecognized value is rejected there, not here.
+Returns the time zones of the server, with the IANA ID and the display name of each. The list always includes UTC and is sorted by standard UTC offset, without daylight saving time. Requires a DocSpace admin, or the confirmation token of the setup wizard. Other signed-in users get 403. An invalid or expired token returns 401. The call is read-only. It returns the whole list without paging. Use the returned `id` values where the portal asks for a time zone.
 
 ## Parameters
 This endpoint does not need any parameter.
@@ -16,7 +16,8 @@ This endpoint does not need any parameter.
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Every time zone known to the host, with its IANA ID and display name | [**TimezoneArrayWrapper**](../../models/timezone-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
+| **401** | The caller is not signed in and sent no setup wizard token, or the token is invalid or expired | - | - |
+| **403** | The caller is signed in but is not a DocSpace admin and sent no setup wizard token | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

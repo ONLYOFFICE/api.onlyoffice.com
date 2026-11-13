@@ -6,7 +6,7 @@
 
 Update a metadata field
 
-Changes the name, the type, the options or the display order of a metadata field. Only a DocSpace admin can change templates. The request is partial: a property left out keeps its value. The type can be changed only while no entry holds a value for the field, and an option can be removed only while no entry has selected it; a new option is sent without an identifier and gets one in the answer. A new name must be unique within the template regardless of case. The values already written are left as they are. The field is addressed through its own template: a field reached through another template's route is answered with 404, the same as a field that does not exist. A conflicting name, a type change on a field with values or the removal of an option in use is answered with 400.
+Changes the name, the type, the options, or the display order of a metadata field. Requires a DocSpace admin. Other callers get 403. The call changes data. A property left out keeps its value. The `options` list replaces all options of the field. Send a new option without an ID. The response gives it a new ID. So a repeat replaces the options of the first call with new options and new IDs. If an entry has selected one of them by then, the repeat returns 400. To repeat safely, send the options with the IDs from the response. The values already written stay as they are. The call returns 400 if another field of the template has the new name in any case. It also returns 400 if you change the type of a field with values. It also returns 400 if you remove an option that an entry has selected, or if the field is invalid. If the template has no field with this ID, the call returns 404. A field of another template also returns 404.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Detach tags from a room
 
-Detaches the named tags from a room and returns the room with its remaining tag set. Only the link between the room and the tag is removed: the tag stays in the portal catalogue and keeps working for every other room, and `DELETE api/2.0/files/tags` is what removes it from the portal itself. Names that are not in the catalogue, or not attached to this room, are skipped without an error, so a successful answer does not prove that anything was detached; compare the returned tag set instead. An empty list is accepted and does nothing, while a null entry in the list is rejected as an invalid request. The caller must be a manager of the room or an administrator of the portal, and a room in the Archive section is refused with 403. A tag that loses its last room stays in the catalogue, and only deleting that room takes the tag with it.
+Removes tags from a room and returns the room with its other tags. The tags stay in the portal and on other rooms, even a tag that has no rooms left. To delete a tag from the portal, use `DELETE api/2.0/files/tags`. Requires the room manager role in the room, or a DocSpace admin. Other callers get 403. An archived room also returns 403. The call changes data, and you can repeat it with the same body. It skips names that the portal or the room does not have. So check the returned tags to see what changed. An empty list changes nothing. The call returns 400 for a null, blank, or too long name. If the room does not exist, the call returns 404.
 
 ## Parameters
 
@@ -23,9 +23,9 @@ Detaches the named tags from a room and returns the room with its remaining tag 
 | **400** | The request body cannot be read or has no `names`, a name is null, blank or longer than 255 characters, or a third-party identifier refers to a storage account that is not connected | - | - |
 | **403** | The caller may not edit this room, or the room is archived | - | - |
 | **404** | The room does not exist, or the id is neither a 32-bit number nor a third-party identifier of a known storage type | - | - |
-| **500** | A third-party identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

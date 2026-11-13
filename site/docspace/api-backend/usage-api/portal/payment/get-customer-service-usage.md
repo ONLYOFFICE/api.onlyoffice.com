@@ -1,12 +1,12 @@
 # getCustomerServiceUsage
 
-> CustomerServiceUsageReportWrapper getCustomerServiceUsage(serviceName, participantName, status, startDate, endDate, metadata, offset, limit, orderBy, orderType)
+> CustomerServiceUsageReportWrapper getCustomerServiceUsage(serviceName, participantName, status, startDate, endDate, metadata, offset, limit, orderBy, orderType, mergeByok)
 
 `GET /api/2.0/portal/payment/customer/usage`
 
 Get the customer service usage
 
-Returns how much of each wallet service the portal consumed and what that cost, added up per service instead of listed per movement. Only a DocSpace administrator may read it, a portal with no billing customer answers with an empty result, and the call is read-only. The filters are optional: `serviceName` narrows to particular services and fails with 404 on a name this installation does not sell, `participantName` and `status` narrow to who consumed and how the operation ended, `startDate` and `endDate` bound the period in the portal time zone, `metadata` matches the key and value pairs a service records with its usage, and `offset`, `limit`, `orderBy` and `orderType` page and sort the result. Amounts come with the unit the service is sold in, except AI tools, whose consumption is reported in tokens rather than in AI credits. The individual charges behind these totals are `GET api/2.0/portal/payment/customer/operations`, and the same figures as a downloadable file are `POST api/2.0/portal/payment/customer/usage/report`.
+Returns the consumption and the cost of each wallet service of the portal, added up per service. Requires a DocSpace admin. Other callers get 403. The call also returns 403 if the installation has no billing service. If the portal has no billing customer, the call returns an empty result. The call is read-only. All filters are optional. If `serviceName` has a name that the installation does not sell, the call returns 404. The amounts use the unit of each service. For AI tools, the unit is tokens, not AI credits. AI usage paid with the portal's own provider keys has totals of its own, `ai-tools-byok` and `ai-search-byok`. They have the title of their AI service and `byok` set, and `serviceName` accepts these names. With `mergeByok=true`, the call adds them to the totals of their AI services. To list the charges behind the totals, use `GET api/2.0/portal/payment/customer/operations`. To get the same figures as a file, use `POST api/2.0/portal/payment/customer/usage/report`.
 
 ## Parameters
 
@@ -22,6 +22,7 @@ Returns how much of each wallet service the portal consumed and what that cost, 
 | **limit** | query | **Integer** (int32) | The maximum number of per-service totals returned in one page. Defaults to 25 when omitted; the answer echoes the window back with its paging information, so the next `offset` can be computed without counting the items. | [optional] [example: `25`] |
 | **orderBy** | query | **String** | The name of the field the per-service totals are sorted by, spelled as the accounting service names it, such as `ServiceName` or `StartDate`. Surrounding whitespace is trimmed, and the accounting service applies its own ordering when this is omitted. | [optional] [example: `ServiceName`] |
 | **orderType** | query | **OperationOrderType** | The direction the field named in `orderBy` is sorted in. Newest or largest first is what the accounting service does by default, so leaving this out sorts the same way as asking for descending explicitly. | [optional] [example: `Descending`] [enum: `0`, `1`] |
+| **mergeByok** | query | **Boolean** | Whether the AI consumption paid with the portal's own provider keys - `ai-tools-byok`, `ai-search-byok` - is added into the total of its AI service instead of being a total of its own. | [optional] [example: `true`] |
 
 ## Responses
 

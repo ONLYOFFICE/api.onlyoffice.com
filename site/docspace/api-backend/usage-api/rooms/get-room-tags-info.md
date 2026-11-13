@@ -6,7 +6,7 @@
 
 Get available room tags
 
-Returns the custom room tags available to the caller as a flat array of names, not of objects. What the array holds depends on the account: a portal administrator gets the whole catalog, including tags that no room uses yet, while every other account gets only the tags attached to rooms it can see, with duplicates removed. An empty answer therefore means that this caller sees no tagged room, not that the portal has no tags. `filterValue` keeps the names that contain the given text, ignoring case, while `count` and `startIndex` page the result; no total is returned, so a page shorter than `count` is the signal that the list is exhausted. The names are exactly the values accepted by the `tags` filter of `GET api/2.0/files/rooms` and by the room tag calls, which makes this the call to fill a tag picker with. Add a tag with `POST api/2.0/files/tags` and check whether one is still in use with `GET api/2.0/files/tags/{tagName}/haslinks`.
+Returns the names of the custom room tags that the caller can see, as an array of strings. Any signed-in user can call it. A DocSpace admin gets the whole catalog, including tags that no room has. Any other caller gets only the tags of the active rooms that it can see, without repeats. So an empty list means that the caller sees no tagged room. The call is read-only. The list has no total, so a page shorter than `count` is the last one. Use these names in the `tags` filter of `GET api/2.0/files/rooms` and in the room tag calls. To create a tag, use `POST api/2.0/files/tags`. To check whether a tag is in use, use `GET api/2.0/files/tags/{tagName}/haslinks`. The call returns 400 if `count` or `startIndex` is out of range.
 
 ## Parameters
 

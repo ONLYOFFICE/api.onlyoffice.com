@@ -6,7 +6,7 @@
 
 Get folder history
 
-Lists what has happened to a folder and to the entries inside it - creations, renames, uploads, moves, deletions and changes of access - each record naming the action, the moment it happened and the member behind it. Records that belong to one action are grouped, so a batch arrives as a single entry carrying the rest of itself in `related`, and the list runs from the most recent record backwards. `fromDate` and `toDate` narrow the period, `startIndex` and `count` page through the result, and the number of records matching the request is reported in the response headers rather than in the body. Any member who can read the folder may read its history; a caller without access is answered with 403 and a folder that does not exist with 404. When the folder is a form-filling folder the caller reached through a filling invitation, the history is narrowed to what that caller may see. The call is read-only. To take the same history away as a spreadsheet, start a report with `POST api/2.0/files/folder/{folderId}/log/report`.
+Returns the history of a folder and of the entries inside it. Each record names the action, its time, and the user who did it. The records of one action form one entry, and its other records are in `related`. The list starts with the most recent entry. Paging with `startIndex` and `count` counts records, so a page can hold fewer entries. The response headers carry the total number of records, and the body does not. Requires read access to the folder. Other callers get 403. A caller who only fills forms in a form-filling folder sees only the entries available to them. The call is read-only. If the folder does not exist, the call returns 404. The call returns 400 if `count` is out of range or a date has a wrong format. To get the history as a file, use `POST api/2.0/files/folder/{folderId}/log/report`.
 
 ## Parameters
 
@@ -15,8 +15,8 @@ Lists what has happened to a folder and to the entries inside it - creations, re
 | **folderId** | path | **Integer** (int32) | The folder whose activity log is read; the log covers the folder itself and the entries inside it. | [required] [example: `1`] |
 | **fromDate** | query | **Date** (date-time) | The earliest moment an entry may have, read in the time zone of the portal; left out, the log starts at the oldest entry the portal still keeps. | [optional] [example: `2025-01-01T00:00:00.0000000Z`] |
 | **toDate** | query | **Date** (date-time) | The latest moment an entry may have, read in the time zone of the portal; left out, the log ends at the newest entry. | [optional] [example: `2025-12-31T23:59:59.0000000Z`] |
-| **count** | query | **Integer** (int32) | How many entries one page holds. The number of entries that match the query is reported in the response headers, not in the body. | [optional] [example: `25`] [min: 1] [max: 100] |
-| **startIndex** | query | **Integer** (int32) | How many entries to skip before the page begins, counted from the newest one, so pages are taken by adding the page size to it. | [optional] [example: `0`] |
+| **count** | query | **Integer** (int32) | How many history records one page covers. | [optional] [example: `25`] [min: 1] [max: 100] |
+| **startIndex** | query | **Integer** (int32) | How many history records to skip before the page begins, counted from the newest one. To take the next page, add the page size to it. | [optional] [example: `0`] |
 
 ## Responses
 

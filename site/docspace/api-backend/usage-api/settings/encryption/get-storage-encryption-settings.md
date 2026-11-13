@@ -6,7 +6,7 @@
 
 Get the storage encryption settings
 
-Returns the encryption state of the installation storage: the status, which is one of decrypted, encryption started, encrypted or decryption started, and the flag saying whether users are mailed when an encryption run begins. The encryption password is never returned. The caller is expected to have the permission to edit portal settings, which in practice means the portal owner or a DocSpace admin, on a server installation with an unrestricted access space; on any other installation, and whenever the check fails, the operation answers with an empty body instead of an error. An empty answer is therefore not proof that encryption is off, only that the settings cannot be read in this context. Nothing is written and the call is safe to repeat. Use `GET api/2.0/settings/encryption/progress` to follow a run that is in flight, and `POST api/2.0/settings/encryption/start` to encrypt or decrypt the storage.
+Returns the encryption state of the installation storage and whether users get an email when a run starts. The response never includes the encryption password. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get an empty body, not an error. The call also returns an empty body if the installation is not self-hosted. The same happens if it has no encryption or limits the access space. It returns an empty body on any other error too. So an empty body does not mean that encryption is off. The call is read-only. To follow a run, use `GET api/2.0/settings/encryption/progress`. To start one, use `POST api/2.0/settings/encryption/start`.
 
 ## Parameters
 This endpoint does not need any parameter.

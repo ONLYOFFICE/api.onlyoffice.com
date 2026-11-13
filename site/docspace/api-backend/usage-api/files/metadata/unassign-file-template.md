@@ -6,7 +6,7 @@
 
 Unassign a template from a file
 
-Removes a metadata template from a file together with the values of its fields. The caller needs the right to edit the file. The removal is irreversible for the values, the template itself stays on the portal and on the other entries. It applies to a directly assigned template and to one inherited from a cascading folder alike; a later cascade from that folder assigns it again. A file the caller cannot edit is answered with 403; a file, or a template, that does not exist with 404.
+Removes a metadata template from a file, together with the values of its fields. Requires editing access to the file. Other callers get 403. The deletion of the values cannot be undone. The template stays on the portal and on other entries. The call also removes a template inherited from a cascading folder. A later cascade from that folder assigns it again. A repeated call changes nothing. If the file or the template does not exist, the call returns 404.
 
 ## Parameters
 

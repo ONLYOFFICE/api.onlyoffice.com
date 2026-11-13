@@ -6,7 +6,7 @@
 
 Get version history
 
-Returns the editing revisions of a file, oldest first, as the document service understands them: each entry carries the version and the revision group it belongs to, the account that saved it, when it was saved, the comment left on it, the document key of that revision and, where the portal stored them, the changes it introduced. Only the revisions a person saved are listed - the autosaves an editing session writes in between are left out, which is what separates this list from the plain version list of `GET api/2.0/files/file/{fileId}/history`. The caller needs the right to read the history of the file, which editing access and above grant: commenting access, read-only access, a guest, a member without access to the room and an anonymous caller are all refused, and so is a file kept in a connected third-party storage, which keeps no history in the portal. The operation is read-only. Take one entry to `GET api/2.0/files/file/{fileId}/edit/diff` to show its changes, or to `POST api/2.0/files/file/{fileId}/restoreversion` to bring it back.
+Returns the editing revisions of a file, oldest first. The list has only the versions that a person saved, without the autosaves of editing sessions. That is how it differs from `GET api/2.0/files/file/{fileId}/history`. Requires the right to read the file history, which editing access gives. Other callers get 403, including read-only and commenting access. An anonymous caller and a file in a third-party storage also get 403. The call is read-only. If no file has this id, the call returns 404. To show the changes of an entry, use `GET api/2.0/files/file/{fileId}/edit/diff`. To restore an entry, use `POST api/2.0/files/file/{fileId}/restoreversion`.
 
 ## Parameters
 

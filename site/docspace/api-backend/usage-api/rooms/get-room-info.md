@@ -6,7 +6,7 @@
 
 Get room information
 
-Returns one room with its type, title, tags, logo, cover, colour, quota and virtual data room settings, together with the access level the caller has in it. Reading the room is not a side-effect-free call: it clears the caller new-item badges for that room, and `newForMe` comes back as 0, so read `GET api/2.0/files/rooms/{id}/news` first when the new items matter. The caller needs read access to the room; portal administrators can read a room they were never invited to, while a member without access is refused. The operation also answers an anonymous caller, but only in the context of a valid external share link of that room, and a plain anonymous request is rejected as unauthenticated. A room that never existed, was deleted, or lives in a section the caller cannot see is answered as missing. Archived rooms are returned as well and are recognised by their root section rather than by a separate flag. Use `GET api/2.0/files/rooms` to search and page through rooms instead of guessing ids.
+Returns one room with its settings and the access level of the caller. Requires read access to the room. Other callers get 403. A DocSpace admin can read any room without an invitation, except a private room. An anonymous caller needs a valid external link to the room. Without one, the call returns 401. The call is read-only, except for the new-item marks. It clears the marks of the caller in this room, so `newForMe` becomes 0. To read the new items first, use `GET api/2.0/files/rooms/{id}/news`. The call also returns archived rooms. Their root section, not a flag, shows that they are archived. The call returns 404 for a deleted or unknown room, or a room in a section the caller cannot see. If a string `id` points to a storage account that is not connected, the call returns 400. To find room IDs, use `GET api/2.0/files/rooms`.
 
 ## Parameters
 
@@ -23,8 +23,8 @@ Returns one room with its type, title, tags, logo, cover, colour, quota and virt
 | **401** | An anonymous caller has no external link that grants access to the room | - | - |
 | **403** | The caller may not read this room | - | - |
 | **404** | The room does not exist, or the id is neither a 32-bit number nor a third-party identifier of a known storage type | - | - |
-| **500** | A third-party identifier carries a storage account number beyond the 32-bit range | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

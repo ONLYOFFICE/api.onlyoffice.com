@@ -6,7 +6,7 @@
 
 Set the AI access settings
 
-Turns AI functionality (chat, agents, vectorization) on or off for the whole portal; AI is enabled by default. Requires Owner or DocSpaceAdmin (the EditPortalSettings permission); every other caller is refused. Disabling it immediately hides the AI Agents folder from root folder listings, makes AI status checks report disabled, and makes AI chat endpoints unreachable for every user on the tenant, not only the caller. This is a mutating, idempotent, portal-wide call, and the change is pushed to already-connected clients over the real-time notification hub rather than waiting for their next request. It returns the saved setting.
+Turns AI features on or off for the whole portal: chat, agents, and vectorization. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call changes data. You can repeat it with the same body. Turning AI off hides the AI agents and AI rooms folders from all users. AI rooms and their files then return 403, and AI chat operations stop working. The call deletes nothing, so turning AI on again restores access. It returns the saved setting.
 
 ## Parameters
 

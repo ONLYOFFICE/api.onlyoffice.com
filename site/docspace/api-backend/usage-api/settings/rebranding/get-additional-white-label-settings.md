@@ -6,7 +6,7 @@
 
 Get the additional white label settings
 
-Returns which of the ONLYOFFICE help and community resources the interface may offer - the sample documents, the Help Center link, the Feedback and Support link, the user forum, the video guides and the license agreements - so a client can hide the entries that are switched off. Any authenticated user may call it; no administrator permission is required, and a portal whose payment has lapsed is served as well. The call is read-only and idempotent. Each flag is `true` when the entry may be shown and `false` when it must be hidden, and `isDefault` tells whether the whole set is still the built-in one. The flags are installation-wide, so every portal of a server installation reports the same ones. They say nothing about the caller's own permissions, and the addresses behind the entries are not part of the answer. Change the flags with `POST api/2.0/settings/rebranding/additional` and reset them with `DELETE api/2.0/settings/rebranding/additional`.
+Returns which help and community resources the interface may show. An app hides the entries whose flags are `false`. Any signed-in user can call it, even when the portal payment has lapsed. The call is read-only. The flags apply to the whole installation, so all its portals return the same values. They do not depend on the permissions of the caller. The answer does not include the addresses of the entries. To change the flags, use `POST api/2.0/settings/rebranding/additional`.
 
 ## Parameters
 This endpoint does not need any parameter.

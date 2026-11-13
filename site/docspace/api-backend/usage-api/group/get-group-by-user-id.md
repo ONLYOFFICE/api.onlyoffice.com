@@ -6,7 +6,7 @@
 
 Get user groups
 
-Returns every group the account with the ID in the route belongs to, as a flat list of ID and name pairs. The caller needs the permission to read groups. The call is read-only, is not paged, and answers an empty list both for an account that belongs to no group and for an ID that matches no account, so an empty answer does not prove the account exists. The entries are summaries and carry neither the manager nor the members - read `GET api/2.0/group/{id}` for the full picture of one of them.
+Returns all groups that an account belongs to, as ID and name pairs. Requires a DocSpace admin or a room admin. Other callers get 403, even for their own groups. The call is read-only and does not page the list. The entries have no manager and no members. An empty list means the account is in no group or does not exist. To read one group in full, use `GET api/2.0/group/{id}`.
 
 ## Parameters
 

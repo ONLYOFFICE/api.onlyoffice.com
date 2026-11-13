@@ -6,7 +6,7 @@
 
 Get the customer balance
 
-Returns the money the portal has in its wallet as the accounting service holds it: the account with its own currency, one sub-account per currency with the amount on it, and the most recent credit movement. Only a DocSpace administrator may read it, an installation without a billing service answers 403, and a portal that has never been a customer gets an empty result. The call is read-only. This balance is what the wallet services are charged against, so it falls as they are used and rises with `POST api/2.0/portal/payment/deposit`; the movements behind a change are listed by `GET api/2.0/portal/payment/customer/operations`. Pass `refresh=true` to re-read it from the accounting service rather than the cache - right after a top-up the cached figure is still the old one.
+Returns the money in the portal wallet as the accounting service has it. The answer has a sub-account with its amount for each currency and the last credit movement. Requires a DocSpace admin. Other callers get 403. The call also returns 403 if the installation has no billing service. If the portal has no billing customer, the call returns an empty result. The call is read-only. The wallet services spend this balance, and `POST api/2.0/portal/payment/deposit` adds to it. To list the movements, use `GET api/2.0/portal/payment/customer/operations`. Each call reads the balance from the accounting service, so it is current right after a top-up too. Only a failed read is cached. A read fails if the service cannot be reached, answers with an error, or does not know the portal. Then the call returns an empty result for 10 minutes. Use `refresh=true` to read it again immediately.
 
 ## Parameters
 

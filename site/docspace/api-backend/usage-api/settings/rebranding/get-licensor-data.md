@@ -6,7 +6,7 @@
 
 Get the licensor data
 
-Returns the licensor details - company name, site, support email, postal address and phone - that the About page and the notification letters print as the vendor of the installation. Any authenticated user may call it, as these details are shown in the interface to everyone; no administrator permission is required. The call is read-only and idempotent. The list holds the details currently in effect as its first item; when they have been replaced by a reseller and the replacement is not itself marked as the licensor, the built-in ONLYOFFICE details are appended as a second item, so a caller can print both the reseller and the original vendor. A single-item list therefore means that the current details are the only ones to show. The values are installation-wide rather than per-portal, so every portal of a server installation reports the same ones. The same data in the form the settings interface edits is served by `GET api/2.0/settings/rebranding/company`, and it is written by `POST api/2.0/settings/rebranding/company`.
+Returns the licensor details that the About page and letters show as the vendor. Any signed-in user can call it. The call is read-only. The first item holds the details in effect. A reseller can replace them without marking its details as the licensor. Then a second item holds the built-in ONLYOFFICE details, so the page can show both. A single item means there is nothing else to show. The details apply to the whole installation, so all its portals return the same list. To read the details in the form the settings page edits, use `GET api/2.0/settings/rebranding/company`. To change them, use `POST api/2.0/settings/rebranding/company`.
 
 ## Parameters
 This endpoint does not need any parameter.

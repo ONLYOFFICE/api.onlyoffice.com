@@ -6,7 +6,7 @@
 
 Get used space of files
 
-Reports how much storage the portal spends on documents, split by section - My documents, Trash, Rooms, Archive and, where the feature is on, AI agents - each entry naming the section and the space it takes in bytes. The figures cover the whole portal rather than the calling account, and moving an entry between sections moves its space with it, which is why deleting a file to the Trash does not free anything until the Trash is emptied. Only a caller who may change portal settings, that is the owner and the portal administrators, is allowed here; a room administrator, an ordinary member and a guest are all refused. The call is read-only, takes no parameters and answers with the sections in a fixed order. The quota of the portal as a whole, storage outside documents included, is not part of this answer.
+Returns the storage space that documents take in each section of the portal, in bytes. The sections are My documents, Trash, Rooms, Archive, and AI agents if that feature is on. They come in a fixed order. The figures cover the whole portal, not the account of the caller. A file in the trash still takes space until the trash is emptied. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. The response does not include the portal quota or storage outside documents.
 
 ## Parameters
 This endpoint does not need any parameter.

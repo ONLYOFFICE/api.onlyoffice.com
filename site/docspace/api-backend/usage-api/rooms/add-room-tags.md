@@ -6,7 +6,7 @@
 
 Attach tags to a room
 
-Attaches the named tags to a room and returns the room with its whole tag set. Tags are portal-wide labels shared by every room, and a name that the catalogue does not hold yet is created there by this call, so attaching is also the short way of adding a tag to the portal. Names already attached to the room are kept as they are, and repeating the call changes nothing, which makes it safe to retry. An empty list is accepted and does nothing, while a blank or overlong name is rejected as an invalid request. The caller must be a manager of the room or an administrator of the portal, and a room in the Archive section is refused with 403. A tag has no identifier of its own and is addressed by name, so `GET api/2.0/files/tags` is what shows which names already exist. Use `DELETE api/2.0/files/rooms/{id}/tags` to detach them again, which leaves the tags themselves in the catalogue.
+Adds tags to a room and returns the room with all its tags. All rooms of the portal share one set of tags. The call creates each name that the portal does not have yet. Requires the room manager role in the room, or a DocSpace admin. Other callers get 403. An archived room also returns 403. The call changes data, and you can repeat it with the same body. It keeps the tags that the room already has. An empty list changes nothing. A tag has no ID, so the call finds it by name. To list the existing names, use `GET api/2.0/files/tags`. The call returns 400 for a null, blank, or too long name. If the room does not exist, the call returns 404. To remove tags from a room, use `DELETE api/2.0/files/rooms/{id}/tags`. The tags then stay in the portal.
 
 ## Parameters
 
@@ -23,9 +23,9 @@ Attaches the named tags to a room and returns the room with its whole tag set. T
 | **400** | The request body cannot be read or has no `names`, a name is null, blank or longer than 255 characters, or a third-party identifier refers to a storage account that is not connected | - | - |
 | **403** | The caller may not edit this room, or the room is archived | - | - |
 | **404** | The room does not exist, or the id is neither a 32-bit number nor a third-party identifier of a known storage type | - | - |
-| **500** | A third-party identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

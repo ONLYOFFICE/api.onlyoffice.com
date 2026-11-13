@@ -6,7 +6,7 @@
 
 Restore a portal
 
-Brings a deactivated portal back to the active state, so its users can sign in again and its domain serves the portal as before. It is reached only with the reactivation link that `POST api/2.0/portal/suspend` mails to the portal owner: that link authorizes the call in place of an authentication token, and no ordinary token is accepted here. The call is mutating and idempotent - it sets the status to active, re-applies the portal's Content Security Policy and refreshes its base domain, and a portal that is already active is simply left active. Nothing is returned in the body; read the result from `status` in `GET api/2.0/portal`. Deactivating the portal again means asking for a fresh letter with `POST api/2.0/portal/suspend`, because each link is issued for one operation. This operation cannot bring back a removed portal: the deletion behind `DELETE api/2.0/portal/delete` is final, and a removed portal has to be restored from a backup instead.
+Makes a deactivated portal active again, so its users can sign in. Sign the request with the confirmation token from the second link of the email that `POST api/2.0/portal/suspend` sends. An ordinary sign-in token does not work here. The call changes data, and you can repeat it. An active portal stays active. The call returns no data. To check the result, read `status` from `GET api/2.0/portal`. The call cannot bring back a deleted portal.
 
 ## Parameters
 This endpoint does not need any parameter.

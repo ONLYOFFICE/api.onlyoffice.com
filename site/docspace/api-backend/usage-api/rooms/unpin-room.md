@@ -6,7 +6,7 @@
 
 Unpin a room
 
-Removes a room from the pinned group of the calling account and returns the room with the pinned flag cleared. Only the personal ordering of the caller changes: the room itself, its members, their roles and its contents are left exactly as they were, and the room stays in the list, simply among the unpinned ones. Unpinning frees one of the pin slots of the account, which AI rooms count separately, so it is the way out of a refused `PUT api/2.0/files/rooms/{id}/pin`. Unpinning a room that was never pinned is accepted and changes nothing, so the call can be repeated safely and its answer does not prove that anything was pinned before. Anybody who can read the room may unpin it, while somebody who is not in the room at all is refused and an unknown or deleted room is answered as missing. An archived room cannot be unpinned.
+Unpins a room for the caller and returns the room. The call changes only the order of the room list of the caller. The room, its members, and its contents stay the same. Unpinning frees a pin place of the account. AI rooms have their own places. So use this call when `PUT api/2.0/files/rooms/{id}/pin` returns 403 for the limit. Requires read access to the room. Other callers get 403. The call changes data, and you can repeat it. A room that is not pinned returns 200 and changes nothing. So the answer does not show that the room was pinned. An archived room or a folder that is not a room returns 403. If the room does not exist or was deleted, the call returns 404. If a string `id` points to a storage account that is not connected, the call returns 400.
 
 ## Parameters
 
@@ -22,9 +22,9 @@ Removes a room from the pinned group of the calling account and returns the room
 | **400** | A third-party identifier refers to a storage account that is not connected | - | - |
 | **403** | The caller cannot read this room, or the room is archived or is not a room | - | - |
 | **404** | No room with this ID exists, or the id is neither a 32-bit number nor a third-party identifier of a known storage type | - | - |
-| **500** | A third-party identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

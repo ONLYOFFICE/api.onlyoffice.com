@@ -6,7 +6,7 @@
 
 Hide the confirmation dialog when converting
 
-Hides one of the two prompts the interface shows around file conversion, for the calling account only. The `save` field chooses which prompt, and is not the value being written: `save=true` hides the prompt that offers to keep a copy in the original format when a file is converted, `save=false` hides the prompt that offers to open the conversion result. Both flags are one-way - the operation can only hide a prompt, and there is no API to show it again - so the answer is always true and repeating the call changes nothing. The two flags are independent: hiding one leaves the other as it was. Every authenticated role down to a guest may set its own, and an unauthenticated caller is refused. The stored flags are published as `hideConfirmConvertSave` and `hideConfirmConvertOpen` by `GET api/2.0/files/settings`. Conversion itself is started by `PUT api/2.0/files/file/{fileId}/checkconversion` and is not affected by either flag.
+Hides one of two conversion prompts for the calling account. If `save` is true, the call hides the prompt to keep a copy in the original format. If `save` is false, it hides the prompt to open the converted file. Any signed-in user can call it. The call changes data, and you can repeat it with the same body. No call of the API shows a hidden prompt again. The call always returns `true`. To read both flags, use `hideConfirmConvertSave` and `hideConfirmConvertOpen` of `GET api/2.0/files/settings`.
 
 ## Parameters
 

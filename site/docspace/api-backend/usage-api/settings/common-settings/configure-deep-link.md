@@ -6,7 +6,7 @@
 
 Configure the deep link settings
 
-Sets how the portal responds when a client opens a DocSpace link on a mobile device: always in the browser, always in the native app, or asking the user to choose each time. Requires Owner or DocSpaceAdmin (the EditPortalSettings permission). The handling mode must be one of the documented enum values; anything else is rejected without being saved. This is a mutating, idempotent call: sending the same mode again leaves the setting unchanged. It returns the saved deep link settings, including the timestamp of the last change; read the current value at any time, including anonymously, from `GET api/2.0/settings/deeplink`.
+Sets how mobile devices open portal links: in the browser, in the app, or by asking the user. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call changes data. You can repeat it with the same body. It returns the saved settings. To read them without signing in, use `GET api/2.0/settings/deeplink`. If the mode is not a defined value, the call returns 400 and saves nothing.
 
 ## Parameters
 
@@ -21,9 +21,9 @@ Sets how the portal responds when a client opens a DocSpace link on a mobile dev
 | **200** | Saved deep link handling settings | [**TenantDeepLinkSettingsWrapper**](../../models/tenant-deep-link-settings-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The handling mode is not one of the supported deep link handling values | - | - |
 | **403** | The caller has no portal-settings right | - | - |
-| **500** | The request body has no `deepLinkSettings` | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

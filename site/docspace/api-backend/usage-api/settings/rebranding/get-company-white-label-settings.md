@@ -6,7 +6,7 @@
 
 Get the company white label settings
 
-Returns the company details that the About page and the notification letters print as the vendor, in the form the settings interface edits them. Any authenticated user may call it; no administrator permission is required, and a portal whose payment has lapsed is served as well. The call is read-only and idempotent. Alongside the stored fields the answer carries `isLicensor`, which tells whether these details belong to the vendor of the product itself, and `isDefault`, which tells whether they are still the built-in ONLYOFFICE ones. The values are installation-wide, so every portal of a server installation reports the same ones. The response is revalidatable: it carries `Last-Modified`, and sending that value back in `If-Modified-Since` yields an empty body while the details have not changed, which makes polling cheap. For the About page, where the built-in vendor has to be shown next to a reseller, use `GET api/2.0/settings/companywhitelabel` instead. Change the details with `POST api/2.0/settings/rebranding/company`.
+Returns the company details that the About page and letters show as the vendor. This is the form the settings page edits. Any signed-in user can call it, even when the portal payment has lapsed. The call is read-only. The details apply to the whole installation, so all its portals return the same values. The answer has a `Last-Modified` header. Send that value in `If-Modified-Since` to check for changes. If nothing changed, the call returns 304 with an empty body. To show both a reseller and the original vendor, use `GET api/2.0/settings/companywhitelabel`. To change the details, use `POST api/2.0/settings/rebranding/company`.
 
 ## Parameters
 This endpoint does not need any parameter.

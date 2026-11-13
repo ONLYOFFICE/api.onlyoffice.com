@@ -6,7 +6,7 @@
 
 Get subfolders
 
-Lists the folders that sit directly inside the folder named in the path, ordered by title, without their own contents and without the files that lie beside them. The whole list arrives at once - there are no paging or filtering parameters here - so for a large folder, or when the files are wanted as well, use `GET api/2.0/files/{folderId}`, which pages and filters. A folder that holds no subfolders answers with an empty list. The caller needs read access to the folder, and only the subfolders they may see are listed, so a member of a room can get fewer entries than its manager; a caller without access is answered with 403, and a folder that does not exist, or one that has been deleted for good, is answered as not found. The call is read-only and leaves the new-item marks of the folder alone.
+Returns the subfolders directly inside a folder, ordered by title. The list has no files and no contents of the subfolders. Requires read access to the folder. Other callers get 403. The call is read-only, and it does not clear the new-item marks. The list has only the subfolders that the caller can see. The call returns the whole list in one response, without paging and filters. If the folder does not exist or was deleted for good, the call returns 404. To page, filter, or get the files too, use `GET api/2.0/files/{folderId}`.
 
 ## Parameters
 

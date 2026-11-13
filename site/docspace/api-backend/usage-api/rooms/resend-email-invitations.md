@@ -6,7 +6,7 @@
 
 Resend the room invitations
 
-Sends the room invitation email again to members who were invited but have not joined yet. `resendAll` covers every pending invitation of the room and makes `usersIds` irrelevant, while an explicit list without that flag is limited to the named accounts. An account that has already accepted the invitation, is not a member of the room, or is invisible to the caller is skipped without an error, and a request that names nobody and does not set the flag does nothing, so a successful answer never proves that a message went out. Nothing about the room or its membership changes, and the operation can be repeated. The caller must be a manager of the room, an archived room is refused, a room template is answered as missing, and a malformed account id is rejected as an invalid request. The call is rate limited, so a client that loops over members should send one batch instead. The response carries no body.
+Sends the room invitation email again to invited members. If `resendAll` is true, the call sends it to every pending invitation of the room and ignores `usersIds`. Otherwise, it sends it only to the accounts in `usersIds`. The call skips accounts that are not room members or that the caller cannot see. If `resendAll` is false and `usersIds` is empty, the call does nothing. So a 200 does not prove that an email was sent. Requires the room manager role in the room. Other callers get 403. An archived room also returns 403. The call changes no data. Do not repeat it. By default, a member who got this invitation in the last 10 minutes gets no new email. After that, each call sends the email again. The link in the earlier email stays valid. The response has no body. A body that cannot be read returns 400. If the room does not exist or is a room template, the call returns 404.
 
 ## Parameters
 
@@ -19,13 +19,13 @@ Sends the room invitation email again to members who were invited but have not j
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The invitations that were still pending have been sent again | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The request is accepted; the pending members it covers are mailed again, except those who already got this invitation within the repeat period | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request body cannot be read, or a third-party identifier refers to a storage account that is not connected | - | - |
 | **403** | The caller is not a manager of the room, or the room is archived | - | - |
 | **404** | The room does not exist or is a room template, or the id is neither a 32-bit number nor a third-party identifier of a known storage type | - | - |
-| **500** | A third-party identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

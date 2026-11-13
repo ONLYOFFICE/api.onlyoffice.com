@@ -6,7 +6,7 @@
 
 Set the file favorite status
 
-Sets or clears the favorite mark of one file for the calling account: `true` adds the file to the favorites, `false` takes it out again. The call changes stored state even though it is a GET, so it is not one to issue speculatively; repeating it with the same value changes nothing further. The mark is personal, no other member sees it, and the file stays where it is stored. Read access is enough, so a room member with view-only rights and a guest may call it. The answer only echoes the value that was asked for: an identifier that resolves to nothing and a file the caller cannot read are skipped without a word, an encrypted file of a private room is never marked, and the requested value still comes back, so read the outcome from `GET api/2.0/files/@favorites` instead. A file moved to the Trash keeps its mark and is left out of that listing until it is restored. To mark several entries at once, or to mark folders, use `POST api/2.0/files/favorites` and `DELETE api/2.0/files/favorites`.
+Adds one file to the favorites of the calling account, or deletes it from them. If `favorite` is `true`, the call adds the mark. If it is `false` or missing, the call deletes the mark. Other users do not see the mark, and the file stays where it is. Any signed-in user can call it. Although this is a GET, the call changes data. You can repeat it with the same value. The call skips an unknown file and a file without read access. It never marks an encrypted file of a private room. It returns the value of `favorite` even when it changes nothing. To see the result, use `GET api/2.0/files/@favorites`. A marked file in the trash is not listed there until it is restored. To change the marks of several files and folders, use `POST api/2.0/files/favorites` or `DELETE api/2.0/files/favorites`. If a string id points to a storage account that is not connected, the call returns 400. It also returns 400 if `favorite` is not a boolean. If a string id names an unknown storage type, the call returns 404.
 
 ## Parameters
 
@@ -21,11 +21,10 @@ Sets or clears the favorite mark of one file for the calling account: `true` add
 |------------- | ------------- | ------------- | -------------|
 | **200** | Echo of the requested state, which does not prove that the mark was changed | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | A parameter has the wrong type, or a third-party file identifier refers to a storage account that is not connected | - | - |
-| **403** | Changing the favorite mark is refused for the caller | - | - |
 | **404** | A third-party file identifier names a storage type the portal does not know | - | - |
-| **500** | A third-party file identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

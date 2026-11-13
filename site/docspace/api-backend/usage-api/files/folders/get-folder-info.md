@@ -6,7 +6,7 @@
 
 Get folder information
 
-Returns one folder as an object - its title, its parent, the moments it was created and last changed, the access the caller has to it, the number of items that are new for them, and the room settings when the folder is a room - without listing anything inside it. Use it to resolve a folder identifier into something displayable, and `GET api/2.0/files/{folderId}` when the contents are what is wanted; unlike that operation, this one leaves the new-item marks of the folder alone. Any member who can read the folder may call it, and an anonymous caller only through an external link that grants access, everybody else being refused; a folder that does not exist is answered as not found. The call is read-only. The chain of parents above the folder is not part of the answer and is read with `GET api/2.0/files/folder/{folderId}/path`.
+Returns the properties of one folder or room, without its contents. Requires read access to the folder. Other callers get 403. Without signing in, a caller needs an external link to the folder. Without such a link, the call returns 401. The call is read-only. It does not clear the new-item marks of the folder. If the folder does not exist, the call returns 404. To list the contents, use `GET api/2.0/files/{folderId}`. To get the chain of parent folders, use `GET api/2.0/files/folder/{folderId}/path`.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Filter users in detail
 
-Returns a page of portal accounts selected by the full set of account filters, with the complete profile of each of them. The caller has to be a room admin, a DocSpace admin or a People module admin; a member or a guest gets 403, and a DocSpace admin additionally sees the accounts an ordinary admin does not. The call is read-only, paged by `count` and `startIndex`, ordered by `sortBy` and `sortOrder`, and reports the number of matches in the total count of the response. Filters combine as conditions that all have to hold, with three interactions worth knowing: `withoutGroup` makes `groupId` irrelevant, `employeeType` wins over `employeeTypes` when both are sent, and `area` set to `Guests` or `People` cancels the type filters that contradict it. `GET api/2.0/people/simple/filter` accepts exactly the same filters and returns the short profile instead, so use that one for pickers and lists and this one when the full profile is really needed. It is available on an unpaid portal.
+Returns a page of the accounts that match all the given filters, with full profiles. Requires a room admin, a DocSpace admin, or an admin of the People module. Other callers get 403. A DocSpace admin sees more accounts than a room admin. The call is read-only and works on an unpaid portal. The response has the total number of matches. If `count` is out of range, the call returns 400. If both are set, `employeeType` wins over `employeeTypes`. With `withoutGroup`, the call ignores `groupId`. The `area` filter cancels the type filters that contradict it. For short profiles with the same filters, use `GET api/2.0/people/simple/filter`.
 
 ## Parameters
 

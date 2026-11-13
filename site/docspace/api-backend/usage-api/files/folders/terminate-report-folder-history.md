@@ -6,13 +6,13 @@
 
 Terminate the folder history report generation
 
-Gives up the history report the caller has started for a folder with `POST api/2.0/files/folder/{folderId}/log/report`. The request only asks the background worker to stop, and the answer carries no body, so a following `GET api/2.0/files/folder/{folderId}/log/report` is what shows the task ending as cancelled. Asking to terminate when nothing is running is accepted and changes nothing, which makes the call safe to repeat. A report that has already finished is not undone by this call and its file stays in My documents. The caller needs read access to the folder and may not be a guest; a caller who fails the access rule is answered with 403, a folder that does not exist with 404, and a portal with the login history and audit trail section turned off with 402. Each caller can only terminate their own report.
+Stops the history report that the caller started for a folder with `POST api/2.0/files/folder/{folderId}/log/report`. Each caller can stop only their own report. Any user with read access to the folder can call it, except a guest. Other callers get 403. The call only queues a request to stop the job and returns no body. To see the task end as cancelled, use `GET api/2.0/files/folder/{folderId}/log/report`. If no report runs, the call changes nothing, so you can repeat it. A finished report stays, and its file remains in My documents. If the folder does not exist, the call returns 404. It returns 402 if the login history and audit trail section is turned off for the portal.
 
 ## Parameters
 
 |Name | In | Type | Description | Notes |
 |------------- | ------------- | ------------- | ------------- | -------------|
-| **folderId** | path | **Integer** (int32) | The folder whose running history report is to be given up. It is the folder that             was passed to the operation that started the report. | [required] |
+| **folderId** | path | **Integer** (int32) | The ID of the folder that was passed to             `POST api/2.0/files/folder/{folderId}/log/report`. | [required] |
 
 ## Responses
 

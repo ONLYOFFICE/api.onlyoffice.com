@@ -6,7 +6,7 @@
 
 Unlink Telegram
 
-Removes the link between the current user's account and the portal's Telegram bot, so that this user stops receiving notifications in Telegram. Any authenticated user may call it, and only for their own account: one member cannot unlink another. Nothing has to be linked beforehand, and the call is destructive but idempotent, returning `true` both when a link was removed and when there was none to remove, so a retry after a timeout is safe. Only the portal-side link is dropped: the chat itself stays in the user's Telegram, and the portal's bot configuration is untouched, so the other members keep their own links. Re-linking is not automatic, request a new link with `GET api/2.0/settings/telegram/link` and confirm the result with `GET api/2.0/settings/telegram/check`. Delivery over the other notification channels is unaffected; the channels enabled for the portal are listed by `GET api/2.0/settings/notification/channels`.
+Deletes the link between the current user's account and the portal's Telegram bot. After this call, the portal no longer sends the user notifications in Telegram. Any signed-in user can call it, including a guest. The call deletes only the caller's own link, and other members keep theirs. The call changes data, and you can repeat it. It returns `true` both when it deleted a link and when there was none. The chat stays in the user's Telegram. The bot settings of the portal and the other notification channels do not change. To list the channels of the portal, use `GET api/2.0/settings/notification/channels`. To link the account again, use `GET api/2.0/settings/telegram/link`.
 
 ## Parameters
 This endpoint does not need any parameter.

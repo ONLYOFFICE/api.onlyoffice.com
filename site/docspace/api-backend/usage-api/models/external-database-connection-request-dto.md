@@ -4,7 +4,7 @@ The connection parameters of an external database to test.
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 | **databaseType** | **String** | The engine of the external database: `mysql`, or `sqlite` on a Standalone installation. | [optional] [example: `mysql`] [nullable] |
-| **databaseTypeEnum** | [**ExternalDatabaseType**](external-database-type.md) | The engine named by `databaseType`, as the server reads it. A value sent here is ignored. | [optional] [enum: `0`, `1`] |
+| **databaseTypeEnum** | [**ExternalDatabaseType**](external-database-type.md) | The engine named by `databaseType`, as the server reads it. A value sent here is ignored. | [optional] [enum: `0`, `1`, `2`] |
 | **dbHost** | **String** | The host name or the IP address of the database server. | [optional] [example: `localhost`] [nullable] |
 | **dbPort** | **Integer** (int32) | The port the database server listens on. | [optional] [example: `3306`] |
 | **dbName** | **String** | The name of the database to connect to. | [optional] [example: `docspace`] [nullable] |

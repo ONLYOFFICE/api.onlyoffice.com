@@ -6,7 +6,7 @@
 
 Change the room cover
 
-Sets the cover picture and the background colour a room is shown with, and returns the whole room afterwards. `cover` accepts only an identifier listed by `GET api/2.0/files/rooms/covers`, and `color` only six hexadecimal digits with no leading number sign, so anything else is rejected as an invalid request. Either field may be sent on its own, an empty `cover` clears the picture, an empty `color` restores the default one, and an empty body leaves the room untouched. The cover is what the room shows while it has no uploaded logo: setting a logo with `POST api/2.0/files/rooms/{id}/logo` hides the cover without erasing it, and deleting that logo brings it back. The caller must be a manager of the room, an archived room is refused with 403, and an unknown or deleted room is answered with 404. Repeating the same request is harmless, and the cover survives archiving and unarchiving.
+Changes the cover image and the background color of a room, and returns the room. You can send either field alone. An empty `cover` removes the cover, and an empty `color` restores the default. An empty body changes nothing. The room shows its cover only while it has no logo. A logo from `POST api/2.0/files/rooms/{id}/logo` hides the cover but keeps it. Requires the room manager role in the room. Other callers get 403. An archived room also returns 403. The call changes data, and you can repeat it with the same body. The cover stays after archiving and unarchiving. The call returns 400 for an unknown `cover` or an invalid `color`. If the room does not exist or was deleted, the call returns 404.  Raises the `room.updated` webhook when the color or the cover changes. Raises the `agent.updated` webhook instead when the room is an AI agent.
 
 ## Parameters
 
@@ -23,9 +23,9 @@ Sets the cover picture and the background colour a room is shown with, and retur
 | **400** | The request body cannot be read, `color` is not six hexadecimal digits, `cover` is not an identifier from the cover gallery, or a third-party identifier refers to a storage account that is not connected | - | - |
 | **403** | The caller may not edit this room, or the room is archived | - | - |
 | **404** | No room with this ID exists, or the id is neither a 32-bit number nor a third-party identifier of a known storage type | - | - |
-| **500** | A third-party identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

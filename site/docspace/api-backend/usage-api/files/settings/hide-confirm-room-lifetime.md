@@ -6,7 +6,7 @@
 
 Hide confirmation dialog when changing room lifetime settings
 
-Stores whether the caller is warned before the lifetime settings of a room are changed, and returns the value that is now stored. A room lifetime moves the files of the room to the trash once they reach the configured age, which is why the interface confirms the change; this setting decides whether that confirmation is shown to the calling account. It belongs to that account alone: every authenticated role down to a guest may change its own copy, and an unauthenticated caller is refused. It works in both directions - `set=true` hides the warning, `set=false` brings it back - and is a hint for the interface only, so changing a room lifetime through `PUT api/2.0/files/rooms/{id}` is unaffected. The value is published as `hideConfirmRoomLifetime` by `GET api/2.0/files/settings`, which is the only way to read it back. A new account starts with the warning shown, and writing a value that is already stored is accepted and leaves the setting untouched. Hiding the warning does not shorten or extend any lifetime: what a room does with ageing files is decided by the room itself.
+Hides or shows the warning that the app shows before it changes the lifetime of a room. The setting is for the calling account. If `set` is true, the app hides the warning. If it is false, the app shows it again. Any signed-in user can call it. The call changes data, and you can repeat it with the same body. It returns the value that is now stored. The setting does not change room lifetimes or `PUT api/2.0/files/rooms/{id}`. To read it, use the `hideConfirmRoomLifetime` field of `GET api/2.0/files/settings`.
 
 ## Parameters
 

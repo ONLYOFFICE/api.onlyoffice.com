@@ -6,7 +6,7 @@
 
 Add a metadata field
 
-Adds a field to an existing metadata template. Only a DocSpace admin can change templates. The field name must be unique within the template regardless of case and at most 255 characters, the type must be one of the published ones, a choice field needs at least one option and unique option values, a field of another type takes no options. A field without `order` is placed after the last field of the template. The entries the template is already assigned to get the field without a value: nothing is written on them and no cascade runs. The answer is the created field with its generated option identifiers. A template that does not exist is answered with 404, an invalid field with 400.
+Adds a field to a metadata template. Requires a DocSpace admin. Other callers get 403. The call changes data. A repeated call returns 400, since the field name is then taken. A field without `order` goes after the last field of the template. Entries with the template get the field without a value. The response is the created field with the generated option IDs. If no template has this ID, the call returns 404. The call returns 400 if the name is empty, over 255 characters, or taken in any case. It also returns 400 for an unknown type or wrong options. A choice field needs at least one option, and its options must be unique. Other field types take no options.
 
 ## Parameters
 

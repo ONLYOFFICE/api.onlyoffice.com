@@ -6,7 +6,7 @@
 
 Get a signed download address
 
-Returns a direct download address for the current content of the file together with the signature token that the document service validates, which is what the portal hands over when the editors have to fetch the document themselves. The address points at the portal's file stream endpoint and is rewritten to the host the document service can reach, so on a deployment where the editors sit behind a private address it is not the address a browser should follow. The answer also carries the extension of the stored document, leading dot included. The caller needs read access to the file, and an unknown file id is reported as missing. The call only reads, and each call mints a fresh address and token rather than reusing the previous one, so the value is worth requesting again once a token has expired. For a link meant for a person, a plain address with no token to put behind a download button, use `GET api/2.0/files/file/{fileId}/presigneduri` instead.
+Returns a direct download URL of the current file content and a signature token for the document service. The portal rewrites the URL to the host that the document service can reach. So a browser may not reach this URL. The response also has the file extension, with the leading dot. Requires read access to the file. Other callers get 403. The call is read-only. Each call creates a new URL and token. Request them again after a token expires. If the file does not exist, the call returns 404. To get a link for a person, use `GET api/2.0/files/file/{fileId}/presigneduri`.
 
 ## Parameters
 

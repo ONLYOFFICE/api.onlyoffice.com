@@ -6,7 +6,7 @@
 
 Delete a color theme
 
-Removes a custom color theme from the portal by its ID. Requires Owner or DocSpaceAdmin (the EditPortalSettings permission). An ID belonging to one of the built-in default themes is not removable; the call succeeds but leaves the theme list unchanged. If the deleted theme was the currently selected one, the theme with the lowest remaining ID is selected automatically. This is a mutating, idempotent call: deleting an ID that is already gone succeeds without error and again leaves nothing changed. It returns the full updated theme configuration, including the (possibly new) selected theme.
+Deletes a custom color theme of the portal by its ID. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call changes data, and you can repeat it. For the ID of a built-in or a deleted theme, it changes nothing and returns no error. If the deleted theme was selected, the portal selects the theme with the lowest remaining ID. It returns all remaining themes and the selected one.
 
 ## Parameters
 

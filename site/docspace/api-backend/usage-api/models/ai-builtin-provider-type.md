@@ -1,5 +1,5 @@
 # AiBuiltinProviderType
-Union of all 17 built-in AI provider type identifiers.  The `external` provider has no built-in transport — it delegates every HTTP request to `PlatformAdapter.externalFetch` and parses the response with the inner provider selected by `Profile.basedOn`.
+The built-in AI provider types. `external` has no transport of its own: the requests go through a transport the embedding application supplies and are parsed with the provider named in `basedOn`.
 
 Possible values:
 

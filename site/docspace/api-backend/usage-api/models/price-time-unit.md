@@ -2,10 +2,11 @@
 
 Possible values:
 
-- `0` - None (`None`)
-- `1` - Hour (`Hour`)
-- `2` - Day (`Day`)
-- `3` - Week (`Week`)
-- `4` - Month (`Month`)
-- `5` - Year (`Year`)
-- `6` - ThreeYears (`ThreeYears`)
+- `1` - None (`None`)
+- `2` - Hour (`Hour`)
+- `3` - Day (`Day`)
+- `4` - Week (`Week`)
+- `5` - Month (`Month`)
+- `6` - Year (`Year`)
+- `7` - ThreeYears (`ThreeYears`)
+- `8` - Minute (`Minute`)

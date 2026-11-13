@@ -6,7 +6,7 @@
 
 Delete recent files
 
-Removes the listed entries from the Recent section of the calling account, the history of opened files that `GET api/2.0/files/recent` returns. Nothing is deleted from storage and no other member's history is touched; access to the entries is not checked at all, so a file the caller can no longer read can still be cleared from their own history. A file on a connected third-party account is cleared by its string id too, but only while the storage can still find it: the entry of a file removed from the storage stays in the history. Folder ids are accepted but change nothing because the section lists files only. The answer carries no body and reports nothing about how many entries were found: an empty request and an id that was never in the section are accepted alike. Repeating the call is safe, but an entry returns the next time the file is opened or `POST api/2.0/files/file/{fileId}/recent` is called for it. To hide the whole section instead, call `PUT api/2.0/files/displayrecent`.
+Deletes files from the Recent section of the calling account, which `GET api/2.0/files/recent` returns. The files themselves and the sections of other users stay unchanged. Any signed-in user can call it. The call does not check access, so you can delete a file that you can no longer read. Folder ids change nothing. If a third-party storage no longer has the file, its entry stays. The call changes data. You can repeat it with the same body. It returns an empty body and does not report what it deleted. The portal adds an entry again when the caller opens the file or calls `POST api/2.0/files/file/{fileId}/recent`. The call reads only `fileIds` and `folderIds` from the body. To hide the whole section, use `PUT api/2.0/files/displayrecent`. If a string id points to a storage account that is not connected, the call returns 400. If it names an unknown storage type, the call returns 404.
 
 ## Parameters
 
@@ -21,9 +21,9 @@ Removes the listed entries from the Recent section of the calling account, the h
 | **200** | Empty answer: the listed entries no longer appear in the Recent section | - | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request body cannot be read, or a third-party file or folder identifier refers to a storage account that is not connected | - | - |
 | **404** | A third-party file or folder identifier names a storage type the portal does not know | - | - |
-| **500** | An id is a number that is not a 32-bit integer, or a third-party file or folder identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

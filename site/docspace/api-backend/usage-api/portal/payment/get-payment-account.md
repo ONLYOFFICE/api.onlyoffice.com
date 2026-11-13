@@ -6,7 +6,7 @@
 
 Get the billing account page
 
-Hands back the address of the portal page on which the billing account is managed - the payment method on file, the invoices and the receipts - so a client can link to it instead of assembling the address itself. The portal must already have a billing customer: one that has never had it gets an empty result, and an installation without a billing service answers 403. Only the payer or the portal owner may read it, and the call changes nothing. The value is relative to the portal root (`payment.ashx`), and the optional `backUrl` is appended to it as a query parameter so the page can send the user back where they came from. It is not a checkout page: a plan is bought with `PUT api/2.0/portal/payment/url` and a payment method is attached with `GET api/2.0/portal/payment/checkoutsetupurl`.
+Returns the address of the portal page where the payer manages the billing account. The page shows the payment method, the invoices, and the receipts. The address is relative to the portal root. The call adds `backUrl` to the address as a query parameter. If the portal has no billing customer, the call returns an empty result to any caller. The payer is the portal user whose email is the email of the billing customer. Otherwise, only the payer or the portal owner can call it. Other callers get 403. The call also returns 403 if the installation has no billing service. The call is read-only. If `backUrl` is not a valid URL or is too long, the call returns 400. The page buys nothing. To buy a plan, use `PUT api/2.0/portal/payment/url`. To attach a payment method, use `GET api/2.0/portal/payment/checkoutsetupurl`.
 
 ## Parameters
 

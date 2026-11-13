@@ -6,7 +6,7 @@
 
 Validate the TFA code
 
-Verifies a two-factor authentication code for the account named in the confirmation link being used, and completes that account's pending TFA step. The call is reachable only with a confirmation token carrying the `TfaActivation` or `TfaAuth` role, issued by `GET api/2.0/settings/tfaapp/confirm` or by the login flow; an ordinary bearer token is refused. Both a code from the authenticator application and one of the account's unused backup codes are accepted, and a backup code is spent by the check. The call mutates state: it signs the account in, clears the confirmation cookie so the link cannot be replayed, and on the very first activation it generates the backup codes later returned by `GET api/2.0/settings/tfaappcodes`. Pass `session=true` to keep that sign-in for the browser session only instead of a persistent one. It answers `true` only for that first activation and `false` when an application was already linked. A wrong code is rejected as an invalid request, and further attempts are refused once the portal's login attempt limit is reached. The call also works while the portal's payment is overdue.
+Checks a two-factor code for the account of the confirmation link. Then it completes the pending TFA step. Sign the request with the confirmation token of a `TfaActivation` or `TfaAuth` link. The sign-in flow or `GET api/2.0/settings/tfaapp/confirm` issues that link. With an ordinary sign-in token, the call returns 403. It accepts a code from the app or an unused backup code, which it spends. The call changes data and signs the account in. It clears the confirmation cookie, but the key stays valid for one hour by default. A repeat with that key accepts the same app code for 5 minutes. It signs in again and returns `false`. For a `TfaAuth` link, send the repeat without the new session cookie. A repeat with a spent backup code returns 400. On the first activation, it also generates the backup codes. It returns `true` for the first activation, and `false` if an app was already linked. If the authenticator method is off on the portal, the call checks no code and returns `false`. If the code is wrong, the call returns 400. If the account exceeds the portal login attempt limit within a minute, the call returns 403. The call works even when the portal payment is overdue.
 
 ## Parameters
 
@@ -21,9 +21,9 @@ Verifies a two-factor authentication code for the account named in the confirmat
 | **200** | `true` when the code completed a first activation and backup codes were generated, `false` when an application was already linked | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request body cannot be read or has no `code`, or the code matches neither the authenticator application nor an unused backup code | - | - |
 | **403** | The account the confirmation link was issued for has used up the portal's login attempt limit for TFA codes | - | - |
-| **500** | The code is `null`, empty or consists of whitespace only | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

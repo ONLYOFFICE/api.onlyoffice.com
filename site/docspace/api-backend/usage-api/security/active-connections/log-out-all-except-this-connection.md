@@ -6,7 +6,7 @@
 
 Log out other connections
 
-Closes every active connection of the calling user except the one this request was made with, so the current client keeps working while every other browser and device is signed out. Any signed-in user may call it for their own account and nothing has to be called first. The connection to keep is the one behind the portal authentication cookie: a request authenticated with a token in the `Authorization` header has none, and then every connection of the user is closed, including the one that token belongs to - read `loginEvent` from `GET api/2.0/security/activeconnections` first to see which connection, if any, will survive. The call is mutating and destructive for the other sessions, and idempotent: the tokens behind them stop working, their clients are disconnected at once and a logout entry is written to the portal audit trail. It answers with the display name of the calling user, while an empty answer with status 200 means the attempt failed and nothing can be assumed about what was closed.
+Ends all active connections of the calling user except the connection of this request. Any signed-in user can call it, including a guest. The call keeps the connection in the portal cookie of the request. Without the cookie, for example with a token in the `Authorization` header, it ends every connection. To see which connection stays, first read `loginEvent` of `GET api/2.0/security/activeconnections`. The tokens and cookies of the ended connections stop working. This cannot be undone, but you can repeat the call. It returns the display name of the calling user. If the call fails, it still returns 200 with an empty result. Then you cannot tell which connections it ended.
 
 ## Parameters
 This endpoint does not need any parameter.

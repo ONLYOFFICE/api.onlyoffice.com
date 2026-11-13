@@ -6,7 +6,7 @@
 
 Get room cover gallery
 
-Returns the gallery of cover pictures a room can be given: every entry pairs the identifier to send to `POST api/2.0/files/rooms/{id}/cover` with the drawing itself as inline vector markup ready to be rendered. The gallery is built into the product rather than stored per portal, so it is the same for every account and every room, does not depend on what rooms exist, and its identifiers do not change with the language of the request. The identifiers are unique and stable, which makes them safe to keep in a client, while the drawings behind them may change between product versions. Any account of the portal may read the gallery, but a guest is refused. The list is the only source of valid cover identifiers: a value that is not in it is rejected wherever a cover is set, including room creation and room update. The call changes nothing and is safe to repeat.
+Returns the built-in cover images for rooms. Each entry has the ID for `POST api/2.0/files/rooms/{id}/cover` and the image as vector markup. The list is the same for all portals, rooms, accounts, and languages. The IDs do not change, so you can store them. The images can change between product versions. Any signed-in user can call it. A guest who has nothing shared on the portal gets 403. The call is read-only. Only the IDs of this list are valid covers when you create or change a room.
 
 ## Parameters
 This endpoint does not need any parameter.

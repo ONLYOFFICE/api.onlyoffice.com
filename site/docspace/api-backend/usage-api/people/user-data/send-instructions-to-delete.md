@@ -6,7 +6,7 @@
 
 Send the deletion instructions
 
-Emails the caller a confirmation link that lets them delete their own profile, and is the first step of the self-service profile removal. It acts on the authenticated account only and takes no parameters, so it cannot be used to remove somebody else - an administrator removes another user through `DELETE api/2.0/people/{userId}`. The caller has to be a regular portal account: the portal owner and an account imported from LDAP are rejected, because neither can delete itself. The call sends mail and does not change the profile; the deletion happens later, when the caller follows the emailed link and the client calls `DELETE api/2.0/people/@self` with the confirmation token from it. The answer is a ready-to-display message naming the address the link was sent to, and the address is wrapped in bold HTML markup, so strip the markup before showing it outside a web page. Repeated calls are throttled, and each one sends a new link.
+Emails the caller a link that confirms the deletion of their own profile. Any signed-in user can call it. The portal owner and LDAP accounts get 403. The call changes no data and sends an email. Within 10 minutes after the email, a repeated call sends no new email but returns the same text. A later call emails a new link. Every link sent stays valid for 7 days. To delete the profile, the app calls `DELETE api/2.0/people/@self` with the confirmation token from the link. To delete another account, use `DELETE api/2.0/people/{userId}`. The call returns a text that you can show to the user, with the email address of the link. The address is wrapped in HTML bold tags. Remove them before you show the text outside a web page.
 
 ## Parameters
 This endpoint does not need any parameter.

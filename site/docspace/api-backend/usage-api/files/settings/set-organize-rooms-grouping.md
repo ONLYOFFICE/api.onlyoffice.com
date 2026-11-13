@@ -6,7 +6,7 @@
 
 Organize rooms grouping
 
-Stores whether the caller sees rooms arranged by the groups they belong to instead of one flat list, and returns the value that is now stored. It is a preference of the calling account: every authenticated role down to a guest may change its own copy, and an unauthenticated caller is refused. The groups themselves are the room groups managed under `api/2.0/files/group`, and they exist whether or not this setting is on - the portal only records the preference, while `GET api/2.0/files/rooms` keeps returning the same rooms either way, so the arrangement is done by the client. Writing a value that is already stored is accepted and leaves the setting untouched. The value is published as `organizeRoomsGrouping` by `GET api/2.0/files/settings`, which is the only way to read it back. A new account starts with the grouping on. Turning it off changes no group: the groups, the rooms in them and who may see them stay exactly as they were, and are still read through the room group operations.
+Changes whether the calling account sees rooms arranged by room groups. It returns the value that is now stored. Any signed-in user can call it. The call changes data, and you can repeat it with the same body. The setting only guides the app. The room groups under `api/2.0/files/group` and the list of `GET api/2.0/files/rooms` stay the same either way. To read the value, use the `organizeRoomsGrouping` field of `GET api/2.0/files/settings`.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Get users for document protection
 
-Lists the users the file is shared with, which is what a client offers when the author protects a document and picks who may still edit it. The list is built from the whole access list of the file: every entry that is not an explicit denial, with groups expanded into their members, the caller themselves and deleted accounts left out, ordered by display name. Access inherited from the room counts, so a member who never received a share on the file itself is listed too. A file kept in the legacy project storage always answers with an empty list rather than with its team. The call only reads. A guest is refused, an anonymous caller is answered with nothing, and a file id that resolves to nothing is refused as well instead of being reported as missing. For the readers to offer as mentions inside the editor use `GET api/2.0/files/file/{fileId}/sharedusers`.
+Returns the users the file is shared with, to pick who can still edit a protected document. The list comes from the whole access list of the file, including access from the room. Groups expand into their members. The list excludes explicit denials, the caller, and deleted accounts. It is sorted by display name. For a file in the legacy project storage, the list is empty. Any signed-in user can call it, except a guest. A guest gets 403. An anonymous caller gets an empty response. The call is read-only. If the file does not exist, the call also returns 403. To get the readers to mention in the editor, use `GET api/2.0/files/file/{fileId}/sharedusers`.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Get the user quota settings
 
-Returns the portal's per-user default storage quota: whether it is enabled and, if so, its size in bytes. Requires Owner or DocSpaceAdmin (the EditPortalSettings permission); every other authenticated role, and an anonymous caller, is refused. This is a read-only, idempotent call. When `enableQuota` is false, the size value is not enforced and users get unlimited personal storage regardless of what it holds. The response supports conditional requests: send the standard If-Modified-Since header with the previous `lastModified` value, and an unchanged response comes back empty instead of resending the settings.
+Returns the default storage quota for each user of the portal: whether it is on, and its size in bytes. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. If `enableQuota` is false, the portal does not apply the default size. It supports `If-Modified-Since` with the `Last-Modified` value of the last answer. If nothing changed, it returns 304 with an empty body.
 
 ## Parameters
 This endpoint does not need any parameter.

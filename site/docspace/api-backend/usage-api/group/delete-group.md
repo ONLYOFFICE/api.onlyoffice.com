@@ -6,7 +6,7 @@
 
 Delete a group
 
-Deletes a group and withdraws the access it had been granted to rooms, folders and files. The caller needs the permissions to edit groups and to add and remove users, and the ID has to belong to a group that has not been deleted, otherwise the operation answers 404. The removal is permanent and cannot be undone, and it affects sharing: everything that was shared with the group loses that share, so members who had access only through this group lose it too. The accounts themselves are kept - only their membership disappears. The call answers 204 with no body and raises a `GroupDeleted` webhook; a second call with the same ID answers 404 rather than succeeding again. To empty a group without deleting it, move its members away with `PUT api/2.0/group/{fromId}/members/{toId}` or remove them through `DELETE api/2.0/group/{id}/members`.
+Deletes a group and removes its access to rooms, folders, and files. Members who had access only through the group lose it. The call keeps the accounts of the members. Requires a DocSpace admin. Other callers get 403. The deletion cannot be undone. A repeated call returns 404. The call returns 204 with no body. If no group has this ID, the call returns 404. To empty a group without deleting it, use `DELETE api/2.0/group/{id}/members`.  Raises the `group.deleted` webhook once for the deleted group, without `user.*` webhooks for its former members.
 
 ## Parameters
 

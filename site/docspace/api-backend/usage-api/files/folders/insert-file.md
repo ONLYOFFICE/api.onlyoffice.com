@@ -6,7 +6,7 @@
 
 Insert a file
 
-Stores a file in the folder named by the path in a single request, taking its name from `title` rather than from the uploaded part, which is what separates it from `POST api/2.0/files/{folderId}/upload`. The content may arrive either as a multipart part or as the raw request body. The name is stripped of characters a title cannot hold and truncated, and `createNewIfExist` settles the clash: false adds a new version to the file that already carries the name, true keeps both by giving the new one a numeric suffix. The caller needs the right to add content to the folder, so a reader, an editor and a guest get 403, a section root and an archived room are refused as well, and an unknown folder gives 404. Formats the portal converts are converted afterwards in the background; pass `keepConvertStatus` to keep the outcome readable through `GET api/2.0/files/file/{fileId}/checkconversion`. The answer is the stored file. A large payload belongs in a chunked session instead.
+Uploads a file to the folder in one request and names it by `title`. The content can be a multipart part or the raw request body. To name the file by the uploaded part, use `POST api/2.0/files/{folderId}/upload`. Requires the right to create content in the folder. Other callers get 403. In a room, its owner, room managers, and content creators have it. A guest has it there only as a content creator. In My documents, the owner and anyone with read and write access to the folder have it. A section root, an archived or private room, and an AI agent or AI project root also return 403. The call changes data. It removes characters that a title cannot have and shortens a long name. If the folder has a file with this name, `createNewIfExist` true stores a copy with a numeric suffix. With false, the call adds a new version to that file if the caller can edit it. Otherwise, it stores a second file with the same name. A guest never adds a version this way. So a repeated call adds another version or another file. A `version` above 1 in the response means that the call added a version. The portal converts some formats in the background after the upload. To read that result with `GET api/2.0/files/file/{fileId}/checkconversion`, pass `keepConvertStatus`. A missing folder returns 404. The call returns 402 if the file is over the upload limit or a storage quota. If the installation does not allow uploads with this extension, the call returns 415. If the file is not a PDF and the room is a form-filling room, the call returns 403. To upload a large file, use `POST api/2.0/files/{folderId}/session`.  Raises the `file.created` and `file.uploaded` webhooks for a new file and for a new version of an existing file.
 
 ## Parameters
 
@@ -32,12 +32,12 @@ Stores a file in the folder named by the path in a single request, taking its na
 |------------- | ------------- | ------------- | -------------|
 | **200** | The stored file with its id and the title it was actually saved under; a `version` above 1 means the content was added to a file that already carried this name instead of creating a new one | [**FileWrapper**](../../models/file-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **402** | The file exceeds the single-request upload limit, or storing it would exceed a storage quota or size limit | - | - |
-| **403** | The caller cannot add content to this folder | - | - |
+| **403** | The caller cannot add content to this folder, the folder is a section root or in a private room, or a file that is not a PDF is stored in a form-filling room | - | - |
 | **404** | No folder with the specified ID | - | - |
 | **415** | The installation restricts uploadable formats and the file extension is not among them | - | - |
-| **500** | A file that is not a PDF is stored in a form-filling room | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

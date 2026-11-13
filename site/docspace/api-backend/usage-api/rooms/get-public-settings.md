@@ -6,7 +6,7 @@
 
 Get room template public access
 
-Reports whether the room template addressed by `id` is shared with everyone or is reachable only by the accounts it was explicitly shared with. True means the Everyone group holds read access, so any member allowed to create rooms can build one from the template with `POST api/2.0/files/rooms/fromtemplate`; false means only the owner and the named recipients can. The identifier has to belong to a room template — take it from `templateId` of `GET api/2.0/files/roomtemplate/status`, or from the folder list of `GET api/2.0/files/rooms` called with `searchArea` set to 4 — while an ordinary room, a deleted template or an unknown value is answered as missing. The caller needs read access to the template, so somebody else's private template is refused even for a portal administrator, and members who cannot reach the Templates section at all are refused whatever the template's state. The call only reads state; use `PUT api/2.0/files/roomtemplate/public` to change it.
+Returns whether a room template is shared with everyone. If `true`, the Everyone group has read access. Then any user who can create rooms can use the template with `POST api/2.0/files/rooms/fromtemplate`. If `false`, only the owner of the template and the users it is shared with can use it. Requires read access to the template. Other callers get 403, even a DocSpace admin. The user types user and guest always get 403. The call is read-only. It returns 404 if `id` is an ordinary room, a deleted template, or unknown. If `id` is less than 1, the call returns 400. To change the setting, use `PUT api/2.0/files/roomtemplate/public`.
 
 ## Parameters
 

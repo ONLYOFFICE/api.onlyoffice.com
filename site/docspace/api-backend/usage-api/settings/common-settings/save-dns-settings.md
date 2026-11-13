@@ -6,7 +6,7 @@
 
 Save the DNS settings
 
-Maps a custom domain name onto the current tenant, or clears the mapping, so the portal becomes reachable under the caller's own DNS name instead of only its default alias. Available only on a Standalone (self-hosted) installation; on SaaS the call is always refused. Requires Owner or DocSpaceAdmin (the EditPortalSettings permission). Disable the mapping by passing `enable=false`, in which case the domain name in the request is ignored. A domain that collides with the portal's reserved base domain, or otherwise fails validation, is rejected without changing the current mapping. This is a mutating, idempotent call. On success the previous domain also stops answering, and any CSP configuration referencing it is updated to the new one.
+Sets a custom domain for the portal on a Standalone installation, or removes it. The portal address then changes to that domain. If `enable` is false or the name is empty, the call removes the custom domain. On SaaS, the call returns 415. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call changes data. Do not repeat it with the same domain. You can repeat a removal. After the change, CSP settings that named the old domain name the new one.
 
 ## Parameters
 
@@ -21,9 +21,9 @@ Maps a custom domain name onto the current tenant, or clears the mapping, so the
 | **200** | Confirmation that the DNS mapping was updated | [**StringWrapper**](../../models/string-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | The caller has no portal-settings right | - | - |
 | **415** | The portal is not a Standalone installation, so a custom domain cannot be mapped | - | - |
-| **500** | The installation hides the DNS settings section, or the domain name is not a valid host name, lies under the portal's base domain, has a length outside the allowed range, is reserved, or is already the alias or mapped domain of a portal, this one included | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

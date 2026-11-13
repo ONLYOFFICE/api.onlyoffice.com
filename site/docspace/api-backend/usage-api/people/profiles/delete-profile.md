@@ -6,7 +6,7 @@
 
 Close my own profile
 
-Closes the calling account at its owner's request: it does not erase the profile, it disables it, ends every session it has and tells the portal administrators that the account asked to be removed. It is the second step of the self-service removal - the first is `PUT api/2.0/people/self/delete`, which mails the confirmation link - so the request has to carry the confirmation token from that link rather than an ordinary session. It always acts on the calling account and takes no parameters; the portal owner and an account imported from LDAP cannot close themselves and get 403. After the call the account has the `Terminated` status and can no longer sign in, but its rooms, files and group memberships are untouched, which is why an administrator still has to erase it through `DELETE api/2.0/people/{userId}` - that operation requires exactly this disabled state. The step is reversible until then: re-enabling the account through `PUT api/2.0/people/status/{status}` restores it. The call raises a `UserUpdated` webhook, not a delete one, and answers with the profile in its new state.
+Disables the account of the caller at the request of its owner. This is the second step of self-removal. The first step, `PUT api/2.0/people/self/delete`, emails the confirmation link. Sign the request with the confirmation token from that link. The portal owner and an LDAP account get 403. If the account no longer exists, the call returns 401. The call changes data, and a repeated call with the same token returns 401. It sets the `Terminated` status, ends all sessions of the account, and notifies the DocSpace admins. The account then cannot sign in. The call keeps its rooms, files, and group memberships. A DocSpace admin can then delete the account with `DELETE api/2.0/people/{userId}`. Until then, `PUT api/2.0/people/status/{status}` can enable it again. The call returns the profile with the new status.  Raises the `user.updated` webhook and not `user.deleted`.
 
 ## Parameters
 This endpoint does not need any parameter.
@@ -17,8 +17,7 @@ This endpoint does not need any parameter.
 |------------- | ------------- | ------------- | -------------|
 | **200** | The profile of the caller with the Terminated status | [**EmployeeFullWrapper**](../../models/employee-full-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | The caller is the portal owner, an LDAP account or a system account | - | - |
-| **404** | The calling account no longer exists | - | - |
-| **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
+| **401** | The link is invalid or expired, or the calling account no longer exists | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

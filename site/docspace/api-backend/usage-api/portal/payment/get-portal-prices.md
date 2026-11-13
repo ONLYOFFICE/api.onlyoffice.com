@@ -6,7 +6,7 @@
 
 Get the product prices
 
-Lists what one unit of every purchasable product costs, keyed by the product name that `quantity` takes in the purchase operations, so a client can price a plan or a wallet service without reading the whole quota list. Nothing has to be called first, and the caller needs the permission to edit the portal settings, which portal administrators and the owner have. The call is read-only. Prices are given in the one currency resolved for this request from the portal region, which `GET api/2.0/portal/payment/currencies` reports; a product with no price in that currency comes back as `0` rather than being left out, so a zero means unpriced and not free. The list covers the products on offer, not the portal's own plan - the plan in force, with its limits and its usage, is `GET api/2.0/portal/payment/quota`.
+Returns the price of one unit of each product that the portal can buy. The keys are the product names that `quantity` takes in the purchase operations. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. All prices are in one currency, which the call picks from the IP address of the caller. If no product has a price in that currency, the call uses EUR in Europe and USD elsewhere. A product without a price in the chosen currency has the price 0. So 0 means that the product has no price, not that it is free. To read the currencies of the portal, use `GET api/2.0/portal/payment/currencies`. To read the current plan with its limits and usage, use `GET api/2.0/portal/payment/quota`.
 
 ## Parameters
 This endpoint does not need any parameter.

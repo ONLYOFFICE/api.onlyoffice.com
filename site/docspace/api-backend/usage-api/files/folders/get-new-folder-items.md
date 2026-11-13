@@ -6,7 +6,7 @@
 
 Get new folder items
 
-Lists the entries of a folder that are new for the calling member - the files and folders created or changed there since they last opened it - ordered from the most recently changed backwards. It is what the badge of a room is filled from, and it is personal: two members of the same room get different answers. Reading this list does not clear the marks, so the same entries come back until the folder itself is opened with `GET api/2.0/files/{folderId}`, which does clear them. A folder with nothing new answers with an empty list, and marks disappear on their own when the entry behind them is deleted or moved out of reach. The caller needs read access to the folder and is otherwise answered with 403. The whole list arrives at once, without paging or filtering, and the call is read-only.
+Returns the entries of a folder that are new for the caller. These are files and folders created or changed since the caller last opened the folder. The list starts with the most recently changed entry. Each user gets their own list. Requires read access to the folder. Other callers get 403. The call is read-only. It does not clear the new-item marks, so a repeated call returns the same entries. To clear them, open the folder with `GET api/2.0/files/{folderId}`. A mark disappears when its entry is deleted or moved out of reach. The call returns the whole list in one response, without paging and filters. It also returns 403 for a folder in the trash. If the folder does not exist, the call returns 404.
 
 ## Parameters
 

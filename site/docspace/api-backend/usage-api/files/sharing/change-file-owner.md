@@ -6,7 +6,7 @@
 
 Change the room or file owner
 
-Hands the ownership of the listed rooms and files over to a single account, and returns the entries as they look afterwards. Among folders only rooms are accepted - take their identifiers from `GET api/2.0/files/rooms`; a plain folder is refused. A file is accepted only while it lies in the portal's common section, so a file kept inside a room or in a personal section is refused as well, and so is a file that is locked or currently open in the editor. The new owner has to be an active account that is allowed to manage rooms, and a private room additionally requires that this account has already set up its encryption keys; a deactivated account, a guest or a plain member is rejected. The caller must be the creator of every listed room, or a portal administrator. The call mutates the entries one at a time and stops at the first item it may not touch, leaving the entries already processed changed, so a partial answer is possible; an item whose owner is already the target account is returned untouched, which makes a repeat safe. The previous owner keeps access to a transferred room as its manager, while a transferred file is saved as a new version authored by the new owner. An entry that lives on a connected third-party account is quietly left out.
+Changes the owner of the listed rooms and files to one account. Requires the owner of each listed entry, or a DocSpace admin. Other callers get 403. The call changes data, one entry at a time. It stops at the first entry it may not change, and earlier entries stay changed. An entry that the account already owns stays unchanged, so you can repeat the call. The previous owner stays in a transferred room as its room manager. A transferred file gets a new version by the new owner. The call skips third-party files. The call returns 403 if the new owner is not an active DocSpace admin or room admin. It also returns 403 for a private room if the new owner has no encryption keys. It also returns 403 for a folder that is not a room, or a file outside the common section. A file that is locked or being edited also returns 403. If the new owner lacks keys to some encrypted files of a private room, the call returns 409. To find these files, use `GET api/2.0/privacyroom/{roomId}/access/missing`. After their keys are added, repeat the call. Without `userId`, the call returns 400. It also returns 400 if a string file id points to a storage account that is not connected.  Raises the `room.updated` webhook for every listed room whose owner changes. Raises the `agent.updated` webhook instead for a listed AI agent whose owner changes. Raises the `file.updated` webhook for every file whose owner changes.
 
 ## Parameters
 
@@ -19,11 +19,12 @@ Hands the ownership of the listed rooms and files over to a single account, and 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | The rooms and files whose owner has been changed, as folder and file objects | [**FileEntryBaseArrayWrapper**](../../models/file-entry-base-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **400** | The request body cannot be read or has no `userId` | - | - |
+| **400** | The request body cannot be read or has no `userId`, or a third-party file identifier refers to a storage account that is not connected | - | - |
 | **403** | The new owner is not an active account allowed to manage rooms or has not set up encryption keys for a listed private room, the caller may not change the owner of a listed entry, a listed folder lies outside the rooms and common sections, or a listed file is locked, being edited or lies outside the common section | - | - |
-| **500** | An id is a number that is not a 32-bit integer | - | - |
+| **409** | The new owner holds no key for some encrypted files of a listed private room: `GET api/2.0/privacyroom/{roomId}/access/missing` names them, and the call can be repeated once their keys are written | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

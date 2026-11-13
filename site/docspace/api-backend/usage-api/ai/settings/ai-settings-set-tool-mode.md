@@ -1,12 +1,12 @@
 # aiSettingsSetToolMode
 
-> AiSuccessResponse aiSettingsSetToolMode(AiSettingsSetToolModeRequest)
+> AiToolPermissionModeWrapper aiSettingsSetToolMode(AiSettingsSetToolModeRequest)
 
 `PUT /api/2.0/ai/config/tool-mode`
 
 Set the tool permission mode
 
-Stores the calling user's tool permission mode and returns the stored result. The body (`{ mode }`) is proxied unchanged to the DocSpace AI service, which rejects a value outside its `ToolPermissionMode` enum. The mode applies to every chat of the user in the portal.
+Stores the calling user's tool permission mode and returns the stored result. The body (`{ mode }`) is proxied unchanged to the DocSpace AI service, which rejects a value outside its `ToolPermissionMode` enum with 400; the answer is the stored mode inside the service's `response` envelope. The mode applies to every chat of the user in the portal.
 
 ## Parameters
 
@@ -18,7 +18,8 @@ Stores the calling user's tool permission mode and returns the stored result. Th
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The calling user's stored tool permission mode, as `{ mode }`. | [**AiSuccessResponse**](../../models/ai-success-response.md) | - |
+| **200** | The calling user's stored tool permission mode, `{ mode }` under `response`. | [**AiToolPermissionModeWrapper**](../../models/ai-tool-permission-mode-wrapper.md) | - |
+| **400** | `mode` is not one of the `ToolPermissionMode` members. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **401** | Missing `asc_auth_key` cookie or `Authorization` header. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **403** | AI is disabled for this portal, the caller is a guest, or the room named by `entityId` is one the caller cannot open. Relayed from the DocSpace AI service or the Files API. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
 | **413** | The request body is larger than 100 KB, the JSON parser's limit on this route. | [**AiErrorResponse**](../../models/ai-error-response.md) | - |
@@ -26,7 +27,7 @@ Stores the calling user's tool permission mode and returns the stored result. Th
 
 ## Return type
 
-[**AiSuccessResponse**](../../models/ai-success-response.md)
+[**AiToolPermissionModeWrapper**](../../models/ai-tool-permission-mode-wrapper.md)
 
 ## Authorization
 

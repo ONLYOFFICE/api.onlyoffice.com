@@ -6,7 +6,7 @@
 
 Check room tag usage
 
-Reports whether any room still carries the named tag, which is the check to run before the tag is deleted from the catalog. Only a portal administrator may call it, and every other account is refused. The name is matched exactly against the catalog, and a name that is not in it is answered with 404. That also tells the two ways a tag stops being used apart: taking the tag off the last room that carried it leaves the tag in the catalog and turns the answer to false, while deleting that last room removes the tag itself, after which the call answers 404. A true answer means at least one room, active or archived, still references the tag, so deleting it with `DELETE api/2.0/files/tags` would strip it from those rooms. The handler reads the tag name from the query string, so the value has to be sent twice: in the path segment and as the `tagName` query parameter.
+Returns whether any room still has the named tag. Run it before you delete the tag from the catalog. Requires a DocSpace admin. Other callers get 403. The call is read-only. It returns `true` if at least one active or archived room has the tag. Then `DELETE api/2.0/files/tags` would remove the tag from those rooms. After you remove the tag from its last room, the call returns `false`. If the last room with the tag is deleted, the portal deletes the tag too. Then the call returns 404. Send the name in the path and also as the `tagName` query parameter. The call reads only the query value. On MySQL, the name match ignores case. If no tag has this name, or the query has no `tagName`, the call returns 404.
 
 ## Parameters
 

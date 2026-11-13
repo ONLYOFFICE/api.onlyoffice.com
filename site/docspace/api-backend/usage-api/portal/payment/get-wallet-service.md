@@ -6,7 +6,7 @@
 
 Get a wallet service
 
-Returns one wallet service by name, for a client that already knows which service it needs and does not want the whole catalogue. `service` is the name of the service - `Storage`, `Backup`, `AITools`, `Admin`, `DocsCloud`, `DocsCloudDevPack` or `AISearch` - and a name this installation does not sell answers 404. Nothing has to be called first, the caller needs the permission to edit the portal settings, and the call is read-only. The answer has the same shape as one item of `GET api/2.0/portal/payment/walletservices` - the price of a unit, the unit, the limits the service grants and its service name - except that the variants of a service are not grouped into `innerServices` here, because a single service is looked up directly. The price is in the currency resolved for the request.
+Returns one wallet service by its name. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. The call returns 404 if the installation does not sell the service. It also returns 404 for AI tools and AI search while AI is turned off for the portal. If `service` is empty or is not a wallet service, the call returns 400. The item has the fields of an item of `GET api/2.0/portal/payment/walletservices`. Unlike that list, it does not group the variants of a service in `innerServices`. The price is in the currency of the request.
 
 ## Parameters
 

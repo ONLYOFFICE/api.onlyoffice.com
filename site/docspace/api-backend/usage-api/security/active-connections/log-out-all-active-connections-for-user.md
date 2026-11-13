@@ -6,7 +6,7 @@
 
 Log out a user everywhere
 
-Closes every active connection of one portal user: the connections are marked inactive, every token and cookie issued to that user before the call stops working, the clients holding them are disconnected and a logout entry is written to the portal audit trail. Nothing has to be called first; `userId` is the portal user ID that `GET api/2.0/people` returns. A user may pass their own ID, while ending somebody else's connections requires a DocSpace administrator and any other caller is refused with 403. The call is mutating, destructive for those sessions and idempotent - a user with nothing open is not an error - and it returns no content, so the state afterwards is read from `GET api/2.0/security/activeconnections`. A caller who ends their own connections is handed a fresh cookie in the response and stays signed in through a new connection. Nothing else about the user changes: the account stays enabled and the password stays valid, and to keep the current connection alive instead use `PUT api/2.0/security/activeconnections/logoutallexceptthis`.
+Ends all active connections of one portal user. Every token and cookie issued to that user before the call stops working. This cannot be undone. Any signed-in user can end their own connections, including a guest. Only a DocSpace admin can end the connections of another user. Other callers get 403. You can repeat the call. A user with no connections, or an unknown ID, also returns 200. The response has no body. If callers end their own connections, the response sets a new auth cookie, so they stay signed in. The account stays active, and the password stays valid. To keep the current connection, use `PUT api/2.0/security/activeconnections/logoutallexceptthis`.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Check the PDF file
 
-Tells whether a file is a PDF form that can be filled out in the portal, and answers with a single boolean. The check is by content, not by extension: the beginning of the file is read and the answer is `true` only when it carries the marker the editors write into the forms they produce, so an ordinary PDF, and a PDF form made in other software, both answer `false`. A file whose name is not a PDF at all answers `false` without being read. Use it before offering the form-filling operations on a file, because a document that answers `false` cannot be started for filling. The caller needs read access to the file, and read access is enough - a member of the room with read-only rights gets the answer; a caller without access to the room is refused and an anonymous caller is rejected. The operation is read-only and idempotent. It says nothing about the state of the filling - for that read `GET api/2.0/files/file/{fileId}/formroles`.
+Returns `true` if a file is a PDF form made in the editors, and `false` otherwise. Requires read access to the file. Other callers get 403. The call is read-only. The call reads the start of the file and looks for the mark that the editors write into their forms. So an ordinary PDF and a PDF form from other software return `false`. A file without the PDF extension returns `false` without a read. Form filling can start only for a file that returns `true`. To read the state of the filling, use `GET api/2.0/files/file/{fileId}/formroles`. If no file has this id, the call returns 404.
 
 ## Parameters
 
@@ -21,9 +21,9 @@ Tells whether a file is a PDF form that can be filled out in the portal, and ans
 | **200** | True when the file is a PDF form made in the editors, false otherwise | [**BooleanWrapper**](../../models/boolean-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | The caller cannot read the file | - | - |
 | **404** | The file id resolves to nothing | - | - |
-| **500** | The file is a PDF form in a form-filling room whose filling has not started, and the caller may only fill forms there | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

@@ -6,7 +6,7 @@
 
 Get the portal hostname
 
-Returns the hostname the current request arrived on, exactly as sent in the HTTP Host header, so a client mid-setup can learn the address the portal is actually reachable at. This call is not for a normal logged-in session: it requires a confirmation link bearing the Wizard claim, of the kind generated during initial portal setup, and the link is consumed as part of authenticating the request. This is a read-only, idempotent call. The value reflects whatever the caller connected through, including a reverse proxy's public name, and is not necessarily the tenant's configured alias or mapped domain.
+Returns the host name of the current request, as its `Host` header states it. Sign the request with the confirmation token of the setup wizard. A signed-in user without the token gets 403, even a DocSpace admin. An invalid or expired token returns 401. Take the token from `wizardToken` of `GET api/2.0/settings` before setup is complete. The call is read-only. The value is the name that the caller connected to, such as the public name of a proxy. It can differ from the alias or the custom domain of the portal.
 
 ## Parameters
 This endpoint does not need any parameter.
@@ -16,7 +16,8 @@ This endpoint does not need any parameter.
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
 | **200** | Hostname the current request arrived on | [**StringWrapper**](../../models/string-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
-| **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
+| **401** | The caller is not signed in and sent no setup wizard token, or the token is invalid or expired | - | - |
+| **403** | The caller is signed in but sent no setup wizard token, whatever their role | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

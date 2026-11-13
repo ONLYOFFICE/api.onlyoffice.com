@@ -6,7 +6,7 @@
 
 Track an editing session
 
-Keeps an editing session on the file alive, or ends it; an editor client calls it repeatedly while a document is open. `docKeyForTrack` has to be the document key of the file as it currently stands, the value `POST api/2.0/files/file/{fileId}/startedit` returned, and a key matching neither the current revision nor the one being edited is refused with 403. `tabId` names the client tab that holds the session, so several tabs and several users are tracked on one file independently. Refreshing an entry requires one of the editing rights on the file - editing, reviewing, commenting, filling or filter editing - so a reader is refused. With `isFinish=false` the entry is refreshed and the file stays marked as being edited; with `isFinish=true` the entry for that tab is dropped and the other clients are told that editing has stopped. The call changes the tracking state and never the document, and repeating it is safe. It answers `key` true with an empty `value` whenever it succeeds, so a failure arrives as an error rather than as a false key. An anonymous caller is accepted only through an external share link.
+Keeps an editing session on the file alive, or ends it. An editor app calls it repeatedly while a document is open. Pass in `docKeyForTrack` the key that `POST api/2.0/files/file/{fileId}/startedit` returned. If the key matches neither the current revision nor the edited one, the call returns 403. The call tracks each `tabId` separately, so several tabs and users can edit one file. With `isFinish` false, the call refreshes the entry, and the file stays marked as edited. With `isFinish` true, the call deletes the entry of this tab. A refresh requires the right to edit, review, comment, fill forms, or edit filters. Other callers get 403. An anonymous caller needs an external link. Without a link, it gets 401. A refresh through a link that does not allow editing also returns 401. The call changes data of the session, not the document. You can repeat it. On success, `key` is true and `value` is empty. A failure returns an error code, not a false `key`. If the file does not exist, the call returns 404. A refresh of a file that another user locked returns 403.
 
 ## Parameters
 
@@ -23,10 +23,10 @@ Keeps an editing session on the file alive, or ends it; an editor client calls i
 |------------- | ------------- | ------------- | -------------|
 | **200** | The session was refreshed or closed | [**ItemKeyValuePairBooleanStringWrapper**](../../models/item-key-value-pair-boolean-string-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **401** | An anonymous caller has no external link, or refreshes the session through a link that does not grant editing | - | - |
-| **403** | The document key does not match the revision being edited, or the caller has none of the editing rights on the file | - | - |
+| **403** | The document key does not match the revision being edited, the caller has none of the editing rights on the file, or the session is refreshed while the file is locked by somebody else | - | - |
 | **404** | The file id resolves to nothing | - | - |
-| **500** | The session is refreshed while the file is locked by somebody else or lies in Trash | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

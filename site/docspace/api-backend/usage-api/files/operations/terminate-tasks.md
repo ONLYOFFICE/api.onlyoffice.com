@@ -6,7 +6,7 @@
 
 Cancel file operations
 
-Cancels a background file operation of the caller and answers with the operations that are left. Pass the `id` that was reported when the operation started to stop that one; a call that leaves the trailing route segment out stops every operation the caller has running, of every kind. Cancelling stops the job where it stands and does not undo it: what has already been copied, moved or deleted stays that way, so a cancelled batch can leave part of itself at the destination and part of it at the source, and the result has to be read back rather than assumed. The cancelled record is dropped from `GET api/2.0/files/fileops` at once, which is why the answer here is usually empty. An id that is not among the caller's operations cancels nothing and is not an error. Operations are private to the account that started them, an anonymous caller being scoped to the session of the external link, so the call can never reach an operation of anyone else.
+Cancels a background file operation of the caller and returns the operations that are left. Without `id`, the call cancels every running operation of the caller. Anyone can call it without signing in. A caller can cancel only their own operations. An anonymous caller reaches only the operations of their external link session. The call stops the job but does not undo it. Items already copied, moved, or deleted stay that way. You can repeat the call. An unknown `id` cancels nothing and is not an error. The answer is usually empty. After the job stops, `GET api/2.0/files/fileops` lists it once, finished, with the status `Canceled`.
 
 ## Parameters
 

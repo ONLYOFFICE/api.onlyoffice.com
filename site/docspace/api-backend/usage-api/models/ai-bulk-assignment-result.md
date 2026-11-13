@@ -1,5 +1,5 @@
 # AiBulkAssignmentResult
-Outcome of `AssignmentsEngine.bulkAssign`. Either every entry persisted, or no entries persisted and a per-key error report. The engine validates first and writes second so a single bad entry never leaves the assignment table in a half-written state.
+The outcome of a bulk assign: either every entry was stored, or none was and the errors are reported per action. Every entry is validated before anything is written, so one bad entry never leaves the assignments half-written.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|

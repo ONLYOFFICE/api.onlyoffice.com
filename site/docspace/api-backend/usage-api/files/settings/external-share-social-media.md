@@ -6,7 +6,7 @@
 
 Change the external sharing ability on social networks
 
-Turns the social-network sharing buttons on or off for the whole portal and returns the value that is now in force. Only the portal owner and a DocSpace administrator may change it; a room administrator, a member or a guest is refused, and so is an unauthenticated caller. The requested value is combined with the state of external sharing itself: while that is off, enabling this setting has no effect and the response comes back false, so turn external sharing on with `PUT api/2.0/files/settings/external` first and only then this one. Turning external sharing off later switches this setting off again on its own. The value is published as `externalShareSocialMedia` by `GET api/2.0/files/settings`. Sending the same value again is safe. Read the response instead of assuming the requested value was stored. The setting governs the share-to-network buttons offered next to an external link; it neither creates nor revokes links, and the links themselves keep working either way.
+Turns sharing on social networks on or off for the whole portal. It returns the value that is now in force. It needs external links turned on with `PUT api/2.0/files/settings/external`. Requires a DocSpace admin. Other callers get 403. The call changes data, and you can repeat it with the same body. While external links are off, the call stores false and returns false. If external links are turned off later, this setting is turned off too. The setting does not create or delete links.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Create a text file
 
-Creates a text file in the folder named in the route out of the text passed as the content, and answers with the stored file. The extension follows the content rather than the request: `.txt` normally, but `.html` as soon as the text contains something shaped like an HTML tag, so a snippet of markup sent here ends up as an HTML file; the extension is added to the title unless the title already ends with it. A request carrying no content is rejected as an invalid request. `createNewIfExist` acts the other way round than its name reads: with `true` the file that already carries this title is updated and a version appears in its history, while with `false`, which is also the default, another file is created and its title made unique, as in Notes (1).txt. A file that is locked, open in an editing session, encrypted or in Trash is not updated - a new file appears beside it instead. The caller needs the right to create files in the folder. The call is mutating. To create the file in the caller's own section use `POST api/2.0/files/@my/text`.
+Creates a text file in a folder from `content`, or saves it as a new version of a file. It returns the stored file. The call adds `.txt` to the title, or `.html` if the content has something like an HTML tag. It adds no extension if the title already ends with it. The parameter `createNewIfExist` works the opposite way to its name. With `true`, the call updates the file with this title and adds a version to its history. With `false`, the default, each call creates another file with a unique title, such as `Notes (1).txt`. The call never updates a file that is locked, encrypted, in the trash, or open for editing. It also never updates a file that the caller cannot edit. In these cases, it creates a new file instead. Requires the right to create files in the folder. Other callers get 403. The call changes data. Do not repeat it. Each call adds a file or a version. If the folder does not exist, the call returns 404. If the content exceeds the maximum upload size or the storage quota, the call returns 402. If `content` is missing, the call returns 400. To create the file in your own section, use `POST api/2.0/files/@my/text`.  Raises the `file.created` webhook for a new file and for a new version of an existing file.
 
 ## Parameters
 
@@ -22,7 +22,7 @@ Creates a text file in the folder named in the route out of the text passed as t
 | **200** | The created or updated text file | [**FileWrapper**](../../models/file-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The request body cannot be read or has no `title` or `content`, or the title is empty, blank or longer than 165 characters | - | - |
 | **402** | The content exceeds the maximum upload size, or the file does not fit into the storage quota of the portal, the room or the user | - | - |
-| **403** | The caller may not create files in this folder, or the folder is a section where files cannot be created | - | - |
+| **403** | The caller may not create files in this folder, the folder is a section where files cannot be created, or the folder lies in a form-filling room, which takes PDF files only | - | - |
 | **404** | The folder does not exist | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |

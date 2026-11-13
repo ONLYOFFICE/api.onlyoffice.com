@@ -6,7 +6,7 @@
 
 Restore a file version
 
-Brings an earlier version of a file back and answers with the editing revisions of the file after the restore. Nothing is overwritten: the content of the chosen version is stored again as a new version on top of the history, carrying a comment that says which version it was reverted to, so the intervening versions stay readable. `url` changes the source - with it the content is fetched from that address, which is how the document service returns a document with a set of changes rolled back, and the new version records that instead. Any links that pointed at drafts of the file are dropped, and the file is marked as new for the other people who can read it. `version` has to name an existing version and is refused with 400 when it is missing or already the current one. The caller needs the right to edit the history of the file and is otherwise refused with 403, an anonymous caller included. The call is mutating and not idempotent. A locked file, one in Trash, one being edited, an encrypted one and one kept in a connected third-party storage are all refused.
+Restores an earlier version of a file and returns the editing revisions after the restore. The call stores the content of the version again as a new version, with a comment that names it. The versions in between stay. With `url`, the call takes the content from that address instead. The document service uses it to return a document with some changes rolled back. Requires the right to change the version history. Other callers get 403, including an anonymous caller. With `url`, the call also requires editing access. The call changes data. Do not repeat it. Each call adds another version. The call deletes the links to drafts of the file. It marks the file as new for the other users who can read it. If `version` is missing or is the current version, the call returns 400. Without `url`, a `version` above the current one copies the current version. If the file or the version does not exist, the call returns 404. If the content exceeds the storage quota, the call returns 402. A file that another user locked also returns 403. Without `url`, the call does not work for an encrypted file or a file that someone is editing. It also does not work for a file in the trash or on a third-party storage.  Raises the `file.updated` webhook.
 
 ## Parameters
 
@@ -23,10 +23,10 @@ Brings an earlier version of a file back and answers with the editing revisions 
 | **200** | The editing revisions of the file after the restore | [**EditHistoryArrayWrapper**](../../models/edit-history-array-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **400** | The version is missing or is already the current one | - | - |
 | **402** | The restored content does not fit into the storage quota | - | - |
-| **403** | The caller may not change the version history of the file, or, with `url`, may not edit the file or the file is locked by somebody else or being edited | - | - |
+| **403** | The caller may not change the version history of the file, the file is locked by somebody else, or, with `url`, may not edit the file or the file is being edited | - | - |
 | **404** | Without `url`, the file id or the requested version resolves to nothing | - | - |
-| **500** | The file is locked by somebody else or being edited, another restore of it is in progress, or storing the new version fails; with `url`, also when the file or the version does not exist or the address cannot be fetched | - | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

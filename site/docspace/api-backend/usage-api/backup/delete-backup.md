@@ -6,7 +6,7 @@
 
 Delete the backup
 
-Deletes one backup: first its history record, then the archive in the storage the record points at. The ID is the one listed by `GET api/2.0/backup/getbackuphistory`, which is also the `taskId` the backup was started with. Deleting a backup of the whole server rather than of one portal additionally requires the space access permission. A record that belongs to another portal is left untouched and the call still answers true, so the result confirms that the request was accepted rather than that anything was deleted - check with `GET api/2.0/backup/getbackuphistory` if it matters. The record is removed before the archive, so when the storage can no longer be reached the archive stays behind with nothing pointing at it. An ID that no backup has ever had is answered with 404.
+Deletes a backup. The call first deletes its history record, then its archive in the storage. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. For a server-wide backup, a caller without the space access permission also gets 403. The call changes data and cannot be undone. It returns `true` even if it deletes nothing, for example for a backup of another portal or a repeated call. If the call cannot reach the storage, the archive stays there without a record. To check what is left, use `GET api/2.0/backup/getbackuphistory`. If no backup ever had this ID, the call returns 404. If the portal subscription has expired or is not paid, the call returns 402.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Get a path to the portal
 
-Turns a portal-relative path into the absolute URL a client can open, filling in the scheme, the current portal domain and the virtual root the portal is hosted on. Any signed-in user may call it, nothing has to be called first, and the call is read-only and idempotent - it neither checks that the path exists nor that the caller is allowed to open it. `virtualPath` is taken as it is: an omitted or empty value yields the portal root, a value starting with `/` is appended to that root, a value starting with `~/` is resolved against the virtual root, and a value that already starts with `http://`, `https://` or `mailto:` is handed back unchanged. The answer is a bare JSON string. The domain in the result is the one the portal answers on right now, so a renamed portal starts returning the new domain without any change on the client. Use it to build links that have to survive a rename; the portal's own addresses and settings are read from `GET api/2.0/settings` instead.
+Returns the absolute URL of a path on the portal, with the scheme, the current domain, and the virtual root. Any signed-in user can call it, including a guest. The call is read-only. It does not check the path or the access of the caller to it. An empty `virtualPath` returns the portal root. The call adds a path that starts with `/` to the root and resolves `~/` against the virtual root. It returns a value that starts with `http://`, `https://`, or `mailto:` unchanged. The answer is a JSON string. It has the current domain, so after a rename the call returns the new domain.
 
 ## Parameters
 

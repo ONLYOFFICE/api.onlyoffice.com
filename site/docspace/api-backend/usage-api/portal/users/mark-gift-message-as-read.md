@@ -6,7 +6,7 @@
 
 Mark a gift message as read
 
-Marks the open-source gift message - the notice a server installation shows about its free edition - as read for the calling user, so the client stops displaying it. Any signed-in user may call it and nothing has to be called first. The flag is stored per user, so marking it read for one account leaves it unread for everybody else on the portal. The call is mutating but idempotent: repeating it changes nothing. It never fails on the caller's behalf - a storage error is written to the portal log and the operation still answers with a success, so the answer is no proof that the flag was saved. Nothing is returned in the body, and no operation reads the flag back or clears it again, which makes the change effectively permanent for that user. It touches only this one notice: portal-wide announcements and the letters the portal sends are unaffected, and other per-user settings are stored through the operations under `api/2.0/settings`.
+Marks the open-source gift message as read for the calling user, so the app stops showing it. Any signed-in user can call it. The portal saves the flag per user, so other accounts still see the message. The call changes data, and you can repeat it. It returns success even if saving fails. In that case, it only writes the error to the portal log. So a success does not prove that the portal saved the flag. No operation reads the flag or clears it again.
 
 ## Parameters
 This endpoint does not need any parameter.

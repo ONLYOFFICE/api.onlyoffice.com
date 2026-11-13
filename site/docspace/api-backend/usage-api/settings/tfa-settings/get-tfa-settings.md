@@ -6,7 +6,7 @@
 
 Get the TFA settings
 
-Lists the two-factor authentication methods this portal offers, with the state of each one. The list carries at most two entries: `sms`, present only when the SMS method is enabled in the portal's configuration, and `app`, present only when the authenticator-application method is enabled there, so an empty list means neither method is offered here. Any authenticated member may call it, and what it returns is the portal-wide policy, not the caller's own linked credential. This is a read-only, idempotent call. For every entry `enabled` says whether that method is the current policy, `available` says whether it can actually be switched on (for `sms` that also requires a configured SMS provider), `trustedIps` lists the addresses and ranges exempt from the challenge, and `mandatoryUsers` and `mandatoryGroups` list the accounts that have to pass it even from a trusted address. Change the policy with `PUT api/2.0/settings/tfaapp`, and read the caller's own backup codes with `GET api/2.0/settings/tfaappcodes`.
+Returns the two-factor authentication methods the portal offers, with the portal-wide state of each. The list has at most two entries, `sms` and `app`. Each entry appears only if the installation offers its method. Its `available` field says if the portal can turn it on. An empty list means the portal offers neither method. Any signed-in user can call it. The call is read-only. It returns the portal policy, not the caller's own linked app. To change the policy, use `PUT api/2.0/settings/tfaapp`. To read your own backup codes, use `GET api/2.0/settings/tfaappcodes`.
 
 ## Parameters
 This endpoint does not need any parameter.

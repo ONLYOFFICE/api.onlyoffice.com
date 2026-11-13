@@ -6,7 +6,7 @@
 
 Finalize an upload session
 
-Assembles the parts received so far into the file the session was opened for and closes the session. What comes out depends on how the session started: one opened against an existing file through `POST api/2.0/files/file/{fileId}/edit_session` replaces that content in place and keeps the version number, while one opened against a folder either creates the file or, when a file of the same name was taken over, stores the content as its next version. A form loses its filling state on the way in. The answer arrives with 201 and carries the identifiers of the file together with the file itself. The call ends the session: the record and the buffered parts are removed, so it cannot be repeated and there is nothing left to abort afterwards. Running it before all the declared bytes have arrived assembles whatever is there, so read the progress from the chunk calls first. An unknown, already closed or expired session id fails instead of answering as missing.
+Stores the file of a chunked upload session from its parts and closes the session. A session from `POST api/2.0/files/file/{fileId}/edit_session` replaces the content of that file and keeps its version. A session for a folder creates a file, or adds a new version to the file with the same name. A PDF form loses its form-filling state. Any signed-in user with the session ID can call it. The call returns 201 with the file. It changes data and deletes the session with its parts. A repeated call returns 404. If the parts do not add up to the size of the session, the call returns 400. Then send the missing parts and repeat the call. It returns 402 if the file is over a quota or size limit. A missing, finalized, or expired session returns 404. If the file is not a PDF and the room is a form-filling room, the call returns 403.  Raises the `file.uploaded` webhook without `file.created`.
 
 ## Parameters
 
@@ -19,13 +19,14 @@ Assembles the parts received so far into the file the session was opened for and
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The assembled file and the identifiers of the closed session | [**UploadSessionResponseWrapper**](../../models/upload-session-response-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **201** | The assembled file and the identifiers of the closed session | [**UploadSessionResponseWrapper**](../../models/upload-session-response-wrapper.md) | - |
 | **400** | The parts received so far do not add up to the size the session was opened for | - | - |
 | **402** | Storing the file would exceed a storage quota or size limit | - | - |
-| **404** | No open session with the specified ID: it never existed, was finalized or aborted, or has expired | - | - |
-| **500** | A file that is not a PDF is stored in a form-filling room | - | - |
+| **403** | A file that is not a PDF is stored in a form-filling room | - | - |
+| **404** | No open session with the specified ID in this folder: it never existed, was finalized or aborted, has expired, or belongs to another folder | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

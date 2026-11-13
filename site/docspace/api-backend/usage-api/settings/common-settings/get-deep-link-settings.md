@@ -6,7 +6,7 @@
 
 Get the deep link settings
 
-Returns how the portal currently responds when a client opens a DocSpace link on a mobile device: always in the browser, always in the native app, or asking the user to choose. No permission is required; anonymous callers can read it too. This is a read-only, idempotent call. The response supports conditional requests: send the standard If-Modified-Since header with the previous `lastModified` value, and an unchanged response comes back empty instead of resending the settings. Change the mode with `POST api/2.0/settings/deeplink`, which requires the EditPortalSettings permission.
+Returns how mobile devices open portal links: in the browser, in the app, or by asking the user. Anyone can call it without signing in. The call is read-only. It supports `If-Modified-Since` with the `Last-Modified` value of the last answer. If nothing changed, it returns 304 with an empty body. To change the mode, use `POST api/2.0/settings/deeplink`.
 
 ## Parameters
 This endpoint does not need any parameter.

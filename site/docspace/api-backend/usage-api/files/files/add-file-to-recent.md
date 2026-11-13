@@ -6,7 +6,7 @@
 
 Add a file to Recent
 
-Stamps the file as just used by the calling account and puts it at the top of that account's Recent section, then answers with the file as it stands now. The list is personal: no other member sees the change, and the file itself is untouched. Read access is enough, so a room member with view-only rights and an invited guest may call it, and a visitor who reaches the file through an external link is recorded against that link. A caller without read access is refused with 403, and an identifier that resolves to nothing answers 404. Repeating the call is safe: the file keeps a single entry and only moves back to the top. The section holds the 1000 newest entries of an account and drops the oldest beyond that on its own; folders never enter it, and an encrypted file of a private room is answered normally but never recorded. Read the section back with `GET api/2.0/files/recent` and drop entries with `DELETE api/2.0/files/recent`; whether it is offered among the sections of `GET api/2.0/files/@root` is decided by `PUT api/2.0/files/displayrecent`.
+Adds a file to the top of the Recent section of the calling account and returns the file. Other users do not see the change, and the file itself stays unchanged. Requires read access to the file, including access through an external link. Other callers get 403. The call changes data. You can repeat it, and the file keeps one entry. The section keeps the 1000 newest entries of the account and deletes older ones. The call returns an encrypted file of a private room but does not add it. To read the section, use `GET api/2.0/files/recent`. To delete entries, use `DELETE api/2.0/files/recent`. To hide the section, use `PUT api/2.0/files/displayrecent`. The call returns 404 for an unknown file or for a string id with an unknown storage type. If a string id points to a storage account that is not connected, the call returns 400.
 
 ## Parameters
 
@@ -22,9 +22,9 @@ Stamps the file as just used by the calling account and puts it at the top of th
 | **400** | A third-party file identifier refers to a storage account that is not connected | - | - |
 | **403** | The calling account cannot read this file | - | - |
 | **404** | No file answers to this identifier | - | - |
-| **500** | A third-party file identifier carries a storage account number beyond the 32-bit range | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

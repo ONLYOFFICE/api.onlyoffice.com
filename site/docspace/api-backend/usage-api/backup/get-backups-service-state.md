@@ -6,7 +6,7 @@
 
 Check whether backups are enabled
 
-Reports whether the paid backup service is switched on for the current portal. This is a wallet setting of the portal, not the health of the backup service or of the worker that runs the jobs, so a false answer does not mean backups are unavailable and a true one does not mean they are working. While it is on, backups beyond the free monthly allowance are charged to the portal wallet. While it is off and that allowance is used up, `POST api/2.0/backup/startbackup` and `POST api/2.0/backup/createbackupschedule` answer 402. Starting a backup once the allowance is used up switches the service on by itself, as soon as a billing session opens for the portal, so this flag can change without anybody editing the portal settings.
+Returns whether the paid backup service is on for the portal. While it is on, the portal wallet pays for backups beyond the free monthly allowance. This is a wallet setting, not whether the backup service works. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only. When `POST api/2.0/backup/startbackup` charges a backup to the wallet, the portal turns the service on. While the service is off, `POST api/2.0/backup/createbackupschedule` returns 402 on a plan without free backups. The scheduler then also deletes the schedule after the free backups of the month are spent.
 
 ## Parameters
 This endpoint does not need any parameter.

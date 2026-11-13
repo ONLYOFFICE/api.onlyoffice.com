@@ -6,7 +6,7 @@
 
 Change the download archive format
 
-Selects the archive format the portal packs the caller's multi-item downloads into: `set=true` switches to `.tar.gz`, `set=false` back to `.zip`. The choice is stored for the calling account only, so every authenticated role down to a guest may set its own, while an unauthenticated caller is refused. It takes effect on the archives built by `PUT api/2.0/files/fileops/bulkdownload` and by the download links that operation returns; archives already produced keep the format they were packed with. The returned archive object carries no readable fields of its own, so it cannot be used to confirm the change: read `downloadTarGz` from `GET api/2.0/files/settings` instead. Writing the same value again is safe and changes nothing else. A new account starts on `.zip`. The format decides only how the archive is packed: which items go into it, and the access needed to take them, are decided by the bulk-download operation itself, and a single file is downloaded as it is whatever is stored here.
+Changes the archive format of multi-item downloads for the calling account. If `set` is true, the portal packs them as `.tar.gz`. If it is false, the portal uses `.zip`. Any signed-in user can call it. The call changes data, and you can repeat it with the same body. The format applies to the archives that `PUT api/2.0/files/fileops/bulkdownload` builds after this call. The response is an object without fields. To read the format, use the `downloadTarGz` field of `GET api/2.0/files/settings`.
 
 ## Parameters
 

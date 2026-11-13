@@ -6,7 +6,7 @@ Represents a price of the service.
 | **id** | **Integer** (int32) | The price unique identifier. | [optional] [example: `12345`] |
 | **accountNumber** | **Integer** (int32) | The account number. | [optional] [example: `1010`] |
 | **serviceId** | **Integer** (int32) | The service ID. | [optional] [example: `12345`] |
-| **timeUnit** | [**PriceTimeUnit**](price-time-unit.md) | The time unit the price is bound to. | [optional] [enum: `0`, `1`, `2`, `3`, `4`, `5`, `6`] |
+| **timeUnit** | [**PriceTimeUnit**](price-time-unit.md) | The time unit the price is bound to. | [optional] [enum: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`] |
 | **costPrice** | **Double** (double) | The cost price. | [optional] [example: `1500.75`] |
 | **extraCharge** | **Double** (double) | The extra charge added to the cost price. | [optional] [example: `1500.75`] |
 | **servicePrice** | **Double** (double) | The resulting service price. | [optional] [example: `1500.75`] |

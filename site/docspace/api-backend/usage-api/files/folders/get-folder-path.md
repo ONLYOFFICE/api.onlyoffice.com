@@ -6,7 +6,7 @@
 
 Get the folder path
 
-Returns the chain of folders that leads to the folder named in the path, ordered from the section root down to the folder itself, which is the last entry. It is what a breadcrumb trail is built from, and it also tells a client which section - a room, the personal section, the archive - a bare folder identifier belongs to. Only the folders the caller may see are part of the chain, so a member who was given access to a folder deep inside a room gets a shorter path than the room manager does. The caller needs read access to the folder and is otherwise answered with 403, while a folder that does not exist is answered as not found. The call is read-only and takes no paging parameters. To go the other way, from a folder down into its contents, call `GET api/2.0/files/{folderId}`.
+Returns the chain of folders from the section root down to the given folder. The folder itself is the last entry. Use it for a breadcrumb trail or to find the section of a folder. Requires read access to the folder. Other callers get 403. The call is read-only. The chain has only the folders that the caller can see. So a user with access to a deep folder gets a shorter chain than the room manager. The call returns the whole chain, without paging. If the folder does not exist, the call returns 404. To list the contents of a folder, use `GET api/2.0/files/{folderId}`.
 
 ## Parameters
 

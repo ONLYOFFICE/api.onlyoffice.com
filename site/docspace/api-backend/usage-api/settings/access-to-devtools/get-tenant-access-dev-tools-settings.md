@@ -6,7 +6,7 @@
 
 Get the Developer Tools access settings
 
-Returns whether the portal currently restricts the `User` role from using the developer tools (API keys, OAuth apps, webhooks). Requires an authenticated session; every role can read the restriction, even though it only limits what a `User` may do, not what a `RoomAdmin` or `DocSpaceAdmin` may do. This is a read-only, idempotent call. Change the restriction with `POST api/2.0/security/devtoolsaccess`, which requires the EditPortalSettings permission.
+Returns whether the portal blocks the developer tools for the user type `user`. The tools are API keys, OAuth apps, and webhooks. Any signed-in user can call it, including a guest. The call is read-only. To change the setting, use `POST api/2.0/settings/devtoolsaccess`.
 
 ## Parameters
 This endpoint does not need any parameter.

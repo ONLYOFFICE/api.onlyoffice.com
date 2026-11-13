@@ -6,7 +6,7 @@
 
 Get upcoming payments
 
-Lists what this portal will be charged next for the quotas of its current tariff - one entry per quota that is going to be billed, with the amount, the currency and the due date. The caller needs the portal-settings right and gets 403 without it; the call is read-only and idempotent and keeps answering while the portal's payment has lapsed. Only quotas that are really charged appear: an overdue quota is skipped, and so is a quota that has no price of its own, such as a trial or a free plan - which is why the list can come back empty on a portal that does have a tariff. When a switch to another quota is scheduled for the next period, the entry describes that next quota and its quantity, so `id` and `name` may differ from what `GET api/2.0/portal/tariff` reports for today. `amount` is the unit price multiplied by `quantity`, in the currency named by `currency` as an ISO 4217 code, `dueDate` is in the portal time zone, and `wallet` marks a service paid from the portal wallet instead of the subscription.
+Returns the next charges of the portal for the quotas of its tariff. The list has one entry per quota. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only and also works while the portal is unpaid. The list skips overdue quotas. It also skips quotas without a price, such as a trial or a free plan. So the list can be empty on a portal with a tariff. If a switch to another quota is planned, the entry shows the next quota and its quantity. With `refresh` set to `true`, the call reads the tariff from the billing system instead of the cache.
 
 ## Parameters
 

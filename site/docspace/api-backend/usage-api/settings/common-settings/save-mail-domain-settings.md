@@ -6,7 +6,7 @@
 
 Save the mail domain settings
 
-Overwrites the portal's trusted mail domain configuration, which controls which email domains are treated as already verified when a user is invited or self-registers. Requires Owner or DocSpaceAdmin (the EditPortalSettings permission). When the requested mode is a custom domain list, every domain is normalized to lowercase and checked against the expected hostname format; a domain that fails the check, or an empty custom list, causes the whole call to be rejected without saving anything. For the other modes the domain list in the request is ignored. The `inviteUsersAsVisitors` flag controls whether users who join through a trusted domain are added as full members or as visitors, and takes effect on the next join rather than retroactively. This is a mutating, idempotent call: repeating it with the same body leaves the portal in the same state. On success it returns a confirmation message, not the saved settings themselves; read them back from `GET api/2.0/settings`.
+Changes the trusted mail domains of the portal. People with an email address in these domains can join the portal without an invitation. The `type` value picks the mode: no trusted domains, the domains of `domains`, or any domain. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call changes data. You can repeat it with the same body. For the `Custom` mode, the call trims and lowercases each domain. For other modes, it ignores `domains`. It returns a confirmation text, not the saved settings. To read them, use `GET api/2.0/settings`. The call returns 400 for a missing field, an empty `Custom` list, or an empty or malformed domain. In that case, it saves nothing.
 
 ## Parameters
 

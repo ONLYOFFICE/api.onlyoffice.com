@@ -6,7 +6,7 @@
 
 Switch a wallet service
 
-Switches one wallet service on or off for the portal: `service` names it and `enabled` says which way. The portal needs a billing customer, and the caller needs both the permission to edit the portal settings and DocSpace administrator rights. Order matters between the two AI services - AI tools has to be on before AI search may be switched on, and switching AI tools off switches AI search off with it - so a request that breaks that order is refused with 403. The call is mutating and idempotent: switching on a service that is already on changes nothing. It is written to the portal audit trail, and switching AI tools notifies the portal clients so the AI features appear or disappear for them without a reload. The whole updated set of switched-on services comes back. Switching a service on does not buy it - its units are still bought with `PUT api/2.0/portal/payment/updatewallet`.
+Turns one wallet service on or off for the portal. If the portal has no billing customer, the call returns 404. Requires a DocSpace admin. Other callers get 403. The call also returns 403 if the installation has no billing service. AI tools must be on before you turn on AI search. If it is not, the call returns 403. Turning off AI tools also turns off AI search. If AI is turned off for the portal, turning on an AI service returns 403. The call changes data, and you can repeat it with the same body. The call returns all wallet services that are on after the change. If `service` is not a wallet service, the call returns 400. Turning a service on does not buy it. To buy units, use `PUT api/2.0/portal/payment/updatewallet`.
 
 ## Parameters
 

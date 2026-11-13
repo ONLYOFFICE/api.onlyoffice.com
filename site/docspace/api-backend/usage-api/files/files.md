@@ -56,6 +56,7 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**setFileExternalLink**](files/set-file-external-link.md) | **PUT** /api/2.0/files/file/\{id\}/links | Set a file external link |
 | [**setFileOrder**](files/set-file-order.md) | **PUT** /api/2.0/files/\{fileId\}/order | Set file order |
 | [**setFilesOrder**](files/set-files-order.md) | **PUT** /api/2.0/files/order | Set order of files |
+| [**setFormFieldChanges**](files/set-form-field-changes.md) | **PUT** /api/2.0/files/file/\{fileId\}/fieldchanges | Report renamed form fields |
 | [**startEditFile**](files/start-edit-file.md) | **POST** /api/2.0/files/file/\{fileId\}/startedit | Open an editing session |
 | [**startFillingFile**](files/start-filling-file.md) | **PUT** /api/2.0/files/file/\{fileId\}/startfilling | Start filling a form |
 | [**toggleFileFavorite**](files/toggle-file-favorite.md) | **GET** /api/2.0/files/favorites/\{fileId\} | Set the file favorite status |
@@ -85,6 +86,7 @@ All URIs are relative to *https://yourportal.onlyoffice.com*, where the host is 
 | [**getFormsFolder**](folders/get-forms-folder.md) | **GET** /api/2.0/files/@forms | Get the Forms section |
 | [**getMyFolder**](folders/get-my-folder.md) | **GET** /api/2.0/files/@my | Get the My documents section |
 | [**getNewFolderItems**](folders/get-new-folder-items.md) | **GET** /api/2.0/files/\{folderId\}/news | Get new folder items |
+| [**getPrivateRoomsFolder**](folders/get-private-rooms-folder.md) | **GET** /api/2.0/files/@private | Get the private rooms section |
 | [**getRecentFolder**](folders/get-recent-folder.md) | **GET** /api/2.0/files/recent | Get the Recent section |
 | [**getReportFolderHistory**](folders/get-report-folder-history.md) | **GET** /api/2.0/files/folder/\{folderId\}/log/report | Get the folder history report generation status |
 | [**getRootFolders**](folders/get-root-folders.md) | **GET** /api/2.0/files/@root | Get filtered sections |

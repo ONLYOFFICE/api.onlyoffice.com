@@ -6,7 +6,7 @@
 
 Get the user type change progress
 
-Returns the current state of the user type change queued for the user with the ID specified in the request. A conversion must have been queued by `POST api/2.0/people/type` first: when nothing is queued for that user the operation answers 200 with an empty body. The caller needs the permission to add and remove users. The call is read-only and is the polling operation of this flow - repeat it until `isCompleted` is true, reading `percentage` for the 0 to 100 progress and `error` for the message left by a failed job. Use `PUT api/2.0/people/type/terminate` to cancel a conversion that is still running.
+Returns the state of the type change job of an account. Start the job with `POST api/2.0/people/type`. Requires a DocSpace admin. Other callers get 403. A room admin also gets 403, even for its own job. The call is read-only. This is the call to poll. Repeat it until `isCompleted` is true. If no job exists for the account, the call returns 200 with an empty body. A failed job has its message in `error`. To cancel a running job, use `PUT api/2.0/people/type/terminate`.
 
 ## Parameters
 

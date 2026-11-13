@@ -6,7 +6,7 @@
 
 Get AI model prices
 
-Returns the price list of the AI features the portal pays for out of its wallet: the chat models with the price of their prompt and completion tokens, the embedding models, the image models with their per-image price, and the web search providers with the price of one search. The installation needs both a billing service and the AI gateway configured, otherwise the answer is 403, and only a DocSpace administrator may read it; the call is read-only. Token prices are normalised per million tokens, and every price is in the single `currency` the answer names. Each entry carries the model identifier to use when talking to the AI operations, its display alias, its provider with the provider icon, and a link to the model's own page. It is a list of what the models cost and not of what the portal spent - that is `GET api/2.0/portal/payment/customer/usage` - and it says nothing about which of them are allowed here, which is `GET api/2.0/portal/payment/ai-model/restrictions`.
+Returns the prices of the AI features that the portal pays for from its wallet. The list covers chat models, embedding models, image models, and web search providers. Requires a DocSpace admin. Other callers get 403. It also returns 403 if the installation has no billing service or no AI gateway. The call is read-only. Token prices are per million tokens, and all prices are in the `currency` of the answer. Each entry has the model ID that the AI operations take. The list does not show what the portal spent. To read the spending, use `GET api/2.0/portal/payment/customer/usage`. To read the models that the portal bars, use `GET api/2.0/portal/payment/ai-model/restrictions`.
 
 ## Parameters
 This endpoint does not need any parameter.
@@ -17,9 +17,9 @@ This endpoint does not need any parameter.
 |------------- | ------------- | ------------- | -------------|
 | **200** | The prices of the chat, embedding and image models and of the web search providers, with the currency they are in | [**AiPricesWrapper**](../../models/ai-prices-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
 | **403** | The caller is not a DocSpace administrator, or the installation has no billing service or no AI gateway configured | - | - |
-| **500** | The AI gateway answers with an error or cannot be reached | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

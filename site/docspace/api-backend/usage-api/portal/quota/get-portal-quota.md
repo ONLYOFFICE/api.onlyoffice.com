@@ -6,7 +6,7 @@
 
 Get the portal quota
 
-Returns the quota this portal runs on - the allowance its tariff grants: how many users and paid users it may have, how many rooms, the largest total and single-file size, the price of the quota and the feature flags that go with it. The caller needs the portal-settings right and gets 403 without it; the call is read-only and idempotent. Sizes are in bytes, and `maxTotalSize` comes back as `0` when the calling account's own role is user, rather than as the real allowance. This is what the portal is allowed, not what it consumes: the consumption is reported by `GET api/2.0/portal/usedspace` in gigabytes and by `GET api/2.0/portal/userscount`. The quotas the portal could move to are listed by `GET api/2.0/portal/payment/quotas`, and `GET api/2.0/portal/quota/right` picks the smallest of them that would still fit. A free or trial quota carries no price, and the billing state that goes with the quota - paid, in grace period or not paid - is read from `GET api/2.0/portal/tariff`.
+Returns the quota of the portal, which is the allowance its tariff gives. It has the limits on users, paid users, rooms, total size, and file size, and the features. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call is read-only and also works while the portal is unpaid. Sizes are in bytes. A free or trial quota has no price. The quota shows what the portal may use, not what it uses. The usage comes from `GET api/2.0/portal/usedspace` and `GET api/2.0/portal/userscount`. To list the quotas the portal can switch to, use `GET api/2.0/portal/payment/quotas`. To read the billing state, use `GET api/2.0/portal/tariff`.
 
 ## Parameters
 This endpoint does not need any parameter.

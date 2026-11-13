@@ -6,7 +6,7 @@
 
 Check data for reassignment need
 
-Reports whether the rooms and the shared files of a user have to be reassigned before that user can be removed or changed to the type passed in `type`. Call it before `DELETE api/2.0/people/{userId}` or before a type change to find out whether `POST api/2.0/people/reassign/start` has to run first. The caller needs the permission to add and remove users of the requested type, and must be the portal owner when the checked user is a DocSpace administrator. The call is read-only and answers true when the user owns at least one room, or - when `type` is `Guest` - when the user still has shared files. A false answer means the user can be removed or converted without a reassignment.
+Returns whether a user's data must move to another user before you delete the user or change its type. Call it before `DELETE api/2.0/people/{userId}` or a type change. If it returns true, first move the data through `POST api/2.0/people/reassign/start`. Requires the right to add and remove users of the type in `type`. Other callers get 403. Only the portal owner can check a DocSpace admin. Other callers get 403 for one. The call is read-only. It returns true if the user owns a room. If `type` is `Guest`, it also returns true for shared files. False means that you can delete the user or change the type without moving data.
 
 ## Parameters
 

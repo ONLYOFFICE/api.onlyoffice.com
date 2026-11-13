@@ -6,7 +6,7 @@
 
 Send SMS code
 
-Sends a new SMS authentication code to the phone number stored for the user and reports when that code expires. The credentials in the body are checked exactly as by `POST api/2.0/authentication`, so use this operation to resend the code after that call answered with `sms`; the user needs SMS two-factor enabled and a phone number already stored, which `POST api/2.0/authentication/setphone` registers. Open to unauthenticated callers, mutating and not idempotent: every call sends a message, is counted in the portal's SMS usage and spends one of the few codes a number is allowed within the code lifetime (ten minutes by default), after which the call fails until those codes expire. Codes sent earlier stay valid, so a resent code does not invalidate them, and the first one to be accepted invalidates all of them. The answer carries `sms`, the masked number and `expires`, and no token - submit the code to `POST api/2.0/authentication/{code}`.
+Sends a new SMS code to the stored phone number of a user. Use it to resend the code after `POST api/2.0/authentication` returns `sms`. The call checks the credentials in the body as `POST api/2.0/authentication` does. Anyone can call it without signing in. Each call sends another SMS and counts toward the SMS usage of the portal. Earlier codes stay valid until they expire, by default after 10 minutes. The first accepted code cancels every code of the number. By default, a number gets at most 6 codes until its newest code expires or a code is accepted. You can repeat the call up to this limit. After it, wait until the newest code expires. The answer has no token. To finish the sign-in, send the code to `POST api/2.0/authentication/{code}`. The call returns 401 for a wrong password or an unknown user. It returns 403 for a disabled user or after too many failed attempts. A rejected key in `confirmData` returns 404. If the user has no stored phone number, the call returns 400. If SMS codes are off on the portal or for the user, it returns 405.
 
 ## Parameters
 
@@ -23,6 +23,7 @@ Sends a new SMS authentication code to the phone number stored for the user and 
 | **401** | The password, the confirmation key or the third-party profile was rejected | - | - |
 | **403** | The user is disabled, or too many failed attempts have blocked further sign-ins for these credentials | - | - |
 | **404** | No user of this portal matches the credentials in the request body | - | - |
+| **405** | SMS two-factor is not available on the portal or not required for this user, so there is no code to send | - | - |
 | **429** | The portal rate limiter rejected the call - retry after the interval in the `Retry-After` header | [**ErrorApiResponse**](../models/error-api-response.md) | `Retry-After` |
 | **500** | Internal Server Error. | [**ErrorApiResponse**](../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |

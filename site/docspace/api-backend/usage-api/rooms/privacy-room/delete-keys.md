@@ -6,7 +6,7 @@
 
 Delete an encryption key
 
-Removes one encryption key pair from the calling user's own key set and answers 204 with no body. The pair is named by the `id` of an entry of `GET api/2.0/privacyroom/keys`; the caller's other pairs stay as they are. The call is destructive and cannot be repeated: the key material is gone for good, a second delete of the same `id`, like an `id` that was never stored, is answered with 404, and there is no parameter for another user's keys, so an authenticated member only ever deletes their own while a guest is refused. Deleting the last key the caller holds locks them out of the private rooms they belong to, their own rooms included: the rooms and their content survive untouched and stay listed as private, but `GET api/2.0/privacyroom/{roomId}/access` then refuses the caller until a new key is stored with `POST api/2.0/privacyroom/keys`. Before DocSpace 4.0 the call answered 200 with the caller's remaining keys, so a client that read that list has to call `GET api/2.0/privacyroom/keys` instead.
+Deletes one encryption key pair of the calling user. The other pairs stay unchanged. Any signed-in user can call it, except a guest. A guest gets 403. The deletion cannot be undone, and a repeated call returns 404. The call returns 204 with no body. Before DocSpace 4.0, it returned 200 with the remaining keys. To read the remaining keys, use `GET api/2.0/privacyroom/keys`. After the caller deletes the last key, `GET api/2.0/privacyroom/{roomId}/access` returns 403 for all their private rooms. The rooms and their content stay unchanged. To restore access, create a key with `POST api/2.0/privacyroom/keys`. If the caller has no pair with this `id`, the call returns 404. A malformed `id` returns 400.
 
 ## Parameters
 

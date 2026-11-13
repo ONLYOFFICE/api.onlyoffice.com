@@ -6,7 +6,7 @@
 
 Get greeting settings
 
-Returns the greeting title of the current portal - the caption shown as the welcome heading on the sign-in page, kept as the portal name. Any authenticated user may call it and no administrative right is needed; the call is read-only. The title comes back as a bare string and is never empty: when the portal has no title of its own, the built-in default caption is returned instead, localized to the caller's language. Because of that fallback this operation cannot tell a saved title from the default one - call `GET api/2.0/settings/greetingsettings/isdefault` when that distinction matters. The same string is part of the portal settings answer as the `greetingSettings` field of `GET api/2.0/settings`, so a client that already reads the settings needs no separate call. The value is a caption only: it is neither the portal address nor the white-label logo text of the header, which is returned by `GET api/2.0/settings/whitelabel/logotext`.
+Returns the greeting title of the current portal as a plain string. The portal shows it as the welcome heading on the sign-in page and keeps it as the portal name. Any signed-in user can call it, including a guest. The call is read-only. The answer is never empty. If the portal has no title, the call returns the built-in default caption in the language of the caller. So the answer cannot tell a saved title from the default one. To check that, use `GET api/2.0/settings/greetingsettings/isdefault`. The `greetingSettings` field of `GET api/2.0/settings` has the same string. The title is not the portal address or the white-label logo text. To read the logo text, use `GET api/2.0/settings/whitelabel/logotext`.
 
 ## Parameters
 This endpoint does not need any parameter.

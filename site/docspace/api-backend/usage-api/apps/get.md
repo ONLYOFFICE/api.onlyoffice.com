@@ -6,7 +6,7 @@
 
 Get an app
 
-Returns one portal application by its identifier - one of the feature modules the portal can turn on, such as `ai-rooms` or `docs-cloud` - with the enabled state and the settings document stored for the current portal. The identifier must be an application declared in the installation configuration: take it from `GET api/2.0/apps`, because an unknown identifier is rejected instead of creating anything. Any authenticated portal member may read it. The call is read-only and idempotent. The result carries the identifier, the enabled flag of the current portal and the settings JSON document, which is empty while the portal has never saved settings for this application. An application that is not configured on this installation fails with 404, so this is also the way to find out whether an application exists here at all. Use `GET api/2.0/apps` to read all applications in one call, or `GET api/2.0/apps/{id}/settings` when only the settings document is needed.
+Returns one portal application with its state on the current portal. An application is a feature module that the portal can turn on and configure, such as `ai-rooms` or `docs-cloud`. Take the identifier from `GET api/2.0/apps`. It is case-sensitive. Any signed-in user can call it. The call is read-only. The `settings` field is empty until the portal saves settings for the application. To read only the settings, use `GET api/2.0/apps/{id}/settings`. If the installation has no application with this identifier, the call returns 404.
 
 ## Parameters
 

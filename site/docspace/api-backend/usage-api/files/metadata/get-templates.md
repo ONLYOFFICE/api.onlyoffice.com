@@ -6,7 +6,7 @@
 
 Get metadata templates
 
-Lists the metadata templates of the portal with their fields, the dictionary a file, a folder or a room is described with. Any member of the portal can read it, the list is the same for everyone. The call is read-only. The templates come back ordered by their creation, each with its fields in their display order and the choice options of the choice fields; the `visible` parameter narrows the list to the templates shown in the pickers or to the hidden ones, without it both are returned. The author and the last editor of a template come as user objects with the display name and the avatar, so a list needs no lookup of its own per author. An empty list means the portal has no templates yet. The custom text fields set on the entries are not templates and are not listed here: read them on the entry with `GET api/2.0/files/metadata/file/{fileId}`.
+Returns the metadata templates of the portal with their fields. A template is a set of fields that describes a file, a folder, or a room. Any signed-in user can call it. The call is read-only. Every caller gets the same list. The templates come in the order of their creation. Their fields come in display order, with the options of choice fields. Without `visible`, the call returns both shown and hidden templates. The author and the last editor of a template come as user objects. An empty list means the portal has no templates. The custom text fields of entries are not templates, and the call does not return them. To read them, use `GET api/2.0/files/metadata/file/{fileId}` or `GET api/2.0/files/metadata/folder/{folderId}`.
 
 ## Parameters
 

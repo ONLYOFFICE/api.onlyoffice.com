@@ -6,7 +6,7 @@
 
 Save a color theme
 
-Adds or updates a custom color theme, or changes which theme is selected, for the whole portal. Requires Owner or DocSpaceAdmin (the EditPortalSettings permission). Pass `theme` to create or edit one: an existing theme is matched and updated by its ID, a new one is appended, and an ID that collides with a built-in default theme is treated as a request to create a new custom theme instead of overwriting the default. Once the plan's custom-theme limit is reached, a new theme is silently not added rather than rejected with an error, so check the returned `themes` count against `limit` before assuming it was saved. Pass `selected` to switch the active theme; an ID that does not match any existing theme is ignored. This is a mutating call, not strictly idempotent once the limit has been reached. It returns the full updated theme configuration.
+Adds or changes a custom color theme of the portal, or selects the theme that the portal uses. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. The call changes data. With `theme`, the call changes the theme with the same ID or adds a new one. A repeated call with a theme ID of 0 adds another theme. A built-in theme ID also adds a new theme and keeps the built-in one. If the portal already has `limit` themes, the call skips a new theme and returns no error. So compare the returned `themes` with what you sent. With `selected`, the call applies the theme with that ID. It ignores an ID that no theme has. It returns all themes and the selected one.
 
 ## Parameters
 

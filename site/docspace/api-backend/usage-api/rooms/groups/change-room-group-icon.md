@@ -6,7 +6,7 @@
 
 Change room group icon
 
-Replaces the icon of one of the caller's own room groups and returns the whole group, its name and its rooms left as they were. Send the identifier of one of the built-in covers offered by `GET api/2.0/files/rooms/covers`; an empty string strips the icon, after which the group comes back with an empty `icon`, and any other value - including a word that merely reads like one, such as `none` - is rejected as an invalid request. An uploaded image cannot be used here, unlike the logo of a room. Leaving `icon` out of the body or sending it as null is accepted and changes nothing, whereas a request that carries no body at all, or a body that is not JSON, is refused. Setting the icon the group already has is accepted as well, so retrying the call is safe. Any role may re-icon its own group, and a group belonging to another account is answered as missing rather than refused, exactly as reading it would be.
+Changes the icon of a room group of the caller. Any signed-in user can call it, including a guest. A missing group or a group of another account returns 404, even for a DocSpace admin. The call changes data. You can repeat it with the same body. An empty `icon` removes the icon, and a null or missing `icon` changes nothing. The call returns 400 if `icon` is neither a built-in cover nor an empty string. It also returns 400 if the body is missing or is not JSON.
 
 ## Parameters
 

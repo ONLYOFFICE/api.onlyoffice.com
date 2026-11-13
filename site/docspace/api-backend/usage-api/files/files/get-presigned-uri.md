@@ -6,7 +6,7 @@
 
 Get file download link
 
-Builds a download address for the current version of a file and answers with it as a plain string. The address points at the portal's own file handler and carries the file identifier, the version it was built for and a time-limited authentication key, so it can be handed to a downloader that cannot sign in to the portal itself; it stops working once that key has expired, and it keeps naming the version that was current when it was built rather than following later edits. The caller needs read access to the file: a member of the room it lies in gets an address, a caller without access to the room is refused, an unknown identifier is answered as not found and an anonymous caller is rejected. The operation is read-only and safe to repeat, though every call mints a new key. Nothing is downloaded here - follow the address to fetch the bytes. For the variant the document service signs, which comes back as an object with the file type and a token, use `GET api/2.0/files/file/{fileId}/presigned`.
+Returns a download address for the current version of a file as a plain string. The address carries a time-limited key, so an app that cannot sign in can download the file. Requires read access to the file. Other callers get 403. The call is read-only, but each call creates a new key. The address stops working when its key expires. It keeps the version that was current when the call built it. To download the content, follow the address. If no file has this id, the call returns 404. For a caller who may only fill forms, a form whose filling has not started returns 400. For an address that the document service signs, use `GET api/2.0/files/file/{fileId}/presigned`.
 
 ## Parameters
 

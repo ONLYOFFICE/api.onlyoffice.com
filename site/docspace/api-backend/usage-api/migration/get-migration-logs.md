@@ -6,7 +6,7 @@
 
 Get migration logs
 
-Downloads the log of the parse or import the portal currently holds - the step-by-step record behind the numbers and the single error message of `GET api/2.0/migration/status`, and the place where the reason for a skipped user or file is written. The portal has to hold such a job, started by `POST api/2.0/migration/init/{migratorName}` or `POST api/2.0/migration/migrate` and not yet removed by `POST api/2.0/migration/clear` or `POST api/2.0/migration/finish`, otherwise the call answers 404; a DocSpace administrator is required and the call is read-only and idempotent. The body is not JSON: it is `text/plain; charset=UTF-8` sent as an attachment named `migration.log`, one line per step with the progress it reported. Each job writes its own log, so this always returns the log of the job that `GET api/2.0/migration/status` describes, and while that job runs the file keeps growing - a call made early returns only the part written so far and may be repeated later for the rest.
+Returns the log of the parse or import job of the portal as a file. The log has a timestamped line for each step, including why the job skipped a user or file. Requires a DocSpace admin. Other callers get 403. The call is read-only. The body is not JSON. It is `text/plain; charset=UTF-8`, sent as the attachment `migration.log`. Each job has its own log, and the call returns the log of the job that `GET api/2.0/migration/status` shows. The portal saves the log only when the job ends. So wait until `isCompleted` is true, since the call fails while the job runs. If the portal has no job, the call returns 404. This happens after `POST api/2.0/migration/clear` or `POST api/2.0/migration/finish`.
 
 ## Parameters
 This endpoint does not need any parameter.

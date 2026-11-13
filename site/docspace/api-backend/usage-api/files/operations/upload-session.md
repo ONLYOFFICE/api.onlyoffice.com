@@ -6,7 +6,7 @@
 
 Upload the next chunk
 
-Sends the next part of a file into the session opened for it, as the multipart `File` field, and lets the server keep count: parts are appended in the order they arrive, so two of these calls must never run in parallel on one session. While bytes are still missing the answer describes the session and `uploaded` is false; when the last part completes the declared size the file is written, its upload links are cleared, it is marked as new for the room, and the answer comes back with 201, `uploaded` true and the whole file in `file`. A session created for a payload smaller than `chunkUploadSize` from `GET api/2.0/files/settings` finishes on the first such call and needs no separate finalize step. A part larger than that limit is refused. The first part of a PDF is inspected, and a PDF that is not a fillable form is refused when the session targets a form-filling room. The session is addressed by its id, and the folder in the path is not matched against it.
+Uploads the next part of a file to a chunked upload session. Send the part as the multipart `File` field. The call adds parts in the order they arrive. Do not send two parts to one session at the same time. Any signed-in user with the session ID can call it. The call finds the session by its ID and ignores the folder in the path. The call changes data. Do not repeat a part. The session stores a repeated part as the next part. Then the file has that part twice, or the session never stores the file. While bytes are missing, the response has `uploaded` false. When the parts reach the size of the session, the call stores the file. It then returns 201, `uploaded` true, and the file in `file`. A session below `chunkUploadSize` from `GET api/2.0/files/settings` stores the file on the first call. It needs no `PUT api/2.0/files/{folderId}/session/{sessionId}/finalize`. After the call that stores the file, a repeated call returns 404. The call returns 400 if the request has no `File` part. It returns 402 if the part is over `chunkUploadSize`, or the file is over a quota or size limit. If the session does not exist, is finalized, or has expired, the call returns 404. If the file is not a PDF and the room is a form-filling room, the call returns 403.  Raises the `file.uploaded` webhook on the request that completes the upload, without `file.created`.
 
 ## Parameters
 
@@ -20,13 +20,15 @@ Sends the next part of a file into the session opened for it, as the multipart `
 
 | Status code | Description | Type | Response headers |
 |------------- | ------------- | ------------- | -------------|
-| **200** | The progress of the session, or the stored file once the last part has arrived | [**UploadSessionResponseWrapper**](../../models/upload-session-response-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **200** | The part is stored and bytes are still missing; `uploaded` is false | [**UploadSessionResponseWrapper**](../../models/upload-session-response-wrapper.md) | `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` |
+| **201** | The last part has arrived and the file is stored; `uploaded` is true and `file` holds the file | [**UploadSessionResponseWrapper**](../../models/upload-session-response-wrapper.md) | - |
+| **400** | The request has no `File` part | - | - |
 | **402** | The part is larger than `chunkUploadSize`, or storing the file would exceed a storage quota or size limit | - | - |
-| **404** | No open session with the specified ID: it never existed, was finalized or aborted, or has expired | - | - |
-| **500** | The request has no `File` part, or a file that is not a PDF is stored in a form-filling room | - | - |
+| **403** | A file that is not a PDF is stored in a form-filling room | - | - |
+| **404** | No open session with the specified ID in this folder: it never existed, was finalized or aborted, has expired, or belongs to another folder | - | - |
 | **401** | Unauthorized | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **429** | Too Many Requests. | [**ErrorApiResponse**](../../models/error-api-response.md) | `Retry-After` |
-| **400** | Bad Request. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
+| **500** | Internal Server Error. | [**ErrorApiResponse**](../../models/error-api-response.md) | - |
 | **502** | Bad Gateway. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 | **503** | Service Unavailable. Returned by the reverse proxy, response body may be HTML and not JSON. | - | - |
 

@@ -6,7 +6,7 @@
 
 Close the admin helper
 
-Dismisses the administrator helper tip for the caller, so it is not shown again on this account. Available only to a DocSpace administrator, which includes the portal Owner, on a Standalone (self-hosted) installation running outside white-label custom mode; every other caller is refused. This is a mutating, idempotent call scoped to the calling account only; it never affects other administrators. It returns no data on success.
+Hides the admin helper tip for the calling account. It does not hide the tip for other admins. Requires a DocSpace admin on a Standalone installation outside custom mode. In other cases, the call returns 415. The call changes data, and you can repeat it. It returns no data.
 
 ## Parameters
 This endpoint does not need any parameter.

@@ -6,7 +6,7 @@
 
 Get the backup schedule
 
-Returns the backup schedule of the current portal. A portal keeps at most one schedule, so no ID is passed in, and when none is set the call still answers 200 with a body that carries no `response` member at all. `dump` asks for the schedule of the whole server instead of the one of this portal and requires the space access permission. The answer cannot be sent back unchanged: `storageParams` is returned as an object keyed by parameter name, while `POST api/2.0/backup/createbackupschedule` expects an array of key and value pairs. For every storage type except `ThirdPartyConsumer` the `folderId` key of the answer is built from the stored base path rather than read back from the saved parameters, and a schedule that keeps an unlimited number of copies reports `backupsStored` as null instead of 0.
+Returns the backup schedule of the portal. A portal has at most one schedule. Requires the EditPortalSettings permission, which the portal owner and DocSpace admins have. Other callers get 403. With `dump`, a caller without the space access permission also gets 403. The call is read-only. If no schedule is set, the call returns 200 without the `response` field. If the portal subscription has expired or is not paid, the call returns 402. To set the schedule, use `POST api/2.0/backup/createbackupschedule`.
 
 ## Parameters
 

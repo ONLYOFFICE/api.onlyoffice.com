@@ -6,7 +6,7 @@
 
 Contact the sales team
 
-Sends the portal's message to the ONLYOFFICE sales team - the contact-sales form behind a request for a quote, an invoice or a plan that cannot be bought online. `email` has to be a well-formed address and is where the answer will go, while `userName` and `message` say who is asking and what for; all three are required and none may be empty. Only a DocSpace administrator may call it. Nothing on the portal changes: no plan, no quota and no payment is touched, a message is mailed out and the request is written to the portal audit trail. There is no response body - status 200 means the message was handed to the mail service - and the call is not idempotent, so a repeat sends a second message. It is limited to ten requests a minute per user by default and answers 429 above that.
+Sends a message from the portal to the ONLYOFFICE sales team. Use it to ask for a quote, an invoice, or a plan that cannot be bought online. The team sends the answer to `email`. Requires a DocSpace admin. Other callers get 403. The call queues an email and changes no plan, quota, or payment. Do not repeat it. Each call sends the message again. The response has no body. The call returns 400 if `email` is not a valid address or a field is empty. By default, the limit is 10 calls a minute per user. More calls return 429.
 
 ## Parameters
 

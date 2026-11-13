@@ -6,7 +6,7 @@
 
 Create an encryption key
 
-Stores a new encryption key pair for the calling user and answers with that user's whole key set. The material is end-to-end: `publicKey` is the half other members use to encrypt file keys for this user, while `privateKeyEnc` arrives already encrypted with the user's own password, so the portal keeps it as opaque text. A member must hold at least one key before they can be invited to a private room, which makes this the first call of the private-room flow. Every authenticated member manages their own keys and only their own, there is no parameter for somebody else's, and a guest is refused, which is also why a guest cannot become a member of a private room. The call is mutating and is not safe to repeat: `id` names the pair inside the caller's set and an `id` that is already stored is answered with 409, while a request that omits or blanks either half is rejected as invalid and stores nothing. A successful call answers 201 with every key the caller now holds. To change the material of an existing pair use `PUT api/2.0/privacyroom/keys`.
+Creates an encryption key pair for the calling user. A user needs at least one key before anyone can invite them to a private room. Any signed-in user can call it, except a guest. A guest gets 403. The call changes data, and a repeated call with the same `id` returns 409. A body without `id` uses the all-zero `id`, so its repeat also returns 409. It returns 201 with every key the caller now holds. Before DocSpace 4.0, it returned 200 with the same body. To change an existing pair, use `PUT api/2.0/privacyroom/keys`. The call returns 400 if the body is missing, `publicKey` or `privateKeyEnc` is blank, or a key is too long. A malformed `id` also returns 400.
 
 ## Parameters
 

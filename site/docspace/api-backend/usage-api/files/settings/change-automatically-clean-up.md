@@ -6,7 +6,7 @@
 
 Update the trash bin auto-clearing setting
 
-Writes the trash auto-clearing setting of the calling account and returns the pair that is now stored. Both fields are written together from the request, so a call that omits `gap` stores an interval outside the published list rather than keeping the previous one - always send the interval, including when `set` is false. While clearing is on, an item is removed from the caller's trash for good once it has been there longer than the interval, and each trashed entry reports the moment it is due to disappear in its own `autoDelete` field; switching clearing off stops that and leaves whatever is in the trash. The setting belongs to the calling account alone: every authenticated role down to a guest may change its own, one member's choice never affects another, and an unauthenticated caller is refused. Items already removed are not recoverable. Read the pair back with `GET api/2.0/files/settings/autocleanup`.
+Changes the trash auto-clearing setting of the calling account. It returns the setting that is now stored. Any signed-in user can call it. The call changes data, and you can repeat it with the same body. The call writes `set` and `gap` together. If you omit `gap`, the call stores 0, which is not a valid interval. So send `gap` even when `set` is false. While clearing is on, the portal deletes an item after it stays in the trash longer than `gap`. This deletion cannot be undone. Turning clearing off keeps the items in the trash.
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 Get the restoring progress
 
-Reports the state of the restoring job, and is the operation to poll after `POST api/2.0/backup/startrestore`. It is the only operation of this service that needs no authorization and the only one that stays reachable while the portal is being restored, which is exactly the state a client polls it in - every other operation of the service answers 403 then. `dump` is read as three states rather than as a flag: omit it to get whichever restoring job concerns this portal, including a server-wide one, pass false to get the job of this portal only, and pass true to get the server-wide job; on a portal that is not a standalone installation the value is forced to false. When there is no matching job the call still answers 200, but the body carries no `response` member at all. `isCompleted` is the field to poll, a non-empty `error` is the only report of a failure, and neither `link` nor `warning` is ever filled in for a restoring job.
+Returns the state of the restore job of the portal. Anyone can call it without signing in. It also works while the portal is being restored and other calls are refused. The call is read-only. This is the call to poll after `POST api/2.0/backup/startrestore`. Repeat it until `isCompleted` is true. Without `dump`, the call returns any restore job of the portal, including a server-wide one. If there is no job, the call returns 200 without the `response` field.
 
 ## Parameters
 

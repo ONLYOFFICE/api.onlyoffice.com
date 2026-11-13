@@ -6,7 +6,7 @@
 
 Get the portal theme
 
-Returns the interface theme the calling account has chosen: `Base` for the light theme, `Dark` for the dark one, or `System` to follow whatever the operating system asks for. The setting belongs to the account and not to the portal, despite the name of the route, so it describes the caller alone and cannot be read for anybody else. It needs no permission and is read-only. A caller that has never chosen a theme gets the portal default rather than an empty answer. The same value is also reported as `theme` by `GET api/2.0/people/@self`, so a client that reads the profile on start-up does not need this operation as well.
+Returns the interface theme of the caller, which is `Base`, `Dark`, or `System`. The theme belongs to the account, not to the portal. Any signed-in user can call it, including a guest. The call is read-only. If the caller has never chosen a theme, the call returns `System`. The `theme` field of `GET api/2.0/people/@self` has the same value.
 
 ## Parameters
 This endpoint does not need any parameter.
