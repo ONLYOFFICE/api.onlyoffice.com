@@ -68,6 +68,7 @@
 #### AI
 
 * Removed the custom AI tools guide, the AI tools quick start and the AI tool samples, as AI Tools no longer supports adding custom tools
+* Removed the unlisted AI plugin sample page and redirected it to the AI Tools guide
 * Rewrote the AI overview around setting up and using AI Tools
 * Documented the current custom provider file format, based on the template from the editor
 * Updated the AI Tools guides and screenshots for the new name and current editor UI
@@ -108,6 +109,8 @@
 * Fixed the Paragraphs to table macro, which passed the column and row counts to `CreateTable` in the wrong order and copied list numbering into the cells
 * Fixed the Sort tables macro to compare cell text without the trailing cell and row separators or list numbering
 * Fixed the Remove empty tables macro deleting tables whose cells hold only images or other drawings
+* Fixed the Office API document and PDF editor samples that passed RGB values straight to `SetColor`, `SetBackgroundColor` and `SetBorderColor` instead of an `ApiColor` from `Api.RGB`
+* Fixed the playground plugin not being available in the PDF editor
 
 ## 10.1.0
 
