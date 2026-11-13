@@ -23,18 +23,19 @@
 #### Docs API
 
 * Restructured the ownCloud and Nextcloud known issues: self-signed certificates and the background connection check now sit under Checking the connection, file conversion has its own section, and each remaining issue has a heading
-* Covered the ONLYOFFICE Docs side of self-signed certificates (`rejectUnauthorized`), files shared without download permission and file locking on the ownCloud and Nextcloud pages
-* Used the connectors' current UI names and added explicit heading anchors on the ownCloud and Nextcloud pages
+* Covered the ONLYOFFICE Docs side of self-signed certificates (`rejectUnauthorized`) and files shared without download permission on the ownCloud and Nextcloud pages, and file locking on the Nextcloud page
+* Used the connectors' current UI names on the ownCloud and Nextcloud pages
 * Replaced the duplicated watermark rows in the conversion request table with a link to the watermark object
 
 #### Localization
 
-* Synced the zh-CN ownCloud, Nextcloud, FAQ, document config, conversion request, How it works and Data retention pages with English
+* Synced the zh-CN ownCloud, Nextcloud, FAQ, document config, conversion request and How it works pages with English, and gave the zh-CN ownCloud, Nextcloud and How it works headings English anchors
+* Translated the Data retention page and the Working with watermark and Opening the editor in a dialog samples
 
 ### Fixes
 
 * Fixed the "ownClowd" typo in the FAQ
-* Fixed the old help center `.aspx` links in the Docs API pages and connector guides
+* Fixed the old help center `.aspx` links in the Docs API pages, connector guides, ONLYOFFICE Apps API backend pages and the plugin on-premises installation page
 * Fixed editor samples that never opened when they mounted while the Docs API script was still loading
 
 ## 10.2.0
