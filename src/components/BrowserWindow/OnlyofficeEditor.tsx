@@ -62,6 +62,25 @@ export async function createJWT(json: object, secret: string): Promise<string | 
   return `${encodedHeader}.${encodedPayload}.${encodedSignature}`;
 }
 
+// Loads api.js once per page. An editor that mounts while the script is loading waits for the same script element.
+export const loadDocsApi = (documentServer: string): Promise<void> => {
+  if (window.DocsAPI) return Promise.resolve();
+
+  const apiUrl = new URL("/web-apps/apps/api/documents/api.js", documentServer).toString();
+
+  return new Promise((resolve, reject) => {
+    let script = document.querySelector<HTMLScriptElement>(`script[src="${apiUrl}"]`);
+    if (!script) {
+      script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = apiUrl;
+      document.body.appendChild(script);
+    }
+    script.addEventListener("load", () => resolve());
+    script.addEventListener("error", () => reject(new Error("Failed to load OnlyOffice API script.")));
+  });
+};
+
 const getDocumentType = (fileType: string): string => {
   switch (fileType) {
     case "xlsx":
@@ -221,30 +240,19 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
   const documentServerSecret = customFields.documentServerSecret as string;
 
   useEffect(() => {
-    if ("1" !== document.documentElement.getAttribute("data-script-api-state")) {
-      if ("2" !== document.documentElement.getAttribute("data-script-api-state")) {
-        const apiUrl = new URL('/web-apps/apps/api/documents/api.js', documentServer);
+    let cancelled = false;
 
-        const scriptApi = document.createElement("script");
-        scriptApi.type = "text/javascript";
-        scriptApi.src = apiUrl.toString();
-        scriptApi.onerror = () => {
-          console.error("Failed to load OnlyOffice API script.");
-        };
-        scriptApi.onload = () => {
-          document.documentElement.setAttribute("data-script-api-state", "2");
+    loadDocsApi(documentServer)
+      .then(() => {
+        if (!cancelled) {
           addScript(documentServerSecret, fileType, code, colorMode, templateUrl, zoom, config, externalScript, isDemo, isForm);
-        };
-
-        document.documentElement.setAttribute("data-script-api-state", "1");
-        document.body.appendChild(scriptApi);
-      } else {
-        addScript(documentServerSecret, fileType, code, colorMode, templateUrl, zoom, config, externalScript, isDemo, isForm);
-      }
-    }
+        }
+      })
+      .catch((e) => console.error(e));
 
     return () => {
-      document.getElementById(scriptId).remove();
+      cancelled = true;
+      document.getElementById(scriptId)?.remove();
     };
   }, []);
 

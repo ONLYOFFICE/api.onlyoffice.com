@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useColorMode } from "@docusaurus/theme-common";
-import { createJWT } from "../OnlyofficeEditor";
+import { createJWT, loadDocsApi } from "../OnlyofficeEditor";
 import styles from "./styles.module.css";
 
 const SAMPLES_URL = "https://static.onlyoffice.com/assets/docs/samples/";
@@ -16,29 +16,6 @@ interface CompareDocumentsEditorProps {
 type CompareStatus = "loading" | "comparing" | "error";
 
 const fileName = (url: string): string => decodeURIComponent(url.split("/").pop() || url);
-
-// Shares the api.js script with OnlyofficeEditor through the data-script-api-state attribute.
-const loadDocsApi = (documentServer: string): Promise<void> => {
-  if (window.DocsAPI) return Promise.resolve();
-
-  const apiUrl = new URL("/web-apps/apps/api/documents/api.js", documentServer).toString();
-
-  return new Promise((resolve, reject) => {
-    let script = document.querySelector<HTMLScriptElement>(`script[src="${apiUrl}"]`);
-    if (!script) {
-      script = document.createElement("script");
-      script.type = "text/javascript";
-      script.src = apiUrl;
-      document.documentElement.setAttribute("data-script-api-state", "1");
-      document.body.appendChild(script);
-    }
-    script.addEventListener("load", () => {
-      document.documentElement.setAttribute("data-script-api-state", "2");
-      resolve();
-    });
-    script.addEventListener("error", () => reject(new Error("Failed to load OnlyOffice API script.")));
-  });
-};
 
 const createViewerConfig = (url: string, theme: string): Record<string, unknown> => ({
   document: {
