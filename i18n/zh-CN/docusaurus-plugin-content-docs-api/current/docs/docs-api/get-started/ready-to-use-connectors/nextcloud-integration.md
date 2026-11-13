@@ -11,14 +11,14 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 适用于 Nextcloud 的 ONLYOFFICE 应用允许用户借助 ONLYOFFICE 文档在 [Nextcloud](https://nextcloud.com) 中编辑办公文档。其源代码托管在 [GitHub](https://github.com/ONLYOFFICE/onlyoffice-nextcloud) 上，最新的已签名版本可在 [Nextcloud 应用商店](https://apps.nextcloud.com/apps/onlyoffice)获取。
 
-## 功能特性
+## 功能特性 {#features}
 
 - 目前，使用该应用程序可打开并编辑以下文档格式：DOCM、DOCX、DOTM、DOTX、PDF、POTM、POTX、PPSM、PPSX、PPTM、PPTX、XLSB、XLSM、XLSX、XLTM、XLTX。
 - 仅支持查看的文档格式为：CSV、DJVU、DOC、DOT、DPS、DPT、EPUB、ET、ETT、FB2、FODP、FODS、FODT、HTM、HTML、HWP、HWPX、KEY、MD、MHT、MHTML、NUMBERS、ODG、ODP、ODS、ODT、OTP、OTS、OTT、OXPS、PAGES、POT、PPS、PPT、RTF、STW、SXC、SXI、SXW、TSV、TXT、VSDM、VSDX、VSSM、VSSX、VSTM、VSTX、WPS、WPT、XLS、XLT、XML、XPS。
 - 以下格式可转换为 OOXML 格式：DOC、DOCM、DOT、DOTX、EPUB、HTM、HTML、ODP、ODT、POT、POTM、POTX、PPS、PPSM、PPSX、PPT、PPTM、RTF、XLS、XLSM、XLT、XLTM、XLTX。
 - 该应用程序会在**新建（+）**菜单中创建用于创建**文档**、**电子表格**、**演示文稿**、**PDF** 的选项。它还会在文档库中为 Office 文档创建一个新的**在 ONLYOFFICE 中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回 Nextcloud。连接到同一文档服务器的多个联合 Nextcloud 实例之间也支持协同编辑。
 
-## 安装 ONLYOFFICE 文档
+## 安装 ONLYOFFICE 文档 {#installing-onlyoffice-docs}
 
 您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 Nextcloud 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/docs/installation/community/linux/installing/install-ubuntu)。ONLYOFFICE 文档还必须能够直接向 Nextcloud 发送 POST 请求。
 
@@ -98,7 +98,7 @@ https://<文档服务器地址>/
 
 **在 ONLYOFFICE 中打开**操作将添加到文件上下文菜单中。您可以将此操作设置为默认操作，这样在点击选定文件类型的文件名时，就会使用该操作。
 
-### ONLYOFFICE Nextcloud 连接器：配置参数
+### ONLYOFFICE Nextcloud 连接器：配置参数 {#onlyoffice-connector-for-nextcloud-configuration-parameters}
 
 以下是 ONLYOFFICE Nextcloud 集成应用程序的所有可用配置参数，分为以下三个表格：
 
@@ -267,7 +267,7 @@ occ onlyoffice:documentserver --check
 
 要关闭此检查，请在管理页面上取消勾选**启用编辑器后台连接检查**复选框（即[基本配置](#basic-configuration-ui--occ)中的 `cronChecker` 参数），或将 `editors_check_interval` 设置为 `0`。
 
-## 高级文档权限
+## 高级文档权限 {#advanced-document-permissions}
 
 高级标签页允许您仅向共享标签页中指定的用户授予额外的访问权限，而不允许他们重新共享文件。根据所选的自定义权限选项和文件类型（docx、pptx、xlsx），您可以授予不同的额外权限。
 

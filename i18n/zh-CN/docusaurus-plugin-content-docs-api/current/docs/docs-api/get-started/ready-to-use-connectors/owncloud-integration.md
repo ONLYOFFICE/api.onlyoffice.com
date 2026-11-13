@@ -11,7 +11,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 适用于 ownCloud 的 ONLYOFFICE 应用允许用户借助 ONLYOFFICE 文档在 [ownCloud](https://owncloud.com) 中编辑办公文档。其源代码托管在 [GitHub](https://github.com/ONLYOFFICE/onlyoffice-owncloud) 上，最新的已签名版本可在 [ownCloud 应用市场](https://marketplace.owncloud.com/apps/onlyoffice)获取。
 
-## 功能特性
+## 功能特性 {#features}
 
 - 目前，使用该应用程序可打开并编辑以下文档格式：DOCM、DOCX、DOTM、DOTX、PDF、POTM、POTX、PPSM、PPSX、PPTM、PPTX、XLSB、XLSM、XLSX、XLTM、XLTX。
 - 仅支持查看的文档格式如下：CSV、DJVU、DOC、DOT、DPS、DPT、EPUB、ET、ETT、FB2、FODP、FODS、FODT、HTM、HTML、HWP、HWPX、KEY、MD、MHT、MHTML、NUMBERS、ODG、ODP、ODS、ODT、OTP、OTS、OTT、OXPS、PAGES、POT、PPS、PPT、RTF、STW、SXC、SXI、SXW、TXT、VSDM、VSDX、VSSM、VSSX、VSTM、VSTX、WPS、WPT、XLS、XLT、XML、XPS。
@@ -20,7 +20,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 - 支持以不同的权限类型共享文件，如查看/编辑、评论、审阅、填写表单。还可以限制下载（在所有编辑器中）和修改筛选器（在电子表格中）。也支持通过公共链接进行共享。
 - 支持在 **ownCloud Web** 中处理文档、电子表格和演示文稿。
 
-## 安装 ONLYOFFICE 文档
+## 安装 ONLYOFFICE 文档 {#installing-onlyoffice-docs}
 
 您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例必须能从 ownCloud 和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的 [ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/docs/installation/community/linux/installing/install-ubuntu)。ONLYOFFICE 文档还必须能够直接向 ownCloud 发送 POST 请求。
 
@@ -53,7 +53,7 @@ ownCloud 管理员可以从内置的应用市场安装集成应用程序。为�
    ```
 
    :::note
-   ownCloud 无法使用未签名的应用程序，并会给出警告，所以您需要使用选项**1** 或**2** 来获取应用程序。
+   ownCloud 无法使用未签名的应用程序，并会给出警告，所以您需要使用选项 **1** 或 **2** 来获取应用程序。
    :::
 
 3. 修改所有者，以便可以从 ownCloud Web 界面更新应用程序：
@@ -137,7 +137,7 @@ occ onlyoffice:documentserver --check
 
 要关闭此检查，请在管理页面上取消勾选**启用编辑器后台连接检查**复选框，或将 `editors_check_interval` 设置为 `0`。
 
-## 在 ownCloud Web 中启用编辑功能
+## 在 ownCloud Web 中启用编辑功能 {#enabling-editing-for-owncloud-web}
 
 要在 **ownCloud Web** 中启用编辑功能，需要在 ownCloud Web 的 *config.json* 中注册该应用程序：
 
@@ -174,9 +174,9 @@ ONLYOFFICE 集成遵循[此处](../basic-concepts.md)记录的 API 规范。
 
 5. 应用程序准备一个包含以下属性的 JSON 对象：
 
-   - **url**- ONLYOFFICE 文档用于下载文档的 URL；
-   - **callbackUrl**- ONLYOFFICE 文档用于通知文档编辑状态的 URL；
-   - **documentServerUrl**- 客户端需要响应给 ONLYOFFICE 文档的 URL（可在管理设置页面中设置）；
+   - **url**：ONLYOFFICE 文档用于下载文档的 URL；
+   - **callbackUrl**：ONLYOFFICE 文档用于通知文档编辑状态的 URL；
+   - **documentServerUrl**：客户端需要响应给 ONLYOFFICE 文档的 URL（可在管理设置页面中设置）；
    - **key**：由 *UUID+ 修改时间戳* 组成，用于指示 ONLYOFFICE 文档是否需要重新下载文档。
 
 6. ownCloud 获取该对象，并从 *templates/editor.php* 模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。
