@@ -1,6 +1,6 @@
 # Change log
 
-## 10.4.0
+## 10.3.0
 
 ### New features
 
@@ -8,8 +8,9 @@
 
 * Added the `document.options.watermark` and `document.options.watermark_on_draw` parameters: the watermark object, the `%user_name%` placeholder, opacity, watermarks in PDF and image downloads, and why a watermark is not access control
 * Added the Data retention page: what ONLYOFFICE Docs keeps while documents are edited, where and for how long, who can access the cache, and how to delete it
-* Added the Working with watermark Automation API sample, which changes the on-screen watermark from an external panel
 * Added the Server components section to How it works: the DocService, FileConverter and Metrics processes, the external services they use, and the Node.js runtime bundled into the executables
+* Added an FAQ entry on using ONLYOFFICE Docs with a self-signed certificate in any integration
+* Added the Working with watermark Automation API sample, which changes the on-screen watermark from an external panel
 * Added the Opening the editor in a dialog sample: the editor in a dialog the user moves, resizes and closes with the editor's own button
 
 #### Common
@@ -21,43 +22,20 @@
 
 #### Docs API
 
-* Replaced the duplicated watermark rows in the conversion request table with a link to the watermark object
-* Clarified on the Data retention page that cache folders created before a restart are left behind only in the Community edition
-
-#### Localization
-
-* Synced the zh-CN document config and conversion request pages with English
-* Synced the zh-CN How it works and Data retention pages with English
-
-### Fixes
-
-* Fixed the old help center `.aspx` links in the Docs API pages and connector guides
-* Fixed the Working with watermark sample controls: Apply stays disabled until the editor is ready, Enter applies the text, and every select is labelled
-* Fixed editor samples that never opened when they mounted while the Docs API script was still loading
-
-## 10.3.0
-
-### New features
-
-#### Docs API
-
-* Added an FAQ entry on using ONLYOFFICE Docs with a self-signed certificate in any integration
-
-### Improvements
-
-#### Docs API
-
 * Restructured the ownCloud and Nextcloud known issues: self-signed certificates and the background connection check now sit under Checking the connection, file conversion has its own section, and each remaining issue has a heading
 * Covered the ONLYOFFICE Docs side of self-signed certificates (`rejectUnauthorized`), files shared without download permission and file locking on the ownCloud and Nextcloud pages
 * Used the connectors' current UI names and added explicit heading anchors on the ownCloud and Nextcloud pages
+* Replaced the duplicated watermark rows in the conversion request table with a link to the watermark object
 
 #### Localization
 
-* Synced the zh-CN ownCloud, Nextcloud and FAQ pages with English
+* Synced the zh-CN ownCloud, Nextcloud, FAQ, document config, conversion request, How it works and Data retention pages with English
 
 ### Fixes
 
 * Fixed the "ownClowd" typo in the FAQ
+* Fixed the old help center `.aspx` links in the Docs API pages and connector guides
+* Fixed editor samples that never opened when they mounted while the Docs API script was still loading
 
 ## 10.2.0
 
