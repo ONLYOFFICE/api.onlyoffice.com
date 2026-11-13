@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 hide_table_of_contents: true
+description: 通过自动化 API 从外部 UI 更改屏幕上的水印。
+tags: ["Docs", "Integration", "External access", "Automation API"]
 ---
 
 import { WatermarkExternalToolbar } from '@site/src/components/BrowserWindow';

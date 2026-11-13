@@ -1,6 +1,8 @@
 ---
 sidebar_position: -2
 hide_table_of_contents: true
+description: 通过自动化 API 从外部 UI 接受或拒绝跟踪的更改。
+tags: ["Docs", "Integration", "External access", "Automation API"]
 ---
 
 import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow';

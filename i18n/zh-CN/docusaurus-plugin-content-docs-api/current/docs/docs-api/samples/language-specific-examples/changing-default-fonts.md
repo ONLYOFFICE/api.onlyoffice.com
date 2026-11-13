@@ -1,5 +1,7 @@
 ---
 sidebar_position: -1
+description: 在 ONLYOFFICE 文档示例中更改新文档的默认字体。
+tags: ["Docs", "Integration"]
 ---
 
 # 更改默认字体

@@ -1,6 +1,8 @@
 ---
 sidebar_position: -3
 hide_table_of_contents: true
+description: 通过自动化 API 从外部 UI 管理文档批注。
+tags: ["Docs", "Integration", "External access", "Automation API"]
 ---
 
 import { CommentsExternalToolbar } from '@site/src/components/BrowserWindow';
