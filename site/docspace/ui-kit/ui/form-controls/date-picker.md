@@ -48,7 +48,7 @@ The picker as a form shows it before a date is chosen: click **Select date** to 
 
 DatePicker initialized with the current date. The selected date appears as a chip that can be removed.
 
-<ThemedImage alt="With Initial Date" width={147} sources={{ light: require('./date-picker--with-initial-date-light.png').default, dark: require('./date-picker--with-initial-date-dark.png').default }} />
+<ThemedImage alt="With Initial Date" width={151} sources={{ light: require('./date-picker--with-initial-date-light.png').default, dark: require('./date-picker--with-initial-date-dark.png').default }} />
 
 ### Future Dates Only
 
@@ -66,13 +66,13 @@ Constrains the calendar to a specific year (2023). Only dates within January 1 -
 
 The calendar icon in the selected date chip can be hidden with showCalendarIcon=\{false\}.
 
-<ThemedImage alt="Without Calendar Icon" width={123} sources={{ light: require('./date-picker--without-calendar-icon-light.png').default, dark: require('./date-picker--without-calendar-icon-dark.png').default }} />
+<ThemedImage alt="Without Calendar Icon" width={127} sources={{ light: require('./date-picker--without-calendar-icon-light.png').default, dark: require('./date-picker--without-calendar-icon-dark.png').default }} />
 
 ### Without Clear Button
 
 For a date the form requires: the chip has no cross, so a date can be replaced by clicking the chip and picking another day, but not removed (`hideCross`).
 
-<ThemedImage alt="Without Clear Button" width={135} sources={{ light: require('./date-picker--without-clear-button-light.png').default, dark: require('./date-picker--without-clear-button-dark.png').default }} />
+<ThemedImage alt="Without Clear Button" width={139} sources={{ light: require('./date-picker--without-clear-button-light.png').default, dark: require('./date-picker--without-clear-button-dark.png').default }} />
 
 ### Aligned To Right Edge
 
@@ -96,7 +96,7 @@ The picker under a right-to-left interface: the chip starts at the right edge, w
 
 The variables are listed under CSS variables on this page. They are set on one wrapper around two pickers. The first holds the first day of this month, so it shows the chip; the second has no date, so it shows the **Select date** button. Open either calendar to see the calendar variables: both start at the first of this month (`minDate`), so the days of the previous month and the left arrow show their disabled colours, and the first picker's chosen day differs from today. Hover the chip, the button and a day to see the hover variables.
 
-<ThemedImage alt="Css Customization" width={298} sources={{ light: require('./date-picker--css-customization-light.png').default, dark: require('./date-picker--css-customization-dark.png').default }} />
+<ThemedImage alt="Css Customization" width={302} sources={{ light: require('./date-picker--css-customization-light.png').default, dark: require('./date-picker--css-customization-dark.png').default }} />
 
 ## Minimal example
 

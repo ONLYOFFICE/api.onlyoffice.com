@@ -13,7 +13,7 @@ Horizontal strip of large icon tiles that scrolls when the tiles no longer fit. 
 banner of "create a document, create a room, start from a template" at the top of an empty
 section.
 
-<ThemedImage alt="QuickActions" width={776} sources={{ light: require('./quick-actions--primary-light.png').default, dark: require('./quick-actions--primary-dark.png').default }} />
+<ThemedImage alt="QuickActions" width={768} sources={{ light: require('./quick-actions--primary-light.png').default, dark: require('./quick-actions--primary-dark.png').default }} />
 
 ## Use this when / not when
 
@@ -44,13 +44,13 @@ colours; the dark values are defined on the theme's `.dark` class.
 
 Four tiles in a banner 752px wide, the width a content column usually gives it. Click a tile to see its `onClick` in the Actions panel, and change any other prop live in the Controls panel below.
 
-<ThemedImage alt="Default" width={776} sources={{ light: require('./quick-actions--default-light.png').default, dark: require('./quick-actions--default-dark.png').default }} />
+<ThemedImage alt="Default" width={768} sources={{ light: require('./quick-actions--default-light.png').default, dark: require('./quick-actions--default-dark.png').default }} />
 
 ### In AI Forms
 
 Four ways to start the same kind of file, each drawn with a different illustration from the set this folder exports: the icons differ in proportions, and each is fitted into the same box without being stretched.
 
-<ThemedImage alt="In AI Forms" width={776} sources={{ light: require('./quick-actions--in-ai-forms-light.png').default, dark: require('./quick-actions--in-ai-forms-dark.png').default }} />
+<ThemedImage alt="In AI Forms" width={768} sources={{ light: require('./quick-actions--in-ai-forms-light.png').default, dark: require('./quick-actions--in-ai-forms-dark.png').default }} />
 
 ### In AI Chat
 
@@ -64,7 +64,7 @@ Five tiles, more than the banner holds. The tiles keep their width and the strip
 
 At the start only the forward arrow is shown; scroll and the back arrow appears, and at the far end the forward one goes. The arrows float over the strip, so nothing moves when they appear. With a mouse they fade in while the banner is hovered or focused; on a touch screen they stay visible.
 
-<ThemedImage alt="Carousel" width={968} sources={{ light: require('./quick-actions--carousel-light.png').default, dark: require('./quick-actions--carousel-dark.png').default }} />
+<ThemedImage alt="Carousel" width={768} sources={{ light: require('./quick-actions--carousel-light.png').default, dark: require('./quick-actions--carousel-dark.png').default }} />
 
 ### Dismissible
 
@@ -72,7 +72,7 @@ The close control in the top corner (`onClose`); hover the banner, then hover th
 
 The control is only rendered when `onClose` is given: a consumer with nowhere to persist the choice would otherwise offer a button that undoes itself on the next load. Hiding the banner is the host's decision to store and to reverse — the component only reports the click.
 
-<ThemedImage alt="Dismissible" width={968} sources={{ light: require('./quick-actions--dismissible-light.png').default, dark: require('./quick-actions--dismissible-dark.png').default }} />
+<ThemedImage alt="Dismissible" width={768} sources={{ light: require('./quick-actions--dismissible-light.png').default, dark: require('./quick-actions--dismissible-dark.png').default }} />
 
 ### Link Tiles
 
@@ -90,13 +90,13 @@ Tiles that go somewhere instead of doing something: each is a real link (`href`)
 
 Skeleton tiles of the real tiles' size, one per item, while the set of actions is still being worked out (`isLoading`). The banner keeps its height, so the content below does not jump when the tiles arrive. With an empty `items` four skeletons are drawn.
 
-<ThemedImage alt="Loading State" width={776} sources={{ light: require('./quick-actions--loading-state-light.png').default, dark: require('./quick-actions--loading-state-dark.png').default }} />
+<ThemedImage alt="Loading State" width={768} sources={{ light: require('./quick-actions--loading-state-light.png').default, dark: require('./quick-actions--loading-state-dark.png').default }} />
 
 ### Right To Left
 
 The strip in a right-to-left layout: the first tile sits at the right edge, the strip scrolls toward the left, and the fade and the forward arrow move to the left edge with the arrow pointing left. The wrapper carries `dir="rtl"`; the direction also comes from the theme's `interfaceDirection` (the Direction toolbar).
 
-<ThemedImage alt="Right To Left" width={968} sources={{ light: require('./quick-actions--right-to-left-light.png').default, dark: require('./quick-actions--right-to-left-dark.png').default }} />
+<ThemedImage alt="Right To Left" width={768} sources={{ light: require('./quick-actions--right-to-left-light.png').default, dark: require('./quick-actions--right-to-left-dark.png').default }} />
 
 ### Css Customization
 
@@ -286,7 +286,7 @@ export function StartHereMixed({ canCreateRoom }: { canCreateRoom: boolean }) {
           id: "templates",
           label: "Browse templates",
           icon: <svg viewBox="0 0 81 75" aria-hidden="true" />,
-          href: "https://www.onlyoffice.com/templates.aspx",
+          href: "https://templates.onlyoffice.com",
           target: "_blank",
         },
         {

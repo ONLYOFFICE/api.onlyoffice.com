@@ -30,7 +30,7 @@ AIAgentSelector is a selector panel for choosing an AI agent room.
 
 A basic AIAgentSelector with default settings.
 
-<ThemedImage alt="Default" width={1019} sources={{ light: require('./ai-agent-selector--default-light.png').default, dark: require('./ai-agent-selector--default-dark.png').default }} />
+<ThemedImage alt="Default" width={724} sources={{ light: require('./ai-agent-selector--default-light.png').default, dark: require('./ai-agent-selector--default-dark.png').default }} />
 
 ```tsx
 import AIAgentSelector from "@onlyoffice/apps-ui-kit/selectors/AIAgent";

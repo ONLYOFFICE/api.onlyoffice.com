@@ -19,7 +19,7 @@ Uploader is a file upload component that supports chunked uploads, folder upload
 
 This example shows the basic file uploader with multiple file support and file type restrictions.
 
-<ThemedImage alt="Default" width={1019} sources={{ light: require('./uploader--default-light.png').default, dark: require('./uploader--default-dark.png').default }} />
+<ThemedImage alt="Default" width={816} sources={{ light: require('./uploader--default-light.png').default, dark: require('./uploader--default-dark.png').default }} />
 
 Basic usage with file type restrictions and multiple file upload enabled:
 
@@ -42,7 +42,7 @@ Basic usage with file type restrictions and multiple file upload enabled:
 
 Demonstrates uploading a single file at a time.
 
-<ThemedImage alt="Single File Upload" width={1019} sources={{ light: require('./uploader--single-file-upload-light.png').default, dark: require('./uploader--single-file-upload-dark.png').default }} />
+<ThemedImage alt="Single File Upload" width={816} sources={{ light: require('./uploader--single-file-upload-light.png').default, dark: require('./uploader--single-file-upload-dark.png').default }} />
 
 Restrict to single file upload by setting `isMultipleUpload` to false:
 
@@ -59,7 +59,7 @@ Restrict to single file upload by setting `isMultipleUpload` to false:
 
 Shows how to enable folder upload mode for uploading entire directories.
 
-<ThemedImage alt="Folder Upload" width={1019} sources={{ light: require('./uploader--folder-upload-light.png').default, dark: require('./uploader--folder-upload-dark.png').default }} />
+<ThemedImage alt="Folder Upload" width={816} sources={{ light: require('./uploader--folder-upload-light.png').default, dark: require('./uploader--folder-upload-dark.png').default }} />
 
 Enable folder upload with `isFolderUpload` prop:
 
@@ -78,7 +78,7 @@ Enable folder upload with `isFolderUpload` prop:
 
 Demonstrates uploading a single folder at a time.
 
-<ThemedImage alt="Single Folder Upload" width={1019} sources={{ light: require('./uploader--single-folder-upload-light.png').default, dark: require('./uploader--single-folder-upload-dark.png').default }} />
+<ThemedImage alt="Single Folder Upload" width={816} sources={{ light: require('./uploader--single-folder-upload-light.png').default, dark: require('./uploader--single-folder-upload-dark.png').default }} />
 
 ```tsx
 <Uploader
@@ -94,7 +94,7 @@ Demonstrates uploading a single folder at a time.
 
 Specialized uploader for image files only.
 
-<ThemedImage alt="Image Upload" width={1019} sources={{ light: require('./uploader--image-upload-light.png').default, dark: require('./uploader--image-upload-dark.png').default }} />
+<ThemedImage alt="Image Upload" width={816} sources={{ light: require('./uploader--image-upload-light.png').default, dark: require('./uploader--image-upload-dark.png').default }} />
 
 Restrict to image file types:
 
@@ -114,7 +114,7 @@ Restrict to image file types:
 
 Shows how to set maximum file size per upload.
 
-<ThemedImage alt="With Size Limit" width={1019} sources={{ light: require('./uploader--with-size-limit-light.png').default, dark: require('./uploader--with-size-limit-dark.png').default }} />
+<ThemedImage alt="With Size Limit" width={816} sources={{ light: require('./uploader--with-size-limit-light.png').default, dark: require('./uploader--with-size-limit-dark.png').default }} />
 
 Set maximum file size with `maxPerUploadSize`:
 
@@ -130,7 +130,7 @@ Set maximum file size with `maxPerUploadSize`:
 
 Demonstrates setting both per-file and total upload size limits.
 
-<ThemedImage alt="With Total Size Limit" width={1019} sources={{ light: require('./uploader--with-total-size-limit-light.png').default, dark: require('./uploader--with-total-size-limit-dark.png').default }} />
+<ThemedImage alt="With Total Size Limit" width={816} sources={{ light: require('./uploader--with-total-size-limit-light.png').default, dark: require('./uploader--with-total-size-limit-dark.png').default }} />
 
 Set both individual and total size limits:
 
@@ -147,7 +147,7 @@ Set both individual and total size limits:
 
 Allows uploading any file type without restrictions.
 
-<ThemedImage alt="Any Files" width={1019} sources={{ light: require('./uploader--any-files-light.png').default, dark: require('./uploader--any-files-dark.png').default }} />
+<ThemedImage alt="Any Files" width={816} sources={{ light: require('./uploader--any-files-light.png').default, dark: require('./uploader--any-files-dark.png').default }} />
 
 Accept all file types with wildcard:
 
@@ -165,7 +165,7 @@ Accept all file types with wildcard:
 
 Shows how to customize chunk size, thread count, and concurrent file uploads.
 
-<ThemedImage alt="Custom Settings" width={1019} sources={{ light: require('./uploader--custom-settings-light.png').default, dark: require('./uploader--custom-settings-dark.png').default }} />
+<ThemedImage alt="Custom Settings" width={816} sources={{ light: require('./uploader--custom-settings-light.png').default, dark: require('./uploader--custom-settings-dark.png').default }} />
 
 Configure upload behavior with `filesSettings`:
 

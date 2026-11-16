@@ -92,7 +92,7 @@ A nested menu level needs a way back: **Header with Back** shows an arrow before
 
 A label longer than the menu is cut off with an ellipsis instead of wrapping or widening the menu (`textOverflow`).
 
-<ThemedImage alt="With Text Overflow" width={637} sources={{ light: require('./drop-down-item--with-text-overflow-light.png').default, dark: require('./drop-down-item--with-text-overflow-dark.png').default }} />
+<ThemedImage alt="With Text Overflow" width={254} sources={{ light: require('./drop-down-item--with-text-overflow-light.png').default, dark: require('./drop-down-item--with-text-overflow-dark.png').default }} />
 
 ### With External Link
 

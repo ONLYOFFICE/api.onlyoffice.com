@@ -58,7 +58,7 @@ A list of rows of one height (`viewAs="row"`, `itemSize`). Scroll to the end: th
 
 A table whose rows share one column layout (`viewAs="table"`). The layout is not passed as a prop: the loader reads it from `localStorage` under the key it is given (`columnStorageName`, or `columnInfoPanelStorageName` while `infoPanelVisible` is set), which lets the table header that saves the widths and the rows below stay in step. The rows not loaded yet show the table skeleton.
 
-<ThemedImage alt="Table Layout" width={1018} sources={{ light: require('./infinite-loader--table-layout-light.png').default, dark: require('./infinite-loader--table-layout-dark.png').default }} />
+<ThemedImage alt="Table Layout" width={1013} sources={{ light: require('./infinite-loader--table-layout-light.png').default, dark: require('./infinite-loader--table-layout-dark.png').default }} />
 
 ### Right To Left
 

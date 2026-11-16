@@ -35,7 +35,7 @@ into the other.
 ## Dates and durations
 
 `utils/date` is the largest module — 60 exports, all built on
-[luxon](https://moment.github.io/luxon/). It replaces moment.js across the kit and keeps
+[luxon](https://moment.github.io/luxon). It replaces moment.js across the kit and keeps
 the portal's timezone handling in one place.
 
 <APITable>

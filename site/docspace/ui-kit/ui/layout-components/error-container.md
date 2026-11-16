@@ -61,7 +61,7 @@ The plain error page: the heading says what happened (`headerText`), the line un
 
 The same page laid over its host instead of pushing it down (`isEditor`), for a screen such as a document editor that mounts the error on top of a layout of its own.
 
-<ThemedImage alt="In Editor Mode" width={1014} sources={{ light: require('./error-container--in-editor-mode-light.png').default, dark: require('./error-container--in-editor-mode-dark.png').default }} />
+<ThemedImage alt="In Editor Mode" width={1013} sources={{ light: require('./error-container--in-editor-mode-light.png').default, dark: require('./error-container--in-editor-mode-dark.png').default }} />
 
 ### With Children
 

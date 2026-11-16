@@ -19,7 +19,7 @@ Crop window with drag, zoom and a replace control, for turning an uploaded pictu
 or a logo. It holds nothing: the file, the crop and the rendered preview all live in your state
 and come back through callbacks.
 
-<ThemedImage alt="ImageEditor" width={664} sources={{ light: require('./image-editor--primary-light.png').default, dark: require('./image-editor--primary-dark.png').default }} />
+<ThemedImage alt="ImageEditor" width={384} sources={{ light: require('./image-editor--primary-light.png').default, dark: require('./image-editor--primary-dark.png').default }} />
 
 **Portal-internal.** `t` is required and the labels are asked for by key, so the component needs
 the portal's translation context. Outside ONLYOFFICE Apps, supply a `t` of your own — see the example.
@@ -62,31 +62,31 @@ failing, so on a dark page without a provider the mask stays light. `Translation
 
 A picture framed in a square window with slightly rounded corners, the starting point for a logo or a cover. Drag the picture to reframe it; the zoom row stays hidden because the picture is given as a URL, not a `File`. Change any other prop live in the Controls panel below.
 
-<ThemedImage alt="Default" width={664} sources={{ light: require('./image-editor--default-light.png').default, dark: require('./image-editor--default-dark.png').default }} />
+<ThemedImage alt="Default" width={384} sources={{ light: require('./image-editor--default-light.png').default, dark: require('./image-editor--default-dark.png').default }} />
 
 ### Profile Avatar
 
 A round crop window, the shape a profile picture is usually cut to: any radius of half the 648px canvas or more (`editorBorderRadius`) turns the square into a circle.
 
-<ThemedImage alt="Profile Avatar" width={664} sources={{ light: require('./image-editor--profile-avatar-light.png').default, dark: require('./image-editor--profile-avatar-dark.png').default }} />
+<ThemedImage alt="Profile Avatar" width={384} sources={{ light: require('./image-editor--profile-avatar-light.png').default, dark: require('./image-editor--profile-avatar-dark.png').default }} />
 
 ### With Zoom Controls
 
 A picture given as a `File`, the way it arrives from a file input, gets the zoom row under the Choose another control: the slider zooms from 1x to 5x in fine steps, the minus and plus buttons by half a step each, and the preview below follows the crop (`setPreview`).
 
-<ThemedImage alt="With Zoom Controls" width={664} sources={{ light: require('./image-editor--with-zoom-controls-light.png').default, dark: require('./image-editor--with-zoom-controls-dark.png').default }} />
+<ThemedImage alt="With Zoom Controls" width={384} sources={{ light: require('./image-editor--with-zoom-controls-light.png').default, dark: require('./image-editor--with-zoom-controls-dark.png').default }} />
 
 ### Disabled State
 
 The editor while a save is in flight: the zoom row is greyed out, the picture no longer drags and Choose another opens no picker (`isDisabled`).
 
-<ThemedImage alt="Disabled State" width={664} sources={{ light: require('./image-editor--disabled-state-light.png').default, dark: require('./image-editor--disabled-state-dark.png').default }} />
+<ThemedImage alt="Disabled State" width={384} sources={{ light: require('./image-editor--disabled-state-light.png').default, dark: require('./image-editor--disabled-state-dark.png').default }} />
 
 ### Fixed Framing
 
 The same `File` with its framing locked: the zoom row is gone and dragging leaves the picture where it is, while Choose another still replaces it (`disableImageRescaling`).
 
-<ThemedImage alt="Fixed Framing" width={664} sources={{ light: require('./image-editor--fixed-framing-light.png').default, dark: require('./image-editor--fixed-framing-dark.png').default }} />
+<ThemedImage alt="Fixed Framing" width={384} sources={{ light: require('./image-editor--fixed-framing-light.png').default, dark: require('./image-editor--fixed-framing-dark.png').default }} />
 
 ## Minimal example
 

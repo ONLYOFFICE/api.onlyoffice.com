@@ -49,31 +49,31 @@ The picker as a form shows it before anything is chosen: only the "Select date" 
 
 Use it when the chosen moment fails validation: the time turns red and the control is marked invalid for screen readers (`hasError`). A day is picked here because the time, the only part drawn in the error colour, shows only once there is one.
 
-<ThemedImage alt="With Error" width={249} sources={{ light: require('./date-time-picker--with-error-light.png').default, dark: require('./date-time-picker--with-error-dark.png').default }} />
+<ThemedImage alt="With Error" width={253} sources={{ light: require('./date-time-picker--with-error-light.png').default, dark: require('./date-time-picker--with-error-dark.png').default }} />
 
 ### With Initial Date
 
 Use it to edit a moment that already exists, such as a saved deadline: the day chip and the time show it from the first render (`initialDate`). The English locale gives a 12-hour clock; click the time to see the AM/PM drop-down beside the editor.
 
-<ThemedImage alt="With Initial Date" width={249} sources={{ light: require('./date-time-picker--with-initial-date-light.png').default, dark: require('./date-time-picker--with-initial-date-dark.png').default }} />
+<ThemedImage alt="With Initial Date" width={253} sources={{ light: require('./date-time-picker--with-initial-date-light.png').default, dark: require('./date-time-picker--with-initial-date-dark.png').default }} />
 
 ### Hidden Cross
 
 Use it for a field that must always hold a moment: the day chip has no cross, so the day can be changed in the calendar but never cleared (`hideCross`).
 
-<ThemedImage alt="Hidden Cross" width={237} sources={{ light: require('./date-time-picker--hidden-cross-light.png').default, dark: require('./date-time-picker--hidden-cross-dark.png').default }} />
+<ThemedImage alt="Hidden Cross" width={241} sources={{ light: require('./date-time-picker--hidden-cross-light.png').default, dark: require('./date-time-picker--hidden-cross-dark.png').default }} />
 
 ### Twenty Four Hour Clock
 
 Any locale that is not English switches the clock to 24 hours (`locale`): the time reads "14:30" rather than "02:30 PM", and the editor opened by a click on it has no AM/PM drop-down. The calendar is written in the same locale.
 
-<ThemedImage alt="Twenty Four Hour Clock" width={226} sources={{ light: require('./date-time-picker--twenty-four-hour-clock-light.png').default, dark: require('./date-time-picker--twenty-four-hour-clock-dark.png').default }} />
+<ThemedImage alt="Twenty Four Hour Clock" width={230} sources={{ light: require('./date-time-picker--twenty-four-hour-clock-light.png').default, dark: require('./date-time-picker--twenty-four-hour-clock-dark.png').default }} />
 
 ### Css Customization
 
 Every overridable variable set on one wrapper -- the variables are listed under CSS variables on this page. Click the time to see the time editor and the day chip to see the calendar; the day chip, the "select date" button and the AM/PM drop-down keep their own variables, listed in the SelectedItem, AddButton and ComboBox stories.
 
-<ThemedImage alt="Css Customization" width={257} sources={{ light: require('./date-time-picker--css-customization-light.png').default, dark: require('./date-time-picker--css-customization-dark.png').default }} />
+<ThemedImage alt="Css Customization" width={261} sources={{ light: require('./date-time-picker--css-customization-light.png').default, dark: require('./date-time-picker--css-customization-dark.png').default }} />
 
 ## Minimal example
 

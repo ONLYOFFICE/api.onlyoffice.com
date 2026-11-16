@@ -16,24 +16,20 @@ It wraps the `@onlyoffice/docspace-api-sdk` and authenticates requests with a Be
 ## Reference documentation
 
 This page covers the provider, not the endpoints. The REST API itself is documented at
-[api.onlyoffice.com/docspace](https://api.onlyoffice.com/docspace/), and the same
+[api.onlyoffice.com/docspace](https://api.onlyoffice.com/docspace), and the same
 documentation is published in a machine-readable form for agents and LLMs:
 
-- [`llms.txt`](https://api.teamlab.info/llms.txt) — index of every section
-- [`docspace/api-backend/llms.txt`](https://api.teamlab.info/docspace/api-backend/llms.txt) —
+- [`llms.txt`](https://api.onlyoffice.com/llms.txt) — index of every section
+- [`docspace/api-backend/llms.txt`](https://api.onlyoffice.com/docspace/api-backend/llms.txt) —
   the ONLYOFFICE Apps REST API reference the SDK wraps
-- [`docspace/javascript-sdk/llms.txt`](https://api.teamlab.info/docspace/javascript-sdk/llms.txt) —
+- [`docspace/javascript-sdk/llms.txt`](https://api.onlyoffice.com/docspace/javascript-sdk/llms.txt) —
   Embed SDK
-- [`docspace/plugins-sdk/llms.txt`](https://api.teamlab.info/docspace/plugins-sdk/llms.txt) —
+- [`docspace/plugins-sdk/llms.txt`](https://api.onlyoffice.com/docspace/plugins-sdk/llms.txt) —
   Plugins SDK
-- [`docspace/mcp-server/llms.txt`](https://api.teamlab.info/docspace/mcp-server/llms.txt) —
+- [`docspace/mcp-server/llms.txt`](https://api.onlyoffice.com/docspace/mcp-server/llms.txt) —
   MCP server
 
-Every page there is also available as Markdown: replace the trailing slash of its URL
-with `.md`.
-
-Those links point at `api.teamlab.info` today. The documentation is moving to
-`api.onlyoffice.com` under the same paths, so prefer that host once it serves them.
+Every page there is also available as Markdown: add `.md` to its URL.
 
 ## Setting up ApiProvider
 

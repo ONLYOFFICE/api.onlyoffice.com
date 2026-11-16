@@ -93,13 +93,13 @@ More tabs than a 360px column holds, for a bar whose tabs cannot be cut down:
 - **Underlined row** — scrolls sideways; the edge that hides more tabs fades out
 - **Segmented control** — adds an arrow at each end that selects the previous or next tab, not only scrolls to it (the arrows are left out on phones)
 
-<ThemedImage alt="Overflowing Tabs" width={1019} sources={{ light: require('./tabs--overflowing-tabs-light.png').default, dark: require('./tabs--overflowing-tabs-dark.png').default }} />
+<ThemedImage alt="Overflowing Tabs" width={376} sources={{ light: require('./tabs--overflowing-tabs-light.png').default, dark: require('./tabs--overflowing-tabs-dark.png').default }} />
 
 ### Right To Left
 
 The overflowing bars in a right-to-left layout: the first tab sits at the right-hand end, the fade moves to the left edge, and the segmented arrows swap sides so the right one selects the previous tab. The wrapper carries `dir="rtl"` for the layout; the fade direction and the scroll correction come from the theme's `interfaceDirection` (the Direction toolbar).
 
-<ThemedImage alt="Right To Left" width={1019} sources={{ light: require('./tabs--right-to-left-light.png').default, dark: require('./tabs--right-to-left-dark.png').default }} />
+<ThemedImage alt="Right To Left" width={376} sources={{ light: require('./tabs--right-to-left-light.png').default, dark: require('./tabs--right-to-left-dark.png').default }} />
 
 ### Css Customization
 

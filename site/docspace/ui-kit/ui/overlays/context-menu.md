@@ -95,7 +95,7 @@ The blue square has no handler of its own and nothing calls `show`: with `global
 
 The model has sixteen items, but the menu is only 240px tall — about six and a half rows — and the rest scrolls inside it (`maxHeight`). Hover **Move to**: its submenu has twelve folders and is limited the same way, to 160px (`maxHeightLowerSubmenu`).
 
-<ThemedImage alt="Max Height" width={244} sources={{ light: require('./context-menu--max-height-light.png').default, dark: require('./context-menu--max-height-dark.png').default }} />
+<ThemedImage alt="Max Height" width={243} sources={{ light: require('./context-menu--max-height-light.png').default, dark: require('./context-menu--max-height-dark.png').default }} />
 
 ### Mobile With Header
 

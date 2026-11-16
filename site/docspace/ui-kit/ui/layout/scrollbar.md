@@ -61,13 +61,13 @@ The thumb stays at its wider 8px thickness on desktop instead of widening only w
 
 Content that overflows sideways gets a horizontal track along the bottom edge, drawn the same way as the vertical one.
 
-<ThemedImage alt="With Horizontal Scroll" width={1015} sources={{ light: require('./scrollbar--with-horizontal-scroll-light.png').default, dark: require('./scrollbar--with-horizontal-scroll-dark.png').default }} />
+<ThemedImage alt="With Horizontal Scroll" width={312} sources={{ light: require('./scrollbar--with-horizontal-scroll-light.png').default, dark: require('./scrollbar--with-horizontal-scroll-dark.png').default }} />
 
 ### With Both Scrollbars
 
 Content taller and wider than the box shows both tracks, each shortened by 16px so they do not overlap in the corner.
 
-<ThemedImage alt="With Both Scrollbars" width={516} sources={{ light: require('./scrollbar--with-both-scrollbars-light.png').default, dark: require('./scrollbar--with-both-scrollbars-dark.png').default }} />
+<ThemedImage alt="With Both Scrollbars" width={315} sources={{ light: require('./scrollbar--with-both-scrollbars-light.png').default, dark: require('./scrollbar--with-both-scrollbars-dark.png').default }} />
 
 ### With Padding After Last Item
 

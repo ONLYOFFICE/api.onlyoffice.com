@@ -19,7 +19,7 @@ The ONLYOFFICE Apps page body: a sticky header and filter, a scrolling body, and
 beside it. It is the other half of the portal's layout, next to [`Article`](./article.md),
 and it is also what supplies the kit's layout context to everything inside it.
 
-<ThemedImage alt="Section" width={1020} sources={{ light: require('./section--primary-light.png').default, dark: require('./section--primary-dark.png').default }} />
+<ThemedImage alt="Section" width={1019} sources={{ light: require('./section--primary-light.png').default, dark: require('./section--primary-dark.png').default }} />
 
 ## Use this when / not when
 
@@ -57,7 +57,7 @@ translations and shows empty strings without one.
 
 A whole page: breadcrumbs in the header, a search and filter bar under it and a table in the body, each outlined and labelled so you can see where the section puts its slots. Scroll the table to see the header and the filter stay pinned; change any other prop live in the Controls panel below.
 
-<ThemedImage alt="Default" width={1020} sources={{ light: require('./section--default-light.png').default, dark: require('./section--default-dark.png').default }} />
+<ThemedImage alt="Default" width={1019} sources={{ light: require('./section--default-light.png').default, dark: require('./section--default-dark.png').default }} />
 
 ### With Info Panel
 
@@ -93,13 +93,13 @@ A round progress button in the bottom corner, so a long copy or upload stays vis
 
 A menu of page-wide actions on a right click anywhere in the body, for what applies to the folder rather than to one file (`getContextModel`). Right click the list to open it.
 
-<ThemedImage alt="With Context Menu" width={1015} sources={{ light: require('./section--with-context-menu-light.png').default, dark: require('./section--with-context-menu-dark.png').default }} />
+<ThemedImage alt="With Context Menu" width={1014} sources={{ light: require('./section--with-context-menu-light.png').default, dark: require('./section--with-context-menu-dark.png').default }} />
 
 ### On Tablet
 
 The page in a tablet-width window: the header stays pinned, while the filter bar moves into the listing and scrolls with it, leaving more room for the rows (`currentDeviceType`).
 
-<ThemedImage alt="On Tablet" width={1015} sources={{ light: require('./section--on-tablet-light.png').default, dark: require('./section--on-tablet-dark.png').default }} />
+<ThemedImage alt="On Tablet" width={1014} sources={{ light: require('./section--on-tablet-light.png').default, dark: require('./section--on-tablet-dark.png').default }} />
 
 ### On Phone
 

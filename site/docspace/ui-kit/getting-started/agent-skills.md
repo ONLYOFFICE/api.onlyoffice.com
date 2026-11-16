@@ -1,5 +1,5 @@
 ---
-description: "The `ui-kit` skill teaches an AI coding agent to build screens with this kit in your own React app: which component fits the job, what its props are called, how to install and theme it, and a check it runs on the result."
+description: "The `apps-ui-kit` skill teaches an AI coding agent to build screens with this kit in your own React app: which component fits the job, what its props are called, how to install and theme it, and a check it runs on the result."
 custom_edit_url: "https://github.com/ONLYOFFICE/docspace-ui-kit-react/blob/master/docs/AgentSkills.mdx"
 ---
 
@@ -7,11 +7,11 @@ import APITable from '@site/src/components/APITable/APITable';
 
 # Agent skills
 
-The `ui-kit` skill teaches an AI coding agent to build screens with this kit in your own React
+The `apps-ui-kit` skill teaches an AI coding agent to build screens with this kit in your own React
 app: which component fits the job, what its props are called, how to install and theme it, and
 a check it runs on the result. The agent loads it on its own when a task matches. It ships in
-the `onlyoffice` plugin from the
-[`agent-skills`](https://git.onlyoffice.com/ONLYOFFICE/agent-skills) repository, in the open
+the `onlyoffice-devtools` plugin from the
+[`agent-skills`](https://github.com/ONLYOFFICE/agent-skills) repository, in the open
 [Agent Skills](https://agentskills.io) format, so Claude Code, Cursor, Copilot and Codex all
 read it.
 
@@ -64,21 +64,34 @@ And it is measured, not assumed:
 **Claude Code**
 
 ```
-/plugin marketplace add git@git.onlyoffice.com:ONLYOFFICE/agent-skills.git
-/plugin install onlyoffice@onlyoffice-skills
+/plugin marketplace add ONLYOFFICE/agent-plugins
+/plugin install onlyoffice-devtools@onlyoffice
 ```
 
-Then run `/mcp` once to sign in to the `docspace` MCP server, which gives the agent live
-access to a workspace.
+**Codex**
 
-**Cursor, Codex, Copilot**
+```
+codex plugin marketplace add ONLYOFFICE/agent-plugins
+```
+
+Then install `onlyoffice-devtools` from the `ONLYOFFICE` marketplace in the plugin list.
+
+**GitHub Copilot CLI**
+
+```
+copilot plugin marketplace add ONLYOFFICE/agent-plugins
+copilot plugin install onlyoffice-devtools@onlyoffice
+```
+
+**Cursor and other agents**
 
 ```bash
-git clone git@git.onlyoffice.com:ONLYOFFICE/agent-skills.git
+git clone --branch plugin --depth 1 https://github.com/ONLYOFFICE/agent-skills
+mkdir -p .agents/skills
 cp -r agent-skills/skills/* .agents/skills/
 ```
 
 ## Use
 
-Just describe the task. To force a skill, name it: `/onlyoffice:ui-kit`. A good answer names
+Just describe the task. To force a skill, name it: `/onlyoffice-devtools:apps-ui-kit`. A good answer names
 the kit version it read and what `check-usage.mjs` found. If yours doesn't, ask for both.
