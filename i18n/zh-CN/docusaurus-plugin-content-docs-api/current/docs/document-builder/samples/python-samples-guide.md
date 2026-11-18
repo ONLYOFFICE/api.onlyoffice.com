@@ -13,11 +13,7 @@ sidebar_position: -2
 
 :::note
 
-对于 Python，您还可以使用 `pip3`（在 Windows 上为 `pip`）安装 `document-builder` 库：
-
-```bash
-pip3 install document-builder
-```
+对于 Python，请在虚拟环境中安装 `document-builder` 库，并在运行示例时保持该虚拟环境处于激活状态。相关命令请参见[安装页面](/docs/document-builder/get-started/installing.md#安装步骤)。
 
 :::
 

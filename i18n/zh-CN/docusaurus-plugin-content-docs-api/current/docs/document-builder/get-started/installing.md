@@ -21,43 +21,16 @@ Document Builder 包含在 [ONLYOFFICE 文档开发者版](https://www.onlyoffic
 
 <Tabs>
     <TabItem value="python" label="Python">
-        - [Python 3.10 - 3.12](https://www.python.org/downloads/)
-        - `pip3`。确保系统中已安装 `python3` 和 `pip3`。您可以在终端中使用以下命令检查 Python 版本和 pip3 版本：
-
-        ```bash
-        python3 --version
-        python3 -m pip --version
-        ```
-
-        :::note
-
-        在 Windows 系统上使用 `pip` 和 `python`。确保可执行文件名为 `python.exe`（Windows 系统默认），且 Python 已添加到 `PATH` 环境变量中。
-
-        :::
-
-        如果需要安装它们，可以使用以下命令：
-
-        ```bash
-        sudo apt install python3 python3-pip
-        ```
-
-        :::info
-
-        对于 macOS，您可以使用 [Homebrew](https://brew.sh/) 安装 `python3` 和 `pip3`，命令如下：
-
-        ```bash
-        brew install python3
-        ```
-
-        :::
+        - [Python 3.10 或更高版本](https://www.python.org/downloads/)
     </TabItem>
     <TabItem value="c++" label="C++">
         - 适用于 Windows 的 [Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/)
-        - 适用于 Linux 的 GCC ≥ 4.2.1（32 位、64 位）或 GCC ≥ 8（64 位 ARM）
-        - 适用于 macOS 的 GCC ≥ 4.2.1
+        - 适用于 Linux（32 位、64 位）的 GCC 4.2.1 或更高版本
+        - 适用于 Linux（64 位 ARM）的 GCC 8 或更高版本
+        - 适用于 macOS 的 GCC 4.2.1 或更高版本
     </TabItem>
     <TabItem value="java" label="Java">
-        - JDK ≥ 8。确保 JDK 已添加到 `PATH` 环境变量中。
+        - JDK 8 或更高版本。确保 JDK 已添加到 `PATH` 环境变量中。
     </TabItem>
     <TabItem value="net" label=".NET">
         - [.NET SDK](https://learn.microsoft.com/en-us/dotnet/core/install/)
@@ -118,15 +91,24 @@ Document Builder 包含在 [ONLYOFFICE 文档开发者版](https://www.onlyoffic
     </TabItem>
 </Tabs>
 
-:::note
+对于 Python，请在虚拟环境中安装 `document-builder` 库：
 
-对于 Python，您可以在终端中使用 `pip3` 安装 `document-builder` 库：
-
-```bash
-pip3 install document-builder
-```
-
-:::
+<Tabs>
+    <TabItem value="unix" label="Linux 和 macOS">
+        ```bash
+        python3 -m venv .venv
+        source .venv/bin/activate
+        pip install document-builder
+        ```
+    </TabItem>
+    <TabItem value="windows" label="Windows">
+        ```powershell
+        py -m venv .venv
+        .venv\Scripts\activate
+        pip install document-builder
+        ```
+    </TabItem>
+</Tabs>
 
 ## 运行示例
 
@@ -139,10 +121,10 @@ cd document-builder-samples
 
 <Tabs>
     <TabItem value="python" label="Python">
-        1. 执行 `configure/configure.py` 并带上 `--test python` 参数：
+        1. 在已激活的虚拟环境中，执行 `configure/configure.py` 并带上 `--test python` 参数：
 
             ```shell
-            python3 configure/configure.py --test python
+            python configure/configure.py --test python
             ```
 
             必要时，使用 `--dir` 参数提供 Document Builder 的目录。
@@ -157,7 +139,7 @@ cd document-builder-samples
         3. 运行脚本：
 
             ```shell
-            python3 main.py
+            python main.py
             ```
 
         文档将在测试目录中创建。

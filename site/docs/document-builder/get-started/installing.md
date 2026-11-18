@@ -21,43 +21,16 @@ Document Builder is included in [ONLYOFFICE Docs Developer](https://www.onlyoffi
 
 <Tabs>
     <TabItem value="python" label="Python">
-        - [Python 3.10 - 3.12](https://www.python.org/downloads/)
-        - `pip3`. Make sure `python3` and `pip3` are installed on your system. You can check your Python version and pip3 version by using the command in the terminal:
-
-        ```bash
-        python3 --version
-        python3 -m pip --version
-        ```
-
-        :::note
-
-        Use `pip` and `python` for Windows. Make sure the executable name is `python.exe` (default on Windows) and Python is added to your `PATH` environment variable.
-
-        :::
-
-        If you need to install them, you can use the following command:
-
-        ```bash
-        sudo apt install python3 python3-pip
-        ```
-
-        :::info
-
-        You can install `python3` and `pip3` for macOS with [Homebrew](https://brew.sh/) using the following command:
-
-        ```bash
-        brew install python3
-        ```
-
-        :::
+        - [Python 3.10 or later](https://www.python.org/downloads/)
     </TabItem>
     <TabItem value="c++" label="C++">
         - [Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/) for Windows
-        - GCC ≥ 4.2.1 (32-bit, 64-bit) or GCC ≥ 8 (64-bit ARM) for Linux
-        - GCC ≥ 4.2.1 for macOS
+        - GCC 4.2.1 or later for Linux (32-bit, 64-bit)
+        - GCC 8 or later for Linux (64-bit ARM)
+        - GCC 4.2.1 or later for macOS
     </TabItem>
     <TabItem value="java" label="Java">
-        - JDK ≥ 8. Make sure that the JDK has been added to your `PATH` environment variable.
+        - JDK 8 or later. Make sure that the JDK has been added to your `PATH` environment variable.
     </TabItem>
     <TabItem value="net" label=".NET">
         - [.NET SDK](https://learn.microsoft.com/en-us/dotnet/core/install/)
@@ -118,15 +91,24 @@ Download the SDK.
     </TabItem>
 </Tabs>
 
-:::note
+For Python, install the `document-builder` library in a virtual environment:
 
-For Python, you can use `pip3` to install the `document-builder` library in the terminal:
-
-```bash
-pip3 install document-builder
-```
-
-:::
+<Tabs>
+    <TabItem value="unix" label="Linux and macOS">
+        ```bash
+        python3 -m venv .venv
+        source .venv/bin/activate
+        pip install document-builder
+        ```
+    </TabItem>
+    <TabItem value="windows" label="Windows">
+        ```powershell
+        py -m venv .venv
+        .venv\Scripts\activate
+        pip install document-builder
+        ```
+    </TabItem>
+</Tabs>
 
 ## Run the samples
 
@@ -139,10 +121,10 @@ cd document-builder-samples
 
 <Tabs>
     <TabItem value="python" label="Python">
-        1. Execute `configure/configure.py` with `--test python`:
+        1. With the virtual environment active, execute `configure/configure.py` with `--test python`:
 
             ```shell
-            python3 configure/configure.py --test python
+            python configure/configure.py --test python
             ```
 
             Provide the directory to Document Builder with `--dir` if necessary.
@@ -157,7 +139,7 @@ cd document-builder-samples
         3. Run the script:
 
             ```shell
-            python3 main.py
+            python main.py
             ```
 
         Documents will be created in the test directory.
@@ -217,7 +199,7 @@ cd document-builder-samples
     </TabItem>
     <TabItem value="java" label="Java">
         :::note
-        JDK 8 or newer is required.
+        JDK 8 or later is required.
         :::
 
         1. Go to the test directory:

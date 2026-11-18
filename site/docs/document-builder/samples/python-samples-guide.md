@@ -14,11 +14,7 @@ For the samples to work correctly, make sure that two conditions are met:
 
 :::note
 
-For Python, you can also use `pip3` (or `pip` on Windows) to install the `document-builder` library:
-
-```bash
-pip3 install document-builder
-```
+For Python, install the `document-builder` library in a virtual environment and keep it active while you run the samples. For the commands, see the [installing page](/docs/document-builder/get-started/installing.md#installing).
 
 :::
 
